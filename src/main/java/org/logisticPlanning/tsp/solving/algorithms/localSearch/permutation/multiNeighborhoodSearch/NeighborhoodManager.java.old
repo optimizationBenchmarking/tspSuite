@@ -1,0 +1,936 @@
+package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multiNeighborhoodSearch;
+
+import java.io.PrintStream;
+
+import org.logisticPlanning.tsp.benchmarking.objective.LogPoint;
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.Individual;
+import org.logisticPlanning.tsp.solving.TSPModule;
+import org.logisticPlanning.utils.config.Configurable;
+import org.logisticPlanning.utils.config.Configuration;
+
+/**
+ * <@jnf><#noparse><#include "../../../../_tspModule.ftl"/>
+ * <p>
+ * The version of NeighborhoodManager before the consolidation into
+ * local search done in version 0.9.8 of ${projectName}.
+ * </p><p>
+ * <p>
+ * This class is used to manage a candidate solution and its neighborhood
+ * induced by possible search moves.
+ * </p>
+ * <#include "_moveDesc.ftl"/><@printMoveDesc
+ * isNeighborhoodManager=(1==1)/><@citations/> <@changeLog>
+ * <@TSPModuleChange/></@changeLog><@javaAuthorVersion/></#noparse></@jnf>
+ */
+public final class NeighborhoodManager extends TSPModule {
+
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
+
+  /** the maximum length of the move queue: {@value} */
+  public static final String PARAM_MAX_ALLOCATIONS = "maxMoveQueueLen"; //$NON-NLS-1$
+
+  /** the move order: {@value} */
+  public static final String PARAM_MOVE_ORDER = "moveOrder";//$NON-NLS-1$
+
+  /** the default maximum number of moves: {@value} */
+  private static final int DEFAULT_MAX_ALLOCATIONS = 1048576;
+
+  /** the default move comparator */
+  private static final EMoveComparator DEFAULT_MOVE_COMPARATOR = EMoveComparator.BEST_MOVE_FIRST;
+
+  /**
+   * the maximum number of moves to allocate
+   * 
+   * @serial serializable field
+   */
+  private int m_maxMoveAllocations;
+
+  /**
+   * the move order
+   * 
+   * @serial serializable field
+   */
+  private EMoveComparator m_cmp;
+
+  /** the tour length */
+  private transient long m_length;
+
+  /** the solution */
+  private transient int[] m_solution;
+
+  /**
+   * The distances between the nodes and their successors in the current
+   * permutations. The contract is:
+   * {@code m_distances[i]=this.m_f.dist(this.m_solution[i], this.m_solution[(i+1)%n])}
+   */
+  private transient int[] m_distances;
+
+  /** the objective function to use */
+  private transient ObjectiveFunction m_f;
+
+  /** the queue of moves */
+  private transient _Move m_queue;
+
+  /** old swap moves that can be re-used */
+  private transient _Move m_old;
+
+  /** the number of allocated moves */
+  private transient int m_moveAllocations;
+
+  /** Instantiate */
+  public NeighborhoodManager() {
+    super("neighborhoodManager"); //$NON-NLS-1$
+    this.m_cmp = NeighborhoodManager.DEFAULT_MOVE_COMPARATOR;
+    this.m_maxMoveAllocations = NeighborhoodManager.DEFAULT_MAX_ALLOCATIONS;
+  }
+
+  /**
+   * set the {@link EMoveComparator move comparator}
+   * 
+   * @param cmp
+   *          the {@link EMoveComparator move comparator} to used
+   */
+  public final void setMoveComparator(final EMoveComparator cmp) {
+    this.m_cmp = ((cmp != null) ? cmp
+        : NeighborhoodManager.DEFAULT_MOVE_COMPARATOR);
+  }
+
+  /**
+   * get the {@link EMoveComparator move comparator}
+   * 
+   * @return the {@link EMoveComparator move comparator} used
+   */
+  public final EMoveComparator getMoveComparator() {
+    return this.m_cmp;
+  }
+
+  /**
+   * Set the maximum number of move records to allocate and hold in memory
+   * 
+   * @param max
+   *          the maximum number of move records to allocate and hold in memory
+   */
+  public final void setMaxMoveAllocations(final int max) {
+    this.m_maxMoveAllocations = max;
+  }
+
+  /**
+   * Get the maximum number of move records to allocate and hold in memory
+   * 
+   * @return max the maximum number of move records to allocate and hold in
+   *         memory
+   */
+  public final int getMaxMoveAllocations() {
+    return this.m_maxMoveAllocations;
+  }
+
+  /**
+   * Initialize the internal variables with a given solution.
+   * 
+   * @param indi
+   *          the individual record to be used for the initialization
+   */
+  public final void initialize(final Individual<int[]> indi) {
+    this.initialize(indi.solution, indi.tourLength);
+  }
+
+  /**
+   * Initialize the internal variables with the best solution found so far.
+   */
+  public final void initialize() {
+    this.initialize(null, Individual.TOUR_LENGTH_NOT_SET);
+  }
+
+  /**
+   * Get the tour length of the current solution
+   * 
+   * @return the tour length of the current solution
+   */
+  public final long getTourLength() {
+    return this.m_length;
+  }
+
+  /**
+   * Get a copy of the current solution, as well as the current tour length
+   * 
+   * @param dest
+   *          the array to copy the current solution to
+   * @return the tour length of the current solution
+   */
+  public final long getSolution(final int[] dest) {
+    System.arraycopy(this.m_solution, 0, dest, 0, dest.length);
+    return this.m_length;
+  }
+
+  /**
+   * Initialize the internal variables with a given solution.
+   * 
+   * @param solution
+   *          the solution, leave it {@code null} for using the best solution
+   *          so far
+   * @param length
+   *          the length, or
+   *          {@link org.logisticPlanning.tsp.solving.Individual#TOUR_LENGTH_NOT_SET}
+   *          if unknown
+   */
+  public final void initialize(final int[] solution, final long length) {
+    final ObjectiveFunction f;
+    final int n;
+    final long len;
+    final LogPoint p;
+    int[] sol, dist;
+    long total;
+
+    // clear the queue
+    this.disposeQueue();
+
+    f = this.m_f;
+    n = f.n();
+
+    sol = this.m_solution;
+    dist = this.m_distances;
+
+    // load the solution into an internal variable
+    if (solution != null) {
+      System.arraycopy(solution, 0, sol, 0, n);
+      len = length;
+    } else {
+      p = f.getCurrentLogPoint();
+      f.getCopyOfBest(sol);
+      len = p.getBestF();
+      NeighborhoodManager.compareLengths(length, len);
+    }
+
+    // compute the distances and initialize the internal distance list
+    total = NeighborhoodManager.distanceAndLengthInit(f, n, sol, dist);
+
+    NeighborhoodManager.compareLengths(len, total);
+    this.m_length = total;
+  }
+
+  /**
+   * compute the total length of the solution and initialize the distance array
+   * 
+   * @param f
+   *          the objective function
+   * @param n
+   *          the number of nodes
+   * @param sol
+   *          the solution array
+   * @param dist
+   *          the distance array
+   * @return the length of the tour
+   */
+  private static final long distanceAndLengthInit(final ObjectiveFunction f,
+      final int n, final int[] sol, final int[] dist) {
+    int curP, oldP;
+    long total;
+    int i, j;
+
+    curP = sol[0];
+    total = 0l;
+    for (i = n; (--i) >= 0;) {
+      oldP = curP;
+      curP = sol[i];
+      dist[i] = j = f.distance(curP, oldP);
+      total += j;
+    }
+
+    return total;
+  }
+
+  /**
+   * Shuffle a sub-sequence of the best solution known so far and make it the
+   * current solution of this neighborhood manager. This method clears the
+   * queue of operations available.
+   * 
+   * @param start
+   *          the start index (inclusive)
+   * @param count
+   *          the number of elements to shuffle
+   * @param bestStemsFromThis
+   *          {@code true} if the best currently known candidate solution was
+   *          generated by this neighborhood manager, {@code false} otherwise.
+   * @return {@code true} if not all possible moves could be checked due to the
+   *         memory allocation limit {@link #m_maxMoveAllocations},
+   *         {@code false} if all possible moves were checked, see
+   *         {@link #fillMoveQueue(int, int)}
+   */
+  public final boolean shuffleBest(final int start, final int count,
+      final boolean bestStemsFromThis) {
+    final ObjectiveFunction f;
+    final int[] sol;
+    final int n;
+
+    // clear the queue
+    this.disposeQueue();
+
+    if (count <= 0) {
+      return false;
+    }
+
+    f = this.m_f;
+    sol = this.m_solution;
+    f.getCopyOfBest(sol);
+    f.getRandom().shuffle(sol, start, count);
+    n = f.n();
+    this.m_length = NeighborhoodManager.distanceAndLengthInit(f, n, sol,
+        this.m_distances);
+    f.registerFE(sol, this.m_length);
+
+    if (f.shouldTerminate()) {
+      return true;
+    }
+
+    return this.fillMoveQueue((bestStemsFromThis ? start : 0),//
+        (bestStemsFromThis ? count : n));
+  }
+
+  /**
+   * Shuffle a sub-sequence of the solution currently stored in this
+   * neighborhood manager. This method clears the queue of operations
+   * available.
+   * 
+   * @param start
+   *          the start index (inclusive)
+   * @param count
+   *          the number of elements to shuffle
+   * @return {@code true} if not all possible moves could be checked due to the
+   *         memory allocation limit {@link #m_maxMoveAllocations},
+   *         {@code false} if all possible moves were checked, see
+   *         {@link #fillMoveQueue(int, int)}
+   */
+  public final boolean shuffleCurrent(final int start, final int count) {
+    final ObjectiveFunction f;
+    final int n, end;
+    final int[] sol, dist;
+    long total;
+    int i, j, curP, oldP;
+
+    if (count <= 0) {
+      return false;
+    }
+
+    // clear the queue
+    this.disposeQueue();
+
+    f = this.m_f;
+    n = f.n();
+
+    sol = this.m_solution;
+    dist = this.m_distances;
+
+    f.getRandom().shuffle(sol, start, count);
+
+    if (count < ((n << 1) / 3)) {
+      // We subtract the distances before the shuffle from the total length
+      // then we add the new distances after the shuffle.
+      // This makes sense when a large part of the solution, say 33%, remains
+      // untouched -- otherwise we can re-compute the whole array (because this
+      // needs only 1 traversal of 2 arrays and not the additional subtraction
+      // round.
+      end = ((start + count) - 1);
+
+      // subtract old distances
+      total = this.m_length;
+      total -= dist[((start + n) - 1) % n];
+      for (i = end; i >= start; i--) {
+        total -= dist[i];
+      }
+
+      // init and add new distances
+      curP = sol[(end + 1) % n];
+      for (i = end; i >= start; i--) {
+        oldP = curP;
+        curP = sol[i];
+        dist[i] = j = f.distance(curP, oldP);
+        total += j;
+      }
+      i = (((start + n) - 1) % n);
+      dist[i] = j = f.distance(curP, sol[i]);
+      total += j;
+    } else {
+      // OK, too much of the solution has been destroyed, re-initialize
+      // distance array completely.
+      total = NeighborhoodManager.distanceAndLengthInit(f, n, sol, dist);
+    }
+
+    this.m_length = total;
+    f.registerFE(sol, total);
+
+    if (f.shouldTerminate()) {
+      return true;
+    }
+
+    return this.fillMoveQueue(start, ((start + count) - 1));
+  }
+
+  /**
+   * Compare two lengths
+   * 
+   * @param provided
+   *          the provided length
+   * @param real
+   *          the real length
+   */
+  private static final void compareLengths(final long provided, final long real) {
+    if ((provided != real) && (provided < Individual.TOUR_LENGTH_NOT_SET)) {
+      throw new IllegalArgumentException(//
+          "Best tour length " + real + //$NON-NLS-1$
+              " is different from provided length " + provided); //$NON-NLS-1$
+    }
+  }
+
+  /**
+   * Return a new move record. This method first tries to recycle old moves and
+   * will allocate a new move if the old queue is empty. However, if the
+   * maximum number of move allocations has been reached, {@code null} will be
+   * returned.
+   * 
+   * @return the new move, or {@code null} if the maximum number of move
+   *         allocations has been exhausted
+   */
+  private final _Move allocate() {
+    final _Move m;
+    final int i;
+
+    m = this.m_old;
+    if (m != null) {
+      this.m_old = m.m_next;
+      return m;
+    }
+
+    i = this.m_moveAllocations;
+    if (i < this.m_maxMoveAllocations) {
+      this.m_moveAllocations = (i + 1);
+      return new _Move();
+    }
+
+    return null;
+  }
+
+  /** dispose all moves in the move queue */
+  private final void disposeQueue() {
+    _Move cur, next;
+
+    cur = this.m_queue; // cur = beginning of queue
+
+    if (cur == null) {// queue is empty, we can leave directly
+      return;
+    }
+
+    // moves are left in queue: dispose them
+    dispose: for (;;) {// find the last move in queue
+      next = cur.m_next;
+      if (next == null) {
+        break dispose;
+      }
+      cur = next;
+    }
+
+    // cur now is the last move in the move queue m_queue is the first
+    cur.m_next = this.m_old; //
+    this.m_old = this.m_queue;// put m_queue at beginning
+    this.m_queue = null; // ensure that the queue is really empty
+  }
+
+  /**
+   * enqueue a move
+   * 
+   * @param move
+   *          the move to enqueue
+   */
+  private final void enqueue(final _Move move) {
+    final _Move q;
+
+    q = this.m_queue;
+    if ((q == null) || ((this.m_cmp.compare(move, q) < 0))) {
+      // move = new best: put at head of queue
+      move.m_next = q;
+      this.m_queue = move;
+    } else {// move is not best: put at 2nd place, regardless how good it is
+      move.m_next = q.m_next;
+      q.m_next = move;
+    }
+  }
+
+  /**
+   * Fill the move queue. This method tries to enqueue all possible moves, as
+   * far as {@link #m_maxMoveAllocations memory restrictions} permit it.
+   * 
+   * @return {@code true} if not all possible moves could be checked due to the
+   *         memory allocation limit {@link #m_maxMoveAllocations},
+   *         {@code false} if all possible moves were checked
+   */
+  public final boolean fillMoveQueue() {
+    return this.fillMoveQueue(0, this.m_f.n());
+  }
+
+  /**
+   * <p>
+   * Fill the queue of search moves that can improve the current solution.
+   * </p>
+   * <p>
+   * This procedure makes use of a set of assumptions and pre-conditions.
+   * </p>
+   * <ol>
+   * <li>The array {@link #m_solution} contains the current candidate solution.
+   * </li>
+   * <li>The {@code i}<sup>th</sup> element of the array {@link #m_distances}
+   * contains the distance between the {@code i}<sup>th</sup> element of
+   * {@link #m_solution} and the {@code (i+1)%n}<sup>th</sup> element. In other
+   * words, the element at index {@code n-1} holds the distance of detour from
+   * the last node back to the start.</li>
+   * <li>The parameters {@code lastChangeStart} and {@code lastChangeEnd} hold
+   * the inclusive indices where the last change to the candidate solution took
+   * place.</li>
+   * </ol>
+   * <p>
+   * When filling the queue, we only consider moves that at least touch (or
+   * overlap, or are included in) the range
+   * {@code [lastChangeStart,lastChangeEnd]}. As the rest of the permutation
+   * was not changed, other moves would have already been considered before and
+   * thus do not need to tested again.
+   * </p>
+   * <p>
+   * This function will place the best move found at the head of the queue.
+   * </p>
+   * <p>
+   * This function returns {@code true} if not all possible moves could be
+   * enqueued due to the allocation limit {@link #m_maxMoveAllocations}. This
+   * means that the next call to this method cannot rely on exhaustive move
+   * testing, i.e., should always invoke it with the full index range. If
+   * {@code false} is returned, all potential moves have been enqueued. Then,
+   * only moves need to be investigated which intersect with the changed region
+   * in the next call.
+   * </p>
+   * 
+   * @param lastChangeStart
+   *          the first index of the interesting range
+   * @param lastChangeEnd
+   *          the last index of the interesting range
+   * @return {@code true} if not all possible moves could be checked due to the
+   *         memory allocation limit {@link #m_maxMoveAllocations},
+   *         {@code false} if all possible moves were checked
+   */
+  private final boolean fillMoveQueue(final int lastChangeStart,
+      final int lastChangeEnd) {
+    final ObjectiveFunction f;
+    final int n, nm1;
+    final int[] dists, sol;
+    final int begin, end;
+    int i, j, jm1, im1, delta;
+    int sol_im1, sol_i, sol_ip1, sol_jm1, sol_j, sol_jp1;
+    int D_im1_i, D_i_ip1, D_jm1_j, D_j_jp1, D_im1_j, D_i_jp1, D_im1_ip1, D_i_j, D_jm1_jp1, D_ip1_j, D_i_jm1;
+    _Move move;
+
+    f = this.m_f;
+    n = f.n();
+    nm1 = (n - 1);
+    dists = this.m_distances;
+    sol = this.m_solution;
+
+    // Any move intersecting with the range [begin,end] is interesting.
+    // The -1/+1 stem from the fact that when changing range [2,3], also the
+    // distance of the node at index 1 (to index 2) has changed.
+    begin = (lastChangeStart - 1);
+    end = (lastChangeEnd + 1);
+
+    // iterate over all indices 0<j<n
+    j = (n - 1);
+    D_jm1_j = dists[j];
+    sol_j = sol[0];
+    sol_jm1 = sol[j];
+    for (; j > 0; j = jm1) {
+      jm1 = (j - 1); // as j>0, this can never wrap/become <0
+
+      // initialize variables pi_j-1, pi_j, pi_j+1
+      sol_jp1 = sol_j;
+      sol_j = sol_jm1;
+      sol_jm1 = sol[jm1];
+
+      // load distances d(j-1,j), d(j,j+1)
+      D_j_jp1 = D_jm1_j;
+      D_jm1_j = dists[jm1];
+
+      // iterate over all indices 0<=i<j
+      D_im1_i = dists[j];
+
+      sol_i = sol[j];
+      i = (j - 1);
+      sol_im1 = sol[i];
+      inner: for (; i >= 0; i--) {
+
+        im1 = ((i + nm1) % n);
+
+        // initialize variables pi_i-1, pi_i, pi_i+1
+        sol_ip1 = sol_i;
+        sol_i = sol_im1;
+        sol_im1 = sol[im1];
+
+        // load distances d(i-1,i), d(i,i+1)
+        D_i_ip1 = D_im1_i;
+        D_im1_i = dists[im1];
+
+        // check if the interesting range is intersected
+        if ((i > end) || (j < begin)) {
+          continue inner;
+        }
+
+        // the inversion specific distance requirements
+        D_im1_j = f.distance(sol_im1, sol_j);
+        D_i_jp1 = f.distance(sol_i, sol_jp1);
+
+        if ((i <= 0) && (j >= nm1)) {
+          continue inner; // no operation works at full-range
+        }
+
+        // check the reversal move
+        delta = ((D_im1_j - D_im1_i) + (D_i_jp1 - D_j_jp1));
+
+        if (delta < 0) { // ok, the move is promising: enqueue
+          move = this.allocate(); // allocate the move
+          if (move == null) {
+            return true;// we hit the allocation limit, force exit
+          }
+
+          move.init_reverse(i, j, delta, D_im1_j, D_i_jp1);// init the move
+          this.enqueue(move);
+        }
+
+        if (j == (i + 1)) {
+          // for swap, rotate left, and rotate right, only index tuples with
+          // j!=((i+1)%n) are interesting
+          continue inner;
+        }
+
+        // check the rotate left move
+        D_im1_ip1 = f.distance(sol_im1, sol_ip1);
+        D_i_j = f.distance(sol_i, sol_j);
+
+        delta = ((D_im1_ip1 - D_im1_i) + //
+            (D_i_j - D_i_ip1) + //
+        (D_i_jp1 - D_j_jp1));
+
+        if (delta < 0) {// move is promising:enqueue
+          move = this.allocate(); // allocate the move
+          if (move == null) {
+            return true;// we hit the allocation limit, force exit
+          }
+
+          move.init_rotate_left(i, j, delta, D_im1_ip1, D_i_j, D_i_jp1);// init
+          this.enqueue(move);
+        }
+
+        // check the rotate right move
+        D_jm1_jp1 = f.distance(sol_jm1, sol_jp1);
+
+        delta = ((D_im1_j - D_im1_i) + //
+            (D_i_j - D_j_jp1) + //
+        (D_jm1_jp1 - D_jm1_j));
+
+        if (delta < 0) {// move is promising:enqueue
+          move = this.allocate(); // allocate the move
+          if (move == null) {
+            return true;// we hit the allocation limit, force exit
+          }
+
+          move.init_rotate_right(i, j, delta, D_jm1_jp1, D_i_j, D_im1_j);// init
+          this.enqueue(move);
+        }
+
+        if (j == ((i + 2) % n)) {
+          // for swap, j!=((i+2)%n) are interesting
+          continue inner;
+        }
+
+        // check the swap move
+        D_i_jm1 = f.distance(sol_i, sol_jm1);
+        D_ip1_j = f.distance(sol_ip1, sol_j);
+
+        delta = ((D_im1_j - D_im1_i) + //
+            (D_ip1_j - D_i_ip1) + //
+            (D_i_jm1 - D_jm1_j) + //
+        (D_i_jp1 - D_j_jp1));
+
+        if (delta < 0) {// move is promising:enqueue
+          move = this.allocate(); // allocate the move
+          if (move == null) {
+            return true;// we hit the allocation limit, force exit
+          }
+
+          move.init_swap(i, j, delta, D_im1_j, D_ip1_j, D_i_jm1, D_i_jp1);// init
+          this.enqueue(move);
+        }
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Perform a local search by using all four available neighborhoods. The move
+   * queue is filled and all moves are performed until no further improvements
+   * can be made. This method expects that the queue is filled when it is
+   * called, i.e., that either {@link #fillMoveQueue()} or a queue-filling
+   * update method such as {@link #shuffleCurrent(int, int)} were called
+   * before.
+   * 
+   * @param incompleteEnqueued
+   *          If the queue was filled, was it incomplete or not? (see
+   *          {@link #fillMoveQueue(int, int)}
+   */
+  public final void localSearch(final boolean incompleteEnqueued) {
+    final ObjectiveFunction f;
+    final int[] sol, dist;
+    final EMoveComparator cmp;
+    final int n;
+    boolean lastWasIncomplete;
+    long total;
+    int changed_range_i, changed_range_j;
+    _Move move, predMove, cur, pred, best, predBest, next;
+
+    // initialize local variables
+    f = this.m_f;
+    changed_range_i = 0;
+    changed_range_j = n = f.n();
+    sol = this.m_solution;
+    dist = this.m_distances;
+    total = this.m_length;
+    cmp = this.m_cmp;
+    lastWasIncomplete = incompleteEnqueued;
+
+    outer: for (;;) {
+      move = this.m_queue;// move=best and first move in queue
+      if (move == null) {// ok, queue is empty
+        break outer;// quit
+      }
+      // fillMoveQueue ensures that the first move in the queue is best move.
+      predMove = null;// so there is no move before
+      // predMove is always the last move before move or null if move is the
+      // first move in the queue
+
+      // [changed_range_i,changed_range_j] hold the range that includes all
+      // changes that we made so far
+      // This is useful when filling the queue after consuming all moves since
+      // new moves that do not intersect with [changed_range_i,changed_range_j]
+      // do not need to be checked:
+      // They were checked in at least one prior local search / fill queue run
+      // and were not improving. As nothing outside
+      // [changed_range_i,changed_range_j] has changed, these moves' deltas are
+      // still the same (and therefore still >0).
+      changed_range_i = Integer.MAX_VALUE;
+      changed_range_j = Integer.MIN_VALUE;
+
+      // In the inner loop, we process the queue: We always take the best move
+      // out of the queue and perform it. Performing a move may lead to the
+      // invalidation of other moves, which are purged from the queue. Then the
+      // next best move is taken from the queue and executed. If the queue is
+      // empty, this loop ends and the outer loop is executed again to fill the
+      // queue.
+      inner: do {
+
+        // delete the move from the queue
+        if (predMove == null) {
+          this.m_queue = move.m_next;
+        } else {
+          predMove.m_next = move.m_next;
+        }
+
+        // apply the move: change the solution and distance list
+        move.apply(n, sol, dist);
+        total += move.m_delta; // modify the total tour length accordingly
+        // we now have a new and better candidate solution: register
+        f.registerFE(sol, total);
+
+        move.m_next = this.m_old; // dispose the move: hang it into the
+        this.m_old = move;// queue for re-use
+        if (f.shouldTerminate()) {// ok, we should terminate right now
+          break outer;
+        }
+
+        // make [changed_range_i,changed_range_j] include the area touched by
+        // the performed move: only this range is interesting when filling the
+        // queue again at the next "outer" iteration
+        changed_range_i = Math.min(changed_range_i, move.m_i);
+        changed_range_j = Math.max(changed_range_j, move.m_j);
+
+        cur = this.m_queue; // cur = beginning of queue
+        if (cur == null) {
+          break inner;// queue is empty: we need to fill the move list again
+        }
+
+        // The following loop has two purposes:
+        // 1. we need to delete all moves that intersect with "move" in such a
+        // way that their delta would have changed / they have been invalidated
+        // by "move"
+        // 2. find the next best move to apply (and its successor)
+        best = predBest = pred = null;
+        while (cur != null) {
+          // pred is the last non-deleted move before cur
+          // best is the best move that was not deleted
+          // predBest is the last non-deleted move before best
+          next = cur.m_next; // iterate through the move queue
+
+          // check if we need to delete the move
+          if (cur.checkDeleteMove(move, n)) {
+            // ok, the move has been invalidated and must be deleted
+            // so we remove it from the queue
+            if (pred == null) {
+              this.m_queue = next;
+            } else {
+              pred.m_next = next;
+            }
+            // pred remains the same, as it was the last non-deleted move
+
+            // dispose of cur: hang it into the re-use queue
+            cur.m_next = this.m_old;
+            this.m_old = cur;
+          } else {
+            // good, the move can be kept
+
+            if ((best == null) || (cmp.compare(cur, best) < 0)) {
+              // oh, the move is the best move found so far!
+              best = cur;
+              predBest = pred;
+            }
+
+            // the move was not deleted, so it becomes the last non-deleted
+            // move
+            pred = cur;
+          }
+
+          cur = next;// cur becomes cur.m_next
+        }
+
+        move = best; // the next move is the best move found in the queue
+        predMove = predBest; // and predMove the last non-deleted move before
+      } while (move != null);
+
+      // ok, we have emptied the move queue. Now it is time to fill in again.
+
+      // lastWasIncomplete tells us whether all possible moves were checked.
+      // If it is false, we only need to check
+      // [changed_range_i,changed_range_j]. Otherwise, we need to check [0,n]
+      lastWasIncomplete = this.fillMoveQueue(//
+          (lastWasIncomplete ? 0 : changed_range_i),//
+          (lastWasIncomplete ? n : changed_range_j));
+    }
+
+    this.m_length = total; // store the total tour length
+    this.disposeQueue(); // dispose whatever move is still in the queue
+  }
+
+  /**
+   * Get a copy of the solution that this manager has synthesized
+   * 
+   * @param res
+   *          the record to fill with the internal solution
+   */
+  public final void getSolution(final Individual<int[]> res) {
+    final int n;
+    int[] sol, out;
+
+    out = res.solution;
+    res.clear();
+
+    n = this.m_f.n();
+    sol = this.m_solution;
+
+    if ((out == null) || (out.length < n)) {
+      out = sol.clone();
+    } else {
+      System.arraycopy(sol, 0, out, 0, n);
+    }
+    res.solution = out;
+
+    res.tourLength = this.m_length;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final NeighborhoodManager clone() {
+    NeighborhoodManager m;
+
+    m = ((NeighborhoodManager) (super.clone()));
+
+    m.__clear();
+
+    return m;
+  }
+
+  /** clear this manager */
+  private final void __clear() {
+    this.m_distances = null;
+    this.m_f = null;
+    this.m_old = null;
+    this.m_queue = null;
+    this.m_solution = null;
+    this.m_moveAllocations = 0;
+
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final void printConfiguration(final PrintStream ps) {
+    super.printConfiguration(ps);
+
+    Configurable.printKey(NeighborhoodManager.PARAM_MOVE_ORDER, ps);
+    Configurable.printlnObject(this.m_cmp, ps);
+
+    Configurable.printKey(NeighborhoodManager.PARAM_MAX_ALLOCATIONS, ps);
+    ps.println(this.m_maxMoveAllocations);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final void printParameters(final PrintStream ps) {
+    super.printParameters(ps);
+
+    Configurable.printKey(NeighborhoodManager.PARAM_MOVE_ORDER, ps);
+    ps.println(//
+    "the order in which moves are enqueued and performed"); //$NON-NLS-1$
+
+    Configurable.printKey(NeighborhoodManager.PARAM_MAX_ALLOCATIONS, ps);
+    ps.println(//
+    "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final void configure(final Configuration config) {
+    super.configure(config);
+
+    this.m_cmp = config.getConstant(NeighborhoodManager.PARAM_MOVE_ORDER,
+        EMoveComparator.class, EMoveComparator.class, this.m_cmp);
+
+    this.m_maxMoveAllocations = config.getInt(
+        NeighborhoodManager.PARAM_MAX_ALLOCATIONS, 1, Integer.MAX_VALUE,
+        this.m_maxMoveAllocations);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void beginRun(final ObjectiveFunction f) {
+    final int n;
+
+    super.beginRun(f);
+
+    this.m_f = f;
+    n = f.n();
+    this.m_solution = new int[n];
+    this.m_distances = new int[n];
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void endRun(final ObjectiveFunction f) {
+    try {
+      this.__clear();
+    } finally {
+      super.endRun(f);
+    }
+  }
+}

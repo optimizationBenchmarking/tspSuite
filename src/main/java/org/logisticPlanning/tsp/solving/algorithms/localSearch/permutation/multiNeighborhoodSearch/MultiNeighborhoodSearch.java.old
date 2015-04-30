@@ -1,0 +1,213 @@
+package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multiNeighborhoodSearch;
+
+import java.io.PrintStream;
+
+import org.logisticPlanning.tsp.benchmarking.instances.Instance;
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.TSPAlgorithm;
+import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
+import org.logisticPlanning.tsp.solving.operators.permutation.creation.PermutationCreateUniform;
+import org.logisticPlanning.utils.config.Configuration;
+import org.logisticPlanning.utils.math.random.Randomizer;
+
+/**
+ * <@jnf><#noparse><#include "../../../../_tspModule.ftl"/>* <p>
+ * The version of MultiNeighborhoodSearch before the consolidation into
+ * local search done in version 0.9.8 of ${projectName}.
+ * </p><p>
+ * <p>
+ * This local search algorithm improves a given tour by using multiple
+ * neighborhoods at once. It tries to improve the tour until no directly
+ * improving move is possible anymore and then will apply a special move to
+ * escape from the local optimum.
+ * </p>
+ * <p>
+ * The algorithm presented here works in the same way as the
+ * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.PermutationRNS
+ * PermutationRNS}, i.e., it performs a local search and, if no improving moves
+ * are possible anymore, it performs a local shuffle. The difference to the
+ * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.PermutationRNS
+ * PermutationRNS} is that instead of conducting a Variable Neighborhood Search
+ * (VNS)<@multiCite ["HM2001VNSPAA", "HMP2008VNSMAA", "HMP2010VNSMAA",
+ * "HMBP2010VNS"] />, it searches the all neighborhoods of a set of search
+ * operators simultaneously. This may be more runtime efficient.
+ * </p>
+ * <#include "_moveDesc.ftl"/><@printMoveDesc/><@citations/> <@changeLog>
+ * <@TSPModuleChange/></@changeLog><@javaAuthorVersion/></#noparse></@jnf>
+ */
+public class MultiNeighborhoodSearch extends TSPAlgorithm {
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * the manager
+   * 
+   * @serial serializable field
+   */
+  private NeighborhoodManager m_manager;
+
+  /** instantiate */
+  public MultiNeighborhoodSearch() {
+    super("Multiple-Neighborhood Search");//$NON-NLS-1$
+    this.m_manager = new NeighborhoodManager();
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final void solve(final ObjectiveFunction f) {
+    final NeighborhoodManager manager;
+    final int n;
+    final Randomizer r;
+    boolean incomplete;
+    int shuffleLength;
+    long length, best, init;
+
+    n = f.n();
+    r = f.getRandom();
+
+    manager = this.m_manager;
+
+    // check if there already is a solution, maybe from a deterministic
+    // initialization heuristic
+    if (f.getCurrentLogPoint().getConsumedFEs() < 1l) {
+      // no such solution exists: we start at a random point
+      f.evaluate(PermutationCreateUniform.create(n, f.getRandom()));
+    }
+
+    // the manager will load the best existing solution
+    manager.initialize();
+
+    best = init = manager.getTourLength();
+
+    // fill the move queue, remember if this hit the allocation limit
+    incomplete = manager.fillMoveQueue();
+    for (;;) {
+
+      // perform an local search based on the enqueued moves
+      manager.localSearch(incomplete);
+
+      if (f.shouldTerminate()) {
+        return;// we should quit here
+      }
+
+      // OK, we have arrived in a local optimum
+      length = manager.getTourLength();
+      if (length < best) {
+        best = length;
+      }
+
+      shuffleLength = (r.nextInt(n - 5) + 4); // shuffle at least 4 nodes
+      incomplete = manager.shuffleBest(//
+          r.nextInt((n - shuffleLength) + 1), shuffleLength,//
+          (best < init));
+
+      if (f.shouldTerminate()) {
+        return;
+      }
+    }
+
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public MultiNeighborhoodSearch clone() {
+    MultiNeighborhoodSearch m;
+
+    m = ((MultiNeighborhoodSearch) (super.clone()));
+    m.m_manager = m.m_manager.clone();
+
+    return m;
+  }
+
+  /**
+   * Set the maximum number of move records to allocate and hold in memory
+   * 
+   * @param max
+   *          the maximum number of move records to allocate and hold in memory
+   */
+  public final void setMaxMoveAllocations(final int max) {
+    this.m_manager.setMaxMoveAllocations(max);
+  }
+
+  /**
+   * Get the maximum number of move records to allocate and hold in memory
+   * 
+   * @return max the maximum number of move records to allocate and hold in
+   *         memory
+   */
+  public final int getMaxMoveAllocations() {
+    return this.m_manager.getMaxMoveAllocations();
+  }
+
+  /**
+   * set the {@link EMoveComparator move comparator}
+   * 
+   * @param cmp
+   *          the {@link EMoveComparator move comparator} to used
+   */
+  public final void setMoveComparator(final EMoveComparator cmp) {
+    this.m_manager.setMoveComparator(cmp);
+  }
+
+  /**
+   * get the {@link EMoveComparator move comparator}
+   * 
+   * @return the {@link EMoveComparator move comparator} used
+   */
+  public final EMoveComparator getMoveComparator() {
+    return this.m_manager.getMoveComparator();
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printConfiguration(final PrintStream ps) {
+    super.printConfiguration(ps);
+
+    this.m_manager.printConfiguration(ps);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printParameters(final PrintStream ps) {
+    super.printParameters(ps);
+
+    this.m_manager.printParameters(ps);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void configure(final Configuration config) {
+    super.configure(config);
+
+    this.m_manager.configure(config);
+  }
+
+  /**
+   * Perform the hill climbing
+   * 
+   * @param args
+   *          the command line arguments
+   */
+  public final static void main(final String[] args) {
+    TSPAlgorithmRunner.benchmark(//
+        Instance.SYMMETRIC_INSTANCES, MultiNeighborhoodSearch.class,//
+        args);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void beginRun(final ObjectiveFunction f) {
+    super.beginRun(f);
+    this.m_manager.beginRun(f);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void endRun(final ObjectiveFunction f) {
+    try {
+      this.m_manager.endRun(f);
+    } finally {
+      super.endRun(f);
+    }
+  }
+}

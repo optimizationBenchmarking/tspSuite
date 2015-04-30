@@ -1,0 +1,26 @@
+package test.junit.org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.chainedMNSLocalOpt;
+
+import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.chainedMNSLocalOpt.ChainedMNSLocalNOpt;
+import org.logisticPlanning.tsp.solving.operators.permutation.localOpt.ExhaustivelyEnumeratingLocal8Optimizer;
+
+/**
+ * the test of the local 8-opt algorithm <@javaAuthorVersion/>
+ */
+public class ChainedMNSLocal8OptTestRandomOverlap extends
+    ChainedMNSLocalNOptTestRandomOverlap {
+
+  /** create */
+  public ChainedMNSLocal8OptTestRandomOverlap() {
+    super();
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  protected ChainedMNSLocalNOpt createAlgorithm() {
+    final ChainedMNSLocalNOpt algo;
+
+    algo = super.createAlgorithm();
+    algo.setLocalOptimizer(new ExhaustivelyEnumeratingLocal8Optimizer());
+    return algo;
+  }
+}

@@ -1,0 +1,613 @@
+span.number {
+}
+
+
+h1 {
+  text-align      :  center;
+}
+
+a {
+  text-decoration : none;
+}
+
+a:hover {
+  text-decoration : underline;
+}
+
+
+div.abstract {
+  margin-left   : 25%;
+  margin-right  : 25%
+}
+
+span.abstractTitle {
+  font-weight   : bold;
+}
+
+div.authors {
+  text-align    : right;
+  margin-right  : 20%
+}
+
+div.date {
+  text-align    : right;
+  margin-right  : 20%
+}
+
+div.section {
+}
+
+div.sectionHead {
+}
+
+div.sectionBody {
+}
+
+span.captionTitle {
+  font-weight   : bold;
+}
+
+
+div.figure {
+  text-align      : center;
+  margin-bottom   : 0.5cm;
+  margin-top      : 0.2cm;
+}
+
+table.figure {
+  margin-left     : auto;
+  margin-right    : auto;
+  padding         : 0px;
+  border-width    : 0px;
+  border-style    : none;
+}
+
+tr.figureBody {
+}
+
+tr.figureCaption {
+  margin-top      : 0.3cm;
+}
+
+td.figureCaption {
+  text-align      : center;
+}
+
+td.figureBody {
+  vertical-align  : middle;
+}
+
+img.figure {  
+}
+
+table.subfigure {  
+  margin          : 0px;
+  margin-left     : auto;
+  margin-right    : auto;
+  padding         : 0px;
+  border-width    : 0px;
+  border-style    : none;
+}
+
+tr.subfigureBody {
+}
+
+tr.subfigureCaption {
+  margin-top      : 0.2cm;
+  margin-bottom   : 0.4cm;
+}
+
+td.subfigureCaption {
+  text-align      : center;
+}
+
+td.subfigureBody {
+  vertical-align  : middle;
+}
+
+img.subfigure {  
+}
+
+
+div.table {
+  text-align      : center;
+  margin-bottom   : 0.5cm;
+  margin-top      : 0.2cm;
+}
+
+table.table {
+  margin-left     : auto;
+  margin-right    : auto;
+  padding         : 0px;
+  border-width    : 0px;
+  border-style    : none;
+}
+
+tr.tableBody {
+}
+
+tr.tableCaption {
+  margin-top      : 0.3cm;
+}
+
+td.tableCaption {
+}
+
+td.tableBody {
+}
+
+table.tab {
+  margin          : 0px;
+  margin-left     : auto;
+  margin-right    : auto;
+  border-width    : 1px;
+  border-style    : solid;
+  border-collapse : collapse;
+  max-width       : 100%;
+}
+
+thead.tab {
+  border-width    : 1px;
+  border-style    : solid;
+  border-collapse : collapse;
+  background-color: #dddddd;
+  font-size       : 90%;
+}
+
+tfoot.tab {
+  border-width    : 1px;
+  border-style    : solid;
+  border-collapse : collapse;
+  background-color: #dddddd;
+  font-size       : 90%;
+}
+
+tbody.tab {
+  font-size       : 80%;
+  border-width    : 1px;
+}
+
+tr.tabH {
+  border-width    : 1px;
+  border-style    : solid;
+  border-collapse : collapse;
+}
+
+tr.tabB {
+}
+
+tr.tabF {
+  border-width    : 1px;
+  border-style    : solid;
+  border-collapse : collapse;
+}
+
+tr.tabBE {
+  background-color  : #cccccc;
+}
+
+tr.tabBO {
+}
+
+tr.tabBEHR {
+  background-color  : #cccccc;
+  border-top-style  : solid;
+  border-top-width  : 1px;
+}
+
+tr.tabBOHR {
+  border-top-style  : solid;
+  border-top-width  : 1px;
+}
+
+th.tabC {
+  text-align          : center;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border-width        : 1px;
+  border-style        : solid;
+  border-collapse     : collapse;
+}
+
+th.tabR {
+  text-align          : right;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border-width        : 1px;
+  border-style        : solid;
+  border-collapse     : collapse;
+}
+
+th.tabL {
+  text-align          : left;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border-width        : 1px;
+  border-style        : solid;
+  border-collapse     : collapse;
+}
+
+td.tabC {
+  text-align          : center;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border              : 0px;
+  border-style        : none;
+  border-left-width   : 1px;
+  border-right-width  : 1px;
+  border-left-style   : solid;
+  border-right-style  : solid;
+  border-collapse     : collapse;
+}
+
+td.tabR {
+  text-align          : right;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border              : 0px;
+  border-style        : none;
+  border-left-width   : 1px;
+  border-right-width  : 1px;
+  border-left-style   : solid;
+  border-right-style  : solid;
+  border-collapse     : collapse;
+}
+
+td.tabL {
+  text-align          : left;
+  padding-top         : 0.1em;
+  padding-bottom      : 0.1em;
+  padding-right       : 0.35em;
+  padding-left        : 0.35em;
+  border              : 0px;
+  border-style        : none;
+  border-left-width   : 1px;
+  border-right-width  : 1px;
+  border-left-style   : solid;
+  border-right-style  : solid;
+  border-collapse     : collapse;
+}
+
+
+sub.math {
+}
+
+sup.math {
+  vertical-align    : -20%;
+}
+
+div.equation {
+  margin-left       : 5%;
+  margin-right      : 5%;
+  margin-top        : 0.4cm;
+  margin-bottom     : 1cm;
+}
+
+table.equation {
+  width            : 100%;
+}
+
+tr.equation {
+}
+
+td.equationBody {
+  text-align      : center;
+  vertical-align  : middle;
+}
+
+td.equationNumber {
+  text-align      : center;
+  vertical-align  : middle;
+}
+
+
+
+table.mathOp {
+  margin          : 0px;
+  padding         : 0px;
+  border-collapse : collapse;
+  border-width    : 0px;
+  border-style    : none;
+  vertical-align  : middle;
+  text-align      : center;
+  white-space     : nowrap;
+  display         : inline-table;
+}
+
+tr.mathOp {
+  margin          : 0px;
+  padding         : 0px;
+  border-collapse : collapse;
+  border-width    : 0px;
+  border-style    : none;
+  vertical-align  : middle;
+  text-align      : center;
+  white-space     : nowrap;
+}
+
+td.mathOp {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : middle;
+  text-align          : center;
+  padding-left        : 0.05em;
+  padding-right       : 0.05em;
+  white-space         : nowrap;
+}
+
+td.mathUL {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  border-bottom-width : 1px;
+  border-bottom-color : #000000;
+  border-bottom-style : solid;
+  vertical-align      : middle;
+  text-align          : center;  
+  padding-left        : 0.05em;
+  padding-right       : 0.05em;
+  white-space         : nowrap;
+}
+
+td.mathTL {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  border-top-width    : 1px;
+  border-top-color    : #000000;
+  border-top-style    : solid;
+  vertical-align      : middle;
+  text-align          : center; 
+  padding-right       : 0.05em;
+  white-space         : nowrap;
+}
+
+td.mathBL {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  border-left-width   : 1px;
+  border-left-color   : #000000;
+  border-left-style   : solid;
+  border-right-width  : 1px;
+  border-right-color  : #000000;
+  border-right-style  : solid;
+  vertical-align      : middle;
+  text-align          : center;  
+  padding-left        : 0.05em;
+  padding-right       : 0.05em;
+  white-space         : nowrap;
+}
+
+td.mathOpBig {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : middle;
+  text-align          : center;
+  font-size           : 150%;
+  padding-left        : 0.05em;
+  white-space         : nowrap;
+  padding-right       : 0.05em;
+}
+
+td.mathOpSmall {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : middle;
+  text-align          : center;
+  font-size           : 66%;
+  white-space         : nowrap;
+}
+
+tr.mathPowTR {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : middle;
+  text-align          : center;
+  height              : 0.33ex;
+  max-height          : 0.33ex;
+  white-space         : nowrap;
+}
+
+td.mathExp {
+  margin              : 0px;
+  padding             : 0px;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : top;
+  text-align          : center;
+  font-size           : 66%;
+  padding-left        : 0.2em;
+  white-space         : nowrap;
+}
+
+table.ref {
+  margin              : 0.2mm;
+  padding             : 0.2mm;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : top;  
+}
+
+tr.ref {
+  margin              : 0mm;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : top;  
+}
+
+td.refId {
+  margin              : 0mm;
+  padding             : 0mm;
+  padding-right       : 1.5mm;
+  padding-top         : 2mm;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : top;
+  text-align          : right;  
+}
+
+td.refTxt {
+  margin              : 0mm;
+  padding             : 0mm;
+  padding-left        : 1.5mm;
+  padding-top         : 2mm;
+  border-collapse     : collapse;
+  border-width        : 0px;
+  border-style        : none;
+  vertical-align      : top;
+  text-align          : left;  
+}
+
+a.refId {
+  font-weight         : bold;
+}
+
+span.ref {
+  font-size           : 90%;
+}
+
+a.ref {
+}
+
+
+span.article {
+}
+
+span.inCollection {
+}
+
+span.inProceedings {
+}
+
+span.proceedings {
+}
+
+span.book {
+}
+
+span.techReport {
+}
+
+span.thesis {
+}
+
+span.website {
+}
+
+span.authors {
+}
+
+span.author {
+}
+
+span.journal {
+  font-style    : italic;  
+}
+
+span.editors {
+}
+
+span.editor {
+}
+
+span.edition {
+}
+
+span.title {
+}
+
+span.bookTitle {
+  font-style    : italic;
+}
+
+span.chapter {
+}
+
+span.date {
+}
+
+span.pages {
+}
+
+span.jvolume {
+}
+
+span.issue {
+}
+
+span.series {
+}
+
+span.svolume {
+}
+
+span.rnumber {
+}
+
+span.rseries {
+}
+
+
+span.publisher {
+}
+
+span.publisherAddress {
+}
+
+span.location {
+}
+
+span.doi {
+}
+
+span.link {
+}
+
+span.ttype {
+}
+
+
+span.institute {
+}
+
+span.instituteAddress {
+}
+
+span.school {
+}
+
+span.schoolAddress {
+}

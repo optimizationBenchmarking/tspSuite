@@ -1,0 +1,11 @@
+/target
+/.settings
+/.classpath
+/bin
+/classes
+/build
+/temp
+/tmp
+/out
+/.gradle
+/dependency-reduced-pom.xml

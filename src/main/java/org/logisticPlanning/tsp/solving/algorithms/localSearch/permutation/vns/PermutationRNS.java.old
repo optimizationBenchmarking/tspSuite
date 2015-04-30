@@ -1,0 +1,318 @@
+package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns;
+
+import java.io.PrintStream;
+
+import org.logisticPlanning.tsp.benchmarking.instances.Instance;
+import org.logisticPlanning.tsp.benchmarking.objective.LogPoint;
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.TSPAlgorithm;
+import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
+import org.logisticPlanning.tsp.solving.TSPModule;
+import org.logisticPlanning.tsp.solving.operators.permutation.creation.PermutationCreateCanonical;
+import org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdateOperator;
+import org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Reverse;
+import org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Left;
+import org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Right;
+import org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Swap;
+import org.logisticPlanning.utils.config.Configurable;
+import org.logisticPlanning.utils.config.Configuration;
+import org.logisticPlanning.utils.math.random.Randomizer;
+
+/**
+ * <@jnf><#noparse><#include "_vns.ftl"/><#include
+ * "../../../../_tspModule.ftl"/>* <p>
+ * The version of PermutationRNS before the consolidation into
+ * local search done in version 0.9.8 of ${projectName}.
+ * </p><p>
+ * <p>
+ * A Random Neighborhood Search (RNS) is a version of a
+ * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.PermutationVNS
+ * Variable Neighborhood Search} (VNS)<@multiCite ["HM2001VNSPAA",
+ * "HMP2008VNSMAA", "HMP2010VNSMAA", "HMBP2010VNS"] /> algorithm but instead of
+ * always returning to the neighborhood at the lowest index, this algorithm
+ * always picks random neighborhoods (search operators).
+ * </p>
+ * <p>
+ * The RNS is defined over four neighborhoods (search operators) for the path
+ * representation (permutation of cities in visiting order):
+ * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Swap
+ * swap},
+ * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Right
+ * rotate right},
+ * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Left
+ * rotate left}, and
+ * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Reverse
+ * reverse}. Each of these operations takes two integer values {@code (i, j)}
+ * as parameter. The neighborhoods have proximately the same sizes ({@code n²})
+ * and are disjoint
+ * </p>
+ * <p>
+ * The algorithm randomly chooses one neighborhood (search operator) and then,
+ * depending on the value of the policy parameter
+ * {@link #m_improvementSelectionPolicy}, either tests all possible
+ * applications of it, i.e., index tuples (i,j) to find the best improvement or
+ * terminates testing as soon as one possible improvement has been discovered.
+ * If an operator application was discovered that would lead to an improvement,
+ * it is applied. After that, any other neighborhood can be chosen next. If the
+ * best application does not lead to an improvement, we next randomly choose
+ * another neighborhood. If no neighborhood can provide an improvement, this
+ * means we are in a deep local optimum (or global optimum). In that case, we
+ * take the best solution and randomly shuffle a part of it. Then, we start the
+ * procedure again.
+ * </p>
+ * <@citations/> <@changeLog> <@TSPModuleChange/><@vnsErrorChangeLogEntry/>
+ * </@changeLog><@javaAuthorVersion/></#noparse></@jnf>
+ */
+public class PermutationRNS extends TSPAlgorithm {
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
+
+  /** the neighborhoods: {@value} */
+  public static final String PARAM_NEIGHBORHOODS = "rnsNeighborhoods"; //$NON-NLS-1$
+
+  /**
+   * the policy regarding whether we should use the first improvement or best
+   * improvement: {@value}
+   */
+  public static final String PARAM_IMPROVEMENT_SELECTION_POLICY = "rnsImprovementSelectionPolicy"; //$NON-NLS-1$
+
+  /** the default neighborhoods */
+  private static final PermutationUpdateOperator[] DEFAULT_NEIGHBORHOODS = new PermutationUpdateOperator[] {//
+      PermutationUpdate_Swap.INSTANCE,//
+      PermutationUpdate_Reverse.INSTANCE,//
+      PermutationUpdate_Rotate_Left.INSTANCE,//
+      PermutationUpdate_Rotate_Right.INSTANCE, };
+
+  /**
+   * the update operations (neighborhoods)
+   * 
+   * @serial a non-null array with the (non-null) updating operations
+   *         (neighborhoods)
+   */
+  private PermutationUpdateOperator[] m_ops;
+
+  /**
+   * the policy regarding whether we should use the first improvement or best
+   * improvement
+   * 
+   * @serial the non-null improvement selection policy
+   */
+  private EImprovementSelectionPolicy m_improvementSelectionPolicy;
+
+  /** instantiate */
+  public PermutationRNS() {
+    super("Random Neighborhood Search");//$NON-NLS-1$
+
+    this.m_ops = PermutationRNS.DEFAULT_NEIGHBORHOODS;
+    this.m_improvementSelectionPolicy = EImprovementSelectionPolicy.DEFAULT;
+  }
+
+  /**
+   * Perform the RNS
+   * 
+   * @param args
+   *          the command line arguments
+   */
+  public final static void main(final String[] args) {
+    TSPAlgorithmRunner.benchmark(//
+        Instance.SYMMETRIC_INSTANCES, PermutationRNS.class,//
+        args);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void solve(final ObjectiveFunction f) {
+
+    final int[] solution;
+    final int n;
+    final Randomizer r;
+    final LogPoint current;
+    final PermutationUpdateOperator[] ops;
+    final EImprovementSelectionPolicy policy;
+    boolean firstImpIt;
+    long length;
+    int shuffleLength, opsCount, chosen, delta, bestDelta, i, j, bestI, bestJ;
+    PermutationUpdateOperator op;
+
+    n = f.n();
+    solution = new int[n];
+    r = f.getRandom();
+    current = f.getCurrentLogPoint();
+
+    // see which kind of improvement we are looking for
+    policy = this.m_improvementSelectionPolicy.getCallPolicy(r);
+    firstImpIt = policy.getIterationPolicy(r).useFirstImprovement();
+
+    // Let's check if an initialization routine was performed before this
+    // algorithm
+    if (current.getConsumedFEs() > 0) {
+      f.getCopyOfBest(solution);
+      length = current.getBestF();
+    } else {
+      PermutationCreateCanonical.makeCanonical(solution);
+      r.shuffle(solution, 0, n);
+      length = f.evaluate(solution);
+    }
+
+    ops = new PermutationUpdateOperator[this.m_ops.length];
+
+    findImprovement: for (;;) {
+      // We always randomly pick neighborhoods, so let's first reset the
+      // neighborhood counter.
+      opsCount = this.m_ops.length;
+      System.arraycopy(this.m_ops, 0, ops, 0, opsCount);
+
+      // Now randomly pick the neighborhoods!
+      while (opsCount > 0) {
+        chosen = r.nextInt(opsCount);
+        op = ops[chosen];
+        ops[chosen] = ops[--opsCount];
+
+        bestI = bestJ = bestDelta = Integer.MAX_VALUE;
+
+        // Test all possible modifications that this neighborhood can offer.
+        findBest: for (j = n; (--j) > 0;) {
+          for (i = j; (--i) >= 0;) {
+
+            // Check operation for indices (i,j)
+            delta = op.delta(solution, f, i, j);
+            if (delta < bestDelta) { // Remember best possible move.
+              bestDelta = delta;
+              bestI = i;
+              bestJ = j;
+              if (firstImpIt && (delta < 0)) {
+                break findBest;
+              }
+            }
+          }
+        }
+
+        // Did we find an improvement, i.e., is there an application of the
+        // search operator that would decrease the tour length?
+        if (bestDelta < 0) {// Yes! we found one improving move!
+          op.update(solution, bestI, bestJ);// apply this move
+          length += bestDelta; // modify tour length
+          f.registerFE(solution, length); // register new tour length
+          if (f.shouldTerminate()) {
+            return;
+          }
+
+          // we can now go back to test the neighborhoods again
+          continue findImprovement;
+        }
+
+        if (f.shouldTerminate()) {
+          return;
+        }
+      }
+
+      // Oh, we tried all neighborhoods - but none was working!
+
+      f.getCopyOfBest(solution); // start again at a copy of the best solution
+
+      shuffleLength = (r.nextInt(n - 5) + 4); // shuffle at least 4 nodes
+      r.shuffle(solution, r.nextInt((n - shuffleLength) + 1), shuffleLength);
+      length = f.evaluate(solution); // and evaluate the shuffled solution
+
+      if (f.shouldTerminate()) {
+        return; // ok, terminate
+      }
+
+      // see which kind of improvement we are looking for
+      firstImpIt = policy.getIterationPolicy(r).useFirstImprovement();
+    }
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printConfiguration(final PrintStream ps) {
+    super.printConfiguration(ps);
+
+    Configurable.printKey(PermutationRNS.PARAM_NEIGHBORHOODS, ps);
+    Configurable.printlnObject(this.m_ops, ps);
+
+    Configurable.printKey(PermutationRNS.PARAM_IMPROVEMENT_SELECTION_POLICY,
+        ps);
+    Configurable.printlnObject(this.m_improvementSelectionPolicy, ps);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printParameters(final PrintStream ps) {
+    super.printParameters(ps);
+
+    Configurable.printKey(PermutationRNS.PARAM_IMPROVEMENT_SELECTION_POLICY,
+        ps);
+    ps.println(//
+    "should we use the best possible improvement or the first one discovered?"); //$NON-NLS-1$
+
+    ps.println(//
+    "the minimum number of nodes shuffled when trying to escape a local optimum"); //$NON-NLS-1$
+
+    for (final Configurable c : this.m_ops) {
+      c.printParameters(ps);
+    }
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void configure(final Configuration config) {
+    super.configure(config);
+
+    this.m_improvementSelectionPolicy = config.getConstant(
+        PermutationRNS.PARAM_IMPROVEMENT_SELECTION_POLICY,
+        EImprovementSelectionPolicy.class, EImprovementSelectionPolicy.class,
+        this.m_improvementSelectionPolicy);
+
+    for (final Configurable c : this.m_ops) {
+      c.configure(config);
+    }
+  }
+
+  /**
+   * set the policy regarding whether the first improvement or the best
+   * improvement should be used
+   * 
+   * @param i
+   *          the policy
+   */
+  public final void setImprovementSelectionPolicy(
+      final EImprovementSelectionPolicy i) {
+    if (i != null) {
+      this.m_improvementSelectionPolicy = i;
+    }
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public PermutationRNS clone() {
+    final PermutationRNS r;
+    final PermutationUpdateOperator[] o;
+    int i;
+
+    r = ((PermutationRNS) (super.clone()));
+    r.m_ops = o = r.m_ops.clone();
+    for (i = o.length; (--i) >= 0;) {
+      o[i] = o[i].clone();
+    }
+
+    return r;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void beginRun(final ObjectiveFunction f) {
+    super.beginRun(f);
+    TSPModule.invokeBeginRun(f, this.m_ops);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void endRun(final ObjectiveFunction f) {
+    try {
+      TSPModule.invokeEndRun(f, this.m_ops);
+    } finally {
+      super.endRun(f);
+    }
+  }
+}

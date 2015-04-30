@@ -1,0 +1,526 @@
+package org.logisticPlanning.tsp.solving.algorithms.localSearch.satelliteList.LKW;
+
+import java.io.PrintStream;
+
+import org.logisticPlanning.tsp.benchmarking.instances.Instance;
+import org.logisticPlanning.tsp.benchmarking.objective.LogPoint;
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.TSPAlgorithm;
+import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
+import org.logisticPlanning.tsp.solving.operators.permutation.creation.PermutationCreateCanonical;
+import org.logisticPlanning.tsp.solving.utils.candidates.CandidateSet;
+import org.logisticPlanning.tsp.solving.utils.satelliteList.UndoableSatelliteList;
+import org.logisticPlanning.tsp.solving.utils.satelliteList.UndoableSatelliteNode;
+import org.logisticPlanning.utils.config.Configurable;
+import org.logisticPlanning.utils.config.Configuration;
+import org.logisticPlanning.utils.math.random.Randomizer;
+
+/**
+ * <@jnf><#noparse><#include "../../../../_tspModule.ftl"/>
+ * <p>
+ * The version of LD_ID before the consolidation into
+ * local search done in version 0.9.8 of ${projectName}.
+ * </p><p>
+ * A interative deepening variant of the <a
+ * href="http://en.wikipedia.org/wiki/Lin%E2%80%93Kernighan_heuristic"
+ * >Lin-Kerninghan algorithm</a><@multiCite ["LK1973AEHAFTTSP",
+ * "JMG2004EAOHFTS"]/> which uses the
+ * {@link org.logisticPlanning.tsp.solving.utils.satelliteList.SatelliteList
+ * satellite list} representation. The algorithm apply the Lin-Kerninghan
+ * approach recursively and performs backtracking in each recursion level. The
+ * recursion depth is limited and the limit of depth may step-by-step be
+ * increased in a randomized fashion if no improvements can be found. As soon
+ * as an improvement is found, the depth limit is reset to its initial value.
+ * If the depth cannot be increased anymore (and with a certain probability if
+ * no improvement is found), the best solution discovered so far is taken and a
+ * large fraction of it is shuffled and the depth limit is reset.
+ * </p>
+ * <@citations/><@changeLog>
+ * <@TSPModuleChange/></@changeLog><@javaAuthorVersion/></#noparse></@jnf>
+ * 
+ * @since ${projectName}/0.9.8 </#noparse></@jnf>
+ */
+public class LK_ID extends TSPAlgorithm {
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
+
+  /**
+   * the default number of candidates
+   * 
+   * @see #CONFIG_CANDIDATE_COUNT
+   * @see #PARAM_CANDIDATE_COUNT
+   * @see #m_candidateCount
+   * @see #m_candidates
+   */
+  public static final int DEFAULT_CANDIDATE_COUNT = -1;
+
+  /**
+   * the parameter governing the number of nearest neighbors in the candidate
+   * list to per node: {@value} , {@code -1} means use all nodes as candidates
+   * 
+   * @see #CONFIG_CANDIDATE_COUNT
+   * @see #DEFAULT_CANDIDATE_COUNT
+   * @see #m_candidateCount
+   * @see #m_candidates
+   */
+  public static final String PARAM_CANDIDATE_COUNT = "candidateCount"; //$NON-NLS-1$
+
+  /**
+   * the actual size of the candidate list: {@value}
+   * 
+   * @see #DEFAULT_CANDIDATE_COUNT
+   * @see #PARAM_CANDIDATE_COUNT
+   * @see #m_candidateCount
+   * @see #m_candidates
+   */
+  public static final String CONFIG_CANDIDATE_COUNT = "configUsedCandidateCount"; //$NON-NLS-1$
+
+  /**
+   * the start max depth for recursion: the algorithm may initially add and
+   * remove at most <em>{@value}+1</em> edges.
+   * 
+   * @see #PARAM_START_MAX_RECURSION_DEPTH
+   * @see #m_startMaxDepth
+   */
+  public static final int DEFAULT_START_MAX_RECURSION_DEPTH = 1;
+
+  /**
+   * the parameter with the initial maximum recursion depth: {@value}
+   * 
+   * @see #DEFAULT_START_MAX_RECURSION_DEPTH
+   * @see #m_startMaxDepth
+   */
+  public static final String PARAM_START_MAX_RECURSION_DEPTH = "startMaxRecursionDepth";//$NON-NLS-1$
+
+  /**
+   * the maximum max depth for recursion: the algorithm may add and remove at
+   * most <em>{@value}+1</em> edges.
+   * 
+   * @see #PARAM_MAXIMUM_MAX_RECURSION_DEPTH
+   * @see #m_maxMaxDepth
+   */
+  public static final int DEFAULT_MAX_MAX_RECURSION_DEPTH = 20;
+
+  /**
+   * the parameter with the maximum maximum recursion depth: {@value}
+   * 
+   * @see #DEFAULT_MAX_MAX_RECURSION_DEPTH
+   * @see #m_maxMaxDepth
+   */
+  public static final String PARAM_MAXIMUM_MAX_RECURSION_DEPTH = "maxMaxRecursionDepth";//$NON-NLS-1$
+
+  /**
+   * The probability to increase the search depth if no improvement could be
+   * found.
+   * 
+   * @see #PARAM_DEPTH_INCREASING_PROBABILITY
+   * @see #m_depthIncreasingProbability
+   */
+  public static final double DEFAULT_DEPTH_INCREASING_PROBABILITY = 0.8d;
+
+  /**
+   * the parameter governing the depth increasing probability: {@value}
+   * 
+   * @see #DEFAULT_DEPTH_INCREASING_PROBABILITY
+   * @see #m_depthIncreasingProbability
+   */
+  public static final String PARAM_DEPTH_INCREASING_PROBABILITY = "depthIncreasingProbability";//$NON-NLS-1$
+
+  /** the number of candidates */
+  private int m_candidateCount;
+
+  /** the starting max depth */
+  private int m_startMaxDepth;
+
+  /** the maximum max depth */
+  private int m_maxMaxDepth;
+
+  /** the probability to increase the depth */
+  private double m_depthIncreasingProbability;
+
+  /* The per-run data */
+
+  /** the nodes */
+  private transient UndoableSatelliteList<UndoableSatelliteNode> m_nodes;
+
+  /** the candidate set */
+  private transient CandidateSet m_candidates;
+
+  /** the objective function */
+  private transient ObjectiveFunction m_f;
+
+  /** the current max recursion depth */
+  private transient int m_currentMaxDepth;
+
+  /** the temporary buffer for solutions */
+  private transient int[] m_tempSolution;
+  /** the temporary permutation */
+  private transient int[] m_tempPerm;
+
+  /** the solution length */
+  private transient long m_solutionLength;
+
+  /** the node sequence */
+  private transient UndoableSatelliteNode m_a;
+
+  /** the number of candidates */
+  private transient int m_m;
+
+  /** instantiate */
+  public LK_ID() {
+    super("Iterative Deepening Lin-Kerninghan Heuristic");//$NON-NLS-1$    
+
+    this.m_candidateCount = LK_ID.DEFAULT_CANDIDATE_COUNT;
+    this.m_startMaxDepth = LK_ID.DEFAULT_START_MAX_RECURSION_DEPTH;
+    this.m_maxMaxDepth = LK_ID.DEFAULT_MAX_MAX_RECURSION_DEPTH;
+    this.m_depthIncreasingProbability = LK_ID.DEFAULT_DEPTH_INCREASING_PROBABILITY;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public LK_ID clone() {
+    LK_ID result;
+
+    result = ((LK_ID) (super.clone()));
+    result.__clear();
+    return result;
+  }
+
+  /** clear this instance */
+  private final void __clear() {
+    this.m_candidates = null;
+    this.m_nodes = null;
+    this.m_candidates = null;
+    this.m_f = null;
+    this.m_currentMaxDepth = 0;
+    this.m_tempSolution = null;
+    this.m_solutionLength = 0l;
+    this.m_a = null;
+    this.m_m = 0;
+    this.m_tempPerm = null;
+  }
+
+  /**
+   * Perform the VNS
+   * 
+   * @param args
+   *          the command line arguments
+   */
+  public final static void main(final String[] args) {
+    TSPAlgorithmRunner.benchmark(//
+        Instance.SYMMETRIC_INSTANCES, LK_ID.class,//
+        args);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void solve(final ObjectiveFunction f) {
+    final int n; // the number of nodes in the problem
+    final LogPoint current; // used to check if have initial so
+    final int maxMaxDepth; // the maximum allowed depth
+    final int minMaxDepth; // the minimum max depth
+    final int[] aStartPerm; // the permutation
+    final Randomizer r; // the randomizer
+    UndoableSatelliteList<UndoableSatelliteNode> nodes; // the nodes
+    int aChoices, aIdx, aVal, shuffleLength; // a multi-purpose counter
+    boolean foundImprovement;
+
+    n = f.n();
+    this.m_f = f;
+    r = f.getRandom();
+    current = f.getCurrentLogPoint();
+
+    // Let's check if an initialization routine was performed before this
+    // algorithm.
+    if (current.getConsumedFEs() > 0) {
+      // If at least one FE has been consumed, this means there is at least one
+      // solution known already. We can use the best known solution to start
+      // our search at.
+      f.getCopyOfBest(this.m_tempSolution);
+      this.m_solutionLength = current.getBestF();
+    } else {
+      // No solution has been created before this algorithm was started: create
+      // one randomly!
+      PermutationCreateCanonical.makeCanonical(this.m_tempSolution);
+      r.shuffle(this.m_tempSolution);
+      this.m_solutionLength = f.evaluate(this.m_tempSolution);
+    }
+
+    aStartPerm = this.m_tempPerm;
+    System.arraycopy(this.m_tempSolution, 0, aStartPerm, 0, n);
+
+    // Transform the solution to an array of nodes holding a doubly linked
+    // list.
+    nodes = this.m_nodes;
+    nodes.fromPath(this.m_tempSolution);
+
+    // Set the recursion depth limits. We start with 2-opt.
+    maxMaxDepth = Math.min((n - 2), this.m_maxMaxDepth);
+    minMaxDepth = Math.min(Math.max(1, this.m_startMaxDepth), maxMaxDepth);
+    this.m_currentMaxDepth = minMaxDepth;
+
+    // Now we enter the main loop of the search.
+    while (!(f.shouldTerminate())) {// begin "main loop"
+      foundImprovement = false;
+
+      for (aChoices = n; aChoices > 0;) {
+        // we iterate over all possible start nodes "a"
+        aIdx = r.nextInt(aChoices--);
+        aVal = aStartPerm[aIdx];
+        aStartPerm[aIdx] = aStartPerm[aChoices];
+        aStartPerm[aChoices] = aVal;
+
+        this.m_a = nodes.getNode(aVal);
+
+        if (this.__recurse(0, this.m_a, 0l)) {
+          foundImprovement = true; // we got an improvement!
+          if (this.m_currentMaxDepth > minMaxDepth) {
+            break; // we break only if we have recursed deeper
+          }
+        }
+
+        if (f.shouldTerminate()) {
+          return;
+        }
+      }
+
+      // ok, one recursion was finished.
+      if (foundImprovement) {
+        // if we have recursed deeper, reset depth
+        if (this.m_currentMaxDepth > minMaxDepth) {
+          this.m_currentMaxDepth = minMaxDepth;
+        }
+      } else { // no improvement was found
+        if ((r.nextDouble() >= this.m_depthIncreasingProbability) || //
+            (this.m_currentMaxDepth >= maxMaxDepth)) {
+          // We reset the search by randomizing a part of the best solution
+          // with probability (1-m_depthIncreasingProbability) or if we have
+          // reached the maximum depth.
+          f.getCopyOfBest(aStartPerm);
+          shuffleLength = (r.nextInt(n - 5) + 4); // shuffle at least 4 nodes
+          r.shuffle(aStartPerm, r.nextInt((n - shuffleLength) + 1),
+              shuffleLength);
+          this.m_solutionLength = f.evaluate(aStartPerm); // evaluate
+          nodes.fromPath(aStartPerm);
+          this.m_currentMaxDepth = minMaxDepth;
+        } else {
+          this.m_currentMaxDepth++; // increase the recursion depth
+        }
+      }
+    }// end "main loop"
+  }
+
+  /**
+   * recurse
+   * 
+   * @param depth
+   *          the depth
+   * @param a
+   *          the node a
+   * @param gain
+   *          the current gain
+   * @return a flag indicating the outcome
+   */
+  private final boolean __recurse(final int depth,
+      final UndoableSatelliteNode a, final long gain) {
+    long bgain, cgain;
+    int bChoice, cChoice;
+    boolean closeArc;
+    UndoableSatelliteNode b, c;
+
+    closeArc = (depth >= this.m_currentMaxDepth);
+    for (bChoice = 1; bChoice >= 0; bChoice--) {
+      b = a.getNeighbor(bChoice);
+
+      if ((b == null)
+          || (b == a)//
+          || (b.numberOfPendingAdditions() > 1)
+          || (b.numberOfPendingDeletions() > 1)) {
+        continue;
+      }
+
+      bgain = (gain + this.m_f.distance(a.id, b.id));
+      for (cChoice = 1; cChoice <= this.m_m; cChoice++) {
+
+        if (closeArc) {
+          c = this.m_a;
+        } else {
+          c = this.m_nodes.getNode(this.m_candidates.getCandidate(b.id,
+              cChoice));
+          if (c == this.m_a) {
+            continue;
+          }
+        }
+        if ((c == null) || (c == a) || (c == b)//
+            || (c.numberOfPendingAdditions() > 1) || //
+            b.isRelated(c)) {
+          continue;
+        }
+
+        cgain = bgain - this.m_f.distance(b.id, c.id);
+        if (cgain <= 0l) {
+          continue;
+        }
+
+        a.doDisconnect(b);
+        b.doDisconnect(a);
+        b.doConnect(c);
+        c.doConnect(b);
+
+        if (c == this.m_a) {
+          if (this.m_nodes.toPath(this.m_tempSolution)) {
+            this.m_solutionLength -= cgain;
+            this.m_f.registerFE(this.m_tempSolution, this.m_solutionLength);
+            c.commit();
+            b.commit();
+            return true;
+          }
+        } else {
+          if (depth < this.m_currentMaxDepth) {
+            if (c.numberOfPendingDeletions() < 2) {
+              if (this.__recurse(depth + 1, c, cgain)) {
+                c.commit();
+                b.commit();
+                return true;
+              }
+            }
+          }
+        }
+
+        if (this.m_f.shouldTerminate()) {
+          return false;
+        }
+
+        c.undoConnect(b);
+        b.undoConnect(c);
+        b.undoDisconnect(a);
+        a.undoDisconnect(b);
+
+        if (closeArc) {
+          break;
+        }
+      }
+    }
+
+    return false;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printConfiguration(final PrintStream ps) {
+    super.printConfiguration(ps);
+
+    Configurable.printKey(LK_ID.PARAM_CANDIDATE_COUNT, ps);
+    ps.println(this.m_candidateCount);
+
+    if (this.m_candidates != null) {
+      Configurable.printKey(LK_ID.CONFIG_CANDIDATE_COUNT, ps);
+      ps.println(this.m_candidates.m());
+    }
+
+    Configurable.printKey(LK_ID.PARAM_START_MAX_RECURSION_DEPTH, ps);
+    ps.println(this.m_startMaxDepth);
+
+    Configurable.printKey(LK_ID.PARAM_DEPTH_INCREASING_PROBABILITY, ps);
+    ps.println(this.m_depthIncreasingProbability);
+
+    Configurable.printKey(LK_ID.PARAM_MAXIMUM_MAX_RECURSION_DEPTH, ps);
+    ps.println(this.m_maxMaxDepth);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printParameters(final PrintStream ps) {
+    super.printParameters(ps);
+
+    Configurable.printKey(LK_ID.PARAM_CANDIDATE_COUNT, ps);
+    ps.println("the number of nearest neighbors in the candidate sets per node"); //$NON-NLS-1$
+
+    Configurable.printKey(LK_ID.PARAM_START_MAX_RECURSION_DEPTH, ps);
+    ps.println("the start depth limit of the recursion"); //$NON-NLS-1$
+
+    Configurable.printKey(LK_ID.PARAM_DEPTH_INCREASING_PROBABILITY, ps);
+    ps.println("the probability to increase the recursion depth if no improvement is found"); //$NON-NLS-1$
+
+    Configurable.printKey(LK_ID.PARAM_MAXIMUM_MAX_RECURSION_DEPTH, ps);
+    ps.println("the final recursion depth limit"); //$NON-NLS-1$
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void configure(final Configuration config) {
+    super.configure(config);
+
+    this.m_candidateCount = config.getInt(LK_ID.PARAM_CANDIDATE_COUNT, -1,
+        1000000, this.m_candidateCount);
+
+    this.m_maxMaxDepth = config
+        .getInt(LK_ID.PARAM_MAXIMUM_MAX_RECURSION_DEPTH, 1, 100000,
+            this.m_maxMaxDepth);
+    this.m_startMaxDepth = config.getInt(
+        LK_ID.PARAM_START_MAX_RECURSION_DEPTH, 1, this.m_maxMaxDepth,
+        this.m_startMaxDepth);
+    this.m_depthIncreasingProbability = config.getDouble(
+        LK_ID.PARAM_DEPTH_INCREASING_PROBABILITY, 0d, 1d,
+        this.m_depthIncreasingProbability);
+  }
+
+  /**
+   * Set the maximum max depth
+   * 
+   * @param i
+   *          the value
+   */
+  public final void setMaxMaxRecursionDepth(final int i) {
+    if (i <= 0) {
+      this.m_maxMaxDepth = LK_ID.DEFAULT_MAX_MAX_RECURSION_DEPTH;
+    } else {
+      this.m_maxMaxDepth = i;
+    }
+  }
+
+  /**
+   * Set the start max depth
+   * 
+   * @param i
+   *          the value
+   */
+  public final void setStartMaxRecursionDepth(final int i) {
+    final int z;
+    if (i <= 0) {
+      z = LK_ID.DEFAULT_START_MAX_RECURSION_DEPTH;
+    } else {
+      z = i;
+    }
+    if (z > this.m_maxMaxDepth) {
+      throw new IllegalArgumentException();
+    }
+    this.m_startMaxDepth = z;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void beginRun(final ObjectiveFunction f) {
+    final int n;
+
+    super.beginRun(f);
+
+    this.m_f = f;
+
+    this.m_candidates = CandidateSet.allocate(f, this.m_candidateCount, null);
+    this.m_m = this.m_candidates.m();
+
+    n = f.n();
+    this.m_tempSolution = new int[n];
+    this.m_tempPerm = new int[n];
+    this.m_nodes = new UndoableSatelliteList<>(n);
+
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void endRun(final ObjectiveFunction f) {
+    this.__clear();
+    super.endRun(f);
+  }
+}

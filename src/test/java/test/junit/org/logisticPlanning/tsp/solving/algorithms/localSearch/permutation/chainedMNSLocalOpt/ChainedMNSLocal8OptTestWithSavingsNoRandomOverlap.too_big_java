@@ -1,0 +1,24 @@
+package test.junit.org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.chainedMNSLocalOpt;
+
+import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeuristic;
+
+import test.junit.org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.localOpt.Local8OptTestNoRandomOverlap;
+
+/**
+ * the test of the local 8-opt algorithm with savings
+ * heuristic<@javaAuthorVersion/>
+ */
+public class ChainedMNSLocal8OptTestWithSavingsNoRandomOverlap extends
+    Local8OptTestNoRandomOverlap {
+
+  /** create */
+  public ChainedMNSLocal8OptTestWithSavingsNoRandomOverlap() {
+    super();
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  protected SavingsHeuristic createInitAlgorithm() {
+    return new SavingsHeuristic();
+  }
+}

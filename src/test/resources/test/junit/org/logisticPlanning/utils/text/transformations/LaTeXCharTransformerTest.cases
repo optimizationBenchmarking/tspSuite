@@ -1,0 +1,9 @@
+{ {\{}
+} {\}}
+\u00e4 {\"{a}}
+\u00e9 {\'{e}}
+\u00c6 {\AE}
+\u03b1 {\ensuremath{\alpha}}
+\u2248 {\ensuremath{\approx}}
+\u21d2 {\ensuremath{\Rightarrow}}
+\u005c {\textbackslash}

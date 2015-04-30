@@ -1,0 +1,141 @@
+package org.logisticPlanning.tsp.solving.operators.permutation.mutation;
+
+import java.io.PrintStream;
+
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.Individual;
+import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multiNeighborhoodSearch.NeighborhoodManager;
+import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
+import org.logisticPlanning.utils.config.Configuration;
+import org.logisticPlanning.utils.math.random.Randomizer;
+
+/**
+ * <p>
+ * The version of PermutationMultiNeighborhoodMutation before the
+ * consolidation into local search done in version 0.9.8 of ${projectName}.
+ * </p><p>
+ * An mutator that performs a local search similar to what we do in the
+ * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multiNeighborhoodSearch.MultiNeighborhoodSearch
+ * Multi-Neighborhood Search} and returns an individual which is different from
+ * its parent. If the parent is already a local optimum, it will be partially
+ * shuffled and the local search is applied to the shuffled individual until it
+ * will result in a different solution.
+ * </p>
+ * <@javaAuthorVersion/>
+ */
+public class PermutationMultiNeighborhoodMutation extends UnaryOperator<int[]> {
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
+
+  /** the neighborhood manager */
+  private NeighborhoodManager m_manager;
+
+  /** create */
+  public PermutationMultiNeighborhoodMutation() {
+    super("PermutationMultiNeighborhoodSearchMutator"); //$NON-NLS-1$
+    this.m_manager = new NeighborhoodManager();
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final void mutate(final Individual<int[]> dest,
+      final ObjectiveFunction f, final Individual<int[]> parent) {
+    final NeighborhoodManager manager;
+    final int n;
+    final Randomizer r;
+    boolean incomplete, noSkip;
+    int shuffleLength;
+    long length, init;
+
+    n = f.n();
+    r = f.getRandom();
+
+    manager = this.m_manager;
+
+    // the manager will load the best existing solution
+    manager.initialize(parent.solution, parent.tourLength);
+
+    noSkip = (parent.producer != this);
+    init = manager.getTourLength();
+
+    // fill the move queue, remember if this hit the allocation limit
+    incomplete = manager.fillMoveQueue();
+    looper: for (;;) {
+
+      // perform an local search based on the enqueued moves
+      if (noSkip) {
+        manager.localSearch(incomplete);
+
+        if (f.shouldTerminate()) {
+          break looper;// we should quit here
+        }
+
+        // OK, we have arrived in a local optimum
+        length = manager.getTourLength();
+        if (length != init) {
+          break looper;
+        }
+      } else {
+        noSkip = true;
+      }
+
+      shuffleLength = (r.nextInt(n - 5) + 4); // shuffle at least 4 nodes
+      incomplete = manager.shuffleCurrent(//
+          r.nextInt((n - shuffleLength) + 1), shuffleLength);
+
+      if (f.shouldTerminate()) {
+        break looper;
+      }
+    }
+
+    manager.getSolution(dest);
+    dest.producer = this;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public final PermutationMultiNeighborhoodMutation clone() {
+    PermutationMultiNeighborhoodMutation res;
+    res = ((PermutationMultiNeighborhoodMutation) (super.clone()));
+    res.m_manager = res.m_manager.clone();
+    return res;
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printConfiguration(final PrintStream ps) {
+    super.printConfiguration(ps);
+    this.m_manager.printConfiguration(ps);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void printParameters(final PrintStream ps) {
+    super.printParameters(ps);
+    this.m_manager.printParameters(ps);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void configure(final Configuration config) {
+    super.configure(config);
+    this.m_manager.configure(config);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void beginRun(final ObjectiveFunction f) {
+    super.beginRun(f);
+    this.m_manager.beginRun(f);
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void endRun(final ObjectiveFunction f) {
+    try {
+      this.m_manager.endRun(f);
+    } finally {
+      super.endRun(f);
+    }
+  }
+}
