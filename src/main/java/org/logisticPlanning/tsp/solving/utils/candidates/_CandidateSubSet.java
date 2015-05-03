@@ -65,7 +65,7 @@ final class _CandidateSubSet extends CandidateSet {
     // fill the candidate list: structure candidate-distance
     // candidate-distance
     i = 0;
-    for (sourceNode = n; sourceNode > 0; sourceNode--) {
+    for (sourceNode = 1; sourceNode <= n; sourceNode++) {
 
       // load the distances from node sourceNode
       listIndex = listLen;
@@ -90,7 +90,7 @@ final class _CandidateSubSet extends CandidateSet {
   /** {@inheritDoc} */
   @Override
   public final int getCandidate(final int node, final int id) {
-    return (this.m_candidates[(((node - 1) * this.m_m) + id) - 1]);
+    return this.m_candidates[(((node - 1) * this.m_m) + id) - 1];
   }
 
   /** {@inheritDoc} */
