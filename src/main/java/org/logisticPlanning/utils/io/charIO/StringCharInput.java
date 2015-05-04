@@ -12,7 +12,7 @@ public final class StringCharInput extends CharInput {
 
   /**
    * create
-   * 
+   *
    * @param data
    *          the data
    */

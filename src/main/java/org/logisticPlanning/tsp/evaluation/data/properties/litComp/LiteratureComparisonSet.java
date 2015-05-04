@@ -6,7 +6,7 @@ import org.logisticPlanning.utils.collections.lists.ArraySetView;
 
 /**
  * A comparison set: a set of literature comparison results.
- * 
+ *
  * @param <T>
  *          the element type
  */
@@ -22,7 +22,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * create!
-   * 
+   *
    * @param points
    *          the points
    */
@@ -39,7 +39,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * get the comparison data
-   * 
+   *
    * @param array
    *          the array
    * @param count
@@ -50,7 +50,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * the comparison result
-   * 
+   *
    * @return the comparison result
    */
   public final ESingleComparison getComparisonResult() {
@@ -62,7 +62,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
    * frequencies of the results. The result is obtained in a very
    * conservative way, worse results usually beat better results. This
    * function may return a comparison value that is actually not present.
-   * 
+   *
    * @param data
    *          the count
    * @param sum
@@ -135,7 +135,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
     // ok, we cannot decide, that's really odd ... let's go with similar
     if (count[ESingleComparison.SIMILAR.ordinal()] > count[ESingleComparison.MAYBE_SIMILAR
-        .ordinal()]) {
+                                                           .ordinal()]) {
       return ESingleComparison.SIMILAR;
     }
     return ESingleComparison.MAYBE_SIMILAR;
@@ -143,7 +143,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * get the max
-   * 
+   *
    * @param count
    *          the counts
    * @return the max
@@ -162,7 +162,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * merge maybes
-   * 
+   *
    * @param count
    *          the count
    */
@@ -184,7 +184,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
   /**
    * Count the single comparison's occurrences
-   * 
+   *
    * @param cmp
    *          the single comparison's
    * @return the number of occurrences of the single comparison

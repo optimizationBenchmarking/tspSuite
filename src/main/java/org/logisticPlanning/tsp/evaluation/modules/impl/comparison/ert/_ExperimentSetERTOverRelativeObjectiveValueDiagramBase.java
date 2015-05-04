@@ -121,28 +121,28 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * </ol>
  */
 abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
-    extends _ExperimentSetERTDiagramsBase {
+extends _ExperimentSetERTDiagramsBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /** the dimensions */
   private static final int[] DIMS = { StatisticSeries.DIM_X,
-      StatisticSeries.DIM_Y_MEDIAN };
+    StatisticSeries.DIM_Y_MEDIAN };
 
   /** the scaled version */
   private static final UnaryFunction[] SCALE = { Identity.INSTANCE,
-      ChainedBinary.chain(0d,//
-          ChainedUnary.chain(//
-              ChainedBinary.chain(1d, Identity.INSTANCE, Max.INSTANCE),//
-              Lg.INSTANCE),//
-          Max.INSTANCE) };
+    ChainedBinary.chain(0d,//
+        ChainedUnary.chain(//
+            ChainedBinary.chain(1d, Identity.INSTANCE, Max.INSTANCE),//
+            Lg.INSTANCE),//
+            Max.INSTANCE) };
 
   /** the caption 1 */
   static final String CAP_1 = //
-  "Comparison of the algorithms in terms of the Estimated Running Time to success plotted over goal objective values. The x-axes are the relative target objective value thresholds "; //$NON-NLS-1$
+      "Comparison of the algorithms in terms of the Estimated Running Time to success plotted over goal objective values. The x-axes are the relative target objective value thresholds "; //$NON-NLS-1$
   /** the caption 3 */
   static final String CAP_2 = //
-  ". The y-axes are the logarithms of the medians of the scaled "; //$NON-NLS-1$
+      ". The y-axes are the logarithms of the medians of the scaled "; //$NON-NLS-1$
 
   /** the sub caption 1 */
   static final String SCAP_1 = "median "; //$NON-NLS-1$
@@ -155,7 +155,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
       .getPlaceholder();
 
   /** the y-axis caption part 1 */
-  static final String Y_AXIS_1 = "max{0, lg(med " + //$NON-NLS-1$ 
+  static final String Y_AXIS_1 = "max{0, lg(med " + //$NON-NLS-1$
       Macros.ERT.getPlaceholder();
   /** the y-axis caption part 2 */
   static final String Y_AXIS_2 = ")}";//$NON-NLS-1$
@@ -167,7 +167,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
 
   /**
    * create!
-   * 
+   *
    * @param name
    *          the name
    * @param owner
@@ -190,7 +190,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
   /**
    * Aggregate the experiment performance based on the area under the
    * curve.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg
@@ -241,8 +241,8 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
     }
 
     agg.aggregateRanks(//
-    Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
-        lst.toArray(new Map.Entry[lst.size()])));
+        Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
+            lst.toArray(new Map.Entry[lst.size()])));
   }
 
   /** {@inheritDoc} */
@@ -258,7 +258,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
 
   /**
    * Make the figure
-   * 
+   *
    * @param data
    *          the data
    * @param prop
@@ -307,7 +307,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
 
       hasData |= ((a < b) && (c != d) && //
           (ComparisonUtils.isFinite(a) || ComparisonUtils.isFinite(b)) && //
-      (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
+          (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
 
       col = new TransformedCollectionView(col,
           _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCALE);

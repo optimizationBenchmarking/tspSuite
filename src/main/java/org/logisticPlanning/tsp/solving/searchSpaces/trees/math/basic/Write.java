@@ -12,7 +12,7 @@ public final class Write extends Function {
 
   /**
    * Create a write operation
-   * 
+   *
    * @param pchildren
    *          the child nodes *
    * @param in
@@ -33,7 +33,7 @@ public final class Write extends Function {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */
@@ -49,7 +49,7 @@ public final class Write extends Function {
 
   /**
    * Compare with another object
-   * 
+   *
    * @param o
    *          the other object
    * @return true if the objects are equal

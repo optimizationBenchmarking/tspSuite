@@ -15,7 +15,7 @@ abstract class _AbstractBase {
 
   /**
    * get the class name
-   * 
+   *
    * @param h
    *          the handle
    * @return the name

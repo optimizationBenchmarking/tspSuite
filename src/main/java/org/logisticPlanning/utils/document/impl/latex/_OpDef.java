@@ -284,7 +284,7 @@ final class _OpDef {
 
     map.put(EMathOp.LOG_10, //
         new _OpDef(new char[] { '\\', 'l', 'o', 'g', '_', '{', '1', '0',
-            '}' }, null));
+        '}' }, null));
 
     map.put(EMathOp.LOG_2, //
         new _OpDef(new char[] { '\\', 'l', 'o', 'g', '_', '{', '2', '}' },
@@ -430,7 +430,7 @@ final class _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param start
    *          the start string
    * @param end
@@ -442,7 +442,7 @@ final class _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param start
    *          the start string
    * @param end

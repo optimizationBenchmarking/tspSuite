@@ -45,21 +45,21 @@ package org.logisticPlanning.tsp.solving.utils.edgeData;
  * Thus, if {@code n} rises or you allocate many objects, you may get an
  * {@link java.lang.OutOfMemoryError}.
  * </p>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
  */
 public final class _AsymmetricEdgeBitBooleanArray extends
-    _EdgeBitBooleanArray {
+_EdgeBitBooleanArray {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create the _AsymmetricEdgeBitBooleanArray
-   * 
+   *
    * @param n
    *          the number of nodes in the tsp
    */

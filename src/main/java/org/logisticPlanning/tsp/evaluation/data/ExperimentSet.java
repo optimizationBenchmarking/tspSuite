@@ -16,7 +16,7 @@ public class ExperimentSet extends DataSet<Experiment> {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the experiment name
    * @param data
@@ -29,7 +29,7 @@ public class ExperimentSet extends DataSet<Experiment> {
 
   /**
    * Get the experiment for the given name
-   * 
+   *
    * @param name
    *          the name
    * @return the experiment belonging to that name, or {@code null} if no

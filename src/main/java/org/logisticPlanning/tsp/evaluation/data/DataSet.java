@@ -72,12 +72,12 @@ import org.logisticPlanning.utils.text.transformations.NormalCharTransformer;
  * operations to the internal map are synchronized - and these take little
  * time. No additional synchronization is required.
  * </p>
- * 
+ *
  * @param <DT>
  *          the type
  */
 public class DataSet<DT> extends ArraySetView<DT> implements
-    Comparable<Object> {
+Comparable<Object> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -86,14 +86,14 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * the name of this object
-   * 
+   *
    * @serial the name identifying this data set
    */
   private final String m_name;
 
   /**
    * the normalized name
-   * 
+   *
    * @serial the name of this data set, without any special or numeric
    *         characters
    */
@@ -101,7 +101,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name of the set
    * @param data
@@ -130,7 +130,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
   /**
    * Setup the data set: This method will throw an
    * {@link java.lang.IllegalArgumentException} if it detects an error.
-   * 
+   *
    * @param data
    *          the data set
    * @param owner
@@ -163,7 +163,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
         if (n.equalsIgnoreCase(data[j].name())) {
           throw new IllegalArgumentException(//
               "No two names must be alike, but found '" + n + //$NON-NLS-1$
-                  "' and '" + data[j].name() + '\'');//$NON-NLS-1$
+              "' and '" + data[j].name() + '\'');//$NON-NLS-1$
         }
       }
     }
@@ -171,7 +171,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * get the name of this object
-   * 
+   *
    * @return the name of this object
    */
   public final String name() {
@@ -180,7 +180,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * get the normalized name to be used in file names and such alike
-   * 
+   *
    * @return the normalized name to be used in file names and such alike
    */
   public final String getNormalizedName() {
@@ -189,7 +189,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * Find the data element fitting to the given key
-   * 
+   *
    * @param key
    *          the key element
    * @return the data element, if one fits
@@ -206,7 +206,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * Compare to a given object
-   * 
+   *
    * @param o
    *          the object
    * @return the comparison result
@@ -248,7 +248,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
   /**
    * get the property stored under the given key
-   * 
+   *
    * @param property
    *          the property
    * @param doc
@@ -270,7 +270,7 @@ public class DataSet<DT> extends ArraySetView<DT> implements
 
     sync = this.m_data;
     store = ((type = property.m_type).ordinal() <= //
-    EPropertyType.TEMPORARILY_STORED.ordinal());
+        EPropertyType.TEMPORARILY_STORED.ordinal());
 
     if (store) {
       // if the property can be stored, we first need to check if it has

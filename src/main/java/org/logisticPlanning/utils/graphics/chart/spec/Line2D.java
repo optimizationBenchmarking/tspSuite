@@ -29,7 +29,7 @@ public final class Line2D extends NamedObject {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the line's name
    * @param leftEnd
@@ -77,7 +77,7 @@ public final class Line2D extends NamedObject {
 
   /**
    * Get the data.
-   * 
+   *
    * @return the data
    */
   public final IDataCollection getData() {
@@ -86,7 +86,7 @@ public final class Line2D extends NamedObject {
 
   /**
    * Get the line mode
-   * 
+   *
    * @return the line mode
    */
   public final ELineMode getLineMode() {
@@ -95,7 +95,7 @@ public final class Line2D extends NamedObject {
 
   /**
    * Get the left end
-   * 
+   *
    * @return the left end
    */
   public final Point getLeftEnd() {
@@ -104,7 +104,7 @@ public final class Line2D extends NamedObject {
 
   /**
    * Get the right end
-   * 
+   *
    * @return the right end
    */
   public final Point getRightEnd() {

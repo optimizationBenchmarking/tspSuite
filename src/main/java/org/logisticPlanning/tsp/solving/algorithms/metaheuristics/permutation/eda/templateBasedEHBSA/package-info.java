@@ -1,5 +1,5 @@
 /**
- * 
+ *
  <p>
  * The Edge-Histogram based Sampling Algorithm (EHBSAs) is a probabilistic
  * model-building genetic algorithms (PMBGAs)&nbsp;[<a
@@ -353,7 +353,7 @@
  * and&nbsp;[<a
  * href="www.icsi.berkeley.edu/~storn/bisc1.ps.gz">2</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="http://www2.hannan-u.ac.jp/~tsutsui/index-e.html">Shigeyoshi Tsutsui</a></em>

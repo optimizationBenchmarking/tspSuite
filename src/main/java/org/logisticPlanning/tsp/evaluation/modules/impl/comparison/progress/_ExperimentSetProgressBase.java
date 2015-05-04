@@ -52,7 +52,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name
@@ -76,7 +76,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
 
   /**
    * Write a description of the ranking result
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -92,17 +92,17 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
     ranking = rag.rank(EStatisticParameter.MEDIAN);
 
     body.write(//
-    "For each algorithm and benchmark case, we compute the "); //$NON-NLS-1$
+        "For each algorithm and benchmark case, we compute the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(" discussed in "); //$NON-NLS-1$
     body.reference(this.m_auc.getLabel(data));
     body.write(". We limit the areas to the left by the biggest smallest x-coordinate over all methods. To the right, we chose the largest x-coordinate amongst all curves. Each curve is then extended by one point with that x-coordinate and the y-coordinate of its right-most point. This extension makes sense instead of cutting the curves off on the right since some algorithms may reach the optimum very quickly, which would make the comparison interval very small. We then compute "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-    " for each algorithm and benchmark case, by using the exactly same scaling as in the figures (only the ranges of the axes may differ). For each benchmark case we then rank the methods according to their corresponding "); //$NON-NLS-1$
+        " for each algorithm and benchmark case, by using the exactly same scaling as in the figures (only the ranges of the axes may differ). For each benchmark case we then rank the methods according to their corresponding "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-    " (smaller areas are better). The methods are then re-ranked according to their median rank over all benchmark cases, as discussed in "); //$NON-NLS-1$
+        " (smaller areas are better). The methods are then re-ranked according to their median rank over all benchmark cases, as discussed in "); //$NON-NLS-1$
     body.reference(this.m_descRanking.getLabel(data));
     body.writeChar('.');
 
@@ -119,7 +119,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
    * curve. We we limit the areas to the left by the biggest smallest
    * x-coordinate over all methods and to the right with the largest
    * biggest x-coordinate.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg
@@ -166,12 +166,12 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
               null,//
               new CollectionPart(c, li, (ri - li)),//
               new Point2D(right, c.get(ri - 1, 1))//
-          ))));
+              ))));
     }
 
     agg.aggregateRanks(//
-    Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
-        lst.toArray(new Map.Entry[lst.size()])));
+        Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
+            lst.toArray(new Map.Entry[lst.size()])));
   }
 
   /** {@inheritDoc} */

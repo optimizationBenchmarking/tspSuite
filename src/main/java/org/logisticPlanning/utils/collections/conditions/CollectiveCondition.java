@@ -7,12 +7,12 @@ import org.logisticPlanning.utils.utils.HashUtils;
 /**
  * A collective condition is a condition which is checked on the elements
  * of a collection.
- * 
+ *
  * @param <T>
  *          the element type this condition applies to.
  */
 public final class CollectiveCondition<T> extends
-    Condition<Collection<? extends T>> {
+Condition<Collection<? extends T>> {
 
   /** the condition */
   private final Condition<? super T> m_condition;
@@ -33,7 +33,7 @@ public final class CollectiveCondition<T> extends
    * the condition is an {@code or} condition, it will be {@code true} if
    * and only if at least one element in a collection meets the
    * sub-condition.
-   * 
+   *
    * @param condition
    *          condition
    * @param and
@@ -83,7 +83,7 @@ public final class CollectiveCondition<T> extends
     if (o instanceof CollectiveCondition) {
       c = ((CollectiveCondition) o);
       return ((this.m_and == c.m_and) && //
-      (this.m_condition.equals(c.m_condition)));
+          (this.m_condition.equals(c.m_condition)));
     }
     return false;
   }

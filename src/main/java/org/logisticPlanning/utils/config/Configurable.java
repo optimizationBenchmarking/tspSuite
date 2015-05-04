@@ -41,7 +41,7 @@ public class Configurable extends NamedObject {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -60,7 +60,7 @@ public class Configurable extends NamedObject {
    * above. Parameter names are strings and used as keys into this hash map
    * and the values are, well, the parameter values. When overriding this
    * method, you must always call the super method.
-   * 
+   *
    * @param config
    *          the configuration to use
    */
@@ -79,7 +79,7 @@ public class Configurable extends NamedObject {
    * parameter tuple should end with a newline character (via
    * {@link java.io.PrintStream#println() println} and friends).
    * </p>
-   * 
+   *
    * @param ps
    *          the print stream to print to
    */
@@ -92,7 +92,7 @@ public class Configurable extends NamedObject {
    * method can assume to be at the beginning of a new line. Each parameter
    * tuple should end with a newline character (via
    * {@link java.io.PrintStream#println() println} and friends).
-   * 
+   *
    * @param ps
    *          the print stream to print to
    */
@@ -102,7 +102,7 @@ public class Configurable extends NamedObject {
 
   /**
    * print a separator between a parameter key and its value
-   * 
+   *
    * @param key
    *          the key to print
    * @param ps
@@ -118,7 +118,7 @@ public class Configurable extends NamedObject {
    * Print an object. If the object is an instance of {@code Configurable},
    * its {@link #printConfiguration(PrintStream)} method will be called as
    * well.
-   * 
+   *
    * @param object
    *          the object to be printed
    * @param ps
@@ -144,7 +144,7 @@ public class Configurable extends NamedObject {
 
   /**
    * Print an object
-   * 
+   *
    * @param object
    *          the object to be printed
    * @param ps
@@ -388,7 +388,7 @@ public class Configurable extends NamedObject {
 
   /**
    * print {@code null}
-   * 
+   *
    * @param ps
    *          the print stream
    */
@@ -398,7 +398,7 @@ public class Configurable extends NamedObject {
 
   /**
    * print a class
-   * 
+   *
    * @param clazz
    *          the class
    * @param ps
@@ -412,7 +412,7 @@ public class Configurable extends NamedObject {
 
   /**
    * print a class
-   * 
+   *
    * @param clazz
    *          the class
    * @param ps
@@ -457,7 +457,7 @@ public class Configurable extends NamedObject {
 
   /**
    * write a time stamp
-   * 
+   *
    * @param c
    *          the calendar
    * @param ps
@@ -471,7 +471,7 @@ public class Configurable extends NamedObject {
 
   /**
    * write a time stamp
-   * 
+   *
    * @param c
    *          the calendar
    * @param ps
@@ -570,7 +570,7 @@ public class Configurable extends NamedObject {
    * prepends this object's
    * {@link org.logisticPlanning.utils.NamedObject#name() name} to the log
    * entry.
-   * 
+   *
    * @param log
    *          the logger
    */
@@ -587,7 +587,7 @@ public class Configurable extends NamedObject {
    * prepends this object's
    * {@link org.logisticPlanning.utils.NamedObject#name() name} to the log
    * entry.
-   * 
+   *
    * @param level
    *          the log level to use
    * @param log

@@ -2,7 +2,7 @@ package org.logisticPlanning.tsp.evaluation.data;
 
 /**
  * a set of things.
- * 
+ *
  * @param <T>
  *          the type
  * @param <OT>
@@ -20,7 +20,7 @@ class _OwnedSet<T, OT> extends DataSet<T> {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name of the set
    * @param data
@@ -33,7 +33,7 @@ class _OwnedSet<T, OT> extends DataSet<T> {
 
   /**
    * Get the index of this data element in the owner
-   * 
+   *
    * @return the index of this data element in the owner
    */
   public final int getIndex() {
@@ -42,7 +42,7 @@ class _OwnedSet<T, OT> extends DataSet<T> {
 
   /**
    * Get the owning object
-   * 
+   *
    * @return the owning object
    */
   public final OT getOwner() {

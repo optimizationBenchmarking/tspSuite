@@ -96,7 +96,7 @@ public final class SafeInc extends BinaryFunction {
    * with the singleton instance {@link SafeInc#INSTANCE INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link SafeInc#INSTANCE
    *         INSTANCE})
    */
@@ -109,7 +109,7 @@ public final class SafeInc extends BinaryFunction {
    * with the singleton instance {@link SafeInc#INSTANCE INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link SafeInc#INSTANCE
    *         INSTANCE})
    */

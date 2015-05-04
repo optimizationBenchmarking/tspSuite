@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * {@link org.logisticPlanning.tsp.solving.Individual#f fitness} .
  */
 public final class IndividualFitnessComparator extends NamedObject
-    implements Comparator<Individual<?>> {
+implements Comparator<Individual<?>> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -56,7 +56,7 @@ public final class IndividualFitnessComparator extends NamedObject
    * IndividualFitnessComparator.INSTANCE} for serialization, i.e., when
    * the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link IndividualFitnessComparator#INSTANCE
    *         IndividualFitnessComparator.INSTANCE})
@@ -72,7 +72,7 @@ public final class IndividualFitnessComparator extends NamedObject
    * IndividualFitnessComparator.INSTANCE} after serialization, i.e., when
    * the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link IndividualFitnessComparator#INSTANCE
    *         IndividualFitnessComparator.INSTANCE})

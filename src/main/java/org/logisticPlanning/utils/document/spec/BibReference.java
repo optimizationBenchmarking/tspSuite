@@ -20,7 +20,7 @@ public class BibReference {
 
   /**
    * Create a bibliographic reference
-   * 
+   *
    * @param index
    *          the index
    * @param id
@@ -63,7 +63,7 @@ public class BibReference {
 
   /**
    * Get the index of this bibliographic entry
-   * 
+   *
    * @return the index of this bibliographic entry
    */
   public final int getIndex() {
@@ -72,7 +72,7 @@ public class BibReference {
 
   /**
    * Get the automatically assigned unique key of this reference
-   * 
+   *
    * @return the automatically assigned unique key of this reference
    */
   public final String getKey() {
@@ -81,7 +81,7 @@ public class BibReference {
 
   /**
    * Get the bibliographic record
-   * 
+   *
    * @return the bibliographic record
    */
   public final BibRecord getRecord() {

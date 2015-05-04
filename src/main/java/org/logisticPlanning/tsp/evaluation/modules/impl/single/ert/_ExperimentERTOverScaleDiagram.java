@@ -129,27 +129,27 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * </ol>
  */
 final class _ExperimentERTOverScaleDiagram extends
-    _ExperimentERTDiagramsBase {
+_ExperimentERTDiagramsBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /** the caption 1 */
   private static final String CAP_1 = //
-  "The Estimated Running Time to success for several different relative goal objective values "; //$NON-NLS-1$
+      "The Estimated Running Time to success for several different relative goal objective values "; //$NON-NLS-1$
   /** the caption 2 */
   private static final String CAP_2 = //
-  ". The x-axes are the logarithms of the problem scales "; //$NON-NLS-1$
+      ". The x-axes are the logarithms of the problem scales "; //$NON-NLS-1$
   /** the caption 3 */
   private static final String CAP_3 = //
-  "And the y-axes are the logarithms of the scaled running times, cut off at 0."; //$NON-NLS-1$
+      "And the y-axes are the logarithms of the scaled running times, cut off at 0."; //$NON-NLS-1$
 
   /** the sub caption 1 */
   private static final String SCAP = //
-  " for "; //$NON-NLS-1$
+      " for "; //$NON-NLS-1$
 
   /** the x-axis caption */
   private static final String X_AXIS = ("log of problem scale " + //$NON-NLS-1$
-  Macros.SCALE.getPlaceholder());
+      Macros.SCALE.getPlaceholder());
 
   /** the y-axis caption */
   private static final String Y_AXIS = ("max(0, log of scaled " + //$NON-NLS-1$
@@ -163,7 +163,7 @@ final class _ExperimentERTOverScaleDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -198,7 +198,7 @@ final class _ExperimentERTOverScaleDiagram extends
 
   /**
    * Make the figure
-   * 
+   *
    * @param instances
    *          the instances
    * @param data
@@ -244,7 +244,7 @@ final class _ExperimentERTOverScaleDiagram extends
 
       hasData |= ((a < b) && (c != d) && //
           (ComparisonUtils.isFinite(a) || ComparisonUtils.isFinite(b)) && //
-      (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
+          (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
 
       s = (Macros.ERTi.getPlaceholder() + axs.getShortName());
       if (axs.isScaled()) {
@@ -322,10 +322,10 @@ final class _ExperimentERTOverScaleDiagram extends
                 + Macros.F_THRESHOLD_RELATIVE.getPlaceholder()
                 + _ExperimentERTOverScaleDiagram.CAP_2
                 + Macros.SCALE.getPlaceholder() + _ExperimentERTOverScaleDiagram.CAP_3),//
-            (Macros.ERT.getPlaceholder()
-                + _ExperimentERTOverScaleDiagram.SCAP
-                + Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + "=999"), //$NON-NLS-1$
-            true)) {
+                (Macros.ERT.getPlaceholder()
+                    + _ExperimentERTOverScaleDiagram.SCAP
+                    + Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + "=999"), //$NON-NLS-1$
+                    true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentERTOverScaleDiagram.CAP_1);
@@ -448,7 +448,7 @@ final class _ExperimentERTOverScaleDiagram extends
     }
 
     body.write(//
-    "). If data for multiple benchmark cases for the same scale exist, the median "); //$NON-NLS-1$
+        "). If data for multiple benchmark cases for the same scale exist, the median "); //$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(" is plotted."); //$NON-NLS-1$
 
@@ -463,7 +463,7 @@ final class _ExperimentERTOverScaleDiagram extends
     body.write("). The y-axes represent the "); //$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(//
-    "s for different time measures, each value being appropriately scaled, as stated in "); //$NON-NLS-1$
+        "s for different time measures, each value being appropriately scaled, as stated in "); //$NON-NLS-1$
     body.reference(this.m_descTime.getLabel(es),
         this.m_descERT.getLabel(es));
     body.write(": "); //$NON-NLS-1$
@@ -473,7 +473,7 @@ final class _ExperimentERTOverScaleDiagram extends
         ESequenceType.AND, false);
 
     body.write(//
-    ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
+        ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(" cannot be plotted. We therefore choose to represent all values less than "); //$NON-NLS-1$
     body.writeInt(1);

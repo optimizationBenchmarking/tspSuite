@@ -508,7 +508,7 @@ public final class TournamentSelection extends SelectionAlgorithm {
 
   /**
    * the tournament selection
-   * 
+   *
    * @param k
    *          the tournament size
    */
@@ -564,6 +564,6 @@ public final class TournamentSelection extends SelectionAlgorithm {
 
     Configurable.printKey(TournamentSelection.PARAM_TOURNAMENT_SIZE, ps);
     ps.println(//
-    "the tournament size, i.e., the number of contestants competing for each spot in the mating pool."); //$NON-NLS-1$
+        "the tournament size, i.e., the number of contestants competing for each spot in the mating pool."); //$NON-NLS-1$
   }
 }

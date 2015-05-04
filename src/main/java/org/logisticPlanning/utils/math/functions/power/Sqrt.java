@@ -40,7 +40,7 @@ public final class Sqrt extends UnaryFunction {
    * with the singleton instance {@link Sqrt#INSTANCE Sqrt.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Sqrt#INSTANCE
    *         Sqrt.INSTANCE})
    */
@@ -53,7 +53,7 @@ public final class Sqrt extends UnaryFunction {
    * with the singleton instance {@link Sqrt#INSTANCE Sqrt.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Sqrt#INSTANCE
    *         Sqrt.INSTANCE})
    */

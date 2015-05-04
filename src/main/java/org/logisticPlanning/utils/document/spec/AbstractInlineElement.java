@@ -10,7 +10,7 @@ public abstract class AbstractInlineElement extends Element {
 
   /**
    * create the inline element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -69,7 +69,7 @@ public abstract class AbstractInlineElement extends Element {
   @Override
   protected MacroInvocation macroInvocationCreate(
       final AbstractInlineElement owner, final MacroDescriptor desc)
-      throws IOException {
+          throws IOException {
     return super.macroInvocationCreate(owner, desc);
   }
 
@@ -96,7 +96,7 @@ public abstract class AbstractInlineElement extends Element {
 
   /**
    * Invoke a parameter-less macro
-   * 
+   *
    * @param desc
    *          the macro descriptor
    * @throws IOException
@@ -105,7 +105,7 @@ public abstract class AbstractInlineElement extends Element {
    *           if the state does not permit invoking the macro
    */
   public void macroInvoke(final MacroDescriptor desc) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try (MacroInvocation mop = this.macroInvocation(desc)) {
       //
     }

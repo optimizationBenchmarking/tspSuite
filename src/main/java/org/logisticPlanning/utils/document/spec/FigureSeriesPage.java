@@ -21,7 +21,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -38,7 +38,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * Get the figure index of this page
-   * 
+   *
    * @return the figure index of this page
    */
   public final int getFigureIndex() {
@@ -47,7 +47,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * Get the page number
-   * 
+   *
    * @return the page number
    */
   public final int getPageNumber() {
@@ -90,14 +90,14 @@ public class FigureSeriesPage extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_owner.subFigureBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_owner.subFigureEnd(h);
   }
 

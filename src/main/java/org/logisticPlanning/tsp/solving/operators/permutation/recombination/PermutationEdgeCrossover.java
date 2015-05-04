@@ -206,7 +206,7 @@ public final class PermutationEdgeCrossover extends BinaryOperator<int[]> {
 
   /**
    * allocate the edge matrix
-   * 
+   *
    * @param n1
    *          the first node
    * @param n2
@@ -265,7 +265,7 @@ public final class PermutationEdgeCrossover extends BinaryOperator<int[]> {
 
   /**
    * remove a node from the edge matrix
-   * 
+   *
    * @param n
    *          the node
    * @param em

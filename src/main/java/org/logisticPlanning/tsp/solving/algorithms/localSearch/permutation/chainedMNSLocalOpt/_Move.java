@@ -20,8 +20,8 @@ final class _Move {
 
   /** the move's names */
   private static final String[] NAMES = new String[] {
-      "reverse(", "rot_left(", "rot_right(", //$NON-NLS-1$//$NON-NLS-3$//$NON-NLS-2$
-      "swap(" //$NON-NLS-1$
+    "reverse(", "rot_left(", "rot_right(", //$NON-NLS-1$//$NON-NLS-3$//$NON-NLS-2$
+    "swap(" //$NON-NLS-1$
   };
 
   /** the move's type */
@@ -61,7 +61,7 @@ final class _Move {
    * similar move described in
    * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Left}
    * .
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -94,7 +94,7 @@ final class _Move {
    * a similar move described in
    * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Rotate_Right}
    * .
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -126,7 +126,7 @@ final class _Move {
    * Initialize this move as a &quot;swap&quot; move. You can find a
    * similar move described in
    * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Swap}
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -163,7 +163,7 @@ final class _Move {
    * Initialize this move as a &quot;reverse&quot; move. You can find a
    * similar move described in
    * {@link org.logisticPlanning.tsp.solving.operators.permutation.update.PermutationUpdate_Reverse}
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -205,7 +205,7 @@ final class _Move {
    * calling the {@link #checkDeleteMove(_Move, int)} methods of all
    * enqeued moves.
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes in the tsp instance
    * @param sol
@@ -321,7 +321,7 @@ final class _Move {
   @Override
   public final String toString() {
     return (((((((_Move.NAMES[this.m_type]) + //
-    this.m_i) + ',') + this.m_j) + ')') + '=') + this.m_delta);
+        this.m_i) + ',') + this.m_j) + ')') + '=') + this.m_delta);
   }
 
   /**
@@ -344,7 +344,7 @@ final class _Move {
    * as it accesses the internal variables of {@code move} holding
    * collision information.
    * </p>
-   * 
+   *
    * @param move
    *          the move
    * @param n
@@ -602,7 +602,7 @@ final class _Move {
    * {@code move} (according to {@link #apply(int, int[], int[])}). It will
    * return {@code true} if such a collision was found and {@code false}
    * otherwise.
-   * 
+   *
    * @param v
    *          the value
    * @param move

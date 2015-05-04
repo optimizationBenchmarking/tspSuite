@@ -274,7 +274,7 @@ public final class MSTHeuristic extends TSPHeuristic {
 
   /**
    * Perform the MST heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

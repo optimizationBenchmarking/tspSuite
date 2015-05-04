@@ -6,7 +6,7 @@ import java.util.Arrays;
  * The set of instances of the same scale.
  */
 public final class AllScaleInstances extends
-    _ScaleSetBase<SameScaleInstances> {
+_ScaleSetBase<SameScaleInstances> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -15,7 +15,7 @@ public final class AllScaleInstances extends
 
   /**
    * Create a scale run set
-   * 
+   *
    * @param lowerScaleBound
    *          the lower scale bound
    * @param upperScaleBound
@@ -39,7 +39,7 @@ public final class AllScaleInstances extends
 
   /**
    * Get the base of the scale set property
-   * 
+   *
    * @return the base of the scale set property
    */
   public final int getBase() {
@@ -50,6 +50,6 @@ public final class AllScaleInstances extends
   @Override
   public final String toString() {
     return ((("Scale " + this.m_base) + //$NON-NLS-1$
-    ", ") + super.toString()); //$NON-NLS-1$
+        ", ") + super.toString()); //$NON-NLS-1$
   }
 }

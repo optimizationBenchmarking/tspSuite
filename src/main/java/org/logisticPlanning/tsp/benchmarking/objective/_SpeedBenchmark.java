@@ -105,24 +105,24 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  * <table border="1" id="timeMeasurementAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * static final double _timeBenchmarkRun(final ObjectiveFunction f) {
  *   final _SpeedBenchmark instance;
  *   long time, startTime;
  *   double factor, bestFactor;
  *   int runs, calls, minCalls;
- * 
+ *
  *   bestFactor = Double.POSITIVE_INFINITY;
  *   instance = _SpeedBenchmark.instance();
  *   minCalls = -1;
- * 
+ *
  *   for (runs = 10; (--runs) &gt;= 0;) {
- * 
+ *
  *     calls = 0;
  *     f._beginRun(instance, false);
  *     startTime = System.currentTimeMillis();
- * 
+ *
  *     loopy: for (;;) {
  *       instance.solve(f);
  *       if ((++calls) &gt;= minCalls) {
@@ -133,7 +133,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *       }
  *     }
  *     f._clear();
- * 
+ *
  *     if (calls &gt;= minCalls) {
  *       minCalls = calls;
  *     }
@@ -142,11 +142,11 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *       bestFactor = factor;
  *     }
  *   }
- * 
+ *
  *   return bestFactor;
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -165,39 +165,39 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  * <table border="1" id="timeBenchmarkAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public final void solve(final ObjectiveFunction f) {
  *   final int n, addB;
  *   int aIdx, bIdx, rem, lastA, lastB, bestIdxA, bestA, bestLenA, bestIdxB, bestLenB, bestB, tempLen, tempNode, i;
  *   int[] temp, res;
  *   long length;
- * 
+ *
  *   // allocate node list
  *   n = f.n();
  *   temp = new int[n];
  *   for (aIdx = 0; aIdx &lt; n;) {
  *     temp[aIdx] = (++aIdx);
  *   }
- * 
+ *
  *   // allocate result array
  *   res = new int[n];
- * 
+ *
  *   length = 0l;
- * 
+ *
  *   aIdx = bIdx = 0;
  *   rem = addB = (n - 1);
  *   res[0] = lastA = lastB = 1;
  *   temp[0] = temp[rem];
  *   bestIdxA = bestIdxB = bestA = bestB = (-1);
  *   bestLenA = bestLenB = tempLen = Integer.MAX_VALUE;
- * 
+ *
  *   for (; rem &gt; 0;) {
- * 
+ *
  *     // find the best end extensions
  *     for (i = rem; (--i) &gt;= 0;) {
  *       tempNode = temp[i];
- * 
+ *
  *       // find the best node at end A
  *       if (bestA &lt;= 0) {
  *         tempLen = f.distance(lastA, tempNode);
@@ -207,7 +207,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *           bestIdxA = i;
  *         }
  *       }
- * 
+ *
  *       // find the best node at end B (except in first round)
  *       if ((bestB &lt;= 0) &amp;&amp; (lastB != lastA)) {
  *         tempLen = f.distance(lastB, tempNode);
@@ -218,7 +218,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *         }
  *       }
  *     }
- * 
+ *
  *     // ok, which end offers the better extension?
  *     if (bestLenA &lt;= bestLenB) { // adding a node at end A seems to be
  *                                 // better
@@ -255,13 +255,13 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *       bestLenB = Integer.MAX_VALUE;
  *     }
  *   }
- * 
+ *
  *   // add distance of edge connecting both tour ends
  *   length += f.distance(lastA, lastB);
  *   f.registerFE(res, length); // register result
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -426,7 +426,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14
    * BURMA14}).
    * </p>
-   * 
+   *
    * @return the instance
    */
   private static final _SpeedBenchmark instance() {
@@ -463,7 +463,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
    * style="font-weight:bold">3</a>, <a href="#cite_JMG2004EAOHFTS"
    * style="font-weight:bold">2</a>] used to measure the performance of the
    * system on which we perform the experiments.
-   * 
+   *
    * @param f
    *          the objective function
    */
@@ -566,7 +566,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
 
   /**
    * Perform the time benchmark run one time
-   * 
+   *
    * @param f
    *          the objective function
    * @return the result

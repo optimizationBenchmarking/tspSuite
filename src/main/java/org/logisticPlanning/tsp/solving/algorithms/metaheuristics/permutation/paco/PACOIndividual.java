@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.p
 import org.logisticPlanning.tsp.solving.Individual;
 
 /**
- * 
+ *
  An individual record as used by pACO&nbsp;[<a href="#cite_G2004AAISAMCE"
  * style="font-weight:bold">1</a>, <a href="#cite_GM2002APBAFA"
  * style="font-weight:bold">2</a>, <a href="#cite_GM2002APBATDOP"
@@ -102,7 +102,7 @@ public final class PACOIndividual extends Individual<int[]> {
 
   /**
    * setup
-   * 
+   *
    * @param data
    *          the data
    * @param length
@@ -126,7 +126,7 @@ public final class PACOIndividual extends Individual<int[]> {
   /**
    * assign this individual record to the same values as stored in another
    * one
-   * 
+   *
    * @param copy
    *          the record to copy
    */
@@ -152,7 +152,7 @@ public final class PACOIndividual extends Individual<int[]> {
 
   /**
    * is this record empty?
-   * 
+   *
    * @return {@code true} if this record is empty
    */
   public final boolean isEmpty() {

@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationVNSMutation;
 
 /**
- * 
+ *
  <h1>Branch and Bound for the TSP by Little et al., hybridized with <a
  * href="#localSearch">Variable Neighborhood Search</a></h1>
  * <p>
@@ -589,7 +589,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * href="https://www.worldcat.org/issn/03401200">0340-1200</a> and&nbsp;<a
  * href="https://www.worldcat.org/issn/14320770">1432-0770</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a></em>
@@ -618,7 +618,7 @@ public class BABLittle1963VNS extends _HybridBABLittle1963 {
 
   /**
    * The main method invoking the algorithm
-   * 
+   *
    * @param args
    *          the command line arguments
    */

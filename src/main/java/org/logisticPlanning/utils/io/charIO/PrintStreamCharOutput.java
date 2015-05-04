@@ -14,7 +14,7 @@ public class PrintStreamCharOutput extends CharOutput {
 
   /**
    * Create
-   * 
+   *
    * @param out
    *          the output destination
    */
@@ -33,7 +33,7 @@ public class PrintStreamCharOutput extends CharOutput {
   @Override
   public final void write(final char[] data, final int start, final int end) {
     this.m_out
-        .append(new CharArrayCharSequence(data, start, (end - start)));
+    .append(new CharArrayCharSequence(data, start, (end - start)));
   }
 
   /** {@inheritDoc} */

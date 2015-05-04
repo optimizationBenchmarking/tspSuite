@@ -24,212 +24,212 @@ final class _TextConst implements Comparable<_TextConst> {
   /** the constants */
   private static final _TextConst[] CONSTS = new _TextConst[] {
 
-      new _TextConst(
-          Double.toString(Double.NEGATIVE_INFINITY).toLowerCase(),//
-          Double.NEGATIVE_INFINITY, Long.MIN_VALUE, Integer.MIN_VALUE,
-          false),//
+    new _TextConst(
+        Double.toString(Double.NEGATIVE_INFINITY).toLowerCase(),//
+        Double.NEGATIVE_INFINITY, Long.MIN_VALUE, Integer.MIN_VALUE,
+        false),//
 
-      new _TextConst(
-          "negativeinfinity",//$NON-NLS-1$,
-          Double.NEGATIVE_INFINITY, Long.MIN_VALUE, Integer.MIN_VALUE,
-          false),//
+        new _TextConst(
+            "negativeinfinity",//$NON-NLS-1$,
+            Double.NEGATIVE_INFINITY, Long.MIN_VALUE, Integer.MIN_VALUE,
+            false),//
 
-      new _TextConst(_TextConst.N_INFINITY, Double.NEGATIVE_INFINITY,
-          Long.MIN_VALUE, Integer.MIN_VALUE, false),//
+            new _TextConst(_TextConst.N_INFINITY, Double.NEGATIVE_INFINITY,
+                Long.MIN_VALUE, Integer.MIN_VALUE, false),//
 
-      new _TextConst(
-          Double.toString(Double.POSITIVE_INFINITY).toLowerCase(),//
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                new _TextConst(
+                    Double.toString(Double.POSITIVE_INFINITY).toLowerCase(),//
+                    Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                    true),//
 
-      new _TextConst(
-          "positiveinfinity",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                    new _TextConst(
+                        "positiveinfinity",//$NON-NLS-1$
+                        Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                        true),//
 
-      new _TextConst(
-          "positive infinity",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                        new _TextConst(
+                            "positive infinity",//$NON-NLS-1$
+                            Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                            true),//
 
-      new _TextConst(
-          "infty",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                            new _TextConst(
+                                "infty",//$NON-NLS-1$
+                                Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                                true),//
 
-      new _TextConst(
-          "infty",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                                new _TextConst(
+                                    "infty",//$NON-NLS-1$
+                                    Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                                    true),//
 
-      new _TextConst(_TextConst.P_INFINITY, Double.POSITIVE_INFINITY,
-          Long.MAX_VALUE, Integer.MAX_VALUE, true),//
+                                    new _TextConst(_TextConst.P_INFINITY, Double.POSITIVE_INFINITY,
+                                        Long.MAX_VALUE, Integer.MAX_VALUE, true),//
 
-      new _TextConst(
-          "\u221e",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                                        new _TextConst(
+                                            "\u221e",//$NON-NLS-1$
+                                            Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                                            true),//
 
-      new _TextConst(
-          "unendlich",//$NON-NLS-1$
-          Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
-          true),//
+                                            new _TextConst(
+                                                "unendlich",//$NON-NLS-1$
+                                                Double.POSITIVE_INFINITY, Long.MAX_VALUE, Integer.MAX_VALUE,
+                                                true),//
 
-      new _TextConst(Double.toString(Double.NaN).toLowerCase(),//
-          Double.NaN),//
+                                                new _TextConst(Double.toString(Double.NaN).toLowerCase(),//
+                                                    Double.NaN),//
 
-      new _TextConst("nan!",//$NON-NLS-1$
-          Double.NaN),//
+                                                    new _TextConst("nan!",//$NON-NLS-1$
+                                                        Double.NaN),//
 
-      new _TextConst("nan",//$NON-NLS-1$
-          Double.NaN),//
+                                                        new _TextConst("nan",//$NON-NLS-1$
+                                                            Double.NaN),//
 
-      new _TextConst(_TextConst.NAN, Double.NaN),//
+                                                            new _TextConst(_TextConst.NAN, Double.NaN),//
 
-      new _TextConst("notanumber",//$NON-NLS-1$
-          Double.NaN),//
+                                                            new _TextConst("notanumber",//$NON-NLS-1$
+                                                                Double.NaN),//
 
-      new _TextConst("error",//$NON-NLS-1$
-          Double.NaN, false),//
+                                                                new _TextConst("error",//$NON-NLS-1$
+                                                                    Double.NaN, false),//
 
-      new _TextConst("failure",//$NON-NLS-1$
-          Double.NaN, false),//
+                                                                    new _TextConst("failure",//$NON-NLS-1$
+                                                                        Double.NaN, false),//
 
-      new _TextConst("0/0",//$NON-NLS-1$
-          Double.NaN),//
+                                                                        new _TextConst("0/0",//$NON-NLS-1$
+                                                                            Double.NaN),//
 
-      new _TextConst("true",//$NON-NLS-1$
-          true),//
+                                                                            new _TextConst("true",//$NON-NLS-1$
+                                                                                true),//
 
-      new _TextConst("yes",//$NON-NLS-1$
-          true),//
+                                                                                new _TextConst("yes",//$NON-NLS-1$
+                                                                                    true),//
 
-      new _TextConst("ok",//$NON-NLS-1$
-          true),//
+                                                                                    new _TextConst("ok",//$NON-NLS-1$
+                                                                                        true),//
 
-      new _TextConst("check",//$NON-NLS-1$
-          true),//
+                                                                                        new _TextConst("check",//$NON-NLS-1$
+                                                                                            true),//
 
-      new _TextConst("accept", //$NON-NLS-1$
-          true),//
+                                                                                            new _TextConst("accept", //$NON-NLS-1$
+                                                                                                true),//
 
-      new _TextConst("confirm",//$NON-NLS-1$
-          true),//
+                                                                                                new _TextConst("confirm",//$NON-NLS-1$
+                                                                                                    true),//
 
-      new _TextConst("acknowledge",//$NON-NLS-1$
-          true),//
+                                                                                                    new _TextConst("acknowledge",//$NON-NLS-1$
+                                                                                                        true),//
 
-      new _TextConst("agree",//$NON-NLS-1$
-          true),//
+                                                                                                        new _TextConst("agree",//$NON-NLS-1$
+                                                                                                            true),//
 
-      new _TextConst("ja",//$NON-NLS-1$
-          true),//
+                                                                                                            new _TextConst("ja",//$NON-NLS-1$
+                                                                                                                true),//
 
-      new _TextConst("wahr",//$NON-NLS-1$
-          true),//
+                                                                                                                new _TextConst("wahr",//$NON-NLS-1$
+                                                                                                                    true),//
 
-      new _TextConst("t",//$NON-NLS-1$
-          true),//
+                                                                                                                    new _TextConst("t",//$NON-NLS-1$
+                                                                                                                        true),//
 
-      new _TextConst("1.0",//$NON-NLS-1$
-          1d, 1l, 1, true),//
+                                                                                                                        new _TextConst("1.0",//$NON-NLS-1$
+                                                                                                                            1d, 1l, 1, true),//
 
-      new _TextConst("1",//$NON-NLS-1$
-          1d, 1l, 1, true),//
+                                                                                                                            new _TextConst("1",//$NON-NLS-1$
+                                                                                                                                1d, 1l, 1, true),//
 
-      new _TextConst("false",//$NON-NLS-1$
-          false),//
+                                                                                                                                new _TextConst("false",//$NON-NLS-1$
+                                                                                                                                    false),//
 
-      new _TextConst("no",//$NON-NLS-1$
-          false),//
+                                                                                                                                    new _TextConst("no",//$NON-NLS-1$
+                                                                                                                                        false),//
 
-      new _TextConst("not",//$NON-NLS-1$
-          false),//
+                                                                                                                                        new _TextConst("not",//$NON-NLS-1$
+                                                                                                                                            false),//
 
-      new _TextConst("uncheck",//$NON-NLS-1$
-          false),//
+                                                                                                                                            new _TextConst("uncheck",//$NON-NLS-1$
+                                                                                                                                                false),//
 
-      new _TextConst("refuse", //$NON-NLS-1$
-          false),//
+                                                                                                                                                new _TextConst("refuse", //$NON-NLS-1$
+                                                                                                                                                    false),//
 
-      new _TextConst("decline",//$NON-NLS-1$
-          false),//
+                                                                                                                                                    new _TextConst("decline",//$NON-NLS-1$
+                                                                                                                                                        false),//
 
-      new _TextConst("disagree",//$NON-NLS-1$
-          false),//
+                                                                                                                                                        new _TextConst("disagree",//$NON-NLS-1$
+                                                                                                                                                            false),//
 
-      new _TextConst("nein",//$NON-NLS-1$
-          false),//
+                                                                                                                                                            new _TextConst("nein",//$NON-NLS-1$
+                                                                                                                                                                false),//
 
-      new _TextConst("falsch",//$NON-NLS-1$
-          false),//
+                                                                                                                                                                new _TextConst("falsch",//$NON-NLS-1$
+                                                                                                                                                                    false),//
 
-      new _TextConst("f",//$NON-NLS-1$
-          false),//
+                                                                                                                                                                    new _TextConst("f",//$NON-NLS-1$
+                                                                                                                                                                        false),//
 
-      new _TextConst("0.0",//$NON-NLS-1$
-          0d, 0l, 0, false),//
+                                                                                                                                                                        new _TextConst("0.0",//$NON-NLS-1$
+                                                                                                                                                                            0d, 0l, 0, false),//
 
-      new _TextConst("0",//$NON-NLS-1$
-          0d, 0l, 0, false),//
+                                                                                                                                                                            new _TextConst("0",//$NON-NLS-1$
+                                                                                                                                                                                0d, 0l, 0, false),//
 
-      new _TextConst(Character.toString((char) 0xbc),//
-          0.25d),//
-      new _TextConst(Character.toString((char) 0xbd),//
-          0.5d),//
+                                                                                                                                                                                new _TextConst(Character.toString((char) 0xbc),//
+                                                                                                                                                                                    0.25d),//
+                                                                                                                                                                                    new _TextConst(Character.toString((char) 0xbd),//
+                                                                                                                                                                                        0.5d),//
 
-      new _TextConst(Character.toString((char) 0xbe),//
-          0.75d),//
-      new _TextConst(Character.toString((char) 0x2158),//
-          1d / 3d),//
-      new _TextConst(Character.toString((char) 0x2154),//
-          2d / 3d),//
-      new _TextConst(Character.toString((char) 0x2155),//
-          0.2d),//
-      new _TextConst(Character.toString((char) 0x2156),//
-          0.4d),//
-      new _TextConst(Character.toString((char) 0x2157),//
-          0.6),//
-      new _TextConst(Character.toString((char) 0x2158),//
-          0.8d),//
-      new _TextConst(Character.toString((char) 0x2159),//
-          1d / 6d),//
-      new _TextConst(Character.toString((char) 0x215a),//
-          5d / 6d),//
-      new _TextConst(Character.toString((char) 0x215b),//
-          0.125d),//
-      new _TextConst(Character.toString((char) 0x215c),//
-          0.375d),//
-      new _TextConst(Character.toString((char) 0x215d),//
-          0.625d),//
-      new _TextConst(Character.toString((char) 0x215e),//
-          0.875d),//
-      new _TextConst(Character.toString((char) 0x2160),//
-          1d, 1l, 1, true),//
-      new _TextConst(Character.toString((char) 0x2161),//
-          2d, 2l, 2, true),//
-      new _TextConst(Character.toString((char) 0x2162),//
-          3d, 3l, 3, true),//
-      new _TextConst(Character.toString((char) 0x2163),//
-          4d, 4l, 4, true),//
-      new _TextConst(Character.toString((char) 0x2164),//
-          5d, 5l, 5, true),//
-      new _TextConst(Character.toString((char) 0x2165),//
-          6d, 6l, 6, true),//
-      new _TextConst(Character.toString((char) 0x2166),//
-          7d, 7l, 7, true),//
-      new _TextConst(Character.toString((char) 0x2167),//
-          8d, 8l, 8, true),//
-      new _TextConst(Character.toString((char) 0x2168),//
-          9d, 9l, 9, true),//
-      new _TextConst(Character.toString((char) 0x2169),//
-          10d, 10l, 10, true),//
-      new _TextConst(Character.toString((char) 0x216A),//
-          11d, 11l, 11, true),//
-      new _TextConst(Character.toString((char) 0x216B),//
-          12d, 12l, 12, true),//
+                                                                                                                                                                                        new _TextConst(Character.toString((char) 0xbe),//
+                                                                                                                                                                                            0.75d),//
+                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x2158),//
+                                                                                                                                                                                                1d / 3d),//
+                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x2154),//
+                                                                                                                                                                                                    2d / 3d),//
+                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x2155),//
+                                                                                                                                                                                                        0.2d),//
+                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x2156),//
+                                                                                                                                                                                                            0.4d),//
+                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x2157),//
+                                                                                                                                                                                                                0.6),//
+                                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x2158),//
+                                                                                                                                                                                                                    0.8d),//
+                                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x2159),//
+                                                                                                                                                                                                                        1d / 6d),//
+                                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x215a),//
+                                                                                                                                                                                                                            5d / 6d),//
+                                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x215b),//
+                                                                                                                                                                                                                                0.125d),//
+                                                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x215c),//
+                                                                                                                                                                                                                                    0.375d),//
+                                                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x215d),//
+                                                                                                                                                                                                                                        0.625d),//
+                                                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x215e),//
+                                                                                                                                                                                                                                            0.875d),//
+                                                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x2160),//
+                                                                                                                                                                                                                                                1d, 1l, 1, true),//
+                                                                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x2161),//
+                                                                                                                                                                                                                                                    2d, 2l, 2, true),//
+                                                                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x2162),//
+                                                                                                                                                                                                                                                        3d, 3l, 3, true),//
+                                                                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x2163),//
+                                                                                                                                                                                                                                                            4d, 4l, 4, true),//
+                                                                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x2164),//
+                                                                                                                                                                                                                                                                5d, 5l, 5, true),//
+                                                                                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x2165),//
+                                                                                                                                                                                                                                                                    6d, 6l, 6, true),//
+                                                                                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x2166),//
+                                                                                                                                                                                                                                                                        7d, 7l, 7, true),//
+                                                                                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x2167),//
+                                                                                                                                                                                                                                                                            8d, 8l, 8, true),//
+                                                                                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x2168),//
+                                                                                                                                                                                                                                                                                9d, 9l, 9, true),//
+                                                                                                                                                                                                                                                                                new _TextConst(Character.toString((char) 0x2169),//
+                                                                                                                                                                                                                                                                                    10d, 10l, 10, true),//
+                                                                                                                                                                                                                                                                                    new _TextConst(Character.toString((char) 0x216A),//
+                                                                                                                                                                                                                                                                                        11d, 11l, 11, true),//
+                                                                                                                                                                                                                                                                                        new _TextConst(Character.toString((char) 0x216B),//
+                                                                                                                                                                                                                                                                                            12d, 12l, 12, true),//
 
-      new _TextConst(Character.toString((char) 0x3c0), Math.PI),//
+                                                                                                                                                                                                                                                                                            new _TextConst(Character.toString((char) 0x3c0), Math.PI),//
 
   };
 
@@ -257,7 +257,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -284,7 +284,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -309,7 +309,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -326,7 +326,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -338,7 +338,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param b
@@ -350,7 +350,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -365,7 +365,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have an integer
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasInt() {
@@ -374,7 +374,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have a double
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasDouble() {
@@ -383,7 +383,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have a boolean
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasBoolean() {
@@ -409,7 +409,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * find a numerical constant with the given name
-   * 
+   *
    * @param constName
    *          the name
    * @return the constant, or {@code null} if not found

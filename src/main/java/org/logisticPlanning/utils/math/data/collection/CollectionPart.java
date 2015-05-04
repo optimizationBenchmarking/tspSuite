@@ -16,7 +16,7 @@ public final class CollectionPart implements IDataCollection {
 
   /**
    * Create the data collection part
-   * 
+   *
    * @param src
    *          the source collection
    * @param start
@@ -40,8 +40,8 @@ public final class CollectionPart implements IDataCollection {
     if ((start + size) > src.size()) {
       throw new IllegalArgumentException(//
           "Start index " + start + //$NON-NLS-1$
-              " + size " + size + //$NON-NLS-1$
-              " exceeds list size " + src.size());//$NON-NLS-1$
+          " + size " + size + //$NON-NLS-1$
+          " exceeds list size " + src.size());//$NON-NLS-1$
     }
 
     this.m_src = src;

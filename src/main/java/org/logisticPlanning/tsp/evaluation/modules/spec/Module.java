@@ -31,8 +31,8 @@ import org.logisticPlanning.utils.text.TextUtils;
  * {@link org.logisticPlanning.tsp.evaluation.Evaluator evaluator} and its
  * modules to be configured once an then applied multiple times in
  * parallel.
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -86,7 +86,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -113,7 +113,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Get the owning module
-   * 
+   *
    * @return the owning module
    */
   protected final Module getOwner() {
@@ -122,7 +122,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Get the collection of active child modules
-   * 
+   *
    * @return the collection of active child modules
    */
   protected final ArraySetView<Module> getActiveChildren() {
@@ -136,7 +136,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Get the root module
-   * 
+   *
    * @return the root module
    */
   protected final RootModule getRoot() {
@@ -145,7 +145,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Add a dependency on another module
-   * 
+   *
    * @param mod
    *          the other module
    */
@@ -154,10 +154,10 @@ public class Module extends Configurable implements Comparable<Module> {
       if (this.containsDependency(mod)) {
         throw new IllegalStateException(//
             " Module '" + this.name() + //$NON-NLS-1$
-                "' cannot depend on module '" + mod.name() + //$NON-NLS-1$
-                "', because '" + mod.name() + //$NON-NLS-1$
-                "' already depends on '" + this.name() + //$NON-NLS-1$
-                "'."); //$NON-NLS-1$
+            "' cannot depend on module '" + mod.name() + //$NON-NLS-1$
+            "', because '" + mod.name() + //$NON-NLS-1$
+            "' already depends on '" + this.name() + //$NON-NLS-1$
+            "'."); //$NON-NLS-1$
       }
 
       if (mod.m_dependants == null) {
@@ -173,7 +173,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * is module {@code mod} depending on this module?
-   * 
+   *
    * @param mod
    *          the module
    * @return {@code true} if {@code mod} depends on this module,
@@ -197,10 +197,12 @@ public class Module extends Configurable implements Comparable<Module> {
   /**
    * Find an instance of the given class in the hierarchical tree of
    * modules
-   * 
+   *
    * @param clazz
    *          the class
    * @return the instance, or {@code null} if none was found
+   * @param <T>
+   *          the type of the class
    */
   @SuppressWarnings("unchecked")
   final <T extends Module> T _findInstance(final Class<? extends T> clazz) {
@@ -228,7 +230,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Add a child module
-   * 
+   *
    * @param child
    *          the new child module
    */
@@ -246,20 +248,20 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * the errror if a child is not permitted
-   * 
+   *
    * @param child
    *          the child
    */
   final void _childNotPermittedError(final Module child) {
     throw new IllegalArgumentException(//
         "Instance of class '" + child.getClass() + //$NON-NLS-1$
-            "' not permitted as child of a module of type '" + //$NON-NLS-1$
-            this.getClass() + "'."); //$NON-NLS-1$
+        "' not permitted as child of a module of type '" + //$NON-NLS-1$
+        this.getClass() + "'."); //$NON-NLS-1$
   }
 
   /**
    * Get the logger
-   * 
+   *
    * @return the logger
    */
   protected final Logger getLogger() {
@@ -269,7 +271,7 @@ public class Module extends Configurable implements Comparable<Module> {
   /**
    * Set whether this module is active or not. Must be done before calling
    * {@link #configure(Configuration)}!
-   * 
+   *
    * @param active
    *          {@code true} if this evaluator should be active,
    *          {@code false} otherwise
@@ -281,7 +283,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * is this evaluator active?
-   * 
+   *
    * @return {@code true} if this evaluator is active, {@code false}
    *         otherwise
    */
@@ -291,7 +293,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Apply this module to a data set.
-   * 
+   *
    * @param body
    *          the body where the section of this module can be placed into
    *          via
@@ -307,7 +309,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Apply all children to a given data set.
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -315,7 +317,6 @@ public class Module extends Configurable implements Comparable<Module> {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   final void _runChildren(final Element body, final DataSet<?> data)
       throws IOException {
     if (this.m_activeChildren != null) {
@@ -327,7 +328,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * perform the evaluation
-   * 
+   *
    * @param body
    *          the body where the section of this module can be placed into
    *          via
@@ -346,7 +347,7 @@ public class Module extends Configurable implements Comparable<Module> {
     if ((data == null) || (data.size() <= 0)) {
       if ((log != null) && (log.isLoggable(Level.WARNING))) {
         log.warning(//
-        "Null or empty data set passed to 'run' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
+            "Null or empty data set passed to 'run' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
       }
       return;
     }
@@ -386,7 +387,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Initialize this module on a data set.
-   * 
+   *
    * @param header
    *          the header of the document
    * @param data
@@ -401,7 +402,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * initialize all the elements in the given array
-   * 
+   *
    * @param header
    *          the header
    * @param data
@@ -409,7 +410,6 @@ public class Module extends Configurable implements Comparable<Module> {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   final void _initializeChildren(final Header header, final DataSet<?> data)
       throws IOException {
 
@@ -422,7 +422,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * perform the initialization procedure
-   * 
+   *
    * @param header
    *          the header of the document
    * @param data
@@ -439,7 +439,7 @@ public class Module extends Configurable implements Comparable<Module> {
     if ((data == null) || (data.size() <= 0)) {
       if ((log != null) && (log.isLoggable(Level.WARNING))) {
         log.warning(//
-        "Null or empty data set passed to 'initialize' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
+            "Null or empty data set passed to 'initialize' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
       }
       return;
     }
@@ -480,7 +480,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * compare modules based on their classes
-   * 
+   *
    * @param a
    *          the first module
    * @param b
@@ -579,7 +579,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * compare two modules
-   * 
+   *
    * @param a
    *          the first module
    * @param b
@@ -670,7 +670,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * trace a list
-   * 
+   *
    * @param lst
    *          the list
    * @param b
@@ -797,7 +797,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * Propagate activation back and forth
-   * 
+   *
    * @return {@code true} if something changed about the activation status
    */
   private final boolean __propagateActive() {
@@ -898,7 +898,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * log a warning since the module can only process data of a given type
-   * 
+   *
    * @param clazz
    *          the class of data that can be processed
    * @param data
@@ -921,7 +921,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * make a uri that represents the given configuration
-   * 
+   *
    * @param folder
    *          a default sub-folder, or {@code null} if none provided
    * @param experiment
@@ -1009,7 +1009,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * make a uri that represents the given configuration
-   * 
+   *
    * @param folder
    *          a default sub-folder, or {@code null} if none provided
    * @param fileName
@@ -1025,7 +1025,7 @@ public class Module extends Configurable implements Comparable<Module> {
 
   /**
    * make a uri that represents the given configuration
-   * 
+   *
    * @param folder
    *          a default sub-folder, or {@code null} if none provided
    * @param experiment
@@ -1038,13 +1038,13 @@ public class Module extends Configurable implements Comparable<Module> {
    */
   protected final URI makeURI(final String folder,
       final Experiment experiment, final Instance instance)
-      throws IOException {
+          throws IOException {
     return this.makeURI(folder, experiment, instance, null);
   }
 
   /**
    * Does this module have contents?
-   * 
+   *
    * @param data
    *          the data set
    * @return {@code true} if so, {@code false} otherwise

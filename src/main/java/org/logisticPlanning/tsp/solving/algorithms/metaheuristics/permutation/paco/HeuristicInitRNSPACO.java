@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationRNSMutation;
 
 /**
- * 
+ *
  <p>
  * A version of the {@link PACO heuristically-initialized Population-based
  * ACO} that uses a
@@ -678,7 +678,7 @@ public class HeuristicInitRNSPACO extends _HeuristicInitLocalSearchPACO {
    * instantiate
    */
   public HeuristicInitRNSPACO() {
-    super("Random-Neighborhood Search ");//$NON-NLS-1$ 
+    super("Random-Neighborhood Search ");//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -689,7 +689,7 @@ public class HeuristicInitRNSPACO extends _HeuristicInitLocalSearchPACO {
 
   /**
    * Perform the population-based ACO
-   * 
+   *
    * @param args
    *          the command line arguments
    */

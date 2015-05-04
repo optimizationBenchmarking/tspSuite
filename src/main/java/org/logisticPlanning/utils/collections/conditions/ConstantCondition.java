@@ -22,7 +22,7 @@ public final class ConstantCondition extends Condition<Object> {
 
   /**
    * create
-   * 
+   *
    * @param value
    *          the value
    */

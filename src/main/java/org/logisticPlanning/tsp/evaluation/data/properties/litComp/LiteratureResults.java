@@ -10,13 +10,13 @@ import org.logisticPlanning.utils.document.spec.Header;
  * The results class
  */
 public final class LiteratureResults extends
-    ArraySetView<LiteratureResultPointSet> {
+ArraySetView<LiteratureResultPointSet> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * Create
-   * 
+   *
    * @param pointSets
    *          the point sets.
    */
@@ -27,7 +27,7 @@ public final class LiteratureResults extends
 
   /**
    * Initialize the result point sets
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException

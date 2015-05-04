@@ -14,12 +14,12 @@ final class _OpPow extends _OpDef {
 
   /** the overlined cell */
   private final static char[] EXP = { '<', 't', 'd', ' ', 'c', 'l', 'a',
-      's', 's', '=', '"', 'm', 'a', 't', 'h', 'E', 'x', 'p', '"', ' ',
-      'r', 'o', 'w', 's', 'p', 'a', 'n', '=', '"', '2', '"', '>' };
+    's', 's', '=', '"', 'm', 'a', 't', 'h', 'E', 'x', 'p', '"', ' ',
+    'r', 'o', 'w', 's', 'p', 'a', 'n', '=', '"', '2', '"', '>' };
   /** the power tr */
   private final static char[] POWR = { '<', 't', 'r', ' ', 'c', 'l', 'a',
-      's', 's', '=', '"', 'm', 'a', 't', 'h', 'P', 'o', 'w', 'T', 'R',
-      '"', '>' };
+    's', 's', '=', '"', 'm', 'a', 't', 'h', 'P', 'o', 'w', 'T', 'R',
+    '"', '>' };
 
   /** create */
   private _OpPow() {

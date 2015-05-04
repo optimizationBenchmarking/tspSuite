@@ -9,7 +9,7 @@ import java.util.Arrays;
  * . If the capacity for a given node is reached and a new edge is tried to
  * be checked in, it may only enter the nodes edge list if it has a better
  * (lower) heuristic value. Node indices must be one-based.
- * 
+ *
  * @param <ET>
  *          the edge type
  */
@@ -31,7 +31,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
    * {@link #m_neighborListLength} best edges incident to each node and
    * obtain a globally sorted version of that list.
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param neighborListLength
@@ -46,7 +46,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
 
   /**
    * get the number of nodes this neighbor list can manage
-   * 
+   *
    * @return the number of nodes this neighbor list can manage
    */
   public final int n() {
@@ -55,7 +55,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
 
   /**
    * get the neighbor list length
-   * 
+   *
    * @return the neighbor list length
    */
   public final int getNeighborListLength() {
@@ -70,7 +70,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
 
   /**
    * factory method to create a new edge
-   * 
+   *
    * @return the new edge
    */
   @SuppressWarnings("unchecked")
@@ -80,7 +80,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
 
   /**
    * factory method to create a new edge array
-   * 
+   *
    * @param length
    *          the length of the new array
    * @return the new edge array
@@ -112,7 +112,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
    * its incident nodes. Of course, we only store each edge at most once.
    * Hence, the effective capacity of the list may be up to twice as high.
    * </p>
-   * 
+   *
    * @param a
    *          the first end
    * @param b
@@ -157,9 +157,9 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
           // sort it
           use.h = h; // assign h - necessary for sorting
           Arrays
-              .sort(edges, fromIndex, fromIndex
-                  + this.m_neighborListLength,
-                  PriorityEdgeComparator.INSTANCE);
+          .sort(edges, fromIndex, fromIndex
+              + this.m_neighborListLength,
+              PriorityEdgeComparator.INSTANCE);
         }
       } else {
         // Ok, there was no free slot: try to find one by using binary
@@ -242,7 +242,7 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
    * If some of the neighbor lists were not filled, there are {@code null}
    * elements at the end of the array.
    * </p>
-   * 
+   *
    * @return the sorted edge array
    */
   public final ET[] getEdgeArray() {

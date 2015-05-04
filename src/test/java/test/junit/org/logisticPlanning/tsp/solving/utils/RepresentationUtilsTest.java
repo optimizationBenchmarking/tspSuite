@@ -85,9 +85,9 @@ public final class RepresentationUtilsTest extends TourValidatorTestBase {
             .arePathAndAdjacencyListEquivalentSTSP(perm, adj2));
         this.validateAdjacencyList(adj2, null);
         Assert
-            .assertTrue(//
-                "Each permutation has exactly one unique adjacency list representation.", //$NON-NLS-1$
-                Arrays.equals(adj, adj2));
+        .assertTrue(//
+            "Each permutation has exactly one unique adjacency list representation.", //$NON-NLS-1$
+            Arrays.equals(adj, adj2));
 
         // test the conversion from adjacency list to permutation
         Arrays.fill(perm2, -1);
@@ -96,9 +96,9 @@ public final class RepresentationUtilsTest extends TourValidatorTestBase {
             .arePathAndAdjacencyListEquivalentSTSP(perm2, adj2));
         this.validatePath(perm2, null);
         Assert
-            .assertTrue(//
-                "Each adjacency list has exactly one unique canonical permutation representation.", //$NON-NLS-1$
-                Arrays.equals(perm, perm2));
+        .assertTrue(//
+            "Each adjacency list has exactly one unique canonical permutation representation.", //$NON-NLS-1$
+            Arrays.equals(perm, perm2));
 
       }
 
@@ -192,8 +192,8 @@ public final class RepresentationUtilsTest extends TourValidatorTestBase {
           Assert.assertTrue(//
               RepresentationUtils.areAdjacencyListsEquivalentSTSP(perm1,
                   perm2) == //
-              RepresentationUtils.areAdjacencyListsEquivalentSTSP(perm2,
-                  perm1));
+                  RepresentationUtils.areAdjacencyListsEquivalentSTSP(perm2,
+                      perm1));
 
           pathEq = RepresentationUtils
               .arePathsEquivalentSTSP(perm1, perm2);
@@ -223,7 +223,7 @@ public final class RepresentationUtilsTest extends TourValidatorTestBase {
 
   /**
    * invalidate an array of edges
-   * 
+   *
    * @param edges
    *          the edges
    */

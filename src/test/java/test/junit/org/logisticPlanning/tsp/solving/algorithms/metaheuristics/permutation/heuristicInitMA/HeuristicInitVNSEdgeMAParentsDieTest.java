@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * mutation
  */
 public class HeuristicInitVNSEdgeMAParentsDieTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitVNSEdgeMAParentsDieTest() {

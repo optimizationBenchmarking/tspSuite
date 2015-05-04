@@ -29,7 +29,7 @@ public class IEEEArticleContext extends LaTeXContext {
 
   /**
    * create the IEEE article context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir

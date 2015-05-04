@@ -13,13 +13,13 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * algorithm over a given time measure for a given benchmark instance.
  */
 final class _ExperimentSetInstanceProgressDiagramsHolder extends
-    ComparisonModule {
+ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -40,10 +40,10 @@ final class _ExperimentSetInstanceProgressDiagramsHolder extends
     for (final Accessor axs : Accessor.TIME_MEASURES) {
       new _ExperimentSetInstanceProgressDiagrams(this, axs,//
           Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-      // ((axs == Accessor.DE) || //
-      // (axs == Accessor.FE) || //
-      // (axs == Accessor.NORMALIZED_RUNTIME))
-      );
+          // ((axs == Accessor.DE) || //
+          // (axs == Accessor.FE) || //
+          // (axs == Accessor.NORMALIZED_RUNTIME))
+          );
     }
   }
 

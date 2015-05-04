@@ -68,7 +68,7 @@ public final class BinomialCoefficient extends BinaryFunction {
 
   /**
    * compute the binomial coefficient
-   * 
+   *
    * @param n
    *          the n
    * @param k
@@ -94,7 +94,7 @@ public final class BinomialCoefficient extends BinaryFunction {
 
   /**
    * compute the binomial coefficient
-   * 
+   *
    * @param n
    *          the n
    * @param k
@@ -110,7 +110,7 @@ public final class BinomialCoefficient extends BinaryFunction {
       ni = ((int) n);
       ki = ((int) k);
       return ((Factorial.FACTORIALS[ni] / Factorial.FACTORIALS[ki]) / //
-      Factorial.FACTORIALS[ni - ki]);
+          Factorial.FACTORIALS[ni - ki]);
     }
 
     g = (n >>> 1);
@@ -216,7 +216,7 @@ public final class BinomialCoefficient extends BinaryFunction {
    * BinomialCoefficient.INSTANCE} for serialization, i.e., when the
    * instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BinomialCoefficient#INSTANCE
    *         BinomialCoefficient.INSTANCE} )
@@ -230,7 +230,7 @@ public final class BinomialCoefficient extends BinaryFunction {
    * with the singleton instance {@link BinomialCoefficient#INSTANCE
    * BinomialCoefficient.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BinomialCoefficient#INSTANCE
    *         BinomialCoefficient.INSTANCE} )

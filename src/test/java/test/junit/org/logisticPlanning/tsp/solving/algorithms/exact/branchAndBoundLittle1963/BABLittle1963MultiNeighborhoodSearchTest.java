@@ -12,7 +12,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * multi-neighborhood search}.
  */
 public class BABLittle1963MultiNeighborhoodSearchTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public BABLittle1963MultiNeighborhoodSearchTest() {

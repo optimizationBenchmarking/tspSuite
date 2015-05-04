@@ -87,7 +87,7 @@ import org.logisticPlanning.utils.text.TextUtils;
  * {@link #loadPathIntoIndividual(Individual, int[], long)} are implemented
  * for {@code P}.
  * </p>
- * 
+ *
  * @param <P>
  *          the final solution representation this algorithm works on
  * @since 0.9.8
@@ -99,7 +99,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * the prefix for the parameter defining the perturbation operator to be
    * used
-   * 
+   *
    * @see #m_perturbation
    * @see #m_perturbationParam
    * @see #setPerturbationOperator(PerturbationOperator)
@@ -109,7 +109,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * the prefix for the parameter defining the acceptance operator to be
    * used
-   * 
+   *
    * @see #m_acceptance
    * @see #m_acceptanceParam
    * @see #setAcceptanceCriterion(AcceptanceCriterion)
@@ -119,7 +119,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * the prefix for the parameter defining the termination criterion to be
    * used
-   * 
+   *
    * @see #m_termination
    * @see #m_terminationParam
    * @see #setLocalSearchTerminationCriterion(ELocalSearchTermination)
@@ -129,7 +129,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * the prefix for the parameter defining the maximum iterations, 0 for
    * infinite
-   * 
+   *
    * @see #m_maxIterations
    * @see #m_maxIterationsParam
    */
@@ -137,42 +137,42 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * the perturbation operator
-   * 
+   *
    * @serial a non-{@code null} object instance
    */
   private PerturbationOperator<P> m_perturbation;
 
   /**
    * the acceptance criterion
-   * 
+   *
    * @serial a non-{@code null} object instance
    */
   private AcceptanceCriterion m_acceptance;
 
   /**
    * the local search termination
-   * 
+   *
    * @serial a non-{@code null} object instance
    */
   private ELocalSearchTermination m_termination;
 
   /**
    * the maximum number of iterations
-   * 
+   *
    * @serial a non-negative integer
    */
   private int m_maxIterations;
 
   /**
    * the parameter prefix
-   * 
+   *
    * @serial a non-{@code null}, non-empty {@link java.lang.String}
    *         instance
    */
   private final String m_paramPrefix;
   /**
    * the perturbation parameter
-   * 
+   *
    * @see #PARAM_PERTURBATION_OPERATOR_SUFFIX
    * @serial a non-{@code null}, non-empty {@link java.lang.String}
    *         instance
@@ -180,7 +180,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   private final String m_perturbationParam;
   /**
    * the perturbation parameter
-   * 
+   *
    * @see #PARAM_ACCEPTANCE_CRITERION_SUFFIX
    * @serial a non-{@code null}, non-empty {@link java.lang.String}
    *         instance
@@ -188,7 +188,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   private final String m_acceptanceParam;
   /**
    * the perturbation parameter
-   * 
+   *
    * @see #PARAM_LOCAL_SEARCH_TERMINATION_SUFFIX
    * @serial a non-{@code null}, non-empty {@link java.lang.String}
    *         instance
@@ -197,7 +197,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * the maximum iterations parameter
-   * 
+   *
    * @see #PARAM_LOCAL_SEARCH_MAX_ITERATIONS_SUFFIX
    * @serial a non-{@code null}, non-empty {@link java.lang.String}
    *         instance
@@ -206,7 +206,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * instantiate the local search algorithm class
-   * 
+   *
    * @param name
    *          the name
    */
@@ -234,7 +234,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * Calculate the prefix to be used for the parameters of this local
    * search algorithm. This method is called only once, in the constructor.
-   * 
+   *
    * @param name
    *          the class name
    * @return the prefix to be used for the parameters of this local search
@@ -261,7 +261,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * A prefix to be used for parameters of this algorithm
-   * 
+   *
    * @return the parameter prefix
    */
   protected final String getParamPrefix() {
@@ -271,7 +271,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * Create the perturbation operator to be used by this local search
    * method.
-   * 
+   *
    * @return the perturbation operator to be used by this local search
    *         method
    */
@@ -283,7 +283,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * This method is called to perform the local search. It receives a
    * candidate solution as input.
-   * 
+   *
    * @param f
    *          the objective function
    * @param srcdst
@@ -295,7 +295,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * This method is called to perform the local search. It receives a
    * candidate solution as input.
-   * 
+   *
    * @param f
    *          the objective function
    * @param srcdst
@@ -367,7 +367,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
    * The newly generated solution has been accepted. The individual record
    * {@code srcdst} should not be modified, but may be copied into some
    * internal memory.
-   * 
+   *
    * @param srcdst
    *          the individual with the accepted solution
    * @param f
@@ -382,7 +382,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
    * The newly generated solution has been rejected. The individual record
    * {@code srcdst} should be overwritten with, e.g., the best known
    * solution.
-   * 
+   *
    * @param srcdst
    *          the individual with the rejected solution, to be overwritten
    * @param f
@@ -395,7 +395,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Load an individual record from a solution in path representation.
-   * 
+   *
    * @param dest
    *          the destination individual record
    * @param path
@@ -415,7 +415,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * Load an individual record with the best solution discovered by the
    * objective function.
-   * 
+   *
    * @param dest
    *          the destination individual record
    * @param f
@@ -457,7 +457,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Get the perturbation operator
-   * 
+   *
    * @return the perturbation operator
    */
   public final PerturbationOperator<P> getPerturbationOperator() {
@@ -466,7 +466,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Set the perturbation operator
-   * 
+   *
    * @param operator
    *          the perturbation operator
    * @throws IllegalArgumentException
@@ -482,7 +482,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Get the acceptance criterion
-   * 
+   *
    * @return the acceptance criterion
    */
   public final AcceptanceCriterion getAcceptanceCriterion() {
@@ -491,7 +491,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Set the acceptance criterion
-   * 
+   *
    * @param criterion
    *          the acceptance criterion, or {@code null} for the default
    *          {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.acceptance.AcceptIfBetterOrEqualToBest#INSTANCE}
@@ -510,7 +510,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
    * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.TSPLocalSearchBasedMutation
    * mutation operator}, it can be any of the elements of
    * {@link ELocalSearchTermination}.
-   * 
+   *
    * @return the additional termination criterion
    */
   public final ELocalSearchTermination getLocalSearchTerminationCriterion() {
@@ -524,7 +524,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
    * {@link org.logisticPlanning.tsp.solving.algorithms.localSearch.TSPLocalSearchBasedMutation
    * mutation operator}, it can be any of the elements of
    * {@link ELocalSearchTermination}.
-   * 
+   *
    * @param criterion
    *          the additional termination criterion, or {@code null} for
    *          {@link ELocalSearchTermination#NEVER}
@@ -537,7 +537,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
 
   /**
    * Get the upper limit for the iteration number.
-   * 
+   *
    * @return the number of iterations the local search is allowed to
    *         perform, either in <code>1..(2<sup>31</sup>-1)</code> or
    *         {@code 0} for infinite
@@ -549,7 +549,7 @@ public abstract class TSPLocalSearchAlgorithm<P> extends TSPAlgorithm {
   /**
    * Set the maximum number of iterations the local search is allowed to
    * perform.
-   * 
+   *
    * @param maxIterations
    *          the number of iterations the local search is allowed to
    *          perform, either in <code>1..(2<sup>31</sup>-1)</code> or

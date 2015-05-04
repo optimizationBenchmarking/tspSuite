@@ -18,7 +18,7 @@ final class _AlgorithmTest extends ObjectiveTest {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    */

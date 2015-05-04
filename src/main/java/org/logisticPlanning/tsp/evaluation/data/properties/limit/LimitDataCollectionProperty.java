@@ -25,24 +25,24 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * given run set at a given limit.
  */
 public final class LimitDataCollectionProperty extends
-    Property<RunSet, IDataCollection> {
+Property<RunSet, IDataCollection> {
 
   /** the end of run */
   public static final LimitDataCollectionProperty END_OF_RUN = //
-  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-3),
-      Double.POSITIVE_INFINITY);
+      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-3),
+          Double.POSITIVE_INFINITY);
   /** the first of run */
   public static final LimitDataCollectionProperty FIRST_OF_RUN = //
-  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-2),
-      Double.NEGATIVE_INFINITY);
+      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-2),
+          Double.NEGATIVE_INFINITY);
   /** the convergence point of run */
   public static final LimitDataCollectionProperty CONVERGENCE = //
-  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-1),
-      Double.NEGATIVE_INFINITY);
+      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-1),
+          Double.NEGATIVE_INFINITY);
   /** the optimum of run */
   public static final LimitDataCollectionProperty OPTIMUM = //
-  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-4),
-      Double.NEGATIVE_INFINITY);
+      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-4),
+          Double.NEGATIVE_INFINITY);
 
   /** the dimension */
   private final int m_dim;
@@ -55,7 +55,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * create the property
-   * 
+   *
    * @param type
    *          the type
    * @param dim
@@ -78,7 +78,7 @@ public final class LimitDataCollectionProperty extends
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.getClass()),//
             HashUtils.hashCode(this.m_dim)),//
-        HashUtils.hashCode(this.m_value));
+            HashUtils.hashCode(this.m_value));
   }
 
   /** {@inheritDoc} */
@@ -119,7 +119,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Write the short name
-   * 
+   *
    * @param out
    *          the output destination
    * @throws IOException
@@ -256,7 +256,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * the dimension error
-   * 
+   *
    * @param dim
    *          the dimension error
    */
@@ -266,7 +266,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Get a sentence fraction describing the limit used
-   * 
+   *
    * @return the in-text description
    */
   public final String getInTextDescription() {
@@ -276,7 +276,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Write a sentence fraction describing the limit used
-   * 
+   *
    * @param out
    *          the output destination
    * @throws IOException
@@ -359,7 +359,7 @@ public final class LimitDataCollectionProperty extends
       case DataPoint.RELATIVE_F_INDEX: {
         out.write("the earliest log point of each run where the best known relative objective value "); //$NON-NLS-1$
         out.macroInvoke(Macros.F_BEST_RELATIVE);
-        out.write(" became less or equal to "); //$NON-NLS-1$        
+        out.write(" became less or equal to "); //$NON-NLS-1$
         out.writeDouble(this.m_value);
         return;
       }
@@ -429,7 +429,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * create the property
-   * 
+   *
    * @param dim
    *          the dimension
    * @param value

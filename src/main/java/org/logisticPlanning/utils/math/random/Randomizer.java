@@ -95,7 +95,7 @@ public final class Randomizer extends Random {
 
   /**
    * create!
-   * 
+   *
    * @param seed
    *          the seed to use
    */
@@ -118,7 +118,7 @@ public final class Randomizer extends Random {
 
   /**
    * scramble the initial seed
-   * 
+   *
    * @param seed
    *          the seed
    * @return the scrambled seed
@@ -199,7 +199,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code byte}s whose sub-sequence to be
    *          randomized
@@ -230,7 +230,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code bytes}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code byte}s that should be randomized
    */
@@ -252,7 +252,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code short}s whose sub-sequence to be
    *          randomized
@@ -283,7 +283,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code shorts}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code short}s that should be randomized
    */
@@ -305,7 +305,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code int}s whose sub-sequence to be randomized
    * @param start
@@ -335,7 +335,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code ints}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code int}s that should be randomized
    */
@@ -357,7 +357,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code long}s whose sub-sequence to be
    *          randomized
@@ -388,7 +388,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code longs}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code long}s that should be randomized
    */
@@ -410,7 +410,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code float}s whose sub-sequence to be
    *          randomized
@@ -441,7 +441,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code floats}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code float}s that should be randomized
    */
@@ -463,7 +463,7 @@ public final class Randomizer extends Random {
    * . After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code double}s whose sub-sequence to be
    *          randomized
@@ -494,7 +494,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code doubles}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code double}s that should be randomized
    */
@@ -516,7 +516,7 @@ public final class Randomizer extends Random {
    * After this procedure, the {@code count} elements of the array
    * beginning at index {@code start} are uniformly randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code char}s whose sub-sequence to be
    *          randomized
@@ -547,7 +547,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code chars}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code char}s that should be randomized
    */
@@ -570,7 +570,7 @@ public final class Randomizer extends Random {
    * the array beginning at index {@code start} are uniformly randomly
    * distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code boolean}s whose sub-sequence to be
    *          randomized
@@ -601,7 +601,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code booleans}. After this
    * procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code boolean}s that should be randomized
    */
@@ -624,7 +624,7 @@ public final class Randomizer extends Random {
    * elements of the array beginning at index {@code start} are uniformly
    * randomly distributed.
    * </p>
-   * 
+   *
    * @param array
    *          the array of {@code java.lang.Object}s whose sub-sequence to
    *          be randomized
@@ -655,7 +655,7 @@ public final class Randomizer extends Random {
    * Randomize an array or permutation of {@code java.lang.Objects}. After
    * this procedure, the elements of the array are uniformly randomly
    * distributed.
-   * 
+   *
    * @param array
    *          the array of {@code java.lang.Object}s that should be
    *          randomized

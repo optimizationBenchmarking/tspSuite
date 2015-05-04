@@ -16,10 +16,10 @@ public enum EImprovementSelectionPolicy {
 
   /** always use the best improvement */
   ALWAYS_USE_BEST_IMPROVEMENT {
-  // /** {@inheritDoc} */
-  // @Override
-  // public final boolean useFirstImprovement(){return false;
-  // }
+    // /** {@inheritDoc} */
+    // @Override
+    // public final boolean useFirstImprovement(){return false;
+    // }
   },
 
   /** always use the first improvement discovered */
@@ -68,7 +68,7 @@ public enum EImprovementSelectionPolicy {
   /**
    * Whether or not we should use the first improvement discovered (or
    * search for the best possible one) in the next call/run of the VNS
-   * 
+   *
    * @param r
    *          a randomizer
    * @return the policy for the next call of the vns
@@ -82,7 +82,7 @@ public enum EImprovementSelectionPolicy {
    * search for the best possible one) in the next iteration of the VNS: A
    * new iteration in this context in this context begins after reaching a
    * new local optimum).
-   * 
+   *
    * @param r
    *          a randomizer
    * @return the policy to be applied after the current iteration
@@ -94,7 +94,7 @@ public enum EImprovementSelectionPolicy {
   /**
    * Should we use the first improvement (returns {@code true}) or the best
    * possible improvement (returns {@code false}).
-   * 
+   *
    * @return {@code true} if the heuristic should use the first improvement
    *         it discovers, {@code false} if it should use the best one
    */

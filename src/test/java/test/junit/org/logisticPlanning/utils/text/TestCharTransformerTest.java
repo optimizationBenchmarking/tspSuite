@@ -25,12 +25,11 @@ public class TestCharTransformerTest extends CharTransformerTest {
 
   /**
    * test if the transformer can correctly transform single characters
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testSingleTransform2() throws IOException {
     final LookupCharTransformer t;
 
@@ -65,12 +64,11 @@ public class TestCharTransformerTest extends CharTransformerTest {
 
   /**
    * test if the transformer can correctly transform single characters
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testMultiTransform2() throws IOException {
     final LookupCharTransformer t;
 
@@ -96,12 +94,11 @@ public class TestCharTransformerTest extends CharTransformerTest {
 
   /**
    * test if the transformer can correctly hyphenate
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testHyphenate() throws IOException {
     final LookupCharTransformer t;
 

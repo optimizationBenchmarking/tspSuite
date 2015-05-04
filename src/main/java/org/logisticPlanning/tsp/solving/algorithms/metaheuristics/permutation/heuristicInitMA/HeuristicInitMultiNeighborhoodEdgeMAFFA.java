@@ -5,7 +5,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fitness.FFA;
 
 /**
- * 
+ *
  <p>
  * A Memetic Algorithm (MA)&nbsp;[<a href="#cite_M1989MA"
  * style="font-weight:bold">1</a>, <a href="#cite_M2002MA"
@@ -689,7 +689,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fit
  * </ol>
  */
 public final class HeuristicInitMultiNeighborhoodEdgeMAFFA extends
-    _HeuristicInitMultiNeighborhoodEdgeMA {
+_HeuristicInitMultiNeighborhoodEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -703,7 +703,7 @@ public final class HeuristicInitMultiNeighborhoodEdgeMAFFA extends
 
   /**
    * Perform the heuristic init mns edge MA with ffa
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Multi-Neighborhood mutation and random selection
  */
 public class HeuristicInitMultiNeighborhoodSavingsMARandomDieTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodSavingsMARandomDieTest() {

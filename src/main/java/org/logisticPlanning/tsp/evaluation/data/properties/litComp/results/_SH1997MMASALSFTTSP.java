@@ -71,7 +71,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
@@ -81,29 +81,29 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
           new BibAuthors(//
               new BibAuthor("Thomas", "St\u00fctzle"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Holger H.", "Hoos")//$NON-NLS-1$//$NON-NLS-2$
-          ),//
-          "MAX-MIN Ant System and Local Search for the Traveling Salesman Problem",//$NON-NLS-1$
-          new BibProceedings(//
-              "CEC'97: Proceedings of the 5th International Conference on Parallel Problem Solving from Nature",//$NON-NLS-1$
-              new BibDate(1997, EBibMonth.APRIL, 13),//
-              new BibDate(1997, EBibMonth.APRIL, 16), //
-              new BibAuthors(//
-                  new BibAuthor("Thomas", "B\u00e4ck"),//$NON-NLS-1$//$NON-NLS-2$
-                  new BibAuthor("Zbigniew", "Michalewicz"),//$NON-NLS-1$//$NON-NLS-2$
-                  new BibAuthor("Xin", "Yao")//$NON-NLS-1$//$NON-NLS-2$
               ),//
-              "Indianapolis, IN, USA",//$NON-NLS-1$
-              "IEEE Computer Society",//$NON-NLS-1$
-              "Piscataway, NJ, USA",//$NON-NLS-1$
-              null, null,//
-              null, null//
-          ),//
-          "309", "314",//$NON-NLS-1$//$NON-NLS-2$
-          null,//
-          new URI(
-              "http://www.gta.ufrj.br/ensino/cpe717-2011/stutzle97-icec.pdf"),//$NON-NLS-1$
-          "10.1109/ICEC.1997.592327"//$NON-NLS-1$
-      );
+              "MAX-MIN Ant System and Local Search for the Traveling Salesman Problem",//$NON-NLS-1$
+              new BibProceedings(//
+                  "CEC'97: Proceedings of the 5th International Conference on Parallel Problem Solving from Nature",//$NON-NLS-1$
+                  new BibDate(1997, EBibMonth.APRIL, 13),//
+                  new BibDate(1997, EBibMonth.APRIL, 16), //
+                  new BibAuthors(//
+                      new BibAuthor("Thomas", "B\u00e4ck"),//$NON-NLS-1$//$NON-NLS-2$
+                      new BibAuthor("Zbigniew", "Michalewicz"),//$NON-NLS-1$//$NON-NLS-2$
+                      new BibAuthor("Xin", "Yao")//$NON-NLS-1$//$NON-NLS-2$
+                      ),//
+                      "Indianapolis, IN, USA",//$NON-NLS-1$
+                      "IEEE Computer Society",//$NON-NLS-1$
+                      "Piscataway, NJ, USA",//$NON-NLS-1$
+                      null, null,//
+                      null, null//
+                  ),//
+                  "309", "314",//$NON-NLS-1$//$NON-NLS-2$
+                  null,//
+                  new URI(
+                      "http://www.gta.ufrj.br/ensino/cpe717-2011/stutzle97-icec.pdf"),//$NON-NLS-1$
+                      "10.1109/ICEC.1997.592327"//$NON-NLS-1$
+          );
 
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
@@ -119,218 +119,218 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
         //
         // const=100
         //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
-                    100l),//
+        new LiteratureResultPoint(Instance.KROA100,//
+            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
+                100l),//
                 Accessor.F, 21427d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
-                    100l),//
-                Accessor.F, 15856d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
-                    100l),//
-                Accessor.F, 42426d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PCB442,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
-                    100l),//
-                Accessor.F, 51794d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.ATT532,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
-                    100l),//
-                Accessor.F, 28233d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RAT783,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
-                    100l),//
-                Accessor.F, 9142d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.P43,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
-                    100l),//
-                Accessor.F, 5625d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
-                    100l),//
-                Accessor.F, 14970d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FT70,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
-                    100l),//
-                Accessor.F, 39193d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.KRO124P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
-                    100l),//
-                Accessor.F, 39210d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FTV170,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
-                    100l),//
-                Accessor.F, 2923d, EStatisticParameter.ARITHMETIC_MEAN),//
+                //
+                new LiteratureResultPoint(Instance.D198,//
+                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
+                        100l),//
+                        Accessor.F, 15856d, EStatisticParameter.ARITHMETIC_MEAN),//
+                        //
+                        new LiteratureResultPoint(Instance.LIN318,//
+                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
+                                100l),//
+                                Accessor.F, 42426d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                //
+                                new LiteratureResultPoint(Instance.PCB442,//
+                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
+                                        100l),//
+                                        Accessor.F, 51794d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                        //
+                                        new LiteratureResultPoint(Instance.ATT532,//
+                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
+                                                100l),//
+                                                Accessor.F, 28233d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                //
+                                                new LiteratureResultPoint(Instance.RAT783,//
+                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
+                                                        100l),//
+                                                        Accessor.F, 9142d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                        //
+                                                        new LiteratureResultPoint(Instance.P43,//
+                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
+                                                                100l),//
+                                                                Accessor.F, 5625d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                //
+                                                                new LiteratureResultPoint(Instance.RY48P,//
+                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
+                                                                        100l),//
+                                                                        Accessor.F, 14970d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                        //
+                                                                        new LiteratureResultPoint(Instance.FT70,//
+                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
+                                                                                100l),//
+                                                                                Accessor.F, 39193d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                //
+                                                                                new LiteratureResultPoint(Instance.KRO124P,//
+                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
+                                                                                        100l),//
+                                                                                        Accessor.F, 39210d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                        //
+                                                                                        new LiteratureResultPoint(Instance.FTV170,//
+                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
+                                                                                                100l),//
+                                                                                                Accessor.F, 2923d, EStatisticParameter.ARITHMETIC_MEAN),//
 
-            //
-            // const=500
-            //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
-                    500l),//
-                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
-                    500l),//
-                Accessor.F, 15817d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
-                    500l),//
-                Accessor.F, 42159d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PCB442,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
-                    500l),//
-                Accessor.F, 51265d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.ATT532,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
-                    500l),//
-                Accessor.F, 27973d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RAT783,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
-                    500l),//
-                Accessor.F, 9056d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.P43,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
-                    500l),//
-                Accessor.F, 5622d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
-                    500l),//
-                Accessor.F, 14694d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FT70,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
-                    500l),//
-                Accessor.F, 38775d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.KRO124P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
-                    500l),//
-                Accessor.F, 37391d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FTV170,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
-                    500l),//
-                Accessor.F, 2828d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                //
+                                                                                                // const=500
+                                                                                                //
+                                                                                                new LiteratureResultPoint(Instance.KROA100,//
+                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
+                                                                                                        500l),//
+                                                                                                        Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                        //
+                                                                                                        new LiteratureResultPoint(Instance.D198,//
+                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
+                                                                                                                500l),//
+                                                                                                                Accessor.F, 15817d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                //
+                                                                                                                new LiteratureResultPoint(Instance.LIN318,//
+                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
+                                                                                                                        500l),//
+                                                                                                                        Accessor.F, 42159d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                        //
+                                                                                                                        new LiteratureResultPoint(Instance.PCB442,//
+                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
+                                                                                                                                500l),//
+                                                                                                                                Accessor.F, 51265d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                //
+                                                                                                                                new LiteratureResultPoint(Instance.ATT532,//
+                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
+                                                                                                                                        500l),//
+                                                                                                                                        Accessor.F, 27973d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                        //
+                                                                                                                                        new LiteratureResultPoint(Instance.RAT783,//
+                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
+                                                                                                                                                500l),//
+                                                                                                                                                Accessor.F, 9056d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                //
+                                                                                                                                                new LiteratureResultPoint(Instance.P43,//
+                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
+                                                                                                                                                        500l),//
+                                                                                                                                                        Accessor.F, 5622d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                        //
+                                                                                                                                                        new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
+                                                                                                                                                                500l),//
+                                                                                                                                                                Accessor.F, 14694d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                //
+                                                                                                                                                                new LiteratureResultPoint(Instance.FT70,//
+                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
+                                                                                                                                                                        500l),//
+                                                                                                                                                                        Accessor.F, 38775d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                        //
+                                                                                                                                                                        new LiteratureResultPoint(Instance.KRO124P,//
+                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
+                                                                                                                                                                                500l),//
+                                                                                                                                                                                Accessor.F, 37391d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                //
+                                                                                                                                                                                new LiteratureResultPoint(Instance.FTV170,//
+                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
+                                                                                                                                                                                        500l),//
+                                                                                                                                                                                        Accessor.F, 2828d, EStatisticParameter.ARITHMETIC_MEAN),//
 
-            //
-            // const=1000 or 2500
-            //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
-                    2500l),//
-                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
-                    2500l),//
-                Accessor.F, 15786d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
-                    2500l),//
-                Accessor.F, 42070d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PCB442,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
-                    1000l),//
-                Accessor.F, 51131d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.ATT532,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
-                    1000l),//
-                Accessor.F, 27871d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RAT783,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
-                    1000l),//
-                Accessor.F, 8976d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.P43,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
-                    2500l),//
-                Accessor.F, 5620.6d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
-                    2500l),//
-                Accessor.F, 14494d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FT70,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
-                    2500l),//
-                Accessor.F, 38707d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.KRO124P,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
-                    2500l),//
-                Accessor.F, 36655d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.FTV170,//
-                Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
-                    2500l),//
-                Accessor.F, 2790d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            // runtime limits
-            //
-            new LiteratureResultPoint(Instance.EIL51,//
-                Accessor.RUNTIME, 30e3d,//
-                Accessor.F, 426.2d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.RUNTIME, 100e3d,//
-                Accessor.F, 21283d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.RUNTIME, 200e3d,//
-                Accessor.F, 15945d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.RUNTIME, 500e3d,//
-                Accessor.F, 42994d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            // ant system with different number of ants
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, 10000l,//
-                Accessor.F, 14500d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, 333 * 30,//
-                Accessor.F, 14422d, EStatisticParameter.MINIMUM),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, 333 * 30,//
-                Accessor.F, 14509d, EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, 160 * 62,//
-                Accessor.F, 14621d, EStatisticParameter.MINIMUM),// //
-            //
-            new LiteratureResultPoint(Instance.RY48P,//
-                Accessor.FE, 160 * 62,//
-                Accessor.F, 14743d, EStatisticParameter.ARITHMETIC_MEAN),// //
-        });
+                                                                                                                                                                                        //
+                                                                                                                                                                                        // const=1000 or 2500
+                                                                                                                                                                                        //
+                                                                                                                                                                                        new LiteratureResultPoint(Instance.KROA100,//
+                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KROA100,
+                                                                                                                                                                                                2500l),//
+                                                                                                                                                                                                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                //
+                                                                                                                                                                                                new LiteratureResultPoint(Instance.D198,//
+                                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.D198,
+                                                                                                                                                                                                        2500l),//
+                                                                                                                                                                                                        Accessor.F, 15786d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                        //
+                                                                                                                                                                                                        new LiteratureResultPoint(Instance.LIN318,//
+                                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.LIN318,
+                                                                                                                                                                                                                2500l),//
+                                                                                                                                                                                                                Accessor.F, 42070d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                //
+                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PCB442,//
+                                                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.PCB442,
+                                                                                                                                                                                                                        1000l),//
+                                                                                                                                                                                                                        Accessor.F, 51131d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.ATT532,//
+                                                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.ATT532,
+                                                                                                                                                                                                                                1000l),//
+                                                                                                                                                                                                                                Accessor.F, 27871d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.RAT783,//
+                                                                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RAT783,
+                                                                                                                                                                                                                                        1000l),//
+                                                                                                                                                                                                                                        Accessor.F, 8976d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.P43,//
+                                                                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.P43,
+                                                                                                                                                                                                                                                2500l),//
+                                                                                                                                                                                                                                                Accessor.F, 5620.6d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.RY48P,
+                                                                                                                                                                                                                                                        2500l),//
+                                                                                                                                                                                                                                                        Accessor.F, 14494d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.FT70,//
+                                                                                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FT70,
+                                                                                                                                                                                                                                                                2500l),//
+                                                                                                                                                                                                                                                                Accessor.F, 38707d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.KRO124P,//
+                                                                                                                                                                                                                                                                    Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.KRO124P,
+                                                                                                                                                                                                                                                                        2500l),//
+                                                                                                                                                                                                                                                                        Accessor.F, 36655d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.FTV170,//
+                                                                                                                                                                                                                                                                            Accessor.FE, _SH1997MMASALSFTTSP.__steps(Instance.FTV170,
+                                                                                                                                                                                                                                                                                2500l),//
+                                                                                                                                                                                                                                                                                Accessor.F, 2790d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                // runtime limits
+                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.EIL51,//
+                                                                                                                                                                                                                                                                                    Accessor.RUNTIME, 30e3d,//
+                                                                                                                                                                                                                                                                                    Accessor.F, 426.2d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                    //
+                                                                                                                                                                                                                                                                                    new LiteratureResultPoint(Instance.KROA100,//
+                                                                                                                                                                                                                                                                                        Accessor.RUNTIME, 100e3d,//
+                                                                                                                                                                                                                                                                                        Accessor.F, 21283d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.D198,//
+                                                                                                                                                                                                                                                                                            Accessor.RUNTIME, 200e3d,//
+                                                                                                                                                                                                                                                                                            Accessor.F, 15945d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                            //
+                                                                                                                                                                                                                                                                                            new LiteratureResultPoint(Instance.LIN318,//
+                                                                                                                                                                                                                                                                                                Accessor.RUNTIME, 500e3d,//
+                                                                                                                                                                                                                                                                                                Accessor.F, 42994d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                                // ant system with different number of ants
+                                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                                                                    Accessor.FE, 10000l,//
+                                                                                                                                                                                                                                                                                                    Accessor.F, 14500d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                                    //
+                                                                                                                                                                                                                                                                                                    new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                                                                        Accessor.FE, 333 * 30,//
+                                                                                                                                                                                                                                                                                                        Accessor.F, 14422d, EStatisticParameter.MINIMUM),// //
+                                                                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                                                                            Accessor.FE, 333 * 30,//
+                                                                                                                                                                                                                                                                                                            Accessor.F, 14509d, EStatisticParameter.ARITHMETIC_MEAN),// //
+                                                                                                                                                                                                                                                                                                            //
+                                                                                                                                                                                                                                                                                                            new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                                                                                Accessor.FE, 160 * 62,//
+                                                                                                                                                                                                                                                                                                                Accessor.F, 14621d, EStatisticParameter.MINIMUM),// //
+                                                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.RY48P,//
+                                                                                                                                                                                                                                                                                                                    Accessor.FE, 160 * 62,//
+                                                                                                                                                                                                                                                                                                                    Accessor.F, 14743d, EStatisticParameter.ARITHMETIC_MEAN),// //
+    });
   }
 
   /** {@inheritDoc} */
@@ -345,7 +345,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
     dest.write(this.getShortName());
     dest.write(") are introduced. In this ACO variant, each ant creates a solution to a TSP instance and some of these solutions undergo a subsequent local search. "); //$NON-NLS-1$
     this.cite(ECitationMode.BY_ID_AT_SENTENCE_START, dest);
-    dest.write(" provide different ways to choose which one should undergo the local search: either all out of a set of 10 ants, the best out of a set of 10, and a version where "); //$NON-NLS-1$    
+    dest.write(" provide different ways to choose which one should undergo the local search: either all out of a set of 10 ants, the best out of a set of 10, and a version where "); //$NON-NLS-1$
     dest.macroInvoke(Macros.SCALE);
     dest.write(" ants are used and the best one is improved with local search. As local search, 2-opt is used for symmetric TSP instances and a 3-opt variant for asymmetric ones. Candidate sets are used in some configurations to decrease the runtime. The authors report results over 10 independent runs for several benchmark instances, both for fixed numbers of "); //$NON-NLS-1$
     Accessor.FE.writeLongName(dest, true);
@@ -468,7 +468,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
 
   /**
    * calculate the number of steps
-   * 
+   *
    * @param inst
    *          the instance
    * @param cnst

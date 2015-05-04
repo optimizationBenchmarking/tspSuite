@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.NamedObject;
  * length} .
  */
 public final class IndividualTourLengthComparator extends NamedObject
-    implements Comparator<Individual<?>> {
+implements Comparator<Individual<?>> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -56,7 +56,7 @@ public final class IndividualTourLengthComparator extends NamedObject
    * IndividualTourLengthComparator.INSTANCE} for serialization, i.e., when
    * the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link IndividualTourLengthComparator#INSTANCE
    *         IndividualTourLengthComparator.INSTANCE})
@@ -72,7 +72,7 @@ public final class IndividualTourLengthComparator extends NamedObject
    * IndividualTourLengthComparator.INSTANCE} after serialization, i.e.,
    * when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link IndividualTourLengthComparator#INSTANCE
    *         IndividualTourLengthComparator.INSTANCE})

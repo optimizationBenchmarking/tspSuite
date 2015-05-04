@@ -68,7 +68,7 @@ public final class Identity extends UnaryFunction {
    * with the singleton instance {@link Identity#INSTANCE INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Identity#INSTANCE
    *         INSTANCE})
    */
@@ -81,7 +81,7 @@ public final class Identity extends UnaryFunction {
    * with the singleton instance {@link Identity#INSTANCE INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Identity#INSTANCE
    *         INSTANCE})
    */

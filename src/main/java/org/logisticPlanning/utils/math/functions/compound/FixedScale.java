@@ -11,21 +11,21 @@ public class FixedScale extends UnaryFunction {
 
   /**
    * the forwarding function
-   * 
+   *
    * @serial the unary function to be scaled
    */
   private final UnaryFunction m_f;
 
   /**
    * the scale
-   * 
+   *
    * @serial the double value with the scale
    */
   private final double m_scale;
 
   /**
    * Create
-   * 
+   *
    * @param f
    *          the function
    * @param scale
@@ -61,7 +61,7 @@ public class FixedScale extends UnaryFunction {
 
   /**
    * create a scaled version of a given unary function
-   * 
+   *
    * @param f
    *          the function
    * @param scale

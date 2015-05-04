@@ -43,7 +43,7 @@ final class _OpSumFA extends _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param type
    *          the type
    */

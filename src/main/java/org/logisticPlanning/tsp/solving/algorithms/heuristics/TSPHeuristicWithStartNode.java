@@ -29,7 +29,7 @@ public class TSPHeuristicWithStartNode extends TSPHeuristic {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the heuristics name
    */
@@ -55,7 +55,7 @@ public class TSPHeuristicWithStartNode extends TSPHeuristic {
    * the method {@link #solve(ObjectiveFunction, Individual)}. This
    * {@link #solve(ObjectiveFunction, Individual) method} may be called
    * from another algorithm for initialization.
-   * 
+   *
    * @param useRandomDepot
    *          {@code true} if random depots should be used, {@code false}
    *          if only node {@code 1} can be the depot
@@ -66,7 +66,7 @@ public class TSPHeuristicWithStartNode extends TSPHeuristic {
 
   /**
    * Do we use random depots (or always node {@code 1})?
-   * 
+   *
    * @return {@code true} if random depots should be used, {@code false} if
    *         only node {@code 1} can be the depot
    */
@@ -110,7 +110,7 @@ public class TSPHeuristicWithStartNode extends TSPHeuristic {
 
   /**
    * Solve a TSP by using a specific depot
-   * 
+   *
    * @param f
    *          the objective function
    * @param dest

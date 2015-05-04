@@ -79,7 +79,7 @@ public final class Beta extends BinaryFunction {
    * with the singleton instance {@link Beta#INSTANCE Beta.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Beta#INSTANCE
    *         Beta.INSTANCE})
    */
@@ -92,7 +92,7 @@ public final class Beta extends BinaryFunction {
    * with the singleton instance {@link Beta#INSTANCE Beta.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Beta#INSTANCE
    *         Beta.INSTANCE})
    */

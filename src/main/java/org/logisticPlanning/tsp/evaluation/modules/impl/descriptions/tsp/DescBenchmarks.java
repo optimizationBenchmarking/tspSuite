@@ -113,7 +113,7 @@ public final class DescBenchmarks extends DescriptionModule {
           null,//
           new URI(
               "http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/DOC.PS"),//$NON-NLS-1$
-          null);
+              null);
 
       DACO1995TSPLIB = new BibWebsite(
           gha,//
@@ -127,7 +127,7 @@ public final class DescBenchmarks extends DescriptionModule {
           "TSPLIB \u2012 A Traveling Salesman Problem Library",//$NON-NLS-1$
           new BibDate(1991, EBibQuarter.FALL),//
           "ORSA Journal on Computing",//$NON-NLS-1$
-          "3", "4",//$NON-NLS-1$//$NON-NLS-2$ 
+          "3", "4",//$NON-NLS-1$//$NON-NLS-2$
           "376", "384",//$NON-NLS-1$//$NON-NLS-2$
           null, "10.1287/ijoc.3.4.376");//$NON-NLS-1$
 
@@ -147,11 +147,11 @@ public final class DescBenchmarks extends DescriptionModule {
 
   /** the citation for tsp lib */
   private static final BibRecord[] CITES = { DescBenchmarks.R1995T9,
-      DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL };
+    DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL };
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -161,7 +161,7 @@ public final class DescBenchmarks extends DescriptionModule {
 
   /**
    * cite the tsp lib
-   * 
+   *
    * @param mode
    *          the citation mode
    * @param dest
@@ -196,7 +196,7 @@ public final class DescBenchmarks extends DescriptionModule {
       final ExperimentSet data) throws IOException {
 
     body.write(//
-    "For benchmarking TSP solving algorithms, we use the TSPLib benchmark suite"); //$NON-NLS-1$
+        "For benchmarking TSP solving algorithms, we use the TSPLib benchmark suite"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescBenchmarks.R1995T9,
         DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL);
 
@@ -213,7 +213,7 @@ public final class DescBenchmarks extends DescriptionModule {
     body.write(" cities and "); //$NON-NLS-1$
 
     body.writeInt(Instance.ASYMMETRIC_INSTANCES.size());
-    body.write(" asymmetric instances with dimensions "); //$NON-NLS-1$    
+    body.write(" asymmetric instances with dimensions "); //$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(" ranging from "); //$NON-NLS-1$
     body.writeInt(Instance.ASYMMETRIC_INSTANCES.first().n());
@@ -225,7 +225,7 @@ public final class DescBenchmarks extends DescriptionModule {
     body.write(" are all known"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescBenchmarks.W2003ROCFTB);
     body.write(//
-    ", which makes it particularly easy to check how well an algorithm performs.");//$NON-NLS-1$
+        ", which makes it particularly easy to check how well an algorithm performs.");//$NON-NLS-1$
 
     super.writeSectionBody(body, data);
   }

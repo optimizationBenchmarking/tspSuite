@@ -1,7 +1,7 @@
 package org.logisticPlanning.tsp.solving.algorithms.exact.branchAndBoundLittle1963;
 
 /**
- * 
+ *
  <p>
  * This class is used an internal class to represent the {@code node} used
  * in the Branch and Bound algorithm published in the paper
@@ -33,7 +33,7 @@ package org.logisticPlanning.tsp.solving.algorithms.exact.branchAndBoundLittle19
  * ="https://github.com/karepker/little-tsp/blob/master/source.pdf"
  * >3</a>]</div ></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li><em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a>
  *         </em> [&#x6C5F;&#x708E;]</li><li><em><a
@@ -86,7 +86,7 @@ final class _Node {
    * question. By checking the last elements of the {@link #m_edges}, we
    * can determine whether this node is a terminal node. A terminal node is
    * a node having an effective m_answer.
-   * 
+   *
    * @param instanceSize
    *          the instance size
    * @return {@code true} if the node represents a solution, {@code false}

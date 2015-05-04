@@ -42,7 +42,7 @@ import org.logisticPlanning.utils.utils.comparison.EComparison;
  * </p>
  */
 public class StatisticSeries extends ArrayDataCollectionView implements
-    IStatisticDataCollection {
+IStatisticDataCollection {
 
   /** the list of supported statistic parameters */
   private static final ArraySetView<EStatisticParameter> LIST = EStatisticParameter
@@ -92,7 +92,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * instantiate
-   * 
+   *
    * @param data
    *          the data
    */
@@ -103,7 +103,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * Create the statistic series
-   * 
+   *
    * @param source
    *          the source array
    * @param dimX
@@ -120,7 +120,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * Create the statistic series
-   * 
+   *
    * @param source
    *          the source array
    * @param dimX
@@ -140,7 +140,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * Create the statistic series
-   * 
+   *
    * @param source
    *          the source array
    * @param dimX
@@ -165,7 +165,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * make a series from a set of data elements
-   * 
+   *
    * @param source
    *          the source array
    * @param dimX
@@ -372,7 +372,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
         if ((index < StatisticSeries.STATISTIC_SERIES_DIM)
             || (buffer[(index + StatisticSeries.DIM_X)
-                - StatisticSeries.STATISTIC_SERIES_DIM] < curX)) {
+                       - StatisticSeries.STATISTIC_SERIES_DIM] < curX)) {
           // now move
           if (size >= capacity) {
             capacity <<= 1;
@@ -394,7 +394,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * Store the data
-   * 
+   *
    * @param curX
    *          the current x
    * @param index
@@ -427,7 +427,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
 
   /**
    * format and check the value
-   * 
+   *
    * @param x
    *          the value
    * @return the checked result
@@ -450,7 +450,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
    * Otherwise, it will the index of the point with the largest {@code x}
    * -coordinate which is still less or equal than the passed in {@code x}
    * parameter.
-   * 
+   *
    * @param x
    *          the {@code x}-coordinate
    * @return the corresponding index
@@ -470,7 +470,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
     while (low <= high) {
       mid = ((low + high) >>> 1);
       midVal = data[(mid * StatisticSeries.STATISTIC_SERIES_DIM)
-          + StatisticSeries.DIM_X];
+                    + StatisticSeries.DIM_X];
 
       if (midVal < key) {
         low = (mid + 1);
@@ -490,7 +490,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
    * Find the index of the first point where the value at dimension
    * {@code dim} meets the comparison criterion {@code cmp} with the
    * provided value {@code value}.
-   * 
+   *
    * @param value
    *          the value
    * @param dim
@@ -525,7 +525,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
    * Find the index of the first point where the value of the given
    * statistic parameter meets the comparison criterion {@code cmp} with
    * the provided value {@code value}.
-   * 
+   *
    * @param value
    *          the value
    * @param param
@@ -544,7 +544,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
    * Find the index of the last point where the value at dimension
    * {@code dim} meets the comparison criterion {@code cmp} with the
    * provided value {@code value}.
-   * 
+   *
    * @param value
    *          the value
    * @param dim
@@ -579,7 +579,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
    * Find the index of the last point where the value of the given
    * statistic parameter meets the comparison criterion {@code cmp} with
    * the provided value {@code value}.
-   * 
+   *
    * @param value
    *          the value
    * @param param
@@ -608,7 +608,7 @@ public class StatisticSeries extends ArrayDataCollectionView implements
     i = StatisticSeries.LIST.indexOf(param);
     if (i >= 0) {
       return this.m_data[(StatisticSeries.STATISTIC_SERIES_DIM * index)
-          + i];
+                         + i];
     }
     throw new UnsupportedOperationException(String.valueOf(param));
   }

@@ -20,7 +20,7 @@ public class ComparisonModule extends _ConcreteModule {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -35,8 +35,8 @@ public class ComparisonModule extends _ConcreteModule {
     if (!((owner instanceof ComparisonModule) || (owner instanceof _Comparisons))) {
       throw new IllegalArgumentException(//
           "Instance of class '" + owner.getClass() + //$NON-NLS-1$
-              "' not permitted as owner of instance of '" + //$NON-NLS-1$
-              this.getClass() + "'.");//$NON-NLS-1$
+          "' not permitted as owner of instance of '" + //$NON-NLS-1$
+          this.getClass() + "'.");//$NON-NLS-1$
     }
   }
 
@@ -54,7 +54,7 @@ public class ComparisonModule extends _ConcreteModule {
    * Get the label via which this module's section for the data set
    * {@code data} can be referenced, or {@code null} if this module has no
    * section dedicated to the specified data set.
-   * 
+   *
    * @param data
    *          the data set
    * @return the label
@@ -65,7 +65,7 @@ public class ComparisonModule extends _ConcreteModule {
 
   /**
    * Write this module's section title
-   * 
+   *
    * @param title
    *          the title
    * @param data
@@ -73,7 +73,6 @@ public class ComparisonModule extends _ConcreteModule {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void writeSectionTitle(final SectionTitle title,
       final ExperimentSet data) throws IOException {
     //
@@ -81,7 +80,7 @@ public class ComparisonModule extends _ConcreteModule {
 
   /**
    * Write this module's section body
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -131,7 +130,7 @@ public class ComparisonModule extends _ConcreteModule {
 
   /**
    * Does this module have any printable contents for a given data set?
-   * 
+   *
    * @param data
    *          the data set
    * @return {@code true} if the module has printable contents,
@@ -143,7 +142,7 @@ public class ComparisonModule extends _ConcreteModule {
 
   /**
    * Initialize this module on a data set.
-   * 
+   *
    * @param header
    *          the header of the document
    * @param data

@@ -25,10 +25,10 @@ public class SpringerConfDimensions extends LaTeXDocumentDimensions {
 
   /** the paper height in mm */
   private static final double PAGE_HEIGHT_MM = // approx 193 mm;
-  ELength.convert(549.13828d, ELength.PT, ELength.MM);
+      ELength.convert(549.13828d, ELength.PT, ELength.MM);
   /** the column width in mm */
   private static final double COLUMN_WIDTH_MM = // approx 122 mm;
-  ELength.convert(347.12354d, ELength.PT, ELength.MM);
+      ELength.convert(347.12354d, ELength.PT, ELength.MM);
   /** the paper width in mm */
   private static final double PAGE_WIDTH_MM = SpringerConfDimensions.COLUMN_WIDTH_MM;
 

@@ -21,7 +21,7 @@ abstract class _EdgeBitTest extends TestBase {
 
   /**
    * Instantiate the bit set
-   * 
+   *
    * @param n
    *          the dimension
    * @return the edge bit set

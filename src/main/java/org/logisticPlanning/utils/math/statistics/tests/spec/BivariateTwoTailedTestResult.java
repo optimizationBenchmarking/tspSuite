@@ -5,7 +5,7 @@ package org.logisticPlanning.utils.math.statistics.tests.spec;
  * comparison of two distributions.
  */
 public final class BivariateTwoTailedTestResult extends
-    _TwoTailedComparisonTestResult {
+_TwoTailedComparisonTestResult {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

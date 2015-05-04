@@ -63,7 +63,7 @@ public final class RandomSelection extends SelectionAlgorithm {
    * RandomSelection.INSTANCE} for serialization, i.e., when the instance
    * is written with {@link java.io.ObjectOutputStream#writeObject(Object)}
    * .
-   * 
+   *
    * @return the replacement instance (always
    *         {@link RandomSelection#INSTANCE RandomSelection.INSTANCE})
    */
@@ -76,7 +76,7 @@ public final class RandomSelection extends SelectionAlgorithm {
    * with the singleton instance {@link RandomSelection#INSTANCE
    * RandomSelection.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link RandomSelection#INSTANCE RandomSelection.INSTANCE})
    */

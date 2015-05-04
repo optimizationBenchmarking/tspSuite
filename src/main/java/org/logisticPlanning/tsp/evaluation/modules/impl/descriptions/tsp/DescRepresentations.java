@@ -153,14 +153,14 @@ public final class DescRepresentations extends DescriptionModule {
               new BibAuthor("Roberto H.", "Murga"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("I\u00f1aki", "Inza"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Sejla", "Dizdarevic")//$NON-NLS-1$//$NON-NLS-2$"
-          ),//
-          "Genetic Algorithms for the Travelling Salesman Problem: A Review of Representations and Operators",//$NON-NLS-1$
-          new BibDate(1991, EBibMonth.APRIL),//
-          "Journal of Artificial Intelligence Research",//$NON-NLS-1$
-          "13", "2",//$NON-NLS-1$//$NON-NLS-2$ 
-          "129", "170",//$NON-NLS-1$//$NON-NLS-2$
-          new URI(
-              "http://www.dca.fee.unicamp.br/~gomide/courses/EA072/artigos/Genetic_Algorithm_TSPR_eview_Larranaga_1999.pdf"),//$NON-NLS-1$
+              ),//
+              "Genetic Algorithms for the Travelling Salesman Problem: A Review of Representations and Operators",//$NON-NLS-1$
+              new BibDate(1991, EBibMonth.APRIL),//
+              "Journal of Artificial Intelligence Research",//$NON-NLS-1$
+              "13", "2",//$NON-NLS-1$//$NON-NLS-2$
+              "129", "170",//$NON-NLS-1$//$NON-NLS-2$
+              new URI(
+                  "http://www.dca.fee.unicamp.br/~gomide/courses/EA072/artigos/Genetic_Algorithm_TSPR_eview_Larranaga_1999.pdf"),//$NON-NLS-1$
           "10.1023/A:1006529012972");//$NON-NLS-1$
     } catch (final URISyntaxException usi) {
       throw new RuntimeException(usi);
@@ -170,14 +170,14 @@ public final class DescRepresentations extends DescriptionModule {
       P1996GAFTTSP = new BibArticle(
           new BibAuthors(//
               new BibAuthor("Jean-Yves", "Potvin")//$NON-NLS-1$//$NON-NLS-2$
-          ),//
-          "Genetic Algorithms for the Traveling Salesman Problem",//$NON-NLS-1$
-          new BibDate(1996, EBibMonth.JUNE, 1),//
-          "Annals of Operations Research",//$NON-NLS-1$
-          "63", "3",//$NON-NLS-1$//$NON-NLS-2$ 
-          "337", "370",//$NON-NLS-1$//$NON-NLS-2$
-          new URI(
-              "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.6.4205"),//$NON-NLS-1$
+              ),//
+              "Genetic Algorithms for the Traveling Salesman Problem",//$NON-NLS-1$
+              new BibDate(1996, EBibMonth.JUNE, 1),//
+              "Annals of Operations Research",//$NON-NLS-1$
+              "63", "3",//$NON-NLS-1$//$NON-NLS-2$
+              "337", "370",//$NON-NLS-1$//$NON-NLS-2$
+              new URI(
+                  "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.6.4205"),//$NON-NLS-1$
           "10.1007/BF02125403");//$NON-NLS-1$
     } catch (final URISyntaxException usi) {
       throw new RuntimeException(usi);
@@ -197,27 +197,27 @@ public final class DescRepresentations extends DescriptionModule {
             new BibDate(1985, EBibMonth.JUNE, 26), //
             new BibAuthors(//
                 new BibAuthor("John J.", "Grefenstette")//$NON-NLS-1$//$NON-NLS-2$
-            ),//
-            "Carnegy Mellon University (CMU), Pittsburgh, PA, USA",//$NON-NLS-1$
-            "Lawrence Erlbaum Associates", "Hillsdale, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
-            null, null, null, null), //
-        "160", "168", null,//$NON-NLS-1$//$NON-NLS-2$
-        null, null);
+                ),//
+                "Carnegy Mellon University (CMU), Pittsburgh, PA, USA",//$NON-NLS-1$
+                "Lawrence Erlbaum Associates", "Hillsdale, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
+                null, null, null, null), //
+                "160", "168", null,//$NON-NLS-1$//$NON-NLS-2$
+                null, null);
     try {
       FJMGO1995DSFTS = new BibArticle(
           new BibAuthors(//
               new BibAuthor("Michael L.", "Fredman"),//$NON-NLS-1$//$NON-NLS-2$
               DescTimeMeasures.DSJ,//
               DescTimeMeasures.LAMG,//
-              new BibAuthor("Gerard", "Ostheimer")//$NON-NLS-1$//$NON-NLS-2$        
-          ),//
-          "Data Structures for Traveling Salesmen",//$NON-NLS-1$
-          new BibDate(1995, EBibMonth.MAY),//
-          "Journal of Algorithms",//$NON-NLS-1$
-          "18", "3",//$NON-NLS-1$//$NON-NLS-2$ 
-          "432", "479",//$NON-NLS-1$//$NON-NLS-2$
-          new URI(
-              "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.71.170"),//$NON-NLS-1$
+              new BibAuthor("Gerard", "Ostheimer")//$NON-NLS-1$//$NON-NLS-2$
+              ),//
+              "Data Structures for Traveling Salesmen",//$NON-NLS-1$
+              new BibDate(1995, EBibMonth.MAY),//
+              "Journal of Algorithms",//$NON-NLS-1$
+              "18", "3",//$NON-NLS-1$//$NON-NLS-2$
+              "432", "479",//$NON-NLS-1$//$NON-NLS-2$
+              new URI(
+                  "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.71.170"),//$NON-NLS-1$
           "10.1006/jagm.1995.1018");//$NON-NLS-1$
     } catch (final URISyntaxException usi) {
       throw new RuntimeException(usi);
@@ -240,17 +240,17 @@ public final class DescRepresentations extends DescriptionModule {
                 new BibAuthor("Andrej", "Dobnikar"),//$NON-NLS-1$//$NON-NLS-2$
                 new BibAuthor("David W.", "Pearson"),//$NON-NLS-1$//$NON-NLS-2$
                 new BibAuthor("Nigel C.", "Steele")//$NON-NLS-1$//$NON-NLS-2$
-            ),//
-            "University of Coimbra, Coimbra, Portugal",//$NON-NLS-1$
-            "Springer Verlag GmbH", "Vienna, Austria",//$NON-NLS-1$//$NON-NLS-2$
-            null, null, null, "10.1007/b138998"), //$NON-NLS-1$
-        "542", "545", null,//$NON-NLS-1$//$NON-NLS-2$
-        null, "10.1007/3-211-27389-1_131");//$NON-NLS-1$
+                ),//
+                "University of Coimbra, Coimbra, Portugal",//$NON-NLS-1$
+                "Springer Verlag GmbH", "Vienna, Austria",//$NON-NLS-1$//$NON-NLS-2$
+                null, null, null, "10.1007/b138998"), //$NON-NLS-1$
+                "542", "545", null,//$NON-NLS-1$//$NON-NLS-2$
+                null, "10.1007/3-211-27389-1_131");//$NON-NLS-1$
   }
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -279,7 +279,7 @@ public final class DescRepresentations extends DescriptionModule {
       final ExperimentSet data) throws IOException {
 
     body.write(//
-    "Solutions to the TSP can be stored in different data structures"); //$NON-NLS-1$
+        "Solutions to the TSP can be stored in different data structures"); //$NON-NLS-1$
 
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescRepresentations.FJMGO1995DSFTS,
@@ -292,16 +292,16 @@ public final class DescRepresentations extends DescriptionModule {
       iq.write("representation");//$NON-NLS-1$
     }
     body.write(//
-    ") has a strong impact on the algorithm's performance."); //$NON-NLS-1$    
+        ") has a strong impact on the algorithm's performance."); //$NON-NLS-1$
     body.writeLinebreak();
 
     body.write(//
-    "One possible data structure to represent candidate solutions are permutations of the numbers "); //$NON-NLS-1$
+        "One possible data structure to represent candidate solutions are permutations of the numbers "); //$NON-NLS-1$
     body.writeInt(1);
     body.write(" to ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(//
-    ", where each number identifies a node and the positions of the numbers define the sequence in which the nodes are visited. This representation is called "); //$NON-NLS-1$
+        ", where each number identifies a node and the positions of the numbers define the sequence in which the nodes are visited. This representation is called "); //$NON-NLS-1$
     try (Emphasize em = body.emphasize()) {
       em.write("path representation");//$NON-NLS-1$
     }
@@ -317,7 +317,7 @@ public final class DescRepresentations extends DescriptionModule {
         DescRepresentations.LKMUB1999GAFTTSPARORAO,
         DescRepresentations.P1996GAFTTSP);
     body.write(//
-    " the candidate solutions are, too, represented as permutations. However, here city ");//$NON-NLS-1$
+        " the candidate solutions are, too, represented as permutations. However, here city ");//$NON-NLS-1$
     try (InlineMath im = body.inlineMath()) {
       try (MathName mn = im.mathName(EMathName.SCALAR)) {
         mn.writeChar('j');
@@ -343,18 +343,18 @@ public final class DescRepresentations extends DescriptionModule {
     }
 
     body.write(//
-    "The adjacency representation is thus something like an array implementation of a singly-linked list, as the value stored for a node points to the next node to visit.");//$NON-NLS-1$
+        "The adjacency representation is thus something like an array implementation of a singly-linked list, as the value stored for a node points to the next node to visit.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write(//
-    "Although there exist significantly more efficient (and complicated) representations");//$NON-NLS-1$
+        "Although there exist significantly more efficient (and complicated) representations");//$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescRepresentations.FJMGO1995DSFTS,
         DescTimeMeasures.JMG2004EAOHFTS,
         DescRepresentations.ORG2005TSLARDLL);
     body.write(//
-    ", these two are maybe the most common and easy-to-understand ones for anyone starting to experiment with TSPs.");//$NON-NLS-1$
+        ", these two are maybe the most common and easy-to-understand ones for anyone starting to experiment with TSPs.");//$NON-NLS-1$
 
     super.writeSectionBody(body, data);
   }

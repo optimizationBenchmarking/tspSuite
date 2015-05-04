@@ -11,7 +11,7 @@ final class _ConvergenceLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param rs
    *          the run set
    */

@@ -11,51 +11,51 @@ public enum ESingleComparison {
       "is faster and provides better results", //$NON-NLS-1$
       null),
 
-  /** the algorithm is same */
-  SIMILAR(
-      "similar", //$NON-NLS-1$
-      "needs about the same time to achieve about the same result quality",//$NON-NLS-1$
-      null, null),
+      /** the algorithm is same */
+      SIMILAR(
+          "similar", //$NON-NLS-1$
+          "needs about the same time to achieve about the same result quality",//$NON-NLS-1$
+          null, null),
 
-  /** the algorithm is slower */
-  SLOWER("slower", //$NON-NLS-1$
-      "needs longer to get result of same quality", //$NON-NLS-1$
-      "needs longer to get results of same quality", //$NON-NLS-1$
-      null),
+          /** the algorithm is slower */
+          SLOWER("slower", //$NON-NLS-1$
+              "needs longer to get result of same quality", //$NON-NLS-1$
+              "needs longer to get results of same quality", //$NON-NLS-1$
+              null),
 
-  /** the algorithm not comparable */
-  NOT_COMPARABLE(
-      "not comparable", //$NON-NLS-1$
-      "does not achieve result of same quality, but was granted lower computational budged", //$NON-NLS-1$
-      "does not achieve results of same quality, but was granted lower computational budged", //$NON-NLS-1$
-      null),
+              /** the algorithm not comparable */
+              NOT_COMPARABLE(
+                  "not comparable", //$NON-NLS-1$
+                  "does not achieve result of same quality, but was granted lower computational budged", //$NON-NLS-1$
+                  "does not achieve results of same quality, but was granted lower computational budged", //$NON-NLS-1$
+                  null),
 
-  /** the algorithm is worse */
-  WORSE(
-      "worse", //$NON-NLS-1$
-      "does not achieve similar quality result, even if given similar or more computational budged", //$NON-NLS-1$
-      "does not achieve similar quality results, even if given similar or more computational budged", //$NON-NLS-1$
-      null),
+                  /** the algorithm is worse */
+                  WORSE(
+                      "worse", //$NON-NLS-1$
+                      "does not achieve similar quality result, even if given similar or more computational budged", //$NON-NLS-1$
+                      "does not achieve similar quality results, even if given similar or more computational budged", //$NON-NLS-1$
+                      null),
 
-  /** the algorithm is maybe better */
-  MAYBE_BETTER(BETTER),
-  /** the algorithm is maybe similar */
-  MAYBE_SIMILAR(SIMILAR),
+                      /** the algorithm is maybe better */
+                      MAYBE_BETTER(BETTER),
+                      /** the algorithm is maybe similar */
+                      MAYBE_SIMILAR(SIMILAR),
 
-  /** the algorithm is maybe slower */
-  MAYBE_SLOWER(SLOWER),
+                      /** the algorithm is maybe slower */
+                      MAYBE_SLOWER(SLOWER),
 
-  /** the algorithm is not comparable */
-  MAYBE_NOT_COMPARABLE(NOT_COMPARABLE),
+                      /** the algorithm is not comparable */
+                      MAYBE_NOT_COMPARABLE(NOT_COMPARABLE),
 
-  /** the algorithm is probably */
-  MAYBE_WORSE(WORSE);
+                      /** the algorithm is probably */
+                      MAYBE_WORSE(WORSE);
 
   /** the list of all comparisons */
   static final ESingleComparison[] ALL = ESingleComparison.values();
   /** the list of all comparisons */
   static final ESingleComparison[] MAYBE = { MAYBE_BETTER, MAYBE_SIMILAR,
-      MAYBE_SLOWER, MAYBE_NOT_COMPARABLE, MAYBE_WORSE };
+    MAYBE_SLOWER, MAYBE_NOT_COMPARABLE, MAYBE_WORSE };
 
   /** the short name */
   private final String m_short;
@@ -74,7 +74,7 @@ public enum ESingleComparison {
 
   /**
    * Create a new single comparison
-   * 
+   *
    * @param srt
    *          the short name
    * @param lng
@@ -100,7 +100,7 @@ public enum ESingleComparison {
 
   /**
    * Create a new single comparison
-   * 
+   *
    * @param other
    *          the single comparison to "maybe"
    */
@@ -108,15 +108,15 @@ public enum ESingleComparison {
     this(
         "maybe " + other.m_short, //$NON-NLS-1$
         other.m_long
-            + ", but the runtime measure is the a clock time and thus values are not comparable (at least by a machine without further information)", //$NON-NLS-1$
+        + ", but the runtime measure is the a clock time and thus values are not comparable (at least by a machine without further information)", //$NON-NLS-1$
         other.m_longPlural
-            + ", but runtime measures are clock times and not comparable (at least by a machine without further information)", //$NON-NLS-1$
+        + ", but runtime measures are clock times and not comparable (at least by a machine without further information)", //$NON-NLS-1$
         other);
   }
 
   /**
    * get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -125,7 +125,7 @@ public enum ESingleComparison {
 
   /**
    * get the long name
-   * 
+   *
    * @param plural
    *          the plural of the long name
    * @return the long name
@@ -136,7 +136,7 @@ public enum ESingleComparison {
 
   /**
    * is this a maybe?
-   * 
+   *
    * @return {@code true} if this result is a potential result due to
    *         runtime differences, @code false} otherwise
    */
@@ -148,7 +148,7 @@ public enum ESingleComparison {
    * The comparison result that would have been returned if the used time
    * measure was not a real/clock time if this measure is a step index, or
    * the other way around otherwise
-   * 
+   *
    * @return the result
    */
   public ESingleComparison getOther() {

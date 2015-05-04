@@ -192,7 +192,7 @@ public class PermutationMA extends EA {
 
   /**
    * the maximum number of steps in the local search
-   * 
+   *
    * @serial serializable field
    */
   private final UnaryFunction m_maxSteps;
@@ -222,7 +222,7 @@ public class PermutationMA extends EA {
 
   /**
    * Perform the developmental updating EA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

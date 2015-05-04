@@ -28,7 +28,7 @@ public final class DescLogData extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -82,12 +82,12 @@ public final class DescLogData extends DescriptionModule {
       try (SectionBody sb = sect.sectionBody()) {
 
         sb.write(//
-        "In the log files, we collect a log point whenever the internal "); //$NON-NLS-1$
+            "In the log files, we collect a log point whenever the internal "); //$NON-NLS-1$
         Accessor.DE.writeShortName(sb, false);
         sb.write(" or "); //$NON-NLS-1$
         Accessor.FE.writeShortName(sb, false);
         sb.write(//
-        " counter exceeds one of the following values (or any multiple of any of these values and "); //$NON-NLS-1$
+            " counter exceeds one of the following values (or any multiple of any of these values and "); //$NON-NLS-1$
 
         sb.macroInvoke(Macros.SCALE);
         sb.write(", ");//$NON-NLS-1$
@@ -154,20 +154,20 @@ public final class DescLogData extends DescriptionModule {
       try (SectionBody sb = sect.sectionBody()) {
 
         sb.write(//
-        "In order to define threshold objective values "); //$NON-NLS-1$
+            "In order to define threshold objective values "); //$NON-NLS-1$
         sb.macroInvoke(Macros.F_THRESHOLD);
         sb.write(//
-        " for the benchmark cases for collecting log points, we use the same number list given above. "); //$NON-NLS-1$
+            " for the benchmark cases for collecting log points, we use the same number list given above. "); //$NON-NLS-1$
 
         sb.write(//
-        "Here we collect a log point whenever objective value "); //$NON-NLS-1$
+            "Here we collect a log point whenever objective value "); //$NON-NLS-1$
         sb.macroInvoke(Macros.F_BEST);
 
         sb.write(//
-        " of the best solution encountered so far improves below any of these absolute values added to the objective value "); //$NON-NLS-1$
+            " of the best solution encountered so far improves below any of these absolute values added to the objective value "); //$NON-NLS-1$
         sb.macroInvoke(Macros.F_OPTIMAL);
         sb.write(//
-        " of the global optimum. Additionally, log points are taken when the relative objective value "); //$NON-NLS-1$
+            " of the global optimum. Additionally, log points are taken when the relative objective value "); //$NON-NLS-1$
         sb.macroInvoke(Macros.F_BEST_RELATIVE);
         sb.write(" reaches a threshold "); //$NON-NLS-1$
         sb.macroInvoke(Macros.F_THRESHOLD_RELATIVE);

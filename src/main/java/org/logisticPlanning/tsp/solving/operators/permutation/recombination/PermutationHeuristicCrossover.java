@@ -74,7 +74,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * href="http://books.google.com/books?id=edfSSAAACAAJ">edfSSAAACAAJ
  * </a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>
@@ -87,7 +87,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  */
 
 public final class PermutationHeuristicCrossover extends
-    BinaryOperator<int[]> {
+BinaryOperator<int[]> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -198,7 +198,7 @@ public final class PermutationHeuristicCrossover extends
    * I replace 1.0 to BIG_MULTIPLE_NUMBER in case it is too small) To
    * implement this, we use nextDouble() to generate a random r(0 =< r <
    * 1). If r is between P(*<i,j) and P(i,j), city i-1 is chosen.
-   * 
+   *
    * @param incity
    *          TODO: describe what is this
    * @param parentPerm1

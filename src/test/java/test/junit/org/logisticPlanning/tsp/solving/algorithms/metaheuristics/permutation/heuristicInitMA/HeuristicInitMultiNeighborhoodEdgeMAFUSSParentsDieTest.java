@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Multi-Neighborhood mutation and FUSS
  */
 public class HeuristicInitMultiNeighborhoodEdgeMAFUSSParentsDieTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodEdgeMAFUSSParentsDieTest() {

@@ -15,7 +15,7 @@ public class MacroText extends MacroDefinition {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the macro's name
    * @param what

@@ -29,7 +29,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * instantiate the driver
-   * 
+   *
    * @param name
    *          the driver's name
    */
@@ -40,7 +40,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * get the preferred encoding to be used for text
-   * 
+   *
    * @return the preferred encoding to be used for text files
    */
   public EEncoding getPreferedTextEncoding() {
@@ -49,7 +49,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * Create the default instance of the chart driver
-   * 
+   *
    * @return the default instance of the chart driver
    */
   protected ChartDriver createDefaultChartDriver() {
@@ -59,7 +59,7 @@ public abstract class DocumentDriver extends LoggerOwner {
   /**
    * Create a new context in which a document can be produced and written
    * to.
-   * 
+   *
    * @param dir
    *          the directory
    * @return the new context
@@ -76,7 +76,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * Obtain the chart driver
-   * 
+   *
    * @return the chart driver
    */
   public ChartDriver getChartDriver() {
@@ -113,7 +113,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * Create an instance of the default document driver
-   * 
+   *
    * @return an instance of the default document driver
    */
   public static final DocumentDriver createDefaultDocumentDriver() {
@@ -122,7 +122,7 @@ public abstract class DocumentDriver extends LoggerOwner {
 
   /**
    * Create the graphics object for a given figure body
-   * 
+   *
    * @param owner
    *          the owning figure body
    * @return the graphics object

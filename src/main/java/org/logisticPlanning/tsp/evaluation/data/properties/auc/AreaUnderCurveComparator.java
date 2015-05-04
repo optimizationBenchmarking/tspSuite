@@ -56,22 +56,22 @@ import org.logisticPlanning.utils.utils.comparison.PreciseComparator;
  * </ol>
  */
 public final class AreaUnderCurveComparator extends
-    PreciseComparator<AreaUnderCurve> {
+PreciseComparator<AreaUnderCurve> {
 
   /** smaller areas are better */
   public static final AreaUnderCurveComparator SMALLER_IS_BETTER = //
-  new AreaUnderCurveComparator(true);
+      new AreaUnderCurveComparator(true);
 
   /** larger areas are better */
   public static final AreaUnderCurveComparator LARGER_IS_BETTER = //
-  new AreaUnderCurveComparator(false);
+      new AreaUnderCurveComparator(false);
 
   /** are smaller {@code y} values better or worse? */
   private final boolean m_smallerIsBetter;
 
   /**
    * The area under the curve comparator
-   * 
+   *
    * @param isSmallerBetter
    *          are smaller {@code y} better
    */
@@ -82,7 +82,7 @@ public final class AreaUnderCurveComparator extends
 
   /**
    * Compare to areas under a curve in a semantically correct way.
-   * 
+   *
    * @param a
    *          the first area
    * @param b
@@ -182,7 +182,7 @@ public final class AreaUnderCurveComparator extends
 
   /**
    * compare two double values
-   * 
+   *
    * @param a
    *          the first value
    * @param b

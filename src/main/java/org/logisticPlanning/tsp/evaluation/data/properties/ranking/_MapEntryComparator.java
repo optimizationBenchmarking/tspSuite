@@ -5,21 +5,21 @@ import java.util.Map;
 
 /**
  * the internal class for sorting assignments
- * 
+ *
  * @param <K>
  *          the key type
  * @param <V>
  *          the value type being compared
  */
 final class _MapEntryComparator<K, V> implements
-    Comparator<Map.Entry<K, V>> {
+Comparator<Map.Entry<K, V>> {
 
   /** the comparator */
   private final Comparator<? super V> m_cmp;
 
   /**
    * compare
-   * 
+   *
    * @param cmp
    *          the comparator
    */

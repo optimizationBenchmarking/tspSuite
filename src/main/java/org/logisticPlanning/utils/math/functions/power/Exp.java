@@ -40,7 +40,7 @@ public final class Exp extends UnaryFunction {
    * with the singleton instance {@link Exp#INSTANCE Exp.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Exp#INSTANCE
    *         Exp.INSTANCE})
    */
@@ -53,7 +53,7 @@ public final class Exp extends UnaryFunction {
    * with the singleton instance {@link Exp#INSTANCE Exp.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Exp#INSTANCE
    *         Exp.INSTANCE})
    */

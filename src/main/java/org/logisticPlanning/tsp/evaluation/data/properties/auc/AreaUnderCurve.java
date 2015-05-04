@@ -77,7 +77,7 @@ public class AreaUnderCurve implements Serializable {
 
   /**
    * create a constant area
-   * 
+   *
    * @param finite
    *          the finite area under the curve
    * @param negInf
@@ -102,7 +102,7 @@ public class AreaUnderCurve implements Serializable {
 
   /**
    * Create the area under the curve
-   * 
+   *
    * @param iterator
    *          the point iterator
    */
@@ -184,7 +184,7 @@ public class AreaUnderCurve implements Serializable {
         if (lastX > curX) {
           throw new IllegalStateException(//
               "Last x cannot be greater than current x, but " + //$NON-NLS-1$
-                  curX + " follows " + lastX);//$NON-NLS-1$          
+              curX + " follows " + lastX);//$NON-NLS-1$
         }
       }
     }
@@ -198,7 +198,7 @@ public class AreaUnderCurve implements Serializable {
   /**
    * Get the length along the x-axis where the y-values are
    * {@link java.lang.Double#NEGATIVE_INFINITY}.
-   * 
+   *
    * @return the length along the x-axis where the y-values are
    *         {@link java.lang.Double#NEGATIVE_INFINITY}.
    */
@@ -209,7 +209,7 @@ public class AreaUnderCurve implements Serializable {
   /**
    * Get the length along the x-axis where the y-values are
    * {@link java.lang.Double#POSITIVE_INFINITY}.
-   * 
+   *
    * @return the length along the x-axis where the y-values are
    *         {@link java.lang.Double#POSITIVE_INFINITY}.
    */
@@ -220,7 +220,7 @@ public class AreaUnderCurve implements Serializable {
   /**
    * Get the length along the x-axis where the y-values are
    * {@link java.lang.Double#NaN}.
-   * 
+   *
    * @return the length along the x-axis where the y-values are
    *         {@link java.lang.Double#NaN}.
    */
@@ -230,7 +230,7 @@ public class AreaUnderCurve implements Serializable {
 
   /**
    * Get the finite area, i.e., the area where y coordinates are finite
-   * 
+   *
    * @return the finite area, i.e., the area where y coordinates are finite
    */
   public final double getFiniteArea() {
@@ -264,14 +264,14 @@ public class AreaUnderCurve implements Serializable {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_finite),//
             HashUtils.hashCode(this.m_nan)),//
-        HashUtils.combineHashes(//
-            HashUtils.hashCode(this.m_negInfinite),//
-            HashUtils.hashCode(this.m_posInfinite)));
+            HashUtils.combineHashes(//
+                HashUtils.hashCode(this.m_negInfinite),//
+                HashUtils.hashCode(this.m_posInfinite)));
   }
 
   /**
    * Write the value of this AUC.
-   * 
+   *
    * @param im
    *          the inline math
    * @throws IOException
@@ -318,7 +318,7 @@ public class AreaUnderCurve implements Serializable {
 
   /**
    * Write the value of this AUC.
-   * 
+   *
    * @param dest
    *          the destination to write to
    * @throws IOException

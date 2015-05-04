@@ -19,7 +19,7 @@ public class RunSet extends _OwnedSet<Run, Experiment> {
 
   /**
    * instantiate
-   * 
+   *
    * @param inst
    *          the benchmark instance to which this run set belongs
    * @param data
@@ -33,7 +33,7 @@ public class RunSet extends _OwnedSet<Run, Experiment> {
 
   /**
    * Get the instance to which this run set belongs
-   * 
+   *
    * @return the instance to which this run set belongs
    */
   public final Instance getInstance() {

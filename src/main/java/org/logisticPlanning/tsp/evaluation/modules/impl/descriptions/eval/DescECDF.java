@@ -107,22 +107,22 @@ public final class DescECDF extends DescriptionModule {
       TH2004UAIAEEFSAFSAMS = new BibInProceedings(
           new BibAuthors(new BibAuthor("Dave Andrew Douglas", "Tompkins"),//$NON-NLS-1$ //$NON-NLS-2$
               DescTimeMeasures.HOLGER_H_HOOS),//
-          "UBCSAT: An Implementation and Experimentation Environment for SLS Algorithms for SAT and MAX-SAT",//$NON-NLS-1$
-          new BibProceedings(
-              "Revised Selected Papers from the Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT'04)",//$NON-NLS-1$
-              new BibDate(2004, EBibMonth.MAY, 10), //
-              new BibDate(2004, EBibMonth.MAY, 13), //
-              new BibAuthors(//
-                  DescTimeMeasures.HOLGER_H_HOOS,//
-                  new BibAuthor("David G.", "Mitchell")//$NON-NLS-1$//$NON-NLS-2$
-              ),//
-              "Vancouver, BC, Canada",//$NON-NLS-1$
-              "Springer-Verlag GmbH", "Berlin, Germany",//$NON-NLS-1$//$NON-NLS-2$
-              "Lecture Notes in Computer Science (LNCS)", "3542",//$NON-NLS-1$//$NON-NLS-2$
-              null, "10.1007/11527695"),//$NON-NLS-1$
-          "306", "320", null,//$NON-NLS-1$//$NON-NLS-2$
-          new URI(
-              "http://ubcsat.dtompkins.com/downloads/sat04proc-ubcsat.pdf?attredirects=0"),//$NON-NLS-1$          
+              "UBCSAT: An Implementation and Experimentation Environment for SLS Algorithms for SAT and MAX-SAT",//$NON-NLS-1$
+              new BibProceedings(
+                  "Revised Selected Papers from the Seventh International Conference on Theory and Applications of Satisfiability Testing (SAT'04)",//$NON-NLS-1$
+                  new BibDate(2004, EBibMonth.MAY, 10), //
+                  new BibDate(2004, EBibMonth.MAY, 13), //
+                  new BibAuthors(//
+                      DescTimeMeasures.HOLGER_H_HOOS,//
+                      new BibAuthor("David G.", "Mitchell")//$NON-NLS-1$//$NON-NLS-2$
+                      ),//
+                      "Vancouver, BC, Canada",//$NON-NLS-1$
+                      "Springer-Verlag GmbH", "Berlin, Germany",//$NON-NLS-1$//$NON-NLS-2$
+                      "Lecture Notes in Computer Science (LNCS)", "3542",//$NON-NLS-1$//$NON-NLS-2$
+                      null, "10.1007/11527695"),//$NON-NLS-1$
+                      "306", "320", null,//$NON-NLS-1$//$NON-NLS-2$
+                      new URI(
+                          "http://ubcsat.dtompkins.com/downloads/sat04proc-ubcsat.pdf?attredirects=0"),//$NON-NLS-1$
           "10.1007/11527695_24");//$NON-NLS-1$
 
     } catch (final URISyntaxException use) {
@@ -141,7 +141,7 @@ public final class DescECDF extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -188,10 +188,10 @@ public final class DescECDF extends DescriptionModule {
         DescQualityMeasures.HAFR2012RPBBOBES,
         DescTimeMeasures.HS1998ELVAPAR, DescECDF.TH2004UAIAEEFSAFSAMS);
     body.write(//
-    " is a function that returns the fraction of runs of an optimization algorithm that have reached a given target objective function value "); //$NON-NLS-1$
+        " is a function that returns the fraction of runs of an optimization algorithm that have reached a given target objective function value "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(//
-    " for a given point in time (defined according to some time measure, see "); //$NON-NLS-1$
+        " for a given point in time (defined according to some time measure, see "); //$NON-NLS-1$
     body.reference(this.m_time.getLabel(data));
 
     body.write("). The "); //$NON-NLS-1$
@@ -203,7 +203,7 @@ public final class DescECDF extends DescriptionModule {
     body.write(", where "); //$NON-NLS-1$
     body.writeInt(1);
     body.write(//
-    " is best, since it denotes that all runs have reached the target objective value "); //$NON-NLS-1$
+        " is best, since it denotes that all runs have reached the target objective value "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(". An algorithm is the better, the sooner its "); //$NON-NLS-1$
     body.macroInvoke(Macros.ECDF);
@@ -213,27 +213,27 @@ public final class DescECDF extends DescriptionModule {
     body.write("In order to be able to aggregate the "); //$NON-NLS-1$
     body.macroInvoke(Macros.ECDF);
     body.write(//
-    "s over different scenarios, we use relative objective value goals instead of absolute ones (see "); //$NON-NLS-1$    
+        "s over different scenarios, we use relative objective value goals instead of absolute ones (see "); //$NON-NLS-1$
     body.reference(this.m_rel.getLabel(data));
     body.write(//
-    "). Aggregation is done by computing the arithmetic mean instead of counting successes of all runs. This avoids problems if there are more runs available for one benchmark instance than for another one."); //$NON-NLS-1$
+        "). Aggregation is done by computing the arithmetic mean instead of counting successes of all runs. This avoids problems if there are more runs available for one benchmark instance than for another one."); //$NON-NLS-1$
     body.macroInvoke(Macros.ECDF);
     body.write(" reaches high values."); //$NON-NLS-1$
 
     body.writeLinebreak();
     body.write(//
-    "In well-known benchmark suites such as COCO/BBOB"); //$NON-NLS-1$
+        "In well-known benchmark suites such as COCO/BBOB"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescQualityMeasures.COCO2012CCCO,
         DescQualityMeasures.HAFR2012RPBBOBES);
 
     body.write(//
-    " it is a prominent performance indicator and usually plotted over the consumed "); //$NON-NLS-1$
+        " it is a prominent performance indicator and usually plotted over the consumed "); //$NON-NLS-1$
     Accessor.FE.writeLongName(body, true);
     body.write(" ("); //$NON-NLS-1$
     Accessor.FE.writeShortName(body, true);
     body.write(//
-    "). In the context of this work, there are more time measures that we can use, such as "); //$NON-NLS-1$
+        "). In the context of this work, there are more time measures that we can use, such as "); //$NON-NLS-1$
 
     body.writeSequence(
         new AccessorSequence(Accessor.TIME_MEASURES
@@ -241,7 +241,7 @@ public final class DescECDF extends DescriptionModule {
             true, true, true, body), ESequenceType.OR, false);
 
     body.write(//
-    ", since we measure all these values in our log files as described in ");//$NON-NLS-1$
+        ", since we measure all these values in our log files as described in ");//$NON-NLS-1$
 
     body.reference(this.m_time.getLabel(data));
 

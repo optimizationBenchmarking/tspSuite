@@ -12,7 +12,7 @@ public final class CharArrayCharInput extends CharInput {
 
   /**
    * create
-   * 
+   *
    * @param data
    *          the data
    */
@@ -23,7 +23,7 @@ public final class CharArrayCharInput extends CharInput {
 
   /**
    * Get the length of the data
-   * 
+   *
    * @return the data length
    */
   public final int dataLength() {

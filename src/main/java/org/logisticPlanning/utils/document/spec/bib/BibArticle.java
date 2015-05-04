@@ -26,7 +26,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * create a record for technical records
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -97,20 +97,20 @@ public class BibArticle extends BibRecord {
         //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_journal)),//
-        HashUtils.combineHashes(
-            HashUtils.hashCode(this.m_volume),//
             HashUtils.combineHashes(
-                //
+                HashUtils.hashCode(this.m_volume),//
                 HashUtils.combineHashes(
                     //
-                    HashUtils.hashCode(this.m_number),
-                    HashUtils.hashCode(this.m_startPage)),
-                HashUtils.hashCode(this.m_endPage))));
+                    HashUtils.combineHashes(
+                        //
+                        HashUtils.hashCode(this.m_number),
+                        HashUtils.hashCode(this.m_startPage)),
+                        HashUtils.hashCode(this.m_endPage))));
   }
 
   /**
    * Get the journal
-   * 
+   *
    * @return the journal
    */
   public final String getJournal() {
@@ -119,7 +119,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the volume
-   * 
+   *
    * @return the volume
    */
   public final String getVolume() {
@@ -128,7 +128,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the number
-   * 
+   *
    * @return the number
    */
   public final String getNumber() {
@@ -137,7 +137,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the start page
-   * 
+   *
    * @return the start page
    */
   public final String getStartPage() {
@@ -146,7 +146,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the end page
-   * 
+   *
    * @return the end page
    */
   public final String getEndPage() {
@@ -165,7 +165,7 @@ public class BibArticle extends BibRecord {
           ComparisonUtils.equals(this.m_volume, x.m_volume) && //
           ComparisonUtils.equals(this.m_number, x.m_number) && //
           ComparisonUtils.equals(this.m_startPage, x.m_startPage) && //
-      ComparisonUtils.equals(this.m_endPage, x.m_endPage));
+          ComparisonUtils.equals(this.m_endPage, x.m_endPage));
     }
 
     return false;

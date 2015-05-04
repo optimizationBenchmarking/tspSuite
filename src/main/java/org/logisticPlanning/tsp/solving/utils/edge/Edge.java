@@ -24,7 +24,7 @@ public class Edge {
 
   /**
    * Create an edge with the given nodes.
-   * 
+   *
    * @param pa
    *          the first node
    * @param pb
@@ -59,7 +59,7 @@ public class Edge {
 
   /**
    * Copy the data from edge {@code e} into this edge
-   * 
+   *
    * @param e
    *          the edge to copy
    */

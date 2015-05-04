@@ -92,7 +92,7 @@ public final class TriGamma extends UnaryFunction {
    * with the singleton instance {@link TriGamma#INSTANCE
    * TriGamma.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link TriGamma#INSTANCE
    *         TriGamma.INSTANCE})
    */
@@ -105,7 +105,7 @@ public final class TriGamma extends UnaryFunction {
    * with the singleton instance {@link TriGamma#INSTANCE
    * TriGamma.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link TriGamma#INSTANCE
    *         TriGamma.INSTANCE})
    */

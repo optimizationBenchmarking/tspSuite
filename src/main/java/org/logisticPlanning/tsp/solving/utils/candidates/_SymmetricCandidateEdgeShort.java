@@ -45,7 +45,7 @@ final class _SymmetricCandidateEdgeShort extends CandidateEdgeNumber {
 
   /**
    * Instantiate
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param candidates

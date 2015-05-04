@@ -105,7 +105,7 @@ public enum Accessor {
 
     /**
      * write the scale
-     * 
+     *
      * @param ame
      *          the mathe element
      * @throws IOException
@@ -169,7 +169,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
       Accessor._writeValue(value, txt, format);
       txt.writeNoneBreakingSpace();
       this.writeShortName(txt, true);
@@ -177,7 +177,7 @@ public enum Accessor {
   },
 
   /** the FE accessor */
-  FE(LogPoint.FE_INDEX, "FE", null,//$NON-NLS-1$ 
+  FE(LogPoint.FE_INDEX, "FE", null,//$NON-NLS-1$
       "function evaluation", true) {//$NON-NLS-1$
     /** {@inheritDoc} */
     @Override
@@ -262,7 +262,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
       Accessor._writeValue(value, txt, format);
       txt.writeNoneBreakingSpace();
       this.writeShortName(txt, true);
@@ -362,9 +362,9 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
       Accessor._writeValue(value, txt, format);
-      txt.write("ms");//$NON-NLS-1$ 
+      txt.write("ms");//$NON-NLS-1$
     }
   },
 
@@ -429,7 +429,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -445,7 +445,7 @@ public enum Accessor {
   },
 
   /** the relative objective value */
-  F_RELATIVE(DataPoint.RELATIVE_F_INDEX, "F", "FRel",//$NON-NLS-1$//$NON-NLS-2$ 
+  F_RELATIVE(DataPoint.RELATIVE_F_INDEX, "F", "FRel",//$NON-NLS-1$//$NON-NLS-2$
       "relative objective value", true) {//$NON-NLS-1$
     /** {@inheritDoc} */
     @Override
@@ -485,7 +485,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -501,7 +501,7 @@ public enum Accessor {
   },
 
   /** the normalized runtime accessor */
-  NORMALIZED_RUNTIME(DataPoint.NORMALIZED_TIME_INDEX, "NT", null,//$NON-NLS-1$ 
+  NORMALIZED_RUNTIME(DataPoint.NORMALIZED_TIME_INDEX, "NT", null,//$NON-NLS-1$
       "normalized runtime", false) {//$NON-NLS-1$
     /** {@inheritDoc} */
     @Override
@@ -548,7 +548,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-        throws IOException {
+            throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -567,26 +567,26 @@ public enum Accessor {
 
   /** the total number of accessors */
   public static final ArraySetView<Accessor> ACCESSORS = //
-  ArraySetView.makeArraySetView(Accessor.values(), false);
+      ArraySetView.makeArraySetView(Accessor.values(), false);
 
   /** the proper x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> TIME_MEASURES = //
-  Accessor.ACCESSORS.select(//
-      new CompoundCondition<>(LAnd.INSTANCE,//
-          NotNullCondition.INSTANCE,//
-          new NotCondition<>(AccessorIsObjective.INSTANCE)));
+      Accessor.ACCESSORS.select(//
+          new CompoundCondition<>(LAnd.INSTANCE,//
+              NotNullCondition.INSTANCE,//
+              new NotCondition<>(AccessorIsObjective.INSTANCE)));
 
   /** the proper unbiased x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> UNBIASED_TIME_MEASURES = //
-  Accessor.TIME_MEASURES.select(//
-      new NotCondition<>(new EqualsCondition(Accessor.RUNTIME)));
+      Accessor.TIME_MEASURES.select(//
+          new NotCondition<>(new EqualsCondition(Accessor.RUNTIME)));
 
   /** the proper x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> OBJECTIVE_MEASURES = //
-  Accessor.ACCESSORS.select(//
-      new CompoundCondition<>(LAnd.INSTANCE,//
-          NotNullCondition.INSTANCE,//
-          AccessorIsObjective.INSTANCE));
+      Accessor.ACCESSORS.select(//
+          new CompoundCondition<>(LAnd.INSTANCE,//
+              NotNullCondition.INSTANCE,//
+              AccessorIsObjective.INSTANCE));
 
   /** the short name singular macro */
   private final MacroDefinition m_short;
@@ -601,7 +601,7 @@ public enum Accessor {
 
   /**
    * internal constructor
-   * 
+   *
    * @param dim
    *          the dimension
    * @param shrt
@@ -635,7 +635,7 @@ public enum Accessor {
    * represents the worst possible result if the log point is {@code null}.
    * This worst possible result will usually be
    * {@link java.lang.Double#POSITIVE_INFINITY}.
-   * 
+   *
    * @param p
    *          the log point
    * @return the value, or an appropriate value (usually
@@ -653,7 +653,7 @@ public enum Accessor {
    * {@link java.lang.UnsupportedOperationException} if the dimension is
    * not represented as {@code long} value &ndash; i.e., if
    * <code>{@link #canAccessAsLong()}==false</code>.
-   * 
+   *
    * @param p
    *          the log point
    * @return the value, or an appropriate value (usually
@@ -669,7 +669,7 @@ public enum Accessor {
    * Can the values be accessed as {@code long}? This would can potentially
    * bring better precision, if possible, by using
    * {@link #fromPointLong(DataPoint)}
-   * 
+   *
    * @return {@code true} if {@link #fromPointLong(DataPoint)} can be used
    *         without throwing
    *         {@link java.lang.UnsupportedOperationException} s.
@@ -680,7 +680,7 @@ public enum Accessor {
 
   /**
    * calculate the scale (<code>n</code>, <code>n<sup>2</sup></code>, ...)
-   * 
+   *
    * @param n
    *          the problem size (number of nodes in the tsp)
    * @return the scale
@@ -691,7 +691,7 @@ public enum Accessor {
 
   /**
    * Should we normally scale this measure?
-   * 
+   *
    * @return {@code true} if this measure is normally scaled, {@code false}
    *         otherwise
    */
@@ -703,7 +703,7 @@ public enum Accessor {
 
   /**
    * A short scale string for use in figures
-   * 
+   *
    * @return the scale string
    */
   public String getScaleString() {
@@ -712,7 +712,7 @@ public enum Accessor {
 
   /**
    * get a short name to be used in file names, for example
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -721,7 +721,7 @@ public enum Accessor {
 
   /**
    * get the string to be used for a scaled value axis
-   * 
+   *
    * @return the string to be used for the scaled value axis
    */
   public final String getAxisString() {
@@ -738,7 +738,7 @@ public enum Accessor {
 
   /**
    * Define all necessary macros and stuff for this accessor
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException
@@ -750,7 +750,7 @@ public enum Accessor {
 
   /**
    * Write the short name of this accessor
-   * 
+   *
    * @param text
    *          the target text
    * @throws IOException
@@ -763,7 +763,7 @@ public enum Accessor {
 
   /**
    * Write the short name of this accessor
-   * 
+   *
    * @param text
    *          the target text
    * @param plural
@@ -781,7 +781,7 @@ public enum Accessor {
 
   /**
    * Write the long name of this accessor
-   * 
+   *
    * @param text
    *          the target text
    * @param plural
@@ -796,7 +796,7 @@ public enum Accessor {
 
   /**
    * the long name
-   * 
+   *
    * @param plural
    *          should we use the plural form?
    * @return the name
@@ -807,22 +807,21 @@ public enum Accessor {
 
   /**
    * Write the scale of this accessor
-   * 
+   *
    * @param ame
    *          the element to write to
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   public void writeScale(final Element ame) throws IOException {
     throw new IllegalArgumentException(//
         "Accessor " + this + //$NON-NLS-1$
-            " cannot write scale to element " + ame); //$NON-NLS-1$
+        " cannot write scale to element " + ame); //$NON-NLS-1$
   }
 
   /**
    * write the 1 scale
-   * 
+   *
    * @param ame
    *          the element
    * @return {@code true} on error, {@code false} on success
@@ -839,7 +838,7 @@ public enum Accessor {
 
   /**
    * Does this accessor concern an objective value?
-   * 
+   *
    * @return {@code true} if it does, {@code false} otherwise
    */
   public boolean isObjective() {
@@ -849,7 +848,7 @@ public enum Accessor {
   /**
    * Does this accessor represent a real time measure, i.e., is it
    * {@link #RUNTIME} or {@link #NORMALIZED_RUNTIME}?
-   * 
+   *
    * @return {@code true} if it does, {@code false} otherwise
    */
   public boolean isTime() {
@@ -864,7 +863,7 @@ public enum Accessor {
 
   /**
    * validate a value for this dimension
-   * 
+   *
    * @param value
    *          the value
    * @param isActualMeasurement
@@ -878,7 +877,7 @@ public enum Accessor {
 
   /**
    * Write a value
-   * 
+   *
    * @param value
    *          the value
    * @param txt
@@ -890,7 +889,7 @@ public enum Accessor {
    */
   static final void _writeValue(final double value,
       final AbstractInlineElement txt, final NumberFormat format)
-      throws IOException {
+          throws IOException {
     long l;
 
     if (ComparisonUtils.isInteger(value)) {
@@ -911,7 +910,7 @@ public enum Accessor {
 
   /**
    * Write a value
-   * 
+   *
    * @param value
    *          the value
    * @param txt
@@ -923,6 +922,6 @@ public enum Accessor {
    */
   public abstract void writeValue(final double value,
       final AbstractTextComplex txt, final NumberFormat format)
-      throws IOException;
+          throws IOException;
 
 }

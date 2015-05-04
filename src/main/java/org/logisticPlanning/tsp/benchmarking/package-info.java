@@ -421,7 +421,7 @@
  * <table border="1" id="invokeMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public static void main(final String[] args) {
  *  {@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner TSPAlgorithmRunner}.{@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner#benchmark(org.logisticPlanning.utils.collections.lists.ArrayListView, java.lang.Class, java.lang.String[]) benchmark}({@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SYMMETRIC_INSTANCES Instance.SYMMETRIC_INSTANCES},
@@ -429,7 +429,7 @@
  *  args);
  *  }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -541,27 +541,27 @@
  * <table border="1" id="testMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
- * 
+ *
  *  import {@code MyPackage}.{@code MyHeuristic};
- * 
+ *
  *  import {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest};
- * 
+ *
  *  public class {@code MyHeuristic}Test extends {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest TSPAlgorithmSymmetricTest} {
- * 
+ *
  *  public {@code MyHeuristic}Test() {
  *  super();
  *  }
- * 
+ *
  *  {@code @Override}
  *  protected {@code MyHeuristic} createAlgorithm() {
  *  return new {@code MyHeuristic}();
  *  }
  *  }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>

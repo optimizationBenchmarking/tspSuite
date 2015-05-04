@@ -95,7 +95,7 @@ public final class BetaIncomplete extends TernaryFunction {
 
   /**
    * Continued fraction expansion #1 for incomplete beta integral.
-   * 
+   *
    * @param a
    *          double value
    * @param b
@@ -191,7 +191,7 @@ public final class BetaIncomplete extends TernaryFunction {
 
   /**
    * Continued fraction expansion #2 for incomplete beta integral
-   * 
+   *
    * @param a
    *          double value
    * @param b
@@ -288,7 +288,7 @@ public final class BetaIncomplete extends TernaryFunction {
   /**
    * Power series for incomplete beta integral. Use when b*x is small and x
    * not too close to 1.
-   * 
+   *
    * @param a
    *          double value
    * @param b
@@ -445,7 +445,7 @@ public final class BetaIncomplete extends TernaryFunction {
    * with the singleton instance {@link BetaIncomplete#INSTANCE
    * BetaIncomplete.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BetaIncomplete#INSTANCE BetaIncomplete.INSTANCE})
    */
@@ -458,7 +458,7 @@ public final class BetaIncomplete extends TernaryFunction {
    * with the singleton instance {@link BetaIncomplete#INSTANCE
    * BetaIncomplete.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BetaIncomplete#INSTANCE BetaIncomplete.INSTANCE})
    */

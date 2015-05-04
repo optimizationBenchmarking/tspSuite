@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
  * The Lin-Kernighan based MA with Edge crossover.
  */
 public final class HeuristicInitLinKernighanEdgeMA extends
-    _HeuristicInitLinKernighanEdgeMA {
+_HeuristicInitLinKernighanEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public final class HeuristicInitLinKernighanEdgeMA extends
 
   /**
    * Perform the heuristic init mns edge MA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

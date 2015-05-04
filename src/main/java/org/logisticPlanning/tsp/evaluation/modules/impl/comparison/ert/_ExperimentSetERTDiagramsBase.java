@@ -128,7 +128,7 @@ class _ExperimentSetERTDiagramsBase extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name

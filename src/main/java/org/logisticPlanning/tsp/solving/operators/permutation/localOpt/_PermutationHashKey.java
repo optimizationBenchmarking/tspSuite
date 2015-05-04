@@ -13,7 +13,7 @@ public final class _PermutationHashKey {
 
   /**
    * create the permutation hash key
-   * 
+   *
    * @param data
    *          the data
    */
@@ -24,7 +24,7 @@ public final class _PermutationHashKey {
 
   /**
    * Set the data array, i.e., the permutation
-   * 
+   *
    * @param data
    *          the data
    */
@@ -40,7 +40,7 @@ public final class _PermutationHashKey {
 
   /**
    * Get the data, i.e., the permutation
-   * 
+   *
    * @return the permutation
    */
   public final int[] getData() {
@@ -57,14 +57,14 @@ public final class _PermutationHashKey {
   @Override
   public final boolean equals(final Object o) {
     return ((o == this) || //
-    ((o instanceof _PermutationHashKey) && //
-    Arrays.equals(this.m_data, ((_PermutationHashKey) o).m_data)));
+        ((o instanceof _PermutationHashKey) && //
+            Arrays.equals(this.m_data, ((_PermutationHashKey) o).m_data)));
   }
 
   /** {@inheritDoc} */
   @Override
   public final String toString() {
     return (this.m_hash + ": " + //$NON-NLS-1$
-    Arrays.toString(this.m_data));
+        Arrays.toString(this.m_data));
   }
 }

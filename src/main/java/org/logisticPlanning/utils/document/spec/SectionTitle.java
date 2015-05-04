@@ -9,7 +9,7 @@ public class SectionTitle extends AbstractTextPlain {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

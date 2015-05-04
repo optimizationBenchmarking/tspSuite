@@ -619,7 +619,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 public class HeuristicInitMultiNeighborhoodSearchPACO extends
-    _HeuristicInitLocalSearchPACO {
+_HeuristicInitLocalSearchPACO {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -627,7 +627,7 @@ public class HeuristicInitMultiNeighborhoodSearchPACO extends
    * instantiate
    */
   public HeuristicInitMultiNeighborhoodSearchPACO() {
-    super("Multi-Neighborhood Search ");//$NON-NLS-1$ 
+    super("Multi-Neighborhood Search ");//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -638,7 +638,7 @@ public class HeuristicInitMultiNeighborhoodSearchPACO extends
 
   /**
    * Perform the population-based ACO
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -21,7 +21,7 @@ final class _CiteSequence extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param refs
    *          the refs
    * @param doc

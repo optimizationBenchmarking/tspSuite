@@ -110,7 +110,7 @@ public class PermutationCreateUniform extends PermutationCreateCanonical {
 
   /**
    * Create a new random permutation of {@code n} elements
-   * 
+   *
    * @param n
    *          instantiate a random permutation
    * @param r

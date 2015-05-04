@@ -55,18 +55,18 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetECDFOverScaleDiagramsHolder extends
-    ComparisonModule {
+ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetECDFOverScaleDiagramsHolder(final Module owner) {
-    super(_ExperimentSetECDFBase._NAME_PFX + "OverScale",//$NON-NLS-1$ 
+    super(_ExperimentSetECDFBase._NAME_PFX + "OverScale",//$NON-NLS-1$
         owner, false);
   }
 
@@ -101,11 +101,11 @@ final class _ExperimentSetECDFOverScaleDiagramsHolder extends
               RunSetECDFProperty.getInstance(axs, goal),//
               scale,//
               ((scale.getBase() == 2) && (goal <= 0d) && //
-              Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-              // ((axs == Accessor.DE) || //
-              // (axs == Accessor.FE) || //
-              // (axs == Accessor.NORMALIZED_RUNTIME))
-              ));
+                  Accessor.UNBIASED_TIME_MEASURES.contains(axs)
+                  // ((axs == Accessor.DE) || //
+                  // (axs == Accessor.FE) || //
+                  // (axs == Accessor.NORMALIZED_RUNTIME))
+                  ));
         }
       }
     }
@@ -117,6 +117,6 @@ final class _ExperimentSetECDFOverScaleDiagramsHolder extends
       final ExperimentSet data) throws IOException {
     title.macroInvoke(Macros.ECDF);
     title
-        .write(" over Problem Scale for Different Time Measures and Goals"); //$NON-NLS-1$
+    .write(" over Problem Scale for Different Time Measures and Goals"); //$NON-NLS-1$
   }
 }

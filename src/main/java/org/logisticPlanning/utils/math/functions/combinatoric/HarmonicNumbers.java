@@ -22,7 +22,7 @@ public final class HarmonicNumbers extends UnaryFunction {
    * Recursively compute the harmonic numbers. The goal is to avoid
    * rounding errors by splitting the sum into intervalls in a
    * divide-and-conquer method.
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -47,7 +47,7 @@ public final class HarmonicNumbers extends UnaryFunction {
 
   /**
    * Calculate the <code>n</code>'th harmonic number.
-   * 
+   *
    * @param n
    *          The index of the harmonic number to be created.
    * @return The <code>n</code>'th harmonic number.
@@ -73,7 +73,7 @@ public final class HarmonicNumbers extends UnaryFunction {
    * HarmonicNumbers.INSTANCE} for serialization, i.e., when the instance
    * is written with {@link java.io.ObjectOutputStream#writeObject(Object)}
    * .
-   * 
+   *
    * @return the replacement instance (always
    *         {@link HarmonicNumbers#INSTANCE HarmonicNumbers.INSTANCE})
    */
@@ -86,7 +86,7 @@ public final class HarmonicNumbers extends UnaryFunction {
    * with the singleton instance {@link HarmonicNumbers#INSTANCE
    * HarmonicNumbers.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link HarmonicNumbers#INSTANCE HarmonicNumbers.INSTANCE})
    */

@@ -17,7 +17,7 @@ final class _TextBuffer extends CharList {
 
   /**
    * create
-   * 
+   *
    * @param id
    *          the id
    */
@@ -30,7 +30,7 @@ final class _TextBuffer extends CharList {
 
   /**
    * load a number of chars
-   * 
+   *
    * @param r
    *          the reader
    * @return the number of bytes read
@@ -59,7 +59,7 @@ final class _TextBuffer extends CharList {
 
   /**
    * get the text loaded
-   * 
+   *
    * @return the text
    */
   final String _text() {

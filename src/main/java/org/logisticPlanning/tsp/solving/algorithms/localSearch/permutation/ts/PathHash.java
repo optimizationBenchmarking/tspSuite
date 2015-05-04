@@ -15,7 +15,7 @@ public final class PathHash implements Cloneable {
 
   /**
    * create the permutation hash key
-   * 
+   *
    * @param data
    *          the data
    */
@@ -26,7 +26,7 @@ public final class PathHash implements Cloneable {
 
   /**
    * create the permutation hash key
-   * 
+   *
    * @param length
    *          the length
    */
@@ -37,7 +37,7 @@ public final class PathHash implements Cloneable {
 
   /**
    * Set the data array, i.e., the permutation
-   * 
+   *
    * @param data
    *          the data
    */
@@ -53,7 +53,7 @@ public final class PathHash implements Cloneable {
 
   /**
    * Get the data, i.e., the permutation
-   * 
+   *
    * @return the permutation
    */
   public final int[] getData() {
@@ -70,16 +70,16 @@ public final class PathHash implements Cloneable {
   @Override
   public final boolean equals(final Object o) {
     return ((o == this) || //
-    ((o instanceof PathHash) && //
-    RepresentationUtils.arePathsEquivalentSTSP(this.m_data,
-        ((PathHash) o).m_data)));
+        ((o instanceof PathHash) && //
+            RepresentationUtils.arePathsEquivalentSTSP(this.m_data,
+                ((PathHash) o).m_data)));
   }
 
   /** {@inheritDoc} */
   @Override
   public final String toString() {
     return (this.m_hash + ": " + //$NON-NLS-1$
-    Arrays.toString(this.m_data));
+        Arrays.toString(this.m_data));
   }
 
   /** {@inheritDoc} */

@@ -12,7 +12,7 @@ public class Macro extends AbstractTextComplex {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param desc
@@ -53,7 +53,7 @@ public class Macro extends AbstractTextComplex {
 
   /**
    * Get the macro descriptor
-   * 
+   *
    * @return the macro descriptor
    */
   public final MacroDescriptor getDescriptor() {

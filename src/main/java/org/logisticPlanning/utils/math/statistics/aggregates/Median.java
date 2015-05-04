@@ -15,14 +15,14 @@ public class Median extends ScalarAggregate implements IStatisticPoint {
 
   /** the list of supported statistic parameters */
   private static final ArraySetView<EStatisticParameter> LIST = //
-  EStatisticParameter.makeList(//
-      EStatisticParameter.MINIMUM,//
-      EStatisticParameter.PERCENTILE_05,//
-      EStatisticParameter.PERCENTILE_25,//
-      EStatisticParameter.MEDIAN,//
-      EStatisticParameter.PERCENTILE_75,//
-      EStatisticParameter.PERCENTILE_95,//
-      EStatisticParameter.MAXIMUM);
+      EStatisticParameter.makeList(//
+          EStatisticParameter.MINIMUM,//
+          EStatisticParameter.PERCENTILE_05,//
+          EStatisticParameter.PERCENTILE_25,//
+          EStatisticParameter.MEDIAN,//
+          EStatisticParameter.PERCENTILE_75,//
+          EStatisticParameter.PERCENTILE_95,//
+          EStatisticParameter.MAXIMUM);
 
   /** the data */
   private _DoubleList m_data;
@@ -44,7 +44,7 @@ public class Median extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Visit a given {@code double}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -55,7 +55,7 @@ public class Median extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Obtain the current running sum.
-   * 
+   *
    * @return the current running sum
    */
   @Override

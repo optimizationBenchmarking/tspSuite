@@ -10,7 +10,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
 import org.logisticPlanning.tsp.solving.operators.permutation.creation.PermutationCreateCanonical;
 
 /**
- * 
+ *
  <h1>Branch and Bound for the TSP by Little et al.</h1>
  * <p>
  * A first Branch and Bound algorithm for Traveling Salesman Problems was
@@ -217,7 +217,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.creation.Permutati
  * and&nbsp;<a
  * href="http://www.amazon.com/dp/8120335171">8120335171</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a></em>
@@ -331,7 +331,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -505,7 +505,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * this method is used to branch from the given node. After each
    * branching process, we may have two nodes, one contains the jump edge
    * and the other not.
-   * 
+   *
    * @param node
    *          the node
    * @return the new node
@@ -618,7 +618,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * by this method here. Later we can create a subclass of this class that
    * overrides this method and, in the overridden method, we can perform a
    * local search.
-   * 
+   *
    * @param adjacencyList
    *          the
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluateAdj(int[])
@@ -643,7 +643,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * this method here. Later we can create a subclass of this class that
    * overrides this method and, in the overridden method, we can perform a
    * local search.
-   * 
+   *
    * @param path
    *          the
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluate(int[])
@@ -662,7 +662,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * format the answer so it can be registered.
-   * 
+   *
    * @param edges
    *          the edges
    */
@@ -674,7 +674,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * this method compute the low bound of the given node.
-   * 
+   *
    * @param node
    *          the node
    * @return the lower bound
@@ -714,7 +714,7 @@ public class BABLittle1963 extends TSPAlgorithm {
   /**
    * Given the node, set the global variable {@link #m_crossedColumns} and
    * {@link #m_crossedRows}.
-   * 
+   *
    * @param node
    *          the node
    */
@@ -730,7 +730,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * the potential m_edges that may form a sub circle with the selected
    * m_edges, which is not a solution, and register those m_edges in
    * {@link #m_infinity} variable.
-   * 
+   *
    * @param node
    *          the node
    */
@@ -778,7 +778,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * this method is used to find the minimal value of the given row.
-   * 
+   *
    * @param row
    *          the row that needs to find out the minimal value
    */
@@ -821,7 +821,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * this method is used to find the minimal value of the specified column.
    * note that the value of this column is the original value subtracting
    * the minimal value of the row in which the original value is.
-   * 
+   *
    * @param column
    *          the column
    */
@@ -880,7 +880,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * is the value of the {@code theta} function of an edge with the
    * starting point in and ending point out.</li>
    * </ol>
-   * 
+   *
    * @param in
    *          the starting point of an edge
    * @param out
@@ -928,7 +928,7 @@ public class BABLittle1963 extends TSPAlgorithm {
    * then iterates through all the m_edges and then computes the
    * {@code theta} value of each edge. we choose the biggest {@code theta}
    * value and then choose the corresponding edge as the jump edge.
-   * 
+   *
    * @param zeros
    *          an array representing m_edges whose value is zero after the
    *          reduction
@@ -949,7 +949,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * reset a two dimensional boolean array to its default value
-   * 
+   *
    * @param a
    *          the array to be reset
    */
@@ -980,7 +980,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * add the node to {@link #m_nodeBuffer}
-   * 
+   *
    * @param node
    *          the node to add
    */
@@ -993,7 +993,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * add the {@code node} to the pool
-   * 
+   *
    * @param node
    *          the node to add
    */
@@ -1008,7 +1008,7 @@ public class BABLittle1963 extends TSPAlgorithm {
   /**
    * this method allocates a new array if the old one is running out of
    * space and copies all the elements in the old one to the new one.
-   * 
+   *
    * @param oldA
    *          the old array
    * @return the extended array
@@ -1025,7 +1025,7 @@ public class BABLittle1963 extends TSPAlgorithm {
 
   /**
    * The main method invoking the algorithm
-   * 
+   *
    * @param args
    *          the command line arguments
    */

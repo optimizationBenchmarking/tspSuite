@@ -20,7 +20,7 @@ public final class FileUtils {
 
   /** The current directory. */
   public static final File CURRENT_DIR = //
-  FileUtils.canonicalize(new File("."));//$NON-NLS-1$
+      FileUtils.canonicalize(new File("."));//$NON-NLS-1$
 
   /** The java home directory. */
   private static final File HOME_DIR = FileUtils.canonicalize(//
@@ -61,11 +61,11 @@ public final class FileUtils {
 
   /** extensions for executables */
   private static final String[] EXECUTABLE_EXTENSIONS = //
-  FileUtils.__getExecutableExtensions();
+      FileUtils.__getExecutableExtensions();
 
   /**
    * Canonicalize a file
-   * 
+   *
    * @param f
    *          the file
    * @return the canonicalized version of the file
@@ -102,7 +102,7 @@ public final class FileUtils {
 
   /**
    * Canonicalize a file
-   * 
+   *
    * @param s
    *          the file name
    * @return the canonicalized version of the file
@@ -119,7 +119,7 @@ public final class FileUtils {
 
   /**
    * Obtain the executable extensions
-   * 
+   *
    * @return the executable extensions
    */
   private static final String[] __getExecutableExtensions() {
@@ -168,7 +168,7 @@ public final class FileUtils {
   /**
    * Get the environment's path variable and add all the paths which could
    * potentially be interesting
-   * 
+   *
    * @return the environment's path variable
    */
   private static final _CanonicalFile[] __getPath() {
@@ -230,7 +230,7 @@ public final class FileUtils {
   /**
    * Delete the file or directory specified by <code>f</code>, recursively
    * if necessary
-   * 
+   *
    * @param f
    *          the file or directory to be deleted
    * @throws IOException
@@ -264,7 +264,7 @@ public final class FileUtils {
 
   /**
    * Copy a set of files recursively to a given directory
-   * 
+   *
    * @param srcFiles
    *          the source files (or directories)
    * @param destDir
@@ -290,7 +290,7 @@ public final class FileUtils {
 
   /**
    * Copy a file or directory recursively
-   * 
+   *
    * @param src
    *          the source file
    * @param destDir
@@ -324,7 +324,7 @@ public final class FileUtils {
 
   /**
    * Move a set of files to a given directory
-   * 
+   *
    * @param src
    *          the source files
    * @param destDir
@@ -355,7 +355,7 @@ public final class FileUtils {
    * . If a file or directory with the same name as {@code src} already
    * exists in {@code destDir}, then this file or directoy is deleted
    * first.
-   * 
+   *
    * @param src
    *          the source file
    * @param destDir
@@ -429,7 +429,7 @@ public final class FileUtils {
 
   /**
    * Check whether the given file name can be found in the path.
-   * 
+   *
    * @param name
    *          the file name
    * @return the corresponding file or <code>null</code> if the file was
@@ -450,7 +450,7 @@ public final class FileUtils {
 
   /**
    * Find an existing executable file in the given directory
-   * 
+   *
    * @param name
    *          the file name
    * @param dir
@@ -482,7 +482,7 @@ public final class FileUtils {
 
   /**
    * Check whether the given executable file name can be found in the path.
-   * 
+   *
    * @param name
    *          the file name
    * @return the corresponding file or <code>null</code> if the file was
@@ -503,7 +503,7 @@ public final class FileUtils {
 
   /**
    * Find an existing file
-   * 
+   *
    * @param name
    *          the file name
    * @param dir
@@ -536,7 +536,7 @@ public final class FileUtils {
 
   /**
    * Get the relative path of file in relation to {@code dir}
-   * 
+   *
    * @param dir
    *          the directory
    * @param file
@@ -670,7 +670,7 @@ public final class FileUtils {
 
   /**
    * Find all files in the directory
-   * 
+   *
    * @param dir
    *          the directory
    * @param ending
@@ -718,7 +718,7 @@ public final class FileUtils {
 
   /**
    * Find the directory containing all files
-   * 
+   *
    * @param files
    *          the files
    * @return the file containing the parameters
@@ -732,7 +732,7 @@ public final class FileUtils {
 
   /**
    * Find the directory containing all files
-   * 
+   *
    * @param files
    *          the files
    * @param start
@@ -802,7 +802,7 @@ public final class FileUtils {
 
   /**
    * get a file that points to a given uri
-   * 
+   *
    * @param base
    *          the base dir, or {@code null} to use current directory
    * @param uri
@@ -826,7 +826,7 @@ public final class FileUtils {
 
   /**
    * get a file that points to a given uri
-   * 
+   *
    * @param uri
    *          the uri
    * @return the file

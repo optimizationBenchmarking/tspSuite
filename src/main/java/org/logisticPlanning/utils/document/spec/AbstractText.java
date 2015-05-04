@@ -9,7 +9,7 @@ public abstract class AbstractText extends AbstractTextPlain {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -29,14 +29,14 @@ public abstract class AbstractText extends AbstractTextPlain {
   /** {@inheritDoc} */
   @Override
   protected void subscriptBegin(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subscriptBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void subscriptEnd(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subscriptEnd(h);
   }
 
@@ -56,21 +56,21 @@ public abstract class AbstractText extends AbstractTextPlain {
   /** {@inheritDoc} */
   @Override
   protected void superscriptBegin(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.superscriptBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void superscriptEnd(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.superscriptEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public Superscript superscript() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.superscript();
   }
 
@@ -84,14 +84,14 @@ public abstract class AbstractText extends AbstractTextPlain {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeBegin(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.emphasizeBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void emphasizeEnd(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.emphasizeEnd(h);
   }
 
@@ -106,7 +106,7 @@ public abstract class AbstractText extends AbstractTextPlain {
   public void writeSequence(final Sequence sequence,
       final ESequenceType type,
       final boolean connectLastElementWithNonBreakableSpace)
-      throws IOException {
+          throws IOException {
     super.writeSequence(sequence, type,
         connectLastElementWithNonBreakableSpace);
   }

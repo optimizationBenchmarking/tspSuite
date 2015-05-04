@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * mutation and FUSS
  */
 public class HeuristicInitRNSSavingsMAFUSSParentsSurviveTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitRNSSavingsMAFUSSParentsSurviveTest() {

@@ -10,12 +10,12 @@ import org.logisticPlanning.utils.collections.lists.ArrayListView;
 
 /**
  * A basic list.
- * 
+ *
  * @param <ET>
  *          the element type
  */
 public abstract class BasicList<ET> extends AbstractList<ET> implements
-    Serializable, RandomAccess {
+Serializable, RandomAccess {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -33,7 +33,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
    * The items in the returned list will have always have the same order as
    * in the current list. No assumption can be made regarding whether the
    * returned list is modifiable or not.
-   * 
+   *
    * @param condition
    *          the condition
    * @return the list of these elements
@@ -72,7 +72,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
 
   /**
    * Check whether there is any element that meets the condition
-   * 
+   *
    * @param condition
    *          the condition
    * @return {@code true} if there is any element that meets the condition,
@@ -89,7 +89,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
 
   /**
    * Get the first element in the array list view
-   * 
+   *
    * @return the first element in the array list view
    */
   public ET first() {
@@ -98,7 +98,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
 
   /**
    * Get the last element in the array list view
-   * 
+   *
    * @return the last element in the array list view
    */
   public ET last() {
@@ -108,7 +108,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
   /**
    * Delete an element, without returning it. The order of the elements in
    * the list is preserved.
-   * 
+   *
    * @param index
    *          the index where the element needs to be returned
    */
@@ -119,7 +119,7 @@ public abstract class BasicList<ET> extends AbstractList<ET> implements
   /**
    * Delete an element, without returning it. The order of the elements in
    * the list is <em>not</em> preserved.
-   * 
+   *
    * @param index
    *          the index where the element needs to be returned
    */

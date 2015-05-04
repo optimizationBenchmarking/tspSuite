@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * path representation}, but can be modified to deal with any data type
  * {@code P} , given the method {@link #copySolution(Object,Object)} is
  * implemented for {@code P}.
- * 
+ *
  * @param <P>
  *          the product type
  * @since 0.9.8
@@ -26,7 +26,7 @@ public class TSPLocalSearchBasedMutation<P> extends UnaryOperator<P> {
 
   /**
    * the local search algorithm used for mutation
-   * 
+   *
    * @serial a non-{@code null} instance of the algorithm
    */
   private TSPLocalSearchAlgorithm<P> m_algorithm;
@@ -44,7 +44,7 @@ public class TSPLocalSearchBasedMutation<P> extends UnaryOperator<P> {
    * {@link TSPLocalSearchAlgorithm#getLocalSearchTerminationCriterion()
    * termination criterion} to
    * {@link ELocalSearchTermination#TERMINATE_IF_DIFFERENT}.
-   * 
+   *
    * @param algorithm
    *          the local search algorithm to delegate to
    */
@@ -60,6 +60,7 @@ public class TSPLocalSearchBasedMutation<P> extends UnaryOperator<P> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public TSPLocalSearchBasedMutation<P> clone() {
     final TSPLocalSearchBasedMutation<P> res;
 
@@ -72,13 +73,14 @@ public class TSPLocalSearchBasedMutation<P> extends UnaryOperator<P> {
 
   /**
    * copy a solution
-   * 
+   *
    * @param solution
    *          the solution
    * @param dest
    *          the destination, or {@code null} if none
    * @return the cloned copy
    */
+  @SuppressWarnings("unchecked")
   protected P copySolution(final P solution, final P dest) {
     if (dest != null) {
       System.arraycopy(solution, 0, dest, 0, ((int[]) solution).length);
@@ -89,7 +91,7 @@ public class TSPLocalSearchBasedMutation<P> extends UnaryOperator<P> {
 
   /**
    * Obtain the local search algorithm
-   * 
+   *
    * @return the local search algorithm
    */
   protected final TSPLocalSearchAlgorithm<P> getLocalSearchAlgorithm() {

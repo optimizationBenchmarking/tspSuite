@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.TSPModule;
 /**
  * Instances of this class decide whether a current solution should be
  * accepted or not.
- * 
+ *
  * @since 0.9.8
  */
 public abstract class AcceptanceCriterion extends TSPModule {
@@ -16,7 +16,7 @@ public abstract class AcceptanceCriterion extends TSPModule {
 
   /**
    * Create the solution acceptance criterion
-   * 
+   *
    * @param name
    *          the name of the criterion
    */
@@ -26,7 +26,7 @@ public abstract class AcceptanceCriterion extends TSPModule {
 
   /**
    * Should we accept a given solution?
-   * 
+   *
    * @param solution
    *          the solution individual record
    * @param f

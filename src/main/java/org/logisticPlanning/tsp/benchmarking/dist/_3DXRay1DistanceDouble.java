@@ -23,7 +23,7 @@ import java.io.PrintWriter;
  * as follows&nbsp;[<a href="#cite_R1995T9"
  * style="font-weight:bold">1</a>]:
  * </p>
- * 
+ *
  * <pre>
  * p    = |phiv - phiw|<br/>
  * pmin = min{t, |t - 360|}<br/>
@@ -498,7 +498,7 @@ final class _3DXRay1DistanceDouble extends _3DDoubleCoords {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -544,7 +544,7 @@ final class _3DXRay1DistanceDouble extends _3DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param nodes
    *          The permutation of the nodes from {@code 1..n}
    * @return the total distance sum
@@ -600,7 +600,7 @@ final class _3DXRay1DistanceDouble extends _3DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param adj
    *          The adjacency list representation of the solution
    * @return the total distance sum

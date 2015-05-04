@@ -14,7 +14,7 @@ public class InQuotes extends AbstractTextPlain {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param quotes
@@ -34,7 +34,7 @@ public class InQuotes extends AbstractTextPlain {
 
   /**
    * Get the quotes
-   * 
+   *
    * @return the quotes
    */
   public final EQuotes getQuotes() {

@@ -31,7 +31,7 @@ final class _CurrentLogPoint extends LogPoint {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owning objective function
    */
@@ -50,7 +50,7 @@ final class _CurrentLogPoint extends LogPoint {
    * update the state of the owning objective function instance and lead to
    * a system call!
    * </p>
-   * 
+   *
    * @return the amount of milliseconds consumed.
    */
   @Override
@@ -66,7 +66,7 @@ final class _CurrentLogPoint extends LogPoint {
    * linked to an objective function, we instead store a copy of it. This
    * is not a good solution, as writing the same object multiple times may
    * result in odd behavior, but for now it is OK.
-   * 
+   *
    * @return the replacement
    */
   private final Object writeReplace() {
@@ -76,7 +76,7 @@ final class _CurrentLogPoint extends LogPoint {
   /**
    * Find a resolved version to be read from a stream. As this log point is
    * linked to an objective function, we instead return a copy of it.
-   * 
+   *
    * @return the replacement
    */
   private final Object readResolve() {

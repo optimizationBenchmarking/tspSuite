@@ -14,8 +14,8 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  * </p>
  */
 public final class ExhaustivelyEnumeratingLocal4Optimizer
-    extends
-    org.logisticPlanning.tsp.solving.operators.permutation.localOpt.LocalOptimizer {
+extends
+org.logisticPlanning.tsp.solving.operators.permutation.localOpt.LocalOptimizer {
 
   /** the serial version uid */
   private static final long serialVersionUID = 0L;
@@ -170,7 +170,7 @@ public final class ExhaustivelyEnumeratingLocal4Optimizer
    * {@link ExhaustivelyEnumeratingLocal4Optimizer}. This method makes a
    * sub-sequence of length 4 inside {@code path}, starting right after
    * index {@code beforeStart}, optimal.
-   * 
+   *
    * @param path
    *          the candidate solution in path representation
    * @param beforeStart
@@ -411,7 +411,7 @@ public final class ExhaustivelyEnumeratingLocal4Optimizer
    * sequence of 2-opt moves starting at the canonical permutation which
    * yields the child-permutations traced here than the path going over
    * (1,2,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,3)
    */
@@ -521,7 +521,7 @@ public final class ExhaustivelyEnumeratingLocal4Optimizer
    * sequence of 2-opt moves starting at the canonical permutation which
    * yields the child-permutations traced here than the path going over
    * (1,4,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,3,2)
    */
@@ -575,7 +575,7 @@ public final class ExhaustivelyEnumeratingLocal4Optimizer
    * sequence of 2-opt moves starting at the canonical permutation which
    * yields the child-permutations traced here than the path going over
    * (1,3,2,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2,4)
    */
@@ -629,7 +629,7 @@ public final class ExhaustivelyEnumeratingLocal4Optimizer
    * sequence of 2-opt moves starting at the canonical permutation which
    * yields the child-permutations traced here than the path going over
    * (4,3,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,3,2,1)
    */

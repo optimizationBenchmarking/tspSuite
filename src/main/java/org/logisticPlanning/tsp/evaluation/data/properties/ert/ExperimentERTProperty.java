@@ -104,11 +104,11 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * </ol>
  */
 public class ExperimentERTProperty extends
-    Property<Experiment, StatisticSeries> {
+Property<Experiment, StatisticSeries> {
 
   /** the dimensions */
   private static final int[] DIMS = { ERTPoint.DIM_RELATIVE_THRESHOLD,
-      ERTPoint.DIM_ERT };
+    ERTPoint.DIM_ERT };
 
   /** the ert source property */
   private final ERTSeriesProperty m_ert;
@@ -121,7 +121,7 @@ public class ExperimentERTProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param ert
    *          the ert
    * @param insts
@@ -134,7 +134,7 @@ public class ExperimentERTProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param ert
@@ -153,7 +153,7 @@ public class ExperimentERTProperty extends
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_ert),//
             HashUtils.hashCode(this.m_insts)),//
-        HashUtils.hashCode(this.getClass()));//
+            HashUtils.hashCode(this.getClass()));//
   }
 
   /** {@inheritDoc} */
@@ -172,7 +172,7 @@ public class ExperimentERTProperty extends
     if (o instanceof ExperimentERTProperty) {
       epb = ((ExperimentERTProperty) o);
       return ((this.m_ert.equals(epb.m_ert)) && //
-      (this.m_insts.equals(epb.m_insts)));
+          (this.m_insts.equals(epb.m_insts)));
     }
     return false;
   }
@@ -205,7 +205,7 @@ public class ExperimentERTProperty extends
         if (scale != 1l) {
           col = new TransformedCollectionView(col,//
               new UnaryFunction[] { Identity.INSTANCE,
-                  FixedScale.scale(Identity.INSTANCE, (1d / scale)) });
+              FixedScale.scale(Identity.INSTANCE, (1d / scale)) });
         }
         dest[i++] = col;
       }

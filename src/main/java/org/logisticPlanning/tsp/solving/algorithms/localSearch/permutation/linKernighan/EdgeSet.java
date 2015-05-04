@@ -21,7 +21,7 @@ public class EdgeSet {
 
   /**
    * Create the edge set
-   * 
+   *
    * @param maxEdgesPerNode
    *          the maximum edges per node
    * @param nn
@@ -37,7 +37,7 @@ public class EdgeSet {
 
   /**
    * Get the edges incident to a given node
-   * 
+   *
    * @param a
    *          the node
    * @param out
@@ -63,7 +63,7 @@ public class EdgeSet {
 
   /**
    * Add an edge
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -93,7 +93,7 @@ public class EdgeSet {
 
   /**
    * Delete an edge if it exists
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -130,7 +130,7 @@ public class EdgeSet {
 
   /**
    * Check if a given edge exists in the edge set
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -160,7 +160,7 @@ public class EdgeSet {
 
   /**
    * Load a candidate solution in path represent into this edge set
-   * 
+   *
    * @param sol
    *          the solution
    */
@@ -185,7 +185,7 @@ public class EdgeSet {
 
   /**
    * Transform the edge set to a candidate solution if it represents a tour
-   * 
+   *
    * @param dest
    *          the destination individual
    * @return {@code true} if and only if the edge set represents a tour
@@ -224,7 +224,7 @@ public class EdgeSet {
 
   /**
    * copy an edge set
-   * 
+   *
    * @param src
    *          the edge set
    */

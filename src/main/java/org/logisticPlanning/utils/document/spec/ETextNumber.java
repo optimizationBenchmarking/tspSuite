@@ -20,7 +20,7 @@ public enum ETextNumber {
 
   /**
    * transform a long number to a string
-   * 
+   *
    * @param number
    *          the number
    * @return the string

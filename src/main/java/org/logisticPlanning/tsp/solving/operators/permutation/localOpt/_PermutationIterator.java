@@ -30,7 +30,7 @@ final class _PermutationIterator implements Iterator<int[]> {
 
   /**
    * create the iterator
-   * 
+   *
    * @param n
    *          the length of the permutations
    */

@@ -17,20 +17,20 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * algorithm over a given time measure for a scale of benchmarks .
  */
 final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder
-    extends ComparisonModule {
+extends ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder(
       final Module owner) {
     super(_ExperimentSetERTDiagramsBase._NAME_PFX
-        + "ScaleOverRelativeObjectiveValues", owner, false);//$NON-NLS-1$ 
+        + "ScaleOverRelativeObjectiveValues", owner, false);//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -53,12 +53,12 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder
                 EPropertyType.TEMPORARILY_STORED, //
                 SharedInstancesProperty.oneMustHave2PointsOfAccessor(axs),//
                 scale), //
-            ((scale == 2) && //
-            Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-            // ((axs == Accessor.DE) || //
-            // (axs == Accessor.FE) || //
-            // (axs == Accessor.NORMALIZED_RUNTIME))
-            ));
+                ((scale == 2) && //
+                    Accessor.UNBIASED_TIME_MEASURES.contains(axs)
+                    // ((axs == Accessor.DE) || //
+                    // (axs == Accessor.FE) || //
+                    // (axs == Accessor.NORMALIZED_RUNTIME))
+                    ));
       }
     }
   }

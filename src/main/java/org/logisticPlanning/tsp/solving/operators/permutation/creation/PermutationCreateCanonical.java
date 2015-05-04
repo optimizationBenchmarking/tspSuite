@@ -15,7 +15,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
 
   /** the globally shared blueprint */
   private static int[] s_blueprint = new int[] { 1, 2, 3, 4, 5, 6, 7, 8,
-      9, 10, 11, 12, 13, 14, 15, 16,//
+    9, 10, 11, 12, 13, 14, 15, 16,//
   };
 
   /** the blueprint */
@@ -28,7 +28,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -64,7 +64,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Create a canonical permutation of the given dimension, i.e., a
    * permutation of the type {@code 1, 2, 3, 4, 5, 6, ..., n}.
-   * 
+   *
    * @param n
    *          the dimension, i.e., the number of elements in the
    *          permutation
@@ -77,7 +77,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Create a canonical permutation of the given dimension, i.e., a
    * permutation of the type {@code 1, 2, 3, 4, 5, 6, ..., n}.
-   * 
+   *
    * @param n
    *          the dimension, i.e., the number of elements in the
    *          permutation
@@ -110,7 +110,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Fill a tour array with node indices so it becomes the canonical tour
    * {@code 1, 2, 3, 4, 5, 6, ..., n}.
-   * 
+   *
    * @param nodes
    *          the nodes to fill with canonical values
    * @param n
@@ -132,7 +132,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Fill a tour array with node indices so it becomes the canonical tour
    * {@code 1, 2, 3, 4, 5, 6, ..., n}.
-   * 
+   *
    * @param nodes
    *          the nodes to fill with canonical values
    */
@@ -143,7 +143,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Fill a tour array with the values of its indices:
    * {@code 0, 1, 2, 3, 4, 5, 6, ..., n-1}.
-   * 
+   *
    * @param nodes
    *          the nodes to fill with its indices
    * @param n
@@ -169,7 +169,7 @@ public class PermutationCreateCanonical extends NullaryOperator<int[]> {
   /**
    * Fill a tour array with the values of its indices:
    * {@code 0, 1, 2, 3, 4, 5, 6, ..., n-1}.
-   * 
+   *
    * @param nodes
    *          the nodes to fill with its indices
    */

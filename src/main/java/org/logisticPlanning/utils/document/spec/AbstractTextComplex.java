@@ -11,7 +11,7 @@ public abstract class AbstractTextComplex extends AbstractText {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -23,7 +23,7 @@ public abstract class AbstractTextComplex extends AbstractText {
 
   /**
    * Write a set of references.
-   * 
+   *
    * @param ref
    *          the references
    * @throws IOException
@@ -57,14 +57,14 @@ public abstract class AbstractTextComplex extends AbstractText {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathBegin(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.inlineMathBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void inlineMathEnd(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.inlineMathEnd(h);
   }
 

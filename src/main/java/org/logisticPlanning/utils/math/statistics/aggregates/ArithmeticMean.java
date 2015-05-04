@@ -16,8 +16,8 @@ public final class ArithmeticMean extends StableSum {
 
   /** the list of supported statistic parameters */
   private static final ArraySetView<EStatisticParameter> LIST = //
-  EStatisticParameter.makeList(EStatisticParameter.ARITHMETIC_MEAN,
-      EStatisticParameter.COUNT, EStatisticParameter.SUM);
+      EStatisticParameter.makeList(EStatisticParameter.ARITHMETIC_MEAN,
+          EStatisticParameter.COUNT, EStatisticParameter.SUM);
 
   /** the count */
   private long m_count;
@@ -29,7 +29,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code double}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -41,7 +41,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code long}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -53,7 +53,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code int}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -65,7 +65,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Obtain the current running mean.
-   * 
+   *
    * @return the current running mean
    */
   @Override
@@ -95,7 +95,7 @@ public final class ArithmeticMean extends StableSum {
   @Override
   public final String toString() {
     return ((EStatisticParameter.ARITHMETIC_MEAN.getShortName() + '=') + //
-    this.getResult());
+        this.getResult());
   }
 
   /** {@inheritDoc} */

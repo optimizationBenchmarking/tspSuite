@@ -64,7 +64,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * >10.1016/0167-8191(88)90098-1</a>; ISSN:&nbsp;<a
  * href="https://www.worldcat.org/issn/01678191">0167-8191</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>
@@ -76,7 +76,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *         </ul>
  */
 public final class PermutationMaximalPreservativeCrossover extends
-    BinaryOperator<int[]> {
+BinaryOperator<int[]> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

@@ -93,7 +93,7 @@ public class FileDataSource extends DataSource {
           } catch (final IllegalArgumentException | NullPointerException
               | IllegalStateException error) {
             throw new IOException(
-                ("Error encountered when creating ExperimentSet with data loaded from folder list "//$NON-NLS-1$ 
+                ("Error encountered when creating ExperimentSet with data loaded from folder list "//$NON-NLS-1$
                     + list + '\''), error);
           }
         }
@@ -131,7 +131,7 @@ public class FileDataSource extends DataSource {
   /**
    * Load a run from a file. The name of the run will be the name of the
    * file.
-   * 
+   *
    * @param f
    *          the file
    * @param temp
@@ -214,7 +214,7 @@ public class FileDataSource extends DataSource {
           } catch (final IllegalArgumentException | NullPointerException
               | IllegalStateException error) {
             throw new IOException(
-                ("Error encountered when creating Run with data loaded from file '"//$NON-NLS-1$ 
+                ("Error encountered when creating Run with data loaded from file '"//$NON-NLS-1$
                     + v + '\''), error);
           }
         }
@@ -226,8 +226,8 @@ public class FileDataSource extends DataSource {
       if ((log != null) && (log.isLoggable(Level.FINER))) {
         s = ("Finished loading file '" + v); //$NON-NLS-1$
         if (res != null) {
-          s += ("': got a new run with " + res.size() + //$NON-NLS-1$ 
-          " points."); //$NON-NLS-1$
+          s += ("': got a new run with " + res.size() + //$NON-NLS-1$
+              " points."); //$NON-NLS-1$
         } else {
           s += ("', but it did not contain any log points."); //$NON-NLS-1$
         }
@@ -241,7 +241,7 @@ public class FileDataSource extends DataSource {
   /**
    * Load a run set from a given folder. This folder is supposed to contain
    * the results of one set of run and one experiment.
-   * 
+   *
    * @param folder
    *          the folder name
    * @param tempRuns
@@ -311,7 +311,7 @@ public class FileDataSource extends DataSource {
             throw new IOException(
                 ("Error encountered when creating RunSet with data loaded from folder '" + v + //$NON-NLS-1$
                     "' for instance '" + inst.name() + '\''),//$NON-NLS-1$
-                error);
+                    error);
           }
         }
 
@@ -324,7 +324,7 @@ public class FileDataSource extends DataSource {
         logger.fine("Finished loading run set from '" + v + //$NON-NLS-1$
             "' for instance '" + inst.name() + //$NON-NLS-1$
             ((res != null) ? ("' discovered " + res.size() + //$NON-NLS-1$
-            " runs.")//$NON-NLS-1$
+                " runs.")//$NON-NLS-1$
                 : "', but found no runs.")); //$NON-NLS-1$
       }
     }
@@ -334,7 +334,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * try to find the experiment setup
-   * 
+   *
    * @param rootDir
    *          the root directory
    * @return the setup, or null
@@ -400,7 +400,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * Load an experiment setup from a buffered reader
-   * 
+   *
    * @param br
    *          the reader
    * @return the experiment setup, or {@code null} if no data was
@@ -500,7 +500,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * Load an experiment setup from a file
-   * 
+   *
    * @param file
    *          the file
    * @return the experiment setup, or {@code null} if no data was
@@ -521,7 +521,7 @@ public class FileDataSource extends DataSource {
     } catch (final IllegalArgumentException | NullPointerException
         | IllegalStateException error) {
       throw new IOException(
-          ("Error encountered when loading experiment setup from file '"//$NON-NLS-1$ 
+          ("Error encountered when loading experiment setup from file '"//$NON-NLS-1$
               + file + '\''), error);
     }
     return null;
@@ -529,7 +529,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * list the files in a directory
-   * 
+   *
    * @param f
    *          the file
    * @param list
@@ -584,7 +584,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * we try to find folders which may contain experiments
-   * 
+   *
    * @param searchPath
    *          the search path
    * @param output
@@ -603,7 +603,7 @@ public class FileDataSource extends DataSource {
   private final boolean __load_experiments(final File searchPath,
       final List<Experiment> output, final List<RunSet> tempRunSets,
       final List<Run> tempRuns, final List<DataPoint> tempDataPoints)
-      throws IOException {
+          throws IOException {
     final int size;
     final File base;
     final Logger log;
@@ -693,7 +693,7 @@ public class FileDataSource extends DataSource {
                   tempRunSets.toArray(new RunSet[size]));
             } catch (final IllegalArgumentException | NullPointerException error) {
               throw new IOException(
-                  ("Error encountered when creating Experiment with data loaded from folder '"//$NON-NLS-1$ 
+                  ("Error encountered when creating Experiment with data loaded from folder '"//$NON-NLS-1$
                       + base + '\''), error);
             }
 
@@ -722,7 +722,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * load the data of this class from a number reader
-   * 
+   *
    * @param br
    *          the number reader
    * @return a new log point, or {@code null} if the end of the stream was
@@ -979,7 +979,7 @@ public class FileDataSource extends DataSource {
 
   /**
    * prepare a string
-   * 
+   *
    * @param str
    *          the string
    * @return the prepared string

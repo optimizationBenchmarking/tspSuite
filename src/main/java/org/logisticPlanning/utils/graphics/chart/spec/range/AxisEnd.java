@@ -16,7 +16,7 @@ public abstract class AxisEnd implements Cloneable {
   /**
    * Is any data needed to determine the axis end, e.g., for
    * {@link #registerPoint(Point)}?
-   * 
+   *
    * @return {@code true} if data is needed, {@code false} otherwise
    */
   public boolean beginData() {
@@ -30,7 +30,7 @@ public abstract class AxisEnd implements Cloneable {
 
   /**
    * Register a given point.
-   * 
+   *
    * @param p
    *          the point
    * @return {@code true} if further points are needed, {@code false} if
@@ -42,14 +42,14 @@ public abstract class AxisEnd implements Cloneable {
 
   /**
    * Calculate the axis end value
-   * 
+   *
    * @return the axis end value
    */
   protected abstract double calcEnd();
 
   /**
    * check if the value is approximately an integer or not
-   * 
+   *
    * @param d
    *          the value to check
    * @return {@code true} if the value can be transformed to a {@code long}
@@ -57,12 +57,12 @@ public abstract class AxisEnd implements Cloneable {
    */
   static final boolean _isLong(final double d) {
     return ((d >= Long.MIN_VALUE) && (d <= Long.MAX_VALUE) && //
-    ComparisonUtils.isClose(d, Math.rint(d), 3));
+        ComparisonUtils.isClose(d, Math.rint(d), 3));
   }
 
   /**
    * Get the end of the axis
-   * 
+   *
    * @return the end of axis
    */
   public final double getEnd() {

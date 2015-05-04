@@ -35,7 +35,7 @@ public class Header extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -81,7 +81,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void macroBegin(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if ((this.m_state != Element.STATE_NOTHING)
         && (this.m_state != Header.STATE_AFTER_MACROS)) {
@@ -96,7 +96,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void macroEnd(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_IN_MACROS) {
       throw new IllegalStateException(//
@@ -110,7 +110,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   public Macro macro(final MacroDescriptor desc) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.macro(desc);
   }
 
@@ -124,7 +124,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void authorsBegin(final Authors h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_AFTER_TITLE) {
       throw new IllegalStateException(//
@@ -138,7 +138,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void authorsEnd(final Authors h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_IN_AUTHORS) {
       throw new IllegalStateException(//
@@ -152,7 +152,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   public void authors(final BibAuthors authors) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.authors(authors);
   }
 
@@ -165,7 +165,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void titleBegin(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if ((this.m_state != Element.STATE_NOTHING)
         && (this.m_state != Header.STATE_AFTER_MACROS)) {
@@ -180,7 +180,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void titleEnd(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_IN_TITLE) {
       throw new IllegalStateException(//
@@ -206,7 +206,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void summaryBegin(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_AFTER_AUTHORS) {
       throw new IllegalStateException(//
@@ -220,7 +220,7 @@ public class Header extends Element {
   /** {@inheritDoc} */
   @Override
   protected void summaryEnd(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Header.STATE_IN_SUMMARY) {
       throw new IllegalStateException(//

@@ -14,7 +14,7 @@ public abstract class FilteredAggregate extends Aggregate {
 
   /**
    * instantiate
-   * 
+   *
    * @param agg
    *          the aggregate
    */
@@ -39,7 +39,7 @@ public abstract class FilteredAggregate extends Aggregate {
 
   /**
    * Should the given value passed to the aggregate?
-   * 
+   *
    * @param value
    *          the value
    * @return {@code true} if the value should be aggregated, {@code false}

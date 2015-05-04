@@ -14,16 +14,16 @@ public final class ReflectionUtils {
    * but is quite nice for finding constants etc.
    */
   private static final String[] DEFAULT_PACKAGES = new String[] { null,//
-      "java.lang.",//$NON-NLS-1$
-      "java.util.", //$NON-NLS-1$
-      "java.io.",//$NON-NLS-1$
-      "java.math.",//$NON-NLS-1$
-      "java.net.",//$NON-NLS-1$
+    "java.lang.",//$NON-NLS-1$
+    "java.util.", //$NON-NLS-1$
+    "java.io.",//$NON-NLS-1$
+    "java.math.",//$NON-NLS-1$
+    "java.net.",//$NON-NLS-1$
   };
 
   /**
    * Try to obtain a class-class.
-   * 
+   *
    * @param name
    *          the string identifying the class
    * @param targetBase
@@ -106,7 +106,7 @@ public final class ReflectionUtils {
    * Try to obtain the value of a static constant. This method will try to
    * divide the identifier passed in into a class name and a constant/field
    * name.
-   * 
+   *
    * @param identifier
    *          the string identifying the class and constant
    * @param target
@@ -178,7 +178,7 @@ public final class ReflectionUtils {
 
   /**
    * Try to obtain the value of a static constant.
-   * 
+   *
    * @param clazz
    *          the class which contains the constant
    * @param constant
@@ -213,9 +213,9 @@ public final class ReflectionUtils {
    */
   public static final <T> T getStaticConstant(final Class<?> clazz,
       final String constant, final Class<T> target)
-      throws ExceptionInInitializerError, NoSuchFieldException,
-      SecurityException, IllegalAccessException, IllegalArgumentException,
-      NullPointerException, ClassCastException {
+          throws ExceptionInInitializerError, NoSuchFieldException,
+          SecurityException, IllegalAccessException, IllegalArgumentException,
+          NullPointerException, ClassCastException {
     final String n;
     final Field f;
     final Object t;

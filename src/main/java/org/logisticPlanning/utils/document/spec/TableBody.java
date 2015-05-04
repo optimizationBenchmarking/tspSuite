@@ -9,7 +9,7 @@ public class TableBody extends AbstractTablePart {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -49,14 +49,14 @@ public class TableBody extends AbstractTablePart {
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_owner.tablePageBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_owner.tablePageEnd(h);
   }
 
@@ -83,7 +83,7 @@ public class TableBody extends AbstractTablePart {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_owner.tableBodyRowEnd(h);
   }
 

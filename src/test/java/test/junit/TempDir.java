@@ -23,7 +23,7 @@ public final class TempDir implements AutoCloseable {
 
   /**
    * Get the temporary directory
-   * 
+   *
    * @return the temporary directory
    * @throws IOException
    *           if something fails
@@ -34,9 +34,9 @@ public final class TempDir implements AutoCloseable {
 
         this.m_file = File.createTempFile(// //
             "test" + //$NON-NLS-1$
-                Integer.toHexString(//
-                    (int) (System.currentTimeMillis() & 0xfffffffl)),//
-            null);
+            Integer.toHexString(//
+                (int) (System.currentTimeMillis() & 0xfffffffl)),//
+                null);
         Assert.assertNotNull("Temp-File creation failed.", this.m_file);//$NON-NLS-1$
 
         this.m_file = this.m_file.getCanonicalFile();
@@ -67,7 +67,7 @@ public final class TempDir implements AutoCloseable {
 
   /**
    * delete a file
-   * 
+   *
    * @param f
    *          the file
    * @throws IOException

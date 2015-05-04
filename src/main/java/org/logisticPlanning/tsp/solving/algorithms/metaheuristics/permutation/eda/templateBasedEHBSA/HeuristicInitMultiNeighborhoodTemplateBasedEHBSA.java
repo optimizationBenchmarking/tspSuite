@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationMultiNeighborhoodMutation;
 
 /**
- * 
+ *
  <p>
  * This is a version of the
  * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.TemplateBasedEHBSA
@@ -734,7 +734,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 public class HeuristicInitMultiNeighborhoodTemplateBasedEHBSA extends
-    _HeuristicInitRefiningTemplateBasedEHBSA {
+_HeuristicInitRefiningTemplateBasedEHBSA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -752,7 +752,7 @@ public class HeuristicInitMultiNeighborhoodTemplateBasedEHBSA extends
   /**
    * Perform the template-based EHBSA with heuristic initialization and
    * multi-neighborhood local search
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -87,7 +87,7 @@ public final class ASinh extends UnaryFunction {
    * with the singleton instance {@link ASinh#INSTANCE ASinh.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link ASinh#INSTANCE
    *         ASinh.INSTANCE})
    */
@@ -100,7 +100,7 @@ public final class ASinh extends UnaryFunction {
    * with the singleton instance {@link ASinh#INSTANCE ASinh.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link ASinh#INSTANCE
    *         ASinh.INSTANCE})
    */

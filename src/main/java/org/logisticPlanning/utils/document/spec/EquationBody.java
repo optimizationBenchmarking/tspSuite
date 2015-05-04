@@ -9,7 +9,7 @@ public class EquationBody extends AbstractMathElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

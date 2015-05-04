@@ -29,7 +29,7 @@ public class IEEEConfContext extends LaTeXContext {
 
   /**
    * create the IEEE Conf context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir

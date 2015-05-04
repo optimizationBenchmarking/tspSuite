@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * Ranking} and
  * {@link org.logisticPlanning.tsp.evaluation.modules.impl.descriptions.eval.DescRanking
  * DescRanking} in detail.
- * 
+ *
  * @param <T>
  *          the type of object being ranked <h2>References</h2>
  *          <ol>
@@ -28,7 +28,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  *          </ol>
  */
 public class Rank<T> extends BasicAssociation<T, Double> implements
-    Comparable<Rank<T>> {
+Comparable<Rank<T>> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Create the rank object
-   * 
+   *
    * @param key
    *          the object being ranked
    */
@@ -66,13 +66,13 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
     }
     throw new IllegalStateException(//
         "Rank cannot be assigned twice: Object '" + this.m_key + //$NON-NLS-1$
-            "' has already rank '" + this.m_rank + //$NON-NLS-1$
-            "' and cannot be modified anymore."); //$NON-NLS-1$
+        "' has already rank '" + this.m_rank + //$NON-NLS-1$
+        "' and cannot be modified anymore."); //$NON-NLS-1$
   }
 
   /**
    * Set the rank of this object. This method can only be called once.
-   * 
+   *
    * @param r
    *          the rank
    */
@@ -83,14 +83,14 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
     } else {
       throw new IllegalArgumentException(//
           "Object '" + this.m_key + //$NON-NLS-1$
-              "' cannot get invalid rank '" + r + //$NON-NLS-1$
-              "'.");//$NON-NLS-1$
+          "' cannot get invalid rank '" + r + //$NON-NLS-1$
+          "'.");//$NON-NLS-1$
     }
   }
 
   /**
    * Get the rank of the {@link #getKey() object}
-   * 
+   *
    * @return the rank
    */
   public final double getRank() {
@@ -121,7 +121,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Get the rank
-   * 
+   *
    * @return the rank
    */
   @Override
@@ -157,13 +157,13 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
     if (o instanceof Rank) {
       r = ((Rank) o);
       return (ComparisonUtils.equals(this.getKey(), r.getKey()) && //
-      (this.m_rank == r.m_rank));
+          (this.m_rank == r.m_rank));
     }
 
     if (o instanceof Map.Entry) {
       e = ((Map.Entry) o);
       return (ComparisonUtils.equals(this.m_key, e.getKey()) && //
-      ComparisonUtils.equals(this.getValue(), e.getValue()));
+          ComparisonUtils.equals(this.getValue(), e.getValue()));
     }
 
     return false;

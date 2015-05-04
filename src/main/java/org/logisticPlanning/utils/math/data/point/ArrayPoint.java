@@ -14,7 +14,7 @@ public class ArrayPoint extends MutablePoint {
 
   /**
    * create
-   * 
+   *
    * @param array
    *          the array
    */
@@ -50,7 +50,7 @@ public class ArrayPoint extends MutablePoint {
   @Override
   public final void toArray(final double[] dest, final int destStart) {
     System
-        .arraycopy(this.m_array, 0, dest, destStart, this.m_array.length);
+    .arraycopy(this.m_array, 0, dest, destStart, this.m_array.length);
   }
 
   /** {@inheritDoc} */

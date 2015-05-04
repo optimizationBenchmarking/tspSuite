@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.solving;
 import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
 
 /**
- * 
+ *
  This is the base class for TSP algorithms. <h2>Implementation Guide for
  * TSP Algorithms</h2>
  * <p id="implementingAnAlgorithm">
@@ -209,7 +209,7 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  * <table border="1" id="invokeMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public static void main(final String[] args) {
  *     {@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner TSPAlgorithmRunner}.{@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner#benchmark(org.logisticPlanning.utils.collections.lists.ArrayListView, java.lang.Class, java.lang.String[]) benchmark}({@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SYMMETRIC_INSTANCES Instance.SYMMETRIC_INSTANCES},
@@ -217,7 +217,7 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  *         args);
  *   }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -329,27 +329,27 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  * <table border="1" id="testMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
- * 
+ *
  * import {@code MyPackage}.{@code MyHeuristic};
- * 
+ *
  * import {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest};
- * 
+ *
  * public class {@code MyHeuristic}Test extends {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest TSPAlgorithmSymmetricTest} {
- * 
+ *
  *   public {@code MyHeuristic}Test() {
  *     super();
  *   }
- * 
+ *
  *   {@code @Override}
  *   protected {@code MyHeuristic} createAlgorithm() {
  *     return new {@code MyHeuristic}();
  *   }
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -2275,7 +2275,7 @@ public class TSPAlgorithm extends TSPModule {
 
   /**
    * instantiate the algorithm class
-   * 
+   *
    * @param name
    *          the name
    */
@@ -2287,7 +2287,7 @@ public class TSPAlgorithm extends TSPModule {
    * Solve the TSP problem defined by the given
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction
    * objective function} {@code f}.
-   * 
+   *
    * @param f
    *          the objective function
    * @see #call(ObjectiveFunction)
@@ -2304,7 +2304,7 @@ public class TSPAlgorithm extends TSPModule {
    * finally calls
    * {@link org.logisticPlanning.tsp.solving.TSPModule#endRun(ObjectiveFunction)
    * endRun}.
-   * 
+   *
    * @param f
    *          the objective function
    * @see #solve(ObjectiveFunction)
@@ -2336,7 +2336,7 @@ public class TSPAlgorithm extends TSPModule {
    * sub-algorithms that your method uses. As soon as these objects are
    * mutable or may hold variables that may change, you must clone them as
    * well.
-   * 
+   *
    * @return a cloned instance of this algorithm, with the same
    *         configuration but distinct data variables and buffers
    */

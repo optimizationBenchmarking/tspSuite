@@ -127,7 +127,7 @@ public enum EAugmentationMethod {
    * {@link org.logisticPlanning.tsp.solving.utils.edgeData.EdgeNumber
    * EdgeNumber} instance (with all data elements set to 0) for storing the
    * edge histogram model.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -158,7 +158,7 @@ public enum EAugmentationMethod {
    * Find the next node to visit. This method is called when all nodes in
    * the candidate set have already been visited and we need to decide
    * which node to take instead.
-   * 
+   *
    * @param sourceNode
    *          the current node
    * @param manager

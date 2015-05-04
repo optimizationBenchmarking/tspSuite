@@ -8,12 +8,12 @@ import java.util.NoSuchElementException;
 /**
  * The base class for iterators that unites the behavior of both, the
  * {@link java.util.Iterator} and {@link java.util.Enumeration} interface.
- * 
+ *
  * @param <T>
  *          the type to iterate about
  */
 public class BasicIterator<T> implements Iterator<T>, Enumeration<T>,
-    Serializable {
+Serializable {
 
   /** The serial version uid */
   private static final long serialVersionUID = 1L;

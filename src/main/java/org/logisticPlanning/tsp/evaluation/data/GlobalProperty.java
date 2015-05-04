@@ -5,21 +5,21 @@ import org.logisticPlanning.utils.document.spec.Document;
 /**
  * A property which returns the result of a property of the owner of a data
  * set when invoked on a data set. *
- * 
+ *
  * @param <DT>
  *          the data set type
  * @param <PT>
  *          the property result
  */
 public final class GlobalProperty<DT extends DataSet<?>, PT> extends
-    Property<DT, PT> {
+Property<DT, PT> {
 
   /** the global property to access */
   private final Property<DataSet<?>, PT> m_global;
 
   /**
    * create
-   * 
+   *
    * @param global
    *          the global property
    */

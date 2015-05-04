@@ -43,7 +43,7 @@ import java.io.PrintWriter;
  * longitute and latitude coordinates {@code X} are converted: to radians
  * using the formula
  * </p>
- * 
+ *
  * <pre>
  * PI = 3.141592;<br/>
  * <span tyle="color:red">deg = nint(X);</span><br/>
@@ -54,7 +54,7 @@ import java.io.PrintWriter;
  * while&nbsp;[<a href="#cite_R2000TQAA" style="font-weight:bold">11</a>]
  * uses the formula:
  * </p>
- * 
+ *
  * <pre>
  * PI = 3.141592;<br/>
  * <span tyle="color:red">deg = (int) X;</span><br/>
@@ -79,7 +79,7 @@ import java.io.PrintWriter;
  * <p>
  * In both cases, the further computation is performed as follows:
  * </p>
- * 
+ *
  * <pre>
  * q1  = cos( longA - longB )<br/>
  * q2  = cos( latA  - latB  )<br/>
@@ -528,7 +528,7 @@ final class _2DGeoDistanceDouble extends _2DDoubleCoords {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -586,7 +586,7 @@ final class _2DGeoDistanceDouble extends _2DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param nodes
    *          The permutation of the nodes from {@code 1..n}
    * @return the total distance sum
@@ -650,7 +650,7 @@ final class _2DGeoDistanceDouble extends _2DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param adj
    *          The adjacency list representation of the solution
    * @return the total distance sum

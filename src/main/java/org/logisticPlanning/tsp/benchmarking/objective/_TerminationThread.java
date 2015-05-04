@@ -36,7 +36,7 @@ final class _TerminationThread extends Thread {
 
   /**
    * enqueue the objective function
-   * 
+   *
    * @param f
    *          the function
    */
@@ -88,7 +88,7 @@ final class _TerminationThread extends Thread {
 
   /**
    * dequeue an objective function
-   * 
+   *
    * @param f
    *          the function
    */
@@ -142,12 +142,12 @@ final class _TerminationThread extends Thread {
           }
         }
 
-        try {
-          _TerminationThread.SYNC.wait(Math.max(0l,
-              (_TerminationThread.s_queue.m_endTime - time)));
-        } catch (final InterruptedException ie) {
-          continue;
-        }
+      try {
+        _TerminationThread.SYNC.wait(Math.max(0l,
+            (_TerminationThread.s_queue.m_endTime - time)));
+      } catch (final InterruptedException ie) {
+        continue;
+      }
       }
     }
   }

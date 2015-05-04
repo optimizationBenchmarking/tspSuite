@@ -71,7 +71,7 @@ public class TabuSearch extends TSPAlgorithm {
 
   /**
    * get the tabu list length
-   * 
+   *
    * @return the tabu list length
    */
   public int getTabuListLength() {
@@ -80,7 +80,7 @@ public class TabuSearch extends TSPAlgorithm {
 
   /**
    * set the tabu list length
-   * 
+   *
    * @param ptabuListLength
    *          the tabu list length
    */
@@ -90,7 +90,7 @@ public class TabuSearch extends TSPAlgorithm {
 
   /**
    * Perform the tabu search
-   * 
+   *
    * @param args
    *          the command line arguments
    */

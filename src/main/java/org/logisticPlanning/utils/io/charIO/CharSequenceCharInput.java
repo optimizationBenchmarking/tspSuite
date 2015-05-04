@@ -12,7 +12,7 @@ public final class CharSequenceCharInput extends CharInput {
 
   /**
    * create
-   * 
+   *
    * @param data
    *          the data
    */

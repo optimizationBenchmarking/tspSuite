@@ -2,7 +2,7 @@ package org.logisticPlanning.utils.collections.basic;
 
 /**
  * A basic implementation of the {@link java.util.Map.Entry} interface.
- * 
+ *
  * @param <K>
  *          the key type
  * @param <V>
@@ -17,7 +17,7 @@ public class BasicMapEntry<K, V> extends BasicAssociation<K, V> {
 
   /**
    * create
-   * 
+   *
    * @param key
    *          the key
    * @param value

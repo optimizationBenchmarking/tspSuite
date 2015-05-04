@@ -21,7 +21,7 @@ public class FigureBody extends Element {
 
   /**
    * create the figure body element
-   * 
+   *
    * @param relativeNameBase
    *          the uri denoting the basis for the relative name of this
    *          graphic. this name may be extended or modified by
@@ -47,7 +47,7 @@ public class FigureBody extends Element {
 
   /**
    * Get the relative name of this figure
-   * 
+   *
    * @return the relative name of this figure
    */
   public final URI getRelativeName() {
@@ -56,14 +56,13 @@ public class FigureBody extends Element {
 
   /**
    * Complete a relative name
-   * 
+   *
    * @param relativeNameBase
    *          the relative name base
    * @return the completed relative name
    * @throws URISyntaxException
    *           if the uri syntax is wrong
    */
-  @SuppressWarnings("unused")
   protected URI makeRelativeName(final URI relativeNameBase)
       throws URISyntaxException {
     return relativeNameBase;
@@ -71,7 +70,7 @@ public class FigureBody extends Element {
 
   /**
    * Make the dimensions
-   * 
+   *
    * @param dim
    *          the dimension
    * @return the fixed dimension
@@ -89,7 +88,7 @@ public class FigureBody extends Element {
 
   /**
    * Obtain the size of the figure's body in millimeters
-   * 
+   *
    * @return the size of the figure's body in millimeters
    */
   public final Dimension2D getSizeInMM() {
@@ -120,14 +119,14 @@ public class FigureBody extends Element {
   /** {@inheritDoc} */
   @Override
   protected void graphicBegin(final Graphic h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.graphicBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void graphicEnd(final Graphic h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.graphicEnd(h);
   }
 

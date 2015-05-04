@@ -35,7 +35,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * and invokes them. This allows for a more targeted allocation and
  * de-allocation of data structures for each run.
  * </p>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -48,7 +48,7 @@ public final class MultiUnaryOperator<P> extends UnaryOperator<P> {
 
   /**
    * instantiate
-   * 
+   *
    * @param sub
    *          the sub-operators
    */
@@ -68,6 +68,7 @@ public final class MultiUnaryOperator<P> extends UnaryOperator<P> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final MultiUnaryOperator<P> clone() {
     final MultiUnaryOperator<P> res;
     final UnaryOperator<P>[] a;

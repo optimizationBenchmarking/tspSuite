@@ -17,7 +17,7 @@ public abstract class TestDescription extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    * @param name
@@ -29,7 +29,7 @@ public abstract class TestDescription extends DescriptionModule {
 
   /**
    * Write the name of the test in a text
-   * 
+   *
    * @param out
    *          the output destination
    * @param plural
@@ -44,7 +44,7 @@ public abstract class TestDescription extends DescriptionModule {
 
   /**
    * Get the name
-   * 
+   *
    * @param plural
    *          should we write the name in plural?
    * @return the name
@@ -53,7 +53,7 @@ public abstract class TestDescription extends DescriptionModule {
 
   /**
    * Write the references about this test
-   * 
+   *
    * @param txt
    *          the destination
    * @param how
@@ -61,7 +61,6 @@ public abstract class TestDescription extends DescriptionModule {
    * @throws IOException
    *           if i/o fails
    */
-  @SuppressWarnings("unused")
   public void cite(final ECitationMode how, final AbstractTextComplex txt)
       throws IOException {
     //

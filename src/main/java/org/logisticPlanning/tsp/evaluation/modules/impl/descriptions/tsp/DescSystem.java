@@ -35,7 +35,7 @@ public final class DescSystem extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -76,24 +76,24 @@ public final class DescSystem extends DescriptionModule {
     final Label lbl;
 
     body.write(//
-    "The benchmarking system collects log points based on the four time measures"); //$NON-NLS-1$
+        "The benchmarking system collects log points based on the four time measures"); //$NON-NLS-1$
     lbl = this.m_tm.getLabel(data);
     if (lbl != null) {
-      body.write(" introduced in ");//$NON-NLS-1$    
+      body.write(" introduced in ");//$NON-NLS-1$
       body.reference(lbl);
     }
     body.write(//
-    " and provides two sources of information that an algorithm can use when solving a TSP: The algorithm can either query the distance between two nodes or the total length of a tour. For the latter, both the path and adjacency representation (see "); //$NON-NLS-1$
+        " and provides two sources of information that an algorithm can use when solving a TSP: The algorithm can either query the distance between two nodes or the total length of a tour. For the latter, both the path and adjacency representation (see "); //$NON-NLS-1$
     body.reference(this.m_rep.getLabel(data));
 
     body.write(//
-    ") are supported. Apart from that, no other information is available to the algorithm. This concerns, in particular, geometrical information."); //$NON-NLS-1$
+        ") are supported. Apart from that, no other information is available to the algorithm. This concerns, in particular, geometrical information."); //$NON-NLS-1$
 
     body.write(//
-    "The system applies an algorithm to the TSPLib benchmark sets discussed in "); //$NON-NLS-1$
+        "The system applies an algorithm to the TSPLib benchmark sets discussed in "); //$NON-NLS-1$
     body.reference(this.m_bm.getLabel(data));
     body.write(//
-    ", be default granting a computational budged of at most one hour, "); //$NON-NLS-1$
+        ", be default granting a computational budged of at most one hour, "); //$NON-NLS-1$
     try (InlineMath im = body.inlineMath()) {
       try (MathOp mul = im.mathOp(EMathOp.MUL)) {
         try (MathOpParam p1 = mul.mathOpParam()) {
@@ -114,7 +114,7 @@ public final class DescSystem extends DescriptionModule {
     Accessor.DE.writeShortName(body, true);
 
     body.write(//
-    ", or "); //$NON-NLS-1$
+        ", or "); //$NON-NLS-1$
     try (InlineMath im = body.inlineMath()) {
       try (MathOp mul = im.mathOp(EMathOp.MUL)) {
         try (MathOpParam p1 = mul.mathOpParam()) {
@@ -135,7 +135,7 @@ public final class DescSystem extends DescriptionModule {
     Accessor.FE.writeShortName(body, true);
 
     body.write(//
-    " \u2012 whichever ellapses earlier."); //$NON-NLS-1$
+        " \u2012 whichever ellapses earlier."); //$NON-NLS-1$
 
     super.writeSectionBody(body, data);
   }

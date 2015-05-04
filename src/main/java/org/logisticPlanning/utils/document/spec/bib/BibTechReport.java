@@ -24,7 +24,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * create a record for technical records
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -75,17 +75,17 @@ public class BibTechReport extends BibRecord {
         //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_institute)),//
-        HashUtils.combineHashes(
-            HashUtils.hashCode(this.m_instituteAddress),//
             HashUtils.combineHashes(
-                //
-                HashUtils.hashCode(this.m_series),
-                HashUtils.hashCode(this.m_number))));
+                HashUtils.hashCode(this.m_instituteAddress),//
+                HashUtils.combineHashes(
+                    //
+                    HashUtils.hashCode(this.m_series),
+                    HashUtils.hashCode(this.m_number))));
   }
 
   /**
    * Get the institute
-   * 
+   *
    * @return the institute
    */
   public final String getInstitute() {
@@ -94,7 +94,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the institute's address
-   * 
+   *
    * @return the institute's address
    */
   public final String getInstituteAddress() {
@@ -103,7 +103,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the series
-   * 
+   *
    * @return the series
    */
   public final String getSeries() {
@@ -112,7 +112,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the number
-   * 
+   *
    * @return the number
    */
   public final String getNumber() {
@@ -130,8 +130,8 @@ public class BibTechReport extends BibRecord {
       return (ComparisonUtils.equals(this.m_institute, x.m_institute) && //
           ComparisonUtils.equals(this.m_instituteAddress,
               x.m_instituteAddress) && //
-          ComparisonUtils.equals(this.m_series, x.m_series) && //
-      ComparisonUtils.equals(this.m_number, x.m_number));
+              ComparisonUtils.equals(this.m_series, x.m_series) && //
+              ComparisonUtils.equals(this.m_number, x.m_number));
     }
 
     return false;

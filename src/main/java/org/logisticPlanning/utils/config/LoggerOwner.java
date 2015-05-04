@@ -23,7 +23,7 @@ public abstract class LoggerOwner extends Configurable {
 
   /**
    * instantiate the driver
-   * 
+   *
    * @param name
    *          the driver's name
    * @param loggerParam
@@ -39,12 +39,12 @@ public abstract class LoggerOwner extends Configurable {
     s = TextUtils.prepare(loggerParam);
     this.m_loggerParam = (((s == null) || (s
         .equalsIgnoreCase(LoggerOwner.PARAM_LOGGER))) ? LoggerOwner.PARAM_LOGGER
-        : s);
+            : s);
   }
 
   /**
    * Set the logger to use
-   * 
+   *
    * @param logger
    *          the logger to use
    */
@@ -54,7 +54,7 @@ public abstract class LoggerOwner extends Configurable {
 
   /**
    * Get the logger to use
-   * 
+   *
    * @return the logger to use
    */
   protected Logger getLogger() {

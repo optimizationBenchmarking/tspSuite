@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.p
 import java.util.Arrays;
 
 /**
- * 
+ *
  <p>
  * An internal class to represent an asymmetric pheromone matrix for the
  * pACO&nbsp;[<a href="#cite_G2004AAISAMCE" style="font-weight:bold">1</a>,
@@ -128,7 +128,7 @@ public final class PheromoneMatrix {
 
   /**
    * instantiate the matrix
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param k
@@ -159,7 +159,7 @@ public final class PheromoneMatrix {
 
   /**
    * get the pheromone value for the edge from {@code a} to {@code b}
-   * 
+   *
    * @param a
    *          the first node index
    * @param b
@@ -180,7 +180,7 @@ public final class PheromoneMatrix {
 
   /**
    * add a pheromone value for a given edge
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -213,7 +213,7 @@ public final class PheromoneMatrix {
 
   /**
    * delete a pheromone value for a given edge
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -245,7 +245,7 @@ public final class PheromoneMatrix {
 
   /**
    * add a whole permutation
-   * 
+   *
    * @param perm
    *          the permutation
    */
@@ -261,7 +261,7 @@ public final class PheromoneMatrix {
 
   /**
    * delete a whole permutation
-   * 
+   *
    * @param perm
    *          the permutation
    */

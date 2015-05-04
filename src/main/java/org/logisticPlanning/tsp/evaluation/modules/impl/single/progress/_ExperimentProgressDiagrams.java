@@ -64,7 +64,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -96,7 +96,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
 
   /**
    * make a figure
-   * 
+   *
    * @param exp
    *          the experiment
    * @param includeMean
@@ -112,7 +112,6 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ArraySetView<RunSet> exp,
       final boolean includeMean, final Accessor axs,
       final boolean includeHighQuantiles, final ArrayList<Line2D> lines,
@@ -138,27 +137,27 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
           new TransformedCollectionView(
               new SubCollectionView(series, new int[] {
                   StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q95 }),
-              transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                  transform), null, ELineMode.STAIRS_KEEP_LEFT));
     }
     lines.add(new Line2D(EStatisticParameter.PERCENTILE_75.getShortName(),
         null,//
         new TransformedCollectionView(
             new SubCollectionView(series, new int[] {
                 StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q75 }),
-            transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                transform), null, ELineMode.STAIRS_KEEP_LEFT));
     lines.add(new Line2D(EStatisticParameter.MEDIAN.getShortName(), null,//
         new TransformedCollectionView(new SubCollectionView(series,
             new int[] { StatisticSeries.DIM_X,
-                StatisticSeries.DIM_Y_MEDIAN }), transform), null,
-        ELineMode.STAIRS_KEEP_LEFT));
+            StatisticSeries.DIM_Y_MEDIAN }), transform), null,
+            ELineMode.STAIRS_KEEP_LEFT));
 
     if (includeMean) {
       lines.add(new Line2D(EStatisticParameter.ARITHMETIC_MEAN
           .getShortName(), null,//
           new TransformedCollectionView(new SubCollectionView(series,
               new int[] { StatisticSeries.DIM_X,
-                  StatisticSeries.DIM_Y_MEAN }), transform), null,
-          ELineMode.STAIRS_KEEP_LEFT));
+              StatisticSeries.DIM_Y_MEAN }), transform), null,
+              ELineMode.STAIRS_KEEP_LEFT));
     }
 
     lines.add(new Line2D(EStatisticParameter.PERCENTILE_25.getShortName(),
@@ -166,7 +165,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
         new TransformedCollectionView(
             new SubCollectionView(series, new int[] {
                 StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q25 }),
-            transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                transform), null, ELineMode.STAIRS_KEEP_LEFT));
 
     if (includeHighQuantiles) {
       lines.add(new Line2D(EStatisticParameter.PERCENTILE_05
@@ -174,7 +173,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
           new TransformedCollectionView(
               new SubCollectionView(series, new int[] {
                   StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q05 }),
-              transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                  transform), null, ELineMode.STAIRS_KEEP_LEFT));
     }
 
     if (this.m_printRuns) {
@@ -221,9 +220,9 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
     hasUseful = false;
     for (final Accessor axs : Accessor.ACCESSORS) {
       useful[axs.ordinal()] = b = //
-      data.hasAny(new CompoundCondition<>(LAnd.INSTANCE,
-          NotEmptyCondition.INSTANCE, new CollectiveCondition<>(
-              RunHas2DifferentPoints.forAccessor(axs), false)));
+          data.hasAny(new CompoundCondition<>(LAnd.INSTANCE,
+              NotEmptyCondition.INSTANCE, new CollectiveCondition<>(
+                  RunHas2DifferentPoints.forAccessor(axs), false)));
       hasUseful |= b;
     }
 
@@ -273,7 +272,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
                 + Accessor.DE.getShortName()
                 + _ExperimentProgressDiagrams.SCAP_2
                 + Accessor.DE.getScaleString() + '.'),//
-            true)) {
+                true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentProgressBaseA.CAP_1);
@@ -310,7 +309,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                      ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                          ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                           : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
@@ -350,7 +349,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(//
                     axs.isTime() ? //
-                    ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                        ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                         : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                 fc++;
                 chart.setLegendType(includeLegend ? ELegendType.PUT_LEGEND

@@ -68,57 +68,57 @@ final class _WY2004AHEAFTSP extends LiteratureResultPointSet {
             new BibAuthors(//
                 new BibAuthor("Christopher M.", "White"),//$NON-NLS-1$//$NON-NLS-2$
                 new BibAuthor("Gary G.", "Yen")//$NON-NLS-1$//$NON-NLS-2$
-            ),//
-            "A Hybrid Evolutionary Algorithm for Traveling Salesman Problem",//$NON-NLS-1$
-            new BibProceedings(//
-                "CEC'04: Proceedings of the IEEE Congress on Evolutionary Computation, vol. 2",//$NON-NLS-1$
-                new BibDate(2004, EBibMonth.JUNE, 20),//
-                new BibDate(2004, EBibMonth.JUNE, 23),//
-                BibAuthors.EMPTY,//
-                "Portland, OR, USA",//$NON-NLS-1$
-                "IEEE Computer Society Press",//$NON-NLS-1$
-                "Los Alamitos, CA, USA",//$NON-NLS-1$
-                null, null,//
-                null, null//
-            ),//
-            "1473", "1478",//$NON-NLS-1$//$NON-NLS-2$
-            null,//
-            null,//
-            "10.1109/CEC.2004.1331070"//$NON-NLS-1$
-        ) },//
-        new LiteratureResultPoint[] {//
-        //
+                ),//
+                "A Hybrid Evolutionary Algorithm for Traveling Salesman Problem",//$NON-NLS-1$
+                new BibProceedings(//
+                    "CEC'04: Proceedings of the IEEE Congress on Evolutionary Computation, vol. 2",//$NON-NLS-1$
+                    new BibDate(2004, EBibMonth.JUNE, 20),//
+                    new BibDate(2004, EBibMonth.JUNE, 23),//
+                    BibAuthors.EMPTY,//
+                    "Portland, OR, USA",//$NON-NLS-1$
+                    "IEEE Computer Society Press",//$NON-NLS-1$
+                    "Los Alamitos, CA, USA",//$NON-NLS-1$
+                    null, null,//
+                    null, null//
+                    ),//
+                    "1473", "1478",//$NON-NLS-1$//$NON-NLS-2$
+                    null,//
+                    null,//
+                    "10.1109/CEC.2004.1331070"//$NON-NLS-1$
+            ) },//
+            new LiteratureResultPoint[] {//
+            //
             new LiteratureResultPoint(Instance.EIL51,//
                 Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.EIL51),//
                 Accessor.F, 428.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.EIL51,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.EIL51),//
-                Accessor.F, 428d, EStatisticParameter.MINIMUM),//
-            //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.KROA100),//
-                Accessor.F, 21285d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.KROA100,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.KROA100),//
-                Accessor.F, 21285d, EStatisticParameter.MINIMUM),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.D198),//
-                Accessor.F, 15839.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D198,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.D198),//
-                Accessor.F, 15797d, EStatisticParameter.MINIMUM),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.LIN318),//
-                Accessor.F, 42605.3d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.LIN318),//
-                Accessor.F, 42334d, EStatisticParameter.MINIMUM),//
+                //
+                new LiteratureResultPoint(Instance.EIL51,//
+                    Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.EIL51),//
+                    Accessor.F, 428d, EStatisticParameter.MINIMUM),//
+                    //
+                    new LiteratureResultPoint(Instance.KROA100,//
+                        Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.KROA100),//
+                        Accessor.F, 21285d, EStatisticParameter.ARITHMETIC_MEAN),//
+                        //
+                        new LiteratureResultPoint(Instance.KROA100,//
+                            Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.KROA100),//
+                            Accessor.F, 21285d, EStatisticParameter.MINIMUM),//
+                            //
+                            new LiteratureResultPoint(Instance.D198,//
+                                Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.D198),//
+                                Accessor.F, 15839.5d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                //
+                                new LiteratureResultPoint(Instance.D198,//
+                                    Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.D198),//
+                                    Accessor.F, 15797d, EStatisticParameter.MINIMUM),//
+                                    //
+                                    new LiteratureResultPoint(Instance.LIN318,//
+                                        Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.LIN318),//
+                                        Accessor.F, 42605.3d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                        //
+                                        new LiteratureResultPoint(Instance.LIN318,//
+                                            Accessor.FE, _WY2004AHEAFTSP.__FEs(Instance.LIN318),//
+                                            Accessor.F, 42334d, EStatisticParameter.MINIMUM),//
         });
   }
 
@@ -126,7 +126,7 @@ final class _WY2004AHEAFTSP extends LiteratureResultPointSet {
    * calculate the FEs: population size is {@code n}, 1000 generations with
    * initialization, and in each generation, there are {@code n/2}
    * offspring from crossover which then undergo a local search.
-   * 
+   *
    * @param inst
    *          the instance
    * @return the FEs

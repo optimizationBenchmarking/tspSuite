@@ -14,7 +14,7 @@ class BasicUnaryDerivative extends UnaryFunction {
 
   /**
    * Create
-   * 
+   *
    * @param f
    *          the function
    */

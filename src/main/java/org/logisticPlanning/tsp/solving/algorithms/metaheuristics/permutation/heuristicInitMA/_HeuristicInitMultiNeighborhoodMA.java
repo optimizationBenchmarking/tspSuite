@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationMultiNeighborhoodMutation;
 
 /**
- * 
+ *
  <p>
  * This class is an internal class. You should never load or instantiate
  * it. Use the classes derived from it.
@@ -563,20 +563,20 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 abstract class _HeuristicInitMultiNeighborhoodMA extends
-    PermutationHeuristicInitMA {
+PermutationHeuristicInitMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          a string to be added to the base name
    */
   public _HeuristicInitMultiNeighborhoodMA(final String name) {
     super(//
         "Permutation-based heuristic-initialized Multi-Neighborhood Search Memetic Algorithm "//$NON-NLS-1$
-            + name);
+        + name);
   }
 
   /** {@inheritDoc} */

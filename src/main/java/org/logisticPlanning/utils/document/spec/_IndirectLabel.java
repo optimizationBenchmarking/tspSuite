@@ -10,7 +10,7 @@ final class _IndirectLabel extends Label {
 
   /**
    * create the reference
-   * 
+   *
    * @param label
    *          the label
    */

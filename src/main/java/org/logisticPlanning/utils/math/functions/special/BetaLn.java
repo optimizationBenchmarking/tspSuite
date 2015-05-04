@@ -67,8 +67,8 @@ public final class BetaLn extends BinaryFunction {
   @Override
   public final double compute(final double x1, final double x2) {
     return ((GammaLn.INSTANCE.compute(x1) + //
-    GammaLn.INSTANCE.compute(x2)) - //
-    GammaLn.INSTANCE.compute(x1 + x2));
+        GammaLn.INSTANCE.compute(x2)) - //
+        GammaLn.INSTANCE.compute(x1 + x2));
   }
 
   //
@@ -81,7 +81,7 @@ public final class BetaLn extends BinaryFunction {
    * with the singleton instance {@link BetaLn#INSTANCE BetaLn.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link BetaLn#INSTANCE
    *         BetaLn.INSTANCE})
    */
@@ -94,7 +94,7 @@ public final class BetaLn extends BinaryFunction {
    * with the singleton instance {@link BetaLn#INSTANCE BetaLn.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link BetaLn#INSTANCE
    *         BetaLn.INSTANCE})
    */

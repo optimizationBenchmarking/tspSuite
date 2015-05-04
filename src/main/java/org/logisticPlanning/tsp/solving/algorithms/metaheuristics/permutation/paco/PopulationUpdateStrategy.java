@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.p
 import org.logisticPlanning.tsp.solving.TSPModule;
 
 /**
- * 
+ *
  The population update strategy to be used in the Population-based ACO.
  */
 public abstract class PopulationUpdateStrategy extends TSPModule {
@@ -12,7 +12,7 @@ public abstract class PopulationUpdateStrategy extends TSPModule {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -22,7 +22,7 @@ public abstract class PopulationUpdateStrategy extends TSPModule {
 
   /**
    * update the population and pheromone matrix
-   * 
+   *
    * @param pop
    *          the population
    * @param genBest

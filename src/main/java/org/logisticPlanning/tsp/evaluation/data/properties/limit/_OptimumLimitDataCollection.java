@@ -12,7 +12,7 @@ final class _OptimumLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param rs
    *          the run set
    */

@@ -30,7 +30,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -50,7 +50,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * Does this figure span over all columns in a multi-column document?
-   * 
+   *
    * @return {@code true} if this figure spans over all columns,
    *         {@code false} if it only uses a single columns
    */
@@ -60,7 +60,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * Get the figure index
-   * 
+   *
    * @return the figure index
    */
   public final int getFigureIndex() {
@@ -121,7 +121,7 @@ public class Figure extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public FigureCaption figureCaption() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.figureCaption();
   }
 
@@ -129,14 +129,14 @@ public class Figure extends AbstractLabeledElement {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-      throws IOException, URISyntaxException {
+          throws IOException, URISyntaxException {
     return super.figureBodyCreate(owner, relativeNameBase, sizeInMM);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Figure.STATE_AFTER_CAPTION) {
       throw new IllegalStateException(//
@@ -150,7 +150,7 @@ public class Figure extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Figure.STATE_IN_BODY) {
       throw new IllegalStateException(//

@@ -12,7 +12,7 @@ final class _MultiLabel extends _OwnedLabel {
 
   /**
    * Create a multi-label
-   * 
+   *
    * @param first
    *          the first label
    */

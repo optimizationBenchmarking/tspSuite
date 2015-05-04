@@ -99,7 +99,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * </ol>
  */
 final class _ExperimentSetECDFOverScaleDiagrams extends
-    _ExperimentSetECDFBase {
+_ExperimentSetECDFBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -135,7 +135,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -181,7 +181,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param instances
@@ -195,12 +195,11 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final SameScaleInstances instances, final Document doc,
       final ArrayList<Line2D> lines,
       final ArrayList<Map.Entry<Experiment, Object>> areaLines)
-      throws IOException {
+          throws IOException {
     final int[] select;
     final UnaryFunction[] transform;
     final ExperimentECDFProperty prop;
@@ -300,9 +299,9 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
                     + _ExperimentSetECDFOverScaleDiagrams.CAP_5B
                     + axs.getScaleString() + _ExperimentSetECDFOverScaleDiagrams.CAP_5C)
                     : ("")) + _ExperimentSetECDFOverScaleDiagrams.CAP_6),//$NON-NLS-1$
-            (_ExperimentSetECDFOverScaleDiagrams.SUB_CAP_1 + 100
-                + _ExperimentSetECDFOverScaleDiagrams.SUB_CAP_2 + 100),//
-            true)) {
+                    (_ExperimentSetECDFOverScaleDiagrams.SUB_CAP_1 + 100
+                        + _ExperimentSetECDFOverScaleDiagrams.SUB_CAP_2 + 100),//
+                        true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
 
@@ -358,7 +357,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                      ECDFUtils.DEFAULT_AXIS_DEF_TIME//
+                          ECDFUtils.DEFAULT_AXIS_DEF_TIME//
                           : ECDFUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
@@ -405,11 +404,11 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
             try (FigureBody fb = sf.figureBody(
                 this.makeURI(Module.GRAPHICS_FOLDER, null, null,
                     (ssi.getLowerScaleBound() + "_to_" + //$NON-NLS-1$
-                    ssi.getUpperScaleBound())), dim)) {
+                        ssi.getUpperScaleBound())), dim)) {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(//
                     axs.isTime() ? //
-                    ECDFUtils.DEFAULT_AXIS_DEF_TIME//
+                        ECDFUtils.DEFAULT_AXIS_DEF_TIME//
                         : ECDFUtils.DEFAULT_AXIS_DEF_COUNT);
                 chart.addLines(lines);
                 fc++;
@@ -467,7 +466,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
       body.write(". The ");//$NON-NLS-1$
       body.macroInvoke(Macros.ECDF);
       body.write(//
-      " are aggregated over the instances in each group and their arithmetic means are plotted. The x-axes of the diagrams are the ");//$NON-NLS-1$
+          " are aggregated over the instances in each group and their arithmetic means are plotted. The x-axes of the diagrams are the ");//$NON-NLS-1$
       axs.writeShortName(body, true);
       if (axs.isScaled()) {
         body.write(" (scaled by");//$NON-NLS-1$
@@ -475,7 +474,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
         body.writeChar(')');
       }
       body.write(//
-      " on a log-scale. Larger values are better for the ");//$NON-NLS-1$
+          " on a log-scale. Larger values are better for the ");//$NON-NLS-1$
       body.macroInvoke(Macros.ECDF);
       body.writeChar('.');
 

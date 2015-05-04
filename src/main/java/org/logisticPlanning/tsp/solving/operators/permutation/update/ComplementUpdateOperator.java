@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer;
  * A complement update operation.
  */
 public final class ComplementUpdateOperator extends
-    PermutationUpdateOperator {
+PermutationUpdateOperator {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -16,7 +16,7 @@ public final class ComplementUpdateOperator extends
 
   /**
    * create
-   * 
+   *
    * @param u
    *          the operator to complement
    */

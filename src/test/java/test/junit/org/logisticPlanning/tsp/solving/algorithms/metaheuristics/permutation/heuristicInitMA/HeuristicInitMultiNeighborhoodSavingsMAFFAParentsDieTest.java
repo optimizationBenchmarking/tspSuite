@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Multi-Neighborhood mutation and FFA
  */
 public class HeuristicInitMultiNeighborhoodSavingsMAFFAParentsDieTest
-    extends TSPAlgorithmSymmetricTest {
+extends TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodSavingsMAFFAParentsDieTest() {

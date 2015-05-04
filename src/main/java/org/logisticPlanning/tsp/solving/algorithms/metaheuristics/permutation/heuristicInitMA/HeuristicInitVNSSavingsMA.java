@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.benchmarking.instances.Instance;
 import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
 
 /**
- * 
+ *
  <p>
  * A Memetic Algorithm (MA)&nbsp;[<a href="#cite_M1989MA"
  * style="font-weight:bold">1</a>, <a href="#cite_M2002MA"
@@ -700,7 +700,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
  * </ol>
  */
 public final class HeuristicInitVNSSavingsMA extends
-    _HeuristicInitVNSSavingsMA {
+_HeuristicInitVNSSavingsMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -713,7 +713,7 @@ public final class HeuristicInitVNSSavingsMA extends
 
   /**
    * Perform the heuristic init vns savings MA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

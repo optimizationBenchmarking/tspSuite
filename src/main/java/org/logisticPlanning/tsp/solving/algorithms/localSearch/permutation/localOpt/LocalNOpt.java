@@ -57,7 +57,7 @@ public class LocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the Local Optimization
-   * 
+   *
    * @param args
    *          the command line arguments
    */
@@ -172,7 +172,7 @@ public class LocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Set the local optimizer
-   * 
+   *
    * @param opt
    *          the local optimizer
    */
@@ -182,7 +182,7 @@ public class LocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Should we also test randomly overlapping patches?
-   * 
+   *
    * @param overlap
    *          {@code true} if we also should test randomly overlapping
    *          patches

@@ -42,7 +42,7 @@ public final class TestComparisonsHolder extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -168,7 +168,7 @@ public final class TestComparisonsHolder extends RankedComparisonModule {
               true,//
               Double.NaN,//
               ((_TestComparisons) (ch.get(0))).m_property
-                  .getSharedInstancesProperty().get(data, doc).size(),//
+              .getSharedInstancesProperty().get(data, doc).size(),//
               label, this.m_descRanking.getLabel(data));
 
           cr = new TestComparisonResult(data);

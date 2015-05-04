@@ -25,7 +25,7 @@ public class ACMConfContext extends LaTeXContext {
 
   /**
    * create the ACM Conference context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir

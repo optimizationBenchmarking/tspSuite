@@ -388,77 +388,77 @@ public class LaTeXDocument extends Document {
 
   /** positive infinity */
   private static final char[] POSITIVE_INFINITY = { '{', '\\', 'e', 'n',
-      's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{', '+', '\\', 'i', 'n',
-      'f', 't', 'y', '}', '}' };
+    's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{', '+', '\\', 'i', 'n',
+    'f', 't', 'y', '}', '}' };
 
   /** negative infinity */
   private static final char[] NEGATIVE_INFINITY = { '{', '\\', 'e', 'n',
-      's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{', '-', '\\', 'i', 'n',
-      'f', 't', 'y', '}', '}' };
+    's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{', '-', '\\', 'i', 'n',
+    'f', 't', 'y', '}', '}' };
 
   /** nan */
   private static final char[] NAN = { '{', '\\', 'e', 'n', 's', 'u', 'r',
-      'e', 'm', 'a', 't', 'h', '{', '\\', 'e', 'm', 'p', 't', 'y', 's',
-      'e', 't', '}', '}' };
+    'e', 'm', 'a', 't', 'h', '{', '\\', 'e', 'm', 'p', 't', 'y', 's',
+    'e', 't', '}', '}' };
 
   /** close a command */
   private static final char[] COMMAND_END = { '}', '}' };
 
   /** the numprint begin */
   private static final char[] NUMPRINT_BEGIN = { '{', '\\', 'n', 'u', 'm',
-      'p', 'r', 'i', 'n', 't', '{' };
+    'p', 'r', 'i', 'n', 't', '{' };
 
   /** end numprint */
   private static final int NUMPRINT_END_LEN = 2;
 
   /** begin text normal */
   private static final char[] TEXTNORMAL_BEGIN = { '{', '\\', 't', 'e',
-      'x', 't', 'n', 'o', 'r', 'm', 'a', 'l', '{' };
+    'x', 't', 'n', 'o', 'r', 'm', 'a', 'l', '{' };
 
   /** end text normal */
   private static final int TEXTNORMAL_END = 2;
 
   /** the title begin */
   private static final char[] TITLE_BEGIN = { '\\', 't', 'i', 't', 'l',
-      'e', '{' };
+    'e', '{' };
 
   /** end title */
   private static final int TITLE_END_LEN = 1;
 
   /** the label begin */
   private static final char[] LABEL_BEGIN = { '\\', 'l', 'a', 'b', 'e',
-      'l', '{' };
+    'l', '{' };
 
   /** end label */
   private static final int LABEL_END_LEN = 1;
 
   /** the sequence starts */
   private static final char[][] SEQUENCE_BEGIN = { EmptyUtils.EMPTY_CHARS,// COMMA
-      EmptyUtils.EMPTY_CHARS,// AND
-      EmptyUtils.EMPTY_CHARS,// OR
-      { 'e', 'i', 't', 'h', 'e', 'r', ' ' },// xor
-      { 'n', 'e', 'i', 't', 'h', 'e', 'r', ' ' },// nor
-      EmptyUtils.EMPTY_CHARS,// to
+    EmptyUtils.EMPTY_CHARS,// AND
+    EmptyUtils.EMPTY_CHARS,// OR
+    { 'e', 'i', 't', 'h', 'e', 'r', ' ' },// xor
+    { 'n', 'e', 'i', 't', 'h', 'e', 'r', ' ' },// nor
+    EmptyUtils.EMPTY_CHARS,// to
   };
 
   /** the single-element sequence begin */
   private static final char[][] SEQUENCE_SINGLE = {
-      EmptyUtils.EMPTY_CHARS,// COMMA
-      EmptyUtils.EMPTY_CHARS,// AND
-      EmptyUtils.EMPTY_CHARS,// OR
-      EmptyUtils.EMPTY_CHARS,// OR
-      { 'n', 'o', 't', ' ' },// nor
-      EmptyUtils.EMPTY_CHARS,// to
+    EmptyUtils.EMPTY_CHARS,// COMMA
+    EmptyUtils.EMPTY_CHARS,// AND
+    EmptyUtils.EMPTY_CHARS,// OR
+    EmptyUtils.EMPTY_CHARS,// OR
+    { 'n', 'o', 't', ' ' },// nor
+    EmptyUtils.EMPTY_CHARS,// to
   };
 
   /** the sequence starts */
   private static final char[][] SEQUENCE_BIG_SEP = {
-      EmptyUtils.EMPTY_CHARS,// COMMA
-      { 'a', 'n', 'd' },// AND
-      { 'o', 'r' },// OR
-      { 'o', 'r' },// xor
-      { 'n', 'o', 'r' },// nor
-      { 't', 'o' },// to
+    EmptyUtils.EMPTY_CHARS,// COMMA
+    { 'a', 'n', 'd' },// AND
+    { 'o', 'r' },// OR
+    { 'o', 'r' },// xor
+    { 'n', 'o', 'r' },// nor
+    { 't', 'o' },// to
   };
 
   /** the sequence starts */
@@ -471,30 +471,30 @@ public class LaTeXDocument extends Document {
 
   /** the default document class */
   private static final char[] DOCUMENT_CLASS = { '\\', 'd', 'o', 'c', 'u',
-      'm', 'e', 'n', 't', 'c', 'l', 'a', 's', 's', };
+    'm', 'e', 'n', 't', 'c', 'l', 'a', 's', 's', };
 
   /** the default document class */
   private static final char[] REQUIRE_PACKAGE = { '\\', 'R', 'e', 'q',
-      'u', 'i', 'r', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', };
+    'u', 'i', 'r', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', };
 
   /** start the document */
   private static final char[] DOCUMENT_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'd', 'o', 'c', 'u', 'm', 'e', 'n', 't', '}' };
+    'n', '{', 'd', 'o', 'c', 'u', 'm', 'e', 'n', 't', '}' };
 
   /** end the document */
   private static final char[] DOCUMENT_END = { '\\', 'e', 'n', 'd', '{',
-      'd', 'o', 'c', 'u', 'm', 'e', 'n', 't', '}' };
+    'd', 'o', 'c', 'u', 'm', 'e', 'n', 't', '}' };
 
   /** the authors start */
   private static final char[] AUTHORS_BEGIN = { '\\', 'a', 'u', 't', 'h',
-      'o', 'r', '{' };
+    'o', 'r', '{' };
 
   /** the authors end length */
   private static final int AUTHORS_END_LEN = 1;
 
   /** the make title */
   private static final char[] MAKE_TITLE_BEGIN = { '\\', 'm', 'a', 'k',
-      'e', 't', 'i', 't', 'l', 'e' };
+    'e', 't', 'i', 't', 'l', 'e' };
   /** the authors start */
   private static final char[] DATE_BEGIN = { '\\', 'd', 'a', 't', 'e', '{' };
   /** the date end length */
@@ -502,34 +502,34 @@ public class LaTeXDocument extends Document {
 
   /** start the abstract */
   private static final char[] ABSTRACT_BEGIN_A = { '\\', 'b', 'e', 'g',
-      'i', 'n', '{', 'a', 'b', 's', 't', 'r', 'a', 'c', 't', '}' };
+    'i', 'n', '{', 'a', 'b', 's', 't', 'r', 'a', 'c', 't', '}' };
 
   /** end the abstract */
   private static final char[] ABSTRACT_END_A = { '\\', 'e', 'n', 'd', '{',
-      'a', 'b', 's', 't', 'r', 'a', 'c', 't', '}' };
+    'a', 'b', 's', 't', 'r', 'a', 'c', 't', '}' };
   /** start the abstract, alternative */
   private static final char[] ABSTRACT_BEGIN_B = { '\\', 'a', 'b', 's',
-      't', 'r', 'a', 'c', 't', '{' };
+    't', 'r', 'a', 'c', 't', '{' };
   /** end abstract */
   private static final int ABSTRACT_END_B = 1;
 
   /** the sections */
   private static final char[][] SECTION_BEGIN_A = {//
-      { '\\', 'p', 'a', 'r', 't', '{' },//
-      { '\\', 'c', 'h', 'a', 'p', 't', 'e', 'r', '{' },//
-      { '\\', 's', 'e', 'c', 't', 'i', 'o', 'n', '{' },//
-      { '\\', 's', 'u', 'b', 's', 'e', 'c', 't', 'i', 'o', 'n', '{' },//
-      { '\\', 's', 'u', 'b', 's', 'u', 'b', 's', 'e', 'c', 't', 'i', 'o',
-          'n', '{' },//
+    { '\\', 'p', 'a', 'r', 't', '{' },//
+    { '\\', 'c', 'h', 'a', 'p', 't', 'e', 'r', '{' },//
+    { '\\', 's', 'e', 'c', 't', 'i', 'o', 'n', '{' },//
+    { '\\', 's', 'u', 'b', 's', 'e', 'c', 't', 'i', 'o', 'n', '{' },//
+    { '\\', 's', 'u', 'b', 's', 'u', 'b', 's', 'e', 'c', 't', 'i', 'o',
+      'n', '{' },//
       { '\\', 'p', 'a', 'r', 'a', 'g', 'r', 'a', 'p', 'h', '{' },//
-  /*
-   * { '\\', 's', 'u', 'b', 'p', 'a', 'r', 'a', 'g', 'r', 'a', 'p', 'h',
-   * '{' }
-   */};
+      /*
+       * { '\\', 's', 'u', 'b', 'p', 'a', 'r', 'a', 'g', 'r', 'a', 'p', 'h',
+       * '{' }
+       */};
 
   /** start the section */
   private static final char[] SECTION_BEGIN_B = { '\\', 's', 't', 'r',
-      'u', 't', '\\', '\\', '\\', 't', 'e', 'x', 't', 'b', 'f', '{' };
+    'u', 't', '\\', '\\', '\\', 't', 'e', 'x', 't', 'b', 'f', '{' };
 
   /** section end a */
   private static final int SECTION_END_A = 1;
@@ -539,37 +539,37 @@ public class LaTeXDocument extends Document {
 
   /** begin figure a */
   private static final char[] FIGURE_BEGIN_A = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'f', 'i', 'g', 'u', 'r', 'e', '}', '[', 't', 'b', ']' };
+    'n', '{', 'f', 'i', 'g', 'u', 'r', 'e', '}', '[', 't', 'b', ']' };
   /** end figure a */
   private static final char[] FIGURE_END_A = { '\\', 'e', 'n', 'd', '{',
-      'f', 'i', 'g', 'u', 'r', 'e', '}' };
+    'f', 'i', 'g', 'u', 'r', 'e', '}' };
   /** begin figure b */
   private static final char[] FIGURE_BEGIN_B = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'f', 'i', 'g', 'u', 'r', 'e', '*', '}', '[', 't', 'b', ']' };
+    'n', '{', 'f', 'i', 'g', 'u', 'r', 'e', '*', '}', '[', 't', 'b', ']' };
   /** end figure b */
   private static final char[] FIGURE_END_B = { '\\', 'e', 'n', 'd', '{',
-      'f', 'i', 'g', 'u', 'r', 'e', '*', '}' };
+    'f', 'i', 'g', 'u', 'r', 'e', '*', '}' };
   /** begin figure c */
   private static final char[] CENTER_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'c', 'e', 'n', 't', 'e', 'r', '}' };
+    'n', '{', 'c', 'e', 'n', 't', 'e', 'r', '}' };
   /** end figure c */
   private static final char[] CENTER_END = { '\\', 'e', 'n', 'd', '{',
-      'c', 'e', 'n', 't', 'e', 'r', '}' };
+    'c', 'e', 'n', 't', 'e', 'r', '}' };
 
   /** the caption */
   private static final char[] CAPTION_BEGIN = { '\\', 'c', 'a', 'p', 't',
-      'i', 'o', 'n', '{' };
+    'i', 'o', 'n', '{' };
 
   /** the length of the figure caption end */
   private static final int CAPTION_END_LEN = 1;
 
   /** the first part of the include graphics call */
   private static final char[] INCLUDE_GRAPHICS_1 = { '\\', 'i', 'n', 'c',
-      'l', 'u', 'd', 'e', 'g', 'r', 'a', 'p', 'h', 'i', 'c', 's', '[',
-      'w', 'i', 'd', 't', 'h', '=' };
+    'l', 'u', 'd', 'e', 'g', 'r', 'a', 'p', 'h', 'i', 'c', 's', '[',
+    'w', 'i', 'd', 't', 'h', '=' };
   /** the second part of the include graphics call */
   private static final char[] INCLUDE_GRAPHICS_2 = { 'p', 't', ',', 'h',
-      'e', 'i', 'g', 'h', 't', '=' };
+    'e', 'i', 'g', 'h', 't', '=' };
   /** the third part of the include graphics call */
   private static final char[] INCLUDE_GRAPHICS_3 = { 'p', 't', ']', '{' };
 
@@ -578,71 +578,71 @@ public class LaTeXDocument extends Document {
 
   /** the continued figure beginning char array */
   private static final char[] CONTINUED_FIGURE_BEGIN = (" Continued from " + ELabelType.FIGURE.single() + //$NON-NLS-1$
-  "~\\ref{").toCharArray(); //$NON-NLS-1$
+      "~\\ref{").toCharArray(); //$NON-NLS-1$
 
   /** the continued table beginning char array */
   private static final char[] CONTINUED_TABLE_BEGIN = (" Continued from " + ELabelType.TABLE.single() + //$NON-NLS-1$
-  "~\\ref{").toCharArray(); //$NON-NLS-1$
+      "~\\ref{").toCharArray(); //$NON-NLS-1$
 
   /** the continued end char array */
   private static final char[] CONTINUED_END = { '}', '.', '}' };
 
   /** the hfill characters */
   private static final char[] HFILL = { '\\', 's', 't', 'r', 'u', 't',
-      '\\', 'h', 'f', 'i', 'l', 'l', '\\', 's', 't', 'r', 'u', 't' };
+    '\\', 'h', 'f', 'i', 'l', 'l', '\\', 's', 't', 'r', 'u', 't' };
 
   /** the sub-float */
   private static final char[] SUBFLOAT = { '\\', 's', 'u', 'b', 'f', 'l',
-      'o', 'a', 't', '[' };
+    'o', 'a', 't', '[' };
 
   /** the begin itemize */
   private static final char[] ITEMIZE_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'i', 't', 'e', 'm', 'i', 'z', 'e', '}' };
+    'n', '{', 'i', 't', 'e', 'm', 'i', 'z', 'e', '}' };
   /** the end itemize */
   private static final char[] ITEMIZE_END = { '\\', 'e', 'n', 'd', '{',
-      'i', 't', 'e', 'm', 'i', 'z', 'e', '}' };
+    'i', 't', 'e', 'm', 'i', 'z', 'e', '}' };
   /** the print an item */
   private static final char[] ITEM = { '\\', 'i', 't', 'e', 'm', ' ' };
   /** the begin enumerate */
   private static final char[] ENUMERATE_BEGIN = { '\\', 'b', 'e', 'g',
-      'i', 'n', '{', 'e', 'n', 'u', 'm', 'e', 'r', 'a', 't', 'e', '}' };
+    'i', 'n', '{', 'e', 'n', 'u', 'm', 'e', 'r', 'a', 't', 'e', '}' };
   /** the end enumerate */
   private static final char[] ENUMERATE_END = { '\\', 'e', 'n', 'd', '{',
-      'e', 'n', 'u', 'm', 'e', 'r', 'a', 't', 'e', '}' };
+    'e', 'n', 'u', 'm', 'e', 'r', 'a', 't', 'e', '}' };
 
   /** the float barrier */
   private static final char[] FLOAT_BARRIER = { '\\', 'F', 'l', 'o', 'a',
-      't', 'B', 'a', 'r', 'r', 'i', 'e', 'r' };
+    't', 'B', 'a', 'r', 'r', 'i', 'e', 'r' };
 
   /** the float barrier */
   private static final char[] EVEN_ROW_COLOR = { '\\', 'r', 'o', 'w', 'c',
-      'o', 'l', 'o', 'r', '{', 'e', 'v', 'e', 'n', 'R', 'o', 'w', 'C',
-      'o', 'l', 'o', 'r', '}' };
+    'o', 'l', 'o', 'r', '{', 'e', 'v', 'e', 'n', 'R', 'o', 'w', 'C',
+    'o', 'l', 'o', 'r', '}' };
 
   /** the multi-col */
   private static final char[] MULTI_COLUMN = { '\\', 'm', 'u', 'l', 't',
-      'i', 'c', 'o', 'l', 'u', 'm', 'n', '{' };
+    'i', 'c', 'o', 'l', 'u', 'm', 'n', '{' };
   /** the multi-row */
   private static final char[] MULTI_ROW = { '\\', 'm', 'u', 'l', 't', 'i',
-      'r', 'o', 'w', '{' };
+    'r', 'o', 'w', '{' };
 
   /** the text bf */
   private static final char[] TEXT_BF_BEGIN = { '\\', 't', 'e', 'x', 't',
-      'b', 'f', '{' };
+    'b', 'f', '{' };
 
   /** the text bf */
   private static final int TEXT_BF_END = 1;
 
   /** the hline */
   private static final char[] HLINE = { '\\', '\\', '\\', 'h', 'l', 'i',
-      'n', 'e' };
+    'n', 'e' };
 
   /** the citation begin */
   private static final char[][] CITATION_BEGIN = {
-      { '~', '{', '\\', 'c', 'i', 't', 'e', 'p', '{' },//
-      { '{', '\\', 'c', 'i', 't', 'e', 'p', '{' },//
-      { '~', '{', '\\', 'c', 'i', 't', 'e', 't', '{' },//
-      { '{', '\\', 'C', 'i', 't', 'e', 't', '{' },//
+    { '~', '{', '\\', 'c', 'i', 't', 'e', 'p', '{' },//
+    { '{', '\\', 'c', 'i', 't', 'e', 'p', '{' },//
+    { '~', '{', '\\', 'c', 'i', 't', 'e', 't', '{' },//
+    { '{', '\\', 'C', 'i', 't', 'e', 't', '{' },//
   };
   /** the citation end */
   private static final int CITATION_END = 2;
@@ -664,57 +664,57 @@ public class LaTeXDocument extends Document {
 
   /** begin the tabular */
   private static final char[] TABULAR_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 't', 'a', 'b', 'u', 'l', 'a', 'r', '}', '{' };
+    'n', '{', 't', 'a', 'b', 'u', 'l', 'a', 'r', '}', '{' };
   /** end the tabular */
   private static final char[] TABULAR_END = { '\\', 'e', 'n', 'd', '{',
-      't', 'a', 'b', 'u', 'l', 'a', 'r', '}' };
+    't', 'a', 'b', 'u', 'l', 'a', 'r', '}' };
 
   /** begin the table a */
   private static final char[] TABLE_A_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 't', 'a', 'b', 'l', 'e', '}', '[', 't', 'b', ']' };
+    'n', '{', 't', 'a', 'b', 'l', 'e', '}', '[', 't', 'b', ']' };
   /** begin the table b */
   private static final char[] TABLE_A_END = { '\\', 'e', 'n', 'd', '{',
-      't', 'a', 'b', 'l', 'e', '}' };
+    't', 'a', 'b', 'l', 'e', '}' };
   /** end the table a */
   private static final char[] TABLE_B_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 't', 'a', 'b', 'l', 'e', '*', '}', '[', 't', 'b', ']' };
+    'n', '{', 't', 'a', 'b', 'l', 'e', '*', '}', '[', 't', 'b', ']' };
   /** end the table b */
   private static final char[] TABLE_B_END = { '\\', 'e', 'n', 'd', '{',
-      't', 'a', 'b', 'l', 'e', '*', '}' };
+    't', 'a', 'b', 'l', 'e', '*', '}' };
 
   /** begin small */
   private static final char[] SMALL_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 's', 'm', 'a', 'l', 'l', '}' };
+    'n', '{', 's', 'm', 'a', 'l', 'l', '}' };
   /** end small */
   private static final char[] SMALL_END = { '\\', 'e', 'n', 'd', '{', 's',
-      'm', 'a', 'l', 'l', '}' };
+    'm', 'a', 'l', 'l', '}' };
 
   /** begin text superscript */
   private static final char[] TEXT_SUPERSCRIPT_BEGIN = { '{', '\\', 't',
-      'e', 'x', 't', 's', 'u', 'p', 'e', 'r', 's', 'c', 'r', 'i', 'p',
-      't', '{' };
+    'e', 'x', 't', 's', 'u', 'p', 'e', 'r', 's', 'c', 'r', 'i', 'p',
+    't', '{' };
   /** end a ext superscript */
   private static final int TEXT_SUPERSCRIPT_END = 2;
   /** begin text subscript */
   private static final char[] TEXT_SUBSCRIPT_BEGIN = { '{', '\\', 't',
-      'e', 'x', 't', 's', 'u', 'b', 's', 'c', 'r', 'i', 'p', 't', '{' };
+    'e', 'x', 't', 's', 'u', 'b', 's', 'c', 'r', 'i', 'p', 't', '{' };
   /** end a text subscript */
   private static final int TEXT_SUBSCRIPT_END = 2;
   /** begin emph */
   private static final char[] EMPH_BEGIN = { '{', '\\', 'e', 'm', 'p',
-      'h', '{' };
+    'h', '{' };
   /** end emph */
   private static final int EMPH_END = 2;
 
   /** begin equation */
   private static final char[] EQUATION_BEGIN = { '\\', 'b', 'e', 'g', 'i',
-      'n', '{', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n', '}' };
+    'n', '{', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n', '}' };
   /** end equation */
   private static final char[] EQUATION_END = { '\\', 'e', 'n', 'd', '{',
-      'e', 'q', 'u', 'a', 't', 'i', 'o', 'n', '}' };
+    'e', 'q', 'u', 'a', 't', 'i', 'o', 'n', '}' };
   /** begin ensuremath */
   private static final char[] ENSUREMATH_BEGIN = { '{', '\\', 'e', 'n',
-      's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{' };
+    's', 'u', 'r', 'e', 'm', 'a', 't', 'h', '{' };
   /** end ensuremath */
   private static final int ENSUREMATH_END = 2;
 
@@ -729,17 +729,17 @@ public class LaTeXDocument extends Document {
 
   /** begin gdef begin */
   private static final char[] GDEF_BEGIN = { '\\', 'g', 'd', 'e', 'f',
-      '\\' };
+  '\\' };
 
   /** begin the bibliography style */
   private static final char[] BIBLIOGRAPHY_STYLE_BEGIN = { '\\', 'b', 'i',
-      'b', 'l', 'i', 'o', 'g', 'r', 'a', 'p', 'h', 'y', 's', 't', 'y',
-      'l', 'e', '{' };
+    'b', 'l', 'i', 'o', 'g', 'r', 'a', 'p', 'h', 'y', 's', 't', 'y',
+    'l', 'e', '{' };
   /** end the bibliography style */
   private static final int BIBLIOGRAPHY_STYLE_END = 1;
   /** begin the bibliography */
   private static final char[] BIBLIOGRAPHY_BEGIN = { '\\', 'b', 'i', 'b',
-      'l', 'i', 'o', 'g', 'r', 'a', 'p', 'h', 'y', '{' };
+    'l', 'i', 'o', 'g', 'r', 'a', 'p', 'h', 'y', '{' };
   /** end the bibliography */
   private static final int BIBLIOGRAPHY_END = 1;
 
@@ -778,7 +778,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @param file
@@ -828,7 +828,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * end a line
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -892,7 +892,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void titleBegin(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.titleBegin(h);
     this.__ensureInDocument();
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
@@ -904,7 +904,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void titleEnd(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.TITLE_END_LEN);
@@ -938,7 +938,7 @@ public class LaTeXDocument extends Document {
   protected void writeSequence(final Sequence sequence,
       final ESequenceType type,
       final boolean connectLastElementWithNonBreakableSpace)
-      throws IOException {
+          throws IOException {
     final int idx;
     final int len, stop;
     char[] chars;
@@ -998,7 +998,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * write a single reference
-   * 
+   *
    * @param label
    *          the reference
    * @throws IOException
@@ -1043,7 +1043,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * print a parameterized header command
-   * 
+   *
    * @param cmd
    *          the command
    * @param param
@@ -1081,7 +1081,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * write the document class
-   * 
+   *
    * @param clazz
    *          the document class
    * @param args
@@ -1096,19 +1096,19 @@ public class LaTeXDocument extends Document {
 
   /**
    * put the document class
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
   protected void putDocumentClass() throws IOException {
     this.writeDocumentClass("article", //$NON-NLS-1$
-        "11pt", "twoside", //$NON-NLS-1$ //$NON-NLS-2$ 
-        "a4paper", "notitlepage"); //$NON-NLS-1$ //$NON-NLS-2$ 
+        "11pt", "twoside", //$NON-NLS-1$ //$NON-NLS-2$
+        "a4paper", "notitlepage"); //$NON-NLS-1$ //$NON-NLS-2$
   }
 
   /**
    * require a package
-   * 
+   *
    * @param pack
    *          the package name
    * @param args
@@ -1123,7 +1123,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * put the packages
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1131,7 +1131,7 @@ public class LaTeXDocument extends Document {
     String s;
 
     this.writeRequirePackage("amssymb"); //$NON-NLS-1$
-    this.writeRequirePackage("amsmath"); //$NON-NLS-1$    
+    this.writeRequirePackage("amsmath"); //$NON-NLS-1$
     this.writeRequirePackage("fixltx2e"); //$NON-NLS-1$
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
         LaTeXDocument.LINE_END_END);
@@ -1221,7 +1221,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void headerBegin(final Header h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final CharOutput out;
 
     super.headerBegin(h);
@@ -1243,7 +1243,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * ensure that we are in the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1264,7 +1264,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * ensure that we are have the title
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1304,7 +1304,7 @@ public class LaTeXDocument extends Document {
   /**
    * Get the date string for printing in the document header, or
    * {@code null} if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForHeader() {
@@ -1314,7 +1314,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void bodyBegin(final Body h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.bodyBegin(h);
     this.__ensureMakeTitle();
@@ -1323,7 +1323,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void bodyEnd(final Body h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.LINE_END,
           LaTeXDocument.LINE_END_BEGIN, LaTeXDocument.LINE_END_END);
@@ -1342,7 +1342,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void authorsBegin(final Authors h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.authorsBegin(h);
     this.__ensureInDocument();
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
@@ -1356,7 +1356,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void authorsEnd(final Authors h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.AUTHORS_END_LEN);
@@ -1369,7 +1369,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Is the summary a command or an environment?
-   * 
+   *
    * @return {@code true} if the summary is embedded in a command,
    *         {@code false} if it is embedded into an environment
    */
@@ -1380,7 +1380,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void summaryBegin(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.summaryBegin(h);
 
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
@@ -1403,7 +1403,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void summaryEnd(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     try {
 
@@ -1432,7 +1432,7 @@ public class LaTeXDocument extends Document {
   /**
    * get the number to be added to the section depth in order to obtain the
    * right command
-   * 
+   *
    * @return the number to be added to the section depth in order to obtain
    *         the right command
    */
@@ -1443,7 +1443,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionEnd(final Section h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       if ((this.m_floatCounter > 0) && (h.getDepth() < 3)) {
         this.m_floatCounter = 0;
@@ -1495,7 +1495,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionTitleEnd(final SectionTitle h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     Section s;
     SingleLabel l;
     int d;
@@ -1525,7 +1525,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Should we use starred environments for multi-figures and tables?
-   * 
+   *
    * @return {@code true} if we should use starred environments,
    *         {@code false} otherwise
    */
@@ -1536,7 +1536,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureBegin(final Figure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.figureBegin(h);
 
     this.__beginFloat();
@@ -1561,7 +1561,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureEnd(final Figure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final SingleLabel l;
 
     try {
@@ -1635,13 +1635,13 @@ public class LaTeXDocument extends Document {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-      throws IOException, URISyntaxException {
+          throws IOException, URISyntaxException {
     return new _EPSFigureBody(owner, relativeNameBase, sizeInMM);
   }
 
   /**
    * check a given figure body
-   * 
+   *
    * @param h
    *          the figure body
    */
@@ -1655,7 +1655,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.figureBodyBegin(h);
     LaTeXDocument.checkFigureBody(h);
@@ -1664,7 +1664,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final _EPSFigureBody body;
     final Dimension dim;
     String s;
@@ -1709,7 +1709,7 @@ public class LaTeXDocument extends Document {
   protected FigureSeries figureSeries(final Label label,
       final Dimension2D subFigureSizeInMM, final String captionTemplate,
       final String subCaptionTemplate, final boolean colspan)
-      throws IOException, IllegalStateException {
+          throws IOException, IllegalStateException {
     final int x, y, t;
     final double ofs, width;
     final DocumentDimensions d;
@@ -1721,7 +1721,7 @@ public class LaTeXDocument extends Document {
 
     ofs = (width - (0.5d * ((int) (0.5d + Math.ceil(((captionTemplate
         .length() / (((!colspan) && this.hasStarredEnvironments()) ? 30d
-        : 60d))))))));
+            : 60d))))))));
 
     t = ((int) (0.5d + Math
         .ceil(subCaptionTemplate.length()
@@ -1736,7 +1736,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureSeriesEnd(final FigureSeries h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_captionWriter = null;
     super.figureSeriesEnd(h);
   }
@@ -1861,7 +1861,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subFigureBegin(h);
 
     if ((h.getCol() <= 1) && (h.getRow() > 1)) {
@@ -1881,7 +1881,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write('}');
       this.m_out.write(LaTeXDocument.LINE_END,
@@ -1916,7 +1916,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void itemizationBegin(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.itemizationBegin(h);
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
         LaTeXDocument.LINE_END_END);
@@ -1929,7 +1929,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void itemizationEnd(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.LINE_END,
           LaTeXDocument.LINE_END_BEGIN, LaTeXDocument.LINE_END_END);
@@ -1967,7 +1967,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void enumerationBegin(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.enumerationBegin(h);
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
         LaTeXDocument.LINE_END_END);
@@ -1980,7 +1980,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void enumerationEnd(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.LINE_END,
           LaTeXDocument.LINE_END_BEGIN, LaTeXDocument.LINE_END_END);
@@ -2017,7 +2017,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a new float, flush outstanding ones if necessary the floats
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -2048,7 +2048,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableCaptionEnd(final TableCaption h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out = this.m_tempOut;
       this.m_tempOut = null;
@@ -2063,7 +2063,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableEnd(final Table h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_captionWriter = null;
       this.m_footerWriter = null;
@@ -2076,7 +2076,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderBegin(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.tableHeaderBegin(h);
 
     this.m_writer.flush();
@@ -2105,7 +2105,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderEnd(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.LINE_END,
           LaTeXDocument.LINE_END_BEGIN, LaTeXDocument.LINE_END_END);
@@ -2128,7 +2128,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterBegin(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.tableFooterBegin(h);
 
@@ -2149,7 +2149,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterEnd(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
 
       if (h.getCurrentRowIndex() > 0) {
@@ -2181,7 +2181,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a row
-   * 
+   *
    * @param h
    *          the row
    * @throws IOException
@@ -2238,7 +2238,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Iterate over the table cell definitions
-   * 
+   *
    * @param h
    *          the cell definitions
    * @throws IOException
@@ -2287,7 +2287,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a cell
-   * 
+   *
    * @param h
    *          the cell
    * @throws IOException
@@ -2330,7 +2330,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * end a cell
-   * 
+   *
    * @param h
    *          the cell
    * @param min
@@ -2424,7 +2424,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-      IllegalStateException {//
+  IllegalStateException {//
     String s;
     SingleLabel l;
 
@@ -2481,7 +2481,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_footerWriter.writeTo(this.m_writer);
 
@@ -2512,7 +2512,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHorizontalLine() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_hlineCounter++;
   }
 
@@ -2520,7 +2520,7 @@ public class LaTeXDocument extends Document {
   @Override
   protected Table table(final Label label, final String captionDraft,
       final boolean colspan, final TableCellDef... def)
-      throws IOException, IllegalStateException {
+          throws IOException, IllegalStateException {
     final int y;
 
     y = ((int) (50d - Math
@@ -2532,7 +2532,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subscriptBegin(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subscriptBegin(h);
     this.m_out.write(LaTeXDocument.TEXT_SUBSCRIPT_BEGIN, 0,
         LaTeXDocument.TEXT_SUBSCRIPT_BEGIN.length);
@@ -2541,7 +2541,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subscriptEnd(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.TEXT_SUBSCRIPT_END);
@@ -2553,7 +2553,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void superscriptBegin(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.superscriptBegin(h);
     this.m_out.write(LaTeXDocument.TEXT_SUPERSCRIPT_BEGIN, 0,
         LaTeXDocument.TEXT_SUPERSCRIPT_BEGIN.length);
@@ -2562,7 +2562,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void superscriptEnd(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.TEXT_SUPERSCRIPT_END);
@@ -2574,7 +2574,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeBegin(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.emphasizeBegin(h);
     this.m_out.write(LaTeXDocument.EMPH_BEGIN, 0,
         LaTeXDocument.EMPH_BEGIN.length);
@@ -2583,7 +2583,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeEnd(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.EMPH_END);
@@ -2595,7 +2595,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void equationBegin(final Equation h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.equationBegin(h);
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
         LaTeXDocument.LINE_END_END);
@@ -2608,7 +2608,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void equationEnd(final Equation h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final SingleLabel lbl;
     try {
       lbl = h.getLabel();
@@ -2630,7 +2630,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathBegin(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.inlineMathBegin(h);
     this.m_out.write(LaTeXDocument.ENSUREMATH_BEGIN, 0,
         LaTeXDocument.ENSUREMATH_BEGIN.length);
@@ -2639,7 +2639,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathEnd(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.ENSUREMATH_END);
@@ -2651,7 +2651,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void normalTextBegin(final NormalText h) throws IOException,
-      IllegalStateException {//
+  IllegalStateException {//
     super.normalTextBegin(h);
     this.m_out.write(LaTeXDocument.TEXTNORMAL_BEGIN, 0,
         LaTeXDocument.TEXTNORMAL_BEGIN.length);
@@ -2660,7 +2660,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void normalTextEnd(final NormalText h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
           LaTeXDocument.TEXTNORMAL_END);
@@ -2714,7 +2714,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathNameBegin(final MathName h) throws IOException,
-      IllegalStateException {//
+  IllegalStateException {//
     final _NameDef d;
 
     super.mathNameBegin(h);
@@ -2725,7 +2725,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathNameEnd(final MathName h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     try {
       this.m_out.write(LaTeXDocument.COMMAND_END, 0,
@@ -2738,7 +2738,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpBegin(final MathOp h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final _OpDef f;
 
     super.mathOpBegin(h);
@@ -2753,7 +2753,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpEnd(final MathOp h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final _OpDef f;
 
     try {
@@ -2770,7 +2770,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamBegin(final MathOpParam h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final _OpDef f;
     final int idx;
     final char[] inner;
@@ -2793,7 +2793,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamEnd(final MathOpParam h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write('}');
     } finally {
@@ -2804,7 +2804,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void macroBegin(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final int e;
     final MacroDescriptor desc;
     int i;
@@ -2833,7 +2833,7 @@ public class LaTeXDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void macroEnd(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(LaTeXDocument.LINE_END,
           LaTeXDocument.LINE_END_BEGIN, LaTeXDocument.LINE_END_END);
@@ -2901,7 +2901,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * get the bibliography style
-   * 
+   *
    * @return the bibliography style
    */
   protected String getBibliographyStyle() {
@@ -2910,7 +2910,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * should the bibliography be small?
-   * 
+   *
    * @return {@code true} if we put the bibliography into a small
    *         environment, {@code false} otherwise
    */
@@ -2920,7 +2920,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Make the bibliography style, file, and references
-   * 
+   *
    * @throws IOException
    *           if io fails
    */

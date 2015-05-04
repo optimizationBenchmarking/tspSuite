@@ -58,7 +58,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * of the same magnitude.
  */
 final class _ExperimentScaleProgressDiagrams extends
-    _ExperimentProgressBaseB {
+_ExperimentProgressBaseB {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ final class _ExperimentScaleProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -130,7 +130,7 @@ final class _ExperimentScaleProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param collection
    *          the run set collection to use
    * @param includeMean
@@ -144,11 +144,10 @@ final class _ExperimentScaleProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final Collection<RunSet> collection,
       final boolean includeMean, final boolean includeHighQuantiles,
       final ArrayList<Line2D> lines, final ArrayList<Line2D> back)
-      throws IOException {
+          throws IOException {
     final StatisticSeries series;
     IDataCollection[] data;
     UnaryFunction[] transform;
@@ -170,27 +169,27 @@ final class _ExperimentScaleProgressDiagrams extends
           new TransformedCollectionView(
               new SubCollectionView(series, new int[] {
                   StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q95 }),
-              transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                  transform), null, ELineMode.STAIRS_KEEP_LEFT));
     }
     lines.add(new Line2D(EStatisticParameter.PERCENTILE_75.getShortName(),
         null,//
         new TransformedCollectionView(
             new SubCollectionView(series, new int[] {
                 StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q75 }),
-            transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                transform), null, ELineMode.STAIRS_KEEP_LEFT));
     lines.add(new Line2D(EStatisticParameter.MEDIAN.getShortName(), null,//
         new TransformedCollectionView(new SubCollectionView(series,
             new int[] { StatisticSeries.DIM_X,
-                StatisticSeries.DIM_Y_MEDIAN }), transform), null,
-        ELineMode.STAIRS_KEEP_LEFT));
+            StatisticSeries.DIM_Y_MEDIAN }), transform), null,
+            ELineMode.STAIRS_KEEP_LEFT));
 
     if (includeMean) {
       lines.add(new Line2D(EStatisticParameter.ARITHMETIC_MEAN
           .getShortName(), null,//
           new TransformedCollectionView(new SubCollectionView(series,
               new int[] { StatisticSeries.DIM_X,
-                  StatisticSeries.DIM_Y_MEAN }), transform), null,
-          ELineMode.STAIRS_KEEP_LEFT));
+              StatisticSeries.DIM_Y_MEAN }), transform), null,
+              ELineMode.STAIRS_KEEP_LEFT));
     }
 
     lines.add(new Line2D(EStatisticParameter.PERCENTILE_25.getShortName(),
@@ -198,7 +197,7 @@ final class _ExperimentScaleProgressDiagrams extends
         new TransformedCollectionView(
             new SubCollectionView(series, new int[] {
                 StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q25 }),
-            transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                transform), null, ELineMode.STAIRS_KEEP_LEFT));
 
     if (includeHighQuantiles) {
       lines.add(new Line2D(EStatisticParameter.PERCENTILE_05
@@ -206,16 +205,16 @@ final class _ExperimentScaleProgressDiagrams extends
           new TransformedCollectionView(
               new SubCollectionView(series, new int[] {
                   StatisticSeries.DIM_X, StatisticSeries.DIM_Y_Q05 }),
-              transform), null, ELineMode.STAIRS_KEEP_LEFT));
+                  transform), null, ELineMode.STAIRS_KEEP_LEFT));
     }
 
     if (this.m_printRuns) {
       for (final IDataCollection coll : data) {
         back.add(//
-        new Line2D(null,
-            null,//
-            new TransformedCollectionView(coll, transform), null,
-            ELineMode.STAIRS_KEEP_LEFT));
+            new Line2D(null,
+                null,//
+                new TransformedCollectionView(coll, transform), null,
+                ELineMode.STAIRS_KEEP_LEFT));
       }
     }
   }
@@ -311,9 +310,9 @@ final class _ExperimentScaleProgressDiagrams extends
                     + _ExperimentScaleProgressDiagrams.CAP_5B
                     + axs.getScaleString() + _ExperimentScaleProgressDiagrams.CAP_5C)
                     : ("")) + //$NON-NLS-1$
-            _ExperimentScaleProgressDiagrams.CAP_6),//
-            (_ExperimentScaleProgressDiagrams.SUB_CAP_1 + "XXXXXXXXX"),//$NON-NLS-1$
-            true)) {
+                    _ExperimentScaleProgressDiagrams.CAP_6),//
+                    (_ExperimentScaleProgressDiagrams.SUB_CAP_1 + "XXXXXXXXX"),//$NON-NLS-1$
+                    true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentProgressBaseA.CAP_1);
@@ -365,7 +364,7 @@ final class _ExperimentScaleProgressDiagrams extends
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                      ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                          ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                           : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
@@ -414,11 +413,11 @@ final class _ExperimentScaleProgressDiagrams extends
             try (FigureBody fb = sf.figureBody(
                 this.makeURI(Module.GRAPHICS_FOLDER, data, null,
                     (sinsts.getLowerScaleBound() + "_to_" + //$NON-NLS-1$
-                    sinsts.getUpperScaleBound())), dim)) {
+                        sinsts.getUpperScaleBound())), dim)) {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(//
                     axs.isTime() ? //
-                    ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                        ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                         : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                 fc++;
                 chart.addLines(lines);

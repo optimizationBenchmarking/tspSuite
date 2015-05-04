@@ -14,7 +14,7 @@ final class _CanonicalFile extends File {
 
   /**
    * Create a canonical file by specifying a canonical path.
-   * 
+   *
    * @param filename
    *          The canonical path.
    */
@@ -24,7 +24,7 @@ final class _CanonicalFile extends File {
 
   /**
    * Create a canonical file by specifying a canonical path.
-   * 
+   *
    * @param parent
    *          the parent file
    * @param filename

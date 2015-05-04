@@ -24,7 +24,7 @@
  * ASIN:&nbsp;<a
  * href="http://www.amazon.com/dp/1558608729">1558608729</a></div></li>
  * </ol>
- * 
+ *
  * @since 0.9.8
  */
 package org.logisticPlanning.tsp.solving.algorithms.localSearch;

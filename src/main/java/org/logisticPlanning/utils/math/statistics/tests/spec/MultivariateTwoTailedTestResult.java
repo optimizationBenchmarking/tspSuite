@@ -6,7 +6,7 @@ import java.util.Arrays;
  * The result of a two-tailed multivariate test.
  */
 public final class MultivariateTwoTailedTestResult extends
-    _TwoTailedComparisonTestResult {
+_TwoTailedComparisonTestResult {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -22,7 +22,7 @@ public final class MultivariateTwoTailedTestResult extends
 
   /**
    * the test result
-   * 
+   *
    * @param n
    *          the number of compared distributions
    */

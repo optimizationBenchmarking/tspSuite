@@ -40,7 +40,7 @@ public final class FactorialLog extends UnaryFunction {
 
   /**
    * precisely compute the factorial log
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -56,12 +56,12 @@ public final class FactorialLog extends UnaryFunction {
 
     mid = ((start + end) >>> 1);
     return (FactorialLog.factorialLogI(start, mid) + //
-    FactorialLog.factorialLogI(mid + 1, end));
+        FactorialLog.factorialLogI(mid + 1, end));
   }
 
   /**
    * precisely compute the factorial log
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -78,12 +78,12 @@ public final class FactorialLog extends UnaryFunction {
 
     mid = ((start + end) >>> 1);
     return (FactorialLog.factorialLogL(start, mid) + //
-    FactorialLog.factorialLogL(mid + 1, end));
+        FactorialLog.factorialLogL(mid + 1, end));
   }
 
   /**
    * compute the factorial of a number i
-   * 
+   *
    * @param i
    *          the number
    * @return the factorial of <code>i</Coe
@@ -126,7 +126,7 @@ public final class FactorialLog extends UnaryFunction {
    * with the singleton instance {@link FactorialLog#INSTANCE
    * FactorialLog.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link FactorialLog#INSTANCE
    *         FactorialLog.INSTANCE})
    */
@@ -139,7 +139,7 @@ public final class FactorialLog extends UnaryFunction {
    * with the singleton instance {@link FactorialLog#INSTANCE
    * FactorialLog.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link FactorialLog#INSTANCE
    *         FactorialLog.INSTANCE})
    */

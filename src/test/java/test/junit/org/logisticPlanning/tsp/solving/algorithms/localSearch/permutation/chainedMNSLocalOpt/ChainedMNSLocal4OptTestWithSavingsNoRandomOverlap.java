@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeu
  * the test of the local 4-opt algorithm with savings heuristic
  */
 public class ChainedMNSLocal4OptTestWithSavingsNoRandomOverlap extends
-    ChainedMNSLocal4OptTestNoRandomOverlap {
+ChainedMNSLocal4OptTestNoRandomOverlap {
 
   /** create */
   public ChainedMNSLocal4OptTestWithSavingsNoRandomOverlap() {

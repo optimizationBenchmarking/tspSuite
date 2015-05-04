@@ -5,13 +5,13 @@ import org.logisticPlanning.utils.text.TextUtils;
 
 /** a setup item */
 public final class SetupItem extends BasicMapEntry<String, String>
-    implements Comparable<SetupItem> {
+implements Comparable<SetupItem> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create
-   * 
+   *
    * @param key
    *          the key
    * @param value
@@ -23,7 +23,7 @@ public final class SetupItem extends BasicMapEntry<String, String>
     if ((this.getKey() == null) || (this.getValue() == null)) {
       throw new IllegalArgumentException(//
           ((("Setup item elements must not be empty, but are <" + key) + //$NON-NLS-1$
-          ',') + value) + '>');
+              ',') + value) + '>');
     }
   }
 

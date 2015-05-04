@@ -26,7 +26,7 @@ final class _RefSequence extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param labels
    *          the labels
    * @param doc
@@ -64,10 +64,10 @@ final class _RefSequence extends Sequence {
 
       if (index < (this.m_labels.length - 1)) {
         plural = (ComparisonUtils.equals(this.m_labels[//
-            this.m_fromTo ? //
-            (this.m_labels.length - 1)
-                : //
-                (index + 1)].getType().single(), v));
+                                                       this.m_fromTo ? //
+                                                           (this.m_labels.length - 1)
+                                                           : //
+                                                             (index + 1)].getType().single(), v));
       } else {
         plural = false;
       }

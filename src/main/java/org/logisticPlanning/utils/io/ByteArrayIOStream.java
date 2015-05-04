@@ -6,7 +6,7 @@ import java.io.ByteArrayOutputStream;
 /**
  * A stream buffer is an output stream which can be turned into an input
  * stream.
- * 
+ *
  * @since 0.9.8
  */
 public class ByteArrayIOStream extends ByteArrayOutputStream {
@@ -24,7 +24,7 @@ public class ByteArrayIOStream extends ByteArrayOutputStream {
 
   /**
    * instantiate
-   * 
+   *
    * @param size
    *          the size to be allocated
    */
@@ -35,7 +35,7 @@ public class ByteArrayIOStream extends ByteArrayOutputStream {
   /**
    * Get an input stream which can directly read from the data previously
    * written to the output.
-   * 
+   *
    * @return an input stream which can directly read the data which was
    *         written to the output before
    */

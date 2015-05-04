@@ -16,7 +16,7 @@ public final class ListCollection implements IDataCollection {
 
   /**
    * Create a new point list view
-   * 
+   *
    * @param list
    *          the list
    * @param dim

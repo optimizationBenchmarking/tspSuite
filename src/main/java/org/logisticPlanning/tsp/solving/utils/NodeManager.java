@@ -29,7 +29,7 @@ public final class NodeManager {
 
   /**
    * initialize the node manager
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -50,7 +50,7 @@ public final class NodeManager {
 
   /**
    * initialize by providing a set of ids
-   * 
+   *
    * @param ids
    *          the id array
    * @param start
@@ -86,7 +86,7 @@ public final class NodeManager {
 
   /**
    * Delete a node by its id.
-   * 
+   *
    * @param id
    *          the node's id
    */
@@ -114,7 +114,7 @@ public final class NodeManager {
    * Delete a the last node and return its id. This method depends on the
    * potentially random state of the node manager. It should best only be
    * used if only a single node is left in the node manager.
-   * 
+   *
    * @return the id of the deleted node
    */
   public final int deleteLast() {
@@ -141,7 +141,7 @@ public final class NodeManager {
 
   /**
    * Check if the node has not yet been deleted
-   * 
+   *
    * @param n
    *          the node's id
    * @return {@code true} if the node has not yet been deleted
@@ -152,7 +152,7 @@ public final class NodeManager {
 
   /**
    * Choose a node randomly and delete and return it.
-   * 
+   *
    * @param r
    *          the randomizer
    * @return the randomly chosen (and deleted) node
@@ -184,7 +184,7 @@ public final class NodeManager {
 
   /**
    * get the number of remaining nodes
-   * 
+   *
    * @return the number of remaining nodes
    */
   public final int size() {
@@ -193,7 +193,7 @@ public final class NodeManager {
 
   /**
    * Is the node manager empty?
-   * 
+   *
    * @return {@code true} if no more nodes can be obtained, {@code false}
    *         if there are still nodes
    */
@@ -203,7 +203,7 @@ public final class NodeManager {
 
   /**
    * get the remaining node at the given index
-   * 
+   *
    * @param i
    *          the node index
    * @return the node id

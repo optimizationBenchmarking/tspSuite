@@ -10,7 +10,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeu
  * Savings heuristic}
  */
 public class PermutationRNSBestImprovementWithSavingsTest extends
-    PermutationRNSBestImprovementTest {
+PermutationRNSBestImprovementTest {
 
   /** create */
   public PermutationRNSBestImprovementWithSavingsTest() {

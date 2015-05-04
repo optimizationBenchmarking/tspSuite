@@ -9,7 +9,7 @@ import java.util.Arrays;
  * same) for a different search space. Our node class here supports
  * strongly-typed GP. In other words, we can define which type of node is
  * allowed as child for which other node.
- * 
+ *
  * @param <CT>
  *          the child node type
  */
@@ -31,7 +31,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Create a node with the given children
-   * 
+   *
    * @param pchildren
    *          the child nodes
    * @param in
@@ -74,7 +74,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Get the number of children
-   * 
+   *
    * @return the number of children
    */
   public final int size() {
@@ -83,7 +83,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Get a specific child
-   * 
+   *
    * @param idx
    *          the child index
    * @return the child at that index
@@ -100,7 +100,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
    * genotype. Hence, setting the child of a specific node object does not
    * change the node object itself, but results in a copy of the node
    * object where the child is set at the specific position.
-   * 
+   *
    * @param child
    *          the child to be stored at the given index
    * @param idx
@@ -119,10 +119,11 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Clone this node
-   * 
+   *
    * @return a copy of this node
    */
   @Override
+  @SuppressWarnings("unchecked")
   protected CT clone() {
     try {
       return ((CT) (super.clone()));
@@ -133,7 +134,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */
@@ -143,7 +144,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Get the node type record associated with this node
-   * 
+   *
    * @return the node type record associated with this node
    */
   public final NodeType<? extends CT, CT> getType() {
@@ -153,7 +154,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
   /**
    * Get the string representation of this object, i.e., the name and
    * configuration.
-   * 
+   *
    * @return the string version of this object
    */
   @Override
@@ -166,7 +167,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Obtain the 1+ total number of nodes in all sub-trees of this tree
-   * 
+   *
    * @return the total number of nodes in this tree (including this node)
    */
   public final int getWeight() {
@@ -175,7 +176,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Get the maximum depth of all child nodes
-   * 
+   *
    * @return the maximum depth of all child nodes
    */
   public final int getHeight() {
@@ -184,7 +185,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Is this a terminal node?
-   * 
+   *
    * @return true if this node is terminal, i.e., a leaf, false otherwise
    */
   public final boolean isTerminal() {
@@ -193,7 +194,7 @@ public class Node<CT extends Node<CT>> implements Cloneable {
 
   /**
    * Compare with another object
-   * 
+   *
    * @param o
    *          the other object
    * @return true if the objects are equal

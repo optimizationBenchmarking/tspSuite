@@ -24,5 +24,5 @@ public class LiteratureSurvey {
       _MF2001MAFTTSP.MF2001MAFTTSP, //
       _DG1997ACOCTSP.DG1997ACOCTSP,//
       _ACR2003CLKFLTSP.ACR2003CLKFLTSP//
-  );
+      );
 }

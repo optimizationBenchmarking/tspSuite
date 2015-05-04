@@ -7,7 +7,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
 
 /**
  * a bibliographic record for a thing that appeared in a book
- * 
+ *
  * @param <B>
  *          the book type
  */
@@ -30,7 +30,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Create a new bibliography record for things that are parts of book
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -79,15 +79,15 @@ class _BibInBook<B extends BibBook> extends BibRecord {
     return HashUtils.combineHashes(HashUtils.combineHashes(//
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_book)),//
-        HashUtils.combineHashes(//
-            HashUtils.hashCode(this.m_startPage),//
-            HashUtils.hashCode(this.m_endPage))),//
-        HashUtils.hashCode(this.m_chapter));
+            HashUtils.combineHashes(//
+                HashUtils.hashCode(this.m_startPage),//
+                HashUtils.hashCode(this.m_endPage))),//
+                HashUtils.hashCode(this.m_chapter));
   }
 
   /**
    * Get the book containing this chapter or paper
-   * 
+   *
    * @return the bibliography editors
    */
   public final B getBook() {
@@ -96,7 +96,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the start page
-   * 
+   *
    * @return the start page
    */
   public final String getStartPage() {
@@ -105,7 +105,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the end page
-   * 
+   *
    * @return the end page
    */
   public final String getEndPage() {
@@ -114,7 +114,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the chapter
-   * 
+   *
    * @return the chapter
    */
   public final String getChapter() {
@@ -133,7 +133,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
       return (ComparisonUtils.equals(this.m_book, x.m_book) && //
           ComparisonUtils.equals(this.m_startPage, x.m_startPage) && //
           ComparisonUtils.equals(this.m_endPage, x.m_endPage) && //
-      ComparisonUtils.equals(this.m_chapter, x.m_chapter));
+          ComparisonUtils.equals(this.m_chapter, x.m_chapter));
     }
 
     return false;

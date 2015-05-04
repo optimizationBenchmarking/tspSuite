@@ -12,7 +12,7 @@ public final class OnlyFiniteFilter extends FilteredAggregate {
 
   /**
    * instantiate
-   * 
+   *
    * @param agg
    *          the aggregate
    */

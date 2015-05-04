@@ -38,7 +38,7 @@ public final class LXor extends BinaryBooleanFunction {
    * with the singleton instance {@link LXor#INSTANCE LXor.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link LXor#INSTANCE
    *         LXor.INSTANCE})
    */
@@ -51,7 +51,7 @@ public final class LXor extends BinaryBooleanFunction {
    * with the singleton instance {@link LXor#INSTANCE LXor.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link LXor#INSTANCE
    *         LXor.INSTANCE})
    */

@@ -17,7 +17,7 @@ public final class LabelProperty extends Property<DataSet<?>, Label> {
 
   /**
    * create
-   * 
+   *
    * @param type
    *          the reference type
    */

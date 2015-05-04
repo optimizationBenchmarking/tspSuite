@@ -6,12 +6,12 @@ import java.util.NoSuchElementException;
 /**
  * The base class for iterators that unites the behavior of both, the
  * {@link java.util.Iterator} and {@link java.util.Enumeration} interface.
- * 
+ *
  * @param <T>
  *          the type to iterate about
  */
 public class BasicListIterator<T> extends BasicIterator<T> implements
-    ListIterator<T> {
+ListIterator<T> {
   /** a list iterator iterating over nothing */
   public static final BasicListIterator<Object> EMPTY_LIST_ITERATOR = new BasicListIterator<>();
 

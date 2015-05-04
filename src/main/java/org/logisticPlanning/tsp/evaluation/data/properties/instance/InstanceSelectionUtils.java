@@ -21,9 +21,9 @@ public final class InstanceSelectionUtils {
 
   /** the condition for non-empty, non-prematurely killed run sets */
   public static final CompoundCondition<RunSet> ONE_RUN_MUST_BE_NOT_PREMATURLY_TERMINATED = //
-  new CompoundCondition<>(LAnd.INSTANCE, NotEmptyCondition.INSTANCE,
-      new CollectiveCondition<>(RunNotPrematurelyTerminated.INSTANCE,
-          false));
+      new CompoundCondition<>(LAnd.INSTANCE, NotEmptyCondition.INSTANCE,
+          new CollectiveCondition<>(RunNotPrematurelyTerminated.INSTANCE,
+              false));
 
   /** the conditions */
   @SuppressWarnings("unchecked")
@@ -34,7 +34,7 @@ public final class InstanceSelectionUtils {
    * Get the condition for non-empty, non-prematurely killed run sets, at
    * least one run must have two points with different values for a given
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor accessor}.
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the condition

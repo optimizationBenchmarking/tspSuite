@@ -52,27 +52,27 @@ final class _MF2001MAFTTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
     try {
       return new BibArticle(
-      //
+          //
           new BibAuthors(//
               new BibAuthor("Peter", "Merz"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Bernd", "Freisleben")//$NON-NLS-1$//$NON-NLS-2$
-          ),//
-          "Memetic Algorithms for the Traveling Salesman Problem",//$NON-NLS-1$
-          new BibDate(2001),//
-          "Complex Systems",//$NON-NLS-1$;
-          "13",//$NON-NLS-1$;
-          "4",//$NON-NLS-1$;
-          "297",//$NON-NLS-1$;
-          "345",//$NON-NLS-1$;
-          new URI("http://www.complex-systems.com/pdf/13-4-1.pdf"),//$NON-NLS-1$;
-          null//
-      );
+              ),//
+              "Memetic Algorithms for the Traveling Salesman Problem",//$NON-NLS-1$
+              new BibDate(2001),//
+              "Complex Systems",//$NON-NLS-1$;
+              "13",//$NON-NLS-1$;
+              "4",//$NON-NLS-1$;
+              "297",//$NON-NLS-1$;
+              "345",//$NON-NLS-1$;
+              new URI("http://www.complex-systems.com/pdf/13-4-1.pdf"),//$NON-NLS-1$;
+              null//
+          );
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
     }
@@ -86,193 +86,193 @@ final class _MF2001MAFTTSP extends LiteratureResultPointSet {
         new LiteratureResultPoint[] {//
         //
         //
-            new LiteratureResultPoint(Instance.LIN318,//
-                Accessor.RUNTIME, 8e3d,//
-                Accessor.F, 42029d, EStatisticParameter.ARITHMETIC_MEAN),//
+        new LiteratureResultPoint(Instance.LIN318,//
+            Accessor.RUNTIME, 8e3d,//
+            Accessor.F, 42029d, EStatisticParameter.ARITHMETIC_MEAN),//
             //
             new LiteratureResultPoint(Instance.PCB442,//
                 Accessor.RUNTIME, 68e3d,//
                 Accessor.F, 50778d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.ATT532,//
-                Accessor.RUNTIME,
-                60e3d,//
-                Accessor.F_RELATIVE, 0.013e-2d,
-                EStatisticParameter.ARITHMETIC_MEAN),// //
-            //
-            new LiteratureResultPoint(Instance.ATT532,//
-                Accessor.RUNTIME, 106e3d,//
-                Accessor.F, 27686d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RAT783,//
-                Accessor.RUNTIME, 26e3d,//
-                Accessor.F, 8806d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PR1002,//
-                Accessor.RUNTIME, 112e3d,//
-                Accessor.F, 259045d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            new LiteratureResultPoint(
-                Instance.FL1577,//
-                Accessor.RUNTIME,
-                200e3d,//
-                Accessor.F_RELATIVE, 0.174e-2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.FL1577,//
-                Accessor.RUNTIME,
-                300e3d,//
-                Accessor.F_RELATIVE, 0.027e-2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PR2392,//
-                Accessor.RUNTIME,
-                400e3d,//
-                Accessor.F_RELATIVE, 0.020e-2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PR2392,//
-                Accessor.RUNTIME, 2588e3d,//
-                Accessor.F, 378032.6d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            new LiteratureResultPoint(
-                Instance.PCB3038,//
-                Accessor.RUNTIME,
-                800e3d,//
-                Accessor.F_RELATIVE, 0.094e-2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PCB3038,//
-                Accessor.RUNTIME,
-                6955e3d,//
-                Accessor.F_RELATIVE, 137702.6d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.FL3795,//
-                Accessor.RUNTIME,
-                7212e3d,//
-                Accessor.F_RELATIVE, 28794.7d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.FNL4461,//
-                Accessor.RUNTIME, 105e3d,//
-                Accessor.F, 183762.7d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA7397,//
-                Accessor.RUNTIME,
-                802e3d,//
-                Accessor.F, 23328499.5d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, 417e3d,//
-                Accessor.F, 931333.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.USA13509,//
-                Accessor.RUNTIME,
-                790e3d,//
-                Accessor.F, 20186311.8d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, 930e3d,//
-                Accessor.F, 653474.3d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA33810,//
-                Accessor.RUNTIME,
-                3443e3d,//
-                Accessor.F, 66575838.8d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA85900,//
-                Accessor.RUNTIME,
-                12314e3d,//
-                Accessor.F, 143596390.7d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            new LiteratureResultPoint(Instance.FNL4461,//
-                Accessor.RUNTIME, 294e3d,//
-                Accessor.F, 183366.3d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA7397,//
-                Accessor.RUNTIME,
-                1860e3d,//
-                Accessor.F, 23307621.7d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, 1006e3d,//
-                Accessor.F, 928115.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.USA13509,//
-                Accessor.RUNTIME,
-                2422e3d,//
-                Accessor.F, 20125182.2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, 2873e3d,//
-                Accessor.F, 650803.2d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA33810,//
-                Accessor.RUNTIME,
-                11523e3d,//
-                Accessor.F, 66321344.7d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA85900,//
-                Accessor.RUNTIME,
-                52180e3d,//
-                Accessor.F, 142986675.5d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.FNL4461,//
-                Accessor.RUNTIME, 742e3d,//
-                Accessor.F, 183047.1d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.PLA7397,//
-                Accessor.RUNTIME,
-                3789e3d,//
-                Accessor.F, 23294046.2d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, 2503e3d,//
-                Accessor.F, 926253.7d, EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(
-                Instance.USA13509,//
-                Accessor.RUNTIME,
-                6638e3d,//
-                Accessor.F, 20057767.0d,
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, 7451e3d,//
-                Accessor.F, 649354.6d, EStatisticParameter.ARITHMETIC_MEAN),//
-        //
-        });
+                //
+                new LiteratureResultPoint(
+                    Instance.ATT532,//
+                    Accessor.RUNTIME,
+                    60e3d,//
+                    Accessor.F_RELATIVE, 0.013e-2d,
+                    EStatisticParameter.ARITHMETIC_MEAN),// //
+                    //
+                    new LiteratureResultPoint(Instance.ATT532,//
+                        Accessor.RUNTIME, 106e3d,//
+                        Accessor.F, 27686d, EStatisticParameter.ARITHMETIC_MEAN),//
+                        //
+                        new LiteratureResultPoint(Instance.RAT783,//
+                            Accessor.RUNTIME, 26e3d,//
+                            Accessor.F, 8806d, EStatisticParameter.ARITHMETIC_MEAN),//
+                            //
+                            new LiteratureResultPoint(Instance.PR1002,//
+                                Accessor.RUNTIME, 112e3d,//
+                                Accessor.F, 259045d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                //
+                                //
+                                new LiteratureResultPoint(
+                                    Instance.FL1577,//
+                                    Accessor.RUNTIME,
+                                    200e3d,//
+                                    Accessor.F_RELATIVE, 0.174e-2d,
+                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                    //
+                                    new LiteratureResultPoint(
+                                        Instance.FL1577,//
+                                        Accessor.RUNTIME,
+                                        300e3d,//
+                                        Accessor.F_RELATIVE, 0.027e-2d,
+                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                        //
+                                        new LiteratureResultPoint(
+                                            Instance.PR2392,//
+                                            Accessor.RUNTIME,
+                                            400e3d,//
+                                            Accessor.F_RELATIVE, 0.020e-2d,
+                                            EStatisticParameter.ARITHMETIC_MEAN),//
+                                            //
+                                            new LiteratureResultPoint(Instance.PR2392,//
+                                                Accessor.RUNTIME, 2588e3d,//
+                                                Accessor.F, 378032.6d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                //
+                                                //
+                                                new LiteratureResultPoint(
+                                                    Instance.PCB3038,//
+                                                    Accessor.RUNTIME,
+                                                    800e3d,//
+                                                    Accessor.F_RELATIVE, 0.094e-2d,
+                                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                                    //
+                                                    new LiteratureResultPoint(
+                                                        Instance.PCB3038,//
+                                                        Accessor.RUNTIME,
+                                                        6955e3d,//
+                                                        Accessor.F_RELATIVE, 137702.6d,
+                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                        //
+                                                        new LiteratureResultPoint(
+                                                            Instance.FL3795,//
+                                                            Accessor.RUNTIME,
+                                                            7212e3d,//
+                                                            Accessor.F_RELATIVE, 28794.7d,
+                                                            EStatisticParameter.ARITHMETIC_MEAN),//
+                                                            //
+                                                            //
+                                                            //
+                                                            new LiteratureResultPoint(Instance.FNL4461,//
+                                                                Accessor.RUNTIME, 105e3d,//
+                                                                Accessor.F, 183762.7d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                //
+                                                                new LiteratureResultPoint(
+                                                                    Instance.PLA7397,//
+                                                                    Accessor.RUNTIME,
+                                                                    802e3d,//
+                                                                    Accessor.F, 23328499.5d,
+                                                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                    //
+                                                                    new LiteratureResultPoint(Instance.RL11849,//
+                                                                        Accessor.RUNTIME, 417e3d,//
+                                                                        Accessor.F, 931333.5d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                        //
+                                                                        new LiteratureResultPoint(
+                                                                            Instance.USA13509,//
+                                                                            Accessor.RUNTIME,
+                                                                            790e3d,//
+                                                                            Accessor.F, 20186311.8d,
+                                                                            EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                            //
+                                                                            new LiteratureResultPoint(Instance.D18512,//
+                                                                                Accessor.RUNTIME, 930e3d,//
+                                                                                Accessor.F, 653474.3d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                //
+                                                                                new LiteratureResultPoint(
+                                                                                    Instance.PLA33810,//
+                                                                                    Accessor.RUNTIME,
+                                                                                    3443e3d,//
+                                                                                    Accessor.F, 66575838.8d,
+                                                                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                    //
+                                                                                    new LiteratureResultPoint(
+                                                                                        Instance.PLA85900,//
+                                                                                        Accessor.RUNTIME,
+                                                                                        12314e3d,//
+                                                                                        Accessor.F, 143596390.7d,
+                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                        //
+                                                                                        //
+                                                                                        new LiteratureResultPoint(Instance.FNL4461,//
+                                                                                            Accessor.RUNTIME, 294e3d,//
+                                                                                            Accessor.F, 183366.3d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                            //
+                                                                                            new LiteratureResultPoint(
+                                                                                                Instance.PLA7397,//
+                                                                                                Accessor.RUNTIME,
+                                                                                                1860e3d,//
+                                                                                                Accessor.F, 23307621.7d,
+                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                //
+                                                                                                new LiteratureResultPoint(Instance.RL11849,//
+                                                                                                    Accessor.RUNTIME, 1006e3d,//
+                                                                                                    Accessor.F, 928115.5d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                    //
+                                                                                                    new LiteratureResultPoint(
+                                                                                                        Instance.USA13509,//
+                                                                                                        Accessor.RUNTIME,
+                                                                                                        2422e3d,//
+                                                                                                        Accessor.F, 20125182.2d,
+                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                        //
+                                                                                                        new LiteratureResultPoint(Instance.D18512,//
+                                                                                                            Accessor.RUNTIME, 2873e3d,//
+                                                                                                            Accessor.F, 650803.2d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                            //
+                                                                                                            new LiteratureResultPoint(
+                                                                                                                Instance.PLA33810,//
+                                                                                                                Accessor.RUNTIME,
+                                                                                                                11523e3d,//
+                                                                                                                Accessor.F, 66321344.7d,
+                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                //
+                                                                                                                new LiteratureResultPoint(
+                                                                                                                    Instance.PLA85900,//
+                                                                                                                    Accessor.RUNTIME,
+                                                                                                                    52180e3d,//
+                                                                                                                    Accessor.F, 142986675.5d,
+                                                                                                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                    //
+                                                                                                                    //
+                                                                                                                    //
+                                                                                                                    new LiteratureResultPoint(Instance.FNL4461,//
+                                                                                                                        Accessor.RUNTIME, 742e3d,//
+                                                                                                                        Accessor.F, 183047.1d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                        //
+                                                                                                                        new LiteratureResultPoint(
+                                                                                                                            Instance.PLA7397,//
+                                                                                                                            Accessor.RUNTIME,
+                                                                                                                            3789e3d,//
+                                                                                                                            Accessor.F, 23294046.2d,
+                                                                                                                            EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                            //
+                                                                                                                            new LiteratureResultPoint(Instance.RL11849,//
+                                                                                                                                Accessor.RUNTIME, 2503e3d,//
+                                                                                                                                Accessor.F, 926253.7d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                //
+                                                                                                                                new LiteratureResultPoint(
+                                                                                                                                    Instance.USA13509,//
+                                                                                                                                    Accessor.RUNTIME,
+                                                                                                                                    6638e3d,//
+                                                                                                                                    Accessor.F, 20057767.0d,
+                                                                                                                                    EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                    //
+                                                                                                                                    new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                        Accessor.RUNTIME, 7451e3d,//
+                                                                                                                                        Accessor.F, 649354.6d, EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                        //
+    });
   }
 
   /** {@inheritDoc} */

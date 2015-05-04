@@ -9,7 +9,7 @@ public class Subscript extends AbstractTextPlain {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

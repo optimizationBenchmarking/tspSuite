@@ -25,7 +25,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
 
   /**
    * Instantiate
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param candidates
@@ -55,7 +55,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
    * CandidateSet} instance that may be used to reduce the storage
    * requirements (at the cost of higher access time).
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -126,7 +126,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
       // data structure
       // if floating point values are required.
       return (symmetric ? new _SymmetricCandidateEdgeDouble(n, cs)
-          : new _AsymmetricCandidateEdgeDouble(n, cs));
+      : new _AsymmetricCandidateEdgeDouble(n, cs));
     }
 
     // can we use byte[] as backing store? i.e., the possible values must
@@ -134,27 +134,27 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
     if ((minValue >= (java.lang.Byte.MIN_VALUE))
         && (maxValue <= (java.lang.Byte.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeByte(n, cs)
-          : new _AsymmetricCandidateEdgeByte(n, cs));
+      : new _AsymmetricCandidateEdgeByte(n, cs));
     }
     // can we use short[] as backing store? i.e., the possible values must
     // be in -32768..32767
     if ((minValue >= (java.lang.Short.MIN_VALUE))
         && (maxValue <= (java.lang.Short.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeShort(n, cs)
-          : new _AsymmetricCandidateEdgeShort(n, cs));
+      : new _AsymmetricCandidateEdgeShort(n, cs));
     }
     // can we use int[] as backing store? i.e., the possible values must
     // be in -2147483648..2147483647
     if ((minValue >= (java.lang.Integer.MIN_VALUE))
         && (maxValue <= (java.lang.Integer.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeInt(n, cs)
-          : new _AsymmetricCandidateEdgeInt(n, cs));
+      : new _AsymmetricCandidateEdgeInt(n, cs));
     }
 
     // ok, we exceed all smaller ranges, we have to use long[] as backing
     // store
     return (symmetric ? new _SymmetricCandidateEdgeLong(n, cs)
-        : new _AsymmetricCandidateEdgeLong(n, cs));
+    : new _AsymmetricCandidateEdgeLong(n, cs));
   }
 
   /**
@@ -175,7 +175,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
    * CandidateSet} instance that may be used to reduce the storage
    * requirements (at the cost of higher access time).
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -246,11 +246,11 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
       if ((minValue >= (-Float.MAX_VALUE))
           && (maxValue <= (Float.MAX_VALUE))) {
         return (symmetric ? new _SymmetricCandidateEdgeFloat(n, cs)
-            : new _AsymmetricCandidateEdgeFloat(n, cs));
+        : new _AsymmetricCandidateEdgeFloat(n, cs));
       }
 
       return (symmetric ? new _SymmetricCandidateEdgeDouble(n, cs)
-          : new _AsymmetricCandidateEdgeDouble(n, cs));
+      : new _AsymmetricCandidateEdgeDouble(n, cs));
     }
 
     // can we use byte[] as backing store? i.e., the possible values must
@@ -258,27 +258,27 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
     if ((minValue >= (java.lang.Byte.MIN_VALUE))
         && (maxValue <= (java.lang.Byte.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeByte(n, cs)
-          : new _AsymmetricCandidateEdgeByte(n, cs));
+      : new _AsymmetricCandidateEdgeByte(n, cs));
     }
     // can we use short[] as backing store? i.e., the possible values must
     // be in -32768..32767
     if ((minValue >= (java.lang.Short.MIN_VALUE))
         && (maxValue <= (java.lang.Short.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeShort(n, cs)
-          : new _AsymmetricCandidateEdgeShort(n, cs));
+      : new _AsymmetricCandidateEdgeShort(n, cs));
     }
     // can we use int[] as backing store? i.e., the possible values must
     // be in -2147483648..2147483647
     if ((minValue >= (java.lang.Integer.MIN_VALUE))
         && (maxValue <= (java.lang.Integer.MAX_VALUE))) {
       return (symmetric ? new _SymmetricCandidateEdgeInt(n, cs)
-          : new _AsymmetricCandidateEdgeInt(n, cs));
+      : new _AsymmetricCandidateEdgeInt(n, cs));
     }
 
     // ok, we exceed all smaller ranges, we have to use long[] as backing
     // store
     return (symmetric ? new _SymmetricCandidateEdgeLong(n, cs)
-        : new _AsymmetricCandidateEdgeLong(n, cs));
+    : new _AsymmetricCandidateEdgeLong(n, cs));
   }
 
 }

@@ -22,7 +22,7 @@ public final class _SymmetricEdgeBitLongArray extends _EdgeBitLongArray {
 
   /**
    * create the _SymmetricEdgeBitLongArray
-   * 
+   *
    * @param n
    *          the number of nodes in the tsp
    */

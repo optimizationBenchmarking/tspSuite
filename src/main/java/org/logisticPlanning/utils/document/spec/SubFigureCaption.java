@@ -9,7 +9,7 @@ public class SubFigureCaption extends AbstractTextComplex {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

@@ -14,7 +14,7 @@ public class Authors extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param authors
    *          the authors list
    * @param owner
@@ -59,7 +59,7 @@ public class Authors extends Element {
 
   /**
    * Get the bibliography authors
-   * 
+   *
    * @return the bibliography authors
    */
   public final BibAuthors getAuthors() {

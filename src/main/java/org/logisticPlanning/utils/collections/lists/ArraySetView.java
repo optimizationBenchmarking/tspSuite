@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.utils.EmptyUtils;
  * {@code null}. The sorted character of the data allows us to consider the
  * array both as a {@link java.util.List list} and as {@link java.util.Set}
  * .
- * 
+ *
  * @param <DT>
  *          the type
  */
@@ -26,7 +26,7 @@ public class ArraySetView<DT> extends ArrayListView<DT> implements Set<DT> {
 
   /**
    * instantiate
-   * 
+   *
    * @param data
    *          the data of the set - will not be copied or cloned, but used
    *          directly
@@ -37,7 +37,7 @@ public class ArraySetView<DT> extends ArrayListView<DT> implements Set<DT> {
 
   /**
    * Copy an array set view
-   * 
+   *
    * @param copy
    *          the set view to copy
    */
@@ -47,6 +47,7 @@ public class ArraySetView<DT> extends ArrayListView<DT> implements Set<DT> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final int indexOf(final Object o) {
     final Comparable<Object>[] data;
     int i;
@@ -77,6 +78,7 @@ public class ArraySetView<DT> extends ArrayListView<DT> implements Set<DT> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final int lastIndexOf(final Object o) {
     final int size;
     final Comparable<Object>[] data;
@@ -109,13 +111,15 @@ public class ArraySetView<DT> extends ArrayListView<DT> implements Set<DT> {
 
   /**
    * Make an array list view from a given set of data
-   * 
+   *
    * @param data
    *          the data array to be wrapped into an array view - will not be
    *          copied or cloned, but used directly
    * @param mustSort
    *          should the data also be sorted
    * @return the array list view representing the data
+   * @param <T>
+   *          the type of the array elements
    */
   @SuppressWarnings({ "rawtypes", "unchecked" })
   public static final <T> ArraySetView<T> makeArraySetView(final T[] data,

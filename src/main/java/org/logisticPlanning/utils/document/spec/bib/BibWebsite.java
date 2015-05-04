@@ -20,7 +20,7 @@ public class BibWebsite extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -56,12 +56,12 @@ public class BibWebsite extends BibRecord {
     return HashUtils.combineHashes(
         HashUtils.combineHashes(super._hashCode(),
             HashUtils.hashCode(this.m_address)),
-        HashUtils.hashCode(this.m_publisher));
+            HashUtils.hashCode(this.m_publisher));
   }
 
   /**
    * Get the publisher
-   * 
+   *
    * @return the publisher
    */
   public final String getPublisher() {
@@ -70,7 +70,7 @@ public class BibWebsite extends BibRecord {
 
   /**
    * Get the publisher's address
-   * 
+   *
    * @return the publisher's address
    */
   public final String getPublisherAddress() {
@@ -86,7 +86,7 @@ public class BibWebsite extends BibRecord {
       x = ((BibWebsite) r);
 
       return (ComparisonUtils.equals(this.m_publisher, x.m_publisher) && //
-      ComparisonUtils.equals(this.m_address, x.m_address));
+          ComparisonUtils.equals(this.m_address, x.m_address));
 
     }
 

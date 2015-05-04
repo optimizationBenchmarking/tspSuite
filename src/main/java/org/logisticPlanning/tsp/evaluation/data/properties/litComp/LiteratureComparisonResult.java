@@ -4,13 +4,13 @@ package org.logisticPlanning.tsp.evaluation.data.properties.litComp;
  * the results comparisons
  */
 public final class LiteratureComparisonResult extends
-    LiteratureComparisonSet<LiteratureComparisonPointSet> {
+LiteratureComparisonSet<LiteratureComparisonPointSet> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param data
    *          the data
    */

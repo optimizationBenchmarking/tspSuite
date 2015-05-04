@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.mst.MSTHeuristic;
  * Spanning Tree heuristic
  */
 public class MultiNeighborhoodSearchTestWithMST extends
-    MultiNeighborhoodSearchTest {
+MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTestWithMST() {

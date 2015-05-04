@@ -48,8 +48,8 @@ import org.logisticPlanning.utils.io.charIO.StringCharInput;
  * href="http://books.google.com/books?id=Yn1UAAAAMAAJ"
  * >Yn1UAAAAMAAJ</a></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -65,7 +65,7 @@ public abstract class CharTransformer {
    * Transform all characters between the starting at index {@code start}
    * (inclusive) and the end index {@code end} (exclusive) from input
    * {@code in} to the output {@code out}.
-   * 
+   *
    * @param in
    *          the input
    * @param out
@@ -85,7 +85,7 @@ public abstract class CharTransformer {
    * (inclusive) and the end index {@code end} (exclusive) from input
    * {@code in} to the output {@code out} and insert hyphens where
    * possible.
-   * 
+   *
    * @param in
    *          the input
    * @param out
@@ -99,13 +99,13 @@ public abstract class CharTransformer {
    */
   public void transformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-      throws IOException {
+          throws IOException {
     this.transform(in, out, start, end);
   }
 
   /**
    * Transform a string
-   * 
+   *
    * @param s
    *          the string
    * @return the transformed string
@@ -133,7 +133,7 @@ public abstract class CharTransformer {
 
   /**
    * Transform a string
-   * 
+   *
    * @param s
    *          the string
    * @return the transformed string

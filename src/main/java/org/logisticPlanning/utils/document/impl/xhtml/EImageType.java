@@ -77,7 +77,7 @@ public enum EImageType {
 
   /**
    * create
-   * 
+   *
    * @param javaType
    *          the java type
    * @param fileExt
@@ -92,7 +92,7 @@ public enum EImageType {
    * Get the java type, to be used with
    * {@link javax.imageio.ImageIO#write(java.awt.image.RenderedImage, String, java.io.File)}
    * .
-   * 
+   *
    * @return the java type
    */
   public final String getJavaType() {
@@ -101,7 +101,7 @@ public enum EImageType {
 
   /**
    * Get the file extension to use (without the "{@code .}").
-   * 
+   *
    * @return the file extension to use, without the "{@code .}"
    */
   public final String getFileExtension() {

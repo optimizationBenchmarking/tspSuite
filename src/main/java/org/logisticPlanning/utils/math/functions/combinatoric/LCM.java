@@ -20,7 +20,7 @@ public final class LCM extends BinaryFunction {
 
   /**
    * compute the least common multiple
-   * 
+   *
    * @param a
    *          the n
    * @param b
@@ -45,7 +45,7 @@ public final class LCM extends BinaryFunction {
 
   /**
    * compute the least common multiple
-   * 
+   *
    * @param a
    *          the n
    * @param b
@@ -82,7 +82,7 @@ public final class LCM extends BinaryFunction {
    * with the singleton instance {@link LCM#INSTANCE INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link LCM#INSTANCE INSTANCE}
    *         )
    */
@@ -95,7 +95,7 @@ public final class LCM extends BinaryFunction {
    * with the singleton instance {@link LCM#INSTANCE INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link LCM#INSTANCE INSTANCE}
    *         )
    */

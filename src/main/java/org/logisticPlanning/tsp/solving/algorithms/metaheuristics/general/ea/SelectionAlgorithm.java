@@ -782,7 +782,7 @@ public class SelectionAlgorithm extends TSPModule {
 
   /**
    * the selection algorithm constructor
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -801,7 +801,7 @@ public class SelectionAlgorithm extends TSPModule {
    * During the selection process, the contents of {@code pop} may be
    * re-arranged or sorted.
    * </p>
-   * 
+   *
    * @param pop
    *          the population holding the individuals to select from
    * @param mate

@@ -7,7 +7,7 @@ import java.util.Iterator;
  * The internal table cell element.
  */
 public abstract class AbstractTableCell extends AbstractTextBlock
-    implements Iterable<TableCellDef> {
+implements Iterable<TableCellDef> {
 
   /** the offset */
   int m_ofs;
@@ -35,7 +35,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -47,7 +47,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the number of columns
-   * 
+   *
    * @return the number of columns
    */
   public final int getColumnSpan() {
@@ -56,7 +56,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the number of rows
-   * 
+   *
    * @return the number of rows
    */
   public final int getRowSpan() {
@@ -65,7 +65,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the first column occupied by this cell
-   * 
+   *
    * @return the first column occupied by this cell
    */
   public final int getStartCol() {
@@ -74,7 +74,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the last column occupied by this cell
-   * 
+   *
    * @return the last column occupied by this cell
    */
   public final int getEndCol() {
@@ -83,7 +83,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the first row occupied by this cell
-   * 
+   *
    * @return the first row occupied by this cell
    */
   public final int getStartRow() {
@@ -92,7 +92,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the last row occupied by this cell
-   * 
+   *
    * @return the last row occupied by this cell
    */
   public final int getEndRow() {
@@ -101,7 +101,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the definition length
-   * 
+   *
    * @return the definition length
    */
   public final int getDefinitionLength() {
@@ -110,7 +110,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Get the definition element at index i
-   * 
+   *
    * @param i
    *          the index
    * @return the element
@@ -121,7 +121,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Treat this cell as multi-column or multi-row cell.
-   * 
+   *
    * @return {@code true} if the definition of this cell requires you to
    *         treat it as multi-column or multi-row cell. {@code false} if
    *         this is just a normal cell.
@@ -132,7 +132,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
 
   /**
    * Obtain the row in which this cell starts.
-   * 
+   *
    * @return the row in which this cell starts
    */
   @Override
@@ -143,7 +143,7 @@ public abstract class AbstractTableCell extends AbstractTextBlock
   /**
    * Is this row a body cell ({@code true} will be returned) or a
    * header/footer cell ({@code false} will be returned)?
-   * 
+   *
    * @return {@code true} for body cells, {@code false} for header or
    *         footer cells
    */

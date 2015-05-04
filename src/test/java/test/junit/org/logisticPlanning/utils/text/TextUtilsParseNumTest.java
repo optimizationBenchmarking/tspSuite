@@ -24,7 +24,7 @@ public class TextUtilsParseNumTest extends TestBase {
 
   /**
    * test a double
-   * 
+   *
    * @param s
    *          the string
    * @param d

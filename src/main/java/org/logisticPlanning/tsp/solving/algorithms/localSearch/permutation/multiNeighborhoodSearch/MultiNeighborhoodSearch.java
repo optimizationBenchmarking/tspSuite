@@ -559,7 +559,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * </ol>
  */
 public class MultiNeighborhoodSearch extends
-    TSPLocalSearchAlgorithm<int[]> {
+TSPLocalSearchAlgorithm<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -577,14 +577,14 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * the maximum number of moves to allocate
-   * 
+   *
    * @serial serializable field
    */
   private int m_maxMoveAllocations;
 
   /**
    * the move order
-   * 
+   *
    * @serial serializable field
    */
   private EMoveComparator m_cmp;
@@ -610,7 +610,7 @@ public class MultiNeighborhoodSearch extends
 
   /** instantiate */
   public MultiNeighborhoodSearch() {
-    super("Multiple-Neighborhood Search");//$NON-NLS-1$ 
+    super("Multiple-Neighborhood Search");//$NON-NLS-1$
     this.m_cmp = MultiNeighborhoodSearch.DEFAULT_MOVE_COMPARATOR;
     this.m_maxMoveAllocations = MultiNeighborhoodSearch.DEFAULT_MAX_ALLOCATIONS;
   }
@@ -800,7 +800,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * set the {@link EMoveComparator move comparator}
-   * 
+   *
    * @param cmp
    *          the {@link EMoveComparator move comparator} to used
    */
@@ -811,7 +811,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * get the {@link EMoveComparator move comparator}
-   * 
+   *
    * @return the {@link EMoveComparator move comparator} used
    */
   public final EMoveComparator getMoveComparator() {
@@ -820,7 +820,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Set the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @param max
    *          the maximum number of move records to allocate and hold in
    *          memory
@@ -831,7 +831,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Get the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @return max the maximum number of move records to allocate and hold in
    *         memory
    */
@@ -842,7 +842,7 @@ public class MultiNeighborhoodSearch extends
   /**
    * compute the total length of the solution and initialize the distance
    * array
-   * 
+   *
    * @param f
    *          the objective function
    * @param n
@@ -877,7 +877,7 @@ public class MultiNeighborhoodSearch extends
    * and will allocate a new move if the old queue is empty. However, if
    * the maximum number of move allocations has been reached, {@code null}
    * will be returned.
-   * 
+   *
    * @return the new move, or {@code null} if the maximum number of move
    *         allocations has been exhausted
    */
@@ -927,7 +927,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * enqueue a move
-   * 
+   *
    * @param move
    *          the move to enqueue
    */
@@ -984,7 +984,7 @@ public class MultiNeighborhoodSearch extends
    * Then, only moves need to be investigated which intersect with the
    * changed region in the next call.
    * </p>
-   * 
+   *
    * @param lastChangeStart
    *          the first index of the interesting range
    * @param lastChangeEnd
@@ -1095,7 +1095,7 @@ public class MultiNeighborhoodSearch extends
 
         delta = ((D_im1_ip1 - D_im1_i) + //
             (D_i_j - D_i_ip1) + //
-        (D_i_jp1 - D_j_jp1));
+            (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1112,7 +1112,7 @@ public class MultiNeighborhoodSearch extends
 
         delta = ((D_im1_j - D_im1_i) + //
             (D_i_j - D_j_jp1) + //
-        (D_jm1_jp1 - D_jm1_j));
+            (D_jm1_jp1 - D_jm1_j));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1136,7 +1136,7 @@ public class MultiNeighborhoodSearch extends
         delta = ((D_im1_j - D_im1_i) + //
             (D_ip1_j - D_i_ip1) + //
             (D_i_jm1 - D_jm1_j) + //
-        (D_i_jp1 - D_j_jp1));
+            (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1195,12 +1195,12 @@ public class MultiNeighborhoodSearch extends
 
     Configurable.printKey(MultiNeighborhoodSearch.PARAM_MOVE_ORDER, ps);
     ps.println(//
-    "the order in which moves are enqueued and performed"); //$NON-NLS-1$
+        "the order in which moves are enqueued and performed"); //$NON-NLS-1$
 
     Configurable.printKey(MultiNeighborhoodSearch.PARAM_MAX_ALLOCATIONS,
         ps);
     ps.println(//
-    "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
+        "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -1241,7 +1241,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Perform the MNS
-   * 
+   *
    * @param args
    *          the command line arguments
    */

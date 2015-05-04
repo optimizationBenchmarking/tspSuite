@@ -24,7 +24,7 @@ final class _RelativeObjectiveFunctionThreshold extends MacroDefinition {
 
   /** create */
   private _RelativeObjectiveFunctionThreshold() {
-    super("relativeObjectiveValueThreshold", 0,//$NON-NLS-1$ 
+    super("relativeObjectiveValueThreshold", 0,//$NON-NLS-1$
         (Accessor.F_RELATIVE.getShortName() + _ObjectiveFunctionThreshold.THRESHOLD));
   }
 
@@ -60,7 +60,7 @@ final class _RelativeObjectiveFunctionThreshold extends MacroDefinition {
    * _BestObjectiveValueSoFar.INSTANCE} for serialization, i.e., when the
    * instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _BestObjectiveValueSoFar#INSTANCE
    *         _BestObjectiveValueSoFar.INSTANCE})
@@ -74,7 +74,7 @@ final class _RelativeObjectiveFunctionThreshold extends MacroDefinition {
    * with the singleton instance {@link _BestObjectiveValueSoFar#INSTANCE
    * _BestObjectiveValueSoFar.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _BestObjectiveValueSoFar#INSTANCE
    *         _BestObjectiveValueSoFar.INSTANCE})

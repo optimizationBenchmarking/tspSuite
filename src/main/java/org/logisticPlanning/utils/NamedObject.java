@@ -18,7 +18,7 @@ public class NamedObject implements Serializable, Cloneable {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -35,7 +35,7 @@ public class NamedObject implements Serializable, Cloneable {
 
   /**
    * get the name
-   * 
+   *
    * @return the name
    */
   public final String name() {

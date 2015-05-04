@@ -31,7 +31,7 @@ final class _DoubleList extends DoubleList {
 
   /**
    * get the quantile
-   * 
+   *
    * @param quantile
    *          the quantile
    * @return the quantile value

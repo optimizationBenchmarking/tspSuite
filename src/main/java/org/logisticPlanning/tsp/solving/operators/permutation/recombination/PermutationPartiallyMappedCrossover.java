@@ -60,7 +60,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * -0426-3</a>; OCLC:&nbsp;<a
  * href="https://www.worldcat.org/oclc/19702892">19702892</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>
@@ -72,7 +72,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *         </ul>
  */
 public final class PermutationPartiallyMappedCrossover extends
-    BinaryOperator<int[]> {
+BinaryOperator<int[]> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

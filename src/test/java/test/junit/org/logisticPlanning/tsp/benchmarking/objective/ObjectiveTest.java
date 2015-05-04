@@ -17,7 +17,7 @@ public class ObjectiveTest {
 
   /**
    * Called before each test
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -34,7 +34,7 @@ public class ObjectiveTest {
 
   /**
    * called before each run
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -51,7 +51,7 @@ public class ObjectiveTest {
 
   /**
    * conduct the test
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -68,7 +68,7 @@ public class ObjectiveTest {
 
   /**
    * called after each run
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -85,7 +85,7 @@ public class ObjectiveTest {
 
   /**
    * called after each test
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -102,7 +102,7 @@ public class ObjectiveTest {
 
   /**
    * is an initialization procedure necessary?
-   * 
+   *
    * @return {@code true} if yes, {@code false} if not
    */
   public boolean isInitializationNecessary() {
@@ -111,7 +111,7 @@ public class ObjectiveTest {
 
   /**
    * called before each initialization procedure
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -128,7 +128,7 @@ public class ObjectiveTest {
 
   /**
    * conduct the initialization procedure
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm
@@ -145,7 +145,7 @@ public class ObjectiveTest {
 
   /**
    * called after each initialization procedure
-   * 
+   *
    * @param inst
    *          the problem instance
    * @param bm

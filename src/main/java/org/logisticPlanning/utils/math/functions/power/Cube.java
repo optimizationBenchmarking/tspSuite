@@ -68,7 +68,7 @@ public final class Cube extends UnaryFunction {
    * with the singleton instance {@link Cube#INSTANCE INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Cube#INSTANCE
    *         INSTANCE})
    */
@@ -81,7 +81,7 @@ public final class Cube extends UnaryFunction {
    * with the singleton instance {@link Cube#INSTANCE INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Cube#INSTANCE
    *         INSTANCE})
    */

@@ -48,7 +48,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the main routine
-   * 
+   *
    * @param args
    *          the command line arguments
    */
@@ -241,7 +241,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
                     this.m_tempX[2 * this.m_xend[q]],
                     this.m_tempX[(2 * this.m_xend[q]) + 1])
 
-                ) {
+                    ) {
                   this.m_edgeDeleted.addEdge(
                       this.m_tempX[2 * this.m_xend[q]],
                       this.m_tempX[(2 * this.m_xend[q]) + 1]);
@@ -442,8 +442,8 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
                   && (this.m_yend[q] != this.m_t[2 * q])
                   && (this.m_yend[q] != LinKernighan.__getNextNode(
                       this.m_t[2 * q], this.m_tempY[0], this.m_tempY[1]))
-                  && (this.m_yend[q] != LinKernighan.__getNextNode(
-                      this.m_t[2 * q], this.m_tempY[2], this.m_tempY[3]))) {
+                      && (this.m_yend[q] != LinKernighan.__getNextNode(
+                          this.m_t[2 * q], this.m_tempY[2], this.m_tempY[3]))) {
                 this.m_t[(2 * q) + 1] = this.m_yend[q];
 
                 oldGain = gain;
@@ -538,7 +538,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * get next node XXX: add description
-   * 
+   *
    * @param n
    *          XXX: add description
    * @param a
@@ -560,7 +560,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * compute g XXX: add description
-   * 
+   *
    * @param yi1
    *          XXX: add description
    * @param yi2
@@ -584,7 +584,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
    * type:1 q>2 y->y2 x->y2<br/>
    * type:2 q=2 y2-x2 type:4 x2->y1<br/>
    * type:3 q=1 y1->x1 type:5 x1->t1<br/>
-   * 
+   *
    * @param backType
    *          XXX: add description
    * @param t

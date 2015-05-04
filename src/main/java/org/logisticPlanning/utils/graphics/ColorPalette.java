@@ -27,49 +27,49 @@ public class ColorPalette extends AbstractList<Color> {
 
   /** the colors to be used */
   private static final Color[] DATA_COLOR = { Color.BLUE,// // color 000
-      Color.RED,// // color 001
-      Color.GREEN,// // color 002
-      Color.MAGENTA,// // color 003
-      Color.CYAN,// // color 004
-      Color.ORANGE,// // color 005
-      new Color(128, 128, 0),// // color 006
-      Color.PINK,// // color 007
+    Color.RED,// // color 001
+    Color.GREEN,// // color 002
+    Color.MAGENTA,// // color 003
+    Color.CYAN,// // color 004
+    Color.ORANGE,// // color 005
+    new Color(128, 128, 0),// // color 006
+    Color.PINK,// // color 007
 
-      // color theme
-      new Color(52, 191, 137),// // color 008
-      new Color(139, 53, 51),// // color 009
-      new Color(111, 135, 60),// // color 010
-      new Color(90, 68, 116),// // color 011
-      new Color(49, 124, 144),// // color 012
-      new Color(181, 106, 44),// // color 013
-      new Color(62, 106, 160),// // color 014
-      new Color(162, 63, 60),// // color 015
-      new Color(106, 81, 136),// // color 016
-      new Color(58, 144, 167),// // color 017
-      new Color(210, 124, 53),// // color 018
-      new Color(71, 120, 179),// // color 019
-      new Color(182, 72, 69),// // color 020
-      new Color(145, 177, 80),// // color 021
-      new Color(119, 91, 152),// // color 022
-      new Color(66, 162, 187),// // color 023
-      new Color(235, 139, 61),// // color 024
-      new Color(110, 145, 194),// // color 025
-      new Color(197, 110, 109),// // color 026
-      new Color(165, 163, 116),// // color 027
-      new Color(144, 124, 172),// // color 028
-      new Color(107, 180, 202),// // color 029
-      new Color(246, 160, 104),// // color 030
-      new Color(156, 175, 208),// // color 031
-      new Color(210, 156, 155),// // color 032
-      new Color(188, 207, 159),// // color 033
-      new Color(175, 163, 192),// // color 034
-      new Color(245, 185, 52),// // color 035
+    // color theme
+    new Color(52, 191, 137),// // color 008
+    new Color(139, 53, 51),// // color 009
+    new Color(111, 135, 60),// // color 010
+    new Color(90, 68, 116),// // color 011
+    new Color(49, 124, 144),// // color 012
+    new Color(181, 106, 44),// // color 013
+    new Color(62, 106, 160),// // color 014
+    new Color(162, 63, 60),// // color 015
+    new Color(106, 81, 136),// // color 016
+    new Color(58, 144, 167),// // color 017
+    new Color(210, 124, 53),// // color 018
+    new Color(71, 120, 179),// // color 019
+    new Color(182, 72, 69),// // color 020
+    new Color(145, 177, 80),// // color 021
+    new Color(119, 91, 152),// // color 022
+    new Color(66, 162, 187),// // color 023
+    new Color(235, 139, 61),// // color 024
+    new Color(110, 145, 194),// // color 025
+    new Color(197, 110, 109),// // color 026
+    new Color(165, 163, 116),// // color 027
+    new Color(144, 124, 172),// // color 028
+    new Color(107, 180, 202),// // color 029
+    new Color(246, 160, 104),// // color 030
+    new Color(156, 175, 208),// // color 031
+    new Color(210, 156, 155),// // color 032
+    new Color(188, 207, 159),// // color 033
+    new Color(175, 163, 192),// // color 034
+    new Color(245, 185, 52),// // color 035
 
-  /*
-   * new Color(60, 103, 154),// new Color(157, 61, 58),// new Color(125,
-   * 152, 68),// new Color(102, 78, 131),// new Color(56, 140, 162),// new
-   * Color(203, 120, 51),//
-   */
+    /*
+     * new Color(60, 103, 154),// new Color(157, 61, 58),// new Color(125,
+     * 152, 68),// new Color(102, 78, 131),// new Color(56, 140, 162),// new
+     * Color(203, 120, 51),//
+     */
   };
 
   /** the colors */
@@ -86,7 +86,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param sync
    *          the synchronizer
    * @param maxColors
@@ -104,7 +104,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param maxColors
    *          the maximum colors
    * @param uniqueColors
@@ -116,7 +116,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param maxColors
    *          the maximum colors
    */
@@ -131,7 +131,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * Calculate a new color.
-   * 
+   *
    * @param index
    *          the data index
    * @return the color to use
@@ -168,7 +168,7 @@ public class ColorPalette extends AbstractList<Color> {
    * dark or too light, it will be replaced with a pseudo-random color
    * calculated from it. If it is neither too dark nor to light, it is
    * returned unchanged.
-   * 
+   *
    * @param c
    *          the color
    * @return the visible version of the color
@@ -201,7 +201,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * get the distance between two vectors
-   * 
+   *
    * @param c1
    *          the first color
    * @param c2
@@ -239,7 +239,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * Compute the distance between two colors.
-   * 
+   *
    * @param a
    *          the first color
    * @param b
@@ -262,14 +262,14 @@ public class ColorPalette extends AbstractList<Color> {
         //
         ColorPalette.__dist(a, b,
             ColorSpace.getInstance(ColorSpace.CS_sRGB), x, y),
-        ColorPalette.__dist(a, b,
-            ColorSpace.getInstance(ColorSpace.CS_LINEAR_RGB), x, y)),
-        ColorPalette.__dist(a, b,
-            ColorSpace.getInstance(ColorSpace.CS_PYCC), x, y)),
-        ColorPalette.__dist(a, b,
-            ColorSpace.getInstance(ColorSpace.CS_CIEXYZ), x, y)),
-        ColorPalette.__dist(a, b,
-            ColorSpace.getInstance(ColorSpace.CS_GRAY), x, y));
+            ColorPalette.__dist(a, b,
+                ColorSpace.getInstance(ColorSpace.CS_LINEAR_RGB), x, y)),
+                ColorPalette.__dist(a, b,
+                    ColorSpace.getInstance(ColorSpace.CS_PYCC), x, y)),
+                    ColorPalette.__dist(a, b,
+                        ColorSpace.getInstance(ColorSpace.CS_CIEXYZ), x, y)),
+                        ColorPalette.__dist(a, b,
+                            ColorSpace.getInstance(ColorSpace.CS_GRAY), x, y));
 
     // r1 = (a.getRed() / 255d);
     // g1 = (a.getGreen() / 255d);
@@ -338,7 +338,7 @@ public class ColorPalette extends AbstractList<Color> {
   /**
    * Make a color unique. This is only called if the palette is supposed to
    * ensure color uniqueness.
-   * 
+   *
    * @param c
    *          the color
    * @param others
@@ -423,7 +423,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * get the color at a given index
-   * 
+   *
    * @param index
    *          the index
    * @return the color
@@ -440,8 +440,8 @@ public class ColorPalette extends AbstractList<Color> {
     if (index >= this.m_colors.length) {
       throw new IllegalArgumentException(//
           "There can be at most " + this.m_colors.length + //$NON-NLS-1$
-              " colors, but you ask for the color at index " //$NON-NLS-1$
-              + index);
+          " colors, but you ask for the color at index " //$NON-NLS-1$
+          + index);
     }
 
     // does the color exist?

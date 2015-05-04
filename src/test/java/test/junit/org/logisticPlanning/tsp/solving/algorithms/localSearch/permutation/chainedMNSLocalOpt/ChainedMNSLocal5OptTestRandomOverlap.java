@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.localOpt.Exhaustiv
  * the test of the local 5-opt algorithm
  */
 public class ChainedMNSLocal5OptTestRandomOverlap extends
-    ChainedMNSLocalNOptTestRandomOverlap {
+ChainedMNSLocalNOptTestRandomOverlap {
 
   /** create */
   public ChainedMNSLocal5OptTestRandomOverlap() {

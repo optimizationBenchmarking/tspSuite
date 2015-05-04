@@ -39,8 +39,8 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  * here) and performs santiy checks and stuff (which we omit for the sake
  * of speed).
  * </p>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -60,7 +60,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
 
   /**
    * the internal constructor of the edge bit set
-   * 
+   *
    * @param n
    *          the number of nodes in the TSP
    */
@@ -72,7 +72,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
    * Get the bit associated with the edge {@code (a,b)}. Be careful: This
    * class is designed for speed, it does not perform sanity checks on
    * {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -85,7 +85,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
    * Toggle the bit associated with the edge {@code (a,b)}. Be careful:
    * This class is designed for speed, it does not perform sanity checks on
    * {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -98,7 +98,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
    * Set the bit associated with the edge {@code (a,b)} to {@code true}. Be
    * careful: This class is designed for speed, it does not perform sanity
    * checks on {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -110,7 +110,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
    * Set the bit associated with the edge {@code (a,b)} to {@code false}.
    * Be careful: This class is designed for speed, it does not perform
    * sanity checks on {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -122,7 +122,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
    * Set the bit associated with the edge {@code (a,b)} to a given value.
    * Be careful: This class is designed for speed, it does not perform
    * sanity checks on {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first node of the edge
    * @param b
@@ -150,7 +150,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
   /**
    * Allocate an edge bits array with all bits set to {@code false}. This
    * is the only right way to instantiate {@link EdgeBit}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -166,7 +166,7 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
   /**
    * Allocate an edge bits array with all bits set to {@code false}. This
    * is the only right way to instantiate {@link EdgeBit}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -187,10 +187,10 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
 
     if (n < EdgeBit.LONG_THRESHOLD) {
       return (symmetric ? new _SymmetricEdgeBitBooleanArray(n)
-          : new _AsymmetricEdgeBitBooleanArray(n));
+      : new _AsymmetricEdgeBitBooleanArray(n));
     }
     return (symmetric ? new _SymmetricEdgeBitLongArray(n)
-        : new _AsymmetricEdgeBitLongArray(n));
+    : new _AsymmetricEdgeBitLongArray(n));
   }
 
   /** {@inheritDoc} */

@@ -9,7 +9,7 @@ package org.logisticPlanning.utils.collections.lists;
  * {@code long} values.
  */
 public class BooleanList extends
-    BasicArrayList<java.lang.Boolean, boolean[]> {
+BasicArrayList<java.lang.Boolean, boolean[]> {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -22,7 +22,7 @@ public class BooleanList extends
 
   /**
    * Instantiate the {@code BooleanList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -30,8 +30,8 @@ public class BooleanList extends
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_BOOLEANS
         : //
-        new boolean[(capacity > 0) ? capacity
-            : BasicArrayList.DEFAULT_LIST_SIZE]);
+          new boolean[(capacity > 0) ? capacity
+              : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */
@@ -69,7 +69,7 @@ public class BooleanList extends
 
   /**
    * Add/insert the Boolean (true/false) (boolean) at the given index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -88,7 +88,7 @@ public class BooleanList extends
 
   /**
    * Add/insert the Boolean (true/false) (boolean) at the end of the list
-   * 
+   *
    * @param element
    *          the boolean to be added
    */
@@ -133,7 +133,7 @@ public class BooleanList extends
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -144,7 +144,7 @@ public class BooleanList extends
 
   /**
    * Get the {@code boolean} at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the {@code boolean} at that index
@@ -157,7 +157,7 @@ public class BooleanList extends
   /**
    * Ensure that there are at least {@code size} free {@code boolean}s
    * starting at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -225,7 +225,7 @@ public class BooleanList extends
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -255,6 +255,7 @@ public class BooleanList extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

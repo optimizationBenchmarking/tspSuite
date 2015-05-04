@@ -141,33 +141,33 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * </ol>
  */
 final class _ExperimentSetERTOverScaleDiagram extends
-    _ExperimentSetERTDiagramsBase {
+_ExperimentSetERTDiagramsBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /** the caption 1 */
   private static final String CAP_1 = //
-  "The Estimated Running Time to success for several different relative goal objective values "; //$NON-NLS-1$
+      "The Estimated Running Time to success for several different relative goal objective values "; //$NON-NLS-1$
   /** the caption 2 */
   private static final String CAP_2 = //
-  ". The x-axes are the logarithms of the problem scales "; //$NON-NLS-1$
+      ". The x-axes are the logarithms of the problem scales "; //$NON-NLS-1$
   /** the caption 3 */
   private static final String CAP_3A = //
-  "And the y-axes are the logarithms of the scaled "; //$NON-NLS-1$
+      "And the y-axes are the logarithms of the scaled "; //$NON-NLS-1$
   /** the caption 3 */
   private static final String CAP_3B = //
-  "And the y-axes are the logarithms of the "; //$NON-NLS-1$
+      "And the y-axes are the logarithms of the "; //$NON-NLS-1$
   /** the caption 4 */
   private static final String CAP_4 = //
-  ", cut off at 0"; //$NON-NLS-1$
+      ", cut off at 0"; //$NON-NLS-1$
 
   /** the sub caption 1 */
   private static final String SCAP = //
-  " for "; //$NON-NLS-1$
+      " for "; //$NON-NLS-1$
 
   /** the x-axis caption */
   private static final String X_AXIS = ("log of problem scale " + //$NON-NLS-1$
-  Macros.SCALE.getPlaceholder());
+      Macros.SCALE.getPlaceholder());
 
   /** the goal values */
   private static final double[] GOALS = { 0.0d, 0.01d, 0.02d, 0.05d, 0.1d };
@@ -183,7 +183,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param axs
@@ -208,7 +208,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
   /**
    * Aggregate the experiment performance based on the area under the
    * curve.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg
@@ -227,8 +227,8 @@ final class _ExperimentSetERTOverScaleDiagram extends
     }
 
     agg.aggregateRanks(//
-    Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
-        lst.toArray(new Map.Entry[lst.size()])));
+        Ranking.rank(AreaUnderCurveComparator.SMALLER_IS_BETTER,//
+            lst.toArray(new Map.Entry[lst.size()])));
   }
 
   /** {@inheritDoc} */
@@ -257,7 +257,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
 
   /**
    * Make the figure
-   * 
+   *
    * @param instances
    *          the instances
    * @param data
@@ -307,7 +307,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
 
       hasData |= ((a < b) && (c != d) && //
           (ComparisonUtils.isFinite(a) || ComparisonUtils.isFinite(b)) && //
-      (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
+          (ComparisonUtils.isFinite(c) || ComparisonUtils.isFinite(d)));
 
       lines.add(new Line2D(exp.shortName(), null, col, null,//
           ELineMode.DIRECT));
@@ -390,13 +390,13 @@ final class _ExperimentSetERTOverScaleDiagram extends
             + Macros.SCALE.getPlaceholder()
             + (axs.isScaled() ? _ExperimentSetERTOverScaleDiagram.CAP_3A
                 : _ExperimentSetERTOverScaleDiagram.CAP_3B)
-            + axs.getShortName()
-            + (axs.isTime() ? _ExperimentSetERTOverScaleDiagram.CAP_4
-                : EmptyUtils.EMPTY_STRING) + '.'),//
-        (Macros.ERT.getPlaceholder()
-            + _ExperimentSetERTOverScaleDiagram.SCAP
-            + Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + "=999"), //$NON-NLS-1$
-        true)) {
+                + axs.getShortName()
+                + (axs.isTime() ? _ExperimentSetERTOverScaleDiagram.CAP_4
+                    : EmptyUtils.EMPTY_STRING) + '.'),//
+                    (Macros.ERT.getPlaceholder()
+                        + _ExperimentSetERTOverScaleDiagram.SCAP
+                        + Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + "=999"), //$NON-NLS-1$
+                        true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentSetERTOverScaleDiagram.CAP_1);
@@ -550,7 +550,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
       }
     }
     body.write(//
-    "). If data for multiple benchmark cases for the same scale exist, the median "); //$NON-NLS-1$
+        "). If data for multiple benchmark cases for the same scale exist, the median "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.ERTi)) {
       try (MacroParameter p = mi.macroParameter()) {
         axs.writeShortName(p);
@@ -579,7 +579,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
       axs.writeScale(body);
     }
     body.write(//
-    ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
+        ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(" cannot be plotted. We therefore choose to represent all values less than "); //$NON-NLS-1$
     body.writeInt(1);
@@ -592,17 +592,17 @@ final class _ExperimentSetERTOverScaleDiagram extends
     body.write(" will now also be represented as "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(//
-    ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
+        ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
 
     body.writeLinebreak();
     ranking = rag.rank(EStatisticParameter.MEDIAN);
     body.write(//
-    "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
+        "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(", ");//$NON-NLS-1$
     body.reference(this.m_descAuc.getLabel(data));
     body.write(//
-    "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
+        "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
     body.reference(this.m_descRanking.getLabel(data));
     body.write(". From this, ");//$NON-NLS-1$
     this.summarizeRanks(ranking, body, "discover good solutions faster"); //$NON-NLS-1$

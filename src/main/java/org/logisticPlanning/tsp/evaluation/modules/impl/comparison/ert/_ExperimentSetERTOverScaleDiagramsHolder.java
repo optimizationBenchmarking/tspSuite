@@ -95,18 +95,18 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetERTOverScaleDiagramsHolder extends
-    ComparisonModule {
+ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetERTOverScaleDiagramsHolder(final Module owner) {
-    super(_ExperimentSetERTDiagramsBase._NAME_PFX + "OverScale",//$NON-NLS-1$ 
+    super(_ExperimentSetERTDiagramsBase._NAME_PFX + "OverScale",//$NON-NLS-1$
         owner, false);
   }
 
@@ -131,10 +131,10 @@ final class _ExperimentSetERTOverScaleDiagramsHolder extends
     for (final Accessor axs : Accessor.TIME_MEASURES) {
       new _ExperimentSetERTOverScaleDiagram(this, axs, //
           Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-      // ((axs == Accessor.DE) || //
-      // (axs == Accessor.FE) || //
-      // (axs == Accessor.NORMALIZED_RUNTIME))
-      );
+          // ((axs == Accessor.DE) || //
+          // (axs == Accessor.FE) || //
+          // (axs == Accessor.NORMALIZED_RUNTIME))
+          );
     }
   }
 

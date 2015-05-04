@@ -10,7 +10,7 @@ public class Function extends Node<Function> {
 
   /**
    * Create a node with the given children
-   * 
+   *
    * @param pchildren
    *          the child nodes
    * @param in
@@ -23,7 +23,7 @@ public class Function extends Node<Function> {
 
   /**
    * Print a sub-expression to the given string builder
-   * 
+   *
    * @param idx
    *          the sub-expression index
    * @param sb
@@ -53,7 +53,7 @@ public class Function extends Node<Function> {
 
   /**
    * Print a sub-expression to the given string builder
-   * 
+   *
    * @param idx
    *          the sub-expression index
    * @param sb
@@ -66,7 +66,7 @@ public class Function extends Node<Function> {
 
   /**
    * compute the function result
-   * 
+   *
    * @param data
    *          the data array
    * @return the return value

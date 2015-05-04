@@ -134,26 +134,26 @@ import org.logisticPlanning.utils.math.statistics.EStatisticParameter;
  * </ol>
  */
 final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
-    _ExperimentSetERTOverRelativeObjectiveValueDiagramBase {
+_ExperimentSetERTOverRelativeObjectiveValueDiagramBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /** the caption 3 */
   private static final String CAP_3A = //
-  ", cut off at 0. The diagrams are aggregated over instance whose scale "; //$NON-NLS-1$
+      ", cut off at 0. The diagrams are aggregated over instance whose scale "; //$NON-NLS-1$
   /** the caption 3 */
   private static final String CAP_3B = //
-  ". The diagrams are aggregated over instance whose scale "; //$NON-NLS-1$
+      ". The diagrams are aggregated over instance whose scale "; //$NON-NLS-1$
   /** the caption 4 */
   private static final String CAP_4 = //
-  " falls in the same power of "; //$NON-NLS-1$
+      " falls in the same power of "; //$NON-NLS-1$
   /** sub caption 3 */
   static final String SCAP_3 = " for "; //$NON-NLS-1$
   /** sub caption 4 */
   static final String SCAP_4 = " instance with "; //$NON-NLS-1$
 
   /** the y-axis caption part 1 */
-  static final String Y_AXIS_1b = "lg(med " + //$NON-NLS-1$ 
+  static final String Y_AXIS_1b = "lg(med " + //$NON-NLS-1$
       Macros.ERT.getPlaceholder();
 
   /** the property */
@@ -163,7 +163,7 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -268,10 +268,10 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
                 + Macros.ERT.getPlaceholder()
                 + (this.m_axs.isTime() ? _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.CAP_3A
                     : _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.CAP_3B)
-                + Macros.SCALE
-                + _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.CAP_4 + '.'),//
-            (_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_1 + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_2),//
-            true)) {
+                    + Macros.SCALE
+                    + _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.CAP_4 + '.'),//
+                    (_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_1 + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_2),//
+                    true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.CAP_1);
@@ -301,7 +301,7 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
 
         if (aucLines.size() == data.size()) {
           _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
-              ._aggregate(aucLines, rag);
+          ._aggregate(aucLines, rag);
           aucLines.clear();
         }
 
@@ -323,16 +323,16 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
                   chart
-                      .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
+                  .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
                   if (this.m_axs.isTime()) {
                     chart
-                        .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
-                            + this.m_axs.getAxisString()
-                            + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
+                    .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
+                        + this.m_axs.getAxisString()
+                        + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
                   } else {
                     chart
-                        .setAxisTitleY(_ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.Y_AXIS_1b
-                            + this.m_axs.getAxisString() + ')');
+                    .setAxisTitleY(_ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.Y_AXIS_1b
+                        + this.m_axs.getAxisString() + ')');
                   }
                   chart.paint(graph);
                   chart = null;
@@ -391,7 +391,7 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
             try (FigureBody fb = sf.figureBody(
                 this.makeURI(Module.GRAPHICS_FOLDER, null, null,
                     ((ssi.getLowerScaleBound() + "_to_") + //$NON-NLS-1$
-                    (ssi.getUpperScaleBound()))), dim)) {
+                        (ssi.getUpperScaleBound()))), dim)) {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(ERTUtils.DEFAULT_AXIS_DEF);
                 chart.addLines(lines);
@@ -400,16 +400,16 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
                     : ELegendType.NO_LEGEND);
                 if (includeAxisLabels) {
                   chart
-                      .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
+                  .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
                   if (this.m_axs.isTime()) {
                     chart
-                        .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
-                            + this.m_axs.getAxisString()
-                            + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
+                    .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
+                        + this.m_axs.getAxisString()
+                        + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
                   } else {
                     chart
-                        .setAxisTitleY(_ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.Y_AXIS_1b
-                            + this.m_axs.getAxisString() + ')');
+                    .setAxisTitleY(_ExperimentSetScaleERTOverRelativeObjectiveValueDiagram.Y_AXIS_1b
+                        + this.m_axs.getAxisString() + ')');
                   }
                 }
 
@@ -442,10 +442,10 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
     body.write(" over the relative target objective values "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
     body.write(//
-    " for different time measures aggregated over groups of benchmark instances whose scale ");//$NON-NLS-1$
+        " for different time measures aggregated over groups of benchmark instances whose scale ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(//
-    " is in the same power of ");//$NON-NLS-1$
+        " is in the same power of ");//$NON-NLS-1$
     body.writeInt(this.m_property.getBase());
     body.writeChar('.');
 
@@ -466,23 +466,23 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
     body.write("-values, aggregated over "); //$NON-NLS-1$
     body.writeInt(instances.size());
     body.write(//
-    " groups, each of which containing for which containing problem instances with scales ");//$NON-NLS-1$
+        " groups, each of which containing for which containing problem instances with scales ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(//
-    " that are in the same power of ");//$NON-NLS-1$
+        " that are in the same power of ");//$NON-NLS-1$
     body.writeInt(this.m_property.getBase());
 
     body.write(//
-    ". Since the different problem instances have different scales which affect the running time, we scale the "); //$NON-NLS-1$
+        ". Since the different problem instances have different scales which affect the running time, we scale the "); //$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write("s before computing their medians. The scaling factor depends on the time measure in which the ERTs are specified and is discussed in detail in"); //$NON-NLS-1$
     body.reference(this.m_descTime.getLabel(data));
     body.write(//
-    ". We plot the logarithms of these values in order to make the diagrams readable.");//$NON-NLS-1$
+        ". We plot the logarithms of these values in order to make the diagrams readable.");//$NON-NLS-1$
 
     if (this.m_axs.isTime()) {
       body.write(//
-      " This has the disadvantage that values such as "); //$NON-NLS-1$
+          " This has the disadvantage that values such as "); //$NON-NLS-1$
       body.writeInt(0);
       body.write(" (which could occur in real time measurements due to clock resolution) cannot be plotted. We therefore choose to represent all values less than "); //$NON-NLS-1$
       body.writeInt(1);
@@ -495,18 +495,18 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
       body.write(" will now also be represented as "); //$NON-NLS-1$
       body.writeInt(0);
       body.write(//
-      ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
+          ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
     }
 
     body.writeLinebreak();
     ranking = rag.rank(EStatisticParameter.MEDIAN);
     body.write(//
-    "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
+        "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(", ");//$NON-NLS-1$
     body.reference(this.m_descAuc.getLabel(data));
     body.write(//
-    "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
+        "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
     body.reference(this.m_descRanking.getLabel(data));
     body.write(". From this, ");//$NON-NLS-1$
     this.summarizeRanks(ranking, body, "discover good solutions faster"); //$NON-NLS-1$

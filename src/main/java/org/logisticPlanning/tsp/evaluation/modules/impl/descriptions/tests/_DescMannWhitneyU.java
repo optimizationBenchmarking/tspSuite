@@ -204,15 +204,15 @@ final class _DescMannWhitneyU extends TestDescription {
           new BibAuthors(//
               new BibAuthor("Henry B.", "Mann"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Donald R.", "Whitney")//$NON-NLS-1$//$NON-NLS-2$
-          ),//
-          "On a Test of whether One of Two Random Variables is Stochastically Larger than the Other",//$NON-NLS-1$
-          new BibDate(1947, EBibMonth.MARCH), //
-          "The Annals of Mathematical Statistics",//$NON-NLS-1$        
-          "18",//$NON-NLS-1$
-          "1",//$NON-NLS-1$
-          "50",//$NON-NLS-1$
-          "60",//$NON-NLS-1$
-          new URI("http://projecteuclid.org/euclid.aoms/1177730491"),//$NON-NLS-1$
+              ),//
+              "On a Test of whether One of Two Random Variables is Stochastically Larger than the Other",//$NON-NLS-1$
+              new BibDate(1947, EBibMonth.MARCH), //
+              "The Annals of Mathematical Statistics",//$NON-NLS-1$
+              "18",//$NON-NLS-1$
+              "1",//$NON-NLS-1$
+              "50",//$NON-NLS-1$
+              "60",//$NON-NLS-1$
+              new URI("http://projecteuclid.org/euclid.aoms/1177730491"),//$NON-NLS-1$
           "10.1214/aoms/1177730491");//$NON-NLS-1$
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
@@ -222,26 +222,26 @@ final class _DescMannWhitneyU extends TestDescription {
         new BibAuthors(//
             new BibAuthor("L. C.", "Dinneen"),//$NON-NLS-1$//$NON-NLS-2$
             new BibAuthor("B. C.", "Blakesley")//$NON-NLS-1$//$NON-NLS-2$
-        ),//
-        "Algorithm AS 62: A Generator for the Sampling Distribution of the Mann-Whitney U Statistic",//$NON-NLS-1$
-        new BibDate(1973), //
-        "Journal of the Royal Statistical Society: Series C ‒ Applied Statistics",//$NON-NLS-1$        
-        "22",//$NON-NLS-1$
-        "2",//$NON-NLS-1$
-        "269",//$NON-NLS-1$
-        "273",//$NON-NLS-1$
-        null, null);
+            ),//
+            "Algorithm AS 62: A Generator for the Sampling Distribution of the Mann-Whitney U Statistic",//$NON-NLS-1$
+            new BibDate(1973), //
+            "Journal of the Royal Statistical Society: Series C ‒ Applied Statistics",//$NON-NLS-1$
+            "22",//$NON-NLS-1$
+            "2",//$NON-NLS-1$
+            "269",//$NON-NLS-1$
+            "273",//$NON-NLS-1$
+            null, null);
 
     N1988SPFCTDOENPTS = new BibArticle(
         new BibAuthors(//
             new BibAuthor("N.", "Neumann")//$NON-NLS-1$//$NON-NLS-2$
-        ),//
-        "Some Procedures for Calculating the Distributions of Elementary Non-parametric Test Statistics",//$NON-NLS-1$
-        new BibDate(1988), //
-        "Statistical Software Newsletter",//$NON-NLS-1$        
-        "14",//$NON-NLS-1$
-        "3",//$NON-NLS-1$
-        null, null, null, null);
+            ),//
+            "Some Procedures for Calculating the Distributions of Elementary Non-parametric Test Statistics",//$NON-NLS-1$
+            new BibDate(1988), //
+            "Statistical Software Newsletter",//$NON-NLS-1$
+            "14",//$NON-NLS-1$
+            "3",//$NON-NLS-1$
+            null, null, null, null);
 
     try {
       L2006VSWFSC = new BibWebsite(new BibAuthors(//
@@ -251,7 +251,7 @@ final class _DescMannWhitneyU extends TestDescription {
           new BibDate(2006), //
           null, null, new URI(
               "http://faculty.vassar.edu/lowry/VassarStats.html")//$NON-NLS-1$
-      );
+          );
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
     }
@@ -259,32 +259,32 @@ final class _DescMannWhitneyU extends TestDescription {
     H1984AEMSPFCTMUGUASD = new BibArticle(
         new BibAuthors(//
             new BibAuthor("E. F.", "Harding")//$NON-NLS-1$//$NON-NLS-2$
-        ),//
-        "An Efficient, Minimal-Storage Procedure for Calculating the Mann-Whitney U, Generalized U and Similar Distributions",//$NON-NLS-1$
-        new BibDate(1984), //
-        "Journal of the Royal Statistical Society: Series C ‒ Applied Statistics",//$NON-NLS-1$        
-        "33",//$NON-NLS-1$
-        "1",//$NON-NLS-1$
-        "1",//$NON-NLS-1$
-        "6",//$NON-NLS-1$
-        null, null);
+            ),//
+            "An Efficient, Minimal-Storage Procedure for Calculating the Mann-Whitney U, Generalized U and Similar Distributions",//$NON-NLS-1$
+            new BibDate(1984), //
+            "Journal of the Royal Statistical Society: Series C ‒ Applied Statistics",//$NON-NLS-1$
+            "33",//$NON-NLS-1$
+            "1",//$NON-NLS-1$
+            "1",//$NON-NLS-1$
+            "6",//$NON-NLS-1$
+            null, null);
 
     try {
       NK2009RAEOAFCTSOTMWT = new BibArticle(
           new BibAuthors(//
               new BibAuthor("Niranjan", "Nagarajan"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Uri", "Keich")//$NON-NLS-1$//$NON-NLS-2$
-          ),//
-          "Reliability and Efficiency of Algorithms for Computing the Significance of the Mann-Whitney Test",//$NON-NLS-1$
-          new BibDate(2009, EBibMonth.DECEMBER, 1), //
-          "Computational Statistics",//$NON-NLS-1$        
-          "24",//$NON-NLS-1$
-          "4",//$NON-NLS-1$
-          "605",//$NON-NLS-1$
-          "622",//$NON-NLS-1$
-          new URI(
-              "http://www.cbcb.umd.edu/~niranjan/papers/NagarajanKeichCS09.pdf"),//$NON-NLS-1$
-          "10.1007/s00180-009-0148-x");//$NON-NLS-1$      
+              ),//
+              "Reliability and Efficiency of Algorithms for Computing the Significance of the Mann-Whitney Test",//$NON-NLS-1$
+              new BibDate(2009, EBibMonth.DECEMBER, 1), //
+              "Computational Statistics",//$NON-NLS-1$
+              "24",//$NON-NLS-1$
+              "4",//$NON-NLS-1$
+              "605",//$NON-NLS-1$
+              "622",//$NON-NLS-1$
+              new URI(
+                  "http://www.cbcb.umd.edu/~niranjan/papers/NagarajanKeichCS09.pdf"),//$NON-NLS-1$
+          "10.1007/s00180-009-0148-x");//$NON-NLS-1$
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
     }
@@ -292,7 +292,7 @@ final class _DescMannWhitneyU extends TestDescription {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -353,7 +353,7 @@ final class _DescMannWhitneyU extends TestDescription {
     }
 
     body.write(//
-    " and tells us whether one of the two data sets tends to have larger values than the other or whether there is no significant diference between "); //$NON-NLS-1$
+        " and tells us whether one of the two data sets tends to have larger values than the other or whether there is no significant diference between "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(1);
@@ -366,7 +366,7 @@ final class _DescMannWhitneyU extends TestDescription {
       }
     }
     body.write(//
-    " (if applied in the two-tailed form "); //$NON-NLS-1$
+        " (if applied in the two-tailed form "); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.SE20061STITIAAC);
     body.write(")."); //$NON-NLS-1$
     super.writeSectionBody(body, data);

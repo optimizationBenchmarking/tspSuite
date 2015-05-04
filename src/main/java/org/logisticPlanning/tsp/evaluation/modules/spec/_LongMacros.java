@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.document.spec.MacroDefinition;
  * descriptors for the long-name macros.
  */
 final class _LongMacros extends
-    Property<ExperimentSet, HashMap<String, MacroDefinition>> {
+Property<ExperimentSet, HashMap<String, MacroDefinition>> {
 
   /** create */
   _LongMacros() {

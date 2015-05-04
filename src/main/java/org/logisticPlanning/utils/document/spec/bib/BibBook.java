@@ -32,7 +32,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -67,7 +67,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -148,16 +148,16 @@ public class BibBook extends BibRecord {
     return HashUtils.combineHashes(HashUtils.combineHashes(HashUtils
         .combineHashes(super._hashCode(),
             HashUtils.hashCode(this.m_address)), HashUtils.combineHashes(
-        HashUtils.hashCode(this.m_edition),
-        HashUtils.hashCode(this.m_editors))), HashUtils.combineHashes(
-        HashUtils.combineHashes(HashUtils.hashCode(this.m_publisher),
-            HashUtils.hashCode(this.m_series)), HashUtils
-            .hashCode(this.m_volume)));
+                HashUtils.hashCode(this.m_edition),
+                HashUtils.hashCode(this.m_editors))), HashUtils.combineHashes(
+                    HashUtils.combineHashes(HashUtils.hashCode(this.m_publisher),
+                        HashUtils.hashCode(this.m_series)), HashUtils
+                        .hashCode(this.m_volume)));
   }
 
   /**
    * Get the bibliography editors
-   * 
+   *
    * @return the bibliography editors
    */
   public final BibAuthors getEditors() {
@@ -166,7 +166,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the publisher
-   * 
+   *
    * @return the publisher
    */
   public final String getPublisher() {
@@ -175,7 +175,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the publisher's address
-   * 
+   *
    * @return the publisher's address
    */
   public final String getPublisherAddress() {
@@ -184,7 +184,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the series
-   * 
+   *
    * @return the series
    */
   public final String getSeries() {
@@ -193,7 +193,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the volume
-   * 
+   *
    * @return the volume
    */
   public final String getVolume() {
@@ -202,7 +202,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the edition
-   * 
+   *
    * @return the edition
    */
   public final String getEdition() {
@@ -221,7 +221,7 @@ public class BibBook extends BibRecord {
           ComparisonUtils.equals(this.m_address, x.m_address) && //
           ComparisonUtils.equals(this.m_edition, x.m_edition) && //
           ComparisonUtils.equals(this.m_series, x.m_series) && //
-      ComparisonUtils.equals(this.m_volume, x.m_volume));
+          ComparisonUtils.equals(this.m_volume, x.m_volume));
 
     }
 

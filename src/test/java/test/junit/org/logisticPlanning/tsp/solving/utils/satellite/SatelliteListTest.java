@@ -23,7 +23,7 @@ public class SatelliteListTest extends TestBase {
 
   /**
    * create a virgin satellite list
-   * 
+   *
    * @param n
    *          the number of nodes
    * @return satellite list
@@ -72,7 +72,7 @@ public class SatelliteListTest extends TestBase {
 
         Assert.assertTrue(list.toPath(b));
         Assert
-            .assertTrue(RepresentationUtils.arePathsEquivalentSTSP(a, b));
+        .assertTrue(RepresentationUtils.arePathsEquivalentSTSP(a, b));
       }
     }
   }

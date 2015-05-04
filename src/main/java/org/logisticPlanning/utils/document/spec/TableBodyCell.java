@@ -9,7 +9,7 @@ public class TableBodyCell extends AbstractTableCell {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

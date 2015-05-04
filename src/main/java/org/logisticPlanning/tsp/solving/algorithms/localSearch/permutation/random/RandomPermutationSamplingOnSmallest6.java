@@ -12,7 +12,7 @@ public final class RandomPermutationSamplingOnSmallest6 {
 
   /**
    * Perform the random sampling algorithm
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -30,7 +30,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -70,7 +70,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the index of this section
-   * 
+   *
    * @return the index of this section
    */
   public final int getIndex() {
@@ -79,7 +79,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the section depth: {@code 1} for the top-level section
-   * 
+   *
    * @return the section depth
    */
   public final int getDepth() {
@@ -88,7 +88,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the hierarchy of indexes
-   * 
+   *
    * @return the hierarchy of indexes
    */
   public final int[] getAllIndexes() {
@@ -112,7 +112,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * get the id of the next section
-   * 
+   *
    * @return the id of the next section
    */
   private final int nextSection() {
@@ -163,7 +163,7 @@ public class Section extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void sectionTitleEnd(final SectionTitle h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Section.STATE_IN_TITLE) {
       throw new IllegalStateException(//
@@ -177,7 +177,7 @@ public class Section extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public SectionTitle sectionTitle() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.sectionTitle();
   }
 
@@ -191,7 +191,7 @@ public class Section extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyBegin(final SectionBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Section.STATE_AFTER_TITLE) {
       throw new IllegalStateException(//
@@ -205,7 +205,7 @@ public class Section extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyEnd(final SectionBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Section.STATE_IN_BODY) {
       throw new IllegalStateException(//
@@ -219,14 +219,14 @@ public class Section extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public SectionBody sectionBody() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.sectionBody();
   }
 
   /**
    * Open a new section, either as a sub-section or as a top-level section
    * in a document body.
-   * 
+   *
    * @param element
    *          the current element which should contain the new section
    * @param label
@@ -248,7 +248,7 @@ public class Section extends AbstractLabeledElement {
     }
     throw new IllegalStateException(//
         "Cannot open a new section here! Element is instance of " //$NON-NLS-1$
-            + element.getClass() + " but must be instance of " + //$NON-NLS-1$
-            SectionBody.class + " or " + Body.class);//$NON-NLS-1$
+        + element.getClass() + " but must be instance of " + //$NON-NLS-1$
+        SectionBody.class + " or " + Body.class);//$NON-NLS-1$
   }
 }

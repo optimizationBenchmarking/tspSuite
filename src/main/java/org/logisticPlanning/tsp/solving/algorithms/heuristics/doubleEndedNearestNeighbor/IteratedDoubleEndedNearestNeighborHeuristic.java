@@ -14,7 +14,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * until either all depots have been tested or the runtime is up.
  */
 public class IteratedDoubleEndedNearestNeighborHeuristic extends
-    DoubleEndedNearestNeighborHeuristic {
+DoubleEndedNearestNeighborHeuristic {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -43,7 +43,7 @@ public class IteratedDoubleEndedNearestNeighborHeuristic extends
 
   /**
    * Execute the iterated nearest neighbor heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

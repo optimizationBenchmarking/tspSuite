@@ -7,7 +7,7 @@ public class AxisRange2DDef extends _AxisRange2DDef {
 
   /**
    * create
-   * 
+   *
    * @param minX
    *          the minimum-x end
    * @param maxX
@@ -24,7 +24,7 @@ public class AxisRange2DDef extends _AxisRange2DDef {
 
   /**
    * create
-   * 
+   *
    * @param minX
    *          the minimum-x end
    * @param maxX
@@ -46,7 +46,7 @@ public class AxisRange2DDef extends _AxisRange2DDef {
 
   /**
    * instantiate
-   * 
+   *
    * @return the axis range object
    */
   public AxisRange2D instantiate() {

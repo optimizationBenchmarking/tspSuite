@@ -10,7 +10,7 @@ final class _FirstOfRunLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param rs
    *          the run set
    */

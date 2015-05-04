@@ -24,7 +24,7 @@ class _Descriptions extends Module {
 
   /**
    * create
-   * 
+   *
    * @param owner
    *          the owning module
    */
@@ -90,7 +90,7 @@ class _Descriptions extends Module {
         log = this.getLogger();
         if ((log != null) && (log.isLoggable(Level.INFO))) {
           log.info(//
-          "No description module is active. Quitting description procedure without doing anything."); //$NON-NLS-1$
+              "No description module is active. Quitting description procedure without doing anything."); //$NON-NLS-1$
         }
       }
     } else {

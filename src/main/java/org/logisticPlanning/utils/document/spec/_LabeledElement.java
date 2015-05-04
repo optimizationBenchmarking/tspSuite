@@ -4,7 +4,7 @@ import java.io.IOException;
 
 /**
  * The labeled element element.
- * 
+ *
  * @param <LT>
  *          the label type
  */
@@ -15,7 +15,7 @@ abstract class _LabeledElement<LT extends _OwnedLabel> extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -35,7 +35,7 @@ abstract class _LabeledElement<LT extends _OwnedLabel> extends Element {
       if (lbl.m_owned) {
         throw new IllegalStateException(//
             "The label '" + label + //$NON-NLS-1$
-                "' has already been put somewhere else and cannot be used here!"); //$NON-NLS-1$
+            "' has already been put somewhere else and cannot be used here!"); //$NON-NLS-1$
       }
       lbl.m_owned = true;
     }
@@ -43,7 +43,7 @@ abstract class _LabeledElement<LT extends _OwnedLabel> extends Element {
 
   /**
    * this method is used to create and set the internal label to be used
-   * 
+   *
    * @param label
    *          the input label
    * @return the label to be used
@@ -54,14 +54,14 @@ abstract class _LabeledElement<LT extends _OwnedLabel> extends Element {
 
   /**
    * Get the label type
-   * 
+   *
    * @return the label type
    */
   abstract ELabelType getLabelType();
 
   /**
    * get the label
-   * 
+   *
    * @return the label
    */
   public Label getLabel() {

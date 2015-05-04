@@ -9,7 +9,7 @@ import org.logisticPlanning.utils.text.TextUtils;
 
 /**
  * A class that can validate solutions.
- * 
+ *
  * @since 0.9.8
  */
 public final class SolutionValidator {
@@ -26,7 +26,7 @@ public final class SolutionValidator {
 
   /**
    * Validate a solution path representation.
-   * 
+   *
    * @param path
    *          the path
    * @param length
@@ -43,14 +43,14 @@ public final class SolutionValidator {
    */
   public static final boolean validatePath(final int[] path,
       final long length, final DistanceComputer dc, final Appendable dest)
-      throws IOException {
+          throws IOException {
     return SolutionValidator.__validatePath(path, length, -1, dc, dest);
   }
 
   /**
    * Validate a solution path representation and throw a
    * {@link java.lang.IllegalArgumentException} if the validation fails.
-   * 
+   *
    * @param path
    *          the path
    * @param length
@@ -85,7 +85,7 @@ public final class SolutionValidator {
 
   /**
    * Validate a solution path representation.
-   * 
+   *
    * @param path
    *          the path
    * @param n
@@ -106,7 +106,7 @@ public final class SolutionValidator {
   /**
    * Validate a solution path representation and throw a
    * {@link java.lang.IllegalArgumentException} if the validation fails.
-   * 
+   *
    * @param path
    *          the path
    * @param n
@@ -137,7 +137,7 @@ public final class SolutionValidator {
 
   /**
    * Validate a solution path representation.
-   * 
+   *
    * @param path
    *          the path
    * @param length
@@ -176,7 +176,7 @@ public final class SolutionValidator {
       if (len != n) {
         useDest.append(SolutionValidator.__ERROR);
         useDest.append(//
-            "Dimension of path must be the same as provided dimension. However, the provided dimension is ");//$NON-NLS-1$ 
+            "Dimension of path must be the same as provided dimension. However, the provided dimension is ");//$NON-NLS-1$
         useDest.append(Integer.toString(n));
         useDest.append(" and the length of the path array is ");//$NON-NLS-1$
         useDest.append(Integer.toString(len));
@@ -187,10 +187,10 @@ public final class SolutionValidator {
         if (dc.n() != n) {
           useDest.append(SolutionValidator.__ERROR);
           useDest.append(//
-              "Dimension of distance computer must be the same as provided dimension. However, the provided dimension is ");//$NON-NLS-1$ 
+              "Dimension of distance computer must be the same as provided dimension. However, the provided dimension is ");//$NON-NLS-1$
           useDest.append(Integer.toString(n));
           useDest
-              .append(" and the dimension of the distance computer is "); //$NON-NLS-1$
+          .append(" and the dimension of the distance computer is "); //$NON-NLS-1$
           useDest.append(Integer.toString(dc.n()));
           return false;
         }
@@ -202,9 +202,9 @@ public final class SolutionValidator {
       if (len != dc.n()) {
         useDest.append(SolutionValidator.__ERROR);
         useDest.append(//
-            "Dimension of path must be the same as distance computer dimension. However, the distance computer dimension is ");//$NON-NLS-1$ 
+            "Dimension of path must be the same as distance computer dimension. However, the distance computer dimension is ");//$NON-NLS-1$
         useDest.append(Integer.toString(dc.n()));
-        useDest.append(" and the length of the path array is ");//$NON-NLS-1$ 
+        useDest.append(" and the length of the path array is ");//$NON-NLS-1$
         useDest.append(Integer.toString(len));
         return false;
       }
@@ -215,10 +215,10 @@ public final class SolutionValidator {
     } else {
       if (length >= 0l) {
         useDest.append(SolutionValidator.__ERROR);
-        useDest.append("Solution length ");//$NON-NLS-1$ 
+        useDest.append("Solution length ");//$NON-NLS-1$
         useDest.append(Long.toString(length));
         useDest
-            .append(" is given, but no distance computer to verify it.");//$NON-NLS-1$
+        .append(" is given, but no distance computer to verify it.");//$NON-NLS-1$
         return false;
       }
     }
@@ -236,7 +236,7 @@ public final class SolutionValidator {
       }
       if (visited[cur]) {
         useDest.append(SolutionValidator.__ERROR);
-        useDest.append("Node ");//$NON-NLS-1$ 
+        useDest.append("Node ");//$NON-NLS-1$
         useDest.append(Integer.toString(cur));
         useDest.append(" appears more than once in the solution.");//$NON-NLS-1$
         return false;
@@ -265,7 +265,7 @@ public final class SolutionValidator {
     if ((dc != null) && (length >= 0l)) {
       if (length != total) {
         useDest.append(SolutionValidator.__ERROR);
-        useDest.append("Solution length ");//$NON-NLS-1$ 
+        useDest.append("Solution length ");//$NON-NLS-1$
         useDest.append(Long.toString(length));
         useDest.append(" is different from computed length ");//$NON-NLS-1$
         useDest.append(Long.toString(total));
@@ -277,13 +277,13 @@ public final class SolutionValidator {
     }
 
     useDest.append(SolutionValidator.__OK);
-    useDest.append("The solution [hash ");//$NON-NLS-1$  
+    useDest.append("The solution [hash ");//$NON-NLS-1$
     useDest.append(Integer.toString(hash));
     useDest.append("] with ");//$NON-NLS-1$
     useDest.append(Integer.toString(len));
     useDest.append(" nodes has been verified.");//$NON-NLS-1$
     if ((dc != null) && (length >= 0l) && (total == length)) {
-      useDest.append(" Its length ");//$NON-NLS-1$ 
+      useDest.append(" Its length ");//$NON-NLS-1$
       useDest.append(Long.toString(length));
       useDest.append(" has been confirmed.");//$NON-NLS-1$
     }
@@ -293,7 +293,7 @@ public final class SolutionValidator {
 
   /**
    * Check a node id
-   * 
+   *
    * @param i
    *          the node id
    * @param n
@@ -308,7 +308,7 @@ public final class SolutionValidator {
       final Appendable dest) throws IOException {
     if ((i <= 0) || (i > n)) {
       dest.append(SolutionValidator.__ERROR);
-      dest.append("Node ids must be between 1 and ");//$NON-NLS-1$ 
+      dest.append("Node ids must be between 1 and ");//$NON-NLS-1$
       dest.append(Integer.toString(n));
       dest.append(", but node id "); //$NON-NLS-1$
       dest.append(Integer.toString(i));

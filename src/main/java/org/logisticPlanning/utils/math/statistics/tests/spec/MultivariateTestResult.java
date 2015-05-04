@@ -20,7 +20,7 @@ public abstract class MultivariateTestResult implements Serializable {
    * the the {@link #compare(int, int) observed difference} (if any),
    * between distribution {@code i} and {@code j}, was insignificant if
    * assumed to be significant
-   * 
+   *
    * @param i
    *          the index of the first distribution
    * @param j
@@ -31,7 +31,7 @@ public abstract class MultivariateTestResult implements Serializable {
 
   /**
    * Get the comparison result of distribution {@code i} and {@code j}.
-   * 
+   *
    * @param i
    *          the index of the first distribution
    * @param j
@@ -45,7 +45,7 @@ public abstract class MultivariateTestResult implements Serializable {
 
   /**
    * the number of compared data samples / distributions
-   * 
+   *
    * @return the number of compared data samples / distributions
    */
   public abstract int n();
@@ -55,7 +55,7 @@ public abstract class MultivariateTestResult implements Serializable {
 
   /**
    * Set the comparison result
-   * 
+   *
    * @param i
    *          the index of the first distribution
    * @param j
@@ -70,7 +70,7 @@ public abstract class MultivariateTestResult implements Serializable {
 
   /**
    * Is the result obtained with a two-tailed test version?
-   * 
+   *
    * @return {@code true} if the result obtained with a two-tailed test
    *         version, {@code false} otherwise
    */

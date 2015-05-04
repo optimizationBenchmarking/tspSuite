@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.utils.MemoryUtils;
  * A code generator for local optimization operators.
  */
 public final class CodeGenerator extends PrintWriter implements
-    Callable<Void>, Comparator<int[]> {
+Callable<Void>, Comparator<int[]> {
 
   /** the node name before the start of the sequence */
   private static final String BEFORE_START = "beforeStart"; //$NON-NLS-1$
@@ -46,7 +46,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * create
-   * 
+   *
    * @param length
    *          the sub-path length for which we generate code
    * @param className
@@ -81,12 +81,12 @@ public final class CodeGenerator extends PrintWriter implements
     this.print(" * An implementation of the class {@link ");//$NON-NLS-1$
     this.print(LocalOptimizer.class.getCanonicalName());
     this.print(//
-    "} for finding optimal path sub-sequences of length ");//$NON-NLS-1$
+        "} for finding optimal path sub-sequences of length ");//$NON-NLS-1$
     this.print(this.m_length);
     this.println('.');
     this.println(" * </p><p>");//$NON-NLS-1$
     this.println(//
-    " * This code was automatically generated with the aim to be as efficient as possible.");//$NON-NLS-1$
+        " * This code was automatically generated with the aim to be as efficient as possible.");//$NON-NLS-1$
     this.println(" * </p> */");//$NON-NLS-1$
 
     this.print("public final class ");//$NON-NLS-1$
@@ -120,7 +120,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * Begin the main method
-   * 
+   *
    * @param root
    *          the root
    */
@@ -135,28 +135,28 @@ public final class CodeGenerator extends PrintWriter implements
     this.print(" * This method makes a sub-sequence of length ");//$NON-NLS-1$
     this.print(this.m_length);
     this.print(//
-    " inside {@code path}, starting right after index {@code ");//$NON-NLS-1$
+        " inside {@code path}, starting right after index {@code ");//$NON-NLS-1$
     this.print(CodeGenerator.BEFORE_START);
     this.println("}, optimal.");//$NON-NLS-1$
     this.println(//
-    " * @param path the candidate solution in path representation");//$NON-NLS-1$
+        " * @param path the candidate solution in path representation");//$NON-NLS-1$
     this.print(" * @param ");//$NON-NLS-1$
     this.print(CodeGenerator.BEFORE_START);
     this.println(" the starting index");//$NON-NLS-1$
     this.println(" * @param dist the distance computer");//$NON-NLS-1$
     this.println(//
-    " * @return the amount the length of the path has changed (negative if an improvement was found), or {@code 0L} if the path was not modified");//$NON-NLS-1$
+        " * @return the amount the length of the path has changed (negative if an improvement was found), or {@code 0L} if the path was not modified");//$NON-NLS-1$
     this.println(" */");//$NON-NLS-1$
     this.println("@Override");//$NON-NLS-1$
     this.print(//
-    "public final long apply(final int[] path, final int ");//$NON-NLS-1$
+        "public final long apply(final int[] path, final int ");//$NON-NLS-1$
     this.print(CodeGenerator.BEFORE_START);
     this.println(", final ObjectiveFunction dist) {");//$NON-NLS-1$
 
     this.__initializeMembers();
 
     this.println(//
-    "// Trace all paths starting at the canonical permutation.");//$NON-NLS-1$
+        "// Trace all paths starting at the canonical permutation.");//$NON-NLS-1$
     // this.print(THIS);
     // this.print(FUNCTION_NAME);
     //    this.println("0();");//$NON-NLS-1$
@@ -180,7 +180,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * call a function
-   * 
+   *
    * @param path
    *          the function path
    */
@@ -213,7 +213,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * make a function and all required sub-functions
-   * 
+   *
    * @param path
    *          the function path
    */
@@ -233,11 +233,11 @@ public final class CodeGenerator extends PrintWriter implements
     this.println();
     this.println("/** "); //$NON-NLS-1$
     this.print(//
-    " * This function traces all permutations which can efficiently be reached from ");//$NON-NLS-1$
+        " * This function traces all permutations which can efficiently be reached from ");//$NON-NLS-1$
     this.__permutation(path.m_permutation);
     this.println('.');
     this.print(//
-    " * &quot;Efficiently&quot; means that there is no shorter sequence of 2-opt moves starting at the canonical permutation which yields the child-permutations traced here than the path going over ");//$NON-NLS-1$
+        " * &quot;Efficiently&quot; means that there is no shorter sequence of 2-opt moves starting at the canonical permutation which yields the child-permutations traced here than the path going over ");//$NON-NLS-1$
     this.__permutation(path.m_permutation);
     this.println('.');
     // if (isNotRoot) {
@@ -271,7 +271,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * make a function and all required sub-functions
-   * 
+   *
    * @param path
    *          the function path
    * @param currentDelta
@@ -325,16 +325,16 @@ public final class CodeGenerator extends PrintWriter implements
     this.__bestImprovement();
     this.println(" < 0L) {");//$NON-NLS-1$
     this.print(//
-    "// A new, improved node sequence has been discovered and cached in the ");//$NON-NLS-1$
+        "// A new, improved node sequence has been discovered and cached in the ");//$NON-NLS-1$
     this.print(CodeGenerator.BEST_NODE);
     this.println(//
-    "* member variables. We now write it back!");//$NON-NLS-1$
+        "* member variables. We now write it back!");//$NON-NLS-1$
 
     this.print("i = "); //$NON-NLS-1$
     this.print(CodeGenerator.BEFORE_START);
     this.println(';');
     for (i = 1; i <= this.m_length; i++) {
-      this.println("if ((++i) >= length) { i = 0; }");//$NON-NLS-1$   
+      this.println("if ((++i) >= length) { i = 0; }");//$NON-NLS-1$
       this.print("if (");//$NON-NLS-1$
       this.__bestNode(i);
       this.print(" > 0) { path[i] = ");//$NON-NLS-1$
@@ -343,7 +343,7 @@ public final class CodeGenerator extends PrintWriter implements
     }
 
     this.println(//
-    "// The improved node sequence has been flushed.");//$NON-NLS-1$
+        "// The improved node sequence has been flushed.");//$NON-NLS-1$
 
     this.println('}');
     this.println();
@@ -373,7 +373,7 @@ public final class CodeGenerator extends PrintWriter implements
       this.print("/** The best node found for index "); //$NON-NLS-1$
       this.print(i);
       this.print(//
-      " of the sub-sequence, or empty/unused if no improvement was found, i.e., <code>{@link #"); //$NON-NLS-1$
+          " of the sub-sequence, or empty/unused if no improvement was found, i.e., <code>{@link #"); //$NON-NLS-1$
       this.print(CodeGenerator.BEST_IMPROVEMENT);
       this.println("} &geq; 0</code> */"); //$NON-NLS-1$
       this.print("private int "); //$NON-NLS-1$
@@ -389,13 +389,13 @@ public final class CodeGenerator extends PrintWriter implements
     this.println(';');
 
     this.println(//
-    "// All nodes related to the sub-sequence to be optimized can now be cached."); //$NON-NLS-1$
+        "// All nodes related to the sub-sequence to be optimized can now be cached."); //$NON-NLS-1$
     this.println();
   }
 
   /**
    * check the best permutation
-   * 
+   *
    * @param perm
    *          the permutation
    */
@@ -408,7 +408,7 @@ public final class CodeGenerator extends PrintWriter implements
     this.__bestImprovement();
     this.println(" ) {"); //$NON-NLS-1$
     this.print(//
-    "// A new best permutation has been discovered: "); //$NON-NLS-1$
+        "// A new best permutation has been discovered: "); //$NON-NLS-1$
     this.__permutation(perm);
     this.println();
     this.__bestImprovement();
@@ -439,7 +439,7 @@ public final class CodeGenerator extends PrintWriter implements
 
     this.println();
     this.println(//
-    "// We cache all distances related to the sub-sequence to be optimized."); //$NON-NLS-1$
+        "// We cache all distances related to the sub-sequence to be optimized."); //$NON-NLS-1$
 
     end = (this.m_length + 1);
     for (i = 0; i < end; i++) {
@@ -468,7 +468,7 @@ public final class CodeGenerator extends PrintWriter implements
     }
 
     this.println(//
-    "// All distances related to the sub-sequence to be optimized can now be cached."); //$NON-NLS-1$
+        "// All distances related to the sub-sequence to be optimized can now be cached."); //$NON-NLS-1$
     this.println();
   }
 
@@ -477,17 +477,17 @@ public final class CodeGenerator extends PrintWriter implements
     this.println();
     //this.println("// Here we define the basic member variables."); //$NON-NLS-1$
     this.print(//
-    "/** the best improvement found: if <code>{@link #"); //$NON-NLS-1$
+        "/** the best improvement found: if <code>{@link #"); //$NON-NLS-1$
     this.print(CodeGenerator.BEST_IMPROVEMENT);
     this.print(//
-    "} &gt; 0</code>, then there is an improved sub-sequence stored in {@link #"); //$NON-NLS-1$
+        "} &gt; 0</code>, then there is an improved sub-sequence stored in {@link #"); //$NON-NLS-1$
     this.print(CodeGenerator.BEST_NODE);
     this.print(//
-    "1} &hellip; {@link #"); //$NON-NLS-1$
+        "1} &hellip; {@link #"); //$NON-NLS-1$
     this.print(CodeGenerator.BEST_NODE);
     this.print(this.m_length);
     this.println(//
-    "}; otherwise these variables are not used */"); //$NON-NLS-1$    
+        "}; otherwise these variables are not used */"); //$NON-NLS-1$
     this.print("private long "); //$NON-NLS-1$
     this.print(CodeGenerator.BEST_IMPROVEMENT);
     this.println(';');
@@ -521,7 +521,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access an original node
-   * 
+   *
    * @param index
    *          the index
    */
@@ -541,7 +541,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access a best node
-   * 
+   *
    * @param index
    *          the index
    */
@@ -575,7 +575,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access the distance cache
-   * 
+   *
    * @param a
    *          the first index
    * @param b
@@ -723,7 +723,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * run the code generator
-   * 
+   *
    * @param args
    *          the arguments
    * @throws IOException
@@ -752,7 +752,7 @@ public final class CodeGenerator extends PrintWriter implements
 
     for (; start <= end; start++) {
       className = ("ExhaustivelyEnumeratingLocal" + start + //$NON-NLS-1$
-      "Optimizer");//$NON-NLS-1$
+          "Optimizer");//$NON-NLS-1$
       try (FileWriter fw = new FileWriter(new File(destDir, className
           + ".java"))) {//$NON-NLS-1$
         MemoryUtils.gc();
@@ -787,7 +787,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * the permutation printer
-   * 
+   *
    * @param perm
    *          the permutation to print
    */

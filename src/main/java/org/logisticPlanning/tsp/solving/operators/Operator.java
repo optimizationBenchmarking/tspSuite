@@ -35,7 +35,7 @@ import org.logisticPlanning.tsp.solving.TSPModule;
  * and invokes them. This allows for a more targeted allocation and
  * de-allocation of data structures for each run.
  * </p>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -48,7 +48,7 @@ public class Operator<P> extends TSPModule {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name
    * @param arity
@@ -61,7 +61,7 @@ public class Operator<P> extends TSPModule {
 
   /**
    * get the operator's arity, i.e., the number of arguments it accepts
-   * 
+   *
    * @return the operator's arity
    */
   public final int arity() {
@@ -89,7 +89,7 @@ public class Operator<P> extends TSPModule {
    * {@link org.logisticPlanning.tsp.solving.Individual#tourLength tour
    * length} directly and safe that computational effort.
    * </p>
-   * 
+   *
    * @param dest
    *          the destination individual
    * @param f

@@ -487,7 +487,7 @@ import org.logisticPlanning.utils.config.Configurable;
  * href="http://personal.d.bbn.com/~dmontana/papers/stgp.pdf"
  * >3</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <NT>
  *          the specific node type
  * @param <CT>
@@ -495,7 +495,7 @@ import org.logisticPlanning.utils.config.Configurable;
  *          instance of)
  */
 public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
-    Configurable {
+Configurable {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -510,7 +510,7 @@ public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
 
   /**
    * Create a new node type record
-   * 
+   *
    * @param name
    *          the type name
    * @param ch
@@ -526,7 +526,7 @@ public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
 
   /**
    * Get the number of chTypes of this node type
-   * 
+   *
    * @return the number of chTypes of this node type
    */
   public final int getChildCount() {
@@ -535,7 +535,7 @@ public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
 
   /**
    * Get the possible types for the chTypes at the specific index.
-   * 
+   *
    * @param index
    *          the child index
    * @return the possible types of that child
@@ -546,7 +546,7 @@ public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
 
   /**
    * Instantiate a node
-   * 
+   *
    * @param children
    *          a given set of children
    * @param r
@@ -559,7 +559,7 @@ public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
 
   /**
    * Does this node type describe a terminal node?
-   * 
+   *
    * @return true if this node type describes a terminal node, false
    *         otherwise
    */

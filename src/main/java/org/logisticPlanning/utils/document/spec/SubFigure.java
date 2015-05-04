@@ -18,7 +18,7 @@ public class SubFigure extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -40,7 +40,7 @@ public class SubFigure extends AbstractLabeledElement {
 
   /**
    * get the row in which this sub-figure appears
-   * 
+   *
    * @return the row in which this sub-figure appears
    */
   public final int getRow() {
@@ -50,7 +50,7 @@ public class SubFigure extends AbstractLabeledElement {
   /**
    * get the col in which this sub-figure appears, {@code 1} for first
    * column
-   * 
+   *
    * @return the col in which this sub-figure appears, {@code 1} for first
    *         column
    */
@@ -108,7 +108,7 @@ public class SubFigure extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public SubFigureCaption subFigureCaption() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.subFigureCaption();
   }
 
@@ -116,21 +116,21 @@ public class SubFigure extends AbstractLabeledElement {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-      throws IOException, URISyntaxException {
+          throws IOException, URISyntaxException {
     return super.figureBodyCreate(owner, relativeNameBase, sizeInMM);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.figureBodyBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.figureBodyEnd(h);
   }
 

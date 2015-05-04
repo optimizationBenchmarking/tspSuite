@@ -79,7 +79,7 @@ public final class GammaUpperIncomplete extends BinaryFunction {
       c = delta;
 
       while (delta != od) // (Math.abs(delta) > Math.abs(sum) *
-      // Mathematics.EPS) )
+        // Mathematics.EPS) )
       {
         od = delta;
         b = (1.0d + b);
@@ -132,7 +132,7 @@ public final class GammaUpperIncomplete extends BinaryFunction {
    * GammaUpperIncomplete.INSTANCE} for serialization, i.e., when the
    * instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaUpperIncomplete#INSTANCE
    *         GammaUpperIncomplete.INSTANCE})
@@ -146,7 +146,7 @@ public final class GammaUpperIncomplete extends BinaryFunction {
    * with the singleton instance {@link GammaUpperIncomplete#INSTANCE
    * GammaUpperIncomplete.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaUpperIncomplete#INSTANCE
    *         GammaUpperIncomplete.INSTANCE})

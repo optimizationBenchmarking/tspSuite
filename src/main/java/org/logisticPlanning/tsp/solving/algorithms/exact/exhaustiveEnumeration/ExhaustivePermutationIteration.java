@@ -136,105 +136,105 @@ public final class ExhaustivePermutationIteration extends TSPAlgorithm {
     while (!(f.shouldTerminate())) {
 
       choose: {
-        // find largest element with direction != 0
-        for (i = (twoN - 1); i > 0; i -= 2) {
-          direction = data[i]; // directions are at odd indices
-          if (direction != 0) {
-            break choose;
-          }
+      // find largest element with direction != 0
+      for (i = (twoN - 1); i > 0; i -= 2) {
+        direction = data[i]; // directions are at odd indices
+        if (direction != 0) {
+          break choose;
         }
-        // no such element? quit
-        return;
+      }
+      // no such element? quit
+      return;
+    }
+
+    // swap the element at index (data[i-1]) with the element at index
+    // (data[i-1]+direction)
+
+    // indices are at even indices, i now points to index
+    chosenIndex = data[--i];
+    swapIndex = (chosenIndex + direction);
+    chosenValue = ranks[chosenIndex];
+    ranks[chosenIndex] = swapValue = ranks[swapIndex];
+    ranks[swapIndex] = chosenValue;
+
+    // Now we do the same swap in the actual solution, but this means
+    // that
+    // we also need the elements before and after in order to update the
+    // distance appropriately.
+    if (direction > 0) {
+      // direction>0: chosenIndex < swapIndex
+      indexBefore = (chosenIndex - 1);
+      if (indexBefore < 0) {
+        indexBefore = (n - 1);
+      }
+      indexAfter = (swapIndex + 1);
+      if (indexAfter >= n) {
+        indexAfter = 0;
       }
 
-      // swap the element at index (data[i-1]) with the element at index
-      // (data[i-1]+direction)
+      elementBefore = perm[indexBefore];
+      first = perm[chosenIndex];
+      perm[chosenIndex] = second = perm[swapIndex];
+      perm[swapIndex] = first;
 
-      // indices are at even indices, i now points to index
-      chosenIndex = data[--i];
-      swapIndex = (chosenIndex + direction);
-      chosenValue = ranks[chosenIndex];
-      ranks[chosenIndex] = swapValue = ranks[swapIndex];
-      ranks[swapIndex] = chosenValue;
-
-      // Now we do the same swap in the actual solution, but this means
-      // that
-      // we also need the elements before and after in order to update the
-      // distance appropriately.
-      if (direction > 0) {
-        // direction>0: chosenIndex < swapIndex
-        indexBefore = (chosenIndex - 1);
-        if (indexBefore < 0) {
-          indexBefore = (n - 1);
-        }
-        indexAfter = (swapIndex + 1);
-        if (indexAfter >= n) {
-          indexAfter = 0;
-        }
-
-        elementBefore = perm[indexBefore];
-        first = perm[chosenIndex];
-        perm[chosenIndex] = second = perm[swapIndex];
-        perm[swapIndex] = first;
-
-        elementAfter = perm[indexAfter];
-      } else {
-        // direction<0: chosenIndex > swapIndex
-        indexBefore = (swapIndex - 1);
-        if (indexBefore < 0) {
-          indexBefore = (n - 1);
-        }
-        indexAfter = (chosenIndex + 1);
-        if (indexAfter >= n) {
-          indexAfter = 0;
-        }
-
-        elementBefore = perm[indexBefore];
-        first = perm[swapIndex];
-        perm[swapIndex] = second = perm[chosenIndex];
-        perm[chosenIndex] = first;
-
-        elementAfter = perm[indexAfter];
+      elementAfter = perm[indexAfter];
+    } else {
+      // direction<0: chosenIndex > swapIndex
+      indexBefore = (swapIndex - 1);
+      if (indexBefore < 0) {
+        indexBefore = (n - 1);
+      }
+      indexAfter = (chosenIndex + 1);
+      if (indexAfter >= n) {
+        indexAfter = 0;
       }
 
-      // update tour length
-      tourLength += (f.distance(elementBefore, second)//
-          + f.distance(second, first)//
-      + f.distance(first, elementAfter)//
-          )
-          - f.distance(elementBefore, first)//
-          - f.distance(first, second)//
-          - f.distance(second, elementAfter);
-      f.registerFE(perm, tourLength);
+      elementBefore = perm[indexBefore];
+      first = perm[swapIndex];
+      perm[swapIndex] = second = perm[chosenIndex];
+      perm[chosenIndex] = first;
 
-      // update positions: data[i] is index of chosen element; now =
-      // swapIndex
-      data[i] = swapIndex;
-      // index of swap element is at (swapValue-1)*2, now chosenIndex
-      data[(swapValue - 1) << 1] = chosenIndex;
+      elementAfter = perm[indexAfter];
+    }
 
-      // if we reached one end of the permutation or found a larger
-      // element,
-      // set direction to zero
-      if ((swapIndex <= 0) || (swapIndex >= (n - 1))
-          || (ranks[swapIndex + direction] > chosenValue)) {
-        data[i + 1] = 0;// set direction to zero
-      }
+    // update tour length
+    tourLength += (f.distance(elementBefore, second)//
+        + f.distance(second, first)//
+        + f.distance(first, elementAfter)//
+        )
+        - f.distance(elementBefore, first)//
+        - f.distance(first, second)//
+        - f.distance(second, elementAfter);
+    f.registerFE(perm, tourLength);
 
-      // update the directions of all elements larger that the chosen one;
-      for (i += 2; i < twoN;) {
-        j = data[i++]; // index of that element
-        // If the element is closer to the start, it should move to
-        // higher
-        // indices. Otherwise, it should move towards the start
-        data[i++] = ((j < halfN) ? (+1) : (-1));
-      }
+    // update positions: data[i] is index of chosen element; now =
+    // swapIndex
+    data[i] = swapIndex;
+    // index of swap element is at (swapValue-1)*2, now chosenIndex
+    data[(swapValue - 1) << 1] = chosenIndex;
+
+    // if we reached one end of the permutation or found a larger
+    // element,
+    // set direction to zero
+    if ((swapIndex <= 0) || (swapIndex >= (n - 1))
+        || (ranks[swapIndex + direction] > chosenValue)) {
+      data[i + 1] = 0;// set direction to zero
+    }
+
+    // update the directions of all elements larger that the chosen one;
+    for (i += 2; i < twoN;) {
+      j = data[i++]; // index of that element
+      // If the element is closer to the start, it should move to
+      // higher
+      // indices. Otherwise, it should move towards the start
+      data[i++] = ((j < halfN) ? (+1) : (-1));
+    }
     }
   }
 
   /**
    * Perform the exhaustive permutation enumeration heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

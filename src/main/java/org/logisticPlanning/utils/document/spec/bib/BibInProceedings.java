@@ -13,7 +13,7 @@ public class BibInProceedings extends _BibInBook<BibProceedings> {
   /**
    * Create a new bibliography record for papers that appeared in
    * proceedings
-   * 
+   *
    * @param authors
    *          the authors
    * @param title

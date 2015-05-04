@@ -94,7 +94,7 @@ public final class BesselJ0 extends UnaryFunction {
    * with the singleton instance {@link BesselJ0#INSTANCE
    * BesselJ0.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link BesselJ0#INSTANCE
    *         BesselJ0.INSTANCE})
    */
@@ -107,7 +107,7 @@ public final class BesselJ0 extends UnaryFunction {
    * with the singleton instance {@link BesselJ0#INSTANCE
    * BesselJ0.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link BesselJ0#INSTANCE
    *         BesselJ0.INSTANCE})
    */

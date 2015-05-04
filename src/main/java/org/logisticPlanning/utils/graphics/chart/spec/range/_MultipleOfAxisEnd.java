@@ -13,7 +13,7 @@ abstract class _MultipleOfAxisEnd extends AggregatedAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel

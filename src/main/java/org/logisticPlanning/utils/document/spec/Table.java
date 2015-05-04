@@ -8,7 +8,7 @@ import java.util.Iterator;
  * The table element.
  */
 public class Table extends _MultiLabeledElement implements
-    Iterable<TableCellDef> {
+Iterable<TableCellDef> {
 
   /** the caption state */
   private static final int STATE_CAPTION = (Element.STATE_NOTHING + 1);
@@ -68,7 +68,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -135,7 +135,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Does this table span over all columns in a multi-column document?
-   * 
+   *
    * @return {@code true} if this table spans over all columns,
    *         {@code false} if it only uses a single columns
    */
@@ -145,7 +145,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Get the index of the current row
-   * 
+   *
    * @return the index of the current row
    */
   public final int getCurrentRowIndex() {
@@ -154,7 +154,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Get the index of the current page row
-   * 
+   *
    * @return the index of the current page row
    */
   public final int getCurrentPageRowIndex() {
@@ -164,7 +164,7 @@ public class Table extends _MultiLabeledElement implements
   /**
    * Get the table index. Warning: This value may increase when the table
    * pages increase.
-   * 
+   *
    * @return the figure index
    */
   public final int getTableIndex() {
@@ -201,7 +201,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableCaptionEnd(final TableCaption h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_CAPTION) {
       throw new IllegalStateException(//
@@ -215,13 +215,13 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   public TableCaption tableCaption() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.tableCaption();
   }
 
   /**
    * Get the number of columns
-   * 
+   *
    * @return the number of columns
    */
   public final int getColumnCount() {
@@ -274,7 +274,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderBegin(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_AFTER_CAPTION) {
       throw new IllegalStateException(//
@@ -290,7 +290,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderEnd(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_HEADER) {
       throw new IllegalStateException(//
@@ -313,7 +313,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   public TableHeader tableHeader() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.tableHeader();
   }
 
@@ -327,7 +327,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableFooterBegin(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_AFTER_HEADER) {
       throw new IllegalStateException(//
@@ -343,7 +343,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableFooterEnd(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_FOOTER) {
       throw new IllegalStateException(//
@@ -361,7 +361,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   public TableFooter tableFooter() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.tableFooter();
   }
 
@@ -375,7 +375,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableBodyBegin(final TableBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state == Table.STATE_AFTER_HEADER) {
       try (final TableFooter tf = this.tableFooter()) {
@@ -396,7 +396,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableBodyEnd(final TableBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -422,7 +422,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * begin a row
-   * 
+   *
    * @return {@code true} if a new page is needed, {@code false} if not
    */
   final boolean beginRow() {
@@ -458,7 +458,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * get the index of the current page
-   * 
+   *
    * @return the index of the current page
    */
   public final int getCurrentPageIndex() {
@@ -467,7 +467,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * begin a table cell
-   * 
+   *
    * @param cell
    *          the table cell
    * @param def
@@ -571,7 +571,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Initialize the table row
-   * 
+   *
    * @param row
    *          the table row
    */
@@ -737,7 +737,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -750,7 +750,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -785,7 +785,7 @@ public class Table extends _MultiLabeledElement implements
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//

@@ -12,13 +12,13 @@ import org.logisticPlanning.utils.math.data.collection.IDataCollection;
  * </p>
  */
 public final class Run extends _OwnedSet<DataPoint, RunSet> implements
-    IDataCollection {
+IDataCollection {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the source file name
    * @param data
@@ -50,7 +50,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * objective function evaluation (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs() LogPoint.getConsumedFEs()}</code>
    * )
-   * 
+   *
    * @param fe
    *          the objective function evaluation (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs() LogPoint.getConsumedFEs()}</code>
@@ -98,7 +98,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * objective function evaluation (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs() LogPoint.getConsumedFEs()}</code>
    * )
-   * 
+   *
    * @param fe
    *          the objective function evaluation (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs() LogPoint.getConsumedFEs()}</code>
@@ -146,7 +146,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * distance function evaluation (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs() LogPoint.getConsumedDEs()}</code>
    * )
-   * 
+   *
    * @param de
    *          the distance function evaluation (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs() LogPoint.getConsumedDEs()}</code>
@@ -201,7 +201,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * distance function evaluation (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs() LogPoint.getConsumedDEs()}</code>
    * )
-   * 
+   *
    * @param de
    *          the distance function evaluation (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs() LogPoint.getConsumedDEs()}</code>
@@ -256,7 +256,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * runtime (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedRuntime() LogPoint.getConsumedRuntime()}</code>
    * )
-   * 
+   *
    * @param runtime
    *          the runtime (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedRuntime() LogPoint.getConsumedRuntime()}</code>
@@ -312,7 +312,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * runtime (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedRuntime() LogPoint.getConsumedRuntime()}</code>
    * )
-   * 
+   *
    * @param runtime
    *          the runtime (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedRuntime() LogPoint.getConsumedRuntime()}</code>
@@ -368,7 +368,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * normalized runtime (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint#getConsumedNormalizedRuntime() DataPoint.getConsumedNormalizedRuntime()}</code>
    * )
-   * 
+   *
    * @param nruntime
    *          the normalized runtime (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint#getConsumedNormalizedRuntime() DataPoint.getConsumedNormalizedRuntime()}</code>
@@ -425,7 +425,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * best known objective value (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() LogPointgetBestF()}</code>
    * )
-   * 
+   *
    * @param f
    *          the best known objective value (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() LogPointgetBestF()}</code>
@@ -473,7 +473,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * best known objective value (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() LogPointgetBestF()}</code>
    * )
-   * 
+   *
    * @param f
    *          the best known objective value (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() LogPointgetBestF()}</code>
@@ -521,7 +521,7 @@ public final class Run extends _OwnedSet<DataPoint, RunSet> implements
    * relativized best known objective value (see
    * <code>{@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint#getRelBestF() DataPoint.getRelBestF()}</code>
    * )
-   * 
+   *
    * @param f
    *          the relativized best known objective value (see
    *          <code>{@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint#getRelBestF() DataPoint.getRelBestF()}</code>

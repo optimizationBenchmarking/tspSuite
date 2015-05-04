@@ -61,7 +61,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * of the same magnitude.
  */
 final class _ExperimentSetScaleProgressDiagrams extends
-    _ExperimentSetProgressBase {
+_ExperimentSetProgressBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -91,7 +91,7 @@ final class _ExperimentSetScaleProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -132,7 +132,7 @@ final class _ExperimentSetScaleProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param lines
@@ -144,11 +144,10 @@ final class _ExperimentSetScaleProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final SameScaleInstances insts, final ArrayList<Line2D> lines,
       final ArrayList<Map.Entry<Experiment, Object>> areaLines)
-      throws IOException {
+          throws IOException {
     final RunSetsForInstancesCondition cond;
     final UnaryFunction[] transform;
     final int[] select;
@@ -259,10 +258,10 @@ final class _ExperimentSetScaleProgressDiagrams extends
                     + _ExperimentSetScaleProgressDiagrams.CAP_4B
                     + axs.getScaleString() + _ExperimentSetScaleProgressDiagrams.CAP_4C)
                     : ("")) + //$NON-NLS-1$
-            _ExperimentSetScaleProgressDiagrams.CAP_5),//
-            (_ExperimentSetScaleProgressDiagrams.SUB_CAP_1 + 100
-                + _ExperimentSetScaleProgressDiagrams.SUB_CAP_2 + 100),//
-            true)) {
+                    _ExperimentSetScaleProgressDiagrams.CAP_5),//
+                    (_ExperimentSetScaleProgressDiagrams.SUB_CAP_1 + 100
+                        + _ExperimentSetScaleProgressDiagrams.SUB_CAP_2 + 100),//
+                        true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
 
@@ -318,7 +317,7 @@ final class _ExperimentSetScaleProgressDiagrams extends
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                      ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                          ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                           : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
@@ -366,11 +365,11 @@ final class _ExperimentSetScaleProgressDiagrams extends
             try (FigureBody fb = sf.figureBody(
                 this.makeURI(Module.GRAPHICS_FOLDER, null, null,
                     (sinsts.getLowerScaleBound() + "_to_" + //$NON-NLS-1$
-                    sinsts.getUpperScaleBound())), dim)) {
+                        sinsts.getUpperScaleBound())), dim)) {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(//
                     axs.isTime() ? //
-                    ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                        ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                         : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                 chart.addLines(lines);
                 fc++;

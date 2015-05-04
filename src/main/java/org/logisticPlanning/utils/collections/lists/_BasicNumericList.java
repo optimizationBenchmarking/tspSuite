@@ -4,14 +4,14 @@ import org.logisticPlanning.utils.math.data.collection.IDataCollection;
 
 /**
  * The base class for collections that can be viewed as functions.
- * 
+ *
  * @param <ET>
  *          the base type (normally {@link java.lang.Number})
  * @param <AT>
  *          the array type
  */
 abstract class _BasicNumericList<ET, AT> extends BasicArrayList<ET, AT>
-    implements IDataCollection {
+implements IDataCollection {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -31,7 +31,7 @@ abstract class _BasicNumericList<ET, AT> extends BasicArrayList<ET, AT>
 
   /**
    * get the double at the given index
-   * 
+   *
    * @param index
    *          the index
    * @return the double at that index

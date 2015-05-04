@@ -19,7 +19,7 @@ public abstract class CandidateSet {
 
   /**
    * Get the number of candidates
-   * 
+   *
    * @return the number of candidates
    */
   public final int m() {
@@ -28,7 +28,7 @@ public abstract class CandidateSet {
 
   /**
    * Allocate and initialize a candidate set.
-   * 
+   *
    * @param f
    *          the objective function
    * @param m
@@ -71,7 +71,7 @@ public abstract class CandidateSet {
    * is a real node name that can be passed, e.g., into the
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#distance(int, int)
    * distance function}.
-   * 
+   *
    * @param node
    *          the node
    * @param id
@@ -85,7 +85,7 @@ public abstract class CandidateSet {
    * Get the pseudo id of a candidate node of a given node. The return
    * value is a value in <code>1..{@link #m()}</code> that can be passed as
    * id to {@link #getCandidate(int, int)}.
-   * 
+   *
    * @param node
    *          the node
    * @param candidateNode
@@ -99,7 +99,7 @@ public abstract class CandidateSet {
 
   /**
    * initialize the candidate set
-   * 
+   *
    * @param f
    *          the objective function
    * @param m

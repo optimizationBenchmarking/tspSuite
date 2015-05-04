@@ -10,7 +10,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.mst.MSTHeuristic;
  * MST heuristic}
  */
 public class PermutationRNSBestImprovementWithMSTTest extends
-    PermutationRNSBestImprovementTest {
+PermutationRNSBestImprovementTest {
 
   /** create */
   public PermutationRNSBestImprovementWithMSTTest() {

@@ -15,7 +15,7 @@ final class _BgPalette extends ColorPalette {
 
   /**
    * create the palette
-   * 
+   *
    * @param owner
    *          the owner
    * @param sync

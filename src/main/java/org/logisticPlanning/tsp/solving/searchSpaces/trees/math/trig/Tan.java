@@ -14,7 +14,7 @@ public final class Tan extends Function {
 
   /**
    * Create a node with the given children
-   * 
+   *
    * @param pchildren
    *          the child nodes
    * @param in
@@ -32,7 +32,7 @@ public final class Tan extends Function {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */

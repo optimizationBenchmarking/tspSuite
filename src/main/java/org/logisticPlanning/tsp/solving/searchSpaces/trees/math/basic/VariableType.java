@@ -20,7 +20,7 @@ public final class VariableType extends NodeType<Variable, Function> {
 
   /**
    * Create a new variable type record
-   * 
+   *
    * @param varc
    *          the variable count
    */

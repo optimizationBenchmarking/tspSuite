@@ -80,7 +80,7 @@ public final class GammaRegularizedP extends BinaryFunction {
    * > Confluent Hypergeometric CEC2012_Function of the First Kind</a>,
    * equation (1).</li>
    * </ul>
-   * 
+   *
    * @param a
    *          the a parameter.
    * @param x
@@ -144,7 +144,7 @@ public final class GammaRegularizedP extends BinaryFunction {
    * GammaRegularizedP.INSTANCE} for serialization, i.e., when the instance
    * is written with {@link java.io.ObjectOutputStream#writeObject(Object)}
    * .
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaRegularizedP#INSTANCE GammaRegularizedP.INSTANCE})
    */
@@ -157,7 +157,7 @@ public final class GammaRegularizedP extends BinaryFunction {
    * with the singleton instance {@link GammaRegularizedP#INSTANCE
    * GammaRegularizedP.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaRegularizedP#INSTANCE GammaRegularizedP.INSTANCE})
    */

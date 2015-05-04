@@ -17,7 +17,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
 import org.logisticPlanning.utils.math.statistics.aggregates.StableSum;
 
 /**
- * 
+ *
  <p>
  * The Edge-Histogram based Sampling Algorithm (EHBSAs) is a probabilistic
  * model-building genetic algorithms (PMBGAs)&nbsp;[<a
@@ -381,7 +381,7 @@ import org.logisticPlanning.utils.math.statistics.aggregates.StableSum;
  * and&nbsp;[<a
  * href="www.icsi.berkeley.edu/~storn/bisc1.ps.gz">2</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="http://www2.hannan-u.ac.jp/~tsutsui/index-e.html">Shigeyoshi Tsutsui</a></em>
@@ -452,7 +452,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * function} computing how much of a new sample should come from the
    * model and how much should come from a template, see
    * {@link #m_templateMethod} and {@link #PARAM_GAMMA}
-   * 
+   *
    * @serial a {@code double} value
    */
   private double m_gamma;
@@ -462,7 +462,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#n()
    * problem dimension} and added to the {@link #m_basicPopulationSize
    * basic population size}
-   * 
+   *
    * @serial a {@code double} value
    */
   private double m_populationSizeFactor;
@@ -479,7 +479,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * {@link #m_bias histogram offset}&quot; added to the histogram value of
    * each edge in order to prevent premature convergence, see
    * {@link #PARAM_HISTOGRAM_ORDER_BIAS}
-   * 
+   *
    * @serial a {@code double} value
    */
   private double m_histogramOrderBias;
@@ -496,7 +496,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * from the model (the rest is copied from a template), see
    * {@link #PARAM_TEMPLATE_METHOD} and
    * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.ETemplateMethod}
-   * 
+   *
    * @serial a non-null instance
    */
   private ETemplateMethod m_templateMethod;
@@ -505,7 +505,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * the augmentation method: what do we do if all nodes in the candidate
    * set of the current node have already been visited? (see
    * {@link #PARAM_AUGMENTATION_METHOD}
-   * 
+   *
    * @serial a non-null instance
    */
   private EAugmentationMethod m_augmentationMethod;
@@ -551,7 +551,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name
    */
@@ -594,7 +594,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
     Configurable.printlnObject(this.m_templateMethod, ps);
 
     Configurable
-        .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
+    .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
     Configurable.printlnObject(this.m_augmentationMethod, ps);
 
     if (this.m_templates != null) {
@@ -650,7 +650,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
     ps.println("the template method"); //$NON-NLS-1$
 
     Configurable
-        .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
+    .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
     ps.println("the augmentation method"); //$NON-NLS-1$
   }
 
@@ -713,7 +713,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
 
   /**
    * Get the augmentation method
-   * 
+   *
    * @return the augmentation method
    */
   public final EAugmentationMethod getAugmentationMethod() {
@@ -722,7 +722,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
 
   /**
    * Set the augmentation method
-   * 
+   *
    * @param method
    *          the augmentation method
    */
@@ -756,7 +756,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * perform some local search, you should also override this method to
    * return {@code true} instead.
    * </p>
-   * 
+   *
    * @param f
    *          the objective function
    * @param dest
@@ -789,7 +789,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * This method refines a given individual which must already hold a valid
    * solution. It may apply a local search. (In this default
    * implementation, it does not).
-   * 
+   *
    * @param ind
    *          the individual to be refined
    * @param f
@@ -877,7 +877,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
   /**
    * Add an solution to the model: increase the histogram counter for each
    * edge in the solution.
-   * 
+   *
    * @param sol
    *          the solution to be added.
    */
@@ -897,7 +897,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
   /**
    * Subtract a solution from the model: decrease the histogram counter for
    * each edge in the solution.
-   * 
+   *
    * @param sol
    *          the solution to be subtracted.
    */
@@ -916,7 +916,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
 
   /**
    * sample a new solution from the model, using a template
-   * 
+   *
    * @param f
    *          the objective function
    * @param dest
@@ -1075,7 +1075,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
    * methods} to calculate how many elements of the samples should be
    * generated from the model. (The rest will be copied from the
    * templates.)
-   * 
+   *
    * @param f
    *          the objective function
    * @return the sample length
@@ -1104,7 +1104,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
 
   /**
    * Perform the template-based EHBSA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

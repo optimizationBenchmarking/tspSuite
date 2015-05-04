@@ -26,7 +26,7 @@ import java.io.PrintWriter;
  * href="#cite_R1995T9" style="font-weight:bold">1</a>], this is computed
  * as
  * </p>
- * 
+ *
  * <pre>
  * xd = x1 - x2<br/>
  * yd = y1 - y2<br/>
@@ -418,7 +418,7 @@ final class _2DPseudoEuclideanDistanceDouble extends _2DDoubleCoords {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -465,7 +465,7 @@ final class _2DPseudoEuclideanDistanceDouble extends _2DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param nodes
    *          The permutation of the nodes from {@code 1..n}
    * @return the total distance sum
@@ -521,7 +521,7 @@ final class _2DPseudoEuclideanDistanceDouble extends _2DDoubleCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param adj
    *          The adjacency list representation of the solution
    * @return the total distance sum

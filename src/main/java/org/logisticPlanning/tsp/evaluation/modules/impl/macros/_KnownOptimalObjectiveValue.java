@@ -64,7 +64,7 @@ final class _KnownOptimalObjectiveValue extends MacroDefinition {
    * _KnownOptimalObjectiveValue.INSTANCE} for serialization, i.e., when
    * the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _KnownOptimalObjectiveValue#INSTANCE
    *         _KnownOptimalObjectiveValue.INSTANCE})
@@ -80,7 +80,7 @@ final class _KnownOptimalObjectiveValue extends MacroDefinition {
    * _KnownOptimalObjectiveValue.INSTANCE} after serialization, i.e., when
    * the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _KnownOptimalObjectiveValue#INSTANCE
    *         _KnownOptimalObjectiveValue.INSTANCE})

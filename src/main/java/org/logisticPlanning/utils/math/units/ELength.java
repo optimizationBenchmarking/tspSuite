@@ -148,26 +148,26 @@ public enum ELength {
   /** the small chinese li */
   LI_CHINESE_SMALL("li(small)", "\u5e02\u5398", //$NON-NLS-1$//$NON-NLS-2$
       "small li"), //$NON-NLS-1$
-  /** the chinese hao */
-  HAO_CHINESE("hao", "\u6beb"), //$NON-NLS-1$//$NON-NLS-2$
-  /** the chinese si */
-  SI_CHINESE("si", "\u4e1d"), //$NON-NLS-1$//$NON-NLS-2$
-  /** the chinese hu */
-  HU_CHINESE("hu", "\u5ffd"), //$NON-NLS-1$//$NON-NLS-2$
+      /** the chinese hao */
+      HAO_CHINESE("hao", "\u6beb"), //$NON-NLS-1$//$NON-NLS-2$
+      /** the chinese si */
+      SI_CHINESE("si", "\u4e1d"), //$NON-NLS-1$//$NON-NLS-2$
+      /** the chinese hu */
+      HU_CHINESE("hu", "\u5ffd"), //$NON-NLS-1$//$NON-NLS-2$
 
-  /** a light second */
-  LIGHT_SECOND("light second"), //$NON-NLS-1$
-  /** a light minute */
-  LIGHT_MINUTE("light minute"), //$NON-NLS-1$
-  /** an astronomical unit */
-  ASTRONOMICAL_UNIT("astronomical unit", "AU"), //$NON-NLS-1$//$NON-NLS-2$
-  /** a light year */
-  LIGHT_YEAR("light year", "ly"), //$NON-NLS-1$//$NON-NLS-2$
-  /** a parsec */
-  PARSEC("parsec"), //$NON-NLS-1$
-  /** red shift */
-  RED_SHIFT("red shift", "z"), //$NON-NLS-1$//$NON-NLS-2$ 
-  ;
+      /** a light second */
+      LIGHT_SECOND("light second"), //$NON-NLS-1$
+      /** a light minute */
+      LIGHT_MINUTE("light minute"), //$NON-NLS-1$
+      /** an astronomical unit */
+      ASTRONOMICAL_UNIT("astronomical unit", "AU"), //$NON-NLS-1$//$NON-NLS-2$
+      /** a light year */
+      LIGHT_YEAR("light year", "ly"), //$NON-NLS-1$//$NON-NLS-2$
+      /** a parsec */
+      PARSEC("parsec"), //$NON-NLS-1$
+      /** red shift */
+      RED_SHIFT("red shift", "z"), //$NON-NLS-1$//$NON-NLS-2$
+      ;
 
   /** the nanometer */
   public static final ELength NM = NANOMETER;
@@ -352,7 +352,7 @@ public enum ELength {
 
   /**
    * Create
-   * 
+   *
    * @param name
    *          the name
    * @param shortcut
@@ -369,7 +369,7 @@ public enum ELength {
 
   /**
    * Create
-   * 
+   *
    * @param name
    *          the name
    * @param shortcut
@@ -381,7 +381,7 @@ public enum ELength {
 
   /**
    * Create the name
-   * 
+   *
    * @param name
    *          the name
    */
@@ -399,7 +399,7 @@ public enum ELength {
   /**
    * Convert the given value from the length dimension {@code from} to the
    * length dimension {@code to}
-   * 
+   *
    * @param value
    *          the value
    * @param from
@@ -419,7 +419,7 @@ public enum ELength {
   /**
    * Get the conversion factor from the length dimension {@code from} to
    * the length dimension {@code to}
-   * 
+   *
    * @param from
    *          the length dimension {@code value} is specified in
    * @param to

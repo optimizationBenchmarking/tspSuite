@@ -61,13 +61,13 @@ public final class GammaLn extends UnaryFunction {
 
   /** Lanczos coefficients */
   private static final double[] LANCZOS = { 0.99999999999999709182d,
-      57.156235665862923517d, -59.597960355475491248d,
-      14.136097974741747174d, -0.49191381609762019978d,
-      0.33994649984811888699e-4d, 0.46523628927048575665e-4d,
-      -0.98374475304879564677e-4d, 0.15808870322491248884e-3d,
-      -0.21026444172410488319e-3d, 0.21743961811521264320e-3d,
-      -0.16431810653676389022e-3d, 0.84418223983852743293e-4d,
-      -0.26190838401581408670e-4d, 0.36899182659531622704e-5d };
+    57.156235665862923517d, -59.597960355475491248d,
+    14.136097974741747174d, -0.49191381609762019978d,
+    0.33994649984811888699e-4d, 0.46523628927048575665e-4d,
+    -0.98374475304879564677e-4d, 0.15808870322491248884e-3d,
+    -0.21026444172410488319e-3d, 0.21743961811521264320e-3d,
+    -0.16431810653676389022e-3d, 0.84418223983852743293e-4d,
+    -0.26190838401581408670e-4d, 0.36899182659531622704e-5d };
 
   /** instantiate */
   private GammaLn() {
@@ -105,7 +105,7 @@ public final class GammaLn extends UnaryFunction {
    * with the singleton instance {@link GammaLn#INSTANCE GammaLn.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link GammaLn#INSTANCE
    *         GammaLn.INSTANCE})
    */
@@ -118,7 +118,7 @@ public final class GammaLn extends UnaryFunction {
    * with the singleton instance {@link GammaLn#INSTANCE GammaLn.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link GammaLn#INSTANCE
    *         GammaLn.INSTANCE})
    */

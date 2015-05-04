@@ -94,7 +94,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
         (-Math.abs(TwoTailedTTestTest.__t(m1, m2, v1, v2, n1, n2))));
 
     MultivariateTest
-        .setResult(dest, i, j, Double.compare(m1, m2), (r + r));
+    .setResult(dest, i, j, Double.compare(m1, m2), (r + r));
   }
 
   /** {@inheritDoc} */
@@ -114,7 +114,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
    * to&nbsp;[<a href="#cite_A2013CMTACML" style="font-weight:bold">1</a>]
    * but rounded as suggested by&nbsp;[<a href="#cite_SE20061STITIAAC"
    * style="font-weight:bold">2</a>].
-   * 
+   *
    * @param v1
    *          first sample variance
    * @param v2
@@ -137,7 +137,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
   /**
    * Computes t test statistic for 2-sample t-test as defined in&nbsp;[<a
    * href="#cite_A2013CMTACML" style="font-weight:bold">1</a>].
-   * 
+   *
    * @param m1
    *          first sample mean
    * @param m2

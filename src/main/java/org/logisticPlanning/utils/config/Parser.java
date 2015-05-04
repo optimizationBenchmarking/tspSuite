@@ -3,7 +3,7 @@ package org.logisticPlanning.utils.config;
 /**
  * A parser takes an object, e.g., from the command line, and translates it
  * to an object
- * 
+ *
  * @param <T>
  *          the return type
  */
@@ -28,7 +28,7 @@ public abstract class Parser<T> {
 
   /**
    * Parse an object
-   * 
+   *
    * @param value
    *          the value
    * @return the parse result
@@ -37,7 +37,7 @@ public abstract class Parser<T> {
 
   /**
    * get the object class
-   * 
+   *
    * @return the object class
    */
   public abstract Class<T> objectClass();

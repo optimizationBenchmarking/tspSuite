@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.benchmarking.objective;
 import org.logisticPlanning.utils.math.data.point.Point;
 
 /**
- * 
+ *
  <p>
  * A data point is basically a de-serialized
  * {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint
@@ -160,12 +160,12 @@ public final class DataPoint extends LogPoint {
   private static final char[] TS6 = { ',', ' ', 'r', 'f', '=' };
   /** toString 7 */
   private static final char[] TS7 = { ',', ' ', 'n', 't', 'i', 'm', 'e',
-      '=' };
+  '=' };
 
   /**
    * the relative objective value, measured as
    * {@code (absolute objective value - optimum)/optimum}
-   * 
+   *
    * @serial a double with the relative objective value, a value greater or
    *         equal to {@code 0}
    */
@@ -173,7 +173,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * the normalized runtime
-   * 
+   *
    * @serial the normalized runtime: the runtime of the algorithm divided
    *         by the runtime of a
    *         {@link org.logisticPlanning.tsp.benchmarking.objective._SpeedBenchmark
@@ -183,7 +183,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Create a new data point with the following information:
-   * 
+   *
    * @param fes
    *          the consumed function evaluations
    * @param des
@@ -262,7 +262,7 @@ public final class DataPoint extends LogPoint {
    * run where this is {@code true} will only hold a single log point, and
    * this single log point will have
    * <code>{@link #isPrematureTermination()}==true</code>.
-   * 
+   *
    * @return {@code true} if the log point signifies a prematurely
    *         terminated run, i.e., a run that did not even generate a
    *         single solution, {@code false} if it is a normal log point
@@ -273,7 +273,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Get the relative objective value
-   * 
+   *
    * @return the relative objective value
    */
   public final double getRelBestF() {
@@ -282,7 +282,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Get the normalized runtime.
-   * 
+   *
    * @return the normalized runtime
    */
   public final double getConsumedNormalizedRuntime() {
@@ -292,7 +292,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an objective
    * function threshold was surpassed?
-   * 
+   *
    * @return {@code true} if an objective function threshold was the reason
    *         for logging this point, {@code false} otherwise
    */
@@ -303,7 +303,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an FE threshold was
    * surpassed?
-   * 
+   *
    * @return {@code true} if an FE threshold was the reason for logging
    *         this point, {@code false} otherwise
    */
@@ -314,7 +314,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an DE threshold was
    * surpassed?
-   * 
+   *
    * @return {@code true} if an DE threshold was the reason for logging
    *         this point, {@code false} otherwise
    */
@@ -325,7 +325,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that the algorithm
    * terminated?
-   * 
+   *
    * @return {@code true} if algorithm termination was the reason for
    *         logging this point, {@code false} otherwise
    */
@@ -336,7 +336,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that the initialization
    * algorithm terminated?
-   * 
+   *
    * @return {@code true} if initialization algorithm termination was the
    *         reason for logging this point, {@code false} otherwise
    */
@@ -346,7 +346,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * As this object is immutable, cloning it will return the object itself.
-   * 
+   *
    * @return {@code this}
    */
   @Override
@@ -357,7 +357,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Obtain the value associated with the given dimension of the data
    * point.
-   * 
+   *
    * @param dimension
    *          one of
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#DE_INDEX
@@ -421,7 +421,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Does this point equal to another data point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -435,13 +435,13 @@ public final class DataPoint extends LogPoint {
         (p.m_type == this.m_type) && //
         (Double.doubleToLongBits(this.m_relF) == //
         Double.doubleToLongBits(p.m_relF)) && //
-    (Double.doubleToLongBits(this.m_normTime) == //
-    Double.doubleToLongBits(p.m_normTime)));
+        (Double.doubleToLongBits(this.m_normTime) == //
+        Double.doubleToLongBits(p.m_normTime)));
   }
 
   /**
    * Does this point equal to another point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -458,8 +458,8 @@ public final class DataPoint extends LogPoint {
         (this.m_f == p.get(LogPoint.F_INDEX)) && //
         (Double.doubleToLongBits(this.m_relF) == //
         Double.doubleToLongBits(p.get(DataPoint.RELATIVE_F_INDEX))) && //
-    (Double.doubleToLongBits(this.m_normTime) == //
-    Double.doubleToLongBits(DataPoint.NORMALIZED_TIME_INDEX)));
+        (Double.doubleToLongBits(this.m_normTime) == //
+        Double.doubleToLongBits(DataPoint.NORMALIZED_TIME_INDEX)));
   }
 
   /** {@inheritDoc} */
@@ -493,7 +493,7 @@ public final class DataPoint extends LogPoint {
    * run. If the log point is a
    * {@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint data
    * point}, the additional fields will also be validated.
-   * 
+   *
    * @param point
    *          the log point
    * @throws IllegalArgumentException
@@ -511,7 +511,7 @@ public final class DataPoint extends LogPoint {
    * Validate a
    * {@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint data
    * point}.
-   * 
+   *
    * @param point
    *          the log point
    * @throws IllegalArgumentException
@@ -526,14 +526,14 @@ public final class DataPoint extends LogPoint {
     }
     if ((point.m_relF >= Long.MAX_VALUE) && (point.m_fe > 0l)) {
       throw new IllegalArgumentException(//
-          "If at least one objective function has been performed, the best _relative_ objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$ 
-              + point.m_fe + " an the objective value is " + point.m_relF); //$NON-NLS-1$
+          "If at least one objective function has been performed, the best _relative_ objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$
+          + point.m_fe + " an the objective value is " + point.m_relF); //$NON-NLS-1$
     }
 
     if ((point.m_fe <= 0l) && (point.m_relF < Double.POSITIVE_INFINITY)) {
       throw new IllegalArgumentException(//
-          "No function evaluation was performed, so the best known relative objective value must be infinite. However, it is "//$NON-NLS-1$ 
-              + point.m_relF);
+          "No function evaluation was performed, so the best known relative objective value must be infinite. However, it is "//$NON-NLS-1$
+          + point.m_relF);
     }
 
     if (point.m_normTime < 0d) {
@@ -547,7 +547,7 @@ public final class DataPoint extends LogPoint {
    * {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint log
    * point} : check if it is sane and could have occurred in this way in a
    * run.
-   * 
+   *
    * @param point
    *          the log point
    * @return {@code true} if the point belongs to a prematurely terminated
@@ -604,9 +604,9 @@ public final class DataPoint extends LogPoint {
     if (point.m_time > 40000000000l) {
       throw new IllegalArgumentException(//
           "Consumed runtime (measured in milliseconds) is suspiciously high: " + //$NON-NLS-1$
-              point.m_time
-              + ", which is approximately " + (point.m_time / 31557600000l) + //$NON-NLS-1$
-              "years... I will not allow you this ^_^");//$NON-NLS-1$
+          point.m_time
+          + ", which is approximately " + (point.m_time / 31557600000l) + //$NON-NLS-1$
+          "years... I will not allow you this ^_^");//$NON-NLS-1$
     }
 
     if (point.m_f <= 0l) {
@@ -615,8 +615,8 @@ public final class DataPoint extends LogPoint {
     }
     if ((point.m_f >= Long.MAX_VALUE) && (point.m_fe > 0l)) {
       throw new IllegalArgumentException(//
-          "If at least one objective function has been performed, the best known objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$ 
-              + point.m_fe + " an the objective value is " + point.m_f); //$NON-NLS-1$
+          "If at least one objective function has been performed, the best known objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$
+          + point.m_fe + " an the objective value is " + point.m_f); //$NON-NLS-1$
     }
 
     if (prematureTermination) {
@@ -632,7 +632,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given log point {@code after} can follow a log point
    * {@code before} in a single run. Both points will also be validated.
-   * 
+   *
    * @param before
    *          the log point before (or {@code null} if not given)
    * @param after
@@ -658,7 +658,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given log point {@code after} can follow a log point
    * {@code before} in a single run
-   * 
+   *
    * @param before
    *          the log point before (must not be {@code null})
    * @param after
@@ -670,25 +670,25 @@ public final class DataPoint extends LogPoint {
     if (before.m_de > after.m_de) {
       throw new IllegalArgumentException(//
           "Number of distance evaluations cannot decrease, but " + //$NON-NLS-1$
-              after.m_de + " follows " + before.m_de);//$NON-NLS-1$
+          after.m_de + " follows " + before.m_de);//$NON-NLS-1$
     }
 
     if (before.m_fe > after.m_fe) {
       throw new IllegalArgumentException(//
           "Number of function evaluations cannot decrease, but " + //$NON-NLS-1$
-              after.m_fe + " follows " + before.m_fe);//$NON-NLS-1$
+          after.m_fe + " follows " + before.m_fe);//$NON-NLS-1$
     }
 
     if (before.m_time > after.m_time) {
       throw new IllegalArgumentException(//
           "Passed runtime cannot decrease, but " + //$NON-NLS-1$
-              after.m_time + " follows " + before.m_time);//$NON-NLS-1$
+          after.m_time + " follows " + before.m_time);//$NON-NLS-1$
     }
 
     if (before.m_f < after.m_f) {
       throw new IllegalArgumentException(//
           "Objective value of best known solution can never increase, but " + //$NON-NLS-1$
-              after.m_f + " follows " + before.m_f);//$NON-NLS-1$
+          after.m_f + " follows " + before.m_f);//$NON-NLS-1$
     }
 
     if ((before.m_type & ObjectiveFunction.TYPE_FLAG_END) != 0) {
@@ -706,21 +706,21 @@ public final class DataPoint extends LogPoint {
         (after.m_f >= before.m_f)) {
       throw new IllegalArgumentException(//
           "If the log reason is 'objective value limit reached', then the objective value must have improved - but both values are " //$NON-NLS-1$
-              + before.m_f);
+          + before.m_f);
     }
 
     if (((after.m_type & ObjectiveFunction.TYPE_FLAG_DE) != 0) && //
         (after.m_de <= before.m_de)) {
       throw new IllegalArgumentException(//
           "If the log reason is 'distance evaluation limit reached', then the number of distance evaluations must have increased - but both values are " //$NON-NLS-1$
-              + before.m_de);
+          + before.m_de);
     }
 
     if (((after.m_type & ObjectiveFunction.TYPE_FLAG_FE) != 0) && //
         (after.m_fe <= before.m_fe)) {
       throw new IllegalArgumentException(//
           "If the log reason is 'objective function evaluation limit reached', then the number of objective evaluations must have increased - but both values are " //$NON-NLS-1$
-              + before.m_fe);
+          + before.m_fe);
     }
 
     if ((after.m_type & ObjectiveFunction.TYPE_FLAG_END) == 0) {
@@ -728,7 +728,7 @@ public final class DataPoint extends LogPoint {
           && (after.m_f >= before.m_f)) {
         throw new IllegalArgumentException(//
             "If the log reason of the second point is not 'algorithm termination', then there must be another reason, i.e., either the number of distance or objective function evaluations must be larger or the objective function must be better than the first point. However, the points are " //$NON-NLS-1$
-                + before.toString() + " and " + after.toString());//$NON-NLS-1$
+            + before.toString() + " and " + after.toString());//$NON-NLS-1$
       }
     }
   }
@@ -736,7 +736,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given data point {@code after} and follow a log point
    * {@code before} in a single run. Both points will also be validated.
-   * 
+   *
    * @param before
    *          the log point before (or {@code null} if not given)
    * @param after
@@ -758,26 +758,26 @@ public final class DataPoint extends LogPoint {
     if (before.m_relF < after.m_relF) {
       throw new IllegalArgumentException(//
           "Quality of best solutions can never decrease, but relative quality " + //$NON-NLS-1$
-              after.m_relF + " follows " + before.m_relF);//$NON-NLS-1$
+          after.m_relF + " follows " + before.m_relF);//$NON-NLS-1$
     }
     if ((after.m_f < before.m_f) && (after.m_relF >= before.m_relF)) {
       throw new IllegalArgumentException(//
           ((((((("If there is an improvement in objective value, there also must be an improvement in relative objective value, but the objective values are (" + //$NON-NLS-1$
-          before.m_f) + ',') + after.m_relF) + ") and the relative values are (") + //$NON-NLS-1$
-          before.m_relF) + ',') + after.m_relF) + ')');
+              before.m_f) + ',') + after.m_relF) + ") and the relative values are (") + //$NON-NLS-1$
+              before.m_relF) + ',') + after.m_relF) + ')');
     }
 
     if (before.m_normTime > after.m_normTime) {
       throw new IllegalArgumentException(//
           "Passed (normalized) runtime cannot decrease, but " + //$NON-NLS-1$
-              after.m_normTime + " follows " + before.m_normTime);//$NON-NLS-1$
+          after.m_normTime + " follows " + before.m_normTime);//$NON-NLS-1$
     }
     if ((after.m_time > before.m_time)
         && (after.m_normTime <= before.m_normTime)) {
       throw new IllegalArgumentException(//
           ((((((("If there is an increase in consumed runtime, there also must be an increase in normalized consumed runtime, but the runtime values are (" + //$NON-NLS-1$
-          before.m_time) + ',') + after.m_time) + ") and the normalized runtime values are (") + //$NON-NLS-1$
-          before.m_normTime) + ',') + after.m_normTime) + ')');
+              before.m_time) + ',') + after.m_time) + ") and the normalized runtime values are (") + //$NON-NLS-1$
+              before.m_normTime) + ',') + after.m_normTime) + ')');
     }
   }
 }

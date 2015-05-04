@@ -26,7 +26,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
   /**
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BR17}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -38,7 +38,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
   /**
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT53}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -50,7 +50,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
   /**
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT70}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -63,7 +63,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV33}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -76,7 +76,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV35}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -89,7 +89,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV38}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -102,7 +102,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV44}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -115,7 +115,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV47}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -128,7 +128,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV55}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -141,7 +141,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV64}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -154,7 +154,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV70}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -166,7 +166,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
   /**
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#P43}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -179,7 +179,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RY48P}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -192,7 +192,7 @@ public class TSPAlgorithmAsymmetricTest extends TSPAlgorithmSymmetricTest {
    * Test whether solving works correctly on the asymmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RBG443}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */

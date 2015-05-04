@@ -4,8 +4,8 @@ package org.logisticPlanning.tsp.evaluation.data.properties.litComp;
  * a comparison set
  */
 public final class LiteratureComparisonPointSet extends
-    LiteratureComparisonSet<LiteratureComparisonPoint> implements
-    Comparable<LiteratureComparisonPointSet> {
+LiteratureComparisonSet<LiteratureComparisonPoint> implements
+Comparable<LiteratureComparisonPointSet> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -14,7 +14,7 @@ public final class LiteratureComparisonPointSet extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owning literature result point set
    * @param points
@@ -37,7 +37,7 @@ public final class LiteratureComparisonPointSet extends
 
   /**
    * Get the owning literature result point set
-   * 
+   *
    * @return the owning literature result point set
    */
   public final LiteratureResultPointSet getLiteratureResultPointSet() {

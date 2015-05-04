@@ -40,7 +40,7 @@ public final class ATan extends UnaryFunction {
    * with the singleton instance {@link ATan#INSTANCE ATan.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link ATan#INSTANCE
    *         ATan.INSTANCE})
    */
@@ -53,7 +53,7 @@ public final class ATan extends UnaryFunction {
    * with the singleton instance {@link ATan#INSTANCE ATan.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link ATan#INSTANCE
    *         ATan.INSTANCE})
    */

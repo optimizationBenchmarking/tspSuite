@@ -18,7 +18,7 @@ public abstract class IndexIterator extends Configurable {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name/type of the iterator
    */
@@ -28,7 +28,7 @@ public abstract class IndexIterator extends Configurable {
 
   /**
    * start
-   * 
+   *
    * @param n
    *          the problem dimension
    * @param r
@@ -39,7 +39,7 @@ public abstract class IndexIterator extends Configurable {
 
   /**
    * get the next index pair
-   * 
+   *
    * @param indexes
    *          an array of at least length to hold a pair of indices
    * @param n

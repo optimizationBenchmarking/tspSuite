@@ -9,7 +9,7 @@ public class EnumerationItem extends AbstractItem {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

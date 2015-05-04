@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.linKe
  * A mutation operator based on lin-kernighan search.
  */
 public class PermutationLinKernighanMutation extends
-    TSPLocalSearchBasedMutation<int[]> {
+TSPLocalSearchBasedMutation<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

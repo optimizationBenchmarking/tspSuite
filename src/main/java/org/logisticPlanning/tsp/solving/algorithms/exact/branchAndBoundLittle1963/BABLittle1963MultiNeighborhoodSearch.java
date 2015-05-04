@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationMultiNeighborhoodMutation;
 
 /**
- * 
+ *
  <h1>Branch and Bound for the TSP by Little et al., hybridized with <a
  * href="#localSearch">Multi-Neighborhood Search</a></h1>
  * <p>
@@ -539,7 +539,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * href="https://www.worldcat.org/issn/03401200">0340-1200</a> and&nbsp;<a
  * href="https://www.worldcat.org/issn/14320770">1432-0770</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a></em>
@@ -551,7 +551,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  *         </ul>
  */
 public class BABLittle1963MultiNeighborhoodSearch extends
-    _HybridBABLittle1963 {
+_HybridBABLittle1963 {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -569,7 +569,7 @@ public class BABLittle1963MultiNeighborhoodSearch extends
 
   /**
    * The main method invoking the algorithm
-   * 
+   *
    * @param args
    *          the command line arguments
    */

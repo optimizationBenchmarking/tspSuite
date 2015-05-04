@@ -72,8 +72,8 @@ import org.jfree.ui.Layer;
  * href="http://www.jfree.org/jfreechart/">1</a>] and&nbsp;[<a
  * href="http://sourceforge.net/projects/jfreechart/">2</a>]</div></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -103,7 +103,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * create a wrapped renderer
-   * 
+   *
    * @param out
    *          the output renderer
    */
@@ -319,7 +319,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @deprecated deprecated
    */
   @SuppressWarnings("deprecation")
@@ -344,7 +344,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @deprecated deprecated
    */
   @SuppressWarnings("deprecation")
@@ -410,7 +410,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @deprecated deprecated
    */
   @SuppressWarnings("deprecation")
@@ -441,7 +441,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @deprecated deprecated
    */
   @SuppressWarnings("deprecation")
@@ -529,7 +529,7 @@ public class _JFCXYItemRenderer implements XYItemRenderer {
 
   /**
    * {@inheritDoc}
-   * 
+   *
    * @deprecated deprecated
    */
   @SuppressWarnings("deprecation")

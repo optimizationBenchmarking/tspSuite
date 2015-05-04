@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Multi-Neighborhood mutation
  */
 public class HeuristicInitLinKernighanEdgeMAParentsDieTest extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitLinKernighanEdgeMAParentsDieTest() {

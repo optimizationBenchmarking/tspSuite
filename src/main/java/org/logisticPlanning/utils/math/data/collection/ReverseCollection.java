@@ -9,7 +9,7 @@ public final class ReverseCollection implements IDataCollection {
 
   /**
    * Create reverse collection view
-   * 
+   *
    * @param src
    *          the source collection
    */

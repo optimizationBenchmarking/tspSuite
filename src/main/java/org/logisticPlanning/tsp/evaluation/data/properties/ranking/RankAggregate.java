@@ -20,7 +20,7 @@ import org.logisticPlanning.utils.math.statistics.aggregates.OrderStatisticInfo;
  * Ranking} and
  * {@link org.logisticPlanning.tsp.evaluation.modules.impl.descriptions.eval.DescRanking
  * DescRanking} in detail.
- * 
+ *
  * @param <T>
  *          the object type<h2>References</h2>
  *          <ol>
@@ -42,7 +42,7 @@ public final class RankAggregate<T> {
 
   /**
    * create
-   * 
+   *
    * @param keys
    *          the keys
    */
@@ -65,7 +65,7 @@ public final class RankAggregate<T> {
 
   /**
    * Aggregate a given ranking
-   * 
+   *
    * @param ranks
    *          the ranks
    * @param <V>
@@ -81,7 +81,7 @@ public final class RankAggregate<T> {
 
   /**
    * Aggregate a given ranking
-   * 
+   *
    * @param ranks
    *          the ranks
    * @param <V>
@@ -98,7 +98,7 @@ public final class RankAggregate<T> {
   /**
    * Get a ranking according to the given statistic parameter over the
    * registered ranks...
-   * 
+   *
    * @param param
    *          the parameter
    * @return the ranks

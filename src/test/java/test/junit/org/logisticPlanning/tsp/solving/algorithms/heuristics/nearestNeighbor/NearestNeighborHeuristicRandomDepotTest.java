@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.nearestNeighbor.Ne
  * the test of the nearest neighbor heuristic
  */
 public class NearestNeighborHeuristicRandomDepotTest extends
-    NearestNeighborHeuristicDepot1Test {
+NearestNeighborHeuristicDepot1Test {
 
   /** create */
   public NearestNeighborHeuristicRandomDepotTest() {

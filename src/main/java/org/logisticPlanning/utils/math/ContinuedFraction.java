@@ -24,7 +24,7 @@ public abstract class ContinuedFraction {
 
   /**
    * Access the n-th a coefficient of the continued fraction.
-   * 
+   *
    * @param n
    *          the coefficient index to retrieve.
    * @param x
@@ -40,7 +40,7 @@ public abstract class ContinuedFraction {
 
   /**
    * Access the n-th b coefficient of the continued fraction.
-   * 
+   *
    * @param n
    *          the coefficient index to retrieve.
    * @param x
@@ -56,7 +56,7 @@ public abstract class ContinuedFraction {
 
   /**
    * Evaluates the continued fraction at the value x.
-   * 
+   *
    * @param x
    *          the evaluation point.
    * @param epsilon
@@ -69,7 +69,7 @@ public abstract class ContinuedFraction {
 
   /**
    * Evaluates the continued fraction at the value x.
-   * 
+   *
    * @param x
    *          the evaluation point.
    * @param a

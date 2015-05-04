@@ -2124,7 +2124,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * the &#956; parameter, i.e., the number of selected parents
-   * 
+   *
    * @serial a positive integer number
    * @see #getMu()
    * @see #setMu(int)
@@ -2133,7 +2133,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * the &#955;, i.e., the number of produced offspring
-   * 
+   *
    * @serial a positive integer number
    * @see #getLambda()
    * @see #setLambda(int)
@@ -2147,7 +2147,7 @@ public class EA extends TSPAlgorithm {
    * population strategy (except that it can use an arbitrary
    * {@link #m_selection selection scheme}) and if the value is
    * {@code false}, it is more a (&#956;,&#955;)-type of method.
-   * 
+   *
    * @serial a boolean value
    * @see #doParentsSurvive()
    * @see #setParentsSurvive(boolean)
@@ -2162,7 +2162,7 @@ public class EA extends TSPAlgorithm {
    * {@link #m_fap fitness} [by default, this will be the
    * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.selection.TruncationSelection
    * truncation selection} method which picks the best individuals]
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.SelectionAlgorithm
    *         selection algorithm} to use, defaults to
@@ -2177,7 +2177,7 @@ public class EA extends TSPAlgorithm {
    * The {@link org.logisticPlanning.tsp.solving.gpm.GPM genotype-phenotype
    * mapping} (GPM) translating genotypes to phenotypes (tours) [by
    * default, genotypes and phenotypes are the same]
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.gpm.GPM GPM} to use,
    *         defaults normally to the
@@ -2192,7 +2192,7 @@ public class EA extends TSPAlgorithm {
    * the {@link org.logisticPlanning.tsp.solving.operators.UnaryOperator
    * unary search operator}, i.e., the mutation operation creating one
    * offspring from one parent
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.operators.UnaryOperator
    *         unary search operation} to use, defaults to the
@@ -2207,7 +2207,7 @@ public class EA extends TSPAlgorithm {
    * the {@link org.logisticPlanning.tsp.solving.operators.BinaryOperator
    * binary operator}, i.e., the crossover operation creating one offspring
    * from two parent individuals
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.operators.BinaryOperator
    *         binary search operation} to use, defaults to the
@@ -2222,7 +2222,7 @@ public class EA extends TSPAlgorithm {
    * the {@link org.logisticPlanning.tsp.solving.operators.NullaryOperator
    * nullary operator}, i.e., the operator producing the initial (random)
    * individuals
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.operators.NullaryOperator
    *         nullary search operation} to use, defaults to the
@@ -2236,7 +2236,7 @@ public class EA extends TSPAlgorithm {
   /**
    * the crossover rate which is between 0 and 1 determines the fraction of
    * offspring created by crossover, the rest is created via mutation
-   * 
+   *
    * @serial a {@code double} value in the real intervall {@code [0,1]}
    *         (with inclusive boundaries)
    * @see #getCrossoverRate()
@@ -2251,7 +2251,7 @@ public class EA extends TSPAlgorithm {
    * default,
    * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fitness.FitnessIsObjectiveValue#INSTANCE
    * fitness = tour length}]
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.FitnessAssignmentProcess
    *         fitness assignment process} to use, defaults to the
@@ -2270,7 +2270,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * create the EA an initialize all parameters to default values
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -2293,7 +2293,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the &#956;
-   * 
+   *
    * @return the &#956;
    * @see #m_mu
    * @see #setMu(int)
@@ -2304,7 +2304,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the &#956;
-   * 
+   *
    * @param mu
    *          the &#956;
    * @see #m_mu
@@ -2316,7 +2316,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the &#955;
-   * 
+   *
    * @return the &#955;
    * @see #m_lambda
    * @see #setLambda(int)
@@ -2327,7 +2327,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the &#955;
-   * 
+   *
    * @param lambda
    *          the &#955;
    * @see #m_lambda
@@ -2339,7 +2339,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the crossover rate
-   * 
+   *
    * @return the crossover rate
    * @see #m_cr
    * @see #setCrossoverRate(double)
@@ -2350,7 +2350,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the crossover rate
-   * 
+   *
    * @param cr
    *          the crossover rate
    * @see #m_cr
@@ -2362,7 +2362,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the steady state
-   * 
+   *
    * @return the steady state
    * @see #m_steady
    * @see #setParentsSurvive(boolean)
@@ -2373,7 +2373,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * Set the steady state
-   * 
+   *
    * @param steady
    *          the steady state
    * @see #m_steady
@@ -2385,7 +2385,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the selection algorithm
-   * 
+   *
    * @param sel
    *          the algorithm
    * @see #m_selection
@@ -2397,7 +2397,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the selection algorithm
-   * 
+   *
    * @return the selection algorithm
    * @see #m_selection
    * @see #setSelectionAlgorithm(SelectionAlgorithm)
@@ -2408,7 +2408,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the fitness assignment process
-   * 
+   *
    * @param fap
    *          the fitness assignment process
    * @see #m_fap
@@ -2421,7 +2421,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the fitness assignment process
-   * 
+   *
    * @return the fitness assignment process
    * @see #m_fap
    * @see #setFitnessAssignmentProcess(FitnessAssignmentProcess)
@@ -2432,7 +2432,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the genotype-phenotype mapping
-   * 
+   *
    * @param gpm
    *          the genotype-phenotype mapping
    * @see #m_gpm
@@ -2449,7 +2449,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the genotype-phenotype mapping
-   * 
+   *
    * @return the genotype-phenotype mapping
    * @see #m_gpm
    * @see #setGPM(GPM)
@@ -2460,7 +2460,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the binary operator
-   * 
+   *
    * @param op
    *          the binary operator
    * @see #m_binary
@@ -2477,7 +2477,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the binary search operator
-   * 
+   *
    * @return the binary search operator
    * @see #m_binary
    * @see #setBinaryOperator(BinaryOperator)
@@ -2488,7 +2488,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the unary operator
-   * 
+   *
    * @param op
    *          the unary operator
    * @see #m_unary
@@ -2505,7 +2505,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the unary search operator
-   * 
+   *
    * @return the unary search operator
    * @see #m_unary
    * @see #setUnaryOperator(UnaryOperator)
@@ -2516,7 +2516,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * set the nullary operator
-   * 
+   *
    * @param op
    *          the nullary operator
    * @see #m_nullary
@@ -2533,7 +2533,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * get the nullary search operator
-   * 
+   *
    * @return the nullary search operator
    * @see #m_nullary
    * @see #setNullaryOperator(NullaryOperator)
@@ -2671,7 +2671,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * complete an individual's setup
-   * 
+   *
    * @param ind
    *          the individual
    * @param f
@@ -2691,7 +2691,7 @@ public class EA extends TSPAlgorithm {
 
   /**
    * create the first generation
-   * 
+   *
    * @param pop
    *          the population to be filled with new individuals
    * @param f
@@ -2822,6 +2822,7 @@ public class EA extends TSPAlgorithm {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public EA clone() {
     EA cfg;
 

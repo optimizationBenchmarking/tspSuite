@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation maximal preservative recombination operator
  */
 public class PermutationMaximalPreservativeCrossoverTest extends
-    PermutationOperatorTest {
+PermutationOperatorTest {
 
   /** instantiate */
   public PermutationMaximalPreservativeCrossoverTest() {

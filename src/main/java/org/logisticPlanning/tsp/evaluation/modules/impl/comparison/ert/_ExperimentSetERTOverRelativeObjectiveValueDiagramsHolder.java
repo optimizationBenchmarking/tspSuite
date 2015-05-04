@@ -94,20 +94,20 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetERTOverRelativeObjectiveValueDiagramsHolder
-    extends ComparisonModule {
+extends ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetERTOverRelativeObjectiveValueDiagramsHolder(
       final Module owner) {
     super(_ExperimentSetERTDiagramsBase._NAME_PFX
-        + "OverRelativeObjectiveValues",//$NON-NLS-1$ 
+        + "OverRelativeObjectiveValues",//$NON-NLS-1$
         owner, false);
   }
 

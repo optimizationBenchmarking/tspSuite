@@ -492,7 +492,7 @@ public final class TruncationSelection extends SelectionAlgorithm {
    * TruncationSelection.INSTANCE} for serialization, i.e., when the
    * instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link TruncationSelection#INSTANCE
    *         TruncationSelection.INSTANCE} )
@@ -506,7 +506,7 @@ public final class TruncationSelection extends SelectionAlgorithm {
    * with the singleton instance {@link TruncationSelection#INSTANCE
    * TruncationSelection.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link TruncationSelection#INSTANCE
    *         TruncationSelection.INSTANCE} )

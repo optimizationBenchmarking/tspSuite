@@ -93,7 +93,7 @@ import org.logisticPlanning.utils.math.statistics.aggregates.StableSum;
  * </ol>
  */
 public final class ERTSeries extends ArraySetView<ERTPoint> implements
-    IDataCollection {
+IDataCollection {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -102,21 +102,21 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
   /**
    * the total number of runs
-   * 
+   *
    * @serial an integer denoting the total number of runs
    */
   private final int m_total;
 
   /**
    * the accessor
-   * 
+   *
    * @serial the accessor object
    */
   private final Accessor m_axs;
 
   /**
    * instantiate
-   * 
+   *
    * @param data
    *          the data
    * @param total
@@ -133,7 +133,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
   /**
    * Get the total number of runs
-   * 
+   *
    * @return the total number of runs
    */
   public final int getRunCount() {
@@ -142,7 +142,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
   /**
    * Get the accessor
-   * 
+   *
    * @return the accessor
    */
   public final Accessor getAccessor() {
@@ -151,7 +151,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
   /**
    * check the accessor
-   * 
+   *
    * @param axs
    *          the accessor
    */
@@ -164,7 +164,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
   /**
    * make an ert series
-   * 
+   *
    * @param rs
    *          the run set
    * @param thresholds
@@ -190,12 +190,12 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
 
     opt = rs.getInstance().optimum();
     thresholdsF = ((thresholds != null) ? thresholds : //
-        Benchmark.getLogObjectiveValues(opt));
+      Benchmark.getLogObjectiveValues(opt));
 
     temp = new ERTPoint[thresholdsF.length - 3];
 
     ti = ((axs.canAccessAsLong()) ? //
-    ERTSeries.__makeERTSeriesL(rs, opt, thresholdsF, axs, temp)//
+        ERTSeries.__makeERTSeriesL(rs, opt, thresholdsF, axs, temp)//
         : ERTSeries.__makeERTSeriesD(rs, opt, thresholdsF, axs, temp));
 
     if (ti == temp.length) {
@@ -214,7 +214,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
   /**
    * make an ert series by using {@code double} precision floating point
    * numbers
-   * 
+   *
    * @param rs
    *          the run set
    * @param thresholdsF
@@ -276,7 +276,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
   /**
    * make an ert series by performing integer computations based on
    * {@code long} values
-   * 
+   *
    * @param rs
    *          the run set
    * @param thresholdsF
@@ -384,7 +384,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
   /**
    * Get the data point representing the information available at the given
    * best known objective value
-   * 
+   *
    * @param f
    *          the best known objective value
    * @return the data point representing the information available at the
@@ -425,7 +425,7 @@ public final class ERTSeries extends ArraySetView<ERTPoint> implements
   /**
    * Get the data point representing the information available at the given
    * best known objective value
-   * 
+   *
    * @param f
    *          the best known objective value
    * @return the data point representing the information available at the

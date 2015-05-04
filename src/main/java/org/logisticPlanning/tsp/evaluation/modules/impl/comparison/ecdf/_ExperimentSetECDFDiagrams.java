@@ -114,7 +114,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
   private static final String CAP_3 = " over all benchmark instances where sufficient data was available, for different time measures (with proper scaling) and goal relative objective values ";//$NON-NLS-1$
 
   /** the sub caption 0 */
-  private static final String SCAP_0 = ("mean ");//$NON-NLS-1$  
+  private static final String SCAP_0 = ("mean ");//$NON-NLS-1$
   /** the sub caption 1 */
   private static final String SCAP_1 = (" over the ");//$NON-NLS-1$
   /** the sub caption 2 */
@@ -129,7 +129,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -163,7 +163,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param property
@@ -177,12 +177,11 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final ExperimentECDFProperty property, final Document doc,
       final ArrayList<Line2D> lines,
       final ArrayList<Map.Entry<Experiment, Object>> areaLines)
-      throws IOException {
+          throws IOException {
     final int[] select;
     final UnaryFunction[] transform;
     IDataCollection coll;
@@ -268,16 +267,16 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
             (_ExperimentSetECDFDiagrams.CAP_1 + data.size()
                 + _ExperimentSetECDFDiagrams.CAP_2
                 + Macros.ECDF.getPlaceholder() + _ExperimentSetECDFDiagrams.CAP_3),//
-            (_ExperimentSetECDFDiagrams.SCAP_0
-                + Macros.ECDF.getPlaceholder()
-                + _ExperimentSetECDFDiagrams.SCAP_1
-                + Accessor.DE.getShortName()
-                + _ExperimentSetECDFDiagrams.SCAP_2
-                + (Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + '=')
-                + 100 + _ExperimentSetECDFDiagrams.SCAP_3
-                + Accessor.DE.getShortName()
-                + Macros.SCALE.getPlaceholder() + '.'),//
-            true)) {
+                (_ExperimentSetECDFDiagrams.SCAP_0
+                    + Macros.ECDF.getPlaceholder()
+                    + _ExperimentSetECDFDiagrams.SCAP_1
+                    + Accessor.DE.getShortName()
+                    + _ExperimentSetECDFDiagrams.SCAP_2
+                    + (Macros.F_THRESHOLD_RELATIVE.getPlaceholder() + '=')
+                    + 100 + _ExperimentSetECDFDiagrams.SCAP_3
+                    + Accessor.DE.getShortName()
+                    + Macros.SCALE.getPlaceholder() + '.'),//
+                    true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
 
@@ -295,9 +294,9 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
           this.__makeFigure(
               data,//
               new ExperimentECDFProperty(
-              //
+                  //
                   RunSetECDFProperty.getInstance(axs, goal), insts), doc,
-              lines, aucLines);
+                  lines, aucLines);
           if (lines.isEmpty()) {
             aucLines.clear();
             continue;
@@ -322,7 +321,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
                   try (Graphic graph = fb.graphic()) {
                     chart = drv.createLineChart2D(//
                         axs.isTime() ? //
-                        ECDFUtils.DEFAULT_AXIS_DEF_TIME//
+                            ECDFUtils.DEFAULT_AXIS_DEF_TIME//
                             : ECDFUtils.DEFAULT_AXIS_DEF_COUNT);
                     chart.setLegendType(ELegendType.ONLY_LEGEND);
                     chart.addLines(lines);
@@ -374,13 +373,13 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                      ECDFUtils.DEFAULT_AXIS_DEF_TIME//
+                          ECDFUtils.DEFAULT_AXIS_DEF_TIME//
                           : ECDFUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.addLines(lines);
                   fc++;
                   chart
-                      .setLegendType(includeLegend ? ELegendType.PUT_LEGEND
-                          : ELegendType.NO_LEGEND);
+                  .setLegendType(includeLegend ? ELegendType.PUT_LEGEND
+                      : ELegendType.NO_LEGEND);
                   if (includeAxisLabels) {
                     chart.setAxisTitleX("lg(" + axs.getAxisString() + ')'); //$NON-NLS-1$
                     chart.setAxisTitleY(Macros.ECDF.getPlaceholder());
@@ -418,28 +417,28 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
       body.write(") aggregated over all ");//$NON-NLS-1$
       body.writeIntInText(instances.size(), false);
       body.write(//
-      " benchmark instances for which sufficient data was available. The x-axes of the diagrams are the logarithms (base ");//$NON-NLS-1$
+          " benchmark instances for which sufficient data was available. The x-axes of the diagrams are the logarithms (base ");//$NON-NLS-1$
       body.writeInt(10);
       body.write(//
-      " of the runtime measured in ");//$NON-NLS-1$
+          " of the runtime measured in ");//$NON-NLS-1$
       body.writeSequence(//
           new AccessorSequence(Accessor.UNBIASED_TIME_MEASURES, true,
               false, true, body),//
-          ESequenceType.XOR, false);
+              ESequenceType.XOR, false);
       body.write(//
-      " (scale appropriately). The ");//$NON-NLS-1$
+          " (scale appropriately). The ");//$NON-NLS-1$
       body.macroInvoke(Macros.ECDF);
       body.write(//
-      " returns the fraction of runs that have reached the goal (relative) objective value ");//$NON-NLS-1$
+          " returns the fraction of runs that have reached the goal (relative) objective value ");//$NON-NLS-1$
       body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
       body.write(//
-      " for a given point in time. The higher this fraction rises (it can reach at most ");//$NON-NLS-1$
+          " for a given point in time. The higher this fraction rises (it can reach at most ");//$NON-NLS-1$
       body.writeInt(1);
       body.write(//
-      ") and the sooner it gets there, the better. We plot such diagrams for the following values of ");//$NON-NLS-1$
+          ") and the sooner it gets there, the better. We plot such diagrams for the following values of ");//$NON-NLS-1$
       body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
       body.write(//
-      ": ");//$NON-NLS-1$
+          ": ");//$NON-NLS-1$
       body.writeSequence(new SequenceDouble(body, null,
           _ExperimentSetECDFDiagrams.GOALS), ESequenceType.AND, true);
       body.writeChar('.');

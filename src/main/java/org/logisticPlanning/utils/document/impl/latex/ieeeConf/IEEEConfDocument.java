@@ -29,7 +29,7 @@ public class IEEEConfDocument extends LaTeXDocument {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @param file

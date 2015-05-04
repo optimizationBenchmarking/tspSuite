@@ -55,7 +55,7 @@ public final class OrderStatisticInfo extends StatisticInfo {
 
   /**
    * get the quantile
-   * 
+   *
    * @param quantile
    *          the quantile
    * @return the quantile value

@@ -108,7 +108,7 @@ public class DistanceComputerTest extends TestBase {
    * class
    * {@link test.junit.org.logisticPlanning.tsp.benchmarking.instances._InstanceTest}
    * .
-   * 
+   *
    * @param threshold
    *          the threshold up to which a matrix is to be used
    * @return the distance computer
@@ -122,7 +122,7 @@ public class DistanceComputerTest extends TestBase {
 
   /**
    * Get the matrix-based distance computer for testing.
-   * 
+   *
    * @return the matrix-based distance computer
    */
   protected synchronized final DistanceComputer getDistanceComputerMat() {
@@ -149,7 +149,7 @@ public class DistanceComputerTest extends TestBase {
 
   /**
    * Get the raw distance computer for testing.
-   * 
+   *
    * @return the raw distance computer
    */
   protected synchronized final DistanceComputer getDistanceComputerNoMat() {
@@ -199,7 +199,7 @@ public class DistanceComputerTest extends TestBase {
 
     n = d1.n();
     Assert
-        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
     for (int i = n; i > 0; i--) {
       sum1 = sum2 = 0l;
       for (int j = n; j > 0; j--) {
@@ -236,7 +236,7 @@ public class DistanceComputerTest extends TestBase {
   /**
    * Test whether the result of direct evaluation is the same as the result
    * of adding up distances.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -254,7 +254,7 @@ public class DistanceComputerTest extends TestBase {
     Assert.assertNotNull(DistanceComputerTest.RAW_IS_NULL, d2);
     n = d1.n();
     Assert
-        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
     tour = PermutationCreateCanonical.canonical(n);
 
     for (z = DistanceComputerTest.getRequiredTests(n);;) {
@@ -299,7 +299,7 @@ public class DistanceComputerTest extends TestBase {
 
   /**
    * get the number of required random tests
-   * 
+   *
    * @param n
    *          the problem dimension
    * @return the number of required random tests

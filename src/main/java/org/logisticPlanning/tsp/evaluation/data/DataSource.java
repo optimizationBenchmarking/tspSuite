@@ -20,7 +20,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Instantiate the data source
-   * 
+   *
    * @param name
    *          the data source
    */
@@ -30,7 +30,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * implement the data loading behavior
-   * 
+   *
    * @return the experiment set
    * @throws IOException
    *           if io fails
@@ -39,7 +39,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Load the data based on the configuration parameters.
-   * 
+   *
    * @return the experiment set
    * @throws IOException
    *           if io fails
@@ -59,10 +59,10 @@ public abstract class DataSource extends LoggerOwner {
     } finally {
       if (((logger != null) && (logger.isLoggable(Level.INFO)))) {
         logger
-            .info("Finished loading data " + //$NON-NLS-1$
-                ((es != null) ? ("and found " + es.size() + //$NON-NLS-1$
+        .info("Finished loading data " + //$NON-NLS-1$
+            ((es != null) ? ("and found " + es.size() + //$NON-NLS-1$
                 " experiments.") //$NON-NLS-1$
-                    : "but found no experimental data (now throwing exception ^_^).")); //$NON-NLS-1$
+                : "but found no experimental data (now throwing exception ^_^).")); //$NON-NLS-1$
       }
     }
 
@@ -75,7 +75,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Create an instance of the default data source type
-   * 
+   *
    * @return an instance of the default data source type
    */
   public static final DataSource createDefaultDataSource() {

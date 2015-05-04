@@ -75,7 +75,7 @@ public final class GlobalRankingSummary extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -116,38 +116,38 @@ public final class GlobalRankingSummary extends RankedComparisonModule {
     }
 
     body.write(//
-    "In each of the comparison sections (");//$NON-NLS-1$
+        "In each of the comparison sections (");//$NON-NLS-1$
     body.reference(labels.toArray(new Label[labels.size()]));
     body.write(//
-    "), we ranked the experiments according to their performance, as discussed in ");//$NON-NLS-1$
+        "), we ranked the experiments according to their performance, as discussed in ");//$NON-NLS-1$
     body.reference(this.m_rank.getLabel(data));
 
     body.write(//
-    ". We now compute the median of the ranks for each experiment and then rank the experiments according to their median ranks. However, even when using robust statistics, the ");//$NON-NLS-1$
+        ". We now compute the median of the ranks for each experiment and then rank the experiments according to their median ranks. However, even when using robust statistics, the ");//$NON-NLS-1$
     try (Emphasize em = body.emphasize()) {
       em.write(//
-      "outcome of this ranking strongly depends on the configuration of the evaluator");//$NON-NLS-1$
+          "outcome of this ranking strongly depends on the configuration of the evaluator");//$NON-NLS-1$
     }
     body.write(//
-    ". The reason is that ");//$NON-NLS-1$
+        ". The reason is that ");//$NON-NLS-1$
 
     try (Enumeration en = body.enumeration()) {
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-        " only the evaluation modules that are active and used will influence the ranking and");//$NON-NLS-1$
+            " only the evaluation modules that are active and used will influence the ranking and");//$NON-NLS-1$
       }
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-        " some modules represent metrics that strongly correllate with each other.");//$NON-NLS-1$
+            " some modules represent metrics that strongly correllate with each other.");//$NON-NLS-1$
       }
     }
     body.write(//
-    "Even if all modules are used at once, we can still expect that the results are biased \u2012 they only represent a hint for a human researcher.");//$NON-NLS-1$
+        "Even if all modules are used at once, we can still expect that the results are biased \u2012 they only represent a hint for a human researcher.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write(//
-    "Anyway, from the global ranking information");//$NON-NLS-1$
+        "Anyway, from the global ranking information");//$NON-NLS-1$
 
     this.summarizeRanks(ranks.getValue(), body, //
         "outperform the other methods in different disciplines");//$NON-NLS-1$

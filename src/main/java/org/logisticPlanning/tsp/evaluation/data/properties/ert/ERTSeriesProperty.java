@@ -98,21 +98,21 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
    * distance evaluation}-based series property
    */
   public static final ERTSeriesProperty DE_ERT_SERIES = //
-  new ERTSeriesProperty(Accessor.DE);
+      new ERTSeriesProperty(Accessor.DE);
 
   /**
    * the {@link org.logisticPlanning.tsp.evaluation.data.Accessor#FE
    * function evaluation}-based series property
    */
   public static final ERTSeriesProperty FE_ERT_SERIES = //
-  new ERTSeriesProperty(Accessor.FE);
+      new ERTSeriesProperty(Accessor.FE);
 
   /**
    * the {@link org.logisticPlanning.tsp.evaluation.data.Accessor#RUNTIME
    * runtime}-based series property
    */
   public static final ERTSeriesProperty RUNTIME_ERT_SERIES = //
-  new ERTSeriesProperty(Accessor.RUNTIME);
+      new ERTSeriesProperty(Accessor.RUNTIME);
 
   /**
    * the
@@ -120,7 +120,7 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
    * normalized runtime}-based series property
    */
   public static final ERTSeriesProperty NORMALIZED_RUNTIME_ERT_SERIES = //
-  new ERTSeriesProperty(Accessor.NORMALIZED_RUNTIME);
+      new ERTSeriesProperty(Accessor.NORMALIZED_RUNTIME);
 
   /** the accessor */
   private final Accessor m_axs;
@@ -130,7 +130,7 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
 
   /**
    * create the ert series property
-   * 
+   *
    * @param axs
    *          the accessor
    */
@@ -167,7 +167,7 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
 
   /**
    * Get the ert serues property for the given accessor
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the corresponding property

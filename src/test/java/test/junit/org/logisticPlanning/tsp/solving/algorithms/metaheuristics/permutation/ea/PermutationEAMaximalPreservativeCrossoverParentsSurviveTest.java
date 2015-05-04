@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
  * the test of the permutation EA with maximal preservative crossover
  */
 public class PermutationEAMaximalPreservativeCrossoverParentsSurviveTest
-    extends PermutationEAParentsSurviveTest {
+extends PermutationEAParentsSurviveTest {
 
   /** create */
   public PermutationEAMaximalPreservativeCrossoverParentsSurviveTest() {

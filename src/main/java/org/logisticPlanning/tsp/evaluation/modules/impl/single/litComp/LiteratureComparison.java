@@ -50,11 +50,11 @@ public class LiteratureComparison extends SingleModule {
 
   /** the table cell definition */
   private static final TableCellDef[] TABLE_DEF = {
-      TableCellDef.VERTICAL_LINE, TableCellDef.RIGHT,
-      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-      TableCellDef.VERTICAL_LINE };
+    TableCellDef.VERTICAL_LINE, TableCellDef.RIGHT,
+    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+    TableCellDef.VERTICAL_LINE };
 
   /** the formats */
   private static final NumberFormat[] FORMATS;
@@ -63,22 +63,22 @@ public class LiteratureComparison extends SingleModule {
     FORMATS = new NumberFormat[Accessor.ACCESSORS.size()];
 
     LiteratureComparison.FORMATS[Accessor.DE.ordinal()] = //
-    ModuleUtils.createDecimalFormat("0"); //$NON-NLS-1$
+        ModuleUtils.createDecimalFormat("0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.FE.ordinal()] = //
-    LiteratureComparison.FORMATS[Accessor.DE.ordinal()];
+        LiteratureComparison.FORMATS[Accessor.DE.ordinal()];
     LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()] = //
-    ModuleUtils.createDecimalFormat("0.00E0"); //$NON-NLS-1$
+        ModuleUtils.createDecimalFormat("0.00E0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.F.ordinal()] = //
-    ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
+        ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.F_RELATIVE.ordinal()] = //
-    LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
+        LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
     LiteratureComparison.FORMATS[Accessor.NORMALIZED_RUNTIME.ordinal()] = //
-    LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
+        LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
   }
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -158,7 +158,7 @@ public class LiteratureComparison extends SingleModule {
 
           try (Table tbl = bdy.table(Label.AUTO_LABEL, //
               "Comparison of " + root.getShortName(data).getPlaceholder() + //$NON-NLS-1$
-                  " with " + lrps.getShortName(),//$NON-NLS-1$
+              " with " + lrps.getShortName(),//$NON-NLS-1$
               true, LiteratureComparison.TABLE_DEF)) {
             try (TableCaption cap = tbl.tableCaption()) {
               cap.write("Comparison of ");//$NON-NLS-1$
@@ -261,7 +261,7 @@ public class LiteratureComparison extends SingleModule {
 
   /**
    * write a point
-   * 
+   *
    * @param dest
    *          the dest
    * @param p
@@ -306,7 +306,7 @@ public class LiteratureComparison extends SingleModule {
 
   /**
    * Write a comparison
-   * 
+   *
    * @param set
    *          the result set
    * @param data
@@ -401,7 +401,7 @@ public class LiteratureComparison extends SingleModule {
 
         if (a > 0) {
           text.writeLong(a);
-          text.write(" comparisons indicated ");//$NON-NLS-1$        
+          text.write(" comparisons indicated ");//$NON-NLS-1$
           try (Emphasize em = text.emphasize()) {
             em.write(res2.getShortName());
           }
@@ -409,10 +409,10 @@ public class LiteratureComparison extends SingleModule {
 
         if (b > 0) {
           if (a > 0) {
-            text.write(" and ");//$NON-NLS-1$        
+            text.write(" and ");//$NON-NLS-1$
           }
           text.writeLong(b);
-          text.write(" indicated ");//$NON-NLS-1$        
+          text.write(" indicated ");//$NON-NLS-1$
           try (Emphasize em = text.emphasize()) {
             em.write(res2.getOther().getShortName());
           }

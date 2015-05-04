@@ -17,7 +17,7 @@ public final class ExperimentSetProgressHolder extends ComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

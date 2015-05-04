@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  <p>
  * In this class, we implement the Population-based ACO algorithm for
  * symmetric and asymmetric TSPs.
@@ -324,7 +324,7 @@ public class PACO extends TSPAlgorithm {
    * href="#cite_GM2002APBAFA" style="font-weight:bold">2</a>, <a
    * href="#cite_GM2002APBATDOP" style="font-weight:bold">3</a>], with
    * default value {@value #DEFAULT_ALPHA}.
-   * 
+   *
    * @serial serializable field
    */
   private double m_alpha;
@@ -335,7 +335,7 @@ public class PACO extends TSPAlgorithm {
    * href="#cite_GM2002APBAFA" style="font-weight:bold">2</a>, <a
    * href="#cite_GM2002APBATDOP" style="font-weight:bold">3</a>], with
    * default value {@value #DEFAULT_BETA}.
-   * 
+   *
    * @serial serializable field
    */
   private double m_beta;
@@ -347,7 +347,7 @@ public class PACO extends TSPAlgorithm {
    * href="#cite_GM2002APBAFA" style="font-weight:bold">2</a>, <a
    * href="#cite_GM2002APBATDOP" style="font-weight:bold">3</a>], with
    * default value {@value #DEFAULT_POPULATION_SIZE}.
-   * 
+   *
    * @serial serializable field
    */
   private int m_populationSize;
@@ -359,7 +359,7 @@ public class PACO extends TSPAlgorithm {
    * style="font-weight:bold">2</a>, <a href="#cite_GM2002APBATDOP"
    * style="font-weight:bold">3</a>], with default value
    * {@value #DEFAULT_Q0}
-   * 
+   *
    * @serial serializable field
    */
   private double m_q0;
@@ -370,7 +370,7 @@ public class PACO extends TSPAlgorithm {
    * href="#cite_GM2002APBAFA" style="font-weight:bold">2</a>, <a
    * href="#cite_GM2002APBATDOP" style="font-weight:bold">3</a>], with
    * default value {@value #DEFAULT_TAU_MAX}
-   * 
+   *
    * @serial serializable field
    */
   private double m_tauMax;
@@ -382,7 +382,7 @@ public class PACO extends TSPAlgorithm {
    * style="font-weight:bold">2</a>, <a href="#cite_GM2002APBATDOP"
    * style="font-weight:bold">3</a>], with default value
    * {@value #DEFAULT_ANT_COUNT}
-   * 
+   *
    * @serial serializable field
    */
   private int m_antCount;
@@ -392,7 +392,7 @@ public class PACO extends TSPAlgorithm {
    * style="font-weight:bold">1</a>, <a href="#cite_GM2002APBAFA"
    * style="font-weight:bold">2</a>, <a href="#cite_GM2002APBATDOP"
    * style="font-weight:bold">3</a>]
-   * 
+   *
    * @serial serializable field
    */
   private PopulationUpdateStrategy m_update;
@@ -417,7 +417,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name of the algorithm, to be prepented to the name of
    *          {@link PACO}
@@ -442,7 +442,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Get the alpha parameter ruling the influence of the pheromone
-   * 
+   *
    * @return the alpha parameter ruling the influence of the pheromone
    */
   public final double getAlpha() {
@@ -451,7 +451,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Set the alpha parameter ruling the influence of the pheromone
-   * 
+   *
    * @param alpha
    *          the alpha parameter ruling the influence of the pheromone
    */
@@ -461,7 +461,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Get the beta parameter ruling the influence of the distance
-   * 
+   *
    * @return the beta parameter ruling the influence of the distance
    */
   public final double getBeta() {
@@ -470,7 +470,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Set the beta parameter ruling the influence of the distance
-   * 
+   *
    * @param beta
    *          the beta parameter ruling the influence of the distance
    */
@@ -480,7 +480,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Get the population size
-   * 
+   *
    * @return the population size
    */
   public final int getPopulationSize() {
@@ -489,7 +489,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * set the population size
-   * 
+   *
    * @param ps
    *          the population size
    */
@@ -499,7 +499,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Get the number of ants per iteration
-   * 
+   *
    * @return the number of ants per iteration
    */
   public final int getAntCount() {
@@ -508,7 +508,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * set the number of ants per iteration
-   * 
+   *
    * @param ac
    *          the number of ants per iteration
    */
@@ -543,7 +543,7 @@ public class PACO extends TSPAlgorithm {
    * style="font-weight:bold">1</a>, <a href="#cite_GM2002APBAFA"
    * style="font-weight:bold">2</a>, <a href="#cite_GM2002APBATDOP"
    * style="font-weight:bold">3</a>]
-   * 
+   *
    * @param f
    *          the objective function defining the TSP problem to solve
    */
@@ -659,7 +659,7 @@ public class PACO extends TSPAlgorithm {
 
           // Compute the pheromone/heuristic value.
           phero = (Math.pow(matrix.get(lastNode, curNode), alpha) * //
-          Math.pow(((dist != 0) ? (1d / dist) : PACO.ERROR_NU), beta));
+              Math.pow(((dist != 0) ? (1d / dist) : PACO.ERROR_NU), beta));
 
           // Is this the best pheromone/heuristic value?
           if (phero >= bestPhero) { // Then remember it.
@@ -835,7 +835,7 @@ public class PACO extends TSPAlgorithm {
    * This may be useful if an heuristic initialization procedure is
    * performed. The default implementation in class {@link PACO} does
    * nothing.
-   * 
+   *
    * @param pop
    *          the population to fill
    * @param f
@@ -850,7 +850,7 @@ public class PACO extends TSPAlgorithm {
    * This method can be overridden to perform a local search on an
    * individual which was created by ACO. The default implementation in
    * class {@link PACO} does nothing.
-   * 
+   *
    * @param solution
    *          the solution to be refined. The contents of this array may be
    *          modified
@@ -867,7 +867,7 @@ public class PACO extends TSPAlgorithm {
 
   /**
    * Perform the population-based ACO
-   * 
+   *
    * @param args
    *          the command line arguments
    */

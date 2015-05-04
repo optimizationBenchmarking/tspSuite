@@ -12,7 +12,7 @@ public class MathOpParam extends AbstractMathElement {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -25,7 +25,7 @@ public class MathOpParam extends AbstractMathElement {
 
   /**
    * Get the mathematical operator
-   * 
+   *
    * @return the mathematical operator
    */
   public final int getIndex() {

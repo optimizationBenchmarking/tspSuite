@@ -158,14 +158,14 @@ public class EdgeGreedyHeuristic extends TSPHeuristic {
 
   /**
    * the neighbor list length
-   * 
+   *
    * @serial serializable field
    */
   private int m_neighborListLength;
 
   /**
    * augment missing edges with the first fitting edges discovered?
-   * 
+   *
    * @serial serializable field
    */
   private boolean m_augmentByAddingFirstCandidate;
@@ -450,7 +450,7 @@ public class EdgeGreedyHeuristic extends TSPHeuristic {
 
   /**
    * Perform the edge greedy heuristic.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

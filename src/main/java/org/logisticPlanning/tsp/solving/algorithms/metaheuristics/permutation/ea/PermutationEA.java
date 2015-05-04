@@ -133,7 +133,7 @@ public class PermutationEA extends EA {
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -154,7 +154,7 @@ public class PermutationEA extends EA {
 
   /**
    * Apply the evolutionary algorithm to all symmetric TSPLib instances.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

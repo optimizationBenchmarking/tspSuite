@@ -174,7 +174,7 @@ public class IteratorTests extends TestBase {
     it = new BoundsReducingIterator2D(//
         new DataCollectionIterator2D(leftEnd,//
             new ListCollection(list, 2), rightEnd),//
-        1, 5, 1, 4);
+            1, 5, 1, 4);
 
     Assert.assertTrue(it.hasNext());
     Assert.assertEquals(list.get(0), it.next());

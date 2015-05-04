@@ -11,7 +11,7 @@ import org.logisticPlanning.utils.config.Configurable;
 import org.logisticPlanning.utils.config.Configuration;
 
 /**
- * 
+ *
  <h1>Internal Base Class for Hybridizing the Branch and Bound Algorithm
  * by Little et al.</h1>
  * <p>
@@ -218,7 +218,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * and&nbsp;<a
  * href="http://www.amazon.com/dp/8120335171">8120335171</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a></em>
@@ -238,7 +238,7 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
    * the {@link org.logisticPlanning.tsp.solving.operators.UnaryOperator
    * unary search operator}, i.e., the mutation operation creating one
    * offspring from one parent
-   * 
+   *
    * @serial a non-{@code null} instance of the
    *         {@link org.logisticPlanning.tsp.solving.operators.UnaryOperator
    *         unary search operation} to use, defaults to the
@@ -257,7 +257,7 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -268,14 +268,14 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
 
   /**
    * Create the unary search operator.
-   * 
+   *
    * @return the unary search operator
    */
   abstract UnaryOperator<int[]> createUnary();
 
   /**
    * set the unary operator
-   * 
+   *
    * @param op
    *          the unary operator
    * @see #m_unary
@@ -292,7 +292,7 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
 
   /**
    * get the unary search operator
-   * 
+   *
    * @return the unary search operator
    * @see #m_unary
    * @see #setUnaryOperator(UnaryOperator)
@@ -371,7 +371,7 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
    * {@link #getUnaryOperator() unary operator} to the solution in
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluate(int[])
    * path representation} stored in {@code path}.
-   * 
+   *
    * @param path
    *          the
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluate(int[])
@@ -398,7 +398,7 @@ abstract class _HybridBABLittle1963 extends BABLittle1963 {
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluate(int[])
    * path representation} and then apply local search algorithm provided
    * here as {@link #getUnaryOperator() unary operator} to it.
-   * 
+   *
    * @param adjacencyList
    *          the
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluateAdj(int[])

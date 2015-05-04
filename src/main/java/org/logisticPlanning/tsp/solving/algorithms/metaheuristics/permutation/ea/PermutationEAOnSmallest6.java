@@ -12,7 +12,7 @@ public class PermutationEAOnSmallest6 {
 
   /**
    * Apply the evolutionary algorithm to all symmetric TSPLib instances.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

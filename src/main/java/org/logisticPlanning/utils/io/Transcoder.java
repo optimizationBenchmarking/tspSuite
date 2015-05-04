@@ -23,7 +23,7 @@ public class Transcoder {
   /**
    * Copy data from a source to a destination. The streams may be closed
    * during this process.
-   * 
+   *
    * @param source
    *          the source reader
    * @param dest
@@ -33,7 +33,7 @@ public class Transcoder {
    */
   public static final void copyBufferedCharStreams(
       final BufferedReader source, final BufferedWriter dest)
-      throws IOException {
+          throws IOException {
     String s;
     boolean nl;
 
@@ -51,7 +51,7 @@ public class Transcoder {
   /**
    * Copy data from a source to a destination. The streams may be closed
    * during this process.
-   * 
+   *
    * @param source
    *          the source reader
    * @param dest
@@ -63,11 +63,11 @@ public class Transcoder {
       final Writer dest) throws IOException {
 
     try (BufferedReader br = ((source instanceof BufferedReader) ? //
-    ((BufferedReader) source)//
+        ((BufferedReader) source)//
         : new BufferedReader(source))) {
 
       try (BufferedWriter bw = ((dest instanceof BufferedWriter) ? //
-      ((BufferedWriter) dest)//
+          ((BufferedWriter) dest)//
           : new BufferedWriter(dest))) {
 
         Transcoder.copyBufferedCharStreams(br, bw);
@@ -78,7 +78,7 @@ public class Transcoder {
 
   /**
    * Copy binary data from an input stream to an output stream.
-   * 
+   *
    * @param source
    *          the source stream
    * @param dest
@@ -88,7 +88,7 @@ public class Transcoder {
    */
   public static final void copyBinaryStreamToBinaryStream(
       final InputStream source, final OutputStream dest)
-      throws IOException {
+          throws IOException {
     final byte[] buf;
     final int len;
     int r;
@@ -110,7 +110,7 @@ public class Transcoder {
 
   /**
    * check two encodings
-   * 
+   *
    * @param se
    *          the source encoding
    * @param de
@@ -127,8 +127,8 @@ public class Transcoder {
     if (binary ^ (de == EEncoding.BINARY)) {
       throw new IllegalArgumentException(//
           "Binary streams can only be copied to binary streams, but source encoding is '" //$NON-NLS-1$
-              + se.getStandardName() + "' and destination encoding is '"//$NON-NLS-1$
-              + de.getStandardName() + "'.");//$NON-NLS-1$
+          + se.getStandardName() + "' and destination encoding is '"//$NON-NLS-1$
+          + de.getStandardName() + "'.");//$NON-NLS-1$
     }
 
     return binary;
@@ -137,7 +137,7 @@ public class Transcoder {
   /**
    * Copy data from an input stream to an output stream. The streams may be
    * closed during this process.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -169,7 +169,7 @@ public class Transcoder {
   /**
    * Copy text data from an input stream to an output stream. The streams
    * may be closed during this process.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -187,11 +187,11 @@ public class Transcoder {
       final EEncoding sourceEncoding, final OutputStream dest,
       final EEncoding destEncoding) throws IOException {
     try (final Reader r = ((sourceEncoding == EEncoding.TEXT) ? //
-    new InputStreamReader(source)//
-        : new InputStreamReader(source, sourceEncoding.getJavaName()))) {
+        new InputStreamReader(source)//
+    : new InputStreamReader(source, sourceEncoding.getJavaName()))) {
       try (final Writer w = ((destEncoding == EEncoding.TEXT) ? //
-      new OutputStreamWriter(dest)//
-          : new OutputStreamWriter(dest, destEncoding.getJavaName()))) {
+          new OutputStreamWriter(dest)//
+      : new OutputStreamWriter(dest, destEncoding.getJavaName()))) {
         Transcoder.copyCharStreamToCharStream(r, w);
       }
     }
@@ -199,7 +199,7 @@ public class Transcoder {
 
   /**
    * Copy data from a file to another file.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -234,7 +234,7 @@ public class Transcoder {
 
   /**
    * Copy a file to another file
-   * 
+   *
    * @param src
    *          the source file
    * @param dest
@@ -258,7 +258,7 @@ public class Transcoder {
 
   /**
    * Copy data from a file to another file.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -293,7 +293,7 @@ public class Transcoder {
 
   /**
    * Copy data from a resource to an output stream
-   * 
+   *
    * @param owningClazz
    *          the owning class
    * @param resourceName
@@ -332,7 +332,7 @@ public class Transcoder {
 
   /**
    * Copy data from a resource to a file
-   * 
+   *
    * @param owningClazz
    *          the owning class
    * @param resourceName
@@ -372,7 +372,7 @@ public class Transcoder {
 
   /**
    * calculate an appropriate buffer size
-   * 
+   *
    * @param available
    *          the available items
    * @return the buffer size

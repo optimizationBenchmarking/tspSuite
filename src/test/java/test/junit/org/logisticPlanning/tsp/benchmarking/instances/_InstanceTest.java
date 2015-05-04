@@ -42,7 +42,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /**
    * test a given instance
-   * 
+   *
    * @param i
    *          the instance
    */
@@ -62,7 +62,7 @@ public class _InstanceTest extends DistanceComputerTest {
   /**
    * If the length of the canonical tour is known from the documentation,
    * test whether it is equal to what we get by evaluating said tour.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -92,7 +92,7 @@ public class _InstanceTest extends DistanceComputerTest {
     Assert.assertEquals(DistanceComputerTest.RAW_WRONG_DIMENSION, d2.n(),
         this.m_i.n());
     Assert
-        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
 
     adj = new int[n];
     xa = xb = 0l;
@@ -113,10 +113,10 @@ public class _InstanceTest extends DistanceComputerTest {
         l);
 
     Assert
-        .assertEquals(
-            //
-            DistanceComputerTest.MATRIX_WRONG_EVAL_ADJ,
-            d1.evaluateAdj(adj), l);
+    .assertEquals(
+        //
+        DistanceComputerTest.MATRIX_WRONG_EVAL_ADJ,
+        d1.evaluateAdj(adj), l);
 
     Assert.assertEquals(//
         DistanceComputerTest.RAW_WRONG_EVAL_ADJ, d1.evaluateAdj(adj), l);
@@ -126,7 +126,7 @@ public class _InstanceTest extends DistanceComputerTest {
    * If the optimal tour is known from the documentation, test whether
    * evaluating that tour step-by-step via the point distance leads to the
    * same length as found in the documentation.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -170,7 +170,7 @@ public class _InstanceTest extends DistanceComputerTest {
    * If the optimal tour is known from the documentation, test whether
    * evaluating that tour leads to the same length as found in the
    * documentation.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -263,7 +263,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /** the permutation update operators */
   private static final PermutationUpdateOperator[] OPERATORS = //
-  PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
+      PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
 
   /**
    * Try to randomly construct quite a few tours and to find whether one of
@@ -343,7 +343,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /**
    * try to load the optimal tour
-   * 
+   *
    * @return the optimal tour, or null
    */
   private final int[] loadTour() {

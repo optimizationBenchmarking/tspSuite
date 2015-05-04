@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.edgeGreedy.EdgeGre
  * greedy heuristic
  */
 public class MultiNeighborhoodSearchTestWithEdgeGreedy extends
-    MultiNeighborhoodSearchTest {
+MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTestWithEdgeGreedy() {

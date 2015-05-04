@@ -30,7 +30,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    */
@@ -66,10 +66,10 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
             this.m_dir = cr;
           } else {
             throw new IllegalStateException(
-            //
+                //
                 "X-coordinates must be monotonously increasing or decreasing, but were first " + //$NON-NLS-1$
-                    ((cr < 0) ? "increasing and then decreasing, since " : //$NON-NLS-1$
-                        "decreasing and then increasing, since ")//$NON-NLS-1$
+                ((cr < 0) ? "increasing and then decreasing, since " : //$NON-NLS-1$
+                    "decreasing and then increasing, since ")//$NON-NLS-1$
                     + this.m_lastX + " was followed by " + d);//$NON-NLS-1$
           }
         }
@@ -93,7 +93,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
 
   /**
    * a special preview routine
-   * 
+   *
    * @return {@code true} if there is a next element, {@code false}
    *         otherwise
    */
@@ -104,7 +104,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
   /**
    * Compare two doubles: considers doubles which are extremely close to
    * each other (neighbors and second neighbors) as the same.
-   * 
+   *
    * @param a
    *          the first double
    * @param b

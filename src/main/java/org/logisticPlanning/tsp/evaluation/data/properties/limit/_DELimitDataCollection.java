@@ -14,7 +14,7 @@ final class _DELimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param de
    *          the de limit
    * @param rs

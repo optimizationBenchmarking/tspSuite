@@ -171,7 +171,7 @@ import org.logisticPlanning.utils.config.Configurable;
  * </ol>
  */
 public final class Instance extends Configurable implements
-    Comparable<Instance> {
+Comparable<Instance> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -1904,9 +1904,9 @@ public final class Instance extends Configurable implements
           Instance.RL5934, Instance.PLA7397, Instance.RL11849,
           Instance.USA13509, Instance.BRD14051, Instance.D15112,
           Instance.D18512, Instance.PLA33810, Instance.PLA85900, }, true); // sorting
-                                                                           // is
-                                                                           // actually
-                                                                           // not
+  // is
+  // actually
+  // not
   // necessary, but, well, to
   // be sure...
 
@@ -2003,14 +2003,14 @@ public final class Instance extends Configurable implements
 
   /**
    * the dimension, i.e., the number of cities
-   * 
+   *
    * @serial the number of nodes in the TSP, a positive integer value
    */
   private final int m_n;
 
   /**
    * the best possible objective value
-   * 
+   *
    * @serial a positive long value indicating the smallest possible tour
    *         length
    */
@@ -2018,7 +2018,7 @@ public final class Instance extends Configurable implements
 
   /**
    * the int hint: can we use integer distance calculation?
-   * 
+   *
    * @serial a boolean value indicating whether ints can be used to
    *         calculate distances
    */
@@ -2026,7 +2026,7 @@ public final class Instance extends Configurable implements
 
   /**
    * is the benchmark a symmetric or asymmetric tsp?
-   * 
+   *
    * @serial a boolean value which is true for symmetric and false for
    *         asymmetric problems
    */
@@ -2034,7 +2034,7 @@ public final class Instance extends Configurable implements
 
   /**
    * the length of the canonical tour
-   * 
+   *
    * @serial a positive long value with the length of the tour
    *         {@code 1,2,3...}, or {@code -1l} if the length is not given
    */
@@ -2042,7 +2042,7 @@ public final class Instance extends Configurable implements
 
   /**
    * Create a new benchmark descriptor
-   * 
+   *
    * @param n
    *          the dimension
    * @param optimum
@@ -2069,7 +2069,7 @@ public final class Instance extends Configurable implements
   /**
    * Get the length of the canonical tour, or {@code -1} if the length is
    * not known
-   * 
+   *
    * @return the length of the canonical tour, or {@code -1} if the length
    *         is not known
    */
@@ -2079,7 +2079,7 @@ public final class Instance extends Configurable implements
 
   /**
    * get the dimension of the benchmark instance
-   * 
+   *
    * @return the dimension
    */
   public final int n() {
@@ -2088,7 +2088,7 @@ public final class Instance extends Configurable implements
 
   /**
    * the optimal distance value
-   * 
+   *
    * @return the optimal distance value
    */
   public final long optimum() {
@@ -2097,7 +2097,7 @@ public final class Instance extends Configurable implements
 
   /**
    * the integer hint
-   * 
+   *
    * @return the integer hint
    */
   public final boolean intHint() {
@@ -2106,7 +2106,7 @@ public final class Instance extends Configurable implements
 
   /**
    * is the benchmark symmetric
-   * 
+   *
    * @return the benchmark symmetric
    */
   public final boolean symmetric() {
@@ -2115,7 +2115,7 @@ public final class Instance extends Configurable implements
 
   /**
    * load the benchmark case
-   * 
+   *
    * @return the distance computer
    * @param matrixLimitDim
    *          the highest dimension for which coordinate lists will
@@ -2181,7 +2181,7 @@ public final class Instance extends Configurable implements
 
   /**
    * Return this instance - as instances are immutable.
-   * 
+   *
    * @return {@code this}
    */
   @Override
@@ -2191,7 +2191,7 @@ public final class Instance extends Configurable implements
 
   /**
    * Get the instance belonging to a given name
-   * 
+   *
    * @param name
    *          the instance name
    * @return the instance

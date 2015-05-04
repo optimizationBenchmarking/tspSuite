@@ -270,26 +270,26 @@ final class _Bibliography {
 
   /** article */
   private static final char[] ARTICLE = { '@', 'a', 'r', 't', 'i', 'c',
-      'l', 'e', '{' };
+    'l', 'e', '{' };
   /** misc */
   private static final char[] MISC = { '@', 'm', 'i', 's', 'c', '{' };
   /** book */
   private static final char[] BOOK = { '@', 'b', 'o', 'o', 'k', '{' };
   /** inproceedings */
   private static final char[] INPROCEEDINGS = { '@', 'i', 'n', 'p', 'r',
-      'o', 'c', 'e', 'e', 'd', 'i', 'n', 'g', 's', '{' };
+    'o', 'c', 'e', 'e', 'd', 'i', 'n', 'g', 's', '{' };
   /** proceedings */
   private static final char[] PROCEEDINGS = { '@', 'p', 'r', 'o', 'c',
-      'e', 'e', 'd', 'i', 'n', 'g', 's', '{' };
+    'e', 'e', 'd', 'i', 'n', 'g', 's', '{' };
   /** techreport */
   private static final char[] TECHREPORT = { '@', 't', 'e', 'c', 'h', 'r',
-      'e', 'p', 'o', 'r', 't', '{' };
+    'e', 'p', 'o', 'r', 't', '{' };
   /** in collection */
   private static final char[] INCOLLECTION = { '@', 'i', 'n', 'c', 'o',
-      'l', 'l', 'e', 'c', 't', 'i', 'o', 'n', '{' };
+    'l', 'l', 'e', 'c', 't', 'i', 'o', 'n', '{' };
   /** phd thesis */
   private static final char[] PHD_THESIS = { '@', 'p', 'h', 'd', 't', 'h',
-      'e', 's', 'i', 's', '{' };
+    'e', 's', 'i', 's', '{' };
 
   /** and */
   private static final char[] AND = { ' ', 'a', 'n', 'd', ' ' };
@@ -297,7 +297,7 @@ final class _Bibliography {
   private static final char[] TITLE = { 't', 'i', 't', 'l', 'e' };
   /** title */
   private static final char[] INSTITUTION = { 'i', 'n', 's', 't', 'i',
-      't', 'u', 't', 'i', 'o', 'n' };
+    't', 'u', 't', 'i', 'o', 'n' };
 
   /** author */
   private static final char[] AUTHOR = { 'a', 'u', 't', 'h', 'o', 'r' };
@@ -305,21 +305,21 @@ final class _Bibliography {
   private static final char[] EDITOR = { 'e', 'd', 'i', 't', 'o', 'r' };
   /** chapter */
   private static final char[] CHAPTER = { 'c', 'h', 'a', 'p', 't', 'e',
-      'r' };
+  'r' };
   /** school */
   private static final char[] SCHOOL = { 's', 'c', 'h', 'o', 'o', 'l' };
   /** publisher */
   private static final char[] PUBLISHER = { 'p', 'u', 'b', 'l', 'i', 's',
-      'h', 'e', 'r' };
+    'h', 'e', 'r' };
   /** address */
   private static final char[] ADDRESS = { 'a', 'd', 'd', 'r', 'e', 's',
-      's' };
+  's' };
   /** year */
   private static final char[] YEAR = { 'y', 'e', 'a', 'r' };
 
   /** journal */
   private static final char[] JOURNAL = { 'j', 'o', 'u', 'r', 'n', 'a',
-      'l' };
+  'l' };
   /** volume */
   private static final char[] VOLUME = { 'v', 'o', 'l', 'u', 'm', 'e' };
   /** number */
@@ -330,7 +330,7 @@ final class _Bibliography {
   private static final char[] SERIES = { 's', 'e', 'r', 'i', 'e', 's' };
   /** booktitle */
   private static final char[] BOOKTITLE = { 'b', 'o', 'o', 'k', 't', 'i',
-      't', 'l', 'e' };
+    't', 'l', 'e' };
   /** doi */
   private static final char[] DOI = { 'd', 'o', 'i' };
   /** url */
@@ -339,7 +339,7 @@ final class _Bibliography {
   private static final char[] PAGES = { 'p', 'a', 'g', 'e', 's' };
   /** edition */
   private static final char[] EDITION = { 'e', 'd', 'i', 't', 'i', 'o',
-      'n' };
+  'n' };
 
   static {
     final char[] ch;
@@ -368,7 +368,7 @@ final class _Bibliography {
 
   /**
    * Create the bibliography file based on the reference set.
-   * 
+   *
    * @param refs
    *          the reference set
    * @param wco
@@ -389,7 +389,7 @@ final class _Bibliography {
 
   /**
    * Write a reference
-   * 
+   *
    * @param ref
    *          the reference
    * @param wco
@@ -445,7 +445,7 @@ final class _Bibliography {
 
   /**
    * write a string
-   * 
+   *
    * @param what
    *          what to write
    * @param t
@@ -472,7 +472,7 @@ final class _Bibliography {
 
   /**
    * write a string
-   * 
+   *
    * @param what
    *          what to write
    * @param auth
@@ -484,7 +484,7 @@ final class _Bibliography {
    */
   private static final void __people(final char[] what,
       final BibAuthors auth, final WriterCharOutput wco)
-      throws IOException {
+          throws IOException {
     int i, s;
     boolean x;
     String v, n;
@@ -532,7 +532,7 @@ final class _Bibliography {
 
   /**
    * write a full date
-   * 
+   *
    * @param year
    *          the year
    * @param quarter
@@ -581,7 +581,7 @@ final class _Bibliography {
 
   /**
    * write date
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -687,7 +687,7 @@ final class _Bibliography {
                   wco.write('-');
                   wco.write('-');
                   _Bibliography
-                      .__fullDate(-1, quarter2, month2, day2, wco);
+                  .__fullDate(-1, quarter2, month2, day2, wco);
                   wco.write(',');
                   wco.write(' ');
                 }
@@ -720,7 +720,7 @@ final class _Bibliography {
 
   /**
    * write the address
-   * 
+   *
    * @param what
    *          what -- the key
    * @param institution
@@ -765,7 +765,7 @@ final class _Bibliography {
 
   /**
    * write pages
-   * 
+   *
    * @param start
    *          the start string
    * @param end
@@ -808,7 +808,7 @@ final class _Bibliography {
 
   /**
    * Write an article
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -845,7 +845,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -883,7 +883,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -918,7 +918,7 @@ final class _Bibliography {
 
   /**
    * Write a proceedings
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -930,7 +930,7 @@ final class _Bibliography {
    */
   private static final void __writeProceedings(final String id,
       final BibProceedings ref, final WriterCharOutput wco)
-      throws IOException {
+          throws IOException {
     URI u;
 
     wco.write(_Bibliography.PROCEEDINGS, 0,
@@ -961,7 +961,7 @@ final class _Bibliography {
 
   /**
    * Write an in proceedings
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -973,7 +973,7 @@ final class _Bibliography {
    */
   private static final void __writeInProceedings(final String id,
       final BibInProceedings ref, final WriterCharOutput wco)
-      throws IOException {
+          throws IOException {
     URI u;
     String a;
     final BibProceedings proc;
@@ -1023,7 +1023,7 @@ final class _Bibliography {
 
   /**
    * Write an in collection
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1035,7 +1035,7 @@ final class _Bibliography {
    */
   private static final void __writeInCollection(final String id,
       final BibInCollection ref, final WriterCharOutput wco)
-      throws IOException {
+          throws IOException {
     URI u;
     String a;
     final BibBook proc;
@@ -1083,7 +1083,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1095,7 +1095,7 @@ final class _Bibliography {
    */
   private static final void __writeTechReport(final String id,
       final BibTechReport ref, final WriterCharOutput wco)
-      throws IOException {
+          throws IOException {
     URI u;
 
     wco.write(_Bibliography.TECHREPORT, 0, _Bibliography.TECHREPORT.length);
@@ -1120,7 +1120,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1163,7 +1163,7 @@ final class _Bibliography {
 
   /**
    * Write a record
-   * 
+   *
    * @param id
    *          the id
    * @param ref

@@ -18,7 +18,7 @@ public final class FloatParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code FloatParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException
@@ -50,32 +50,32 @@ public final class FloatParser extends Parser<java.lang.Number> {
 
     check: {
       find: {
-        if (value instanceof java.lang.Number) {
-          ret = ((java.lang.Number) value);
-          number = ret.floatValue();
-          break find;
-        }
-
-        if (value instanceof String) {
-          number = TextUtils.parseFloat((String) value);
-        } else {
-          break check;
-        }
-
-        ret = java.lang.Float.valueOf(number);
-      } // end of find
-
-      if (number < this.m_min) {
-        throw new IllegalArgumentException((((Parser.MBLOET + //
-            this.m_min) + Parser.BI) + number) + '.'); //
+      if (value instanceof java.lang.Number) {
+        ret = ((java.lang.Number) value);
+        number = ret.floatValue();
+        break find;
       }
 
-      if (number > this.m_max) {
-        throw new IllegalArgumentException((((Parser.MBSOET + //
-            this.m_max) + Parser.BI) + number) + '.'); //
+      if (value instanceof String) {
+        number = TextUtils.parseFloat((String) value);
+      } else {
+        break check;
       }
 
-      return ret;
+      ret = java.lang.Float.valueOf(number);
+    } // end of find
+
+    if (number < this.m_min) {
+      throw new IllegalArgumentException((((Parser.MBLOET + //
+          this.m_min) + Parser.BI) + number) + '.'); //
+    }
+
+    if (number > this.m_max) {
+      throw new IllegalArgumentException((((Parser.MBSOET + //
+          this.m_max) + Parser.BI) + number) + '.'); //
+    }
+
+    return ret;
     } // end of check
 
     throw new _ClassError(value.getClass(), java.lang.Float.class);

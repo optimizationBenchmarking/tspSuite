@@ -128,74 +128,74 @@ public class XHTMLDocument extends Document {
 
   /** the xml header start: charset must follow */
   private static final char[] XML_HEADER_BEGIN = { '<', '?', 'x', 'm',
-      'l', ' ', 'v', 'e', 'r', 's', 'i', 'o', 'n', '=', '"', '1', '.',
-      '0', '"', ' ', 'e', 'n', 'c', 'o', 'd', 'i', 'n', 'g', '=', '"' };
+    'l', ' ', 'v', 'e', 'r', 's', 'i', 'o', 'n', '=', '"', '1', '.',
+    '0', '"', ' ', 'e', 'n', 'c', 'o', 'd', 'i', 'n', 'g', '=', '"' };
   /** the xml header end: newline must follow */
   private static final char[] XML_HEADER_END = { '"', '?', '>' };
 
   /** the doc type */
   private static final char[] DOC_TYPE = { '<', '!', 'D', 'O', 'C', 'T',
-      'Y', 'P', 'E', ' ', 'h', 't', 'm', 'l', ' ', 'P', 'U', 'B', 'L',
-      'I', 'C', ' ', '"', '-', '/', '/', 'W', '3', 'C', '/', '/', 'D',
-      'T', 'D', ' ', 'X', 'H', 'T', 'M', 'L', ' ', '1', '.', '0', ' ',
-      'S', 't', 'r', 'i', 'c', 't', '/', '/', 'E', 'N', '"', ' ', '"',
-      'h', 't', 't', 'p', ':', '/', '/', 'w', 'w', 'w', '.', 'w', '3',
-      '.', 'o', 'r', 'g', '/', 'T', 'R', '/', 'x', 'h', 't', 'm', 'l',
-      '1', '/', 'D', 'T', 'D', '/', 'x', 'h', 't', 'm', 'l', '1', '-',
-      's', 't', 'r', 'i', 'c', 't', '.', 'd', 't', 'd', '"', '>' };
+    'Y', 'P', 'E', ' ', 'h', 't', 'm', 'l', ' ', 'P', 'U', 'B', 'L',
+    'I', 'C', ' ', '"', '-', '/', '/', 'W', '3', 'C', '/', '/', 'D',
+    'T', 'D', ' ', 'X', 'H', 'T', 'M', 'L', ' ', '1', '.', '0', ' ',
+    'S', 't', 'r', 'i', 'c', 't', '/', '/', 'E', 'N', '"', ' ', '"',
+    'h', 't', 't', 'p', ':', '/', '/', 'w', 'w', 'w', '.', 'w', '3',
+    '.', 'o', 'r', 'g', '/', 'T', 'R', '/', 'x', 'h', 't', 'm', 'l',
+    '1', '/', 'D', 'T', 'D', '/', 'x', 'h', 't', 'm', 'l', '1', '-',
+    's', 't', 'r', 'i', 'c', 't', '.', 'd', 't', 'd', '"', '>' };
 
   /** the doc type, charset must follow */
   private static final char[] HTML_BEGIN = { '<', 'h', 't', 'm', 'l', ' ',
-      'x', 'm', 'l', 'n', 's', '=', '"', 'h', 't', 't', 'p', ':', '/',
-      '/', 'w', 'w', 'w', '.', 'w', '3', '.', 'o', 'r', 'g', '/', '1',
-      '9', '9', '9', '/', 'x', 'h', 't', 'm', 'l', '"', ' ', 'l', 'a',
-      'n', 'g', '=', '"', 'e', 'n', '"', ' ', 'x', 'm', 'l', ':', 'l',
-      'a', 'n', 'g', '=', '"', 'e', 'n', '"', '>' };
+    'x', 'm', 'l', 'n', 's', '=', '"', 'h', 't', 't', 'p', ':', '/',
+    '/', 'w', 'w', 'w', '.', 'w', '3', '.', 'o', 'r', 'g', '/', '1',
+    '9', '9', '9', '/', 'x', 'h', 't', 'm', 'l', '"', ' ', 'l', 'a',
+    'n', 'g', '=', '"', 'e', 'n', '"', ' ', 'x', 'm', 'l', ':', 'l',
+    'a', 'n', 'g', '=', '"', 'e', 'n', '"', '>' };
   /** the head begin */
   private static final char[] HEAD_BEGIN = { '<', 'h', 'e', 'a', 'd', '>' };
 
   /** the head begin */
   private static final char[] META_CHARSET_BEGIN = { '<', 'm', 'e', 't',
-      'a', ' ', 'h', 't', 't', 'p', '-', 'e', 'q', 'u', 'i', 'v', '=',
-      '"', 'c', 'o', 'n', 't', 'e', 'n', 't', '-', 't', 'y', 'p', 'e',
-      '"', ' ', 'c', 'o', 'n', 't', 'e', 'n', 't', '=', '"', 'a', 'p',
-      'p', 'l', 'i', 'c', 'a', 't', 'i', 'o', 'n', '/', 'x', 'h', 't',
-      'm', 'l', '+', 'x', 'm', 'l', ';', ' ', 'c', 'h', 'a', 'r', 's',
-      'e', 't', '=' };
+    'a', ' ', 'h', 't', 't', 'p', '-', 'e', 'q', 'u', 'i', 'v', '=',
+    '"', 'c', 'o', 'n', 't', 'e', 'n', 't', '-', 't', 'y', 'p', 'e',
+    '"', ' ', 'c', 'o', 'n', 't', 'e', 'n', 't', '=', '"', 'a', 'p',
+    'p', 'l', 'i', 'c', 'a', 't', 'i', 'o', 'n', '/', 'x', 'h', 't',
+    'm', 'l', '+', 'x', 'm', 'l', ';', ' ', 'c', 'h', 'a', 'r', 's',
+    'e', 't', '=' };
 
   /** the attributed tag end */
   static final char[] ATTRIB_TAG_BEGIN_END = { '"', '>' };
 
   /** the meta style type */
   private static final char[] META_STYLE_TYPE = { '<', 'm', 'e', 't', 'a',
-      ' ', 'h', 't', 't', 'p', '-', 'e', 'q', 'u', 'i', 'v', '=', '"',
-      'c', 'o', 'n', 't', 'e', 'n', 't', '-', 's', 't', 'y', 'l', 'e',
-      '-', 't', 'y', 'p', 'e', '"', ' ', 'c', 'o', 'n', 't', 'e', 'n',
-      't', '=', '"', 't', 'e', 'x', 't', '/', 'c', 's', 's', '"', ' ',
-      '/', '>' };
+    ' ', 'h', 't', 't', 'p', '-', 'e', 'q', 'u', 'i', 'v', '=', '"',
+    'c', 'o', 'n', 't', 'e', 'n', 't', '-', 's', 't', 'y', 'l', 'e',
+    '-', 't', 'y', 'p', 'e', '"', ' ', 'c', 'o', 'n', 't', 'e', 'n',
+    't', '=', '"', 't', 'e', 'x', 't', '/', 'c', 's', 's', '"', ' ',
+    '/', '>' };
 
   /** the default css link */
   private static final char[] DEFAULT_CSS_LINK = { '<', 'l', 'i', 'n',
-      'k', ' ', 'r', 'e', 'l', '=', '"', 's', 't', 'y', 'l', 'e', 's',
-      'h', 'e', 'e', 't', '"', ' ', 'm', 'e', 'd', 'i', 'a', '=', '"',
-      'a', 'l', 'l', '"', ' ', 'h', 'r', 'e', 'f', '=', '"' };
+    'k', ' ', 'r', 'e', 'l', '=', '"', 's', 't', 'y', 'l', 'e', 's',
+    'h', 'e', 'e', 't', '"', ' ', 'm', 'e', 'd', 'i', 'a', '=', '"',
+    'a', 'l', 'l', '"', ' ', 'h', 'r', 'e', 'f', '=', '"' };
   /** the print css link */
   private static final char[] PRINT_CSS_LINK = { '<', 'l', 'i', 'n', 'k',
-      ' ', 'r', 'e', 'l', '=', '"', 's', 't', 'y', 'l', 'e', 's', 'h',
-      'e', 'e', 't', '"', ' ', 'm', 'e', 'd', 'i', 'a', '=', '"', 'p',
-      'r', 'i', 'n', 't', '"', ' ', 'h', 'r', 'e', 'f', '=', '"', };
+    ' ', 'r', 'e', 'l', '=', '"', 's', 't', 'y', 'l', 'e', 's', 'h',
+    'e', 'e', 't', '"', ' ', 'm', 'e', 'd', 'i', 'a', '=', '"', 'p',
+    'r', 'i', 'n', 't', '"', ' ', 'h', 'r', 'e', 'f', '=', '"', };
 
   /** the header end */
   private static final char[] HEADER_END = { '<', '/', 'h', 'e', 'a', 'd',
-      '>' };
+  '>' };
   /** the body begin */
   private static final char[] BODY_BEGIN = { '<', 'b', 'o', 'd', 'y', '>' };
   /** the body end */
   private static final char[] BODY_END = { '<', '/', 'b', 'o', 'd', 'y',
-      '>' };
+  '>' };
   /** the html end */
   private static final char[] HTML_END = { '<', '/', 'h', 't', 'm', 'l',
-      '>' };
+  '>' };
 
   /** the infinity char input */
   private static final CharInput INFINITY = new CharCharInput('\u221e');
@@ -209,215 +209,215 @@ public class XHTMLDocument extends Document {
   static final char[] NBSP = { '&', 'n', 'b', 's', 'p', ';' };
   /** the br */
   private static final char[] BR = { '<', 'b', 'r', '/', '>', '&', 'n',
-      'b', 's', 'p', ';', '&', 'n', 'b', 's', 'p', ';', '&', 'n', 'b',
-      's', 'p', ';', '&', 'n', 'b', 's', 'p', ';' };
+    'b', 's', 'p', ';', '&', 'n', 'b', 's', 'p', ';', '&', 'n', 'b',
+    's', 'p', ';', '&', 'n', 'b', 's', 'p', ';' };
   /** the title start */
   private static final char[] TITLE_BEGIN = { '<', 't', 'i', 't', 'l',
-      'e', '>' };
+    'e', '>' };
   /** the title end */
   private static final char[] TITLE_END = { '<', '/', 't', 'i', 't', 'l',
-      'e', '>' };
+    'e', '>' };
   /** the label start */
   private static final char[] LABEL_BEGIN = { '<', 'a', ' ', 'i', 'd',
-      '=', '"', };
+    '=', '"', };
   /** the label end */
   private static final char[] LABEL_END = {// avoid empty tags
-  '"', '>', '<', '/', 'a', '>' };
+    '"', '>', '<', '/', 'a', '>' };
 
   /** the sequence starts */
   private static final char[][] SEQUENCE_BEGIN = { EmptyUtils.EMPTY_CHARS,// COMMA
-      EmptyUtils.EMPTY_CHARS,// AND
-      EmptyUtils.EMPTY_CHARS,// OR
-      { 'e', 'i', 't', 'h', 'e', 'r', ' ' },// xor
-      { 'n', 'e', 'i', 't', 'h', 'e', 'r', ' ' },// nor
-      EmptyUtils.EMPTY_CHARS,// to
+    EmptyUtils.EMPTY_CHARS,// AND
+    EmptyUtils.EMPTY_CHARS,// OR
+    { 'e', 'i', 't', 'h', 'e', 'r', ' ' },// xor
+    { 'n', 'e', 'i', 't', 'h', 'e', 'r', ' ' },// nor
+    EmptyUtils.EMPTY_CHARS,// to
   };
 
   /** the single-element sequence begin */
   private static final char[][] SEQUENCE_SINGLE = {
-      EmptyUtils.EMPTY_CHARS,// COMMA
-      EmptyUtils.EMPTY_CHARS,// AND
-      EmptyUtils.EMPTY_CHARS,// OR
-      EmptyUtils.EMPTY_CHARS,// OR
-      { 'n', 'o', 't', ' ' },// nor
-      EmptyUtils.EMPTY_CHARS,// to
+    EmptyUtils.EMPTY_CHARS,// COMMA
+    EmptyUtils.EMPTY_CHARS,// AND
+    EmptyUtils.EMPTY_CHARS,// OR
+    EmptyUtils.EMPTY_CHARS,// OR
+    { 'n', 'o', 't', ' ' },// nor
+    EmptyUtils.EMPTY_CHARS,// to
   };
 
   /** the sequence starts */
   static final char[] SEQUENCE_SMALL_SEP = { ',', ' ' };
   /** the sequence starts */
   private static final char[][] SEQUENCE_BIG_SEP = {
-      EmptyUtils.EMPTY_CHARS,// COMMA
-      { 'a', 'n', 'd' },// AND
-      { 'o', 'r' },// OR
-      { 'o', 'r' },// xor
-      { 'n', 'o', 'r' },// nor
-      { 't', 'o' },// to
+    EmptyUtils.EMPTY_CHARS,// COMMA
+    { 'a', 'n', 'd' },// AND
+    { 'o', 'r' },// OR
+    { 'o', 'r' },// xor
+    { 'n', 'o', 'r' },// nor
+    { 't', 'o' },// to
   };
 
   /** the label above char */
   private static final char[] REF_ABOVE = //
-  XMLCharTransformer.INSTANCE.transform("\u25b2").toCharArray(); //$NON-NLS-1$
+      XMLCharTransformer.INSTANCE.transform("\u25b2").toCharArray(); //$NON-NLS-1$
   /** the label above char */
   private static final char[] REF_BELOW = //
-  XMLCharTransformer.INSTANCE.transform("\u25bc").toCharArray(); //$NON-NLS-1$ 
+      XMLCharTransformer.INSTANCE.transform("\u25bc").toCharArray(); //$NON-NLS-1$
 
   /** the 1st part of a reference */
   private static final char[] REF_1 = { '<', 'a', ' ', 'h', 'r', 'e', 'f',
-      '=', '"', '#' };
+    '=', '"', '#' };
 
   /** the 3rd part of a reference */
   static final char[] REF_3 = { '<', '/', 'a', '>' };
 
   /** the date */
   private static final char[] META_DATE = { '<', 'm', 'e', 't', 'a', ' ',
-      'n', 'a', 'm', 'e', '=', '"', 'd', 'a', 't', 'e', '"', ' ', 'c',
-      'o', 'n', 't', 'e', 'n', 't', '=', '"' };
+    'n', 'a', 'm', 'e', '=', '"', 'd', 'a', 't', 'e', '"', ' ', 'c',
+    'o', 'n', 't', 'e', 'n', 't', '=', '"' };
   /** the author */
   private static final char[] META_AUTHOR = { '<', 'm', 'e', 't', 'a',
-      ' ', 'n', 'a', 'm', 'e', '=', '"', 'a', 'u', 't', 'h', 'o', 'r',
-      '"', ' ', 'c', 'o', 'n', 't', 'e', 'n', 't', '=', '"' };
+    ' ', 'n', 'a', 'm', 'e', '=', '"', 'a', 'u', 't', 'h', 'o', 'r',
+    '"', ' ', 'c', 'o', 'n', 't', 'e', 'n', 't', '=', '"' };
 
   /** the head line start */
   private static final char[][] HEADLINE_BEGIN = {
-      { '<', 'h', '1', '>' },
-      { '<', 'h', '2', '>' },
-      { '<', 'h', '3', '>' },
-      { '<', 'h', '4', '>' },
-      { '<', 'h', '5', '>' },
-      { '<', 'h', '6', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          'h', '7', '"', '>' } };
+    { '<', 'h', '1', '>' },
+    { '<', 'h', '2', '>' },
+    { '<', 'h', '3', '>' },
+    { '<', 'h', '4', '>' },
+    { '<', 'h', '5', '>' },
+    { '<', 'h', '6', '>' },
+    { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+      'h', '7', '"', '>' } };
 
   /** the span end */
   static final char[] SPAN_END = { '<', '/', 's', 'p', 'a', 'n', '>', };
 
   /** the head line end */
   private static final char[][] HEADLINE_END = {
-      { '<', '/', 'h', '1', '>' }, { '<', '/', 'h', '2', '>' },
-      { '<', '/', 'h', '3', '>' }, { '<', '/', 'h', '4', '>' },
-      { '<', '/', 'h', '5', '>' }, { '<', '/', 'h', '6', '>' },
-      XHTMLDocument.SPAN_END };
+    { '<', '/', 'h', '1', '>' }, { '<', '/', 'h', '2', '>' },
+    { '<', '/', 'h', '3', '>' }, { '<', '/', 'h', '4', '>' },
+    { '<', '/', 'h', '5', '>' }, { '<', '/', 'h', '6', '>' },
+    XHTMLDocument.SPAN_END };
 
   /** the abstract start */
   private static final char[] ABSTRACT_DIV_BEGIN = { '<', 'd', 'i', 'v',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'a', 'b', 's', 't', 'r',
-      'a', 'c', 't', '"', '>', '<', 's', 'p', 'a', 'n', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'a', 'b', 's', 't', 'r', 'a', 'c', 't',
-      'T', 'i', 't', 'l', 'e', '"', '>', 'A', 'b', 's', 't', 'r', 'a',
-      'c', 't', '.', '<', '/', 's', 'p', 'a', 'n', '>', '&', 'n', 'b',
-      's', 'p', ';' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'a', 'b', 's', 't', 'r',
+    'a', 'c', 't', '"', '>', '<', 's', 'p', 'a', 'n', ' ', 'c', 'l',
+    'a', 's', 's', '=', '"', 'a', 'b', 's', 't', 'r', 'a', 'c', 't',
+    'T', 'i', 't', 'l', 'e', '"', '>', 'A', 'b', 's', 't', 'r', 'a',
+    'c', 't', '.', '<', '/', 's', 'p', 'a', 'n', '>', '&', 'n', 'b',
+    's', 'p', ';' };
 
   /** the div end */
   private static final char[] DIV_END = { '<', '/', 'd', 'i', 'v', '>' };
 
   /** the span for numbers */
   private static final char[] SPAN_NUMBER = { '<', 's', 'p', 'a', 'n',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'n', 'u', 'm', 'b', 'e',
-      'r', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'n', 'u', 'm', 'b', 'e',
+    'r', '"', '>' };
 
   /** the span end */
   private static final char[] SPAN_END_NBSP = { '<', '/', 's', 'p', 'a',
-      'n', '>', '&', 'n', 'b', 's', 'p', ';' };
+    'n', '>', '&', 'n', 'b', 's', 'p', ';' };
 
   /** the authors start */
   private static final char[] AUTHORS_DIV_BEGIN = { '<', 'd', 'i', 'v',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'a', 'u', 't', 'h', 'o',
-      'r', 's', '"', '>', 'b', 'y', '&', 'n', 'b', 's', 'p', ';' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'a', 'u', 't', 'h', 'o',
+    'r', 's', '"', '>', 'b', 'y', '&', 'n', 'b', 's', 'p', ';' };
   /** the date start */
   private static final char[] DATE_DIV_BEGIN = { '<', 'd', 'i', 'v', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'd', 'a', 't', 'e', '"', '>',
-      'o', 'n', '&', 'n', 'b', 's', 'p', ';' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'd', 'a', 't', 'e', '"', '>',
+    'o', 'n', '&', 'n', 'b', 's', 'p', ';' };
   /** the start of the section div */
   private static final char[] SECTION_DIV_BEGIN = { '<', 'd', 'i', 'v',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't', 'i',
-      'o', 'n', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't', 'i',
+    'o', 'n', '"', '>' };
   /** the start of the section head div */
   private static final char[] SECTION_HEAD_DIV_BEGIN = { '<', 'd', 'i',
-      'v', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't',
-      'i', 'o', 'n', 'H', 'e', 'a', 'd', '"', '>' };
+    'v', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't',
+    'i', 'o', 'n', 'H', 'e', 'a', 'd', '"', '>' };
   /** the start of the section body div */
   private static final char[] SECTION_BODY_DIV_BEGIN = { '<', 'd', 'i',
-      'v', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't',
-      'i', 'o', 'n', 'B', 'o', 'd', 'y', '"', '>' };
+    'v', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'e', 'c', 't',
+    'i', 'o', 'n', 'B', 'o', 'd', 'y', '"', '>' };
 
   /** the start of the float */
   private static final char[] FIGURE_DIV_BEGIN = { '<', 'd', 'i', 'v',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r',
-      'e', '"', '>', };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r',
+    'e', '"', '>', };
 
   /** the start of the float */
   private static final char[] FIGURE_TABLE_BEGIN = { '<', 't', 'a', 'b',
-      'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g',
-      'u', 'r', 'e', '"', '>' };
+    'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g',
+    'u', 'r', 'e', '"', '>' };
 
   /** the start of the float tr caption */
   private static final char[] FIGURE_TR_CAPTION_BEGIN = { '<', 't', 'r',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r',
-      'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r',
+    'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
   /** the start of the float tr body */
   private static final char[] FIGURE_TR_BODY_BEGIN = { '<', 't', 'r', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
-      'B', 'o', 'd', 'y', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
+    'B', 'o', 'd', 'y', '"', '>' };
   /** the start of the float td */
   private static final char[] FIGURE_TD_CAPTION_SPAN_BEGIN = { '<', 't',
-      'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u',
-      'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>', '<', 's',
-      'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'c', 'a',
-      'p', 't', 'i', 'o', 'n', 'T', 'i', 't', 'l', 'e', '"', '>', 'F',
-      'i', 'g', '.', '&', 'n', 'b', 's', 'p', ';' };
+    'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u',
+    'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>', '<', 's',
+    'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'c', 'a',
+    'p', 't', 'i', 'o', 'n', 'T', 'i', 't', 'l', 'e', '"', '>', 'F',
+    'i', 'g', '.', '&', 'n', 'b', 's', 'p', ';' };
   /** the start of the float body td */
   private static final char[] FIGURE_TD_BODY_BEGIN = { '<', 't', 'd', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
-      'B', 'o', 'd', 'y', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
+    'B', 'o', 'd', 'y', '"', '>' };
 
   /** the start of the float */
   private static final char[] SUBFIGURE_TABLE_BEGIN = { '<', 't', 'a',
-      'b', 'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u',
-      'b', 'f', 'i', 'g', 'u', 'r', 'e', '"', '>' };
+    'b', 'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u',
+    'b', 'f', 'i', 'g', 'u', 'r', 'e', '"', '>' };
 
   /** the start of the float tr caption */
   private static final char[] SUBFIGURE_TR_CAPTION_BEGIN = { '<', 't',
-      'r', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f',
-      'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
+    'r', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f',
+    'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
   /** the start of the float tr body */
   private static final char[] SUBFIGURE_TR_BODY_BEGIN = { '<', 't', 'r',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
-      'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
+    'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '>' };
   /** the start of the float td */
   private static final char[] SUBFIGURE_TD_CAPTION_SPAN_BEGIN = { '<',
-      't', 'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b',
-      'f', 'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n',
-      '"', '>', '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's',
-      '=', '"', 'c', 'a', 'p', 't', 'i', 'o', 'n', 'T', 'i', 't', 'l',
-      'e', '"', '>', 'F', 'i', 'g', '.', '&', 'n', 'b', 's', 'p', ';' };
+    't', 'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b',
+    'f', 'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n',
+    '"', '>', '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's',
+    '=', '"', 'c', 'a', 'p', 't', 'i', 'o', 'n', 'T', 'i', 't', 'l',
+    'e', '"', '>', 'F', 'i', 'g', '.', '&', 'n', 'b', 's', 'p', ';' };
   /** the start of the float td */
   private static final char[] SUBFIGURE_TD_CAPTION_EMPTY = { '<', 't',
-      'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f',
-      'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"',
-      '/', '>' };
+    'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f',
+    'i', 'g', 'u', 'r', 'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"',
+    '/', '>' };
   /** the start of the float body td */
   private static final char[] SUBFIGURE_TD_BODY_BEGIN = { '<', 't', 'd',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
-      'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
+    'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '>' };
   /** the start of the float body td */
   private static final char[] SUBFIGURE_TD_BODY_EMPTY = { '<', 't', 'd',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
-      'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '/', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 's', 'u', 'b', 'f', 'i',
+    'g', 'u', 'r', 'e', 'B', 'o', 'd', 'y', '"', '/', '>' };
 
   /** the start figure image: uri follows */
   private static final char[] FIGURE_IMG_URI = { '<', 'i', 'm', 'g', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
-      '"', ' ', 's', 'r', 'c', '=', '"' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'f', 'i', 'g', 'u', 'r', 'e',
+    '"', ' ', 's', 'r', 'c', '=', '"' };
   /** the start figure image width: width follows */
   private static final char[] FIGURE_IMG_WIDTH = { '"', ' ', 's', 't',
-      'y', 'l', 'e', '=', '"', 'w', 'i', 'd', 't', 'h', ':', };
+    'y', 'l', 'e', '=', '"', 'w', 'i', 'd', 't', 'h', ':', };
   /** the start figure image height: height will follow */
   private static final char[] FIGURE_IMG_HEIGHT = { 'm', 'm', ';', 'h',
-      'e', 'i', 'g', 'h', 't', ':', };
+    'e', 'i', 'g', 'h', 't', ':', };
   /** the start figure image: alt will follow */
   private static final char[] FIGURE_IMG_ALT = { 'm', 'm', '"', ' ', 'a',
-      'l', 't', '=', '"' };
+    'l', 't', '=', '"' };
 
   /** the end of the table */
   static final char[] TABLE_END = { '<', '/', 't', 'a', 'b', 'l', 'e', '>' };
@@ -441,79 +441,79 @@ public class XHTMLDocument extends Document {
 
   /** the start of the table */
   private static final char[] TABLE_DIV_BEGIN = { '<', 'd', 'i', 'v', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', '"',
-      '>', };
+    'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', '"',
+    '>', };
 
   /** the start of the table */
   private static final char[] TABLE_TABLE_BEGIN = { '<', 't', 'a', 'b',
-      'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b',
-      'l', 'e', '"', '>' };
+    'l', 'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b',
+    'l', 'e', '"', '>' };
 
   /** the start of the float tr caption */
   private static final char[] TABLE_TR_CAPTION_BEGIN = { '<', 't', 'r',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e',
-      'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e',
+    'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>' };
   /** the start of the float tr body */
   private static final char[] TABLE_TR_BODY_BEGIN = { '<', 't', 'r', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', 'B',
-      'o', 'd', 'y', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', 'B',
+    'o', 'd', 'y', '"', '>' };
   /** the start of the float td */
   private static final char[] TABLE_TD_CAPTION_SPAN_BEGIN = { '<', 't',
-      'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l',
-      'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>', '<', 's', 'p',
-      'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'c', 'a', 'p',
-      't', 'i', 'o', 'n', 'T', 'i', 't', 'l', 'e', '"', '>', 'T', 'b',
-      'l', '.', '&', 'n', 'b', 's', 'p', ';' };
+    'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l',
+    'e', 'C', 'a', 'p', 't', 'i', 'o', 'n', '"', '>', '<', 's', 'p',
+    'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'c', 'a', 'p',
+    't', 'i', 'o', 'n', 'T', 'i', 't', 'l', 'e', '"', '>', 'T', 'b',
+    'l', '.', '&', 'n', 'b', 's', 'p', ';' };
   /** the start of the float body td */
   private static final char[] TABLE_TD_BODY_BEGIN = { '<', 't', 'd', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', 'B',
-      'o', 'd', 'y', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'l', 'e', 'B',
+    'o', 'd', 'y', '"', '>' };
 
   /** the start of table */
   private static final char[] TAB_TABLE_BEGIN = { '<', 't', 'a', 'b', 'l',
-      'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
+    'e', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
   /** the start of the table head */
   private static final char[] TAB_HEAD_BEGIN = { '<', 't', 'h', 'e', 'a',
-      'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
+    'd', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
   /** the end of the table head */
   private static final char[] TAB_HEAD_END = { '<', '/', 't', 'h', 'e',
-      'a', 'd', '>' };
+    'a', 'd', '>' };
   /** the start of table body */
   private static final char[] TAB_BODY_BEGIN = { '<', 't', 'b', 'o', 'd',
-      'y', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
+    'y', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
   /** the end of the table body */
   private static final char[] TAB_BODY_END = { '<', '/', 't', 'b', 'o',
-      'd', 'y', '>' };
+    'd', 'y', '>' };
 
   /** the start of table foot */
   private static final char[] TAB_FOOT_BEGIN = { '<', 't', 'f', 'o', 'o',
-      't', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
+    't', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', '"', '>' };
   /** the end of the table foot */
   private static final char[] TAB_FOOT_END = { '<', '/', 't', 'f', 'o',
-      'o', 't', '>' };
+    'o', 't', '>' };
 
   /** the start of a normal tr */
   private static final char[] TAB_TR_H_BEGIN = { '<', 't', 'r', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'H', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'H', '"', '>' };
 
   /** the start of a normal tr */
   private static final char[] TAB_TR_F_BEGIN = { '<', 't', 'r', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'F', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'F', '"', '>' };
 
   /** the start of an even tr */
   private static final char[] TAB_TR_BE_BEGIN = { '<', 't', 'r', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'E', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'E', '"', '>' };
   /** the start of an odd tr */
   private static final char[] TAB_TR_BO_BEGIN = { '<', 't', 'r', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'O', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'O', '"', '>' };
   /** the start of an even tr */
   private static final char[] TAB_TR_BEHR_BEGIN = { '<', 't', 'r', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'E', 'H',
-      'R', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'E', 'H',
+    'R', '"', '>' };
   /** the start of an odd tr */
   private static final char[] TAB_TR_BOHR_BEGIN = { '<', 't', 'r', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'O', 'H',
-      'R', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 't', 'a', 'b', 'B', 'O', 'H',
+    'R', '"', '>' };
   /** the start of the TH */
   private static final char[] TAB_TH_BEGIN = { '<', 't', 'h' };
   /** the end of the TH */
@@ -522,13 +522,13 @@ public class XHTMLDocument extends Document {
   private static final char[] TAB_TD_BEGIN = { '<', 't', 'd' };
   /** the class c */
   private static final char[] TAB_CLASS_C = { ' ', 'c', 'l', 'a', 's',
-      's', '=', '"', 't', 'a', 'b', 'C', '"', '>' };
+    's', '=', '"', 't', 'a', 'b', 'C', '"', '>' };
   /** the class l */
   private static final char[] TAB_CLASS_L = { ' ', 'c', 'l', 'a', 's',
-      's', '=', '"', 't', 'a', 'b', 'L', '"', '>' };
+    's', '=', '"', 't', 'a', 'b', 'L', '"', '>' };
   /** the class r */
   private static final char[] TAB_CLASS_R = { ' ', 'c', 'l', 'a', 's',
-      's', '=', '"', 't', 'a', 'b', 'R', '"', '>' };
+    's', '=', '"', 't', 'a', 'b', 'R', '"', '>' };
 
   /** the greater char */
   private static final char[] GREATER = { '>' };
@@ -539,14 +539,14 @@ public class XHTMLDocument extends Document {
   private static final char[] SUB_END = { '<', '/', 's', 'u', 'b', '>' };
   /** the sub math begin */
   private static final char[] SUB_MATH_BEGIN = { '<', 's', 'u', 'b', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
   /** the sup begin */
   private static final char[] SUP_BEGIN = { '<', 's', 'u', 'p', '>' };
   /** the sup end */
   private static final char[] SUP_END = { '<', '/', 's', 'u', 'p', '>' };
   /** the sup math begin */
   private static final char[] SUP_MATH_BEGIN = { '<', 's', 'u', 'p', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
   /** the emphasize begin */
   private static final char[] EM_BEGIN = { '<', 'e', 'm', '>' };
   /** the emphasize end */
@@ -554,74 +554,74 @@ public class XHTMLDocument extends Document {
 
   /** the equation div begin */
   private static final char[] EQU_DIV = { '<', 'd', 'i', 'v', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o',
-      'n', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o',
+    'n', '"', '>' };
   /** the equation table begin */
   private static final char[] EQU_TAB = { '<', 't', 'a', 'b', 'l', 'e',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't',
-      'i', 'o', 'n', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't',
+    'i', 'o', 'n', '"', '>' };
   /** the equation tr begin */
   private static final char[] EQU_TR = { '<', 't', 'r', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n',
-      '"', '>' };
+    'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n',
+    '"', '>' };
   /** the equation td begin */
   private static final char[] EQU_BODY_TD = { '<', 't', 'd', ' ', 'c',
-      'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o',
-      'n', 'B', 'o', 'd', 'y', '"', '>' };
+    'l', 'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o',
+    'n', 'B', 'o', 'd', 'y', '"', '>' };
   /** the equation td begin */
   private static final char[] EQU_NR_TD = { '<', 't', 'd', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n',
-      'N', 'u', 'm', 'b', 'e', 'r', '"', '>' };
+    'a', 's', 's', '=', '"', 'e', 'q', 'u', 'a', 't', 'i', 'o', 'n',
+    'N', 'u', 'm', 'b', 'e', 'r', '"', '>' };
 
   /** the math span begin */
   private static final char[] MATH_DIV_BEGIN = { '<', 'd', 'i', 'v', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', '"', '>' };
 
   /** the normal span begin */
   private static final char[] NORMAL_SPAN_BEGIN = { '<', 's', 'p', 'a',
-      'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'n', 'o', 'r', 'm',
-      'a', 'l', '"', '>' };
+    'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'n', 'o', 'r', 'm',
+    'a', 'l', '"', '>' };
 
   /** the math name span begin */
   private static final char[][] NAME_SPAN_BEGIN = {
+    { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+      's', 'c', 'a', 'l', 'a', 'r', '"', '>' },
       { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          's', 'c', 'a', 'l', 'a', 'r', '"', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          'v', 'e', 'c', 't', 'o', 'r', '"', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+        'v', 'e', 'c', 't', 'o', 'r', '"', '>' },
+        { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
           'm', 'a', 't', 'r', 'i', 'x', '"', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          's', 'e', 't', '"', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          's', 'p', 'a', 'c', 'e', '"', '>' },
-      { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
-          't', 'u', 'p', 'l', 'e', '"', '>' }, };
+          { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+            's', 'e', 't', '"', '>' },
+            { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+              's', 'p', 'a', 'c', 'e', '"', '>' },
+              { '<', 's', 'p', 'a', 'n', ' ', 'c', 'l', 'a', 's', 's', '=', '"',
+                't', 'u', 'p', 'l', 'e', '"', '>' }, };
 
   /** the reference table */
   private static final char[] REF_TAB = { '<', 't', 'a', 'b', 'l', 'e',
-      ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
+    ' ', 'c', 'l', 'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
   /** the reference table tr */
   private static final char[] REF_TR = { '<', 't', 'r', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
+    'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
   /** the reference table idx td */
   private static final char[] REF_ID_TD = { '<', 't', 'd', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'r', 'e', 'f', 'I', 'd', '"', '>' };
+    'a', 's', 's', '=', '"', 'r', 'e', 'f', 'I', 'd', '"', '>' };
   /** the reference table text td */
   private static final char[] REF_TXT_TD = { '<', 't', 'd', ' ', 'c', 'l',
-      'a', 's', 's', '=', '"', 'r', 'e', 'f', 'T', 'x', 't', '"', '>' };
+    'a', 's', 's', '=', '"', 'r', 'e', 'f', 'T', 'x', 't', '"', '>' };
 
   /** the reference id */
   private static final char[] A_REF_ID = { '<', 'a', ' ', 'c', 'l', 'a',
-      's', 's', '=', '"', 'r', 'e', 'f', 'I', 'd', '"', ' ', 'i', 'd',
-      '=', '"' };
+    's', 's', '=', '"', 'r', 'e', 'f', 'I', 'd', '"', ' ', 'i', 'd',
+    '=', '"' };
 
   /** the reference href id */
   private static final char[] A_REF = { '<', 'a', ' ', 'c', 'l', 'a', 's',
-      's', '=', '"', 'r', 'e', 'f', '"', ' ', 'h', 'r', 'e', 'f', '=',
-      '"', '#' };
+    's', '=', '"', 'r', 'e', 'f', '"', ' ', 'h', 'r', 'e', 'f', '=',
+    '"', '#' };
   /** the reference span id */
   private static final char[] SPAN_REF = { '<', 's', 'p', 'a', 'n', ' ',
-      'c', 'l', 'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
+    'c', 'l', 'a', 's', 's', '=', '"', 'r', 'e', 'f', '"', '>' };
 
   /** the output stream */
   private final OutputStream m_os;
@@ -678,7 +678,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @param file
@@ -711,7 +711,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * pop a char array writer
-   * 
+   *
    * @return the contents written to the writer, {@code null} if empty
    */
   private final char[] __popCharArrayWriter() {
@@ -725,7 +725,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * write a conditional line feed
-   * 
+   *
    * @throws IOException
    *           if i/o fails
    */
@@ -741,7 +741,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * change the depth
-   * 
+   *
    * @param add
    *          the adder
    */
@@ -840,7 +840,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void titleBegin(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.titleBegin(h);
     this.__pushCharArrayWriter();
   }
@@ -848,7 +848,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void titleEnd(final Title h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     try {
       this.m_title = this.__popCharArrayWriter();
@@ -886,7 +886,7 @@ public class XHTMLDocument extends Document {
   protected void writeSequence(final Sequence sequence,
       final ESequenceType type,
       final boolean connectLastElementWithNonBreakableSpace)
-      throws IOException {
+          throws IOException {
     final int idx;
     final int len, stop;
     char[] chars;
@@ -950,7 +950,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * write a single reference
-   * 
+   *
    * @param label
    *          the reference
    * @throws IOException
@@ -1004,7 +1004,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void headerBegin(final Header h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final String encStr, date;
     EEncoding enc;
 
@@ -1077,7 +1077,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void headerEnd(final Header h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__changeDepth(-1);
       this.__feed();
@@ -1091,7 +1091,7 @@ public class XHTMLDocument extends Document {
   /**
    * Get the date string for printing in the document header, or
    * {@code null} if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForHeader() {
@@ -1101,7 +1101,7 @@ public class XHTMLDocument extends Document {
   /**
    * Get the date string for printing in the document body, or {@code null}
    * if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForBody() {
@@ -1111,7 +1111,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void bodyBegin(final Body h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final String date;
 
     super.bodyBegin(h);
@@ -1214,7 +1214,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void bodyEnd(final Body h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.makeBibliography();
 
@@ -1245,7 +1245,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void authorsBegin(final Authors h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.authorsBegin(h);
 
     this.__pushCharArrayWriter();
@@ -1267,7 +1267,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void summaryBegin(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.summaryBegin(h);
     this.__pushCharArrayWriter();
   }
@@ -1275,7 +1275,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void summaryEnd(final Summary h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_abstract = this.__popCharArrayWriter();
     } finally {
@@ -1286,7 +1286,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionBegin(final Section h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.sectionBegin(h);
     this.__feed();
     this.__changeDepth(1);
@@ -1297,7 +1297,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionEnd(final Section h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__changeDepth(-1);
       this.__feed();
@@ -1349,7 +1349,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionTitleEnd(final SectionTitle h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final int i;
 
     try {
@@ -1370,7 +1370,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyBegin(final SectionBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.sectionBodyBegin(h);
 
     this.__feed();
@@ -1383,7 +1383,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyEnd(final SectionBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__changeDepth(-1);
       this.__feed();
@@ -1397,7 +1397,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureBegin(final Figure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.figureBegin(h);
 
     this.__feed();
@@ -1414,7 +1414,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureEnd(final Figure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     String t, s;
     SingleLabel l;
 
@@ -1485,14 +1485,14 @@ public class XHTMLDocument extends Document {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-      throws IOException, URISyntaxException {
+          throws IOException, URISyntaxException {
     return new _RasterFigureBody(owner, relativeNameBase, sizeInMM);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.figureBodyBegin(h);
 
@@ -1512,7 +1512,7 @@ public class XHTMLDocument extends Document {
   @SuppressWarnings("resource")
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     String s;
     char[] ch;
     final Element o;
@@ -1600,7 +1600,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void figureSeriesEnd(final FigureSeries h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_subfigCaptions = null;
     this.m_subfigLabels = null;
     this.m_floatCaption = null;
@@ -1727,7 +1727,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * end the figure row
-   * 
+   *
    * @param h
    *          the page
    * @throws IOException
@@ -1795,7 +1795,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subFigureBegin(h);
 
     if (h.getCol() <= 1) {
@@ -1818,7 +1818,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__feed();
       this.__changeDepth(-1);
@@ -1845,7 +1845,7 @@ public class XHTMLDocument extends Document {
       throws IOException, IllegalStateException {
     try {
       this.m_subfigCaptions[h.getOwner().getCol() - 1] = //
-      this.__popCharArrayWriter();
+          this.__popCharArrayWriter();
     } finally {
       super.subFigureCaptionEnd(h);
     }
@@ -1854,7 +1854,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void itemizationBegin(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.itemizationBegin(h);
     this.m_out.write(XHTMLDocument.UL_BEGIN, 0,
         XHTMLDocument.UL_BEGIN.length);
@@ -1863,7 +1863,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void itemizationEnd(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.UL_END, 0,
           XHTMLDocument.UL_END.length);
@@ -1896,7 +1896,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void enumerationBegin(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.enumerationBegin(h);
     this.m_out.write(XHTMLDocument.OL_BEGIN, 0,
         XHTMLDocument.OL_BEGIN.length);
@@ -1905,7 +1905,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void enumerationEnd(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.OL_END, 0,
           XHTMLDocument.OL_END.length);
@@ -1947,7 +1947,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableBegin(final Table h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.tableBegin(h);
     this.m_floatCaption = null;
     this.m_tableHead = null;
@@ -1958,7 +1958,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableEnd(final Table h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     this.m_floatCaption = null;
     this.m_tableHead = null;
     this.m_tableFoot = null;
@@ -1969,7 +1969,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final String s, t;
     final SingleLabel l;
 
@@ -2057,7 +2057,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
 
       if (this.m_tblHasBody) {
@@ -2109,7 +2109,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableCaptionEnd(final TableCaption h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_floatCaption = this.__popCharArrayWriter();
     } finally {
@@ -2120,7 +2120,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderBegin(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.tableHeaderBegin(h);
 
     this.__pushCharArrayWriter();
@@ -2134,7 +2134,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderEnd(final TableHeader h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__changeDepth(-1);
       this.__feed();
@@ -2149,7 +2149,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterBegin(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.tableFooterBegin(h);
 
@@ -2164,7 +2164,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterEnd(final TableFooter h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.__changeDepth(-1);
       this.__feed();
@@ -2254,10 +2254,10 @@ public class XHTMLDocument extends Document {
     this.__changeDepth(1);
 
     ch = (((h.getRowIndex() & 1) == 0)//
-    ? (this.m_tblHR ? XHTMLDocument.TAB_TR_BEHR_BEGIN
-        : XHTMLDocument.TAB_TR_BE_BEGIN)//
-        : (this.m_tblHR ? XHTMLDocument.TAB_TR_BOHR_BEGIN
-            : XHTMLDocument.TAB_TR_BO_BEGIN));
+        ? (this.m_tblHR ? XHTMLDocument.TAB_TR_BEHR_BEGIN
+            : XHTMLDocument.TAB_TR_BE_BEGIN)//
+            : (this.m_tblHR ? XHTMLDocument.TAB_TR_BOHR_BEGIN
+                : XHTMLDocument.TAB_TR_BO_BEGIN));
     this.m_out.write(ch, 0, ch.length);
     this.m_tblHR = false;
     this.__feed();
@@ -2266,7 +2266,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableHorizontalLine() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.tableHorizontalLine();
     this.m_tblHR = true;
   }
@@ -2274,7 +2274,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     try {
       this.m_tblHR = false;
@@ -2289,7 +2289,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * get the cell mode
-   * 
+   *
    * @param cell
    *          the cell
    * @throws IOException
@@ -2407,7 +2407,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subscriptBegin(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.subscriptBegin(h);
     this.m_out.write(XHTMLDocument.SUB_BEGIN, 0,
         XHTMLDocument.SUB_BEGIN.length);
@@ -2416,7 +2416,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void subscriptEnd(final Subscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.SUB_END, 0,
           XHTMLDocument.SUB_END.length);
@@ -2428,7 +2428,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void superscriptBegin(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.superscriptBegin(h);
     this.m_out.write(XHTMLDocument.SUP_BEGIN, 0,
         XHTMLDocument.SUP_BEGIN.length);
@@ -2437,7 +2437,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void superscriptEnd(final Superscript h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.SUP_END, 0,
           XHTMLDocument.SUP_END.length);
@@ -2449,7 +2449,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeBegin(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.emphasizeBegin(h);
     this.m_out.write(XHTMLDocument.EM_BEGIN, 0,
         XHTMLDocument.EM_BEGIN.length);
@@ -2458,7 +2458,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeEnd(final Emphasize h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.EM_END, 0,
           XHTMLDocument.EM_END.length);
@@ -2470,7 +2470,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void equationBegin(final Equation h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.equationBegin(h);
 
     this.__feed();
@@ -2500,7 +2500,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void equationEnd(final Equation h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     String s;
     SingleLabel sl;
 
@@ -2549,7 +2549,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathBegin(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.inlineMathBegin(h);
     this.m_out.write(XHTMLDocument.MATH_DIV_BEGIN, 0,
         XHTMLDocument.MATH_DIV_BEGIN.length);
@@ -2558,7 +2558,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathEnd(final InlineMath h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.DIV_END, 0,
           XHTMLDocument.DIV_END.length);
@@ -2570,7 +2570,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void normalTextBegin(final NormalText h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.normalTextBegin(h);
     this.m_out.write(XHTMLDocument.NORMAL_SPAN_BEGIN, 0,
         XHTMLDocument.NORMAL_SPAN_BEGIN.length);
@@ -2579,7 +2579,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void normalTextEnd(final NormalText h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_out.write(XHTMLDocument.SPAN_END, 0,
           XHTMLDocument.SPAN_END.length);
@@ -2633,7 +2633,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathNameBegin(final MathName h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final char[] ch;
 
     super.mathNameBegin(h);
@@ -2645,7 +2645,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathNameEnd(final MathName h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     try {
       this.m_out.write(XHTMLDocument.SPAN_END, 0,
@@ -2658,7 +2658,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpEnd(final MathOp h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final char[][] ch;
     final _OpDef def;
 
@@ -2677,7 +2677,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamBegin(final MathOpParam h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     super.mathOpParamBegin(h);
     this.__pushCharArrayWriter();
@@ -2686,7 +2686,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamEnd(final MathOpParam h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final char[] ch;
     try {
       ch = this.__popCharArrayWriter();
@@ -2699,7 +2699,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void macroBegin(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.macroBegin(h);
     this.__pushCharArrayWriter();
   }
@@ -2707,7 +2707,7 @@ public class XHTMLDocument extends Document {
   /** {@inheritDoc} */
   @Override
   protected void macroEnd(final Macro h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     try {
       this.m_macros.put(h.getDescriptor(), this.__popCharArrayWriter());
     } finally {
@@ -2766,18 +2766,18 @@ public class XHTMLDocument extends Document {
             }
           }
 
-          this.m_out.write(macro, j, i);
+        this.m_out.write(macro, j, i);
 
-          if (i >= macro.length) {
-            break loopy;
-          }
+        if (i >= macro.length) {
+          break loopy;
+        }
 
-          ch = params[macro[i]];
-          if (ch != null) {
-            this.m_out.write(ch, 0, ch.length);
-          }
+        ch = params[macro[i]];
+        if (ch != null) {
+          this.m_out.write(ch, 0, ch.length);
+        }
 
-          j = (i + 1);
+        j = (i + 1);
         }
       }
     } finally {
@@ -2787,7 +2787,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * Make the bibliography style, file, and references
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -2915,7 +2915,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * print a single reference
-   * 
+   *
    * @param printAuthors
    *          the author names
    * @param ref
@@ -2968,7 +2968,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * make a string
-   * 
+   *
    * @param d
    *          the double value
    * @return the string

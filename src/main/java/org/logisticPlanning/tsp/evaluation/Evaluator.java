@@ -207,7 +207,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * the parameter identifying the logger to be used by the evaluator: * *
-   * {@value}
+   * * {@value}
    */
   public static final String PARAM_EVALUATOR_LOGGER = "evaluatorLogger"; //$NON-NLS-1$
   /** the parameter identifying the document driver to be used: {@value} */
@@ -222,28 +222,28 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * the data source
-   * 
+   *
    * @serial the driver implementation that provides the data
    */
   private DataSource m_dataSource;
 
   /**
    * the document driver
-   * 
+   *
    * @serial the driver responsible for output generation
    */
   private DocumentDriver m_documentDriver;
 
   /**
    * the destination directory
-   * 
+   *
    * @serial a file pointing to the destination directory
    */
   private File m_destDir;
 
   /**
    * the root module
-   * 
+   *
    * @serial the pointer to the root of the module hierarchy
    */
   private final RootModule m_modules;
@@ -259,7 +259,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * Create the default data source
-   * 
+   *
    * @return the default data source
    */
   protected DataSource createDefaultDataSource() {
@@ -268,7 +268,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * Create the default document driver
-   * 
+   *
    * @return the default document driver
    */
   protected DocumentDriver createDefaultDocumentDriver() {
@@ -325,7 +325,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * load the data
-   * 
+   *
    * @return the data
    */
   private final ExperimentSet __loadData() {
@@ -361,8 +361,8 @@ public class Evaluator extends LoggerOwner implements Runnable {
         log.info("Finished loading data using the '" + ds.name() + //$NON-NLS-1$
             "' data source, discovered " + //$NON-NLS-1$
             ((es == null) ? " no experiment set" : //$NON-NLS-1$
-                (" a set of " + es.size() + //$NON-NLS-1$
-                " experiments.")));//$NON-NLS-1$
+              (" a set of " + es.size() + //$NON-NLS-1$
+                  " experiments.")));//$NON-NLS-1$
       }
     }
 
@@ -371,7 +371,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * perform the evaluation process
-   * 
+   *
    * @param es
    *          the experiment set
    */
@@ -465,7 +465,7 @@ public class Evaluator extends LoggerOwner implements Runnable {
 
   /**
    * The main routine for running the evaluator
-   * 
+   *
    * @param args
    *          the command line arguments
    * @throws Throwable

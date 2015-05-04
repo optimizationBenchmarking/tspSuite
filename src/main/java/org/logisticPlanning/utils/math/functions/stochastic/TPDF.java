@@ -46,7 +46,7 @@ public final class TPDF extends BinaryFunction {
 
   /**
    * Returns the PDF of the t-distribution
-   * 
+   *
    * @param dof
    *          degrees of freedom
    * @param x
@@ -69,7 +69,7 @@ public final class TPDF extends BinaryFunction {
     return Math.exp(GammaLn.INSTANCE.compute(np1o2)
         - ((0.5d * (Math.log(Math.PI) + Math.log(dof)))
             - GammaLn.INSTANCE.compute(dof * 0.5d) - (np1o2 * Math
-            .log(1d + ((x * x) / dof)))));
+                .log(1d + ((x * x) / dof)))));
   }
 
   /** {@inheritDoc} */
@@ -88,7 +88,7 @@ public final class TPDF extends BinaryFunction {
    * with the singleton instance {@link TCDF#INSTANCE TCDF.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link TCDF#INSTANCE
    *         TCDF.INSTANCE})
    */
@@ -101,7 +101,7 @@ public final class TPDF extends BinaryFunction {
    * with the singleton instance {@link TCDF#INSTANCE TCDF.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link TCDF#INSTANCE
    *         TCDF.INSTANCE})
    */

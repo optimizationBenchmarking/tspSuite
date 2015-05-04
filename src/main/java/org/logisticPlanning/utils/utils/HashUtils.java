@@ -10,7 +10,7 @@ public final class HashUtils {
    * on both hash codes {@code a} and {@code b}. This results depends on
    * the order of the parameters, i.e., it (usually) is different for
    * {@code (a, b)} and {@code (b, a)}.
-   * 
+   *
    * @param a
    *          the first hash code
    * @param b
@@ -23,7 +23,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a byte.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -34,7 +34,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a {@code short}
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -45,7 +45,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of an integer.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -56,7 +56,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a float.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -67,7 +67,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a long.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -80,7 +80,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a double.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -91,7 +91,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of an object.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -102,7 +102,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a character.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash
@@ -113,7 +113,7 @@ public final class HashUtils {
 
   /**
    * Compute the hash code of a boolean value.
-   * 
+   *
    * @param b
    *          the data
    * @return the hash

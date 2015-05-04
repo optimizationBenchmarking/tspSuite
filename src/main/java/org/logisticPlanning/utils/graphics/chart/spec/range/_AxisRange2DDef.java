@@ -25,7 +25,7 @@ class _AxisRange2DDef {
 
   /**
    * create
-   * 
+   *
    * @param minX
    *          the minimum-x end
    * @param maxX

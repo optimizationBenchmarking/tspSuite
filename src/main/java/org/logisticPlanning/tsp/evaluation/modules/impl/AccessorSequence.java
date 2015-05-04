@@ -33,7 +33,7 @@ public final class AccessorSequence extends Sequence {
 
   /**
    * Create the accessor sequence
-   * 
+   *
    * @param axss
    *          the accessors
    * @param shrt
@@ -53,7 +53,7 @@ public final class AccessorSequence extends Sequence {
 
   /**
    * Create the accessor sequence
-   * 
+   *
    * @param axss
    *          the accessors
    * @param shrt
@@ -72,7 +72,7 @@ public final class AccessorSequence extends Sequence {
 
   /**
    * Create the accessor sequence
-   * 
+   *
    * @param axss
    *          the accessors
    * @param shrt

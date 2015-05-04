@@ -14,7 +14,7 @@ import test.junit.org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunct
 
 /**
  * Test a search operator for symmetric test cases only
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -48,7 +48,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * Create the operator to be used
-   * 
+   *
    * @return the operator to be used
    */
   @SuppressWarnings("unchecked")
@@ -58,7 +58,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * get the operator
-   * 
+   *
    * @return the operator
    */
   protected Operator<P> getOperator() {
@@ -74,12 +74,13 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * create a random instance
-   * 
+   *
    * @param dest
    *          the destination record
    * @param f
    *          the objective function
    */
+  @SuppressWarnings("unchecked")
   protected void createRandomInstance(final Individual<P> dest,
       final ObjectiveFunction f) {
     dest.solution = ((P) (PermutationCreateUniform.create(f.n(),//
@@ -89,7 +90,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * Create a slightly modified copy of a given input
-   * 
+   *
    * @param f
    *          the objective function
    * @param dest
@@ -111,7 +112,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * process a newly generated solution
-   * 
+   *
    * @param ind
    *          the individual
    * @param inst
@@ -128,7 +129,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * check the result of an operator's application
-   * 
+   *
    * @param result
    *          the result
    * @param f
@@ -141,7 +142,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
 
   /**
    * check the result of an operator's application
-   * 
+   *
    * @param result
    *          the result
    * @param f
@@ -158,7 +159,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ATT48}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -172,7 +173,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ATT48}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -187,7 +188,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ATT48}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -201,7 +202,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ATT48}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -215,7 +216,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYG29}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -229,7 +230,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYG29}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -244,7 +245,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYG29}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -259,7 +260,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYG29}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -273,7 +274,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYS29}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -287,7 +288,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYS29}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -302,7 +303,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYS29}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -317,7 +318,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYS29}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -331,7 +332,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BERLIN52}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -345,7 +346,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BERLIN52}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -360,7 +361,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BERLIN52}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -375,7 +376,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BERLIN52}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -389,7 +390,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRAZIL58}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -403,7 +404,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRAZIL58}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -418,7 +419,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRAZIL58}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -433,7 +434,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRAZIL58}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -447,7 +448,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRG180}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -461,7 +462,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRG180}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -476,7 +477,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRG180}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -491,7 +492,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRG180}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -505,7 +506,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -519,7 +520,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -534,7 +535,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -549,7 +550,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -563,7 +564,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH130}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -577,7 +578,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH130}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -592,7 +593,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH130}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -606,7 +607,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH130}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -620,7 +621,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH150}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -634,7 +635,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH150}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -649,7 +650,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH150}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -663,7 +664,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#CH150}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -677,7 +678,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#D198}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -691,7 +692,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#D198}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -706,7 +707,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#D198}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -720,7 +721,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#D198}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -734,7 +735,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL51}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -748,7 +749,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL51}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -763,7 +764,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL51}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -777,7 +778,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL51}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -791,7 +792,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL76}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -805,7 +806,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL76}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -820,7 +821,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL76}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -834,7 +835,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL76}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -848,7 +849,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL101}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -862,7 +863,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL101}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -877,7 +878,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL101}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -892,7 +893,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL101}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -906,7 +907,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FRI26}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -920,7 +921,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FRI26}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -935,7 +936,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FRI26}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -949,7 +950,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FRI26}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -963,7 +964,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR17}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -977,7 +978,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR17}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -992,7 +993,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR17}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1006,7 +1007,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR17}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1020,7 +1021,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR21}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1034,7 +1035,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR21}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1049,7 +1050,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR21}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1063,7 +1064,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR21}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1077,7 +1078,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR24}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1091,7 +1092,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR24}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1106,7 +1107,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR24}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1120,7 +1121,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR24}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1134,7 +1135,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR48}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1148,7 +1149,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR48}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1163,7 +1164,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR48}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1177,7 +1178,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR48}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1191,7 +1192,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR96}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1205,7 +1206,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR96}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1220,7 +1221,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR96}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1234,7 +1235,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR96}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1248,7 +1249,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR120}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1262,7 +1263,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR120}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1277,7 +1278,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR120}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1291,7 +1292,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR120}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1305,7 +1306,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR137}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1319,7 +1320,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR137}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1334,7 +1335,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR137}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1348,7 +1349,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR137}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1362,7 +1363,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#HK48}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1376,7 +1377,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#HK48}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1391,7 +1392,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#HK48}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1405,7 +1406,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#HK48}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1419,7 +1420,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1433,7 +1434,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1448,7 +1449,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1463,7 +1464,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1477,7 +1478,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1491,7 +1492,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1506,7 +1507,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1521,7 +1522,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1535,7 +1536,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROC100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1549,7 +1550,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROC100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1564,7 +1565,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROC100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1579,7 +1580,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROC100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1593,7 +1594,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROD100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1607,7 +1608,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROD100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1622,7 +1623,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROD100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1637,7 +1638,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROD100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1651,7 +1652,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROE100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1665,7 +1666,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROE100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1680,7 +1681,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROE100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1695,7 +1696,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROE100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1709,7 +1710,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA150}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1723,7 +1724,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA150}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1738,7 +1739,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA150}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1753,7 +1754,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA150}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1767,7 +1768,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB150}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1781,7 +1782,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB150}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1796,7 +1797,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB150}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1811,7 +1812,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB150}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1825,7 +1826,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA200}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1839,7 +1840,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA200}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1854,7 +1855,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA200}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1869,7 +1870,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA200}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1883,7 +1884,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB200}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1897,7 +1898,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB200}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1912,7 +1913,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB200}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1927,7 +1928,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB200}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1941,7 +1942,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#LIN105}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1955,7 +1956,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#LIN105}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1970,7 +1971,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#LIN105}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1985,7 +1986,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#LIN105}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -1999,7 +2000,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR76}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2013,7 +2014,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR76}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2028,7 +2029,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR76}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2042,7 +2043,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR76}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2056,7 +2057,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR107}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2070,7 +2071,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR107}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2085,7 +2086,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR107}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2099,7 +2100,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR107}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2113,7 +2114,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR124}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2127,7 +2128,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR124}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2142,7 +2143,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR124}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2156,7 +2157,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR124}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2170,7 +2171,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR136}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2184,7 +2185,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR136}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2199,7 +2200,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR136}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2213,7 +2214,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR136}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2227,7 +2228,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR144}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2241,7 +2242,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR144}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2256,7 +2257,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR144}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2270,7 +2271,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR144}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2284,7 +2285,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR152}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2298,7 +2299,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR152}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2313,7 +2314,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR152}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2327,7 +2328,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR152}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2341,7 +2342,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT99}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2355,7 +2356,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT99}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2370,7 +2371,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT99}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2384,7 +2385,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT99}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2398,7 +2399,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT195}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2412,7 +2413,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT195}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2427,7 +2428,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT195}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2442,7 +2443,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT195}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2456,7 +2457,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RD100}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2470,7 +2471,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RD100}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2485,7 +2486,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RD100}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2499,7 +2500,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RD100}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2513,7 +2514,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SI175}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2527,7 +2528,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SI175}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2542,7 +2543,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SI175}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2556,7 +2557,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SI175}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2570,7 +2571,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ST70}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2584,7 +2585,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ST70}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2599,7 +2600,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ST70}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2613,7 +2614,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ST70}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2627,7 +2628,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SWISS42}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2641,7 +2642,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SWISS42}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2656,7 +2657,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SWISS42}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2671,7 +2672,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SWISS42}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2685,7 +2686,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#U159}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2699,7 +2700,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#U159}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2714,7 +2715,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#U159}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2728,7 +2729,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#U159}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2742,7 +2743,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES16}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2757,7 +2758,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES16}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2772,7 +2773,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES16}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2787,7 +2788,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES16}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2802,7 +2803,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES22}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2817,7 +2818,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES22}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2832,7 +2833,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES22}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -2847,7 +2848,7 @@ public class SymmetricOperatorTest<P> extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES22}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */

@@ -44,7 +44,7 @@ public class TextUtilsTest extends TestBase {
 
   /**
    * test a double
-   * 
+   *
    * @param s
    *          the string
    * @param d
@@ -145,7 +145,7 @@ public class TextUtilsTest extends TestBase {
       TextUtilsTest.testDouble(test,
           ("0b" + Long.toBinaryString(testLong))); //$NON-NLS-1$
       TextUtilsTest
-          .testDouble(test, ("0o" + Long.toOctalString(testLong))); //$NON-NLS-1$
+      .testDouble(test, ("0o" + Long.toOctalString(testLong))); //$NON-NLS-1$
     }
   }
 

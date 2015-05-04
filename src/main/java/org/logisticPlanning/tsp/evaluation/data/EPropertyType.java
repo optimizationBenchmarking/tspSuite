@@ -55,7 +55,7 @@ public enum EPropertyType {
    * Unpack an object: the method is internally used to unwrap objects by
    * the cache in a
    * {@link org.logisticPlanning.tsp.evaluation.data.DataSet data set}.
-   * 
+   *
    * @param o
    *          the packed object
    * @return the unpacked object
@@ -71,7 +71,7 @@ public enum EPropertyType {
    * pack an object: the method is internally used to wrap objects by the
    * cache in a {@link org.logisticPlanning.tsp.evaluation.data.DataSet
    * data set}.
-   * 
+   *
    * @param o
    *          the unpacked object
    * @return the packed object

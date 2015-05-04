@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.mst.MSTHeuristic;
  * heuristic
  */
 public class UpdatingPermutationHillClimberWithMSTTest extends
-    UpdatingPermutationHillClimberTest {
+UpdatingPermutationHillClimberTest {
 
   /** create */
   public UpdatingPermutationHillClimberWithMSTTest() {

@@ -62,7 +62,7 @@ public final class RootModule extends Module {
 
   /**
    * create
-   * 
+   *
    * @param evaluator
    *          the evaluator
    */
@@ -128,10 +128,11 @@ public final class RootModule extends Module {
 
   /**
    * add an instance of the given class to the module list
-   * 
+   *
    * @param clazz
    *          the class
    */
+  @SuppressWarnings("unchecked")
   public final void addModule(final Class<? extends Module> clazz) {
     Module m, owner;
     Constructor<Module>[] c;
@@ -177,13 +178,13 @@ public final class RootModule extends Module {
           if (params.length == 2) {
             if (params[0].isInstance(owner)
                 && ((params[1].isAssignableFrom(boolean.class) || //
-                params[1].isAssignableFrom(Boolean.class)))) {
+                    params[1].isAssignableFrom(Boolean.class)))) {
               cc.newInstance(owner, Boolean.TRUE);
               return;
             }
             if (params[1].isInstance(owner)
                 && ((params[0].isAssignableFrom(boolean.class) || //
-                params[0].isAssignableFrom(Boolean.class)))) {
+                    params[0].isAssignableFrom(Boolean.class)))) {
               cc.newInstance(Boolean.TRUE, owner);
               return;
             }
@@ -205,7 +206,7 @@ public final class RootModule extends Module {
 
   /**
    * Apply all modules to the experiment set.
-   * 
+   *
    * @param body
    *          the document body to write the output to
    * @param data
@@ -217,7 +218,7 @@ public final class RootModule extends Module {
 
   /**
    * Initialize all modules to the experiment set.
-   * 
+   *
    * @param header
    *          the document header to write the output to
    * @param data
@@ -237,7 +238,7 @@ public final class RootModule extends Module {
 
   /**
    * the authors of all the experiments
-   * 
+   *
    * @param data
    *          the experiment data
    * @return the authors
@@ -282,7 +283,7 @@ public final class RootModule extends Module {
 
   /**
    * Do the initialization
-   * 
+   *
    * @param header
    *          the header
    * @param data
@@ -363,7 +364,7 @@ public final class RootModule extends Module {
     header.authors(((all != null) && (all.size() > 0)) ? all
         : new BibAuthors(//
             new BibAuthor("Anomnyma", "Unknownowskaya")//$NON-NLS-1$//$NON-NLS-2$
-        ));
+            ));
 
     // Produce a short abstract: What information will be in the document.
     // The
@@ -379,37 +380,37 @@ public final class RootModule extends Module {
 
       if (desc != null) {
         sum.write(//
-        " We first provide background information and outline the experimental procedure as well as the evaluation methodology.");//$NON-NLS-1$
+            " We first provide background information and outline the experimental procedure as well as the evaluation methodology.");//$NON-NLS-1$
       }
 
       if (single != null) {
         sum.write((desc == null) ? " We first" : " Then we");//$NON-NLS-1$//$NON-NLS-2$
 
         sum.write(//
-        " analyze the performance of the ");//$NON-NLS-1$
+            " analyze the performance of the ");//$NON-NLS-1$
         if (size > 1) {
           sum.write(//
-          " single algorithms separately");//$NON-NLS-1$
+              " single algorithms separately");//$NON-NLS-1$
         } else {
           sum.macroInvoke(this.getShortName(data.get(0)));
         }
         if (single.getActiveChildren().size() > 1) {
           sum.write(//
-          " from several separate angles");//$NON-NLS-1$
+              " from several separate angles");//$NON-NLS-1$
         }
         sum.writeChar('.');
       }
 
       if (compa != null) {
         sum.write(//
-        ((single != null) && (desc != null)) ? " Finally" : //$NON-NLS-1$
-            (((single != null) || (desc != null)) ? " Then" : //$NON-NLS-1$
-                " In this report"));//$NON-NLS-1$
+            ((single != null) && (desc != null)) ? " Finally" : //$NON-NLS-1$
+              (((single != null) || (desc != null)) ? " Then" : //$NON-NLS-1$
+                  " In this report"));//$NON-NLS-1$
         sum.write(//
-        ", we then compare the algorithms with each other");//$NON-NLS-1$
+            ", we then compare the algorithms with each other");//$NON-NLS-1$
         if (compa.getActiveChildren().size() > 1) {
           sum.write(//
-          " with different statistical approaches");//$NON-NLS-1$
+              " with different statistical approaches");//$NON-NLS-1$
         }
         sum.writeChar('.');
       }
@@ -438,7 +439,7 @@ public final class RootModule extends Module {
 
   /**
    * the macro of the long name of a given experiment
-   * 
+   *
    * @param experiment
    *          the experiment
    * @return the long name for that experiment
@@ -450,7 +451,7 @@ public final class RootModule extends Module {
 
   /**
    * the macro of the short name of a given experiment
-   * 
+   *
    * @param experiment
    *          the experiment
    * @return the long name for that experiment
@@ -463,10 +464,12 @@ public final class RootModule extends Module {
   /**
    * Find an instance of the given class in the hierarchical tree of
    * modules
-   * 
+   *
    * @param clazz
    *          the class
    * @return the instance, or {@code null} if none was found
+   * @param <T>
+   *          the type of the module
    */
   @SuppressWarnings("unchecked")
   public final <T extends Module> T findInstance(

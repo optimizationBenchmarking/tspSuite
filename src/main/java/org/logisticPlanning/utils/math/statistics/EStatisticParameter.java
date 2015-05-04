@@ -23,77 +23,77 @@ public enum EStatisticParameter {
       "minima", //$NON-NLS-1$
       true, false, false),
 
-  /** the 5% percentile */
-  PERCENTILE_05("q05", //$NON-NLS-1$
-      "5% quantile", //$NON-NLS-1$
-      "5% quantiles", //$NON-NLS-1$
-      true, false, false),
+      /** the 5% percentile */
+      PERCENTILE_05("q05", //$NON-NLS-1$
+          "5% quantile", //$NON-NLS-1$
+          "5% quantiles", //$NON-NLS-1$
+          true, false, false),
 
-  /** the 25% percentile */
-  PERCENTILE_25("q25", //$NON-NLS-1$
-      "25% quantile", //$NON-NLS-1$
-      "25% quantiles", //$NON-NLS-1$
-      true, false, false),
+          /** the 25% percentile */
+          PERCENTILE_25("q25", //$NON-NLS-1$
+              "25% quantile", //$NON-NLS-1$
+              "25% quantiles", //$NON-NLS-1$
+              true, false, false),
 
-  /** the median */
-  MEDIAN("med", //$NON-NLS-1$
-      "median", //$NON-NLS-1$
-      "medians", //$NON-NLS-1$
-      true, false, false),
+              /** the median */
+              MEDIAN("med", //$NON-NLS-1$
+                  "median", //$NON-NLS-1$
+                  "medians", //$NON-NLS-1$
+                  true, false, false),
 
-  /** the 75% percentile */
-  PERCENTILE_75("q75", //$NON-NLS-1$
-      "75% quantile", //$NON-NLS-1$
-      "75% quantiles", //$NON-NLS-1$
-      true, false, false),
+                  /** the 75% percentile */
+                  PERCENTILE_75("q75", //$NON-NLS-1$
+                      "75% quantile", //$NON-NLS-1$
+                      "75% quantiles", //$NON-NLS-1$
+                      true, false, false),
 
-  /** the 95% percentile */
-  PERCENTILE_95("q95", //$NON-NLS-1$
-      "95% quantile", //$NON-NLS-1$
-      "95% quantiles", //$NON-NLS-1$
-      true, false, false),
+                      /** the 95% percentile */
+                      PERCENTILE_95("q95", //$NON-NLS-1$
+                          "95% quantile", //$NON-NLS-1$
+                          "95% quantiles", //$NON-NLS-1$
+                          true, false, false),
 
-  /** the maximum */
-  MAXIMUM("max", //$NON-NLS-1$
-      "maximum", //$NON-NLS-1$
-      "maxima", //$NON-NLS-1$
-      true, false, false),
+                          /** the maximum */
+                          MAXIMUM("max", //$NON-NLS-1$
+                              "maximum", //$NON-NLS-1$
+                              "maxima", //$NON-NLS-1$
+                              true, false, false),
 
-  /** the range */
-  RANGE("range", //$NON-NLS-1$
-      null, //
-      "ranges", //$NON-NLS-1$
-      false, true, false),
+                              /** the range */
+                              RANGE("range", //$NON-NLS-1$
+                                  null, //
+                                  "ranges", //$NON-NLS-1$
+                                  false, true, false),
 
-  /** the arithmetic mean */
-  ARITHMETIC_MEAN("mean", //$NON-NLS-1$
-      "arithmetic mean", //$NON-NLS-1$
-      "arithmetic means", //$NON-NLS-1$
-      true, false, false),
+                                  /** the arithmetic mean */
+                                  ARITHMETIC_MEAN("mean", //$NON-NLS-1$
+                                      "arithmetic mean", //$NON-NLS-1$
+                                      "arithmetic means", //$NON-NLS-1$
+                                      true, false, false),
 
-  /** the variance */
-  VARIANCE("var", //$NON-NLS-1$
-      "variance", //$NON-NLS-1$
-      "variances", //$NON-NLS-1$
-      false, true, false),
+                                      /** the variance */
+                                      VARIANCE("var", //$NON-NLS-1$
+                                          "variance", //$NON-NLS-1$
+                                          "variances", //$NON-NLS-1$
+                                          false, true, false),
 
-  /** the standard deviation */
-  STANDARD_DEVIATION("stddev", //$NON-NLS-1$
-      "standard deviation", //$NON-NLS-1$
-      "standard deviations", //$NON-NLS-1$
-      false, true, false),
+                                          /** the standard deviation */
+                                          STANDARD_DEVIATION("stddev", //$NON-NLS-1$
+                                              "standard deviation", //$NON-NLS-1$
+                                              "standard deviations", //$NON-NLS-1$
+                                              false, true, false),
 
-  /** the coefficient of variation */
-  COEFFICIENT_OF_VARIATION("coef.var", //$NON-NLS-1$
-      "coefficient of variation", //$NON-NLS-1$
-      "coefficients of variation", //$NON-NLS-1$
-      false, true, false),
+                                              /** the coefficient of variation */
+                                              COEFFICIENT_OF_VARIATION("coef.var", //$NON-NLS-1$
+                                                  "coefficient of variation", //$NON-NLS-1$
+                                                  "coefficients of variation", //$NON-NLS-1$
+                                                  false, true, false),
 
-  /** the skewness */
-  SKEWNESS("skew", //$NON-NLS-1$
-      "skewness", //$NON-NLS-1$
-      "skewnesses", //$NON-NLS-1$
-      false, false, true) {
+                                                  /** the skewness */
+                                                  SKEWNESS("skew", //$NON-NLS-1$
+                                                      "skewness", //$NON-NLS-1$
+                                                      "skewnesses", //$NON-NLS-1$
+                                                      false, false, true) {
 
     /** {@inheritDoc} */
     @Override
@@ -183,7 +183,7 @@ public enum EStatisticParameter {
 
   /**
    * create
-   * 
+   *
    * @param shrt
    *          the short name
    * @param lng
@@ -210,7 +210,7 @@ public enum EStatisticParameter {
 
   /**
    * Get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -219,7 +219,7 @@ public enum EStatisticParameter {
 
   /**
    * Get the long name
-   * 
+   *
    * @param plural
    *          should we return the plural form ({@code true}) or the
    *          singular form ({@code false})
@@ -232,7 +232,7 @@ public enum EStatisticParameter {
   /**
    * Is this a value parameter, i.e., a parameter that represents actual
    * values from the distribution?
-   * 
+   *
    * @return {@code true} if this is a value parameter, i.e., a parameter
    *         that represents actual values from the distribution,
    *         {@code false} otherwise.
@@ -244,7 +244,7 @@ public enum EStatisticParameter {
   /**
    * Is this a spread parameter, i.e., a parameter that relates to the
    * range or spread of the values from this distribution
-   * 
+   *
    * @return {@code true} if this is a spread parameter, i.e., a parameter
    *         that relates to the range or spread of the values from this
    *         distribution, {@code false} otherwise.
@@ -256,7 +256,7 @@ public enum EStatisticParameter {
   /**
    * Is this a shape parameter, i.e., a parameter that relates to the shape
    * of this distribution
-   * 
+   *
    * @return {@code true} if this is a shape parameter, i.e., a parameter
    *         that relates to the shape of this distribution, {@code false}
    *         otherwise.
@@ -267,7 +267,7 @@ public enum EStatisticParameter {
 
   /**
    * create a list of statistic parameters
-   * 
+   *
    * @param list
    *          the parameters
    * @return the list
@@ -307,7 +307,7 @@ public enum EStatisticParameter {
    * {@link org.logisticPlanning.utils.utils.comparison.EComparison#GREATER
    * GREATER} if {@code val1} seems to be greater or worse than
    * {@code val2} and other constants are appropriately used
-   * 
+   *
    * @param val1
    *          the first value
    * @param val2

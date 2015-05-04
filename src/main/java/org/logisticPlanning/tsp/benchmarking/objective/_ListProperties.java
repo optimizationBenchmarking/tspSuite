@@ -25,7 +25,7 @@ final class _ListProperties implements Comparable<_ListProperties> {
 
   /**
    * create
-   * 
+   *
    * @param k
    *          the key
    * @param v
@@ -39,7 +39,7 @@ final class _ListProperties implements Comparable<_ListProperties> {
 
   /**
    * make a list
-   * 
+   *
    * @param map
    *          the map
    * @return an ordered property list
@@ -58,7 +58,7 @@ final class _ListProperties implements Comparable<_ListProperties> {
 
   /**
    * The main method
-   * 
+   *
    * @param args
    *          ignored
    */

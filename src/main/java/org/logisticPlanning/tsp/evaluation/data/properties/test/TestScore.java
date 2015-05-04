@@ -21,7 +21,7 @@ public class TestScore extends Rank<Experiment> {
 
   /**
    * The experiment test score
-   * 
+   *
    * @param exp
    *          the experiment
    */
@@ -49,7 +49,7 @@ public class TestScore extends Rank<Experiment> {
 
   /**
    * add a test score
-   * 
+   *
    * @param score
    *          the test score to add
    */
@@ -62,7 +62,7 @@ public class TestScore extends Rank<Experiment> {
 
   /**
    * Get the wins
-   * 
+   *
    * @return the wins
    */
   public final int getWins() {
@@ -71,7 +71,7 @@ public class TestScore extends Rank<Experiment> {
 
   /**
    * Get the losses
-   * 
+   *
    * @return the losses
    */
   public final int getLosses() {
@@ -80,7 +80,7 @@ public class TestScore extends Rank<Experiment> {
 
   /**
    * Get the evens
-   * 
+   *
    * @return the evens
    */
   public final int getEvens() {

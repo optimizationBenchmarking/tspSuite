@@ -9,7 +9,7 @@ public interface IStatisticPoint extends IStatisticData {
    * Obtain the value of the statistic parameter. Throws an
    * {@link java.lang.UnsupportedOperationException} if the parameter is
    * not in the list {@link #getParameters()}.
-   * 
+   *
    * @param param
    *          the parameter
    * @return the value

@@ -24,7 +24,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -83,16 +83,16 @@ public class BibThesis extends BibBook {
   @Override
   final int _hashCode() {
     return HashUtils.combineHashes(
-    //
+        //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_school)),//
-        HashUtils.combineHashes(HashUtils.hashCode(this.m_schoolAddress),//
-            HashUtils.hashCode(this.m_type)));
+            HashUtils.combineHashes(HashUtils.hashCode(this.m_schoolAddress),//
+                HashUtils.hashCode(this.m_type)));
   }
 
   /**
    * Get the thesis type
-   * 
+   *
    * @return the thesis type
    */
   public final EThesisType getType() {
@@ -101,7 +101,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Get the school
-   * 
+   *
    * @return the school
    */
   public final String getSchool() {
@@ -110,7 +110,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Get the school's address
-   * 
+   *
    * @return the school's address
    */
   public final String getSchoolAddress() {
@@ -127,7 +127,7 @@ public class BibThesis extends BibBook {
 
       return (ComparisonUtils.equals(this.m_type, x.m_type) && //
           ComparisonUtils.equals(this.m_school, x.m_school) && //
-      ComparisonUtils.equals(this.m_schoolAddress, x.m_schoolAddress));
+          ComparisonUtils.equals(this.m_schoolAddress, x.m_schoolAddress));
     }
 
     return false;

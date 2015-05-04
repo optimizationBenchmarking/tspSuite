@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.solving.operators.BinaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.recombination.PermutationSavingsCrossover;
 
 /**
- * 
+ *
  <p>
  * This class is an internal class. You should never load or instantiate
  * it. Use the classes derived from it.
@@ -713,7 +713,7 @@ class _HeuristicInitRNSSavingsMA extends _HeuristicInitRNSMA {
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          a string to be added to the base name
    */

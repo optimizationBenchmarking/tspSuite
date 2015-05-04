@@ -10,7 +10,7 @@ import org.logisticPlanning.tsp.solving.Individual;
 /**
  * the internal class to test an operator's behavior when all input
  * instances are results obtained with the same operator
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -21,7 +21,7 @@ final class _OperatorTestChaining<P> extends _OperatorTest<P> {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    */

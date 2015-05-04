@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmAsymme
  * the test of the random sampling of permutations
  */
 public class RandomPermutationSamplingTest extends
-    TSPAlgorithmAsymmetricTest {
+TSPAlgorithmAsymmetricTest {
 
   /** create */
   public RandomPermutationSamplingTest() {

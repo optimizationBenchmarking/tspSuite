@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationRNSMutation;
 
 /**
- * 
+ *
  <p>
  * This is a version of the
  * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.TemplateBasedEHBSA
@@ -786,7 +786,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 public class HeuristicInitRNSTemplateBasedEHBSA extends
-    _HeuristicInitRefiningTemplateBasedEHBSA {
+_HeuristicInitRefiningTemplateBasedEHBSA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -804,7 +804,7 @@ public class HeuristicInitRNSTemplateBasedEHBSA extends
   /**
    * Perform the template-based EHBSA with heuristic initialization and RNS
    * local search
-   * 
+   *
    * @param args
    *          the command line arguments
    */

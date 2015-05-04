@@ -11,7 +11,7 @@ public class ValueSelectionAxisSmallEnd extends _ValueSelectionAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param values
@@ -23,7 +23,7 @@ public class ValueSelectionAxisSmallEnd extends _ValueSelectionAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel
@@ -38,7 +38,7 @@ public class ValueSelectionAxisSmallEnd extends _ValueSelectionAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel

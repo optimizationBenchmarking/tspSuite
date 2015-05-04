@@ -41,7 +41,7 @@ public class XHTMLContext extends Context {
 
   /**
    * create the LaTeX context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir
@@ -63,7 +63,7 @@ public class XHTMLContext extends Context {
 
   /**
    * Get the document file
-   * 
+   *
    * @return the document file
    */
   public final File getDocumentFile() {
@@ -72,7 +72,7 @@ public class XHTMLContext extends Context {
 
   /**
    * Instantiate the document
-   * 
+   *
    * @param owner
    *          the owner
    * @param f
@@ -108,7 +108,7 @@ public class XHTMLContext extends Context {
     log = this.getLogger();
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info("Document file is '" + this.m_documentFile + //$NON-NLS-1$
-          "'."); //$NON-NLS-1$ 
+          "'."); //$NON-NLS-1$
     }
 
     return this.documentInstantiate(((XHTMLContext) owner),
@@ -118,7 +118,7 @@ public class XHTMLContext extends Context {
   /**
    * Load the style sheets. This procedure must load two text resources
    * that named according to {@link #CSS_DEFAULT} and {@link #CSS_PRINT}.
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -141,7 +141,7 @@ public class XHTMLContext extends Context {
 
   /**
    * access the name resolution method
-   * 
+   *
    * @param relativeName
    *          the relative name
    * @return the file

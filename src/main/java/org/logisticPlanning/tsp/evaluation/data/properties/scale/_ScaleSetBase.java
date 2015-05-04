@@ -6,12 +6,12 @@ import org.logisticPlanning.utils.collections.lists.ArraySetView;
 
 /**
  * The base class for scaled sets.
- * 
+ *
  * @param <T>
  *          the type parameter
  */
 abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
-    Comparable<_ScaleSetBase<?>> {
+Comparable<_ScaleSetBase<?>> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
   /** the lower scale bound */
@@ -25,7 +25,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
 
   /**
    * Create a scale run set
-   * 
+   *
    * @param lowerScaleBound
    *          the lower scale bound
    * @param upperScaleBound
@@ -50,7 +50,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
 
   /**
    * Get the lower bound of scale
-   * 
+   *
    * @return the lower bound of scale
    */
   public final int getLowerScaleBound() {
@@ -59,7 +59,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
 
   /**
    * Get the upper bound of scale
-   * 
+   *
    * @return the upper bound of scale
    */
   public final int getUpperScaleBound() {
@@ -68,7 +68,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
 
   /**
    * Get the lowest scale actually in the set
-   * 
+   *
    * @return the lowest scale actually in the set
    */
   public final int getLowestScale() {
@@ -77,7 +77,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
 
   /**
    * Get the highest scale actually in the set
-   * 
+   *
    * @return the highest scale actually in the set
    */
   public final int getHighestScale() {
@@ -123,7 +123,7 @@ abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
   @Override
   public String toString() {
     return (((((this.m_data.length + " elements in range [") + //$NON-NLS-1$
-    this.m_lowerScaleBound) + ", ") + //$NON-NLS-1$
-    this.m_upperScaleBound) + ']');
+        this.m_lowerScaleBound) + ", ") + //$NON-NLS-1$
+        this.m_upperScaleBound) + ']');
   }
 }

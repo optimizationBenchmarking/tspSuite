@@ -8,7 +8,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multi
  * first, i.e., behaving somewhat like a VNS
  */
 public class MultiNeighborhoodSearchTest_VNS extends
-    MultiNeighborhoodSearchTest {
+MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTest_VNS() {

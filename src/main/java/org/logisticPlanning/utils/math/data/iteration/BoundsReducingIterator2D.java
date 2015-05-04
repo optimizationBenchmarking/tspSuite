@@ -13,7 +13,7 @@ import org.logisticPlanning.utils.math.data.point.Point2D;
  * again.
  */
 public final class BoundsReducingIterator2D extends
-    _PointIteratorWrapper2D {
+_PointIteratorWrapper2D {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -37,7 +37,7 @@ public final class BoundsReducingIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    * @param minX
@@ -81,7 +81,7 @@ public final class BoundsReducingIterator2D extends
 
   /**
    * check if a point is inside the bounds
-   * 
+   *
    * @param p
    *          the point
    * @return {@code true} if it is inside the boundaries, {@code false}

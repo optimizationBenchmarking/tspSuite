@@ -49,7 +49,7 @@ public abstract class Context extends Element {
 
   /**
    * create the context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir
@@ -87,7 +87,7 @@ public abstract class Context extends Element {
   /**
    * Obtain the base directory of this context. All output of this context
    * will be written to this directory.
-   * 
+   *
    * @return the base directory of this context
    */
   public final File getBaseDir() {
@@ -96,7 +96,7 @@ public abstract class Context extends Element {
 
   /**
    * Get the driver
-   * 
+   *
    * @return the driver
    */
   public DocumentDriver getDriver() {
@@ -105,18 +105,17 @@ public abstract class Context extends Element {
 
   /**
    * Perform any pre-processing necessary before creating a document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void doPreprocess() throws IOException {
     //
   }
 
   /**
    * Perform any pre-processing necessary before creating a document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -155,7 +154,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected void documentBegin(final Document d) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final Logger log;
 
     log = this.m_logger;
@@ -179,7 +178,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected void documentEnd(final Document h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final Logger log;
 
     if (this.m_state != Context.STATE_IN_DOCUMENT) {
@@ -198,7 +197,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   public final Document document() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     final Document h;
     h = this.documentCreate(this);
     this.documentBegin(h);
@@ -208,11 +207,10 @@ public abstract class Context extends Element {
   /**
    * Perform any post-processing necessary after creating a document, e.g.,
    * compiling the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void doPostprocess() throws IOException {
     //
   }
@@ -220,7 +218,7 @@ public abstract class Context extends Element {
   /**
    * Perform any post-processing necessary after creating a document, e.g.,
    * compiling the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -295,7 +293,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected URI relativizeFile(final File file) throws IOException,
-      URISyntaxException {
+  URISyntaxException {
     String s;
 
     s = FileUtils.getRelativeName(this.m_baseDir, file);
@@ -326,7 +324,7 @@ public abstract class Context extends Element {
   /**
    * Load a resource file from a given class into the directory of this
    * context
-   * 
+   *
    * @param clazz
    *          the class to load the resource from
    * @param name
@@ -341,9 +339,9 @@ public abstract class Context extends Element {
     final EEncoding s, d;
 
     d = ((encoding == null) ? EEncoding.BINARY : //
-        ((encoding == EEncoding.TEXT) ? //
-        this.m_driver.getPreferedTextEncoding()
-            : encoding));
+      ((encoding == EEncoding.TEXT) ? //
+          this.m_driver.getPreferedTextEncoding()
+          : encoding));
     s = ((d == EEncoding.BINARY) ? EEncoding.BINARY : EEncoding.TEXT);
     Transcoder.copyResourceToFile(clazz, name, s,//
         FileUtils.canonicalize(new File(this.m_baseDir, name)), d);
@@ -352,7 +350,7 @@ public abstract class Context extends Element {
 
   /**
    * Load a resource file into the directory of this context
-   * 
+   *
    * @param name
    *          the resource file name
    * @param encoding

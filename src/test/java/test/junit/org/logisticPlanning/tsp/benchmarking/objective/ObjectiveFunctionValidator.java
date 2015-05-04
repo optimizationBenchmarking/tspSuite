@@ -50,71 +50,71 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
   /** the pre-defined FEDEG0 DE messages */
   private static final String[][] FEDEG0_CONSUMED_DE_MESSAGES = new String[][] {
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed DEs of initialization log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed DEs of initialization log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed DEs of initialization log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed DEs of last-improvement log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed DEs of last-improvement log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed DEs of last-improvement log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed DEs of current log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed DEs of current log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed DEs of current log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      }, };
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed DEs of initialization log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed DEs of initialization log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed DEs of initialization log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed DEs of last-improvement log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed DEs of last-improvement log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed DEs of last-improvement log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed DEs of current log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed DEs of current log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed DEs of current log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    }, };
 
   /** the pre-defined FEDEG0 DE messages */
   private static final String[][] FEDEG0_CONSUMED_FE_MESSAGES = new String[][] {
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed FEs of initialization log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed FEs of initialization log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed FEs of initialization log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed FEs of last-improvement log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed FEs of last-improvement log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed FEs of last-improvement log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Consumed FEs of current log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
-          "Consumed FEs of current log point must be greater than zero since a run has finished.", //$NON-NLS-1$
-          "Consumed FEs of current log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      }, };
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed FEs of initialization log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed FEs of initialization log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed FEs of initialization log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed FEs of last-improvement log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed FEs of last-improvement log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed FEs of last-improvement log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Consumed FEs of current log point must be greater than zero since an initialization procedure has finished.", //$NON-NLS-1$
+      "Consumed FEs of current log point must be greater than zero since a run has finished.", //$NON-NLS-1$
+      "Consumed FEs of current log point must be greater than zero since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    }, };
 
   /** the pre-defined FEDEG0 F messages */
   private static final String[][] FEDEG0_CONSUMED_F_MESSAGES = new String[][] {
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
-          "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
-          "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
-          "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
-          "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      },
-      {
-          "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
-          "Best tour length stored in the current log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
-          "Best tour length stored in the current log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
-          "Best tour length stored in the current log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
-      }, };
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
+      "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
+      "Best tour length stored in the initialization log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
+      "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
+      "Best tour length stored in the last-improvement log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    },
+    {
+      "ERROR IN TEST STRUCTURE: This should never be reached.", //$NON-NLS-1$
+      "Best tour length stored in the current log point must be less then Long.MAX_VALUE since an initialization procedure has finished.", //$NON-NLS-1$
+      "Best tour length stored in the current log point must be less then Long.MAX_VALUE since a run has finished.", //$NON-NLS-1$
+      "Best tour length stored in the current log point must be less then Long.MAX_VALUE since both, an initialization procedure and a run, have finished.", //$NON-NLS-1$
+    }, };
 
   /**
    * Validate the state of an objective function. This class checks some
    * basic invariants that must always hold.
-   * 
+   *
    * @param i
    *          the instance of the benchmark problem, or {@code null} if
    *          unknown
@@ -154,53 +154,53 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     initDEs = init.getConsumedDEs();
     Assert
-        .assertTrue(//
-            "Consumed DEs of initialization log point must be greater or equal to zero.", //$NON-NLS-1$
-            initDEs >= 0l);
+    .assertTrue(//
+        "Consumed DEs of initialization log point must be greater or equal to zero.", //$NON-NLS-1$
+        initDEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[0][state],
-              initDEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[0][state],
+          initDEs > 0l);
     }
 
     initFEs = init.getConsumedFEs();
     Assert
-        .assertTrue(//
-            "Consumed FEs of the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
-            initFEs >= 0l);
+    .assertTrue(//
+        "Consumed FEs of the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
+        initFEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[0][state],
-              initFEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[0][state],
+          initFEs > 0l);
     }
 
     initTime = init.getConsumedRuntime();
     Assert
-        .assertTrue(//
-            "Consumed runtime of the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
-            initTime >= 0l);
+    .assertTrue(//
+        "Consumed runtime of the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
+        initTime >= 0l);
 
     Assert
-        .assertTrue(//
-            "Consumed runtime of the initialization log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
-            initTime <= 31536000000l);
+    .assertTrue(//
+        "Consumed runtime of the initialization log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
+        initTime <= 31536000000l);
 
     Assert
-        .assertTrue(//
-            "Consumed FEs of the initialization log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
-            initFEs <= initDEs);
+    .assertTrue(//
+        "Consumed FEs of the initialization log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
+        initFEs <= initDEs);
 
     initBestF = init.getBestF();
     Assert
-        .assertTrue(//
-            "Best tour length stored in the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
-            initBestF >= 0l);
+    .assertTrue(//
+        "Best tour length stored in the initialization log point must be greater or equal to zero.", //$NON-NLS-1$
+        initBestF >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT)) != 0) {
       Assert.assertTrue(
@@ -211,21 +211,21 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     if (i != null) {
       Assert
-          .assertTrue(//
-              "Best tour length stored in the initialization log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
-              initBestF >= i.optimum());
+      .assertTrue(//
+          "Best tour length stored in the initialization log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
+          initBestF >= i.optimum());
     }
 
     if (initFEs <= 0l) {
       Assert
-          .assertTrue(//
-              "No FE has been performed in the context of the initialization log point. The best tour length in initialization log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              initBestF >= Long.MAX_VALUE);
+      .assertTrue(//
+          "No FE has been performed in the context of the initialization log point. The best tour length in initialization log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          initBestF >= Long.MAX_VALUE);
     } else {
       Assert
-          .assertTrue(//
-              "At least one FE has been performed in the context of the initialization log point. The best tour length in initialization log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              initBestF < Long.MAX_VALUE);
+      .assertTrue(//
+          "At least one FE has been performed in the context of the initialization log point. The best tour length in initialization log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          initBestF < Long.MAX_VALUE);
     }
     // test the last-improvement log point
     lastImprovement = f.getLastImprovementLogPoint();
@@ -236,53 +236,53 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     lastImprovementDEs = lastImprovement.getConsumedDEs();
     Assert
-        .assertTrue(//
-            "Consumed DEs of last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
-            lastImprovementDEs >= 0l);
+    .assertTrue(//
+        "Consumed DEs of last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
+        lastImprovementDEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT | ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[1][state],
-              lastImprovementDEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[1][state],
+          lastImprovementDEs > 0l);
     }
 
     lastImprovementFEs = lastImprovement.getConsumedFEs();
     Assert
-        .assertTrue(//
-            "Consumed FEs of the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
-            lastImprovementFEs >= 0l);
+    .assertTrue(//
+        "Consumed FEs of the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
+        lastImprovementFEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT | ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[1][state],
-              lastImprovementFEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[1][state],
+          lastImprovementFEs > 0l);
     }
 
     lastImprovementTime = lastImprovement.getConsumedRuntime();
     Assert
-        .assertTrue(//
-            "Consumed runtime of the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
-            lastImprovementTime >= 0l);
+    .assertTrue(//
+        "Consumed runtime of the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
+        lastImprovementTime >= 0l);
 
     Assert
-        .assertTrue(//
-            "Consumed runtime of the last-improvement log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
-            lastImprovementTime <= 31536000000l);
+    .assertTrue(//
+        "Consumed runtime of the last-improvement log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
+        lastImprovementTime <= 31536000000l);
 
     Assert
-        .assertTrue(//
-            "Consumed FEs of the last-improvement log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
-            lastImprovementFEs <= lastImprovementDEs);
+    .assertTrue(//
+        "Consumed FEs of the last-improvement log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
+        lastImprovementFEs <= lastImprovementDEs);
 
     lastImprovementBestF = lastImprovement.getBestF();
     Assert
-        .assertTrue(//
-            "Best tour length stored in the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
-            lastImprovementBestF >= 0l);
+    .assertTrue(//
+        "Best tour length stored in the last-improvement log point must be greater or equal to zero.", //$NON-NLS-1$
+        lastImprovementBestF >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_INIT | ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert.assertTrue(
@@ -293,21 +293,21 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     if (i != null) {
       Assert
-          .assertTrue(//
-              "Best tour length stored in the last-improvement log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
-              lastImprovementBestF >= i.optimum());
+      .assertTrue(//
+          "Best tour length stored in the last-improvement log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
+          lastImprovementBestF >= i.optimum());
     }
 
     if (lastImprovementFEs <= 0l) {
       Assert
-          .assertTrue(//
-              "No FE has been performed in the context of the last-improvement log point. The best tour length in last-improvement log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              lastImprovementBestF >= Long.MAX_VALUE);
+      .assertTrue(//
+          "No FE has been performed in the context of the last-improvement log point. The best tour length in last-improvement log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          lastImprovementBestF >= Long.MAX_VALUE);
     } else {
       Assert
-          .assertTrue(//
-              "At least one FE has been performed in the context of the last-improvement log point. The best tour length in last-improvement log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              lastImprovementBestF < Long.MAX_VALUE);
+      .assertTrue(//
+          "At least one FE has been performed in the context of the last-improvement log point. The best tour length in last-improvement log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          lastImprovementBestF < Long.MAX_VALUE);
     }
     // test the current log point
     current = f.getCurrentLogPoint();
@@ -318,53 +318,53 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     currentDEs = current.getConsumedDEs();
     Assert
-        .assertTrue(//
-            "Consumed DEs of current log point must be greater or equal to zero.", //$NON-NLS-1$
-            currentDEs >= 0l);
+    .assertTrue(//
+        "Consumed DEs of current log point must be greater or equal to zero.", //$NON-NLS-1$
+        currentDEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[2][state],
-              currentDEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_DE_MESSAGES[2][state],
+          currentDEs > 0l);
     }
 
     currentFEs = current.getConsumedFEs();
     Assert
-        .assertTrue(//
-            "Consumed FEs of the current log point must be greater or equal to zero.", //$NON-NLS-1$
-            currentFEs >= 0l);
+    .assertTrue(//
+        "Consumed FEs of the current log point must be greater or equal to zero.", //$NON-NLS-1$
+        currentFEs >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert
-          .assertTrue(
-              //
-              ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[2][state],
-              currentFEs > 0l);
+      .assertTrue(
+          //
+          ObjectiveFunctionValidator.FEDEG0_CONSUMED_FE_MESSAGES[2][state],
+          currentFEs > 0l);
     }
 
     currentTime = current.getConsumedRuntime();
     Assert
-        .assertTrue(//
-            "Consumed runtime of the current log point must be greater or equal to zero.", //$NON-NLS-1$
-            currentTime >= 0l);
+    .assertTrue(//
+        "Consumed runtime of the current log point must be greater or equal to zero.", //$NON-NLS-1$
+        currentTime >= 0l);
 
     Assert
-        .assertTrue(//
-            "Consumed runtime of the current log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
-            currentTime <= 31536000000l);
+    .assertTrue(//
+        "Consumed runtime of the current log point must be less or equal to 1 years (31536000000 milliseconds) in order to be considered as sane.", //$NON-NLS-1$
+        currentTime <= 31536000000l);
 
     Assert
-        .assertTrue(//
-            "Consumed FEs of the current log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
-            currentFEs <= currentDEs);
+    .assertTrue(//
+        "Consumed FEs of the current log point must be less or equal then the amount of consumed DEs.", //$NON-NLS-1$
+        currentFEs <= currentDEs);
 
     currentBestF = current.getBestF();
     Assert
-        .assertTrue(//
-            "Best tour length stored in the current log point must be greater or equal to zero.", //$NON-NLS-1$
-            currentBestF >= 0l);
+    .assertTrue(//
+        "Best tour length stored in the current log point must be greater or equal to zero.", //$NON-NLS-1$
+        currentBestF >= 0l);
 
     if ((state & (ObjectiveFunctionValidator.STATE_HAS_FINISHED_RUN)) != 0) {
       Assert.assertTrue(
@@ -375,21 +375,21 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
 
     if (i != null) {
       Assert
-          .assertTrue(//
-              "Best tour length stored in the current log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
-              currentBestF >= i.optimum());
+      .assertTrue(//
+          "Best tour length stored in the current log point must be greater or equal to the globally optimal (shortest) tour length.", //$NON-NLS-1$
+          currentBestF >= i.optimum());
     }
 
     if (currentFEs <= 0l) {
       Assert
-          .assertTrue(//
-              "No FE has been performed in the context of the current log point. The best tour length in current log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              currentBestF >= Long.MAX_VALUE);
+      .assertTrue(//
+          "No FE has been performed in the context of the current log point. The best tour length in current log point therefore cannot be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          currentBestF >= Long.MAX_VALUE);
     } else {
       Assert
-          .assertTrue(//
-              "At least one FE has been performed in the context of the current log point. The best tour length in current log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
-              currentBestF < Long.MAX_VALUE);
+      .assertTrue(//
+          "At least one FE has been performed in the context of the current log point. The best tour length in current log point therefore must be better than Long.MAX_VALUE.",//$NON-NLS-1$
+          currentBestF < Long.MAX_VALUE);
     }
 
     // test the relationship between the single log points
@@ -400,9 +400,9 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
     // log point, certain relationships must hold
 
     Assert
-        .assertTrue(//
-            "Best tour length stored in the last-improvement log point must be shorter or equal to the best tour length stored in the initialization log point.", //$NON-NLS-1$
-            lastImprovementBestF <= initBestF);
+    .assertTrue(//
+        "Best tour length stored in the last-improvement log point must be shorter or equal to the best tour length stored in the initialization log point.", //$NON-NLS-1$
+        lastImprovementBestF <= initBestF);
 
     // compare the states of the current log point and the initialization
     // log point
@@ -410,24 +410,24 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
     // point, certain relationships must hold
 
     Assert
-        .assertTrue(//
-            "Best tour length stored in the current log point must be shorter or equal to the best tour length stored in the initialization log point.", //$NON-NLS-1$
-            currentBestF <= initBestF);
+    .assertTrue(//
+        "Best tour length stored in the current log point must be shorter or equal to the best tour length stored in the initialization log point.", //$NON-NLS-1$
+        currentBestF <= initBestF);
 
     Assert
-        .assertTrue(//
-            "The consumed DEs of the current log point must be greater or equal than the consumed DEs of the initialization log point ", //$NON-NLS-1$
-            currentDEs >= initDEs);
+    .assertTrue(//
+        "The consumed DEs of the current log point must be greater or equal than the consumed DEs of the initialization log point ", //$NON-NLS-1$
+        currentDEs >= initDEs);
 
     Assert
-        .assertTrue(//
-            "The consumed FEs of the current log point must be greater or equal than the consumed FEs of the initialization log point ", //$NON-NLS-1$
-            currentFEs >= initFEs);
+    .assertTrue(//
+        "The consumed FEs of the current log point must be greater or equal than the consumed FEs of the initialization log point ", //$NON-NLS-1$
+        currentFEs >= initFEs);
 
     Assert
-        .assertTrue(//
-            "The consumed runtime of the current log point must be greater or equal than the consumed runtime of the initialization log point ", //$NON-NLS-1$
-            currentTime >= initTime);
+    .assertTrue(//
+        "The consumed runtime of the current log point must be greater or equal than the consumed runtime of the initialization log point ", //$NON-NLS-1$
+        currentTime >= initTime);
 
     // compare the states of the current log point and the last-improvement
     // log point
@@ -435,24 +435,24 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
     // point, certain relationships must hold
 
     Assert
-        .assertTrue(//
-            "Best tour length stored in the current log point must be shorter or equal to the best tour length stored in the last-improvement log point.", //$NON-NLS-1$
-            currentBestF <= lastImprovementBestF);
+    .assertTrue(//
+        "Best tour length stored in the current log point must be shorter or equal to the best tour length stored in the last-improvement log point.", //$NON-NLS-1$
+        currentBestF <= lastImprovementBestF);
 
     Assert
-        .assertTrue(//
-            "The consumed DEs of the current log point must be greater or equal than the consumed DEs of the last-improvement log point ", //$NON-NLS-1$
-            currentDEs >= lastImprovementDEs);
+    .assertTrue(//
+        "The consumed DEs of the current log point must be greater or equal than the consumed DEs of the last-improvement log point ", //$NON-NLS-1$
+        currentDEs >= lastImprovementDEs);
 
     Assert
-        .assertTrue(//
-            "The consumed FEs of the current log point must be greater or equal than the consumed FEs of the last-improvement log point ", //$NON-NLS-1$
-            currentFEs >= lastImprovementFEs);
+    .assertTrue(//
+        "The consumed FEs of the current log point must be greater or equal than the consumed FEs of the last-improvement log point ", //$NON-NLS-1$
+        currentFEs >= lastImprovementFEs);
 
     Assert
-        .assertTrue(//
-            "The consumed runtime of the current log point must be greater or equal than the consumed runtime of the last-improvement log point ", //$NON-NLS-1$
-            currentTime >= lastImprovementTime);
+    .assertTrue(//
+        "The consumed runtime of the current log point must be greater or equal than the consumed runtime of the last-improvement log point ", //$NON-NLS-1$
+        currentTime >= lastImprovementTime);
 
     // if some FEs have been performed, we can conduct additional tests
     if (currentFEs > 0l) {
@@ -500,16 +500,16 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
       f.getCopyOfBest(tour);
 
       Assert
-          .assertEquals(//
-              "The length of the best tour known to the algorithm must agree to the tour length calculated by the objective function and stored in the current log point.", //$NON-NLS-1$
-              currentBestF, dc.evaluate(tour));
+      .assertEquals(//
+          "The length of the best tour known to the algorithm must agree to the tour length calculated by the objective function and stored in the current log point.", //$NON-NLS-1$
+          currentBestF, dc.evaluate(tour));
 
       sum = this.validatePath(tour, dc);
 
       Assert
-          .assertEquals(//
-              "The total distance calculated by the distance computer disagrees with the distance found by the objective function and the evaluation result of the distance computer.", //$NON-NLS-1$
-              currentBestF, sum);
+      .assertEquals(//
+          "The total distance calculated by the distance computer disagrees with the distance found by the objective function and the evaluation result of the distance computer.", //$NON-NLS-1$
+          currentBestF, sum);
     }
   }
 
@@ -517,7 +517,7 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
    * Apply a test to a given problem instance. This method implements the
    * framework logic to load instances, link their output to temporary
    * files, and run a certain test.
-   * 
+   *
    * @param inst
    *          the benchmark instance
    * @param test

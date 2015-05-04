@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation heuristic recombination operator
  */
 public class PermutationHeuristicCrossoverTest extends
-    PermutationOperatorTest {
+PermutationOperatorTest {
 
   /** instantiate */
   public PermutationHeuristicCrossoverTest() {

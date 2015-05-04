@@ -7,7 +7,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -18,7 +18,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -29,7 +29,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -40,7 +40,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -51,7 +51,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -62,7 +62,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code boolean} value to a {@code type.type}.
-   * 
+   *
    * @param b
    *          the {@code boolean}
    * @return the corresponding {@code type.type}
@@ -73,7 +73,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}
@@ -84,7 +84,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}
@@ -95,7 +95,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}
@@ -106,7 +106,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}
@@ -117,7 +117,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}
@@ -128,7 +128,7 @@ public final class NumericalLogic {
 
   /**
    * Transform a {@code type.type} value to a {@code boolean}.
-   * 
+   *
    * @param v
    *          the {@code type.type}
    * @return the corresponding {@code boolean}

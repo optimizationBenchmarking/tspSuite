@@ -17,7 +17,7 @@ public class Equation extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -33,7 +33,7 @@ public class Equation extends AbstractLabeledElement {
 
   /**
    * Get the equation index
-   * 
+   *
    * @return the equation index
    */
   public final int getEquationIndex() {
@@ -84,7 +84,7 @@ public class Equation extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void equationBodyEnd(final EquationBody h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
 
     if (this.m_state != Equation.STATE_IN_BODY) {
       throw new IllegalStateException(//
@@ -98,7 +98,7 @@ public class Equation extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public EquationBody equationBody() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.equationBody();
   }
 

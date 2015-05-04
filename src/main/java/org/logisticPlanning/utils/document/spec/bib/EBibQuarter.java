@@ -25,7 +25,7 @@ public enum EBibQuarter {
 
   /**
    * create
-   * 
+   *
    * @param sh
    *          the short name
    * @param lo
@@ -38,7 +38,7 @@ public enum EBibQuarter {
 
   /**
    * Get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -47,7 +47,7 @@ public enum EBibQuarter {
 
   /**
    * Get the long name
-   * 
+   *
    * @return the long name
    */
   public final String getLongName() {

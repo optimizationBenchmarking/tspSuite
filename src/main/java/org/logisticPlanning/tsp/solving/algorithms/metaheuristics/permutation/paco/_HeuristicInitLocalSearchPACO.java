@@ -8,7 +8,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.utils.config.Configuration;
 
 /**
- * 
+ *
  <p>
  * A version of the {@link PACO heuristically-initialized Population-based
  * ACO} that uses a local search for refining its candidate solutions.
@@ -298,7 +298,7 @@ abstract class _HeuristicInitLocalSearchPACO extends HeuristicInitPACO {
 
   /**
    * the neighborhood manager
-   * 
+   *
    * @serial a non-null instance
    */
   private UnaryOperator<int[]> m_mutation;
@@ -311,7 +311,7 @@ abstract class _HeuristicInitLocalSearchPACO extends HeuristicInitPACO {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -322,13 +322,14 @@ abstract class _HeuristicInitLocalSearchPACO extends HeuristicInitPACO {
 
   /**
    * Create the local search operator to be used
-   * 
+   *
    * @return the local search operator to be used
    */
   protected abstract UnaryOperator<int[]> createLocalSearch();
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final _HeuristicInitLocalSearchPACO clone() {
     _HeuristicInitLocalSearchPACO res;
     res = ((_HeuristicInitLocalSearchPACO) (super.clone()));

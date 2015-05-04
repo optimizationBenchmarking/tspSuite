@@ -9,7 +9,7 @@ public abstract class AbstractTextBlock extends AbstractTextComplex {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -29,21 +29,21 @@ public abstract class AbstractTextBlock extends AbstractTextComplex {
   /** {@inheritDoc} */
   @Override
   protected void itemizationBegin(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.itemizationBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void itemizationEnd(final Itemization h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.itemizationEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public Itemization itemization() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.itemization();
   }
 
@@ -57,21 +57,21 @@ public abstract class AbstractTextBlock extends AbstractTextComplex {
   /** {@inheritDoc} */
   @Override
   protected void enumerationBegin(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.enumerationBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void enumerationEnd(final Enumeration h) throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     super.enumerationEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public Enumeration enumeration() throws IOException,
-      IllegalStateException {
+  IllegalStateException {
     return super.enumeration();
   }
 }

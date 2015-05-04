@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea
  * the test of the permutation EA
  */
 public class PermutationEAParentsDieTest extends
-    PermutationEAParentsSurviveTest {
+PermutationEAParentsSurviveTest {
 
   /** create */
   public PermutationEAParentsDieTest() {

@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Multi-Neighborhood mutation
  */
 public class HeuristicInitMultiNeighborhoodSavingsMAParentsSurviveTest
-    extends TSPAlgorithmSymmetricTest {
+extends TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodSavingsMAParentsSurviveTest() {

@@ -147,7 +147,7 @@ public class CreatorInfo extends Configurable {
    * The name the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_NAME}, {@link #getResearcherName()}, and
    * {@link #setResearcherName(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_researcherName;
@@ -156,7 +156,7 @@ public class CreatorInfo extends Configurable {
    * The website of the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_WEBSITE}, {@link #getResearcherWebsite()},
    * and {@link #setResearcherWebsite(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_researcherWebsite;
@@ -165,7 +165,7 @@ public class CreatorInfo extends Configurable {
    * The email address of the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_EMAIL}, {@link #getResearcherEmail()}, and
    * {@link #setResearcherEmail(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_researcherEmail;
@@ -174,7 +174,7 @@ public class CreatorInfo extends Configurable {
    * Additional information about the researcher who conducted the
    * experiment. See {@link #PARAM_RESEARCHER_INFO},
    * {@link #getResearcherInfo()}, and {@link #setResearcherInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_researcherInfo;
@@ -183,7 +183,7 @@ public class CreatorInfo extends Configurable {
    * The name of the research group that conducted the experiment run. See
    * {@link #PARAM_GROUP_NAME}, {@link #getGroupName()}, and
    * {@link #setGroupName(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_groupName;
@@ -193,7 +193,7 @@ public class CreatorInfo extends Configurable {
    * the experiment run. See {@link #PARAM_GROUP_INSTITUTION},
    * {@link #getGroupInstitution()}, and
    * {@link #setGroupInstitution(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_groupInstitution;
@@ -202,7 +202,7 @@ public class CreatorInfo extends Configurable {
    * The address of the research group that conducted the experiment run.
    * See {@link #PARAM_GROUP_ADDRESS}, {@link #getGroupAddress()}, and
    * {@link #setGroupAddress(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_groupAddress;
@@ -211,7 +211,7 @@ public class CreatorInfo extends Configurable {
    * The website of the research group that conducted the experiment run.
    * See {@link #PARAM_GROUP_WEBSITE}, {@link #getGroupWebsite()}, and
    * {@link #setGroupWebsite(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_groupWebsite;
@@ -220,7 +220,7 @@ public class CreatorInfo extends Configurable {
    * Additional information about the research group that conducted the
    * experiment run. See {@link #PARAM_GROUP_INFO}, {@link #getGroupInfo()}
    * , and {@link #setGroupInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_groupInfo;
@@ -230,7 +230,7 @@ public class CreatorInfo extends Configurable {
    * may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_NAME}, {@link #getProjectName()}, and
    * {@link #setProjectName(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_projectName;
@@ -240,7 +240,7 @@ public class CreatorInfo extends Configurable {
    * may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_WEBSITE}, {@link #getProjectWebsite()}, and
    * {@link #setProjectWebsite(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_projectWebsite;
@@ -250,7 +250,7 @@ public class CreatorInfo extends Configurable {
    * was created. This may, e.g., be a personal project or a funded
    * project. See {@link #PARAM_PROJECT_INFO}, {@link #getProjectInfo()},
    * and {@link #setProjectInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_projectInfo;
@@ -259,7 +259,7 @@ public class CreatorInfo extends Configurable {
    * Information regarding the funding of the project during which the log
    * file was created. See {@link #PARAM_FUNDING_INFO},
    * {@link #getFundingInfo()}, and {@link #setFundingInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_fundingInfo;
@@ -269,7 +269,7 @@ public class CreatorInfo extends Configurable {
    * then this field holds the information about that publication. See
    * {@link #PARAM_PUBLICATION_INFO}, {@link #getPublicationInfo()}, and
    * {@link #setPublicationInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_publicationInfo;
@@ -277,7 +277,7 @@ public class CreatorInfo extends Configurable {
   /**
    * Copyright information. See {@link #PARAM_COPYRIGHT_INFO},
    * {@link #getCopyrightInfo()}, and {@link #setCopyrightInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_copyrightInfo;
@@ -287,7 +287,7 @@ public class CreatorInfo extends Configurable {
    * that was used to solve the benchmark cases. See
    * {@link #PARAM_LICENSE_INFO}, {@link #getLicenseInfo()}, and
    * {@link #setLicenseInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_licenseInfo;
@@ -295,7 +295,7 @@ public class CreatorInfo extends Configurable {
   /**
    * Any additional information text. See {@link #PARAM_ADDITIONAL_INFO},
    * {@link #getAdditionalInfo()}, and {@link #setAdditionalInfo(String)}
-   * 
+   *
    * @serial serializable field
    */
   private String m_additionalInfo;
@@ -311,7 +311,7 @@ public class CreatorInfo extends Configurable {
    * Get The name the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_NAME}, {@link #setResearcherName(String)},
    * and {@link #m_researcherName}.
-   * 
+   *
    * @return The name the researcher who conducted the experiment.
    */
   public final String getResearcherName() {
@@ -322,7 +322,7 @@ public class CreatorInfo extends Configurable {
    * Set The name the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_NAME}, {@link #getResearcherName()}, and
    * {@link #m_researcherName}.
-   * 
+   *
    * @param researcherName
    *          The name the researcher who conducted the experiment.
    */
@@ -337,7 +337,7 @@ public class CreatorInfo extends Configurable {
    * {@link #PARAM_RESEARCHER_WEBSITE},
    * {@link #setResearcherWebsite(String)}, and
    * {@link #m_researcherWebsite}.
-   * 
+   *
    * @return The website of the researcher who conducted the experiment.
    */
   public final String getResearcherWebsite() {
@@ -348,7 +348,7 @@ public class CreatorInfo extends Configurable {
    * Set The website of the researcher who conducted the experiment. See
    * {@link #PARAM_RESEARCHER_WEBSITE}, {@link #getResearcherWebsite()},
    * and {@link #m_researcherWebsite}.
-   * 
+   *
    * @param researcherWebsite
    *          The website of the researcher who conducted the experiment.
    */
@@ -362,7 +362,7 @@ public class CreatorInfo extends Configurable {
    * Get The email address of the researcher who conducted the experiment.
    * See {@link #PARAM_RESEARCHER_EMAIL},
    * {@link #setResearcherEmail(String)}, and {@link #m_researcherEmail}.
-   * 
+   *
    * @return The email address of the researcher who conducted the
    *         experiment.
    */
@@ -374,7 +374,7 @@ public class CreatorInfo extends Configurable {
    * Set The email address of the researcher who conducted the experiment.
    * See {@link #PARAM_RESEARCHER_EMAIL}, {@link #getResearcherEmail()},
    * and {@link #m_researcherEmail}.
-   * 
+   *
    * @param researcherEmail
    *          The email address of the researcher who conducted the
    *          experiment.
@@ -389,7 +389,7 @@ public class CreatorInfo extends Configurable {
    * Get Additional information about the researcher who conducted the
    * experiment. See {@link #PARAM_RESEARCHER_INFO},
    * {@link #setResearcherInfo(String)}, and {@link #m_researcherInfo}.
-   * 
+   *
    * @return Additional information about the researcher who conducted the
    *         experiment.
    */
@@ -401,7 +401,7 @@ public class CreatorInfo extends Configurable {
    * Set Additional information about the researcher who conducted the
    * experiment. See {@link #PARAM_RESEARCHER_INFO},
    * {@link #getResearcherInfo()}, and {@link #m_researcherInfo}.
-   * 
+   *
    * @param researcherInfo
    *          Additional information about the researcher who conducted the
    *          experiment.
@@ -416,7 +416,7 @@ public class CreatorInfo extends Configurable {
    * Get The name of the research group that conducted the experiment run.
    * See {@link #PARAM_GROUP_NAME}, {@link #setGroupName(String)}, and
    * {@link #m_groupName}.
-   * 
+   *
    * @return The name of the research group that conducted the experiment
    *         run.
    */
@@ -428,7 +428,7 @@ public class CreatorInfo extends Configurable {
    * Set The name of the research group that conducted the experiment run.
    * See {@link #PARAM_GROUP_NAME}, {@link #getGroupName()}, and
    * {@link #m_groupName}.
-   * 
+   *
    * @param groupName
    *          The name of the research group that conducted the experiment
    *          run.
@@ -443,7 +443,7 @@ public class CreatorInfo extends Configurable {
    * Get The name of the institution hosting the research group that
    * conducted the experiment run. See {@link #PARAM_GROUP_INSTITUTION},
    * {@link #setGroupInstitution(String)}, and {@link #m_groupInstitution}.
-   * 
+   *
    * @return The name of the institution hosting the research group that
    *         conducted the experiment run.
    */
@@ -455,7 +455,7 @@ public class CreatorInfo extends Configurable {
    * Set The name of the institution hosting the research group that
    * conducted the experiment run. See {@link #PARAM_GROUP_INSTITUTION},
    * {@link #getGroupInstitution()}, and {@link #m_groupInstitution}.
-   * 
+   *
    * @param groupInstitution
    *          The name of the institution hosting the research group that
    *          conducted the experiment run.
@@ -470,7 +470,7 @@ public class CreatorInfo extends Configurable {
    * Get The address of the research group that conducted the experiment
    * run. See {@link #PARAM_GROUP_ADDRESS},
    * {@link #setGroupAddress(String)}, and {@link #m_groupAddress}.
-   * 
+   *
    * @return The address of the research group that conducted the
    *         experiment run.
    */
@@ -482,7 +482,7 @@ public class CreatorInfo extends Configurable {
    * Set The address of the research group that conducted the experiment
    * run. See {@link #PARAM_GROUP_ADDRESS}, {@link #getGroupAddress()}, and
    * {@link #m_groupAddress}.
-   * 
+   *
    * @param groupAddress
    *          The address of the research group that conducted the
    *          experiment run.
@@ -497,7 +497,7 @@ public class CreatorInfo extends Configurable {
    * Get The website of the research group that conducted the experiment
    * run. See {@link #PARAM_GROUP_WEBSITE},
    * {@link #setGroupWebsite(String)}, and {@link #m_groupWebsite}.
-   * 
+   *
    * @return The website of the research group that conducted the
    *         experiment run.
    */
@@ -509,7 +509,7 @@ public class CreatorInfo extends Configurable {
    * Set The website of the research group that conducted the experiment
    * run. See {@link #PARAM_GROUP_WEBSITE}, {@link #getGroupWebsite()}, and
    * {@link #m_groupWebsite}.
-   * 
+   *
    * @param groupWebsite
    *          The website of the research group that conducted the
    *          experiment run.
@@ -524,7 +524,7 @@ public class CreatorInfo extends Configurable {
    * Get Additional information about the research group that conducted the
    * experiment run. See {@link #PARAM_GROUP_INFO},
    * {@link #setGroupInfo(String)}, and {@link #m_groupInfo}.
-   * 
+   *
    * @return Additional information about the research group that conducted
    *         the experiment run.
    */
@@ -536,7 +536,7 @@ public class CreatorInfo extends Configurable {
    * Set Additional information about the research group that conducted the
    * experiment run. See {@link #PARAM_GROUP_INFO}, {@link #getGroupInfo()}
    * , and {@link #m_groupInfo}.
-   * 
+   *
    * @param groupInfo
    *          Additional information about the research group that
    *          conducted the experiment run.
@@ -552,7 +552,7 @@ public class CreatorInfo extends Configurable {
    * This may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_NAME}, {@link #setProjectName(String)}, and
    * {@link #m_projectName}.
-   * 
+   *
    * @return The name of the project during which the log file was created.
    *         This may, e.g., be a personal project or a funded project.
    */
@@ -565,7 +565,7 @@ public class CreatorInfo extends Configurable {
    * This may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_NAME}, {@link #getProjectName()}, and
    * {@link #m_projectName}.
-   * 
+   *
    * @param projectName
    *          The name of the project during which the log file was
    *          created. This may, e.g., be a personal project or a funded
@@ -582,7 +582,7 @@ public class CreatorInfo extends Configurable {
    * This may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_WEBSITE}, {@link #setProjectWebsite(String)},
    * and {@link #m_projectWebsite}.
-   * 
+   *
    * @return The website of the project during which the log file was
    *         created. This may, e.g., be a personal project or a funded
    *         project.
@@ -596,7 +596,7 @@ public class CreatorInfo extends Configurable {
    * This may, e.g., be a personal project or a funded project. See
    * {@link #PARAM_PROJECT_WEBSITE}, {@link #getProjectWebsite()}, and
    * {@link #m_projectWebsite}.
-   * 
+   *
    * @param projectWebsite
    *          The website of the project during which the log file was
    *          created. This may, e.g., be a personal project or a funded
@@ -613,7 +613,7 @@ public class CreatorInfo extends Configurable {
    * file was created. This may, e.g., be a personal project or a funded
    * project. See {@link #PARAM_PROJECT_INFO},
    * {@link #setProjectInfo(String)}, and {@link #m_projectInfo}.
-   * 
+   *
    * @return Additional information regarding the project during which the
    *         log file was created. This may, e.g., be a personal project or
    *         a funded project.
@@ -627,7 +627,7 @@ public class CreatorInfo extends Configurable {
    * file was created. This may, e.g., be a personal project or a funded
    * project. See {@link #PARAM_PROJECT_INFO}, {@link #getProjectInfo()},
    * and {@link #m_projectInfo}.
-   * 
+   *
    * @param projectInfo
    *          Additional information regarding the project during which the
    *          log file was created. This may, e.g., be a personal project
@@ -643,7 +643,7 @@ public class CreatorInfo extends Configurable {
    * Get Information regarding the funding of the project during which the
    * log file was created. See {@link #PARAM_FUNDING_INFO},
    * {@link #setFundingInfo(String)}, and {@link #m_fundingInfo}.
-   * 
+   *
    * @return Information regarding the funding of the project during which
    *         the log file was created.
    */
@@ -655,7 +655,7 @@ public class CreatorInfo extends Configurable {
    * Set Information regarding the funding of the project during which the
    * log file was created. See {@link #PARAM_FUNDING_INFO},
    * {@link #getFundingInfo()}, and {@link #m_fundingInfo}.
-   * 
+   *
    * @param fundingInfo
    *          Information regarding the funding of the project during which
    *          the log file was created.
@@ -671,7 +671,7 @@ public class CreatorInfo extends Configurable {
    * somewhere, then this field holds the information about that
    * publication. See {@link #PARAM_PUBLICATION_INFO},
    * {@link #setPublicationInfo(String)}, and {@link #m_publicationInfo}.
-   * 
+   *
    * @return If the algorithm used in this experiment has been published
    *         somewhere, then this field holds the information about that
    *         publication.
@@ -685,7 +685,7 @@ public class CreatorInfo extends Configurable {
    * somewhere, then this field holds the information about that
    * publication. See {@link #PARAM_PUBLICATION_INFO},
    * {@link #getPublicationInfo()}, and {@link #m_publicationInfo}.
-   * 
+   *
    * @param publicationInfo
    *          If the algorithm used in this experiment has been published
    *          somewhere, then this field holds the information about that
@@ -700,7 +700,7 @@ public class CreatorInfo extends Configurable {
   /**
    * Get Copyright information. See {@link #PARAM_COPYRIGHT_INFO},
    * {@link #setCopyrightInfo(String)}, and {@link #m_copyrightInfo}.
-   * 
+   *
    * @return Copyright information.
    */
   public final String getCopyrightInfo() {
@@ -710,7 +710,7 @@ public class CreatorInfo extends Configurable {
   /**
    * Set Copyright information. See {@link #PARAM_COPYRIGHT_INFO},
    * {@link #getCopyrightInfo()}, and {@link #m_copyrightInfo}.
-   * 
+   *
    * @param copyrightInfo
    *          Copyright information.
    */
@@ -725,7 +725,7 @@ public class CreatorInfo extends Configurable {
    * that was used to solve the benchmark cases. See
    * {@link #PARAM_LICENSE_INFO}, {@link #setLicenseInfo(String)}, and
    * {@link #m_licenseInfo}.
-   * 
+   *
    * @return Information about the license under which the software is
    *         provided that was used to solve the benchmark cases.
    */
@@ -738,7 +738,7 @@ public class CreatorInfo extends Configurable {
    * that was used to solve the benchmark cases. See
    * {@link #PARAM_LICENSE_INFO}, {@link #getLicenseInfo()}, and
    * {@link #m_licenseInfo}.
-   * 
+   *
    * @param licenseInfo
    *          Information about the license under which the software is
    *          provided that was used to solve the benchmark cases.
@@ -753,7 +753,7 @@ public class CreatorInfo extends Configurable {
    * Get Any additional information text. See
    * {@link #PARAM_ADDITIONAL_INFO}, {@link #setAdditionalInfo(String)},
    * and {@link #m_additionalInfo}.
-   * 
+   *
    * @return Any additional information text.
    */
   public final String getAdditionalInfo() {
@@ -764,7 +764,7 @@ public class CreatorInfo extends Configurable {
    * Set Any additional information text. See
    * {@link #PARAM_ADDITIONAL_INFO}, {@link #getAdditionalInfo()}, and
    * {@link #m_additionalInfo}.
-   * 
+   *
    * @param additionalInfo
    *          Any additional information text.
    */
@@ -986,7 +986,7 @@ public class CreatorInfo extends Configurable {
 
   /**
    * Check if any internal information has been set
-   * 
+   *
    * @return {@code true} if and only if some internal information has been
    *         set
    */

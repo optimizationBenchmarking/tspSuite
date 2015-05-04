@@ -33,7 +33,7 @@ public class StableProduct extends ScalarAggregate {
 
   /**
    * Visit a given {@code double}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -48,42 +48,42 @@ public class StableProduct extends ScalarAggregate {
 
     setInfinity: {
       checkInfinity: {
-        if (value >= Double.POSITIVE_INFINITY) {
-          d = 1d;
-          break checkInfinity;
-        }
-        if (value <= Double.NEGATIVE_INFINITY) {
-          d = (-1d);
-          break checkInfinity;
-        }
-        break setInfinity;
+      if (value >= Double.POSITIVE_INFINITY) {
+        d = 1d;
+        break checkInfinity;
       }
+      if (value <= Double.NEGATIVE_INFINITY) {
+        d = (-1d);
+        break checkInfinity;
+      }
+      break setInfinity;
+    }
 
-      if ((this.m_state & StableProduct.STATE_INF) != 0) {
-        // ok, we already have infinity before, so m_prod is either -1,
-        // 0, or 1
-        this.m_prod *= d;
-        return;
-      }
-
-      // no infinity yet
-      if ((this.m_state & StableProduct.STATE_FINITE) != 0) {
-        // ok, we multiplied finite numbers
-        if (this.m_prod > 0d) {
-          this.m_prod = d;
-        } else {
-          if (this.m_prod < 0d) {
-            this.m_prod = (-d);
-          } else {
-            // else: underflow to zero has happened, mark as NaN
-            this.m_state |= StableProduct.STATE_NAN;
-          }
-        }
-      } else {// infinity is the first thing we encounter
-        this.m_prod = d;
-      }
-      this.m_state |= StableProduct.STATE_INF;
+    if ((this.m_state & StableProduct.STATE_INF) != 0) {
+      // ok, we already have infinity before, so m_prod is either -1,
+      // 0, or 1
+      this.m_prod *= d;
       return;
+    }
+
+    // no infinity yet
+    if ((this.m_state & StableProduct.STATE_FINITE) != 0) {
+      // ok, we multiplied finite numbers
+      if (this.m_prod > 0d) {
+        this.m_prod = d;
+      } else {
+        if (this.m_prod < 0d) {
+          this.m_prod = (-d);
+        } else {
+          // else: underflow to zero has happened, mark as NaN
+          this.m_state |= StableProduct.STATE_NAN;
+        }
+      }
+    } else {// infinity is the first thing we encounter
+      this.m_prod = d;
+    }
+    this.m_state |= StableProduct.STATE_INF;
+    return;
     }
 
     if (value != value) {
@@ -108,7 +108,7 @@ public class StableProduct extends ScalarAggregate {
 
   /**
    * Obtain the current running sum.
-   * 
+   *
    * @return the current running sum
    */
   @Override

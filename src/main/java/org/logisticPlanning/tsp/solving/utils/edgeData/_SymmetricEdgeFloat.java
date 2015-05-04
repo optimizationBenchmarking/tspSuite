@@ -46,8 +46,8 @@ package org.logisticPlanning.tsp.solving.utils.edgeData;
  * Thus, if {@code n} rises or you allocate many objects, you may get an
  * {@link java.lang.OutOfMemoryError}.
  * </p>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -59,7 +59,7 @@ final class _SymmetricEdgeFloat extends EdgeFloat {
 
   /**
    * create the _SymmetricEdgeFloat
-   * 
+   *
    * @param n
    *          the number of nodes
    */

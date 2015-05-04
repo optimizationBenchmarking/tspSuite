@@ -13,7 +13,7 @@ public class PriorityEdge extends Edge {
 
   /**
    * Create an edge with the given nodes and priority.
-   * 
+   *
    * @param pa
    *          the first node
    * @param pb
@@ -55,7 +55,7 @@ public class PriorityEdge extends Edge {
 
   /**
    * Copy the data from priority edge {@code e} into this edge
-   * 
+   *
    * @param e
    *          the edge to copy
    */

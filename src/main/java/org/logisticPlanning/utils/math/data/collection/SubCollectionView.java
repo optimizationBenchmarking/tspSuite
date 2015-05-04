@@ -9,7 +9,7 @@ public final class SubCollectionView extends _SubView {
 
   /**
    * Create a new point view view
-   * 
+   *
    * @param view
    *          the view
    * @param dims
@@ -48,7 +48,7 @@ public final class SubCollectionView extends _SubView {
 
   /**
    * unpack the dimensions
-   * 
+   *
    * @param subDims
    *          the sub dimensions
    * @param dims

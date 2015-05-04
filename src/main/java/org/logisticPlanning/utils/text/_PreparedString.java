@@ -16,7 +16,7 @@ final class _PreparedString {
 
   /**
    * create the prepared string
-   * 
+   *
    * @param s
    *          the string
    */
@@ -28,7 +28,7 @@ final class _PreparedString {
 
   /**
    * get a boolean return value
-   * 
+   *
    * @param b
    *          the boolean to be formatted
    * @return the return value
@@ -39,7 +39,7 @@ final class _PreparedString {
 
   /**
    * get an int return value
-   * 
+   *
    * @param b
    *          the int to be formatted
    * @return the return value
@@ -61,7 +61,7 @@ final class _PreparedString {
 
   /**
    * get a long return value
-   * 
+   *
    * @param b
    *          the long to be formatted
    * @return the return value
@@ -83,7 +83,7 @@ final class _PreparedString {
 
   /**
    * get a double return value
-   * 
+   *
    * @param b
    *          the double to be formatted
    * @return the return value
@@ -105,7 +105,7 @@ final class _PreparedString {
 
   /**
    * Get the next string
-   * 
+   *
    * @return the next string
    */
   @SuppressWarnings("fallthrough")
@@ -127,7 +127,7 @@ final class _PreparedString {
     newState = this.m_state;
 
     switch (newState) {
-    // we just return the original string
+      // we just return the original string
       case 0: {
         newState++;
         break;
@@ -233,46 +233,46 @@ final class _PreparedString {
             }
           }
 
-          breakOuter = true; // quit outer loop by default
+        breakOuter = true; // quit outer loop by default
 
-          // now check for percent symbols etc. at the end...
-          looperB: for (; i < len; len--) {
-            ch = newS.charAt(len - 1);
-            switch (ch) {
-              case 0x25: { // percent == 1e-2
-                div *= 100;
-                breakOuter = false;
-                continue looperB;
-              }
+        // now check for percent symbols etc. at the end...
+        looperB: for (; i < len; len--) {
+          ch = newS.charAt(len - 1);
+          switch (ch) {
+            case 0x25: { // percent == 1e-2
+              div *= 100;
+              breakOuter = false;
+              continue looperB;
+            }
 
-              case 0xb5: {// mico == 1e-6
-                div *= 1000000;
-                breakOuter = false;
-                continue looperB;
-              }
-              case 0x2030: {// per mille = 1e-3
-                div *= 1000;
-                breakOuter = false;
-                continue looperB;
-              }
-              case 0x2031: { // per 10 mille = 1e-4
-                div *= 10000;
-                breakOuter = false;
-                continue looperB;
-              }
+            case 0xb5: {// mico == 1e-6
+              div *= 1000000;
+              breakOuter = false;
+              continue looperB;
+            }
+            case 0x2030: {// per mille = 1e-3
+              div *= 1000;
+              breakOuter = false;
+              continue looperB;
+            }
+            case 0x2031: { // per 10 mille = 1e-4
+              div *= 10000;
+              breakOuter = false;
+              continue looperB;
+            }
 
-              default: {
-                if (ch > 32) {
-                  break looperB;
-                }
-                continue looperB;
+            default: {
+              if (ch > 32) {
+                break looperB;
               }
+              continue looperB;
             }
           }
+        }
 
-          if (breakOuter) {
-            break outerLooper;
-          }
+        if (breakOuter) {
+          break outerLooper;
+        }
         }
 
         if (i >= len) {

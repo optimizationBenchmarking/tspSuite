@@ -24,14 +24,14 @@ public abstract class _EdgeNumberTest extends TestBase {
 
   /**
    * is this symmetric?
-   * 
+   *
    * @return {@code true} for symmetric values, {@code false} otherwise
    */
   abstract boolean isSymmetric();
 
   /**
    * Get the minimum value
-   * 
+   *
    * @return the minimum value
    */
   long getMinValue() {
@@ -40,14 +40,14 @@ public abstract class _EdgeNumberTest extends TestBase {
 
   /**
    * get the dimension
-   * 
+   *
    * @return the dimension
    */
   abstract int n();
 
   /**
    * Get the maximum value
-   * 
+   *
    * @return the maximum value
    */
   long getMaxValue() {
@@ -56,7 +56,7 @@ public abstract class _EdgeNumberTest extends TestBase {
 
   /**
    * Are we floats?
-   * 
+   *
    * @return {@code 0} for integer calculation, {@code 1} for float-based
    *         calculation, {@code 2} for double-based calculation
    */
@@ -64,7 +64,7 @@ public abstract class _EdgeNumberTest extends TestBase {
 
   /**
    * Instantiate the bit set
-   * 
+   *
    * @return the edge bit set
    */
   protected final EdgeNumber get() {

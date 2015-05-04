@@ -170,10 +170,10 @@ public final class DescERT extends DescriptionModule {
             new BibAuthor("Thomas", "B\u00e4ck"),//$NON-NLS-1$//$NON-NLS-2$
             new BibAuthor("Zbigniew", "Michalewicz"),//$NON-NLS-1$//$NON-NLS-2$
             new BibAuthor("Xin", "Yao")//$NON-NLS-1$//$NON-NLS-2$
-        ),//
-        "Indianapolis, IN, USA",//$NON-NLS-1$
-        "IEEE Computer Society", "Piscataway, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
-        null, null, null, null);
+            ),//
+            "Indianapolis, IN, USA",//$NON-NLS-1$
+            "IEEE Computer Society", "Piscataway, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
+            null, null, null, null);
 
     P1997DEVTFOT2I = new BibInProceedings(new BibAuthors(//
         new BibAuthor("Kenneth V.", "Price")),//$NON-NLS-1$//$NON-NLS-2$
@@ -184,14 +184,14 @@ public final class DescERT extends DescriptionModule {
 
   /**
    * the time measures
-   * 
+   *
    * @serial the internal reference to the time measures description
    */
   private final DescTimeMeasures m_time;
 
   /**
    * the relative objective values
-   * 
+   *
    * @serial the internal reference to the relative objective value
    *         description
    */
@@ -199,14 +199,14 @@ public final class DescERT extends DescriptionModule {
 
   /**
    * the quality measures
-   * 
+   *
    * @serial the internal reference to the quality measure description
    */
   private final DescQualityMeasures m_quality;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -259,22 +259,22 @@ public final class DescERT extends DescriptionModule {
         DescQualityMeasures.HAFR2012RPBBOBES,
         DescQualityMeasures.AH2005PEOAALSEA, DescERT.P1997DEVTFOT2I);
     body.write(//
-    " denotes the amount of time (according to some measure) that passes in expectation until an optimization algorithm reaches a given target objective function value "); //$NON-NLS-1$
+        " denotes the amount of time (according to some measure) that passes in expectation until an optimization algorithm reaches a given target objective function value "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(//
-    " for the first time. In well-known benchmark suites such as COCO/BBOB"); //$NON-NLS-1$
+        " for the first time. In well-known benchmark suites such as COCO/BBOB"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescQualityMeasures.COCO2012CCCO,
         DescQualityMeasures.HAFR2012RPBBOBES,
         DescQualityMeasures.AH2005PEOAALSEA);
 
     body.write(//
-    " it is a prominent performance indicator and usually measured in terms of the "); //$NON-NLS-1$
+        " it is a prominent performance indicator and usually measured in terms of the "); //$NON-NLS-1$
     Accessor.FE.writeLongName(body, true);
     body.write(" ("); //$NON-NLS-1$
     Accessor.FE.writeShortName(body, true);
     body.write(//
-    "). In the context of this work, there are more time measures that we can use, such as "); //$NON-NLS-1$
+        "). In the context of this work, there are more time measures that we can use, such as "); //$NON-NLS-1$
 
     body.writeSequence(
         new AccessorSequence(Accessor.TIME_MEASURES
@@ -282,7 +282,7 @@ public final class DescERT extends DescriptionModule {
             true, true, true, body), ESequenceType.OR, false);
 
     body.write(//
-    ", since we measure all these values in our log files as described in ");//$NON-NLS-1$
+        ", since we measure all these values in our log files as described in ");//$NON-NLS-1$
 
     body.reference(this.m_time.getLabel(data));
 
@@ -318,13 +318,13 @@ public final class DescERT extends DescriptionModule {
 
                   try (MathOpParam sfa1 = sfa.mathOpParam()) {
                     try (NormalText tn1 = sfa1.normalText()) {
-                      tn1.write("runtime measured in "); //$NON-NLS-1$                    
+                      tn1.write("runtime measured in "); //$NON-NLS-1$
                     }
                     try (MathName mn = sfa1.mathName(EMathName.SCALAR)) {
                       mn.writeChar('T');
                     }
                     try (NormalText tn2 = sfa1.normalText()) {
-                      tn2.write(" until "); //$NON-NLS-1$                
+                      tn2.write(" until "); //$NON-NLS-1$
                     }
                     sfa1.macroInvoke(Macros.F_THRESHOLD);
                     try (NormalText tn3 = sfa1.normalText()) {
@@ -390,7 +390,7 @@ public final class DescERT extends DescriptionModule {
     body.write(". The ");//$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(//
-    " is an example of a horizontal-cut performance measure as introduced in ");//$NON-NLS-1$
+        " is an example of a horizontal-cut performance measure as introduced in ");//$NON-NLS-1$
     body.reference(this.m_quality.getLabel(data));
     body.write(" and");//$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
@@ -405,12 +405,12 @@ public final class DescERT extends DescriptionModule {
     body.write(" and the ");//$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(//
-    " then denotes the estimated runtime necessary to discover the best possible solution. However, thresholds very close to the global optimum also make sense, because often we are happy with a near-optimal solution, if we can get it fast.");//$NON-NLS-1$
+        " then denotes the estimated runtime necessary to discover the best possible solution. However, thresholds very close to the global optimum also make sense, because often we are happy with a near-optimal solution, if we can get it fast.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write(//
-    "An optimization algorithm is good if it has a small expected runtime (regardless according to which measure) for a given goal objective value ");//$NON-NLS-1$
+        "An optimization algorithm is good if it has a small expected runtime (regardless according to which measure) for a given goal objective value ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(". If the ");//$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
@@ -423,10 +423,10 @@ public final class DescERT extends DescriptionModule {
     body.write("Since the unit of the ");//$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(//
-    " is always a runtime measure, the same scaling mechanism as discussed in ");//$NON-NLS-1$
+        " is always a runtime measure, the same scaling mechanism as discussed in ");//$NON-NLS-1$
     body.reference(this.m_time.getLabel(data));
     body.write(//
-    " apply, i.e., ");//$NON-NLS-1$
+        " apply, i.e., ");//$NON-NLS-1$
 
     body.writeSequence(new AccessorSequence(Accessor.TIME_MEASURES, true,
         false, //
@@ -434,20 +434,20 @@ public final class DescERT extends DescriptionModule {
         ESequenceType.AND, false);
 
     body.write(//
-    ". This way, the results of experiments with benchmarks of different scale ");//$NON-NLS-1$
+        ". This way, the results of experiments with benchmarks of different scale ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(//
-    ", i.e., number of nodes/cities, can become more comparable.");//$NON-NLS-1$
+        ", i.e., number of nodes/cities, can become more comparable.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write("In order to make the ");//$NON-NLS-1$
     body.macroInvoke(Macros.ERT);
     body.write(//
-    "s from different benchmark cases comparable, we will frequently use relative target objective value thresholds ");//$NON-NLS-1$
+        "s from different benchmark cases comparable, we will frequently use relative target objective value thresholds ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
     body.write(//
-    " instead of absolute ones (");//$NON-NLS-1$
+        " instead of absolute ones (");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(") as discussed in ");//$NON-NLS-1$
     body.reference(this.m_rel.getLabel(data));

@@ -12,7 +12,7 @@ package org.logisticPlanning.utils.collections.lists;
  * mathematical information.
  */
 public class DoubleList extends
-    _BasicNumericList<java.lang.Number, double[]> {
+_BasicNumericList<java.lang.Number, double[]> {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -25,7 +25,7 @@ public class DoubleList extends
 
   /**
    * Instantiate the {@code DoubleList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -33,8 +33,8 @@ public class DoubleList extends
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_DOUBLES
         : //
-        new double[(capacity > 0) ? capacity
-            : BasicArrayList.DEFAULT_LIST_SIZE]);
+          new double[(capacity > 0) ? capacity
+              : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */
@@ -73,7 +73,7 @@ public class DoubleList extends
   /**
    * Add/insert the double-precision (64-bit) floating point number
    * (double) (double) at the given index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -93,7 +93,7 @@ public class DoubleList extends
   /**
    * Add/insert the double-precision (64-bit) floating point number
    * (double) (double) at the end of the list
-   * 
+   *
    * @param element
    *          the double to be added
    */
@@ -138,7 +138,7 @@ public class DoubleList extends
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -150,7 +150,7 @@ public class DoubleList extends
   /**
    * Aggregate: Visit all the data of this list. There is no guarantee
    * about the order in which the elements are visited.
-   * 
+   *
    * @param aggregate
    *          the aggregate
    */
@@ -173,7 +173,7 @@ public class DoubleList extends
   /**
    * Ensure that there are at least {@code size} free {@code double}s
    * starting at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -241,7 +241,7 @@ public class DoubleList extends
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -271,6 +271,7 @@ public class DoubleList extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

@@ -17,8 +17,8 @@ import org.logisticPlanning.utils.text.TextUtils;
  * the literature result
  */
 public abstract class LiteratureResultPointSet extends
-    ArraySetView<LiteratureResultPoint> implements
-    Comparable<LiteratureResultPointSet> {
+ArraySetView<LiteratureResultPoint> implements
+Comparable<LiteratureResultPointSet> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -33,7 +33,7 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * the literature result
-   * 
+   *
    * @param longName
    *          the long name
    * @param shortName
@@ -82,7 +82,7 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * get the point list for the given instance
-   * 
+   *
    * @param inst
    *          the problem instance
    * @return the point list for the given instance
@@ -114,11 +114,11 @@ public abstract class LiteratureResultPointSet extends
               break innerA;
             }
           }
-          innerB: for (high = mid; (++high) < data.length;) {
-            if (data[high].m_inst != inst) {
-              break innerB;
-            }
+        innerB: for (high = mid; (++high) < data.length;) {
+          if (data[high].m_inst != inst) {
+            break innerB;
           }
+        }
 
           return this.subList(low + 1, high);
         }
@@ -130,7 +130,7 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * write the description of the measurements
-   * 
+   *
    * @param dest
    *          the destination
    * @throws IOException
@@ -141,20 +141,19 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * Initialize this result point set
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException
    *           the i/o exception if i/o fails
    */
-  @SuppressWarnings("unused")
   protected void initialize(final Header header) throws IOException {
     //
   }
 
   /**
    * Cite the literature from which the results are from
-   * 
+   *
    * @param cm
    *          the citation mode
    * @param txt
@@ -195,7 +194,7 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * Get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -204,7 +203,7 @@ public abstract class LiteratureResultPointSet extends
 
   /**
    * Get the long name
-   * 
+   *
    * @return the long name
    */
   public final String getLongName() {

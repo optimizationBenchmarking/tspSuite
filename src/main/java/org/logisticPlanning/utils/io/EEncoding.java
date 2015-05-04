@@ -135,7 +135,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Instantiate
-   * 
+   *
    * @param name
    *          the official standard name
    * @param java
@@ -155,7 +155,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * put an encoding into the map
-   * 
+   *
    * @param n
    *          the name
    * @param c
@@ -167,7 +167,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * get an entry from the map
-   * 
+   *
    * @param n
    *          the name
    * @return the entry
@@ -191,7 +191,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Obtain the name to be used within a Java environment
-   * 
+   *
    * @return the name to be used within a Java environment
    */
   public final String getJavaName() {
@@ -200,7 +200,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Obtain the standardized name
-   * 
+   *
    * @return the standardized name
    */
   public final String getStandardName() {
@@ -209,7 +209,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Obtain a text encoding identified by a given string
-   * 
+   *
    * @param s
    *          the string
    * @return the corresponding encoding
@@ -244,7 +244,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Get the text encoding
-   * 
+   *
    * @param o
    *          the object
    * @return the encoding corresponding to that object
@@ -295,7 +295,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Extract an encoding from a print stream
-   * 
+   *
    * @param wr
    *          The print stream to get the encoding of.
    * @return The historical name of this encoding, or possibly
@@ -334,7 +334,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Extract an encoding from a writer
-   * 
+   *
    * @param wr
    *          The writer to get the encoding of.
    * @return The historical name of this encoding, or possibly
@@ -392,7 +392,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * Extract an encoding from a reader
-   * 
+   *
    * @param r
    *          The reader to get the encoding of.
    * @return The historical name of this encoding, or possibly
@@ -449,7 +449,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * write replace
-   * 
+   *
    * @return the replacement
    */
   private final Object writeReplace() {
@@ -475,7 +475,7 @@ public final class EEncoding extends NamedObject {
 
   /**
    * read resolve
-   * 
+   *
    * @return the replacement
    */
   private final Object readResolve() {

@@ -22,7 +22,7 @@ import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  <p>
  * A Memetic Algorithm (MA)&nbsp;[<a href="#cite_M1989MA"
  * style="font-weight:bold">1</a>, <a href="#cite_M2002MA"
@@ -399,24 +399,24 @@ public abstract class PermutationHeuristicInitMA extends EA {
   /** the heuristics which are used exactly once */
   @SuppressWarnings("unchecked")
   private static final Class<? extends TSPHeuristic>[] INIT_ONCE = new Class[] {
-      MSTHeuristic.class, EdgeGreedyHeuristic.class };
+    MSTHeuristic.class, EdgeGreedyHeuristic.class };
 
   /** the heuristics which are used exactly once */
   @SuppressWarnings("unchecked")
   private static final Class<? extends TSPHeuristicWithStartNode>[] INIT_MULTI = new Class[] {
-      SavingsHeuristic.class, DoubleEndedNearestNeighborHeuristic.class,
-      NearestNeighborHeuristic.class };
+    SavingsHeuristic.class, DoubleEndedNearestNeighborHeuristic.class,
+    NearestNeighborHeuristic.class };
 
   /**
    * the heuristics used for initialization
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristic[] m_initOnce;
 
   /**
    * the multi-times heuristic
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristicWithStartNode[] m_initMulti;
@@ -426,7 +426,7 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
   /**
    * Create the permutation MA.
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -440,9 +440,9 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
     this.setUnaryOperator(u);
     this.setBinaryOperator(//
-    new BinaryOperatorFollowedByUnary<>(//
-        this.createBinary(),//
-        u));//
+        new BinaryOperatorFollowedByUnary<>(//
+            this.createBinary(),//
+            u));//
     this.setCrossoverRate(1d);
 
     this.m_initOnce = new TSPHeuristic[i = PermutationHeuristicInitMA.INIT_ONCE.length];
@@ -468,14 +468,14 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
   /**
    * Create the binary operator to be used
-   * 
+   *
    * @return the binary operator to be used
    */
   protected abstract BinaryOperator<int[]> createBinary();
 
   /**
    * Create the unary operator to be used
-   * 
+   *
    * @return the unary operator to be used
    */
   protected abstract UnaryOperator<int[]> createUnary();
@@ -499,7 +499,7 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
     temp = new Individual<>();
     op = ((BinaryOperatorFollowedByUnary<int[]>) (((Object) (//
-    this.getBinaryOperator())))).getUnaryOperator();//
+        this.getBinaryOperator())))).getUnaryOperator();//
 
     for (i = pop.length; (--i) >= 0;) {
       if (f.shouldTerminate()) {
@@ -544,10 +544,10 @@ public abstract class PermutationHeuristicInitMA extends EA {
     }
 
     if (this.getUnaryOperator() == //
-    ((BinaryOperatorFollowedByUnary<Object>) (this.getBinaryOperator())).//
+        ((BinaryOperatorFollowedByUnary<Object>) (this.getBinaryOperator())).//
         getUnaryOperator()) {//
       cfg.setUnaryOperator(//
-      ((BinaryOperatorFollowedByUnary<Object>) (cfg.getBinaryOperator())).//
+          ((BinaryOperatorFollowedByUnary<Object>) (cfg.getBinaryOperator())).//
           getUnaryOperator());
     }
 

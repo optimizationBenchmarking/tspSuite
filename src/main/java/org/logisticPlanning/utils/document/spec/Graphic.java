@@ -16,7 +16,7 @@ public abstract class Graphic extends Graphics2D implements Closeable {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -30,7 +30,7 @@ public abstract class Graphic extends Graphics2D implements Closeable {
 
   /**
    * Get the owning figure body object
-   * 
+   *
    * @return the owning figure body object
    */
   protected FigureBody getOwner() {

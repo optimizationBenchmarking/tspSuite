@@ -56,11 +56,11 @@ public class SingleSetups extends SingleModule {
 
   /** the table cell definition */
   private static final TableCellDef[] TABLE_DEF = {
-      TableCellDef.VERTICAL_LINE,
-      TableCellDef.make(TableCellDef.ALIGN_LEFT, 0.4),
-      TableCellDef.VERTICAL_LINE,
-      TableCellDef.make(TableCellDef.ALIGN_LEFT, 0.5),
-      TableCellDef.VERTICAL_LINE };
+    TableCellDef.VERTICAL_LINE,
+    TableCellDef.make(TableCellDef.ALIGN_LEFT, 0.4),
+    TableCellDef.VERTICAL_LINE,
+    TableCellDef.make(TableCellDef.ALIGN_LEFT, 0.5),
+    TableCellDef.VERTICAL_LINE };
 
   /** do we print the algorithm parameters? */
   private boolean m_printAlgoParams;
@@ -71,7 +71,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -234,7 +234,7 @@ public class SingleSetups extends SingleModule {
                   Label.AUTO_LABEL,//
                   (pfx1 + initName + pfx2 + sname.name()
                       + " (" + lname.name() + ")."), //$NON-NLS-1$ //$NON-NLS-2$
-                  false, SingleSetups.TABLE_DEF)) {
+                      false, SingleSetups.TABLE_DEF)) {
 
             try (TableCaption capn = table.tableCaption()) {
 
@@ -317,13 +317,13 @@ public class SingleSetups extends SingleModule {
       body.write(" was initialized with the ");//$NON-NLS-1$
       body.write(initName);
       body.write(//
-      ", but this initialization algorithm does not have any specific own setup parameters.");//$NON-NLS-1$
+          ", but this initialization algorithm does not have any specific own setup parameters.");//$NON-NLS-1$
     }
 
     if (sysSetupLabel != null) {
       body.writeChar(' ');
       body.write(//
-      "Information about the system which was used for the experiments is given in "); //$NON-NLS-1$
+          "Information about the system which was used for the experiments is given in "); //$NON-NLS-1$
       body.reference(sysSetupLabel);
       body.writeChar('.');
     }
@@ -333,7 +333,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * Make a table for the given setup items
-   * 
+   *
    * @param table
    *          the table
    * @param iterator
@@ -394,7 +394,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * Print a configuration value
-   * 
+   *
    * @param value
    *          the value
    * @param out
@@ -495,7 +495,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * cleanse the list
-   * 
+   *
    * @param list
    *          the list to cleanse
    */

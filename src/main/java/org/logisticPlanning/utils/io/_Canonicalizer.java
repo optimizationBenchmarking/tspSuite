@@ -13,7 +13,7 @@ final class _Canonicalizer implements PrivilegedAction<String> {
 
   /**
    * The constructor of the canonicalizer.
-   * 
+   *
    * @param file
    *          The to be canonicalized.
    */

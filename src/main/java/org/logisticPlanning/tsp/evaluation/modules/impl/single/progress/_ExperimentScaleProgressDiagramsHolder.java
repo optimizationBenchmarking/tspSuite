@@ -21,7 +21,7 @@ final class _ExperimentScaleProgressDiagramsHolder extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -47,14 +47,14 @@ final class _ExperimentScaleProgressDiagramsHolder extends SingleModule {
             new AllScaleInstancesProperty<>(//
                 EPropertyType.TEMPORARILY_STORED, //
                 ExperimentInstancesProperty
-                    .oneMustHave2PointsOfAccessor(axs),//
+                .oneMustHave2PointsOfAccessor(axs),//
                 scale),//
-            ((scale == 2) && //
-            Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-            // ((axs == Accessor.DE) || //
-            // (axs == Accessor.FE) || //
-            // (axs == Accessor.NORMALIZED_RUNTIME))
-            ));
+                ((scale == 2) && //
+                    Accessor.UNBIASED_TIME_MEASURES.contains(axs)
+                    // ((axs == Accessor.DE) || //
+                    // (axs == Accessor.FE) || //
+                    // (axs == Accessor.NORMALIZED_RUNTIME))
+                    ));
       }
     }
   }

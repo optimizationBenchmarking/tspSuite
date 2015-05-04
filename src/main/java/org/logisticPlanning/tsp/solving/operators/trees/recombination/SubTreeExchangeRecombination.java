@@ -80,12 +80,12 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * 2009, Germany: it-weise.de (self-published). <div>link: [<a
  * href="http://www.it-weise.de/projects/book.pdf">1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <NT>
  *          the node type
  */
 public class SubTreeExchangeRecombination<NT extends Node<NT>> extends
-    BinaryOperator<NT> {
+BinaryOperator<NT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -100,7 +100,7 @@ public class SubTreeExchangeRecombination<NT extends Node<NT>> extends
 
   /**
    * Create a new tree recombination operation
-   * 
+   *
    * @param md
    *          the maximum tree depth
    */
@@ -142,7 +142,7 @@ public class SubTreeExchangeRecombination<NT extends Node<NT>> extends
       e1 = pt1.get(i);
       if (((i + e2.getHeight() + 1) < this.m_maxDepth)
           && e1.getType().getChildTypes(pt1.getChildIndex(i))
-              .containsType(e2.getType())) {
+          .containsType(e2.getType())) {
         dest.solution = pt1.replaceEnd(e2);
         dest.producer = this;
         return;
@@ -154,6 +154,7 @@ public class SubTreeExchangeRecombination<NT extends Node<NT>> extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final SubTreeExchangeRecombination<NT> clone() {
     SubTreeExchangeRecombination<NT> res;
 

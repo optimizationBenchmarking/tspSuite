@@ -9,7 +9,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.P
  * random neighborhood search} for permutations
  */
 public class PermutationRNSFirstImprovementTest extends
-    PermutationRNSBestImprovementTest {
+PermutationRNSBestImprovementTest {
 
   /** create */
   public PermutationRNSFirstImprovementTest() {

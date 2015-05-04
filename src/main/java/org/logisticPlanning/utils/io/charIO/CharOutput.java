@@ -14,7 +14,7 @@ public abstract class CharOutput {
 
   /**
    * write a single character
-   * 
+   *
    * @param data
    *          the character
    * @throws IOException
@@ -24,7 +24,7 @@ public abstract class CharOutput {
 
   /**
    * write a portion of a given character array
-   * 
+   *
    * @param data
    *          the character array
    * @param start
@@ -39,7 +39,7 @@ public abstract class CharOutput {
 
   /**
    * write a portion of a given string
-   * 
+   *
    * @param data
    *          the string
    * @param start
@@ -54,7 +54,7 @@ public abstract class CharOutput {
 
   /**
    * write a portion of a given char sequence
-   * 
+   *
    * @param data
    *          the char sequence
    * @param start

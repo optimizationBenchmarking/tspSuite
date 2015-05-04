@@ -147,7 +147,7 @@ public final class DescTSP extends DescriptionModule {
   /** gregory gutin */
   static final BibAuthor GG = new BibAuthor("Gregory Z.", "Gutin"); //$NON-NLS-1$ //$NON-NLS-2$
   /** abraham p punnen */
-  static final BibAuthor APP = new BibAuthor("Abraham P.", "Punnen");//$NON-NLS-1$ //$NON-NLS-2$   
+  static final BibAuthor APP = new BibAuthor("Abraham P.", "Punnen");//$NON-NLS-1$ //$NON-NLS-2$
 
   /** william j cook */
   static final BibAuthors WJC_A = new BibAuthors(DescTSP.WJC);
@@ -186,31 +186,31 @@ public final class DescTSP extends DescriptionModule {
             new BibAuthor("Robert E.", "Bixby"),//$NON-NLS-1$ //$NON-NLS-2$
             new BibAuthor("Va\u0161ek", "Chv\u00e1tal"),//$NON-NLS-1$ //$NON-NLS-2$
             DescTSP.WJC),//
-        "The Traveling Salesman Problem: A Computational Study",//$NON-NLS-1$
-        new BibDate(2002, EBibMonth.FEBRUARY),//
-        BibAuthors.EMPTY,//
-        "Princeton University Press",//$NON-NLS-1$
-        "Princeton, NJ, USA",//$NON-NLS-1$
-        "Princeton Series in Applied Mathematics",//$NON-NLS-1$
-        null, null, null, null);
+            "The Traveling Salesman Problem: A Computational Study",//$NON-NLS-1$
+            new BibDate(2002, EBibMonth.FEBRUARY),//
+            BibAuthors.EMPTY,//
+            "Princeton University Press",//$NON-NLS-1$
+            "Princeton, NJ, USA",//$NON-NLS-1$
+            "Princeton Series in Applied Mathematics",//$NON-NLS-1$
+            null, null, null, null);
 
     try {
       G2008TSP = new BibBook(
           //
           new BibAuthors(//
-              new BibAuthor("Federico", "Greco") //$NON-NLS-1$ //$NON-NLS-2$          
-          ),//
-          "Traveling Salesman Problem",//$NON-NLS-1$
-          new BibDate(2008, EBibMonth.SEPTEMBER),//
-          BibAuthors.EMPTY,//
-          "IN-TECH Education and Publishing",//$NON-NLS-1$
-          "Vienna, Austria",//$NON-NLS-1$
-          null,
-          null,
-          null,//
-          new URI(
-              "http://www.degraf.ufpr.br/docentes/paulo/publicacoes_arquivos/TravellingSalesmanProblem.pdf"),//$NON-NLS-1$
-          null);
+              new BibAuthor("Federico", "Greco") //$NON-NLS-1$ //$NON-NLS-2$
+              ),//
+              "Traveling Salesman Problem",//$NON-NLS-1$
+              new BibDate(2008, EBibMonth.SEPTEMBER),//
+              BibAuthors.EMPTY,//
+              "IN-TECH Education and Publishing",//$NON-NLS-1$
+              "Vienna, Austria",//$NON-NLS-1$
+              null,
+              null,
+              null,//
+              new URI(
+                  "http://www.degraf.ufpr.br/docentes/paulo/publicacoes_arquivos/TravellingSalesmanProblem.pdf"),//$NON-NLS-1$
+                  null);
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
     }
@@ -218,19 +218,19 @@ public final class DescTSP extends DescriptionModule {
     LLKS1985TTSPAGTOCO = new BibBook(
         //
         new BibAuthors(
-        //
+            //
             new BibAuthor("Eugene Leighton (Gene)", "Lawler"), //$NON-NLS-1$ //$NON-NLS-2$
             new BibAuthor("Jan Karel", "Lenstra"),//$NON-NLS-1$ //$NON-NLS-2$
             new BibAuthor("Alexander Hendrik George", "Rinnooy Kan"),//$NON-NLS-1$ //$NON-NLS-2$
-            new BibAuthor("David B.", "Shmoys") //$NON-NLS-1$ //$NON-NLS-2$           
-        ),//
-        "The Traveling Salesman Problem: A Guided Tour of Combinatorial Optimization",//$NON-NLS-1$
-        new BibDate(1989, EBibMonth.SEPTEMBER),//
-        BibAuthors.EMPTY,//
-        "Wiley Interscience",//$NON-NLS-1$
-        "Chichester, West Sussex, UK",//$NON-NLS-1$
-        "Wiley-Interscience Series in Discrete Mathematics;  Estimation, Simulation, and Control ‒ Wiley-Interscience Series in Discrete Mathematics and Optimization",//$NON-NLS-1$
-        null, null, null, null);
+            new BibAuthor("David B.", "Shmoys") //$NON-NLS-1$ //$NON-NLS-2$
+            ),//
+            "The Traveling Salesman Problem: A Guided Tour of Combinatorial Optimization",//$NON-NLS-1$
+            new BibDate(1989, EBibMonth.SEPTEMBER),//
+            BibAuthors.EMPTY,//
+            "Wiley Interscience",//$NON-NLS-1$
+            "Chichester, West Sussex, UK",//$NON-NLS-1$
+            "Wiley-Interscience Series in Discrete Mathematics;  Estimation, Simulation, and Control ‒ Wiley-Interscience Series in Discrete Mathematics and Optimization",//$NON-NLS-1$
+            null, null, null, null);
 
     GP2004TTSPAIV = new BibBook(//
         new BibAuthors(DescTSP.GG, DescTSP.APP),//
@@ -256,7 +256,7 @@ public final class DescTSP extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -303,13 +303,13 @@ public final class DescTSP extends DescriptionModule {
         DescTSP.G2008TSP, DescTSP.LLKS1985TTSPAGTOCO,
         DescTSP.GP2004TTSPAIV, DescTSP.C2011IPOTTSMATLOC);
     body.write(//
-    " is maybe the most well-known combinatorial optimization task. A TSP is defined as a fully-connected graph with ");//$NON-NLS-1$
+        " is maybe the most well-known combinatorial optimization task. A TSP is defined as a fully-connected graph with ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(//
-    " nodes, which are connected with edges that have integer-valued weights, the distances. A candidate solution of a TSP is a tour that visits each node in the graph exactly once and returns back to its starting node. The goal is to find the shortest such tour, i.e., the objective function "); //$NON-NLS-1$
+        " nodes, which are connected with edges that have integer-valued weights, the distances. A candidate solution of a TSP is a tour that visits each node in the graph exactly once and returns back to its starting node. The goal is to find the shortest such tour, i.e., the objective function "); //$NON-NLS-1$
     Accessor.F.writeShortName(body);
     body.write(//
-    " corresponds to the total tour length/cost (including the trip back to the origin of the tour) and is subject to minimization. The optimization version of the TSP (which is the focus of this work) is "); //$NON-NLS-1$
+        " corresponds to the total tour length/cost (including the trip back to the origin of the tour) and is subject to minimization. The optimization version of the TSP (which is the focus of this work) is "); //$NON-NLS-1$
     try (Emphasize em = body.emphasize()) {
       em.write("NP-hard");//$NON-NLS-1$
     }
@@ -318,7 +318,7 @@ public final class DescTSP extends DescriptionModule {
     body.writeLinebreak();
 
     body.write(//
-    "We can distinguish symmetric TSPs, where the edges are undirected and have the same costs in both directions and asymmetric TSPs, where the edges are directed and traveling from node "); //$NON-NLS-1$
+        "We can distinguish symmetric TSPs, where the edges are undirected and have the same costs in both directions and asymmetric TSPs, where the edges are directed and traveling from node "); //$NON-NLS-1$
 
     try (InlineMath im = body.inlineMath()) {
       try (MathName mn = im.mathName(EMathName.SCALAR)) {
@@ -335,7 +335,7 @@ public final class DescTSP extends DescriptionModule {
     }
 
     body.write(//
-    " may have a different cost than traveling from "); //$NON-NLS-1$
+        " may have a different cost than traveling from "); //$NON-NLS-1$
 
     try (InlineMath im = body.inlineMath()) {
       try (MathName mn = im.mathName(EMathName.SCALAR)) {
@@ -352,7 +352,7 @@ public final class DescTSP extends DescriptionModule {
     }
 
     body.write(//
-    ". Although our benchmarking framework focuses on symmetric TSPs, you can also use it to benchmark your algorithm for the asymmetric TSPLIB instances as well."); //$NON-NLS-1$
+        ". Although our benchmarking framework focuses on symmetric TSPs, you can also use it to benchmark your algorithm for the asymmetric TSPLIB instances as well."); //$NON-NLS-1$
 
     super.writeSectionBody(body, data);
   }

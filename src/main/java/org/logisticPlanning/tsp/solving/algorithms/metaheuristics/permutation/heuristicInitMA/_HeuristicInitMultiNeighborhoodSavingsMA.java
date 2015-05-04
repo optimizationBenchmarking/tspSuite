@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.solving.operators.BinaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.recombination.PermutationSavingsCrossover;
 
 /**
- * 
+ *
  <p>
  * This class is an internal class. You should never load or instantiate
  * it. Use the classes derived from it.
@@ -657,13 +657,13 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
  * </ol>
  */
 class _HeuristicInitMultiNeighborhoodSavingsMA extends
-    _HeuristicInitMultiNeighborhoodMA {
+_HeuristicInitMultiNeighborhoodMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          a string to be added to the base name
    */

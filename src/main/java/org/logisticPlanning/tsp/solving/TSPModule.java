@@ -9,8 +9,8 @@ import org.logisticPlanning.utils.config.Configurable;
  * version 0.9.8 of TSP Suite with the goal to enable run-wise allocation
  * and de-allocation of data structures. This is a major break in the
  * algorithm behavior we had before.
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -21,7 +21,7 @@ public class TSPModule extends Configurable {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the module's name
    */
@@ -34,7 +34,7 @@ public class TSPModule extends Configurable {
    * algorithm using this module. If this object, in turn, holds references
    * to other modules, it must call their
    * {@link #beginRun(ObjectiveFunction) beginRun} methods in return.
-   * 
+   *
    * @param f
    *          the objective function
    * @see #endRun(ObjectiveFunction)
@@ -49,7 +49,7 @@ public class TSPModule extends Configurable {
    * using this module is completed. If this object, in turn, holds
    * references to other modules, it must call their
    * {@link #endRun(ObjectiveFunction) beginRun} methods in return.
-   * 
+   *
    * @param f
    *          the objective function
    * @see #beginRun(ObjectiveFunction)
@@ -66,7 +66,7 @@ public class TSPModule extends Configurable {
    * {@link #invokeEndRun(ObjectiveFunction, TSPModule[])} are
    * complementary and make sure that the modules are de-initialized in the
    * opposite order of initialization.
-   * 
+   *
    * @param modules
    *          the modules
    * @param f
@@ -86,7 +86,7 @@ public class TSPModule extends Configurable {
   /**
    * Invoke the {@link #endRun(ObjectiveFunction)} method of a set of
    * modules.
-   * 
+   *
    * @param modules
    *          the modules
    * @param f

@@ -16,7 +16,7 @@ public class MacroShortcut extends MacroDefinition {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the macro's name
    * @param what

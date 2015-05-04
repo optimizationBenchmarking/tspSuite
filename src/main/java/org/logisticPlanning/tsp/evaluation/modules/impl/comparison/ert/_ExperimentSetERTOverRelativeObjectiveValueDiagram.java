@@ -130,20 +130,20 @@ import org.logisticPlanning.utils.math.statistics.EStatisticParameter;
  * </ol>
  */
 final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
-    _ExperimentSetERTOverRelativeObjectiveValueDiagramBase {
+_ExperimentSetERTOverRelativeObjectiveValueDiagramBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
   /** the caption 4 */
   private static final String CAP_3 = //
-  ", cut off at 0. The diagrams are aggregated over all "; //$NON-NLS-1$
+      ", cut off at 0. The diagrams are aggregated over all "; //$NON-NLS-1$
   /** the caption 4 */
   private static final String CAP_4 = //
-  " benchmark instances for which sufficient data is available."; //$NON-NLS-1$
+      " benchmark instances for which sufficient data is available."; //$NON-NLS-1$
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -233,8 +233,8 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
                 + Macros.ERT.getPlaceholder()
                 + _ExperimentSetERTOverRelativeObjectiveValueDiagram.CAP_3
                 + instances.size() + _ExperimentSetERTOverRelativeObjectiveValueDiagram.CAP_4),//
-            (_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_1 + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_2),//
-            true)) {
+                (_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_1 + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.SCAP_2),//
+                true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
         cap.write(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.CAP_1);
@@ -254,7 +254,7 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
             data,//
             new ExperimentERTProperty(//
                 ERTSeriesProperty.forAccessor(axs), insts), lines, doc,
-            aucLines);
+                aucLines);
 
         if (lines.isEmpty()) {
           aucLines.clear();
@@ -263,7 +263,7 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
 
         if (aucLines.size() == data.size()) {
           _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
-              ._aggregate(aucLines, rag);
+          ._aggregate(aucLines, rag);
           aucLines.clear();
         }
 
@@ -285,10 +285,10 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
                   chart
-                      .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
+                  .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
                   chart
-                      .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
-                          + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
+                  .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
+                      + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
                   chart.paint(graph);
                   chart = null;
                 }
@@ -331,11 +331,11 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
                     : ELegendType.NO_LEGEND);
                 if (includeAxisLabels) {
                   chart
-                      .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
+                  .setAxisTitleX(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.X_AXIS);
                   chart
-                      .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
-                          + axs.getAxisString()
-                          + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
+                  .setAxisTitleY(_ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_1
+                      + axs.getAxisString()
+                      + _ExperimentSetERTOverRelativeObjectiveValueDiagramBase.Y_AXIS_2);
                 }
 
                 chart.paint(graph);
@@ -362,7 +362,7 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
     body.write(" over the relative target objective values "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
     body.write(//
-    " for different time measures aggregated over all benchmark instances.");//$NON-NLS-1$
+        " for different time measures aggregated over all benchmark instances.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
@@ -381,7 +381,7 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
     body.write("s before computing their medians. The scaling factor depends on the time measure in which the ERTs are specified and is discussed in detail in"); //$NON-NLS-1$
     body.reference(this.m_descTime.getLabel(data));
     body.write(//
-    ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
+        ". We plot the logarithms of these values in order to make the diagrams readable. This has the disadvantage that values such as "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(" (which could occur in real time measurements due to clock resolution) cannot be plotted. We therefore choose to represent all values less than "); //$NON-NLS-1$
     body.writeInt(1);
@@ -394,17 +394,17 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagram extends
     body.write(" will now also be represented as "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(//
-    ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
+        ", which makes the diagrams potentially misleading for small time values / small-scale benchmark cases."); //$NON-NLS-1$
 
     body.writeLinebreak();
     ranking = rag.rank(EStatisticParameter.MEDIAN);
     body.write(//
-    "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
+        "We now rank the methods according to their Area Under the Curve ("); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(", ");//$NON-NLS-1$
     body.reference(this.m_descAuc.getLabel(data));
     body.write(//
-    "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
+        "). Of course, smaller areas are better and we use the same scaling as in the diagrams. We then re-ranking the methods according to their median rank over all diagrams, as discussed in "); //$NON-NLS-1$
     body.reference(this.m_descRanking.getLabel(data));
     body.write(". From this, ");//$NON-NLS-1$
     this.summarizeRanks(ranking, body, "discover good solutions faster"); //$NON-NLS-1$

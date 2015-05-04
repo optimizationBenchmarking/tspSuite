@@ -36,7 +36,7 @@ public final class BinarySearchUnaryInverse extends UnaryFunction {
 
   /**
    * Create the inverse
-   * 
+   *
    * @param f
    *          the function
    * @param minX

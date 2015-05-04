@@ -38,7 +38,7 @@ public final class LOr extends BinaryBooleanFunction {
    * with the singleton instance {@link LOr#INSTANCE LOr.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link LOr#INSTANCE
    *         LOr.INSTANCE})
    */
@@ -51,7 +51,7 @@ public final class LOr extends BinaryBooleanFunction {
    * with the singleton instance {@link LOr#INSTANCE LOr.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link LOr#INSTANCE
    *         LOr.INSTANCE})
    */

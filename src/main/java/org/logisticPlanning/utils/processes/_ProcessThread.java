@@ -27,7 +27,7 @@ final class _ProcessThread extends Thread {
 
   /**
    * Create the auto process.
-   * 
+   *
    * @param owner
    *          the owner
    * @param log
@@ -112,7 +112,7 @@ final class _ProcessThread extends Thread {
           try {
             read = buf._load(isr); // load the data into the buffer
           } catch (final OutOfMemoryError oome) {
-            this.m_owner._logError("out of buffer memory.", oome); //$NON-NLS-1$                
+            this.m_owner._logError("out of buffer memory.", oome); //$NON-NLS-1$
             break inner; // need to flush buffers
           } catch (final Throwable t) {
             this.m_owner._logError("error during reading.", t); //$NON-NLS-1$

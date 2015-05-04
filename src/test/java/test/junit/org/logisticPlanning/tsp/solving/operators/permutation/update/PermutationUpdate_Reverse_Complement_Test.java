@@ -5,7 +5,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.update.Permutation
 
 /** test an update operator */
 public class PermutationUpdate_Reverse_Complement_Test extends
-    _PermutationUpdateOperatorTest {
+_PermutationUpdateOperatorTest {
 
   /** instantiate */
   public PermutationUpdate_Reverse_Complement_Test() {

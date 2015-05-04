@@ -7,7 +7,7 @@ import java.util.Random;
  * This node type is easy to use for all nodes which do not require some
  * explicit random initialization. They then can just be created via
  * reflection.
- * 
+ *
  * @param <NT>
  *          the specific node type
  * @param <CT>
@@ -15,7 +15,7 @@ import java.util.Random;
  *          instance of)
  */
 public class ReflectionNodeType<NT extends Node<CT>, CT extends Node<CT>>
-    extends NodeType<NT, CT> {
+extends NodeType<NT, CT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -27,7 +27,7 @@ public class ReflectionNodeType<NT extends Node<CT>, CT extends Node<CT>>
 
   /**
    * Create a new node information record
-   * 
+   *
    * @param c
    *          the node class
    * @param ch
@@ -71,7 +71,7 @@ public class ReflectionNodeType<NT extends Node<CT>, CT extends Node<CT>>
 
   /**
    * Instantiate a node
-   * 
+   *
    * @param children
    *          a given set of children
    * @param r

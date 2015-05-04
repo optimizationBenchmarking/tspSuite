@@ -59,7 +59,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * </ol>
  */
 public class ExperimentECDFProperty extends
-    Property<Experiment, StatisticSeries> {
+Property<Experiment, StatisticSeries> {
 
   /** the ecdf source property */
   private final RunSetECDFProperty m_ecdf;
@@ -72,7 +72,7 @@ public class ExperimentECDFProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param ecdf
    *          the ecdf
    * @param insts
@@ -85,7 +85,7 @@ public class ExperimentECDFProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param ecdf
@@ -104,7 +104,7 @@ public class ExperimentECDFProperty extends
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_ecdf),//
             HashUtils.hashCode(this.m_insts)),//
-        HashUtils.hashCode(this.getClass()));//
+            HashUtils.hashCode(this.getClass()));//
   }
 
   /** {@inheritDoc} */
@@ -123,7 +123,7 @@ public class ExperimentECDFProperty extends
     if (o instanceof ExperimentECDFProperty) {
       epb = ((ExperimentECDFProperty) o);
       return ((this.m_ecdf.equals(epb.m_ecdf)) && //
-      (this.m_insts.equals(epb.m_insts)));
+          (this.m_insts.equals(epb.m_insts)));
     }
     return false;
   }

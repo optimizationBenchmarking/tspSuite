@@ -53,7 +53,7 @@ final class _TSPThread extends Thread {
 
   /**
    * Create
-   * 
+   *
    * @param algo
    *          the algorithm
    * @param init
@@ -77,17 +77,17 @@ final class _TSPThread extends Thread {
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.logp(Level.INFO, _TSPThread.SOURCE_CLASS,
           _TSPThread.SOURCE_CONSTRUCTOR,
-          ("Executor thread #" + this.getId() + //$NON-NLS-1$ 
-          " created.")); //$NON-NLS-1$
+          ("Executor thread #" + this.getId() + //$NON-NLS-1$
+              " created.")); //$NON-NLS-1$
     }
 
     if (log != null) {
       this.m_noMoreJobs = ("No more jobs available for thread #" + this.getId() + //$NON-NLS-1$
-      " - thread quits."); //$NON-NLS-1$
+          " - thread quits."); //$NON-NLS-1$
       this.m_errorCaught = ("Error caught in thread #" + this.getId() + //$NON-NLS-1$
-      " - storing it in objective function for logging. Benchmark instance was ");//$NON-NLS-1$
+          " - storing it in objective function for logging. Benchmark instance was ");//$NON-NLS-1$
       this.m_jobCompleted = ("One job completed by thread #" + this.getId() + //$NON-NLS-1$
-      " for benchmark ");//$NON-NLS-1$
+          " for benchmark ");//$NON-NLS-1$
       this.m_severe = ("Unexpected error caught in thread #" + this.getId());//$NON-NLS-1$
     } else {
       this.m_noMoreJobs = null;

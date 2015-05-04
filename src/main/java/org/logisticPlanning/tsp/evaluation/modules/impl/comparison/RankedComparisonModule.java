@@ -28,7 +28,7 @@ public class RankedComparisonModule extends ComparisonModule {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -50,7 +50,7 @@ public class RankedComparisonModule extends ComparisonModule {
    * preceded by something like &quot;
    * <code>From the results plotted in Figures 1 to 10</code>&quot; in
    * order to form a complete sentence.
-   * 
+   *
    * @param ranks
    *          the comparison result
    * @param body
@@ -65,7 +65,7 @@ public class RankedComparisonModule extends ComparisonModule {
    */
   protected final void summarizeRanks(final Ranking<Experiment> ranks,
       final AbstractTextComplex body, final String betterFeature)
-      throws IOException {
+          throws IOException {
     final RootModule root;
     ExperimentSequence ser;
     ArrayListView<Experiment> extreme;
@@ -110,7 +110,7 @@ public class RankedComparisonModule extends ComparisonModule {
       body.writeSequence(new ExperimentSequence(root, extreme, true,
           false, body), ESequenceType.AND, false);
       body.write((extremeCount > 1) ? //
-      ", on the other hand, perform worst according to this ranking." : //$NON-NLS-1$
+          ", on the other hand, perform worst according to this ranking." : //$NON-NLS-1$
           ", on the other hand, performs worst according to this ranking."); //$NON-NLS-1$
     }
 
@@ -122,7 +122,7 @@ public class RankedComparisonModule extends ComparisonModule {
 
   /**
    * Propagate ranking to the overall ranking statistic.
-   * 
+   *
    * @param ranking
    *          the ranking to propagate
    * @param data

@@ -18,7 +18,7 @@ public class DoubleDimension extends Dimension2D {
 
   /**
    * create a new double dimension
-   * 
+   *
    * @param width
    *          the width
    * @param height
@@ -40,7 +40,7 @@ public class DoubleDimension extends Dimension2D {
 
   /**
    * create a new double dimension
-   * 
+   *
    * @param dim
    *          the dimension
    */
@@ -69,7 +69,7 @@ public class DoubleDimension extends Dimension2D {
   /**
    * Obtain a copy of this object - and since this object is immutable, we
    * return it itself.
-   * 
+   *
    * @return this object itself
    */
   @Override
@@ -79,7 +79,7 @@ public class DoubleDimension extends Dimension2D {
 
   /**
    * Check if this dimension object contains another dimension object
-   * 
+   *
    * @param dim
    *          the other dimension
    * @return {@code true} if a rectangle of the size defined by this object

@@ -14,14 +14,14 @@ public abstract class Sequence {
 
   /**
    * get the number of elements of the sequence
-   * 
+   *
    * @return the number of elements of the sequence
    */
   public abstract int length();
 
   /**
    * write an element of that sequence
-   * 
+   *
    * @param index
    *          the index
    * @throws IOException

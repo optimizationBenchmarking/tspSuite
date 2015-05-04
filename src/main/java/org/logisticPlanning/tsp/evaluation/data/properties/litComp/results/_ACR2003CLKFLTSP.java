@@ -61,245 +61,245 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
         new BibRecord[] { _ACR2003CLKFLTSP.__rec() },//
         new LiteratureResultPoint[] {//
         //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
-                    0.51d),//
+        new LiteratureResultPoint(Instance.RL11849,//
+            Accessor.RUNTIME, (60e3d),//
+            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
+                0.51d),//
                 EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
-                    0.29d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
-                    0.24d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
-                    0.22d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.RL11849,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
-                    0.19d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.USA13509,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
-                    0.45d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.USA13509,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
-                    0.22d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.USA13509,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
-                    0.15d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.USA13509,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
-                    0.13d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.USA13509,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
-                    0.09d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.BRD14051,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
-                    0.49d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.BRD14051,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
-                    0.16d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.BRD14051,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
-                    0.11d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.BRD14051,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
-                    0.09d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.BRD14051,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
-                    0.07d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.D15112,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
-                    0.39d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D15112,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
-                    0.17d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D15112,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
-                    0.11d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D15112,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
-                    0.07d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D15112,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
-                    0.06d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
-                    0.42d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
-                    0.18d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
-                    0.12d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
-                    0.09d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.D18512,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
-                    0.07d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.PLA33810,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
-                    0.73d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA33810,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
-                    0.41d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA33810,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
-                    0.30d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA33810,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
-                    0.26d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA33810,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
-                    0.23d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            new LiteratureResultPoint(Instance.PLA85900,//
-                Accessor.RUNTIME, (60e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
-                    0.85d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA85900,//
-                Accessor.RUNTIME, (600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
-                    0.34d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA85900,//
-                Accessor.RUNTIME, (3600e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
-                    0.25d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA85900,//
-                Accessor.RUNTIME, (14400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
-                    0.21d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-            //
-            new LiteratureResultPoint(Instance.PLA85900,//
-                Accessor.RUNTIME, (86400e3d),//
-                Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
-                    0.16d),//
-                EStatisticParameter.ARITHMETIC_MEAN),//
-        //
+                //
+                new LiteratureResultPoint(Instance.RL11849,//
+                    Accessor.RUNTIME, (600e3d),//
+                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
+                        0.29d),//
+                        EStatisticParameter.ARITHMETIC_MEAN),//
+                        //
+                        new LiteratureResultPoint(Instance.RL11849,//
+                            Accessor.RUNTIME, (3600e3d),//
+                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
+                                0.24d),//
+                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                //
+                                new LiteratureResultPoint(Instance.RL11849,//
+                                    Accessor.RUNTIME, (14400e3d),//
+                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
+                                        0.22d),//
+                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                        //
+                                        new LiteratureResultPoint(Instance.RL11849,//
+                                            Accessor.RUNTIME, (86400e3d),//
+                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.RL11849,
+                                                0.19d),//
+                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                //
+                                                //
+                                                //
+                                                //
+                                                new LiteratureResultPoint(Instance.USA13509,//
+                                                    Accessor.RUNTIME, (60e3d),//
+                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
+                                                        0.45d),//
+                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                        //
+                                                        new LiteratureResultPoint(Instance.USA13509,//
+                                                            Accessor.RUNTIME, (600e3d),//
+                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
+                                                                0.22d),//
+                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                //
+                                                                new LiteratureResultPoint(Instance.USA13509,//
+                                                                    Accessor.RUNTIME, (3600e3d),//
+                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
+                                                                        0.15d),//
+                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                        //
+                                                                        new LiteratureResultPoint(Instance.USA13509,//
+                                                                            Accessor.RUNTIME, (14400e3d),//
+                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
+                                                                                0.13d),//
+                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                //
+                                                                                new LiteratureResultPoint(Instance.USA13509,//
+                                                                                    Accessor.RUNTIME, (86400e3d),//
+                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.USA13509,
+                                                                                        0.09d),//
+                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                        //
+                                                                                        //
+                                                                                        //
+                                                                                        //
+                                                                                        new LiteratureResultPoint(Instance.BRD14051,//
+                                                                                            Accessor.RUNTIME, (60e3d),//
+                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
+                                                                                                0.49d),//
+                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                //
+                                                                                                new LiteratureResultPoint(Instance.BRD14051,//
+                                                                                                    Accessor.RUNTIME, (600e3d),//
+                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
+                                                                                                        0.16d),//
+                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                        //
+                                                                                                        new LiteratureResultPoint(Instance.BRD14051,//
+                                                                                                            Accessor.RUNTIME, (3600e3d),//
+                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
+                                                                                                                0.11d),//
+                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                //
+                                                                                                                new LiteratureResultPoint(Instance.BRD14051,//
+                                                                                                                    Accessor.RUNTIME, (14400e3d),//
+                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
+                                                                                                                        0.09d),//
+                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                        //
+                                                                                                                        new LiteratureResultPoint(Instance.BRD14051,//
+                                                                                                                            Accessor.RUNTIME, (86400e3d),//
+                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.BRD14051,
+                                                                                                                                0.07d),//
+                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                //
+                                                                                                                                //
+                                                                                                                                //
+                                                                                                                                //
+                                                                                                                                new LiteratureResultPoint(Instance.D15112,//
+                                                                                                                                    Accessor.RUNTIME, (60e3d),//
+                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
+                                                                                                                                        0.39d),//
+                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                        //
+                                                                                                                                        new LiteratureResultPoint(Instance.D15112,//
+                                                                                                                                            Accessor.RUNTIME, (600e3d),//
+                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
+                                                                                                                                                0.17d),//
+                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                //
+                                                                                                                                                new LiteratureResultPoint(Instance.D15112,//
+                                                                                                                                                    Accessor.RUNTIME, (3600e3d),//
+                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
+                                                                                                                                                        0.11d),//
+                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                        //
+                                                                                                                                                        new LiteratureResultPoint(Instance.D15112,//
+                                                                                                                                                            Accessor.RUNTIME, (14400e3d),//
+                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
+                                                                                                                                                                0.07d),//
+                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                //
+                                                                                                                                                                new LiteratureResultPoint(Instance.D15112,//
+                                                                                                                                                                    Accessor.RUNTIME, (86400e3d),//
+                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D15112,
+                                                                                                                                                                        0.06d),//
+                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                        //
+                                                                                                                                                                        //
+                                                                                                                                                                        //
+                                                                                                                                                                        //
+                                                                                                                                                                        new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                                                            Accessor.RUNTIME, (60e3d),//
+                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
+                                                                                                                                                                                0.42d),//
+                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                //
+                                                                                                                                                                                new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                                                                    Accessor.RUNTIME, (600e3d),//
+                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
+                                                                                                                                                                                        0.18d),//
+                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                        //
+                                                                                                                                                                                        new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                                                                            Accessor.RUNTIME, (3600e3d),//
+                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
+                                                                                                                                                                                                0.12d),//
+                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                //
+                                                                                                                                                                                                new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                                                                                    Accessor.RUNTIME, (14400e3d),//
+                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
+                                                                                                                                                                                                        0.09d),//
+                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                        //
+                                                                                                                                                                                                        new LiteratureResultPoint(Instance.D18512,//
+                                                                                                                                                                                                            Accessor.RUNTIME, (86400e3d),//
+                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.D18512,
+                                                                                                                                                                                                                0.07d),//
+                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                //
+                                                                                                                                                                                                                //
+                                                                                                                                                                                                                //
+                                                                                                                                                                                                                //
+                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PLA33810,//
+                                                                                                                                                                                                                    Accessor.RUNTIME, (60e3d),//
+                                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
+                                                                                                                                                                                                                        0.73d),//
+                                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.PLA33810,//
+                                                                                                                                                                                                                            Accessor.RUNTIME, (600e3d),//
+                                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
+                                                                                                                                                                                                                                0.41d),//
+                                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PLA33810,//
+                                                                                                                                                                                                                                    Accessor.RUNTIME, (3600e3d),//
+                                                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
+                                                                                                                                                                                                                                        0.30d),//
+                                                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.PLA33810,//
+                                                                                                                                                                                                                                            Accessor.RUNTIME, (14400e3d),//
+                                                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
+                                                                                                                                                                                                                                                0.26d),//
+                                                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PLA33810,//
+                                                                                                                                                                                                                                                    Accessor.RUNTIME, (86400e3d),//
+                                                                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA33810,
+                                                                                                                                                                                                                                                        0.23d),//
+                                                                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.PLA85900,//
+                                                                                                                                                                                                                                                            Accessor.RUNTIME, (60e3d),//
+                                                                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
+                                                                                                                                                                                                                                                                0.85d),//
+                                                                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PLA85900,//
+                                                                                                                                                                                                                                                                    Accessor.RUNTIME, (600e3d),//
+                                                                                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
+                                                                                                                                                                                                                                                                        0.34d),//
+                                                                                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.PLA85900,//
+                                                                                                                                                                                                                                                                            Accessor.RUNTIME, (3600e3d),//
+                                                                                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
+                                                                                                                                                                                                                                                                                0.25d),//
+                                                                                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                //
+                                                                                                                                                                                                                                                                                new LiteratureResultPoint(Instance.PLA85900,//
+                                                                                                                                                                                                                                                                                    Accessor.RUNTIME, (14400e3d),//
+                                                                                                                                                                                                                                                                                    Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
+                                                                                                                                                                                                                                                                                        0.21d),//
+                                                                                                                                                                                                                                                                                        EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                        //
+                                                                                                                                                                                                                                                                                        new LiteratureResultPoint(Instance.PLA85900,//
+                                                                                                                                                                                                                                                                                            Accessor.RUNTIME, (86400e3d),//
+                                                                                                                                                                                                                                                                                            Accessor.F, _ACR2003CLKFLTSP.__value(Instance.PLA85900,
+                                                                                                                                                                                                                                                                                                0.16d),//
+                                                                                                                                                                                                                                                                                                EStatisticParameter.ARITHMETIC_MEAN),//
+                                                                                                                                                                                                                                                                                                //
 
-        });
+    });
   }
 
   /**
    * calculate the value
-   * 
+   *
    * @param inst
    *          the instance
    * @param percent
@@ -338,28 +338,28 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
     try {
       return new BibArticle(
-      //
+          //
           new BibAuthors(//
               new BibAuthor("David L.", "Applegate"), //$NON-NLS-1$ //$NON-NLS-2$
               new BibAuthor("William J.", "Cook"),//$NON-NLS-1$ //$NON-NLS-2$
               new BibAuthor("Andr\u00e9", "Rohe")//$NON-NLS-1$ //$NON-NLS-2$
-          ),//
-          "Chained Lin-Kernighan for Large Traveling Salesman Problems",//$NON-NLS-1$
-          new BibDate(2003, EBibQuarter.WINTER),//
-          "INFORMS Journal on Computing",//$NON-NLS-1$
-          "15",//$NON-NLS-1$
-          "1",//$NON-NLS-1$
-          "82",//$NON-NLS-1$
-          "92",//$NON-NLS-1$
-          new URI(
-              "http://joc.journal.informs.org/content/15/1/82.full.pdf"),//$NON-NLS-1$
-          null);
+              ),//
+              "Chained Lin-Kernighan for Large Traveling Salesman Problems",//$NON-NLS-1$
+              new BibDate(2003, EBibQuarter.WINTER),//
+              "INFORMS Journal on Computing",//$NON-NLS-1$
+              "15",//$NON-NLS-1$
+              "1",//$NON-NLS-1$
+              "82",//$NON-NLS-1$
+              "92",//$NON-NLS-1$
+              new URI(
+                  "http://joc.journal.informs.org/content/15/1/82.full.pdf"),//$NON-NLS-1$
+                  null);
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
     }
@@ -375,6 +375,6 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
     dest.write(this.getLongName());
     dest.write(" ("); //$NON-NLS-1$
     dest.write(this.getShortName());
-    dest.write(") for large TSP instances is introduced. The algorithm is initialized with Quick-Bor\u016fvka and the kicks are 50 step and 100 step random walks. Experiments are performed on a 300 MHz Pentium II workstation and the results are aggregated over five independent runs per benchmark."); //$NON-NLS-1$    
+    dest.write(") for large TSP instances is introduced. The algorithm is initialized with Quick-Bor\u016fvka and the kicks are 50 step and 100 step random walks. Experiments are performed on a 300 MHz Pentium II workstation and the results are aggregated over five independent runs per benchmark."); //$NON-NLS-1$
   }
 }

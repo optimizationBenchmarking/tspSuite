@@ -11,14 +11,14 @@ public class DoubleConstant extends UnaryFunction {
 
   /**
    * the constant
-   * 
+   *
    * @serial the double field with the constant value
    */
   private final double m_constant;
 
   /**
    * Create
-   * 
+   *
    * @param constant
    *          the constant
    */
@@ -48,7 +48,7 @@ public class DoubleConstant extends UnaryFunction {
 
   /**
    * create a constant
-   * 
+   *
    * @param constant
    *          the constant
    * @return the constant

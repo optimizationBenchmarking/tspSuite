@@ -16,33 +16,33 @@ public enum EBraces {
   /** with dash */
   BRACKETS_WITH_DASH(TextUtils.BRACKETS_WITH_DASH_A,
       TextUtils.BRACKETS_WITH_DASH_B),
-  /** raised parentheses */
-  RAISED_PARENTHESES(TextUtils.RAISED_PARENTHESES_A,
-      TextUtils.RAISED_PARENTHESES_B),
-  /** sunk parentheses */
-  SUNK_PARENTHESES(TextUtils.SUNK_PARENTHESES_A,
-      TextUtils.SUNK_PARENTHESES_B),
-  /** chevron */
-  CHEVRON(TextUtils.CHEVRON_A, TextUtils.CHEVRON_B),
+      /** raised parentheses */
+      RAISED_PARENTHESES(TextUtils.RAISED_PARENTHESES_A,
+          TextUtils.RAISED_PARENTHESES_B),
+          /** sunk parentheses */
+          SUNK_PARENTHESES(TextUtils.SUNK_PARENTHESES_A,
+              TextUtils.SUNK_PARENTHESES_B),
+              /** chevron */
+              CHEVRON(TextUtils.CHEVRON_A, TextUtils.CHEVRON_B),
 
-  /** chinese black parentheses */
-  CHINESE_BLACK_PARENTHESES(TextUtils.CHINESE_BLACK_PARENTHESES_A,
-      TextUtils.CHINESE_BLACK_PARENTHESES_B),
+              /** chinese black parentheses */
+              CHINESE_BLACK_PARENTHESES(TextUtils.CHINESE_BLACK_PARENTHESES_A,
+                  TextUtils.CHINESE_BLACK_PARENTHESES_B),
 
-  /** chinese convex parentheses */
-  CHINESE_CONVEX(TextUtils.CHINESE_CONVEX_A, TextUtils.CHINESE_CONVEX_B),
+                  /** chinese convex parentheses */
+                  CHINESE_CONVEX(TextUtils.CHINESE_CONVEX_A, TextUtils.CHINESE_CONVEX_B),
 
-  /** chinese white parentheses */
-  CHINESE_WHITE_PARENTHESES(TextUtils.CHINESE_WHITE_PARENTHESES_A,
-      TextUtils.CHINESE_WHITE_PARENTHESES_B),
+                  /** chinese white parentheses */
+                  CHINESE_WHITE_PARENTHESES(TextUtils.CHINESE_WHITE_PARENTHESES_A,
+                      TextUtils.CHINESE_WHITE_PARENTHESES_B),
 
-  /** chinese double convex parentheses */
-  CHINESE_DOUBLE_CONVEX(TextUtils.CHINESE_DOUBLE_CONVEX_A,
-      TextUtils.CHINESE_DOUBLE_CONVEX_B),
+                      /** chinese double convex parentheses */
+                      CHINESE_DOUBLE_CONVEX(TextUtils.CHINESE_DOUBLE_CONVEX_A,
+                          TextUtils.CHINESE_DOUBLE_CONVEX_B),
 
-  /** chinese double braces */
-  CHINESE_DOUBLE_BRACES(TextUtils.CHINESE_DOUBLE_BRACES_A,
-      TextUtils.CHINESE_DOUBLE_BRACES_B), ;
+                          /** chinese double braces */
+                          CHINESE_DOUBLE_BRACES(TextUtils.CHINESE_DOUBLE_BRACES_A,
+                              TextUtils.CHINESE_DOUBLE_BRACES_B), ;
 
   /** the default brace to use */
   public static final EBraces DEFAULT = PARENTHESES;
@@ -62,7 +62,7 @@ public enum EBraces {
 
   /**
    * Create
-   * 
+   *
    * @param begin
    *          the beginning character
    * @param end
@@ -75,7 +75,7 @@ public enum EBraces {
 
   /**
    * Get the beginning char
-   * 
+   *
    * @return the beginning char
    */
   public final char getBegin() {
@@ -84,7 +84,7 @@ public enum EBraces {
 
   /**
    * Get the end char
-   * 
+   *
    * @return the end char
    */
   public final char getEnd() {

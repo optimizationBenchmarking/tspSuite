@@ -26,7 +26,7 @@ public class PermutationUpdateOperator extends UnaryOperator<int[]> {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the operation name
    */
@@ -42,7 +42,7 @@ public class PermutationUpdateOperator extends UnaryOperator<int[]> {
    * have no effect, i.e., leave the solution unchanged. Please be very
    * careful to never add this result to a tour length directly without
    * checking it for equality to {@link #NO_EFFECT}.
-   * 
+   *
    * @param perm
    *          the permutation that may be updated
    * @param f
@@ -60,7 +60,7 @@ public class PermutationUpdateOperator extends UnaryOperator<int[]> {
 
   /**
    * Apply the operation to a permutation in-place
-   * 
+   *
    * @param perm
    *          the permutation to be changed
    * @param a
@@ -74,7 +74,7 @@ public class PermutationUpdateOperator extends UnaryOperator<int[]> {
 
   /**
    * Revert the operation from a permutation in-place
-   * 
+   *
    * @param perm
    *          the permutation to be changed
    * @param a

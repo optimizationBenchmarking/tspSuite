@@ -10,7 +10,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * Double-Ended Nearest Neighbor Heuristic} with depot 1.
  */
 public class DoubleEndedNearestNeighborHeuristicDepot1Test extends
-    TSPAlgorithmSymmetricTest {
+TSPAlgorithmSymmetricTest {
 
   /** create */
   public DoubleEndedNearestNeighborHeuristicDepot1Test() {

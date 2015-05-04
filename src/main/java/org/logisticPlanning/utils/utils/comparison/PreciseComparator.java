@@ -9,7 +9,7 @@ import java.util.Comparator;
  * which returns an instance of
  * {@link org.logisticPlanning.utils.utils.comparison.EComparison}
  * indicating the comparison outcome.
- * 
+ *
  * @param <T>
  *          the object type
  */
@@ -23,7 +23,7 @@ public class PreciseComparator<T> implements Comparator<T> {
   /**
    * Compare two guaranteed non-{@code null} objects {@code a} and
    * {@code b} with {@code a!=b}.
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -38,7 +38,7 @@ public class PreciseComparator<T> implements Comparator<T> {
    * Compare two objects {@code a} and {@code b}. This method checks some
    * basic conditions (such as identical references or {@code null} and
    * then forwards to {@link #doPreciseCompare(Object, Object)}.
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -87,7 +87,7 @@ public class PreciseComparator<T> implements Comparator<T> {
    * and
    * {@link org.logisticPlanning.utils.utils.comparison.EComparison#NOT_SAME}
    * to {@code 0}.
-   * 
+   *
    * @param a
    *          the first object to compare
    * @param b

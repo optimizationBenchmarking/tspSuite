@@ -87,7 +87,7 @@ import org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer;
  * </ol>
  */
 public final class PermutationUpdate_Rotate_Right extends
-    PermutationUpdateOperator {
+PermutationUpdateOperator {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

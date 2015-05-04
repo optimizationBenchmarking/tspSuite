@@ -24,7 +24,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /**
    * Instantiate the {@code ByteList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -32,8 +32,8 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_BYTES
         : //
-        new byte[(capacity > 0) ? capacity
-            : BasicArrayList.DEFAULT_LIST_SIZE]);
+          new byte[(capacity > 0) ? capacity
+              : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */
@@ -71,7 +71,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /**
    * Add/insert the 8 bit signed integer (byte) (byte) at the given index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -91,7 +91,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
   /**
    * Add/insert the 8 bit signed integer (byte) (byte) at the end of the
    * list
-   * 
+   *
    * @param element
    *          the byte to be added
    */
@@ -136,7 +136,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -148,7 +148,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
   /**
    * Aggregate: Visit all the data of this list. There is no guarantee
    * about the order in which the elements are visited.
-   * 
+   *
    * @param aggregate
    *          the aggregate
    */
@@ -170,7 +170,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /**
    * Get the {@code byte} at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the {@code byte} at that index
@@ -183,7 +183,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
   /**
    * Ensure that there are at least {@code size} free {@code byte}s
    * starting at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -251,7 +251,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -281,6 +281,7 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

@@ -67,7 +67,7 @@ public final class ChiSquareCDF extends BinaryFunction {
   /**
    * Computes the cumulative of the chi square distribution which is the
    * probability of d.
-   * 
+   *
    * @param x
    *          the x-value
    * @param dof
@@ -141,7 +141,7 @@ public final class ChiSquareCDF extends BinaryFunction {
    * with the singleton instance {@link ChiSquareCDF#INSTANCE
    * ChiSquareCDF.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link ChiSquareCDF#INSTANCE
    *         ChiSquareCDF.INSTANCE})
    */
@@ -154,7 +154,7 @@ public final class ChiSquareCDF extends BinaryFunction {
    * with the singleton instance {@link ChiSquareCDF#INSTANCE
    * ChiSquareCDF.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link ChiSquareCDF#INSTANCE
    *         ChiSquareCDF.INSTANCE})
    */

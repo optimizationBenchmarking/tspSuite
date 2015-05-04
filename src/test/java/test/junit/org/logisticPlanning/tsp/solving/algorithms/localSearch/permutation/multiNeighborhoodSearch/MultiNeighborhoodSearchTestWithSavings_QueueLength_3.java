@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multi
  * the Savings heuristic
  */
 public class MultiNeighborhoodSearchTestWithSavings_QueueLength_3 extends
-    MultiNeighborhoodSearchTestWithSavings {
+MultiNeighborhoodSearchTestWithSavings {
 
   /** create */
   public MultiNeighborhoodSearchTestWithSavings_QueueLength_3() {

@@ -21,7 +21,7 @@ class _ExperimentProgressBaseB extends _ExperimentProgressBaseA {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name

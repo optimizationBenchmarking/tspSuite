@@ -31,7 +31,7 @@ final class _NodeEntry {
 
   /**
    * Instantiate the node entry
-   * 
+   *
    * @param id
    *          the node id
    * @param priority

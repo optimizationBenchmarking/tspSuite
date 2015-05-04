@@ -23,7 +23,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * create
-   * 
+   *
    * @param minX
    *          the minimum-x end
    * @param maxX
@@ -46,7 +46,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * Register a line builder 2D
-   * 
+   *
    * @param builder
    *          the line builder
    */
@@ -152,7 +152,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * calculate the axis ends
-   * 
+   *
    * @param min
    *          the minimum
    * @param max
@@ -204,7 +204,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
         || (!(ComparisonUtils.isFinite(ma)))) {
       throw new IllegalStateException(
           ((((((x ? 'X' : 'Y') + "-axis range is empty or undefined: [") + //$NON-NLS-1$
-          mi) + ',') + ma) + ']'));
+              mi) + ',') + ma) + ']'));
     }
 
     dest[0] = mi;
@@ -236,7 +236,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * Obtain the minimum value of the x-axis
-   * 
+   *
    * @return the minimum value of the x-axis
    */
   public final double getMinimumX() {
@@ -246,7 +246,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * Obtain the maximum value of the x-axis
-   * 
+   *
    * @return the maximum value of the x-axis
    */
   public final double getMaximumX() {
@@ -256,7 +256,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * Obtain the minimum value of the y-axis
-   * 
+   *
    * @return the minimum value of the y-axis
    */
   public final double getMinimumY() {
@@ -266,7 +266,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
 
   /**
    * Obtain the maximum value of the y-axis
-   * 
+   *
    * @return the maximum value of the y-axis
    */
   public final double getMaximumY() {

@@ -11,7 +11,7 @@ public final class Constant extends Function {
 
   /**
    * Create a constant
-   * 
+   *
    * @param in
    *          the constant type
    * @param val
@@ -30,7 +30,7 @@ public final class Constant extends Function {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */

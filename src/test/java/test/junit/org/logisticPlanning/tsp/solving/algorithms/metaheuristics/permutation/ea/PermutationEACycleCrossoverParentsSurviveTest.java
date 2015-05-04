@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
  * the test of the permutation EA with cycle crossover
  */
 public class PermutationEACycleCrossoverParentsSurviveTest extends
-    PermutationEAParentsSurviveTest {
+PermutationEAParentsSurviveTest {
 
   /** create */
   public PermutationEACycleCrossoverParentsSurviveTest() {

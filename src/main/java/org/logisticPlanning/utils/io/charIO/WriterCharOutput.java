@@ -13,7 +13,7 @@ public class WriterCharOutput extends CharOutput {
 
   /**
    * Create
-   * 
+   *
    * @param out
    *          the output destination
    */
@@ -24,7 +24,7 @@ public class WriterCharOutput extends CharOutput {
 
   /**
    * Get the writer
-   * 
+   *
    * @return the writer
    */
   public final Writer getWriter() {

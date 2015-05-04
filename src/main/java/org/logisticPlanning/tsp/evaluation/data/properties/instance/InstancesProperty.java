@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * a property returning a fixed set of benchmark instances
  */
 public class InstancesProperty extends
-    Property<DataSet<?>, ArraySetView<Instance>> {
+Property<DataSet<?>, ArraySetView<Instance>> {
 
   /** all instances */
   public static final InstancesProperty ALL_INSTANCES = new InstancesProperty(
@@ -26,7 +26,7 @@ public class InstancesProperty extends
 
   /**
    * Create
-   * 
+   *
    * @param insts
    *          the instances
    */

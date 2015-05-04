@@ -40,7 +40,7 @@ public final class Sin extends UnaryFunction {
    * with the singleton instance {@link Sin#INSTANCE Sin.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Sin#INSTANCE
    *         Sin.INSTANCE})
    */
@@ -53,7 +53,7 @@ public final class Sin extends UnaryFunction {
    * with the singleton instance {@link Sin#INSTANCE Sin.INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Sin#INSTANCE
    *         Sin.INSTANCE})
    */

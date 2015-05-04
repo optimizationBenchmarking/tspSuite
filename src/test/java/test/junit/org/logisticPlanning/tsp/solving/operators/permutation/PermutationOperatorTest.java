@@ -46,9 +46,9 @@ public class PermutationOperatorTest extends SymmetricOperatorTest<int[]> {
     l = f.evaluate(result.solution);
     if (result.tourLength != Long.MAX_VALUE) {
       Assert
-          .assertEquals(//
-              "The operator computed a tour length, but it is different from the length computed by the objective function.", //$NON-NLS-1$
-              result.tourLength, l);
+      .assertEquals(//
+          "The operator computed a tour length, but it is different from the length computed by the objective function.", //$NON-NLS-1$
+          result.tourLength, l);
     }
   }
 

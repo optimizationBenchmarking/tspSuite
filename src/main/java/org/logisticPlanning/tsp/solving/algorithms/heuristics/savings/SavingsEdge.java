@@ -14,7 +14,7 @@ public final class SavingsEdge extends PriorityEdge {
 
   /**
    * Create an edge with the given nodes, priority, and distance.
-   * 
+   *
    * @param pa
    *          the first node
    * @param pb
@@ -45,7 +45,7 @@ public final class SavingsEdge extends PriorityEdge {
     if (o instanceof SavingsEdge) {
       e = ((SavingsEdge) o);
       return ((e.a == this.a) && (e.b == this.b) && (e.h == this.h) && //
-      (e.distance == this.distance));
+          (e.distance == this.distance));
     }
     return false;
   }

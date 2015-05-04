@@ -19,7 +19,7 @@ import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  <p>
  * This is a version of the
  * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.TemplateBasedEHBSA
@@ -430,24 +430,24 @@ public class HeuristicInitTemplateBasedEHBSA extends TemplateBasedEHBSA {
   /** the heuristics which are used exactly once */
   @SuppressWarnings("unchecked")
   private static final Class<? extends TSPHeuristic>[] INIT_ONCE = new Class[] {
-      MSTHeuristic.class, EdgeGreedyHeuristic.class };
+    MSTHeuristic.class, EdgeGreedyHeuristic.class };
 
   /** the heuristics which are used exactly once */
   @SuppressWarnings("unchecked")
   private static final Class<? extends TSPHeuristicWithStartNode>[] INIT_MULTI = new Class[] {
-      SavingsHeuristic.class, DoubleEndedNearestNeighborHeuristic.class,
-      NearestNeighborHeuristic.class };
+    SavingsHeuristic.class, DoubleEndedNearestNeighborHeuristic.class,
+    NearestNeighborHeuristic.class };
 
   /**
    * the heuristics used for initialization
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristic[] m_initOnce;
 
   /**
    * the multi-times heuristic
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristicWithStartNode[] m_initMulti;
@@ -459,7 +459,7 @@ public class HeuristicInitTemplateBasedEHBSA extends TemplateBasedEHBSA {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name
    */
@@ -599,7 +599,7 @@ public class HeuristicInitTemplateBasedEHBSA extends TemplateBasedEHBSA {
 
   /**
    * Perform the template-based EHBSA with heuristic initialization
-   * 
+   *
    * @param args
    *          the command line arguments
    */
