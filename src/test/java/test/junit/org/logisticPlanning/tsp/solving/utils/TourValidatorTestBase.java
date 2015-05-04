@@ -45,14 +45,14 @@ public class TourValidatorTestBase extends TestBase {
     if (dc != null) {
       n = dc.n();
       Assert
-      .assertEquals(//
-          "The length of the permutation must be the same as the length provided by the distance computer.", //$NON-NLS-1$
-          n, permutation.length);
+          .assertEquals(//
+              "The length of the permutation must be the same as the length provided by the distance computer.", //$NON-NLS-1$
+              n, permutation.length);
 
       Assert
-      .assertTrue(//
-          "The length provided by the distance computer must be greater than 0.", //$NON-NLS-1$
-          (n > 0));
+          .assertTrue(//
+              "The length provided by the distance computer must be greater than 0.", //$NON-NLS-1$
+              (n > 0));
       return n;
     }
 
@@ -83,14 +83,14 @@ public class TourValidatorTestBase extends TestBase {
     if (dc != null) {
       n = dc.n();
       Assert
-      .assertEquals(//
-          "The length of the array must be the same as the length provided by the distance computer.", //$NON-NLS-1$
-          n, array.length);
+          .assertEquals(//
+              "The length of the array must be the same as the length provided by the distance computer.", //$NON-NLS-1$
+              n, array.length);
 
       Assert
-      .assertTrue(//
-          "The length provided by the distance computer must be greater than 0.", //$NON-NLS-1$
-          (n > 0));
+          .assertTrue(//
+              "The length provided by the distance computer must be greater than 0.", //$NON-NLS-1$
+              (n > 0));
       return n;
     }
 
@@ -137,9 +137,9 @@ public class TourValidatorTestBase extends TestBase {
           (station > 0));
 
       Assert
-      .assertTrue(//
-          "All node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
-          (station <= n));
+          .assertTrue(//
+              "All node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
+              (station <= n));
 
       Assert.assertFalse(//
           "The best tour must not contain any node more than once.", //$NON-NLS-1$
@@ -160,9 +160,9 @@ public class TourValidatorTestBase extends TestBase {
 
     if (dc != null) {
       Assert
-      .assertEquals(
-          "The distance sum returned by \"evaluate\" of the distance computer must equal to the sum of the edge lengths computed via \"distance\".", //$NON-NLS-1$
-          sum, dc.evaluate(path));
+          .assertEquals(
+              "The distance sum returned by \"evaluate\" of the distance computer must equal to the sum of the edge lengths computed via \"distance\".", //$NON-NLS-1$
+              sum, dc.evaluate(path));
     }
 
     SolutionValidator.validatePath(path, -1l, dc);
@@ -216,9 +216,9 @@ public class TourValidatorTestBase extends TestBase {
           (station > 0));
 
       Assert
-      .assertTrue(//
-          "All node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
-          (station <= n));
+          .assertTrue(//
+              "All node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
+              (station <= n));
 
       Assert.assertFalse(//
           "The best tour must not contain any node more than once.", //$NON-NLS-1$
@@ -243,21 +243,21 @@ public class TourValidatorTestBase extends TestBase {
     }
 
     Assert
-    .assertFalse(//
-        "The adjacency list must be a cycle of exactly length n, but it is shorter.", //$NON-NLS-1$
-        (count < n));
+        .assertFalse(//
+            "The adjacency list must be a cycle of exactly length n, but it is shorter.", //$NON-NLS-1$
+            (count < n));
 
     Assert
-    .assertFalse(// should not happen, but this is a test, so who
-        // cares
-        "The adjacency list must be a cycle of exactly length n, but it is longer.", //$NON-NLS-1$
-        (count > n));
+        .assertFalse(// should not happen, but this is a test, so who
+            // cares
+            "The adjacency list must be a cycle of exactly length n, but it is longer.", //$NON-NLS-1$
+            (count > n));
 
     if (dc != null) {
       Assert
-      .assertEquals(
-          "The distance sum returned by \"evaluateAdj\" of the distance computer must equal to the sum of the edge lengths computed via \"distance\".", //$NON-NLS-1$
-          sum, dc.evaluateAdj(adjacencyList));
+          .assertEquals(
+              "The distance sum returned by \"evaluateAdj\" of the distance computer must equal to the sum of the edge lengths computed via \"distance\".", //$NON-NLS-1$
+              sum, dc.evaluateAdj(adjacencyList));
     }
 
     return sum;
@@ -301,25 +301,25 @@ public class TourValidatorTestBase extends TestBase {
           (a > 0));
 
       Assert
-      .assertTrue(//
-          "All start node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
-          (a <= n));
+          .assertTrue(//
+              "All start node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
+              (a <= n));
 
       Assert.assertTrue(//
           "All end node ids must be greater than zero.", //$NON-NLS-1$
           (b > 0));
 
       Assert
-      .assertTrue(//
-          "All end node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
-          (b <= n));
+          .assertTrue(//
+              "All end node ids must be less or equal to the total number of nodes.", //$NON-NLS-1$
+              (b <= n));
 
       if (adjacencyList[a - 1] == 0) {
         adjacencyList[a - 1] = b;
       } else {
         Assert.assertTrue(
             "There must be at most 2 edges connecting to a node, but found edge " //$NON-NLS-1$
-            + e, adjacencyList[b - 1] == 0);
+                + e, adjacencyList[b - 1] == 0);
         adjacencyList[b - 1] = a;
       }
 

@@ -187,10 +187,10 @@ public abstract class EdgeBit extends EdgeNumber implements Cloneable {
 
     if (n < EdgeBit.LONG_THRESHOLD) {
       return (symmetric ? new _SymmetricEdgeBitBooleanArray(n)
-      : new _AsymmetricEdgeBitBooleanArray(n));
+          : new _AsymmetricEdgeBitBooleanArray(n));
     }
     return (symmetric ? new _SymmetricEdgeBitLongArray(n)
-    : new _AsymmetricEdgeBitLongArray(n));
+        : new _AsymmetricEdgeBitLongArray(n));
   }
 
   /** {@inheritDoc} */

@@ -20,7 +20,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * This property compares an experiment to results from literature.
  */
 public final class LiteratureComparisonProperty extends
-Property<Experiment, LiteratureComparisonResult> {
+    Property<Experiment, LiteratureComparisonResult> {
 
   /** the globally shared instance */
   public static final LiteratureComparisonProperty INSTANCE = new LiteratureComparisonProperty();
@@ -104,10 +104,10 @@ Property<Experiment, LiteratureComparisonResult> {
         }
       }
 
-    // clear all series
-    for (final StatisticSeries[] s : sers) {
-      Arrays.fill(s, null);
-    }
+      // clear all series
+      for (final StatisticSeries[] s : sers) {
+        Arrays.fill(s, null);
+      }
     }
 
     // now aggregate

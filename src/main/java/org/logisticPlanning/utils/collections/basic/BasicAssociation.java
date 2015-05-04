@@ -17,7 +17,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  *          the value type
  */
 public abstract class BasicAssociation<K, V> implements Map.Entry<K, V>,
-Serializable {
+    Serializable {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -72,7 +72,7 @@ Serializable {
     if (o instanceof Map.Entry) {
       e = ((Map.Entry) o);
       return (ComparisonUtils.equals(this.m_key, e.getKey()) && //
-          ComparisonUtils.equals(this.getValue(), e.getValue()));
+      ComparisonUtils.equals(this.getValue(), e.getValue()));
     }
 
     return false;

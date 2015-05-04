@@ -830,7 +830,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.sel
  * </ol>
  */
 public final class HeuristicInitVNSSavingsMAFUSS extends
-_HeuristicInitVNSSavingsMA {
+    _HeuristicInitVNSSavingsMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

@@ -17,8 +17,8 @@ import org.logisticPlanning.utils.text.TextUtils;
  * the literature result
  */
 public abstract class LiteratureResultPointSet extends
-ArraySetView<LiteratureResultPoint> implements
-Comparable<LiteratureResultPointSet> {
+    ArraySetView<LiteratureResultPoint> implements
+    Comparable<LiteratureResultPointSet> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -114,11 +114,11 @@ Comparable<LiteratureResultPointSet> {
               break innerA;
             }
           }
-        innerB: for (high = mid; (++high) < data.length;) {
-          if (data[high].m_inst != inst) {
-            break innerB;
+          innerB: for (high = mid; (++high) < data.length;) {
+            if (data[high].m_inst != inst) {
+              break innerB;
+            }
           }
-        }
 
           return this.subList(low + 1, high);
         }

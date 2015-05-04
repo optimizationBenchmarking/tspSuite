@@ -94,7 +94,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
         (-Math.abs(TwoTailedTTestTest.__t(m1, m2, v1, v2, n1, n2))));
 
     MultivariateTest
-    .setResult(dest, i, j, Double.compare(m1, m2), (r + r));
+        .setResult(dest, i, j, Double.compare(m1, m2), (r + r));
   }
 
   /** {@inheritDoc} */

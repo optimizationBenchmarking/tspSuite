@@ -12,7 +12,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * multi-neighborhood search.
  */
 public class HeuristicInitMultiNeighborhoodTemplateBasedEHBSA_AugmentDistance_Test
-extends TSPAlgorithmSymmetricTest {
+    extends TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodTemplateBasedEHBSA_AugmentDistance_Test() {

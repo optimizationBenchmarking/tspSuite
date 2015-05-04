@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.utils.comparison.PreciseComparator;
  * we consider smaller values to be better
  */
 public final class StatisticInfoComparator extends
-PreciseComparator<IStatisticPoint> {
+    PreciseComparator<IStatisticPoint> {
 
   /** the parameter */
   private final EStatisticParameter m_param;

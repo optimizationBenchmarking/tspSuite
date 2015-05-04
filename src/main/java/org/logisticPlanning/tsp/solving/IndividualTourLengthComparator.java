@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.NamedObject;
  * length} .
  */
 public final class IndividualTourLengthComparator extends NamedObject
-implements Comparator<Individual<?>> {
+    implements Comparator<Individual<?>> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

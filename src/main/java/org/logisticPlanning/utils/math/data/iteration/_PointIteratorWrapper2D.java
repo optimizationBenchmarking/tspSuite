@@ -66,10 +66,10 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
             this.m_dir = cr;
           } else {
             throw new IllegalStateException(
-                //
+            //
                 "X-coordinates must be monotonously increasing or decreasing, but were first " + //$NON-NLS-1$
-                ((cr < 0) ? "increasing and then decreasing, since " : //$NON-NLS-1$
-                    "decreasing and then increasing, since ")//$NON-NLS-1$
+                    ((cr < 0) ? "increasing and then decreasing, since " : //$NON-NLS-1$
+                        "decreasing and then increasing, since ")//$NON-NLS-1$
                     + this.m_lastX + " was followed by " + d);//$NON-NLS-1$
           }
         }

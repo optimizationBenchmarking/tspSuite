@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.pa
  * Lin-Kernighan search
  */
 public class HeuristicInitLinKernighanPACOTest_5_20 extends
-HeuristicInitLinKernighanPACOTest {
+    HeuristicInitLinKernighanPACOTest {
 
   /** create */
   public HeuristicInitLinKernighanPACOTest_5_20() {

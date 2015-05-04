@@ -533,7 +533,7 @@ public class SatelliteNode {
   public int hashCode() {
     return HashUtils.combineHashes(this.id,
         ((this.m_p1 != null) ? this.m_p1.id : 1000003)
-        * ((this.m_p2 != null) ? this.m_p2.id : 1000003));
+            * ((this.m_p2 != null) ? this.m_p2.id : 1000003));
   }
 
   /** {@inheritDoc} */
@@ -547,8 +547,8 @@ public class SatelliteNode {
     if (o instanceof SatelliteNode) {
       node = ((SatelliteNode) o);
       return ((this.id == node.id) && //
-          (((this.m_p1 == node.m_p1) && (this.m_p2 == node.m_p2)) || //
-              ((this.m_p1 == node.m_p2) && (this.m_p2 == node.m_p1))));
+      (((this.m_p1 == node.m_p1) && (this.m_p2 == node.m_p2)) || //
+      ((this.m_p1 == node.m_p2) && (this.m_p2 == node.m_p1))));
     }
 
     return false;

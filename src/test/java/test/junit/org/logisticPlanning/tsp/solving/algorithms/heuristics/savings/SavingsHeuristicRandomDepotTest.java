@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeu
  * the test of the savings heuristic
  */
 public class SavingsHeuristicRandomDepotTest extends
-SavingsHeuristicDepot1Test {
+    SavingsHeuristicDepot1Test {
 
   /** create */
   public SavingsHeuristicRandomDepotTest() {

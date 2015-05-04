@@ -4,7 +4,7 @@ package org.logisticPlanning.utils.math.statistics.tests.spec;
  * The result of a two-tailed multivariate test.
  */
 abstract class _TwoTailedComparisonTestResult extends
-MultivariateTestResult {
+    MultivariateTestResult {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -125,8 +125,8 @@ MultivariateTestResult {
       if (cmp != 0) {
         throw new IllegalArgumentException(//
             "Both indexes are the same (" + i + //$NON-NLS-1$
-            "), but comparison result is not 0, instead it's "//$NON-NLS-1$
-            + cmp);
+                "), but comparison result is not 0, instead it's "//$NON-NLS-1$
+                + cmp);
       }
       return;
     }
@@ -134,8 +134,8 @@ MultivariateTestResult {
     this._setResult(i, j,//
         (r = ((errorProb >= 1d) ? 0 : ((cmp < 0) ? (-1) : ((cmp > 0) ? 1
             : 0)))),//
-            ((r == 0) ? 0d : ((errorProb <= 0d) ? 0d : ((errorProb >= 1d) ? 1d
-                : errorProb))));
+        ((r == 0) ? 0d : ((errorProb <= 0d) ? 0d : ((errorProb >= 1d) ? 1d
+            : errorProb))));
   }
 
   /** {@inheritDoc} */

@@ -69,21 +69,21 @@ public abstract class AbstractTextPlain extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   protected void inQuotesBegin(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.inQuotesBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void inQuotesEnd(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.inQuotesEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public InQuotes inQuotes(final EQuotes quotes) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.inQuotes(quotes);
   }
 }

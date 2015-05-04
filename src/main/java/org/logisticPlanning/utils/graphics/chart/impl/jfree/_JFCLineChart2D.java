@@ -296,10 +296,10 @@ final class _JFCLineChart2D extends LineChart2D {
         if (addLegend && (name != null) && (name.length() > 0)) {
 
           legendColor = (foreground ? //
-              palette.getForegroundDataColor(index)//
+          palette.getForegroundDataColor(index)//
               : palette.getBackgroundDataColor(index));
           legendStroke = (foreground ? //
-              palette.getForegroundDataStroke(index)//
+          palette.getForegroundDataStroke(index)//
               : palette.getBackgroundDataStroke(index));
 
           item = new LegendItem(//
@@ -312,7 +312,7 @@ final class _JFCLineChart2D extends LineChart2D {
               false, _JFCLineChart2D.EMPTY_SHAPE,// line
               legendStroke,//
               legendColor//
-              );
+          );
           item.setLabelFont(palette.getLegendFont());
           item.setLabelPaint(legendColor);
           legendCollection.add(item);

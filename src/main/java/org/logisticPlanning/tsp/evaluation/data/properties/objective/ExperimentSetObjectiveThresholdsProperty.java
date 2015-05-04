@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.document.spec.Document;
  * instance
  */
 public final class ExperimentSetObjectiveThresholdsProperty extends
-Property<ExperimentSet, InstanceObjectiveThresholds> {
+    Property<ExperimentSet, InstanceObjectiveThresholds> {
 
   /** the globally shared instance for experiment sets */
   public static final ExperimentSetObjectiveThresholdsProperty INSTANCE = new ExperimentSetObjectiveThresholdsProperty();

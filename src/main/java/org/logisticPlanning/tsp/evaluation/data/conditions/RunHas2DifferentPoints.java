@@ -14,7 +14,7 @@ public class RunHas2DifferentPoints extends Condition<Run> {
 
   /** the instances */
   private static final RunHas2DifferentPoints[] __INSTANCES = //
-      new RunHas2DifferentPoints[Accessor.ACCESSORS.size()];
+  new RunHas2DifferentPoints[Accessor.ACCESSORS.size()];
 
   /** the accessor */
   private final Accessor m_axs;
@@ -68,8 +68,8 @@ public class RunHas2DifferentPoints extends Condition<Run> {
   @Override
   public final boolean equals(final Object o) {
     return ((o == this) || //
-        ((o instanceof RunHas2DifferentPoints) && //
-            (((RunHas2DifferentPoints) o).m_axs == this.m_axs)));
+    ((o instanceof RunHas2DifferentPoints) && //
+    (((RunHas2DifferentPoints) o).m_axs == this.m_axs)));
   }
 
   /** {@inheritDoc} */

@@ -115,8 +115,8 @@ public class Point1D extends MutablePoint {
   @Override
   public final boolean equalsPoint(final Point p) {
     return ((p != null) && (p.dimension() == 1) && //
-        (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p
-            .get(Point1D.COORD_X))));
+    (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p
+        .get(Point1D.COORD_X))));
   }
 
   /**
@@ -139,7 +139,7 @@ public class Point1D extends MutablePoint {
    */
   public final boolean equalsPoint1D(final Point1D p) {
     return ((p != null) && //
-        (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p.m_x)));
+    (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p.m_x)));
   }
 
   /** {@inheritDoc} */

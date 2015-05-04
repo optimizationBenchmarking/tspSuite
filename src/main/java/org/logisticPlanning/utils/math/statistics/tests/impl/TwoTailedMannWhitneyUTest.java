@@ -156,7 +156,7 @@ import org.logisticPlanning.utils.math.statistics.tests.spec.MultivariateTestRes
  * </ol>
  */
 public final class TwoTailedMannWhitneyUTest extends
-BivariateTwoTailedTest {
+    BivariateTwoTailedTest {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

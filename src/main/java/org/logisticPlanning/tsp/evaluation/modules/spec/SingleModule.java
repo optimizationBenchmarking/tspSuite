@@ -34,8 +34,8 @@ public class SingleModule extends _ConcreteModule {
     if (!((owner instanceof SingleModule) || (owner instanceof _Single))) {
       throw new IllegalArgumentException(//
           "Instance of class '" + owner.getClass() + //$NON-NLS-1$
-          "' not permitted as owner of instance of '" + //$NON-NLS-1$
-          this.getClass() + "'.");//$NON-NLS-1$
+              "' not permitted as owner of instance of '" + //$NON-NLS-1$
+              this.getClass() + "'.");//$NON-NLS-1$
     }
   }
 

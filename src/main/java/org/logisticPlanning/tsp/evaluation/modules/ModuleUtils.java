@@ -14,7 +14,7 @@ public final class ModuleUtils {
 
   /** the decimal format symbols */
   private static final DecimalFormatSymbols DECIMAL_SYMBOLS = //
-      DecimalFormatSymbols.getInstance(Locale.US);
+  DecimalFormatSymbols.getInstance(Locale.US);
 
   /**
    * Create a new decimal format

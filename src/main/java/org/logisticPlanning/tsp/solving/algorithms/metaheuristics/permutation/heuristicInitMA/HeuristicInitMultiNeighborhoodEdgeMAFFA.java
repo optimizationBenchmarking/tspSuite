@@ -689,7 +689,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fit
  * </ol>
  */
 public final class HeuristicInitMultiNeighborhoodEdgeMAFFA extends
-_HeuristicInitMultiNeighborhoodEdgeMA {
+    _HeuristicInitMultiNeighborhoodEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

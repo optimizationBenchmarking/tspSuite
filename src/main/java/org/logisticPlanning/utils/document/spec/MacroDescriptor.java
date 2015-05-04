@@ -46,7 +46,7 @@ public class MacroDescriptor extends NamedObject {
     if ((paramCount < 0) || (paramCount > MacroDescriptor.MAX_PARAMETERS)) {
       throw new IllegalArgumentException(//
           "The number of parameters of a macro is limited to 0 to MAX_PARAMETERS, but " + //$NON-NLS-1$
-          paramCount + " was  supplied."); //$NON-NLS-1$
+              paramCount + " was  supplied."); //$NON-NLS-1$
     }
 
     p = TextUtils.prepare(placeHolder);
@@ -122,9 +122,9 @@ public class MacroDescriptor extends NamedObject {
     if (MacroDescriptor.MAX_PARAMETERS > maxParams) {
       throw new UnsupportedOperationException(
           "API is inconsistent: " + clazz.getCanonicalName() + //$NON-NLS-1$
-          " can only support macros with up to 9 parameters, but " //$NON-NLS-1$
-          + MacroDescriptor.MAX_PARAMETERS + " are allowed by "//$NON-NLS-1$
-          + MacroDescriptor.class.getCanonicalName());
+              " can only support macros with up to 9 parameters, but " //$NON-NLS-1$
+              + MacroDescriptor.MAX_PARAMETERS + " are allowed by "//$NON-NLS-1$
+              + MacroDescriptor.class.getCanonicalName());
     }
   }
 }

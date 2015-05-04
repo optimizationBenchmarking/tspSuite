@@ -563,7 +563,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 abstract class _HeuristicInitMultiNeighborhoodMA extends
-PermutationHeuristicInitMA {
+    PermutationHeuristicInitMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -576,7 +576,7 @@ PermutationHeuristicInitMA {
   public _HeuristicInitMultiNeighborhoodMA(final String name) {
     super(//
         "Permutation-based heuristic-initialized Multi-Neighborhood Search Memetic Algorithm "//$NON-NLS-1$
-        + name);
+            + name);
   }
 
   /** {@inheritDoc} */

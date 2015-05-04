@@ -73,7 +73,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *         </ul>
  */
 public final class PermutationOrderBasedCrossover extends
-BinaryOperator<int[]> {
+    BinaryOperator<int[]> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

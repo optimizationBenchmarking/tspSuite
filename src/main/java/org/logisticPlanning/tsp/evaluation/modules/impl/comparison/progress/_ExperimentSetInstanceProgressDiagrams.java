@@ -60,7 +60,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * over a given time measure for a given benchmark instance.
  */
 final class _ExperimentSetInstanceProgressDiagrams extends
-_ExperimentSetProgressBase {
+    _ExperimentSetProgressBase {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -143,7 +143,7 @@ _ExperimentSetProgressBase {
       final Instance inst, final Document doc,
       final ArrayList<Line2D> lines,
       final ArrayList<Map.Entry<Experiment, Object>> areaLines)
-          throws IOException {
+      throws IOException {
     final Accessor axs;
     final long scale;
     final UnaryFunction[] transform;
@@ -247,11 +247,11 @@ _ExperimentSetProgressBase {
                 + Macros.F_BEST_RELATIVE.getPlaceholder()
                 + _ExperimentSetInstanceProgressDiagrams.CAP_3
                 + axs.getLongName(true) + (axs.isScaled() ? (_ExperimentSetInstanceProgressDiagrams.CAP_4A1
-                    + axs.getScaleString() + _ExperimentSetInstanceProgressDiagrams.CAP_4A2)
-                    : (_ExperimentSetInstanceProgressDiagrams.CAP_4B1
-                        + axs.getShortName() + _ExperimentSetInstanceProgressDiagrams.CAP_4B2))),//
-                        (_ExperimentSetInstanceProgressDiagrams.SUB_CAP_1 + "XXXXX"),//$NON-NLS-1$
-                        true)) {
+                + axs.getScaleString() + _ExperimentSetInstanceProgressDiagrams.CAP_4A2)
+                : (_ExperimentSetInstanceProgressDiagrams.CAP_4B1
+                    + axs.getShortName() + _ExperimentSetInstanceProgressDiagrams.CAP_4B2))),//
+            (_ExperimentSetInstanceProgressDiagrams.SUB_CAP_1 + "XXXXX"),//$NON-NLS-1$
+            true)) {
 
       try (FigureSeriesCaption cap = fs.figureSeriesCaption()) {
 
@@ -301,7 +301,7 @@ _ExperimentSetProgressBase {
                 try (Graphic graph = fb.graphic()) {
                   chart = drv.createLineChart2D(//
                       axs.isTime() ? //
-                          ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                      ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                           : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                   chart.setLegendType(ELegendType.ONLY_LEGEND);
                   chart.addLines(lines);
@@ -334,7 +334,7 @@ _ExperimentSetProgressBase {
               try (Graphic graph = fb.graphic()) {
                 chart = drv.createLineChart2D(//
                     axs.isTime() ? //
-                        ProgressUtils.DEFAULT_AXIS_DEF_TIME//
+                    ProgressUtils.DEFAULT_AXIS_DEF_TIME//
                         : ProgressUtils.DEFAULT_AXIS_DEF_COUNT);
                 chart.addLines(lines);
                 chart.setLegendType(includeLegend ? ELegendType.PUT_LEGEND

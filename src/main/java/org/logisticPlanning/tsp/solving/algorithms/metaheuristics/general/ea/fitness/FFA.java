@@ -266,7 +266,7 @@ public final class FFA extends FitnessAssignmentProcess {
 
     Configurable.printKey(FFA.PARAM_MAX_TABLE_LENGTH, ps);
     ps.println(//
-        "the maximum number of entries in the FFA table"); //$NON-NLS-1$
+    "the maximum number of entries in the FFA table"); //$NON-NLS-1$
   }
 
   /** {@inheritDoc} */

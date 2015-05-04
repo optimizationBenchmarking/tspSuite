@@ -256,8 +256,8 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
       // + (6
       // * delta_n2 * M2)) - (4 * delta_n * M3));
       this.m_M4
-      .visitDouble(((term1 * delta_n2 * (((n * n) - (3 * n)) + 3)) + (6 * delta_n2 * M2))
-          - (4 * delta_n * M3));
+          .visitDouble(((term1 * delta_n2 * (((n * n) - (3 * n)) + 3)) + (6 * delta_n2 * M2))
+              - (4 * delta_n * M3));
 
       // this.m_M3 = (M3 + (term1 * delta_n * (n - 2d))) - (3d * delta_n *
       // M2);
@@ -288,7 +288,7 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
 
     return ((Math.sqrt(n * (n - 1l)) / (n - 2l)) * (Math.sqrt(n) * (this.m_M3
         .getResult() / //
-        (this.m_M2.getResult() * Math.sqrt(this.m_M2.getResult())))));
+    (this.m_M2.getResult() * Math.sqrt(this.m_M2.getResult())))));
   }
 
   /** {@inheritDoc} */

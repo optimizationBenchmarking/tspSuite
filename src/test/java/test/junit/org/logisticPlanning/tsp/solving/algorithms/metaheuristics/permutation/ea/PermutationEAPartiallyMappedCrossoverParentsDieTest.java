@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
  * the test of the permutation EA with partially-mapped crossover
  */
 public class PermutationEAPartiallyMappedCrossoverParentsDieTest extends
-PermutationEAParentsDieTest {
+    PermutationEAParentsDieTest {
 
   /** create */
   public PermutationEAPartiallyMappedCrossoverParentsDieTest() {

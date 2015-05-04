@@ -99,7 +99,7 @@ public abstract class CharTransformer {
    */
   public void transformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
     this.transform(in, out, start, end);
   }
 

@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * random neighborhood search} for permutations
  */
 public class PermutationRNSBestImprovementTest extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public PermutationRNSBestImprovementTest() {

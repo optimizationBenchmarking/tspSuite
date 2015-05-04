@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.doubleEndedNearest
  * ended nearest neighbor heuristic
  */
 public class MultiNeighborhoodSearchTestWithDoubleEndedNearestNeighbor
-extends MultiNeighborhoodSearchTest {
+    extends MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTestWithDoubleEndedNearestNeighbor() {

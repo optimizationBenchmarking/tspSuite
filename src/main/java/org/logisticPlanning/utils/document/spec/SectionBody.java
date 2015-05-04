@@ -50,21 +50,21 @@ public class SectionBody extends AbstractTextBlock {
   /** {@inheritDoc} */
   @Override
   protected void sectionBegin(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.sectionBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void sectionEnd(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.sectionEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public Section section(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.section(label);
   }
 
@@ -78,14 +78,14 @@ public class SectionBody extends AbstractTextBlock {
   /** {@inheritDoc} */
   @Override
   protected void figureBegin(final Figure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.figureBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureEnd(final Figure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.figureEnd(h);
   }
 
@@ -120,7 +120,7 @@ public class SectionBody extends AbstractTextBlock {
   /** {@inheritDoc} */
   @Override
   protected void figureSeriesEnd(final FigureSeries h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.figureSeriesEnd(h);
   }
 
@@ -129,7 +129,7 @@ public class SectionBody extends AbstractTextBlock {
   public FigureSeries figureSeries(final Label label,
       final Dimension2D subFigureSizeInMM, final String captionTemplate,
       final String subCaptionTemplate, final boolean colspan)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return super.figureSeries(label, subFigureSizeInMM, captionTemplate,
         subCaptionTemplate, colspan);
   }
@@ -153,14 +153,14 @@ public class SectionBody extends AbstractTextBlock {
   /** {@inheritDoc} */
   @Override
   protected void tableBegin(final Table h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.tableBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tableEnd(final Table h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.tableEnd(h);
   }
 
@@ -168,7 +168,7 @@ public class SectionBody extends AbstractTextBlock {
   @Override
   public Table table(final Label label, final String captionDraft,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return super.table(label, captionDraft, colspan, def);
   }
 
@@ -176,7 +176,7 @@ public class SectionBody extends AbstractTextBlock {
   @Override
   public Table table(final Label label, final int rowsPerPage,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return super.table(label, rowsPerPage, colspan, def);
   }
 
@@ -190,21 +190,21 @@ public class SectionBody extends AbstractTextBlock {
   /** {@inheritDoc} */
   @Override
   protected void equationBegin(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.equationBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void equationEnd(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.equationEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public Equation equation(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.equation(label);
   }
 }

@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * mutation and random selection
  */
 public class HeuristicInitVNSSavingsMARandomSelectionParentsDieTest extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitVNSSavingsMARandomSelectionParentsDieTest() {

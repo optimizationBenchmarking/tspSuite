@@ -335,13 +335,13 @@ public class DevUpdatingEA extends EA {
     this.setGPM(new DevUpdatingGPM(this));
 
     this.setNullaryOperator(//
-        new TreeRampedHalfAndHalf<>(this.m_functions, 7));
+    new TreeRampedHalfAndHalf<>(this.m_functions, 7));
 
     this.setUnaryOperator(//
-        new SubTreeReplacementMutator<>(7));
+    new SubTreeReplacementMutator<>(7));
 
     this.setBinaryOperator(//
-        new SubTreeExchangeRecombination<>(7));
+    new SubTreeExchangeRecombination<>(7));
   }
 
   /**

@@ -551,7 +551,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  *         </ul>
  */
 public class BABLittle1963MultiNeighborhoodSearch extends
-_HybridBABLittle1963 {
+    _HybridBABLittle1963 {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

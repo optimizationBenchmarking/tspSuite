@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.NamedObject;
  * length}, but puts longer tours first .
  */
 public final class IndividualReverseTourLengthComparator extends
-NamedObject implements Comparator<Individual<?>> {
+    NamedObject implements Comparator<Individual<?>> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

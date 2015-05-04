@@ -14,7 +14,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multi
  * </p>
  */
 public class PermutationMultiNeighborhoodMutation extends
-TSPLocalSearchBasedMutation<int[]> {
+    TSPLocalSearchBasedMutation<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

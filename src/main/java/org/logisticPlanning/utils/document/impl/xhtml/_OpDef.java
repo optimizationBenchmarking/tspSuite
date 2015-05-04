@@ -15,20 +15,20 @@ abstract class _OpDef {
 
   /** the math-op table */
   static final char[] MO_TAB = { '<', 't', 'a', 'b', 'l', 'e', ' ', 'c',
-    'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
+      'l', 'a', 's', 's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
   /** the math-op tr */
   static final char[] MO_TR = { '<', 't', 'r', ' ', 'c', 'l', 'a', 's',
-    's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
+      's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
   /** the math-op td */
   static final char[] MO_TD = { '<', 't', 'd', ' ', 'c', 'l', 'a', 's',
-    's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
+      's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', '"', '>' };
 
   /** open a gap */
   static final char[] GAP_OPEN = new char[] { EBraces.PARENTHESES
-    .getBegin() };
+      .getBegin() };
   /** close a gap */
   static final char[] GAP_CLOSE = new char[] { EBraces.PARENTHESES
-    .getEnd() };
+      .getEnd() };
   /** comma */
   static final char[] COMMA = new char[] { ',' };
 
@@ -106,8 +106,8 @@ abstract class _OpDef {
 
     map.put(EMathOp.AGGREGATE_SUM_FROM_TO, //
         new _OpSumFT((sum = XMLCharTransformer.INSTANCE
-        .transform("\u2211").toCharArray()) //$NON-NLS-1$
-            ));
+            .transform("\u2211").toCharArray()) //$NON-NLS-1$
+        ));
 
     map.put(EMathOp.AGGREGATE_SUM_FOR_ALL, //
         new _OpSumFA(sum));
@@ -116,7 +116,7 @@ abstract class _OpDef {
         EMathOp.AGGREGATE_PRODUCT_FROM_TO, //
         new _OpSumFT((prod = XMLCharTransformer.INSTANCE.transform(
             "\u220f").toCharArray()) //$NON-NLS-1$
-            ));
+        ));
 
     map.put(EMathOp.AGGREGATE_PRODUCT_FOR_ALL, //
         new _OpSumFA(prod));
@@ -216,9 +216,9 @@ abstract class _OpDef {
             XMLCharTransformer.INSTANCE.transform(
                 String.valueOf(EBraces.SQUARE_BRACKETS.getBegin()))
                 .toCharArray(), null,//
-                XMLCharTransformer.INSTANCE.transform(
-                    String.valueOf(EBraces.SQUARE_BRACKETS.getEnd()))
-                    .toCharArray()));
+            XMLCharTransformer.INSTANCE.transform(
+                String.valueOf(EBraces.SQUARE_BRACKETS.getEnd()))
+                .toCharArray()));
 
     map.put(
         EMathOp.ENCLOSING_ANGLE_BRACKETS, //
@@ -226,8 +226,8 @@ abstract class _OpDef {
             XMLCharTransformer.INSTANCE.transform(
                 String.valueOf(EBraces.ANGLE_BRACKETS.getBegin()))
                 .toCharArray(), null,//
-                XMLCharTransformer.INSTANCE.transform(
-                    String.valueOf(EBraces.CHEVRON.getEnd())).toCharArray()));
+            XMLCharTransformer.INSTANCE.transform(
+                String.valueOf(EBraces.CHEVRON.getEnd())).toCharArray()));
 
     map.put(EMathOp.ENCLOSING_INEQUALITY_BRACKETS, //
         new _OpPosDef(//

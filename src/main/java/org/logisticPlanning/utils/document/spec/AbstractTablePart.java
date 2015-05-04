@@ -35,12 +35,12 @@ public abstract class AbstractTablePart extends Element {
    *           if starting a table row is not permitted here
    */
   public abstract AbstractTableRow row() throws IOException,
-  IllegalStateException;
+      IllegalStateException;
 
   /** {@inheritDoc} */
   @Override
   public void tableHorizontalLine() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element e;
     e = this.m_document.m_current;
     if ((e != this)

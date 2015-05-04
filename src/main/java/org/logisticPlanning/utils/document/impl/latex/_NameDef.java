@@ -247,7 +247,7 @@ final class _NameDef {
 
     map.put(EMathName.SPACE,//
         new _NameDef(new char[] { '{', '\\', 'm', 'a', 't', 'h', 'b', 'b',
-        '{' }, 2));
+            '{' }, 2));
 
     map.put(EMathName.TUPLE,//
         new _NameDef(ch, 2));

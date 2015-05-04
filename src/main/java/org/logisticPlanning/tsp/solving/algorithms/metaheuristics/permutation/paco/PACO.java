@@ -659,7 +659,7 @@ public class PACO extends TSPAlgorithm {
 
           // Compute the pheromone/heuristic value.
           phero = (Math.pow(matrix.get(lastNode, curNode), alpha) * //
-              Math.pow(((dist != 0) ? (1d / dist) : PACO.ERROR_NU), beta));
+          Math.pow(((dist != 0) ? (1d / dist) : PACO.ERROR_NU), beta));
 
           // Is this the best pheromone/heuristic value?
           if (phero >= bestPhero) { // Then remember it.

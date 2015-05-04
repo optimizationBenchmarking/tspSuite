@@ -14,8 +14,8 @@ import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
  * </p>
  */
 public final class ExhaustivelyEnumeratingLocal3Optimizer
-extends
-org.logisticPlanning.tsp.solving.operators.permutation.localOpt.LocalOptimizer {
+    extends
+    org.logisticPlanning.tsp.solving.operators.permutation.localOpt.LocalOptimizer {
 
   /** the serial version uid */
   private static final long serialVersionUID = 0L;

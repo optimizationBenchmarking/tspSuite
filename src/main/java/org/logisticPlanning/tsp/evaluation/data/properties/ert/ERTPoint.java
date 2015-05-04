@@ -210,7 +210,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
       default: {
         throw new IndexOutOfBoundsException(//
             "Dimension not permitted " + dimension + //$NON-NLS-1$
-            " for point " + this);//$NON-NLS-1$
+                " for point " + this);//$NON-NLS-1$
       }
     }
   }
@@ -264,7 +264,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
       return ((this.m_threshold == p.m_threshold) && //
           (this.m_successful == p.m_successful) && //
           (this.m_relThreshold == p.m_relThreshold) && //
-          (this.m_ert == p.m_ert));
+      (this.m_ert == p.m_ert));
     }
 
     return false;
@@ -277,8 +277,8 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_threshold),//
             HashUtils.hashCode(this.m_relThreshold)),//
-            HashUtils.combineHashes(//
-                HashUtils.hashCode(this.m_ert),//
-                HashUtils.hashCode(this.m_threshold)));//
+        HashUtils.combineHashes(//
+            HashUtils.hashCode(this.m_ert),//
+            HashUtils.hashCode(this.m_threshold)));//
   }
 }

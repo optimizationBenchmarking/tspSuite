@@ -295,7 +295,7 @@ public final class DescQualityMeasures extends DescriptionModule {
           null,//
           new URI(
               "http://coco.lri.fr/BBOB-downloads/download11.05/bbobdocexperiment.pdf"),//$NON-NLS-1$
-              null);
+          null);
     } catch (final URISyntaxException u) {
       throw new RuntimeException(u);
     }
@@ -314,10 +314,10 @@ public final class DescQualityMeasures extends DescriptionModule {
             new BibAuthor("G\u00fcnther R.", "Raidl"),//$NON-NLS-1$//$NON-NLS-2$
             new BibAuthor("Kay Chen", "Tan"),//$NON-NLS-1$//$NON-NLS-2$
             new BibAuthor("Ali M. S.", "Zalzala")//$NON-NLS-1$//$NON-NLS-2$
-            ),//
-            "Edinburgh, Scotland, UK",//$NON-NLS-1$
-            "IEEE Computer Society", "Piscataway, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
-            null, null, null, null);
+        ),//
+        "Edinburgh, Scotland, UK",//$NON-NLS-1$
+        "IEEE Computer Society", "Piscataway, NJ, USA",//$NON-NLS-1$//$NON-NLS-2$
+        null, null, null, null);
 
     try {
       AH2005PEOAALSEA = new BibInProceedings(
@@ -341,7 +341,7 @@ public final class DescQualityMeasures extends DescriptionModule {
           null,//
           new URI(
               "http://www.it-weise.de/documents/files/TLSYW2009BFFTCSSACOLSGO.zip"),//$NON-NLS-1$
-              null);
+          null);
     } catch (final URISyntaxException u) {
       throw new RuntimeException(u);
     }
@@ -356,7 +356,7 @@ public final class DescQualityMeasures extends DescriptionModule {
           null,//
           new URI(
               "http://www.it-weise.de/documents/files/TYW2012SSOECFLSGO.pdf"),//$NON-NLS-1$
-              null);
+          null);
 
     } catch (final URISyntaxException u) {
       throw new RuntimeException(u);
@@ -388,21 +388,21 @@ public final class DescQualityMeasures extends DescriptionModule {
               new BibDate(1989, EBibMonth.AUGUST, 25), //
               new BibAuthors(//
                   new BibAuthor("Natesa Sastri", "Sridharan")//$NON-NLS-1$//$NON-NLS-2$
-                  ),//
-                  "Detroit, MI, USA",//$NON-NLS-1$
-                  "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
-                  "San Francisco, CA, USA",//$NON-NLS-1$
-                  null,
-                  null, //
-                  new URI(
-                      "http://dli.iiit.ac.in/ijcai/IJCAI-89-VOL2/CONTENT/content.htm"),//$NON-NLS-1$
-                      null),
-                      "979",//$NON-NLS-1$
-                      "984",//$NON-NLS-1$
-                      null, //
-                      new URI(
-                          "http://ijcai.org/Past%20Proceedings/IJCAI-89-VOL-2/PDF/021.pdf"),//$NON-NLS-1$
-                          null);
+              ),//
+              "Detroit, MI, USA",//$NON-NLS-1$
+              "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
+              "San Francisco, CA, USA",//$NON-NLS-1$
+              null,
+              null, //
+              new URI(
+                  "http://dli.iiit.ac.in/ijcai/IJCAI-89-VOL2/CONTENT/content.htm"),//$NON-NLS-1$
+              null),
+          "979",//$NON-NLS-1$
+          "984",//$NON-NLS-1$
+          null, //
+          new URI(
+              "http://ijcai.org/Past%20Proceedings/IJCAI-89-VOL-2/PDF/021.pdf"),//$NON-NLS-1$
+          null);
 
     } catch (final URISyntaxException u) {
       throw new RuntimeException(u);
@@ -497,8 +497,8 @@ public final class DescQualityMeasures extends DescriptionModule {
           null,
           new ArrayDataCollectionView(list.toDataArray(),
               (list.size() >> 1), 2),//
-              null,//
-              (r.nextBoolean() ? ELineMode.DIRECT : ELineMode.STAIRS_KEEP_LEFT));
+          null,//
+          (r.nextBoolean() ? ELineMode.DIRECT : ELineMode.STAIRS_KEEP_LEFT));
     }
 
     return lines;
@@ -512,20 +512,20 @@ public final class DescQualityMeasures extends DescriptionModule {
     LineChart2D lc;
 
     body.write(//
-        "Like the developers of COCO/BBOB"); //$NON-NLS-1$
+    "Like the developers of COCO/BBOB"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescQualityMeasures.COCO2012CCCO,
         DescQualityMeasures.HAFR2012RPBBOBES,
         DescQualityMeasures.AH2005PEOAALSEA);
 
     body.write(//
-        ", a benchmark suite for numerical optimization, we assume that the optimization methods applied (to a TSP) are "); //$NON-NLS-1$
+    ", a benchmark suite for numerical optimization, we assume that the optimization methods applied (to a TSP) are "); //$NON-NLS-1$
 
     try (Emphasize em = body.emphasize()) {
       em.write("anytime algorithms"); //$NON-NLS-1$
     }
     body.write(//
-        ". Anytime algorithms can give an approximation of the solution of a problem (here: TSP) and an approximate quality "); //$NON-NLS-1$
+    ". Anytime algorithms can give an approximation of the solution of a problem (here: TSP) and an approximate quality "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_BEST);
     body.write(") at almost any time during their run. "); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
@@ -535,7 +535,7 @@ public final class DescQualityMeasures extends DescriptionModule {
     try (Figure fig = body.figure(Label.AUTO_LABEL, false)) {
       try (FigureCaption cap = fig.figureCaption()) {
         cap.write(//
-            "An example for several runs of an optimization algorithm and the concept of horizontal and vertical cuts"); //$NON-NLS-1$
+        "An example for several runs of an optimization algorithm and the concept of horizontal and vertical cuts"); //$NON-NLS-1$
         cap.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescQualityMeasures.HAFR2012RPBBOBES);
         cap.writeChar('.');
@@ -544,7 +544,7 @@ public final class DescQualityMeasures extends DescriptionModule {
           //
           new URI(Module.GRAPHICS_FOLDER + '/' + "examplesForCuts"),//$NON-NLS-1$
           body.getDocument().getDimensions()
-          .getFigureDimensionsMM(EDefaultFigureSize.TWO_IN_A_ROW))) {
+              .getFigureDimensionsMM(EDefaultFigureSize.TWO_IN_A_ROW))) {
 
         try (Graphic graph = fby.graphic()) {
           lc = body.getDocument().getOwner().getDriver().getChartDriver()
@@ -558,22 +558,22 @@ public final class DescQualityMeasures extends DescriptionModule {
           lc.setAxisTitleY("best objective function value");//$NON-NLS-1$
           //
           lc.addLine(//
-              new Line2D("horizontal view",//$NON-NLS-1$
-                  null, new ListCollection(
-                      //
-                      ArrayListView.makeArrayListView(new Point2D[] {
-                          new Point2D(0d, (1d - MathConstants.GOLDEN_RATIO)),//
-                          new Point2D(1d, (1d - MathConstants.GOLDEN_RATIO)) //
+          new Line2D("horizontal view",//$NON-NLS-1$
+              null, new ListCollection(
+              //
+                  ArrayListView.makeArrayListView(new Point2D[] {
+                      new Point2D(0d, (1d - MathConstants.GOLDEN_RATIO)),//
+                      new Point2D(1d, (1d - MathConstants.GOLDEN_RATIO)) //
                       }), 2), null, ELineMode.DIRECT));
           //
 
           lc.addLine(//
-              new Line2D("vertical view",//$NON-NLS-1$
-                  null, new ListCollection(
-                      //
-                      ArrayListView.makeArrayListView(new Point2D[] {
-                          new Point2D(MathConstants.GOLDEN_RATIO, 0d),//
-                          new Point2D(MathConstants.GOLDEN_RATIO, 1d) //
+          new Line2D("vertical view",//$NON-NLS-1$
+              null, new ListCollection(
+              //
+                  ArrayListView.makeArrayListView(new Point2D[] {
+                      new Point2D(MathConstants.GOLDEN_RATIO, 0d),//
+                      new Point2D(MathConstants.GOLDEN_RATIO, 1d) //
                       }), 2), null, ELineMode.DIRECT));
           lc.addLines(DescQualityMeasures.__makeRandom());
 
@@ -588,24 +588,24 @@ public final class DescQualityMeasures extends DescriptionModule {
     }
 
     body.write(//
-        "This leaves two ways to measure the quality of an algorithm:"); //$NON-NLS-1$
+    "This leaves two ways to measure the quality of an algorithm:"); //$NON-NLS-1$
 
     try (Enumeration enu = body.enumeration()) {
       try (EnumerationItem item = enu.item()) {
         item.write("The best solution quality "); //$NON-NLS-1$
         item.macroInvoke(Macros.F_BEST);
         item.write(//
-            " discovered after a certain, fixed amount of runtime (vertical cut in objective-value over time diagrams such as "); //$NON-NLS-1$
+        " discovered after a certain, fixed amount of runtime (vertical cut in objective-value over time diagrams such as "); //$NON-NLS-1$
         item.reference(label);
         item.write(").");//$NON-NLS-1$
       }
 
       try (EnumerationItem item = enu.item()) {
         item.write(//
-            "The amount of runtime needed to discover a solution with an objective value "); //$NON-NLS-1$
+        "The amount of runtime needed to discover a solution with an objective value "); //$NON-NLS-1$
         item.macroInvoke(Macros.F_BEST);
         item.write(//
-            " which is at least as good (smaller or equal) as a given threshold objective value "); //$NON-NLS-1$
+        " which is at least as good (smaller or equal) as a given threshold objective value "); //$NON-NLS-1$
         item.macroInvoke(Macros.F_THRESHOLD);
         item.write(" (horizontal cut in objective-value over time diagrams such as "); //$NON-NLS-1$
         item.reference(label);
@@ -614,7 +614,7 @@ public final class DescQualityMeasures extends DescriptionModule {
     }
 
     body.write(//
-        "There exist arguments for and against either measure and both are used in various benchmark suits "); //$NON-NLS-1$
+    "There exist arguments for and against either measure and both are used in various benchmark suits "); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE,
         DescQualityMeasures.HAFR2012RPBBOBES,
         DescQualityMeasures.AH2005PEOAALSEA,

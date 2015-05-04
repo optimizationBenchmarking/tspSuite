@@ -79,10 +79,10 @@ class _BibInBook<B extends BibBook> extends BibRecord {
     return HashUtils.combineHashes(HashUtils.combineHashes(//
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_book)),//
-            HashUtils.combineHashes(//
-                HashUtils.hashCode(this.m_startPage),//
-                HashUtils.hashCode(this.m_endPage))),//
-                HashUtils.hashCode(this.m_chapter));
+        HashUtils.combineHashes(//
+            HashUtils.hashCode(this.m_startPage),//
+            HashUtils.hashCode(this.m_endPage))),//
+        HashUtils.hashCode(this.m_chapter));
   }
 
   /**
@@ -133,7 +133,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
       return (ComparisonUtils.equals(this.m_book, x.m_book) && //
           ComparisonUtils.equals(this.m_startPage, x.m_startPage) && //
           ComparisonUtils.equals(this.m_endPage, x.m_endPage) && //
-          ComparisonUtils.equals(this.m_chapter, x.m_chapter));
+      ComparisonUtils.equals(this.m_chapter, x.m_chapter));
     }
 
     return false;

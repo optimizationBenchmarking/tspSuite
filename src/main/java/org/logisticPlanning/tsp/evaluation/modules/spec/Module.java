@@ -154,10 +154,10 @@ public class Module extends Configurable implements Comparable<Module> {
       if (this.containsDependency(mod)) {
         throw new IllegalStateException(//
             " Module '" + this.name() + //$NON-NLS-1$
-            "' cannot depend on module '" + mod.name() + //$NON-NLS-1$
-            "', because '" + mod.name() + //$NON-NLS-1$
-            "' already depends on '" + this.name() + //$NON-NLS-1$
-            "'."); //$NON-NLS-1$
+                "' cannot depend on module '" + mod.name() + //$NON-NLS-1$
+                "', because '" + mod.name() + //$NON-NLS-1$
+                "' already depends on '" + this.name() + //$NON-NLS-1$
+                "'."); //$NON-NLS-1$
       }
 
       if (mod.m_dependants == null) {
@@ -255,8 +255,8 @@ public class Module extends Configurable implements Comparable<Module> {
   final void _childNotPermittedError(final Module child) {
     throw new IllegalArgumentException(//
         "Instance of class '" + child.getClass() + //$NON-NLS-1$
-        "' not permitted as child of a module of type '" + //$NON-NLS-1$
-        this.getClass() + "'."); //$NON-NLS-1$
+            "' not permitted as child of a module of type '" + //$NON-NLS-1$
+            this.getClass() + "'."); //$NON-NLS-1$
   }
 
   /**
@@ -347,7 +347,7 @@ public class Module extends Configurable implements Comparable<Module> {
     if ((data == null) || (data.size() <= 0)) {
       if ((log != null) && (log.isLoggable(Level.WARNING))) {
         log.warning(//
-            "Null or empty data set passed to 'run' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
+        "Null or empty data set passed to 'run' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
       }
       return;
     }
@@ -439,7 +439,7 @@ public class Module extends Configurable implements Comparable<Module> {
     if ((data == null) || (data.size() <= 0)) {
       if ((log != null) && (log.isLoggable(Level.WARNING))) {
         log.warning(//
-            "Null or empty data set passed to 'initialize' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
+        "Null or empty data set passed to 'initialize' method of evaluation module - module quits without doing anything.");//$NON-NLS-1$
       }
       return;
     }
@@ -1038,7 +1038,7 @@ public class Module extends Configurable implements Comparable<Module> {
    */
   protected final URI makeURI(final String folder,
       final Experiment experiment, final Instance instance)
-          throws IOException {
+      throws IOException {
     return this.makeURI(folder, experiment, instance, null);
   }
 

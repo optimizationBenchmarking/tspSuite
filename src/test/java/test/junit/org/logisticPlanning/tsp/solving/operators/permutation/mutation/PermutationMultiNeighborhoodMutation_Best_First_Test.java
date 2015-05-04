@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation multi-neighborhood mutation operator
  */
 public class PermutationMultiNeighborhoodMutation_Best_First_Test extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationMultiNeighborhoodMutation_Best_First_Test() {

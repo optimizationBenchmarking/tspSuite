@@ -10,7 +10,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmAsymme
  * exhaustive permutation iteration} algorithm.
  */
 public class ExhaustivePermutationIterationTest extends
-TSPAlgorithmAsymmetricTest {
+    TSPAlgorithmAsymmetricTest {
 
   /** create */
   public ExhaustivePermutationIterationTest() {

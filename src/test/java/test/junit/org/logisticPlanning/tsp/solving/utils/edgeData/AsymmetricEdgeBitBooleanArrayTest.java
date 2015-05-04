@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.utils.edgeData._AsymmetricEdgeBitBoolean
  * The basic test for asymmetric edge bits
  */
 public class AsymmetricEdgeBitBooleanArrayTest extends
-_AsymmetricEdgeBitTest {
+    _AsymmetricEdgeBitTest {
 
   /** instantiate */
   public AsymmetricEdgeBitBooleanArrayTest() {

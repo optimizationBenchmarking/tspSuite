@@ -155,7 +155,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
         ComparisonUtils.equals(this.m_title, r.m_title) && //
         ComparisonUtils.equals(this.m_date, r.m_date) && //
         ComparisonUtils.equals(this.m_uri, r.m_uri) && //
-        ComparisonUtils.equals(this.m_doi, r.m_doi));
+    ComparisonUtils.equals(this.m_doi, r.m_doi));
   }
 
   /** {@inheritDoc} */
@@ -166,15 +166,15 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_authors),//
             HashUtils.hashCode(this.m_date)),//
+        HashUtils.combineHashes(
+            //
             HashUtils.combineHashes(
                 //
-                HashUtils.combineHashes(
-                    //
-                    HashUtils.hashCode(this.m_title),
-                    HashUtils.hashCode(this.m_uri)),
-                    HashUtils.hashCode(this.m_doi))
+                HashUtils.hashCode(this.m_title),
+                HashUtils.hashCode(this.m_uri)),
+            HashUtils.hashCode(this.m_doi))
 
-        );
+    );
   }
 
   /** {@inheritDoc} */

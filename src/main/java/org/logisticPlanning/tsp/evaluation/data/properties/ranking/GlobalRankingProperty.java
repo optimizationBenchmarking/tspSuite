@@ -9,7 +9,7 @@ import org.logisticPlanning.utils.document.spec.Document;
  * The property for global rankings.
  */
 public final class GlobalRankingProperty extends
-Property<ExperimentSet, GlobalRanking> {
+    Property<ExperimentSet, GlobalRanking> {
 
   /** all non-empty instances */
   public static final GlobalRankingProperty INSTANCE = new GlobalRankingProperty();

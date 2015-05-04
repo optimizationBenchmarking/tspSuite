@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.document.spec.Document;
  * instance for a given run set
  */
 public final class RunsetObjectiveThresholdsProperty extends
-Property<RunSet, long[]> {
+    Property<RunSet, long[]> {
 
   /** the globally shared instance */
   public static final RunsetObjectiveThresholdsProperty INSTANCE = new RunsetObjectiveThresholdsProperty();
@@ -25,7 +25,7 @@ Property<RunSet, long[]> {
   protected final long[] compute(final RunSet dataset, final Document doc) {
     return ExperimentSetObjectiveThresholdsProperty.INSTANCE.get(
         dataset.getOwner().getOwner(), doc).getThresholds(
-            dataset.getInstance());
+        dataset.getInstance());
   }
 
   /** {@inheritDoc} */

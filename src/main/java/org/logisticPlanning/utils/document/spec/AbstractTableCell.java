@@ -7,7 +7,7 @@ import java.util.Iterator;
  * The internal table cell element.
  */
 public abstract class AbstractTableCell extends AbstractTextBlock
-implements Iterable<TableCellDef> {
+    implements Iterable<TableCellDef> {
 
   /** the offset */
   int m_ofs;

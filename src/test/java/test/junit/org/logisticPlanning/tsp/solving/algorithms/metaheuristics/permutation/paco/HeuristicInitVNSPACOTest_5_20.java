@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.pa
  * variable neighborhood search
  */
 public class HeuristicInitVNSPACOTest_5_20 extends
-HeuristicInitVNSPACOTest {
+    HeuristicInitVNSPACOTest {
 
   /** create */
   public HeuristicInitVNSPACOTest_5_20() {

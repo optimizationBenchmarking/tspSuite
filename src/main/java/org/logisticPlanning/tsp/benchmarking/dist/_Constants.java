@@ -112,11 +112,11 @@ class _Constants {
 
   /** the format list */
   static final String[] FORMATS = new String[] {
-    _Constants.EDGE_WEIGHT_FORMAT_STR, _Constants.FULL_MATRIX_STR,
-    _Constants.LOWER_ROW_STR, _Constants.UPPER_ROW_STR,
-    _Constants.LOWER_DIAG_ROW_STR, _Constants.UPPER_DIAG_ROW_STR,
-    _Constants.LOWER_COL_STR, _Constants.UPPER_COL_STR,
-    _Constants.LOWER_DIAG_COL_STR, _Constants.UPPER_DIAG_COL_STR };
+      _Constants.EDGE_WEIGHT_FORMAT_STR, _Constants.FULL_MATRIX_STR,
+      _Constants.LOWER_ROW_STR, _Constants.UPPER_ROW_STR,
+      _Constants.LOWER_DIAG_ROW_STR, _Constants.UPPER_DIAG_ROW_STR,
+      _Constants.LOWER_COL_STR, _Constants.UPPER_COL_STR,
+      _Constants.LOWER_DIAG_COL_STR, _Constants.UPPER_DIAG_COL_STR };
 
   /** the separator */
   private static final char[] SEP = new char[] { ' ', ':', ' ' };

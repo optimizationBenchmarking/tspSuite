@@ -14,7 +14,7 @@ final class _OpFrac extends _OpDef {
 
   /** the before */
   private final static char[] FRAC = { '<', 't', 'd', ' ', 'c', 'l', 'a',
-    's', 's', '=', '"', 'm', 'a', 't', 'h', 'U', 'L', '"', '>' };
+      's', 's', '=', '"', 'm', 'a', 't', 'h', 'U', 'L', '"', '>' };
 
   /** create */
   private _OpFrac() {

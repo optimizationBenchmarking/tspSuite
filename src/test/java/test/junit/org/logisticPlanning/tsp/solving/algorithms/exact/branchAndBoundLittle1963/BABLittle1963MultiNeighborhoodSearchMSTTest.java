@@ -12,7 +12,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.mst.MSTHeuristic;
  * double-minimum spanning tree heuristic}.
  */
 public class BABLittle1963MultiNeighborhoodSearchMSTTest extends
-BABLittle1963MultiNeighborhoodSearchTest {
+    BABLittle1963MultiNeighborhoodSearchTest {
 
   /** create */
   public BABLittle1963MultiNeighborhoodSearchMSTTest() {

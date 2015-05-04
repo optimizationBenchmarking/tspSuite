@@ -113,7 +113,7 @@ public final class DescBenchmarks extends DescriptionModule {
           null,//
           new URI(
               "http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/DOC.PS"),//$NON-NLS-1$
-              null);
+          null);
 
       DACO1995TSPLIB = new BibWebsite(
           gha,//
@@ -147,7 +147,7 @@ public final class DescBenchmarks extends DescriptionModule {
 
   /** the citation for tsp lib */
   private static final BibRecord[] CITES = { DescBenchmarks.R1995T9,
-    DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL };
+      DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL };
 
   /**
    * create!
@@ -196,7 +196,7 @@ public final class DescBenchmarks extends DescriptionModule {
       final ExperimentSet data) throws IOException {
 
     body.write(//
-        "For benchmarking TSP solving algorithms, we use the TSPLib benchmark suite"); //$NON-NLS-1$
+    "For benchmarking TSP solving algorithms, we use the TSPLib benchmark suite"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescBenchmarks.R1995T9,
         DescBenchmarks.DACO1995TSPLIB, DescBenchmarks.R1991ATSPL);
 
@@ -225,7 +225,7 @@ public final class DescBenchmarks extends DescriptionModule {
     body.write(" are all known"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescBenchmarks.W2003ROCFTB);
     body.write(//
-        ", which makes it particularly easy to check how well an algorithm performs.");//$NON-NLS-1$
+    ", which makes it particularly easy to check how well an algorithm performs.");//$NON-NLS-1$
 
     super.writeSectionBody(body, data);
   }

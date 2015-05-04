@@ -594,7 +594,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
     Configurable.printlnObject(this.m_templateMethod, ps);
 
     Configurable
-    .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
+        .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
     Configurable.printlnObject(this.m_augmentationMethod, ps);
 
     if (this.m_templates != null) {
@@ -650,7 +650,7 @@ public class TemplateBasedEHBSA extends TSPAlgorithm {
     ps.println("the template method"); //$NON-NLS-1$
 
     Configurable
-    .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
+        .printKey(TemplateBasedEHBSA.PARAM_AUGMENTATION_METHOD, ps);
     ps.println("the augmentation method"); //$NON-NLS-1$
   }
 

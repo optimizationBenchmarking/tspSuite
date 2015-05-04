@@ -90,14 +90,14 @@ public class FigureSeriesPage extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_owner.subFigureBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_owner.subFigureEnd(h);
   }
 

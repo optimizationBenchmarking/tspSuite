@@ -404,7 +404,7 @@ public class LaTeXDriver extends DocumentDriver {
     if (q != null) {
       ss = q.toString().toLowerCase();
       if ((ss.contains("pdftex") || //$NON-NLS-1$
-          ss.contains("pdflatex"))) {//$NON-NLS-1$
+      ss.contains("pdflatex"))) {//$NON-NLS-1$
         return null;
       }
 

@@ -38,7 +38,7 @@ public final class InstanceObjectiveThresholds {
     t = this.m_thresholds[idx];
     if (t == null) {
       this.m_thresholds[idx] = t = //
-          Benchmark.getLogObjectiveValues(inst.optimum());
+      Benchmark.getLogObjectiveValues(inst.optimum());
     }
 
     return t;

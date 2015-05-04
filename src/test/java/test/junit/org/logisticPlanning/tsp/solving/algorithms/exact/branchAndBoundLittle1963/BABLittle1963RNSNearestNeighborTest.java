@@ -11,7 +11,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.nearestNeighbor.Ne
  * nearest neighbor heuristic}.
  */
 public class BABLittle1963RNSNearestNeighborTest extends
-BABLittle1963RNSTest {
+    BABLittle1963RNSTest {
 
   /** create */
   public BABLittle1963RNSNearestNeighborTest() {

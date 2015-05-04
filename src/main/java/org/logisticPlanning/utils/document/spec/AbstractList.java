@@ -70,7 +70,7 @@ public abstract class AbstractList extends Element {
    *           if creating an item is not permitted now
    */
   public abstract AbstractItem item() throws IOException,
-  IllegalStateException;
+      IllegalStateException;
 
   /** {@inheritDoc} */
   @Override

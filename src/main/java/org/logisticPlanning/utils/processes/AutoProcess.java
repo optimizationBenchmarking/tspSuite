@@ -77,7 +77,7 @@ public final class AutoProcess {
 
     if ((this.m_error.m_log != null) || (this.m_out.m_log != null)) {
       this.m_waitForMe = this.m_id = //
-          ((("Process " + process.hashCode()) + ':') + ' ');//$NON-NLS-1$
+      ((("Process " + process.hashCode()) + ':') + ' ');//$NON-NLS-1$
     } else {
       this.m_id = "[no log]";//$NON-NLS-1$
       this.m_waitForMe = new Object();

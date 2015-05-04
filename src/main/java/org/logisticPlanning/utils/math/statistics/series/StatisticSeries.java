@@ -42,7 +42,7 @@ import org.logisticPlanning.utils.utils.comparison.EComparison;
  * </p>
  */
 public class StatisticSeries extends ArrayDataCollectionView implements
-IStatisticDataCollection {
+    IStatisticDataCollection {
 
   /** the list of supported statistic parameters */
   private static final ArraySetView<EStatisticParameter> LIST = EStatisticParameter
@@ -372,7 +372,7 @@ IStatisticDataCollection {
 
         if ((index < StatisticSeries.STATISTIC_SERIES_DIM)
             || (buffer[(index + StatisticSeries.DIM_X)
-                       - StatisticSeries.STATISTIC_SERIES_DIM] < curX)) {
+                - StatisticSeries.STATISTIC_SERIES_DIM] < curX)) {
           // now move
           if (size >= capacity) {
             capacity <<= 1;
@@ -470,7 +470,7 @@ IStatisticDataCollection {
     while (low <= high) {
       mid = ((low + high) >>> 1);
       midVal = data[(mid * StatisticSeries.STATISTIC_SERIES_DIM)
-                    + StatisticSeries.DIM_X];
+          + StatisticSeries.DIM_X];
 
       if (midVal < key) {
         low = (mid + 1);
@@ -608,7 +608,7 @@ IStatisticDataCollection {
     i = StatisticSeries.LIST.indexOf(param);
     if (i >= 0) {
       return this.m_data[(StatisticSeries.STATISTIC_SERIES_DIM * index)
-                         + i];
+          + i];
     }
     throw new UnsupportedOperationException(String.valueOf(param));
   }

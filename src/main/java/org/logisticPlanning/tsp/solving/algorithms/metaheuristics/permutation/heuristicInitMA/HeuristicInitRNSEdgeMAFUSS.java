@@ -817,7 +817,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.sel
  * </ol>
  */
 public final class HeuristicInitRNSEdgeMAFUSS extends
-_HeuristicInitRNSEdgeMA {
+    _HeuristicInitRNSEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

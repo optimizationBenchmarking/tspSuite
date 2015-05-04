@@ -227,7 +227,7 @@ public class FileDataSource extends DataSource {
         s = ("Finished loading file '" + v); //$NON-NLS-1$
         if (res != null) {
           s += ("': got a new run with " + res.size() + //$NON-NLS-1$
-              " points."); //$NON-NLS-1$
+          " points."); //$NON-NLS-1$
         } else {
           s += ("', but it did not contain any log points."); //$NON-NLS-1$
         }
@@ -311,7 +311,7 @@ public class FileDataSource extends DataSource {
             throw new IOException(
                 ("Error encountered when creating RunSet with data loaded from folder '" + v + //$NON-NLS-1$
                     "' for instance '" + inst.name() + '\''),//$NON-NLS-1$
-                    error);
+                error);
           }
         }
 
@@ -324,7 +324,7 @@ public class FileDataSource extends DataSource {
         logger.fine("Finished loading run set from '" + v + //$NON-NLS-1$
             "' for instance '" + inst.name() + //$NON-NLS-1$
             ((res != null) ? ("' discovered " + res.size() + //$NON-NLS-1$
-                " runs.")//$NON-NLS-1$
+            " runs.")//$NON-NLS-1$
                 : "', but found no runs.")); //$NON-NLS-1$
       }
     }
@@ -603,7 +603,7 @@ public class FileDataSource extends DataSource {
   private final boolean __load_experiments(final File searchPath,
       final List<Experiment> output, final List<RunSet> tempRunSets,
       final List<Run> tempRuns, final List<DataPoint> tempDataPoints)
-          throws IOException {
+      throws IOException {
     final int size;
     final File base;
     final Logger log;

@@ -52,7 +52,7 @@ package org.logisticPlanning.tsp.solving.utils.edgeData;
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
  */
 public final class _AsymmetricEdgeBitBooleanArray extends
-_EdgeBitBooleanArray {
+    _EdgeBitBooleanArray {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

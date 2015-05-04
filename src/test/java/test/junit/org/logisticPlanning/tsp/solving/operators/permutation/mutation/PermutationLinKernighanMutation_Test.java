@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation Lin-Kernighan mutation operator
  */
 public class PermutationLinKernighanMutation_Test extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationLinKernighanMutation_Test() {

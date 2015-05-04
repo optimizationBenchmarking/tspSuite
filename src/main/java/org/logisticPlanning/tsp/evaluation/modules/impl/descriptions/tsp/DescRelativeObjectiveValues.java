@@ -57,40 +57,40 @@ public final class DescRelativeObjectiveValues extends DescriptionModule {
     body.write("Since the objective values ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_OPTIMAL);
     body.write(//
-        " of the known global optima tend are different in different benchmark cases, stating the objective value ");//$NON-NLS-1$
+    " of the known global optima tend are different in different benchmark cases, stating the objective value ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_BEST);
     body.write(//
-        " of the solution discovered during a search process or an absolute target objective value ");//$NON-NLS-1$
+    " of the solution discovered during a search process or an absolute target objective value ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(//
-        " without also stating the benchmark cases' name makes no sense. This also makes results incomparable when they stem from different problems. However, this problem can easily be remedied by using ");//$NON-NLS-1$
+    " without also stating the benchmark cases' name makes no sense. This also makes results incomparable when they stem from different problems. However, this problem can easily be remedied by using ");//$NON-NLS-1$
     try (Emphasize em = body.emphasize()) {
       em.write("relative");//$NON-NLS-1$
     }
     body.write(//
-        " values instead: from an objective value, first the objective value ");//$NON-NLS-1$
+    " values instead: from an objective value, first the objective value ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_OPTIMAL);
     body.write(//
-        " of the known global optimum is subtracted and the result is then divided by ");//$NON-NLS-1$
+    " of the known global optimum is subtracted and the result is then divided by ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_OPTIMAL);
     body.write(//
-        ". This means that a relative objective value of ");//$NON-NLS-1$
+    ". This means that a relative objective value of ");//$NON-NLS-1$
     body.writeDouble(0.0d);
     body.write(//
-        " represents the global optimum in any benchmark case, ");//$NON-NLS-1$
+    " represents the global optimum in any benchmark case, ");//$NON-NLS-1$
     body.writeDouble(0.1d);
     body.write(" means to be ");//$NON-NLS-1$
     body.writeInt(10);
     body.write(//
-        "% off, and so on. Thus, we frequently use relative values ");//$NON-NLS-1$
+    "% off, and so on. Thus, we frequently use relative values ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_BEST_RELATIVE);
     body.write(" and ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD_RELATIVE);
     body.write(//
-        " instead of the absolute objective value ");//$NON-NLS-1$
+    " instead of the absolute objective value ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_BEST);
     body.write(//
-        " of the best solution discovered so far or an absolute threshold tour length ");//$NON-NLS-1$
+    " of the best solution discovered so far or an absolute threshold tour length ");//$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
     body.write(". Generally, we denote absolute objective values with ");//$NON-NLS-1$
     Accessor.F.writeShortName(body);

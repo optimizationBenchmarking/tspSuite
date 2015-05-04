@@ -8,7 +8,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * A P-ACO algorithm with Lin-Kernighan mutation.
  */
 public class HeuristicInitLinKernighanPACO extends
-_HeuristicInitLocalSearchPACO {
+    _HeuristicInitLocalSearchPACO {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -33,7 +33,7 @@ _HeuristicInitLocalSearchPACO {
    */
   public static void main(final String[] args) {
     TSPAlgorithmRunner.benchmark(
-        //
+    //
         Instance.SYMMETRIC_INSTANCES, HeuristicInitLinKernighanPACO.class,//
         args);
   }

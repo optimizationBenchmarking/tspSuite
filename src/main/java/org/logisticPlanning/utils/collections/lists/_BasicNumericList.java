@@ -11,7 +11,7 @@ import org.logisticPlanning.utils.math.data.collection.IDataCollection;
  *          the array type
  */
 abstract class _BasicNumericList<ET, AT> extends BasicArrayList<ET, AT>
-implements IDataCollection {
+    implements IDataCollection {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

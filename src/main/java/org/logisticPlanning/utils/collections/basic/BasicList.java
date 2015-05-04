@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.collections.lists.ArrayListView;
  *          the element type
  */
 public abstract class BasicList<ET> extends AbstractList<ET> implements
-Serializable, RandomAccess {
+    Serializable, RandomAccess {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

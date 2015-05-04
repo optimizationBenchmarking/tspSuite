@@ -32,8 +32,8 @@ public class LongList extends _BasicNumericList<java.lang.Number, long[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_LONGS
         : //
-          new long[(capacity > 0) ? capacity
-              : BasicArrayList.DEFAULT_LIST_SIZE]);
+        new long[(capacity > 0) ? capacity
+            : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */

@@ -33,7 +33,7 @@ public class Transcoder {
    */
   public static final void copyBufferedCharStreams(
       final BufferedReader source, final BufferedWriter dest)
-          throws IOException {
+      throws IOException {
     String s;
     boolean nl;
 
@@ -63,11 +63,11 @@ public class Transcoder {
       final Writer dest) throws IOException {
 
     try (BufferedReader br = ((source instanceof BufferedReader) ? //
-        ((BufferedReader) source)//
+    ((BufferedReader) source)//
         : new BufferedReader(source))) {
 
       try (BufferedWriter bw = ((dest instanceof BufferedWriter) ? //
-          ((BufferedWriter) dest)//
+      ((BufferedWriter) dest)//
           : new BufferedWriter(dest))) {
 
         Transcoder.copyBufferedCharStreams(br, bw);
@@ -88,7 +88,7 @@ public class Transcoder {
    */
   public static final void copyBinaryStreamToBinaryStream(
       final InputStream source, final OutputStream dest)
-          throws IOException {
+      throws IOException {
     final byte[] buf;
     final int len;
     int r;
@@ -127,8 +127,8 @@ public class Transcoder {
     if (binary ^ (de == EEncoding.BINARY)) {
       throw new IllegalArgumentException(//
           "Binary streams can only be copied to binary streams, but source encoding is '" //$NON-NLS-1$
-          + se.getStandardName() + "' and destination encoding is '"//$NON-NLS-1$
-          + de.getStandardName() + "'.");//$NON-NLS-1$
+              + se.getStandardName() + "' and destination encoding is '"//$NON-NLS-1$
+              + de.getStandardName() + "'.");//$NON-NLS-1$
     }
 
     return binary;
@@ -187,11 +187,11 @@ public class Transcoder {
       final EEncoding sourceEncoding, final OutputStream dest,
       final EEncoding destEncoding) throws IOException {
     try (final Reader r = ((sourceEncoding == EEncoding.TEXT) ? //
-        new InputStreamReader(source)//
-    : new InputStreamReader(source, sourceEncoding.getJavaName()))) {
+    new InputStreamReader(source)//
+        : new InputStreamReader(source, sourceEncoding.getJavaName()))) {
       try (final Writer w = ((destEncoding == EEncoding.TEXT) ? //
-          new OutputStreamWriter(dest)//
-      : new OutputStreamWriter(dest, destEncoding.getJavaName()))) {
+      new OutputStreamWriter(dest)//
+          : new OutputStreamWriter(dest, destEncoding.getJavaName()))) {
         Transcoder.copyCharStreamToCharStream(r, w);
       }
     }

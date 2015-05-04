@@ -56,7 +56,7 @@ public class BibWebsite extends BibRecord {
     return HashUtils.combineHashes(
         HashUtils.combineHashes(super._hashCode(),
             HashUtils.hashCode(this.m_address)),
-            HashUtils.hashCode(this.m_publisher));
+        HashUtils.hashCode(this.m_publisher));
   }
 
   /**
@@ -86,7 +86,7 @@ public class BibWebsite extends BibRecord {
       x = ((BibWebsite) r);
 
       return (ComparisonUtils.equals(this.m_publisher, x.m_publisher) && //
-          ComparisonUtils.equals(this.m_address, x.m_address));
+      ComparisonUtils.equals(this.m_address, x.m_address));
 
     }
 

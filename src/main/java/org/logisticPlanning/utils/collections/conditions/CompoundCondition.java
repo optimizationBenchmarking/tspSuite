@@ -45,9 +45,9 @@ public final class CompoundCondition<T> extends Condition<T> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_f),//
             HashUtils.hashCode(this.m_a)),//
-            HashUtils.combineHashes(//
-                HashUtils.hashCode(this.m_b),//
-                HashUtils.hashCode(this.getClass())));//
+        HashUtils.combineHashes(//
+            HashUtils.hashCode(this.m_b),//
+            HashUtils.hashCode(this.getClass())));//
   }
 
   /** {@inheritDoc} */

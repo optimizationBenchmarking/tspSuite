@@ -79,7 +79,7 @@ public final class GammaUpperIncomplete extends BinaryFunction {
       c = delta;
 
       while (delta != od) // (Math.abs(delta) > Math.abs(sum) *
-        // Mathematics.EPS) )
+      // Mathematics.EPS) )
       {
         od = delta;
         b = (1.0d + b);

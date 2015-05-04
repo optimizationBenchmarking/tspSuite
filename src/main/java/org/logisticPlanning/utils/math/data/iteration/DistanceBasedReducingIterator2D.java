@@ -11,7 +11,7 @@ import org.logisticPlanning.utils.math.data.point.Point2D;
  * </p>
  */
 public final class DistanceBasedReducingIterator2D extends
-_PointIteratorWrapper2D {
+    _PointIteratorWrapper2D {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 

@@ -171,7 +171,7 @@ import org.logisticPlanning.utils.config.Configurable;
  * </ol>
  */
 public final class Instance extends Configurable implements
-Comparable<Instance> {
+    Comparable<Instance> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

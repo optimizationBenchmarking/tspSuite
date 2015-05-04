@@ -786,7 +786,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 public class HeuristicInitRNSTemplateBasedEHBSA extends
-_HeuristicInitRefiningTemplateBasedEHBSA {
+    _HeuristicInitRefiningTemplateBasedEHBSA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

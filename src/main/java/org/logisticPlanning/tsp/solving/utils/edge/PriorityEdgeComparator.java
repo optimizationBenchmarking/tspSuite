@@ -9,7 +9,7 @@ import java.util.Comparator;
  * end of an array.
  */
 public final class PriorityEdgeComparator implements
-Comparator<PriorityEdge> {
+    Comparator<PriorityEdge> {
 
   /** the shared instance */
   public static final Comparator<PriorityEdge> INSTANCE = new PriorityEdgeComparator();

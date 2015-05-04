@@ -95,7 +95,7 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetERTOverScaleDiagramsHolder extends
-ComparisonModule {
+    ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -131,10 +131,10 @@ ComparisonModule {
     for (final Accessor axs : Accessor.TIME_MEASURES) {
       new _ExperimentSetERTOverScaleDiagram(this, axs, //
           Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-          // ((axs == Accessor.DE) || //
-          // (axs == Accessor.FE) || //
-          // (axs == Accessor.NORMALIZED_RUNTIME))
-          );
+      // ((axs == Accessor.DE) || //
+      // (axs == Accessor.FE) || //
+      // (axs == Accessor.NORMALIZED_RUNTIME))
+      );
     }
   }
 

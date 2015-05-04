@@ -39,7 +39,7 @@ public abstract class LoggerOwner extends Configurable {
     s = TextUtils.prepare(loggerParam);
     this.m_loggerParam = (((s == null) || (s
         .equalsIgnoreCase(LoggerOwner.PARAM_LOGGER))) ? LoggerOwner.PARAM_LOGGER
-            : s);
+        : s);
   }
 
   /**

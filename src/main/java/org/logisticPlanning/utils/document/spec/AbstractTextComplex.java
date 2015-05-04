@@ -57,14 +57,14 @@ public abstract class AbstractTextComplex extends AbstractText {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathBegin(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.inlineMathBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void inlineMathEnd(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.inlineMathEnd(h);
   }
 

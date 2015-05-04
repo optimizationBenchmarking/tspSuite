@@ -339,17 +339,17 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
- *
+ * 
  * import {@code MyPackage}.{@code MyHeuristic};
- *
+ * 
  * import {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest};
- *
+ * 
  * public class {@code MyHeuristic}Test extends {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest TSPAlgorithmSymmetricTest} {
- *
+ * 
  *   public {@code MyHeuristic}Test() {
  *     super();
  *   }
- *
+ * 
  *   {@code @Override}
  *   protected {@code MyHeuristic} createAlgorithm() {
  *     return new {@code MyHeuristic}();

@@ -102,7 +102,7 @@ public abstract class MathematicalFunction implements Serializable {
   final void _throwIllegalNaN() {
     throw new IllegalArgumentException(//
         "The integer-based '" + this.toString() + //$NON-NLS-1$
-        "' delegate to a real-valued calculation has returned NaN."); //$NON-NLS-1$
+            "' delegate to a real-valued calculation has returned NaN."); //$NON-NLS-1$
   }
 
   /**
@@ -117,9 +117,9 @@ public abstract class MathematicalFunction implements Serializable {
   final void _throwArity(final int length) {
     throw new IllegalArgumentException(//
         "The function '" + this.toString() + //$NON-NLS-1$
-        "' has arity " + this.arity() + //$NON-NLS-1$
-        " but was invoked with " + length + //$NON-NLS-1$
-        " arguments."); //$NON-NLS-1$
+            "' has arity " + this.arity() + //$NON-NLS-1$
+            " but was invoked with " + length + //$NON-NLS-1$
+            " arguments."); //$NON-NLS-1$
   }
 
   /**

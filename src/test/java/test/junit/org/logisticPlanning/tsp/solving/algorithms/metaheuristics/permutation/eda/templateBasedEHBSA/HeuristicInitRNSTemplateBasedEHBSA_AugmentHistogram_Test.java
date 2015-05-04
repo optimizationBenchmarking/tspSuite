@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * template-based EHBSA} with heuristic initialization and RNS.
  */
 public class HeuristicInitRNSTemplateBasedEHBSA_AugmentHistogram_Test
-extends TSPAlgorithmSymmetricTest {
+    extends TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitRNSTemplateBasedEHBSA_AugmentHistogram_Test() {

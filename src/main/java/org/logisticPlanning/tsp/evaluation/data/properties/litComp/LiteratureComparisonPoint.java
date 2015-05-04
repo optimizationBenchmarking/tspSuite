@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.utils.comparison.EComparison;
  * A result comparison point
  */
 public final class LiteratureComparisonPoint implements
-Comparable<LiteratureComparisonPoint> {
+    Comparable<LiteratureComparisonPoint> {
 
   /** the point */
   private final LiteratureResultPoint m_point;
@@ -53,7 +53,7 @@ Comparable<LiteratureComparisonPoint> {
     this.m_qualityLB = qLB = LiteratureComparisonPoint.__point(ser,//
         ser.firstIndexOf(p.m_quality, point.m_resultStatistic,
             EComparison.LESS_OR_SAME),//
-            time, quality, stat);
+        time, quality, stat);
 
     if (qLB != null) {// we can achieve the goal quality
       if (qLB.m_time <= p.m_time) { // and can do so in the right time

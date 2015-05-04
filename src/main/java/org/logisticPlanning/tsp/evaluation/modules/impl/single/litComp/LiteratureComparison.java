@@ -50,11 +50,11 @@ public class LiteratureComparison extends SingleModule {
 
   /** the table cell definition */
   private static final TableCellDef[] TABLE_DEF = {
-    TableCellDef.VERTICAL_LINE, TableCellDef.RIGHT,
-    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-    TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
-    TableCellDef.VERTICAL_LINE };
+      TableCellDef.VERTICAL_LINE, TableCellDef.RIGHT,
+      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+      TableCellDef.VERTICAL_LINE, TableCellDef.LEFT,
+      TableCellDef.VERTICAL_LINE };
 
   /** the formats */
   private static final NumberFormat[] FORMATS;
@@ -63,17 +63,17 @@ public class LiteratureComparison extends SingleModule {
     FORMATS = new NumberFormat[Accessor.ACCESSORS.size()];
 
     LiteratureComparison.FORMATS[Accessor.DE.ordinal()] = //
-        ModuleUtils.createDecimalFormat("0"); //$NON-NLS-1$
+    ModuleUtils.createDecimalFormat("0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.FE.ordinal()] = //
-        LiteratureComparison.FORMATS[Accessor.DE.ordinal()];
+    LiteratureComparison.FORMATS[Accessor.DE.ordinal()];
     LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()] = //
-        ModuleUtils.createDecimalFormat("0.00E0"); //$NON-NLS-1$
+    ModuleUtils.createDecimalFormat("0.00E0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.F.ordinal()] = //
-        ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
+    ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
     LiteratureComparison.FORMATS[Accessor.F_RELATIVE.ordinal()] = //
-        LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
+    LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
     LiteratureComparison.FORMATS[Accessor.NORMALIZED_RUNTIME.ordinal()] = //
-        LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
+    LiteratureComparison.FORMATS[Accessor.RUNTIME.ordinal()];
   }
 
   /**
@@ -158,7 +158,7 @@ public class LiteratureComparison extends SingleModule {
 
           try (Table tbl = bdy.table(Label.AUTO_LABEL, //
               "Comparison of " + root.getShortName(data).getPlaceholder() + //$NON-NLS-1$
-              " with " + lrps.getShortName(),//$NON-NLS-1$
+                  " with " + lrps.getShortName(),//$NON-NLS-1$
               true, LiteratureComparison.TABLE_DEF)) {
             try (TableCaption cap = tbl.tableCaption()) {
               cap.write("Comparison of ");//$NON-NLS-1$

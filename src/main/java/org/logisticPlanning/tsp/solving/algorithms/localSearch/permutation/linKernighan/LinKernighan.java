@@ -241,7 +241,7 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
                     this.m_tempX[2 * this.m_xend[q]],
                     this.m_tempX[(2 * this.m_xend[q]) + 1])
 
-                    ) {
+                ) {
                   this.m_edgeDeleted.addEdge(
                       this.m_tempX[2 * this.m_xend[q]],
                       this.m_tempX[(2 * this.m_xend[q]) + 1]);
@@ -442,8 +442,8 @@ public class LinKernighan extends TSPLocalSearchAlgorithm<int[]> {
                   && (this.m_yend[q] != this.m_t[2 * q])
                   && (this.m_yend[q] != LinKernighan.__getNextNode(
                       this.m_t[2 * q], this.m_tempY[0], this.m_tempY[1]))
-                      && (this.m_yend[q] != LinKernighan.__getNextNode(
-                          this.m_t[2 * q], this.m_tempY[2], this.m_tempY[3]))) {
+                  && (this.m_yend[q] != LinKernighan.__getNextNode(
+                      this.m_t[2 * q], this.m_tempY[2], this.m_tempY[3]))) {
                 this.m_t[(2 * q) + 1] = this.m_yend[q];
 
                 oldGain = gain;

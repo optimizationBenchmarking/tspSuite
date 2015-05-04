@@ -14,11 +14,11 @@ public final class ReflectionUtils {
    * but is quite nice for finding constants etc.
    */
   private static final String[] DEFAULT_PACKAGES = new String[] { null,//
-    "java.lang.",//$NON-NLS-1$
-    "java.util.", //$NON-NLS-1$
-    "java.io.",//$NON-NLS-1$
-    "java.math.",//$NON-NLS-1$
-    "java.net.",//$NON-NLS-1$
+      "java.lang.",//$NON-NLS-1$
+      "java.util.", //$NON-NLS-1$
+      "java.io.",//$NON-NLS-1$
+      "java.math.",//$NON-NLS-1$
+      "java.net.",//$NON-NLS-1$
   };
 
   /**
@@ -213,9 +213,9 @@ public final class ReflectionUtils {
    */
   public static final <T> T getStaticConstant(final Class<?> clazz,
       final String constant, final Class<T> target)
-          throws ExceptionInInitializerError, NoSuchFieldException,
-          SecurityException, IllegalAccessException, IllegalArgumentException,
-          NullPointerException, ClassCastException {
+      throws ExceptionInInitializerError, NoSuchFieldException,
+      SecurityException, IllegalAccessException, IllegalArgumentException,
+      NullPointerException, ClassCastException {
     final String n;
     final Field f;
     final Object t;

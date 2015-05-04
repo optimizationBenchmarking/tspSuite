@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * the test of the heuristically initialized permutation EA
  */
 public class HeuristicInitPermutationEAParentsDieTest extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitPermutationEAParentsDieTest() {

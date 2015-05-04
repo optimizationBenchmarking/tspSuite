@@ -108,7 +108,7 @@ public class SubFigure extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   public SubFigureCaption subFigureCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.subFigureCaption();
   }
 
@@ -116,21 +116,21 @@ public class SubFigure extends AbstractLabeledElement {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-          throws IOException, URISyntaxException {
+      throws IOException, URISyntaxException {
     return super.figureBodyCreate(owner, relativeNameBase, sizeInMM);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.figureBodyBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.figureBodyEnd(h);
   }
 

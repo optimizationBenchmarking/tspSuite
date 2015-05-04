@@ -157,9 +157,9 @@ public class UndirectedPriorityEdgeNeighborList<ET extends PriorityEdge> {
           // sort it
           use.h = h; // assign h - necessary for sorting
           Arrays
-          .sort(edges, fromIndex, fromIndex
-              + this.m_neighborListLength,
-              PriorityEdgeComparator.INSTANCE);
+              .sort(edges, fromIndex, fromIndex
+                  + this.m_neighborListLength,
+                  PriorityEdgeComparator.INSTANCE);
         }
       } else {
         // Ok, there was no free slot: try to find one by using binary

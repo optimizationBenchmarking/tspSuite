@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.text.TextUtils;
  *          the comparable type
  */
 abstract class _BibElement<T extends _BibElement<T>> implements
-Serializable, Comparable<T> {
+    Serializable, Comparable<T> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

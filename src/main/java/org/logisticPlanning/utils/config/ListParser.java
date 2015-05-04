@@ -51,7 +51,7 @@ public final class ListParser<T> extends Parser<List<T>> {
     if (Collection.class.isAssignableFrom(items.objectClass())) {
       throw new IllegalArgumentException(//
           "No collections are supported as list items, but item class was " //$NON-NLS-1$
-          + items.objectClass());
+              + items.objectClass());
     }
 
     this.m_items = items;

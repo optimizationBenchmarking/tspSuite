@@ -14,7 +14,7 @@ final class _OpAbs extends _OpDef {
 
   /** the before */
   private final static char[] ABS = { '<', 't', 'd', ' ', 'c', 'l', 'a',
-    's', 's', '=', '"', 'm', 'a', 't', 'h', 'B', 'L', '"', '>' };
+      's', 's', '=', '"', 'm', 'a', 't', 'h', 'B', 'L', '"', '>' };
 
   /** create */
   private _OpAbs() {

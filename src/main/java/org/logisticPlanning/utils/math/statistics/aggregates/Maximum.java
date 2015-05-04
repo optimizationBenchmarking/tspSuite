@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.math.statistics.IStatisticPoint;
  * This class computes the maximum of a set of numbers.
  */
 public final class Maximum extends ScalarAggregate implements
-IStatisticPoint {
+    IStatisticPoint {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

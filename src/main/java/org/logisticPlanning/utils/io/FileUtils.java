@@ -20,7 +20,7 @@ public final class FileUtils {
 
   /** The current directory. */
   public static final File CURRENT_DIR = //
-      FileUtils.canonicalize(new File("."));//$NON-NLS-1$
+  FileUtils.canonicalize(new File("."));//$NON-NLS-1$
 
   /** The java home directory. */
   private static final File HOME_DIR = FileUtils.canonicalize(//
@@ -61,7 +61,7 @@ public final class FileUtils {
 
   /** extensions for executables */
   private static final String[] EXECUTABLE_EXTENSIONS = //
-      FileUtils.__getExecutableExtensions();
+  FileUtils.__getExecutableExtensions();
 
   /**
    * Canonicalize a file

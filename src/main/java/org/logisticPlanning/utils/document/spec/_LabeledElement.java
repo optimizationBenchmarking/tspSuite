@@ -35,7 +35,7 @@ abstract class _LabeledElement<LT extends _OwnedLabel> extends Element {
       if (lbl.m_owned) {
         throw new IllegalStateException(//
             "The label '" + label + //$NON-NLS-1$
-            "' has already been put somewhere else and cannot be used here!"); //$NON-NLS-1$
+                "' has already been put somewhere else and cannot be used here!"); //$NON-NLS-1$
       }
       lbl.m_owned = true;
     }

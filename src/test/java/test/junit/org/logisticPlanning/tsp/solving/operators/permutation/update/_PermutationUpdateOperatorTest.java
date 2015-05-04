@@ -18,7 +18,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
 /** Test a permutation update operator. */
 @Ignore
 public class _PermutationUpdateOperatorTest extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** a wrong point distance */
   private static final String WRONG_POINT_DISTANCE = "A point distance was wrong."; //$NON-NLS-1$

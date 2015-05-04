@@ -32,8 +32,8 @@ public class ByteList extends _BasicNumericList<java.lang.Number, byte[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_BYTES
         : //
-          new byte[(capacity > 0) ? capacity
-              : BasicArrayList.DEFAULT_LIST_SIZE]);
+        new byte[(capacity > 0) ? capacity
+            : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */

@@ -17,21 +17,21 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * A property returning a list of instances of an experiment.
  */
 public class ExperimentInstancesProperty extends
-Property<Experiment, ArraySetView<Instance>> {
+    Property<Experiment, ArraySetView<Instance>> {
 
   /** all non-empty instances */
   public static final ExperimentInstancesProperty NON_EMPTY = //
-      new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,
-          InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_EMPTY);
+  new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,
+      InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_EMPTY);
 
   /** all non-premature instances */
   public static final ExperimentInstancesProperty NON_PREMATURE = //
-      new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,
-          InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_PREMATURLY_TERMINATED);
+  new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,
+      InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_PREMATURLY_TERMINATED);
 
   /** the conditions */
   private static final ExperimentInstancesProperty[] __ONE_MUST_HAVE_2 = //
-      new ExperimentInstancesProperty[Accessor.ACCESSORS.size()];
+  new ExperimentInstancesProperty[Accessor.ACCESSORS.size()];
 
   /** the instances to return */
   private final Condition<? super RunSet> m_cond;
@@ -130,8 +130,8 @@ Property<Experiment, ArraySetView<Instance>> {
     c = ExperimentInstancesProperty.__ONE_MUST_HAVE_2[i];
     if (c == null) {
       ExperimentInstancesProperty.__ONE_MUST_HAVE_2[i] = c = //
-          new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,//
-              InstanceSelectionUtils.oneMustHave2PointsOfAccessor(axs));
+      new ExperimentInstancesProperty(EPropertyType.TEMPORARILY_STORED,//
+          InstanceSelectionUtils.oneMustHave2PointsOfAccessor(axs));
     }
 
     return c;

@@ -187,18 +187,18 @@ public final class DescTimeMeasures extends DescriptionModule {
     try {
       JGMCYZZ2004EAOHFTA = new BibInCollection(
           new BibAuthors(
-              //
+          //
               DescTimeMeasures.DSJ, DescTSP.GG, DescTimeMeasures.LAMG,//
               new BibAuthor("Anders", "Yeo"),//$NON-NLS-1$ //$NON-NLS-2$
               new BibAuthor("Weixiong", "Zhang"),//$NON-NLS-1$ //$NON-NLS-2$
               new BibAuthor("Alexei", "Zverovitch")//$NON-NLS-1$ //$NON-NLS-2$
-              ),//
-              "Experimental Analysis of Heuristics for the ATSP",//$NON-NLS-1$
-              DescTSP.GP2004TTSPAIV,
-              "445",//$NON-NLS-1$
-              "487",//$NON-NLS-1$
-              "10",//$NON-NLS-1$
-              new URI("http://www2.research.att.com/~dsj/papers/atspchap.pdf"),//$NON-NLS-1$
+          ),//
+          "Experimental Analysis of Heuristics for the ATSP",//$NON-NLS-1$
+          DescTSP.GP2004TTSPAIV,
+          "445",//$NON-NLS-1$
+          "487",//$NON-NLS-1$
+          "10",//$NON-NLS-1$
+          new URI("http://www2.research.att.com/~dsj/papers/atspchap.pdf"),//$NON-NLS-1$
           "10.1007/0-306-48213-4_10");//$NON-NLS-1$
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
@@ -223,26 +223,26 @@ public final class DescTimeMeasures extends DescriptionModule {
           new BibAuthors(//
               DescTimeMeasures.HOLGER_H_HOOS,//
               new BibAuthor("Thomas", "St\u00fctzle")//$NON-NLS-1$ //$NON-NLS-2$
+          ),//
+          "Evaluating Las Vegas Algorithms \u2012 Pitfalls and Remedies",//$NON-NLS-1$
+          new BibProceedings(//
+              "Proceedings of the 14th Conference on Uncertainty in Artificial Intelligence (UAI'93)",//$NON-NLS-1$
+              new BibDate(1998, EBibMonth.JULY, 24),//
+              new BibDate(1998, EBibMonth.JULY, 26),//
+              new BibAuthors(//
+                  new BibAuthor("Gregory F.", "Cooper"),//$NON-NLS-1$ //$NON-NLS-2$
+                  new BibAuthor("Serafin", "Moral")//$NON-NLS-1$ //$NON-NLS-2$
               ),//
-              "Evaluating Las Vegas Algorithms \u2012 Pitfalls and Remedies",//$NON-NLS-1$
-              new BibProceedings(//
-                  "Proceedings of the 14th Conference on Uncertainty in Artificial Intelligence (UAI'93)",//$NON-NLS-1$
-                  new BibDate(1998, EBibMonth.JULY, 24),//
-                  new BibDate(1998, EBibMonth.JULY, 26),//
-                  new BibAuthors(//
-                      new BibAuthor("Gregory F.", "Cooper"),//$NON-NLS-1$ //$NON-NLS-2$
-                      new BibAuthor("Serafin", "Moral")//$NON-NLS-1$ //$NON-NLS-2$
-                      ),//
-                      "Madison, WI, USA",//$NON-NLS-1$
-                      "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
-                      "San Francisco, CA, USA",//$NON-NLS-1$
-                      null, null,//
-                      null, null//
-                  ),//
-                  "238", "245", null,//$NON-NLS-1$//$NON-NLS-2$
-                  new URI(
-                      "http://www.intellektik.informatik.tu-darmstadt.de/TR/1998/98-02.ps.Z"),//$NON-NLS-1$
-                      null);
+              "Madison, WI, USA",//$NON-NLS-1$
+              "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
+              "San Francisco, CA, USA",//$NON-NLS-1$
+              null, null,//
+              null, null//
+          ),//
+          "238", "245", null,//$NON-NLS-1$//$NON-NLS-2$
+          new URI(
+              "http://www.intellektik.informatik.tu-darmstadt.de/TR/1998/98-02.ps.Z"),//$NON-NLS-1$
+          null);
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
     }
@@ -298,7 +298,7 @@ public final class DescTimeMeasures extends DescriptionModule {
         enui.write(" (");//$NON-NLS-1$
         Accessor.RUNTIME.writeShortName(enui, true);
         enui.write(//
-            "): This measure highly depends on the machine on which the algorithm is executed and can only be measured up to a certain granularity (e.g., 10ms), which may be inappropriate for small-scale problems. However, for experiments executed on the same machine, it also is somewhat fair and more or less correctly represents the respective algorithms overheads. Furthermore, many results from literature are accompanied with measurements of the runtime, see, e.g.,");//$NON-NLS-1$
+        "): This measure highly depends on the machine on which the algorithm is executed and can only be measured up to a certain granularity (e.g., 10ms), which may be inappropriate for small-scale problems. However, for experiments executed on the same machine, it also is somewhat fair and more or less correctly represents the respective algorithms overheads. Furthermore, many results from literature are accompanied with measurements of the runtime, see, e.g.,");//$NON-NLS-1$
         enui.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescTimeMeasures.JMG20088DICTTSP);
         enui.writeChar('.');
@@ -311,21 +311,21 @@ public final class DescTimeMeasures extends DescriptionModule {
         enui.write(" (");//$NON-NLS-1$
         Accessor.FE.writeShortName(enui, true);
         enui.write(//
-            "), i.e., the number of candidate solutions which have been tested by the optimization process. This measure is maybe the most commonly used one in optimization algorithm benchmarking");//$NON-NLS-1$
+        "), i.e., the number of candidate solutions which have been tested by the optimization process. This measure is maybe the most commonly used one in optimization algorithm benchmarking");//$NON-NLS-1$
         enui.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescQualityMeasures.HAFR2012RPBBOBES,
             DescQualityMeasures.AH2005PEOAALSEA,
             DescQualityMeasures.TLSYW2010BFFTC2SSACOLSGO,
             DescQualityMeasures.TYW2012SSOECFLSGO);
         enui.write(//
-            ". Its advantage is that it is independent of is independent of the underlying machine");//$NON-NLS-1$
+        ". Its advantage is that it is independent of is independent of the underlying machine");//$NON-NLS-1$
         enui.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescTimeMeasures.HS1998ELVAPAR);
         enui.write(//
-            ". However, when solving TSPs, it may not be entirely fair. Some algorithms may always create entirely new candidate solutions which need to be evaluated/traversed completely in order to compute their length. This then will takes ");//$NON-NLS-1$
+        ". However, when solving TSPs, it may not be entirely fair. Some algorithms may always create entirely new candidate solutions which need to be evaluated/traversed completely in order to compute their length. This then will takes ");//$NON-NLS-1$
         enui.macroInvoke(Macros.SCALE);
         enui.write(//
-            " separate edge cost (node distance) evaluations, i.e., has complexity ");//$NON-NLS-1$
+        " separate edge cost (node distance) evaluations, i.e., has complexity ");//$NON-NLS-1$
         try (InlineMath m = enui.inlineMath()) {
           try (MathOp o = m.mathOp(EMathOp.COMPLEX_BIG_O)) {
             try (MathOpParam p = o.mathOpParam()) {
@@ -334,10 +334,10 @@ public final class DescTimeMeasures extends DescriptionModule {
           }
         }
         enui.write(//
-            ". Other algorithms may update candidate solutions by, e.g., swapping two nodes, which may only require ");//$NON-NLS-1$
+        ". Other algorithms may update candidate solutions by, e.g., swapping two nodes, which may only require ");//$NON-NLS-1$
         enui.writeIntInText(8, false);
         enui.write(//
-            " distance evaluations, i.e., happen in ");//$NON-NLS-1$
+        " distance evaluations, i.e., happen in ");//$NON-NLS-1$
         try (InlineMath m = enui.inlineMath()) {
           try (MathOp o = m.mathOp(EMathOp.COMPLEX_BIG_O)) {
             try (MathOpParam p = o.mathOpParam()) {
@@ -346,10 +346,10 @@ public final class DescTimeMeasures extends DescriptionModule {
           }
         }
         enui.write(//
-            ". The actual runtime of a function evaluation may therefore fastly differ. Additionally, we should consider that some TSP problems are over very large-scale, having ");//$NON-NLS-1$
+        ". The actual runtime of a function evaluation may therefore fastly differ. Additionally, we should consider that some TSP problems are over very large-scale, having ");//$NON-NLS-1$
         enui.writeIntInText(10000, false);
         enui.write(//
-            " cities and more. This means that distance matrices cannot be used anymore, as they consume too much memory. Then, every distance calculation becomes more costly and it makes a big difference if an algorithm requires ");//$NON-NLS-1$
+        " cities and more. This means that distance matrices cannot be used anymore, as they consume too much memory. Then, every distance calculation becomes more costly and it makes a big difference if an algorithm requires ");//$NON-NLS-1$
         enui.writeIntInText(8, false);
         enui.write(" or ");//$NON-NLS-1$
         enui.macroInvoke(Macros.SCALE);
@@ -365,7 +365,7 @@ public final class DescTimeMeasures extends DescriptionModule {
         enui.write(" (");//$NON-NLS-1$
         Accessor.DE.writeShortName(enui, true);
         enui.write(//
-            "), the number of invocations of the distance function, i.e., how often the distance between any two nodes was computed. This measure has the smallest granularity and circumvents the problem described above: It is machine-independent and unbiased in terms of the actual complexity of a ");//$NON-NLS-1$
+        "), the number of invocations of the distance function, i.e., how often the distance between any two nodes was computed. This measure has the smallest granularity and circumvents the problem described above: It is machine-independent and unbiased in terms of the actual complexity of a ");//$NON-NLS-1$
         Accessor.FE.writeLongName(enui, false);
         enui.write(". It's drawback is that it is a measure of complexity, but not of ");//$NON-NLS-1$
         try (Emphasize emph = enui.emphasize()) {
@@ -386,19 +386,19 @@ public final class DescTimeMeasures extends DescriptionModule {
         enui.write(" (");//$NON-NLS-1$
         Accessor.NORMALIZED_RUNTIME.writeShortName(enui, true);
         enui.write(//
-            ") tries to provide a measure of overall algorithm time progress which is unbiased by the underlying machine's performance. The general idea is to run a standardized algorithm on the machine of experiments prior to the actual experiments. The runtime of the TSP solvers in the real experiments can then be divided (normalized) with the priorly-measured runtime of the standardized algorithm. ");//$NON-NLS-1$
+        ") tries to provide a measure of overall algorithm time progress which is unbiased by the underlying machine's performance. The general idea is to run a standardized algorithm on the machine of experiments prior to the actual experiments. The runtime of the TSP solvers in the real experiments can then be divided (normalized) with the priorly-measured runtime of the standardized algorithm. ");//$NON-NLS-1$
         enui.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescTimeMeasures.JMG20088DICTTSP,
             DescTimeMeasures.JMG2004EAOHFTS,
             DescTimeMeasures.JGMCYZZ2004EAOHFTA);
         enui.write(//
-            " measure the runtime of an algorithm for a subset of their benchmark instances. In our experimental framework, a simple double-ended nearest neighbor heuristic ");//$NON-NLS-1$
+        " measure the runtime of an algorithm for a subset of their benchmark instances. In our experimental framework, a simple double-ended nearest neighbor heuristic ");//$NON-NLS-1$
         enui.cite(ECitationMode.BY_ID_IN_SENTENCE,
             DescTimeMeasures.JMG20088DICTTSP,
             DescTimeMeasures.JMG2004EAOHFTS,
             DescTimeMeasures.JGMCYZZ2004EAOHFTA);
         enui.write(//
-            " is applied to each benchmark instance directly before solving it with an algorithm. It is run often enough to get a stable runtime measure which is then used to normalize the values of ");//$NON-NLS-1$
+        " is applied to each benchmark instance directly before solving it with an algorithm. It is run often enough to get a stable runtime measure which is then used to normalize the values of ");//$NON-NLS-1$
         Accessor.RUNTIME.writeShortName(enui, false);
         enui.write(" to ");//$NON-NLS-1$
         Accessor.NORMALIZED_RUNTIME.writeShortName(enui, false);
@@ -413,12 +413,12 @@ public final class DescTimeMeasures extends DescriptionModule {
     }
 
     body.write(//
-        "In our benchmark suite, we collect all four runtime metrics. In order to property compare and evaluate algorithms, we suggest to always use both at least one time measure (");//$NON-NLS-1$
+    "In our benchmark suite, we collect all four runtime metrics. In order to property compare and evaluate algorithms, we suggest to always use both at least one time measure (");//$NON-NLS-1$
     Accessor.RUNTIME.writeShortName(body, false);
     body.write(", ");//$NON-NLS-1$;
     Accessor.NORMALIZED_RUNTIME.writeShortName(body, false);
     body.write(//
-        ") and at least one information access counting measure (");//$NON-NLS-1$
+    ") and at least one information access counting measure (");//$NON-NLS-1$
     Accessor.FE.writeShortName(body, false);
     body.write(", ");//$NON-NLS-1$;
     Accessor.DE.writeShortName(body, false);
@@ -448,20 +448,20 @@ public final class DescTimeMeasures extends DescriptionModule {
         ESequenceType.AND, false);
 
     body.write(//
-        ". This way, results become easier to read and to interpret. If the scaled number of consumed ");//$NON-NLS-1$
+    ". This way, results become easier to read and to interpret. If the scaled number of consumed ");//$NON-NLS-1$
     Accessor.FE.writeShortName(body, true);
     body.write(" is ");//$NON-NLS-1$
     body.writeIntInText(10, false);
     body.write(//
-        ", for instance, we know that the algorithm needed ");//$NON-NLS-1$
+    ", for instance, we know that the algorithm needed ");//$NON-NLS-1$
     body.writeIntInText(10, false);
     body.write(//
-        " times the problem scale ");//$NON-NLS-1$
+    " times the problem scale ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.writeChar(' ');
     Accessor.FE.writeLongName(body, true);
     body.write(//
-        " to achieve its goal, without needing to know the problem or the actual value of ");//$NON-NLS-1$
+    " to achieve its goal, without needing to know the problem or the actual value of ");//$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.writeChar('.');
 

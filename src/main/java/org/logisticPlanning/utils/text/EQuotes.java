@@ -24,55 +24,55 @@ public enum EQuotes {
   PRIMITIVE_DOUBLE(TextUtils.PRIMITIVE_DOUBLE, TextUtils.PRIMITIVE_DOUBLE,
       2),
 
-      /** primitive single quotes */
-      PRIMITIVE_SINGLE(TextUtils.PRIMITIVE_SINGLE, TextUtils.PRIMITIVE_SINGLE,
-          1),
+  /** primitive single quotes */
+  PRIMITIVE_SINGLE(TextUtils.PRIMITIVE_SINGLE, TextUtils.PRIMITIVE_SINGLE,
+      1),
 
-          /** double angle quotes */
-          ANGLE_DOUBLE(TextUtils.ANGLE_DOUBLE_A, TextUtils.ANGLE_DOUBLE_B, 2),
+  /** double angle quotes */
+  ANGLE_DOUBLE(TextUtils.ANGLE_DOUBLE_A, TextUtils.ANGLE_DOUBLE_B, 2),
 
-          /** single angle quotes */
-          ANGLE_SINGLE(TextUtils.ANGLE_SINGLE_A, TextUtils.ANGLE_SINGLE_B, 1),
+  /** single angle quotes */
+  ANGLE_SINGLE(TextUtils.ANGLE_SINGLE_A, TextUtils.ANGLE_SINGLE_B, 1),
 
-          /** single Chinese angle quotes */
-          CHINESE_ANGLE_SINGLE(TextUtils.CHINESE_ANGLE_SINGLE_A,
-              TextUtils.CHINESE_ANGLE_SINGLE_B, 1),
+  /** single Chinese angle quotes */
+  CHINESE_ANGLE_SINGLE(TextUtils.CHINESE_ANGLE_SINGLE_A,
+      TextUtils.CHINESE_ANGLE_SINGLE_B, 1),
 
-              /** double Chinese angle quotes */
-              CHINESE_ANGLE_DOUBLE(TextUtils.CHINESE_ANGLE_DOUBLE_A,
-                  TextUtils.CHINESE_ANGLE_DOUBLE_B, 2),
+  /** double Chinese angle quotes */
+  CHINESE_ANGLE_DOUBLE(TextUtils.CHINESE_ANGLE_DOUBLE_A,
+      TextUtils.CHINESE_ANGLE_DOUBLE_B, 2),
 
-                  /** single Chinese bracket quotes */
-                  CHINESE_BRACKET_SINGLE(TextUtils.CHINESE_BRACKET_SINGLE_A,
-                      TextUtils.CHINESE_BRACKET_SINGLE_B, 1),
+  /** single Chinese bracket quotes */
+  CHINESE_BRACKET_SINGLE(TextUtils.CHINESE_BRACKET_SINGLE_A,
+      TextUtils.CHINESE_BRACKET_SINGLE_B, 1),
 
-                      /** double Chinese bracket quotes */
-                      CHINESE_BRACKET_DOUBLE(TextUtils.CHINESE_BRACKET_DOUBLE_A,
-                          TextUtils.CHINESE_BRACKET_DOUBLE_B, 2),
+  /** double Chinese bracket quotes */
+  CHINESE_BRACKET_DOUBLE(TextUtils.CHINESE_BRACKET_DOUBLE_A,
+      TextUtils.CHINESE_BRACKET_DOUBLE_B, 2),
 
-                          /** double angle quotes */
-                          CHINESE_DOUBLE(TextUtils.CHINESE_DOUBLE_A, TextUtils.CHINESE_DOUBLE_B, 2),
+  /** double angle quotes */
+  CHINESE_DOUBLE(TextUtils.CHINESE_DOUBLE_A, TextUtils.CHINESE_DOUBLE_B, 2),
 
-                          /** accents misused as single quotes */
-                          ACCENT_SINGLE(TextUtils.ACCENT_SINGLE_A, TextUtils.ACCENT_SINGLE_B, 2),
+  /** accents misused as single quotes */
+  ACCENT_SINGLE(TextUtils.ACCENT_SINGLE_A, TextUtils.ACCENT_SINGLE_B, 2),
 
-                          /** single bottom-top */
-                          BOTTOM_TOP_SINGLE(TextUtils.SINGLE_BOTTOM_A, TextUtils.DEFAULT_SINGLE_B,
-                              1),
+  /** single bottom-top */
+  BOTTOM_TOP_SINGLE(TextUtils.SINGLE_BOTTOM_A, TextUtils.DEFAULT_SINGLE_B,
+      1),
 
-                              /** double bottom-top */
-                              BOTTOM_TOP_DOUBLE(TextUtils.DOUBLE_BOTTOM_A, TextUtils.DEFAULT_DOUBLE_B,
-                                  2),
+  /** double bottom-top */
+  BOTTOM_TOP_DOUBLE(TextUtils.DOUBLE_BOTTOM_A, TextUtils.DEFAULT_DOUBLE_B,
+      2),
 
-                                  /** primitive single angle quotes */
-                                  PRIMITIVE_ANGLE_SINGLE(TextUtils.PRIMITIVE_ANGLE_SINGLE_A,
-                                      TextUtils.PRIMITIVE_ANGLE_SINGLE_B, 1),
+  /** primitive single angle quotes */
+  PRIMITIVE_ANGLE_SINGLE(TextUtils.PRIMITIVE_ANGLE_SINGLE_A,
+      TextUtils.PRIMITIVE_ANGLE_SINGLE_B, 1),
 
-                                      /** single dingbat quotes */
-                                      DINGBAT_SINGLE(TextUtils.DINGBAT_SINGLE_A, TextUtils.DINGBAT_SINGLE_B, 1),
+  /** single dingbat quotes */
+  DINGBAT_SINGLE(TextUtils.DINGBAT_SINGLE_A, TextUtils.DINGBAT_SINGLE_B, 1),
 
-                                      /** double dingbat quotes */
-                                      DINGBAT_DOUBLE(TextUtils.DINGBAT_DOUBLE_A, TextUtils.DINGBAT_DOUBLE_B, 2), ;
+  /** double dingbat quotes */
+  DINGBAT_DOUBLE(TextUtils.DINGBAT_DOUBLE_A, TextUtils.DINGBAT_DOUBLE_B, 2), ;
 
   /** the default quotes to use */
   public static final EQuotes DEFAULT = DEFAULT_DOUBLE;

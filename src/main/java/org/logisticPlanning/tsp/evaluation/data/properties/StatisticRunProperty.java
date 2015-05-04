@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.math.statistics.series.StatisticSeries;
  * time.
  */
 public final class StatisticRunProperty extends
-Property<RunSet, StatisticSeries> {
+    Property<RunSet, StatisticSeries> {
 
   /**
    * The default maximum number of points collected in statistic runs. By

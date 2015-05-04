@@ -53,9 +53,9 @@ public final class InstanceSelectionCondition extends Condition<Instance> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.getClass()),//
             HashUtils.hashCode(this.m_forAll)),//
-            HashUtils.combineHashes(//
-                HashUtils.hashCode(this.m_exists),//
-                System.identityHashCode(this.m_set)));
+        HashUtils.combineHashes(//
+            HashUtils.hashCode(this.m_exists),//
+            System.identityHashCode(this.m_set)));
   }
 
   /** {@inheritDoc} */
@@ -102,7 +102,7 @@ public final class InstanceSelectionCondition extends Condition<Instance> {
       return ((this.m_hc == c.m_hc) && //
           this.m_forAll.equals(c.m_forAll) && //
           this.m_exists.equals(c.m_exists) && //
-          (this.m_set == c.m_set));
+      (this.m_set == c.m_set));
     }
     return false;
   }

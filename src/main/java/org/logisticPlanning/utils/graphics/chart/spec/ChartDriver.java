@@ -55,8 +55,8 @@ public abstract class ChartDriver extends Configurable {
 
   /** the default maximum number of points per line */
   public static final int DEFAULT_MAX_POINTS_PER_LINE = //
-      ((int) (0.5d + Math.ceil(Math.hypot(1000d,
-          Math.ceil(1000d * MathConstants.GOLDEN_RATIO)))));
+  ((int) (0.5d + Math.ceil(Math.hypot(1000d,
+      Math.ceil(1000d * MathConstants.GOLDEN_RATIO)))));
 
   /** the parameter for the maximum number of points per line: {@value} */
   public static final String PARAM_MAX_POINTS_PER_LINE = "maxPointsPerLine"; //$NON-NLS-1$

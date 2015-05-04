@@ -11,7 +11,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.P
  * MST heuristic}
  */
 public class PermutationVNSFirstImprovementWithMSTTest extends
-PermutationVNSBestImprovementWithMSTTest {
+    PermutationVNSBestImprovementWithMSTTest {
 
   /** create */
   public PermutationVNSFirstImprovementWithMSTTest() {

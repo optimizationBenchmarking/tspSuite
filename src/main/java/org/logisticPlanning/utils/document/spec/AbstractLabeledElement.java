@@ -6,7 +6,7 @@ import java.io.IOException;
  * The labeled element element.
  */
 public abstract class AbstractLabeledElement extends
-_LabeledElement<SingleLabel> {
+    _LabeledElement<SingleLabel> {
 
   /**
    * create the document element

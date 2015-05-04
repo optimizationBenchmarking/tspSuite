@@ -43,8 +43,8 @@ public class ArrayDataCollectionView implements IDataCollection {
     if ((size * dim) > data.length) {
       throw new IllegalArgumentException(//
           "Data array with length " + data.length + //$NON-NLS-1$
-          " too short to facilitate " + size + //$NON-NLS-1$
-          " points of dimension " + dim);//$NON-NLS-1$
+              " too short to facilitate " + size + //$NON-NLS-1$
+              " points of dimension " + dim);//$NON-NLS-1$
     }
 
     this.m_data = ((size > 0) ? data : EmptyUtils.EMPTY_DOUBLES);
@@ -73,12 +73,12 @@ public class ArrayDataCollectionView implements IDataCollection {
       }
       throw new IndexOutOfBoundsException(//
           "Dimension " + dimension //$NON-NLS-1$
-          + " not allowed in " + this.m_dim + //$NON-NLS-1$
-          "-dimensional collection."); //$NON-NLS-1$
+              + " not allowed in " + this.m_dim + //$NON-NLS-1$
+              "-dimensional collection."); //$NON-NLS-1$
     }
     throw new IndexOutOfBoundsException(//
         "Index " + point //$NON-NLS-1$
-        + " not allowed in collection of length " + this.m_size); //$NON-NLS-1$
+            + " not allowed in collection of length " + this.m_size); //$NON-NLS-1$
   }
 
 }

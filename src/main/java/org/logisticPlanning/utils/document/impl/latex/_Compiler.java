@@ -408,7 +408,7 @@ final class _Compiler {
     if (this.m_LaTeXenabled && //
         ((this.m_LaTeX != null) && //
             (this.m_dvi2Ps != null) && //
-            ((this.m_ps2Pdf != null) || (this.m_ghostScript != null)))) {//
+        ((this.m_ps2Pdf != null) || (this.m_ghostScript != null)))) {//
       ret = true;
 
       // ok, we found a LaTeX installation, so we can run the toolchain

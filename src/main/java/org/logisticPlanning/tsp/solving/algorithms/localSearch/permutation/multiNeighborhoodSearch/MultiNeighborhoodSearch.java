@@ -559,7 +559,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * </ol>
  */
 public class MultiNeighborhoodSearch extends
-TSPLocalSearchAlgorithm<int[]> {
+    TSPLocalSearchAlgorithm<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -1095,7 +1095,7 @@ TSPLocalSearchAlgorithm<int[]> {
 
         delta = ((D_im1_ip1 - D_im1_i) + //
             (D_i_j - D_i_ip1) + //
-            (D_i_jp1 - D_j_jp1));
+        (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1112,7 +1112,7 @@ TSPLocalSearchAlgorithm<int[]> {
 
         delta = ((D_im1_j - D_im1_i) + //
             (D_i_j - D_j_jp1) + //
-            (D_jm1_jp1 - D_jm1_j));
+        (D_jm1_jp1 - D_jm1_j));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1136,7 +1136,7 @@ TSPLocalSearchAlgorithm<int[]> {
         delta = ((D_im1_j - D_im1_i) + //
             (D_ip1_j - D_i_ip1) + //
             (D_i_jm1 - D_jm1_j) + //
-            (D_i_jp1 - D_j_jp1));
+        (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -1195,12 +1195,12 @@ TSPLocalSearchAlgorithm<int[]> {
 
     Configurable.printKey(MultiNeighborhoodSearch.PARAM_MOVE_ORDER, ps);
     ps.println(//
-        "the order in which moves are enqueued and performed"); //$NON-NLS-1$
+    "the order in which moves are enqueued and performed"); //$NON-NLS-1$
 
     Configurable.printKey(MultiNeighborhoodSearch.PARAM_MAX_ALLOCATIONS,
         ps);
     ps.println(//
-        "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
+    "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
   }
 
   /** {@inheritDoc} */

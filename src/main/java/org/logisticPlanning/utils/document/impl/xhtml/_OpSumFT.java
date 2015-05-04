@@ -11,12 +11,12 @@ final class _OpSumFT extends _OpDef {
 
   /** the big */
   static final char[] BIG = { '<', 't', 'd', ' ', 'c', 'l', 'a', 's', 's',
-    '=', '"', 'm', 'a', 't', 'h', 'O', 'p', 'B', 'i', 'g', '"', '>' };
+      '=', '"', 'm', 'a', 't', 'h', 'O', 'p', 'B', 'i', 'g', '"', '>' };
 
   /** the small */
   static final char[] SMALL = { '<', 't', 'd', ' ', 'c', 'l', 'a', 's',
-    's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', 'S', 'm', 'a', 'l',
-    'l', '"', '>' };
+      's', '=', '"', 'm', 'a', 't', 'h', 'O', 'p', 'S', 'm', 'a', 'l',
+      'l', '"', '>' };
 
   /** the type */
   private final char[] m_type;

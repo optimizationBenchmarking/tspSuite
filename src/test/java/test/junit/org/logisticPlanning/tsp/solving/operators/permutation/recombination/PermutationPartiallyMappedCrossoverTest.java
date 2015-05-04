@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation parially mapped recombination operator
  */
 public class PermutationPartiallyMappedCrossoverTest extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationPartiallyMappedCrossoverTest() {

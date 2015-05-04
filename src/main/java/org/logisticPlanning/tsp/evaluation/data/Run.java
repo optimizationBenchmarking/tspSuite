@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.math.data.collection.IDataCollection;
  * </p>
  */
 public final class Run extends _OwnedSet<DataPoint, RunSet> implements
-IDataCollection {
+    IDataCollection {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

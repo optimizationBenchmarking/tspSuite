@@ -58,9 +58,9 @@ public abstract class _AsymmetricEdgeBitTest extends _EdgeBitTest {
 
             bits.clear(i, j);
             Assert
-            .assertFalse(
-                "Bits must initially be false after setting it to false with 'clear'!", //$NON-NLS-1$
-                bits.get(i, j));
+                .assertFalse(
+                    "Bits must initially be false after setting it to false with 'clear'!", //$NON-NLS-1$
+                    bits.get(i, j));
 
             bits.set(i, j, true);
             Assert.assertTrue(
@@ -69,9 +69,9 @@ public abstract class _AsymmetricEdgeBitTest extends _EdgeBitTest {
 
             bits.set(i, j, false);
             Assert
-            .assertFalse(
-                "Bits must initially be false after setting it to false with 'assign'!", //$NON-NLS-1$
-                bits.get(i, j));
+                .assertFalse(
+                    "Bits must initially be false after setting it to false with 'assign'!", //$NON-NLS-1$
+                    bits.get(i, j));
           }
         }
       }

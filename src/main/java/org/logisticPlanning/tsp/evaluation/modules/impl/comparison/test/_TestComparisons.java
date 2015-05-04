@@ -55,7 +55,7 @@ public class _TestComparisons extends RankedComparisonModule {
 
   /** the basic format to be used for ranks */
   private static final DecimalFormat RANK_FORMAT = //
-      ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
+  ModuleUtils.createDecimalFormat("0.0"); //$NON-NLS-1$
 
   /** the first caption */
   private static final String CAPT_1 = ("The results of "); //$NON-NLS-1$
@@ -342,7 +342,7 @@ public class _TestComparisons extends RankedComparisonModule {
       final SectionBody body, final ExperimentSet data,
       final boolean isSummary, final double errorThreshold,
       final int instN, final Label except, final Label rankingLabel)
-          throws IOException {
+      throws IOException {
     final int expCount, testN;
 
     expCount = data.size();
@@ -460,14 +460,14 @@ public class _TestComparisons extends RankedComparisonModule {
     try (Table tbl = body.table(
         label, //
         _TestComparisons.CAPT_1
-        + this.m_desc.getName(true)
-        + _TestComparisons.CAPT_2
-        + String.valueOf(prop.getErrorThreshold())
-        + _TestComparisons.CAPT_3
-        + axs.getLongName(true)
-        + _TestComparisons.CAPT_4
-        + ((axs.isObjective()) ? _TestComparisons.CAPT_5A
-            : _TestComparisons.CAPT_5B)
+            + this.m_desc.getName(true)
+            + _TestComparisons.CAPT_2
+            + String.valueOf(prop.getErrorThreshold())
+            + _TestComparisons.CAPT_3
+            + axs.getLongName(true)
+            + _TestComparisons.CAPT_4
+            + ((axs.isObjective()) ? _TestComparisons.CAPT_5A
+                : _TestComparisons.CAPT_5B)
             + srcprop.getInTextDescription()
             + ((axs.isObjective()) ? _TestComparisons.CAPT_6A
                 : _TestComparisons.CAPT_6B), (expCount > 3), defs)) {
@@ -553,7 +553,7 @@ public class _TestComparisons extends RankedComparisonModule {
     ranking = cr.getRankedScores();
     this.summarizeRanks(ranking, body,
         (((axs == Accessor.F) || (axs == Accessor.F_RELATIVE)) ? //
-            "produce better results" : //$NON-NLS-1$
+        "produce better results" : //$NON-NLS-1$
             "converge faster")); //$NON-NLS-1$
 
     // propagate the information to the global ranking

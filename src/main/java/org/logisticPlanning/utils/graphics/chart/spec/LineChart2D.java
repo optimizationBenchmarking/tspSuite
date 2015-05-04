@@ -254,7 +254,7 @@ public abstract class LineChart2D extends AbstractChart {
         new BoundsReducingIterator2D(//
             new DataCollectionIterator2D(line.getLeftEnd(),//
                 line.getData(), line.getRightEnd()),//
-                minX, maxX, minY, maxY));
+            minX, maxX, minY, maxY));
 
     maxPoints = this.getDriver().getMaxPointsPerLine();
     if ((maxPoints > 0) && (maxPoints < Integer.MAX_VALUE)) {

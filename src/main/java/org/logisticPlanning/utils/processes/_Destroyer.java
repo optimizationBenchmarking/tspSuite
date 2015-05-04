@@ -50,8 +50,8 @@ final class _Destroyer extends Thread {
       }
     }
 
-  this.m_owner._logError(//
-      "process was killed due to being unresponsive for more than " + //$NON-NLS-1$
-      this.m_maxHang + " ms.", null);//$NON-NLS-1$
+    this.m_owner._logError(//
+        "process was killed due to being unresponsive for more than " + //$NON-NLS-1$
+            this.m_maxHang + " ms.", null);//$NON-NLS-1$
   }
 }

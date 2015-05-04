@@ -27,11 +27,11 @@ public class ChartPalette {
 
   /** the font choices */
   private static final String[] FONT_CHOICES = { "calibri",//$NON-NLS-1$
-    "helvetica",//$NON-NLS-1$
-    "arial",//$NON-NLS-1$
-    "times new roman",//$NON-NLS-1$
-    "cmr", //$NON-NLS-1$
-    "cmr7" //$NON-NLS-1$
+      "helvetica",//$NON-NLS-1$
+      "arial",//$NON-NLS-1$
+      "times new roman",//$NON-NLS-1$
+      "cmr", //$NON-NLS-1$
+      "cmr7" //$NON-NLS-1$
   };
 
   /** the default dashing */
@@ -42,7 +42,7 @@ public class ChartPalette {
 
   /** the characters that the font must know */
   private static final char[] FONT_TEST_SEQUENCE = { ' ', '0', '9', 'A',
-    'a', 'Z', 'z', '-', '+', '*', '#', '/', '\\', '_', '>', '<', '@' };
+      'a', 'Z', 'z', '-', '+', '*', '#', '/', '\\', '_', '>', '<', '@' };
 
   /** the synchronizer object */
   private final Object m_sync;
@@ -542,8 +542,8 @@ public class ChartPalette {
     if (index >= ChartPalette.MAX_LIST_STUFF) {
       throw new IllegalArgumentException(//
           "There can be at most " + ChartPalette.MAX_LIST_STUFF + //$NON-NLS-1$
-          " data strokes, but you ask for the stroke at index "//$NON-NLS-1$
-          + index);
+              " data strokes, but you ask for the stroke at index "//$NON-NLS-1$
+              + index);
     }
   }
 

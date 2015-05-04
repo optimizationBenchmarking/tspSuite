@@ -52,9 +52,9 @@ public class MacroInvocation extends Element {
     if (i > this.m_desc.m_paramCount) {
       throw new IllegalStateException(//
           "Macro '" + this.m_desc.name() + //$NON-NLS-1$
-          "' can only have up to "//$NON-NLS-1$
-          + this.m_desc.m_paramCount + //
-          " parameters."); //$NON-NLS-1$
+              "' can only have up to "//$NON-NLS-1$
+              + this.m_desc.m_paramCount + //
+              " parameters."); //$NON-NLS-1$
     }
 
     return i;
@@ -135,7 +135,7 @@ public class MacroInvocation extends Element {
   /** {@inheritDoc} */
   @Override
   public MacroParameter macroParameter() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.macroParameter();
   }
 

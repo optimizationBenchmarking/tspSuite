@@ -116,7 +116,7 @@ final class _Single extends Module {
           log = this.getLogger();
           if ((log != null) && (log.isLoggable(Level.INFO))) {
             log.info(//
-                "No single evaluator is active. Quitting single evaluation procedure without doing anything."); //$NON-NLS-1$
+            "No single evaluator is active. Quitting single evaluation procedure without doing anything."); //$NON-NLS-1$
           }
         }
       } else {
@@ -172,7 +172,7 @@ final class _Single extends Module {
     log = this.getLogger();
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info(//
-          "Single module needs at least one experiment in order to do its work, but the experiment set only contains " //$NON-NLS-1$
+      "Single module needs at least one experiment in order to do its work, but the experiment set only contains " //$NON-NLS-1$
           + data.size() + ". Module quits '" + what + //$NON-NLS-1$
           "' without doing anything."); //$NON-NLS-1$
     }

@@ -12,7 +12,7 @@ package org.logisticPlanning.utils.collections.lists;
  * mathematical information.
  */
 public class DoubleList extends
-_BasicNumericList<java.lang.Number, double[]> {
+    _BasicNumericList<java.lang.Number, double[]> {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -33,8 +33,8 @@ _BasicNumericList<java.lang.Number, double[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_DOUBLES
         : //
-          new double[(capacity > 0) ? capacity
-              : BasicArrayList.DEFAULT_LIST_SIZE]);
+        new double[(capacity > 0) ? capacity
+            : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */

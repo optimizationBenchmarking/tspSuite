@@ -333,7 +333,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    */
   void writeSequence(final Sequence sequence, final ESequenceType type,
       final boolean connectLastElementWithNonBreakableSpace)
-          throws IOException {
+      throws IOException {
     this.checkWrite();
     if (type == null) {
       throw new IllegalArgumentException(//
@@ -366,7 +366,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the uri has the wrong syntax
    */
   File resolveRelativeName(final URI relativeName) throws IOException,
-  URISyntaxException {
+      URISyntaxException {
     return this.m_document.resolveRelativeName(relativeName);
   }
 
@@ -382,7 +382,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the uri has the wrong syntax
    */
   URI relativizeFile(final File file) throws IOException,
-  URISyntaxException {
+      URISyntaxException {
     return this.m_document.relativizeFile(file);
   }
 
@@ -481,7 +481,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void headerBegin(final Header h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.headerBegin(h);
   }
 
@@ -593,7 +593,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void authorsBegin(final Authors h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.authorsBegin(h);
   }
 
@@ -608,7 +608,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void authorsEnd(final Authors h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.authorsEnd(h);
   }
 
@@ -623,7 +623,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void authors(final BibAuthors authors) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.authors(authors);
   }
 
@@ -705,7 +705,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void summaryBegin(final Summary h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.summaryBegin(h);
   }
 
@@ -720,7 +720,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void summaryEnd(final Summary h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.summaryEnd(h);
   }
 
@@ -767,7 +767,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionBegin(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionBegin(h);
   }
 
@@ -782,7 +782,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionEnd(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionEnd(h);
   }
 
@@ -801,7 +801,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   Section section(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.section(label);
   }
 
@@ -829,7 +829,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionTitleBegin(final SectionTitle h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionTitleBegin(h);
   }
 
@@ -844,7 +844,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionTitleEnd(final SectionTitle h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionTitleEnd(h);
   }
 
@@ -885,7 +885,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionBodyBegin(final SectionBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionBodyBegin(h);
   }
 
@@ -900,7 +900,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void sectionBodyEnd(final SectionBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.sectionBodyEnd(h);
   }
 
@@ -950,7 +950,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureBegin(final Figure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureBegin(h);
   }
 
@@ -1014,7 +1014,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureCaptionBegin(final FigureCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureCaptionBegin(h);
   }
 
@@ -1029,7 +1029,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureCaptionEnd(final FigureCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureCaptionEnd(h);
   }
 
@@ -1064,7 +1064,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    */
   FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-          throws IOException, URISyntaxException {
+      throws IOException, URISyntaxException {
     return this.m_document.figureBodyCreate(owner, relativeNameBase,
         sizeInMM);
   }
@@ -1080,7 +1080,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureBodyBegin(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureBodyBegin(h);
   }
 
@@ -1095,7 +1095,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureBodyEnd(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureBodyEnd(h);
   }
 
@@ -1145,7 +1145,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void graphicBegin(final Graphic h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.graphicBegin(h);
   }
 
@@ -1160,7 +1160,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void graphicEnd(final Graphic h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.graphicEnd(h);
   }
 
@@ -1216,7 +1216,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureSeriesBegin(final FigureSeries h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureSeriesBegin(h);
   }
 
@@ -1231,7 +1231,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureSeriesEnd(final FigureSeries h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureSeriesEnd(h);
   }
 
@@ -1270,7 +1270,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
   FigureSeries figureSeries(final Label label,
       final Dimension2D subFigureSizeInMM, final String captionTemplate,
       final String subCaptionTemplate, final boolean colspan)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return this.m_document.figureSeries(label, subFigureSizeInMM,
         captionTemplate, subCaptionTemplate, colspan);
   }
@@ -1361,7 +1361,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   FigureSeriesCaption figureSeriesCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.figureSeriesCaption();
   }
 
@@ -1390,7 +1390,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureSeriesPageBegin(final FigureSeriesPage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureSeriesPageBegin(h);
   }
 
@@ -1405,7 +1405,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void figureSeriesPageEnd(final FigureSeriesPage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.figureSeriesPageEnd(h);
   }
 
@@ -1456,7 +1456,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subFigureBegin(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subFigureBegin(h);
   }
 
@@ -1471,7 +1471,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subFigureEnd(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subFigureEnd(h);
   }
 
@@ -1518,7 +1518,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subFigureCaptionBegin(final SubFigureCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subFigureCaptionBegin(h);
   }
 
@@ -1533,7 +1533,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subFigureCaptionEnd(final SubFigureCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subFigureCaptionEnd(h);
   }
 
@@ -1547,7 +1547,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   SubFigureCaption subFigureCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.subFigureCaption();
   }
 
@@ -1576,7 +1576,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void itemizationBegin(final Itemization h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.itemizationBegin(h);
   }
 
@@ -1591,7 +1591,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void itemizationEnd(final Itemization h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.itemizationEnd(h);
   }
 
@@ -1633,7 +1633,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void itemizationItemBegin(final ItemizationItem h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.itemizationItemBegin(h);
   }
 
@@ -1648,7 +1648,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void itemizationItemEnd(final ItemizationItem h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.itemizationItemEnd(h);
   }
 
@@ -1662,7 +1662,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   ItemizationItem itemizationItem() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.itemizationItem();
   }
 
@@ -1691,7 +1691,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void enumerationBegin(final Enumeration h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.enumerationBegin(h);
   }
 
@@ -1706,7 +1706,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void enumerationEnd(final Enumeration h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.enumerationEnd(h);
   }
 
@@ -1748,7 +1748,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void enumerationItemBegin(final EnumerationItem h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.enumerationItemBegin(h);
   }
 
@@ -1763,7 +1763,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void enumerationItemEnd(final EnumerationItem h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.enumerationItemEnd(h);
   }
 
@@ -1777,7 +1777,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   EnumerationItem enumerationItem() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.enumerationItem();
   }
 
@@ -1856,7 +1856,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    */
   Table table(final Label label, final int rowsPerPage,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return this.m_document.table(label, rowsPerPage, colspan, def);
   }
 
@@ -1882,7 +1882,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    */
   Table table(final Label label, final String captionDraft,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return this.m_document.table(label, captionDraft, colspan, def);
   }
 
@@ -1910,7 +1910,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableCaptionBegin(final TableCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableCaptionBegin(h);
   }
 
@@ -1925,7 +1925,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableCaptionEnd(final TableCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableCaptionEnd(h);
   }
 
@@ -1966,7 +1966,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderBegin(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderBegin(h);
   }
 
@@ -1981,7 +1981,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderEnd(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderEnd(h);
   }
 
@@ -2022,7 +2022,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterBegin(final TableFooter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterBegin(h);
   }
 
@@ -2037,7 +2037,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterEnd(final TableFooter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterEnd(h);
   }
 
@@ -2078,7 +2078,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyBegin(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyBegin(h);
   }
 
@@ -2093,7 +2093,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyEnd(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyEnd(h);
   }
 
@@ -2135,7 +2135,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderRowBegin(final TableHeaderRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderRowBegin(h);
   }
 
@@ -2150,7 +2150,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderRowEnd(final TableHeaderRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderRowEnd(h);
   }
 
@@ -2164,7 +2164,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   TableHeaderRow tableHeaderRow() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.tableHeaderRow();
   }
 
@@ -2193,7 +2193,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderCellBegin(final TableHeaderCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderCellBegin(h);
   }
 
@@ -2208,7 +2208,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableHeaderCellEnd(final TableHeaderCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableHeaderCellEnd(h);
   }
 
@@ -2257,7 +2257,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterRowBegin(final TableFooterRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterRowBegin(h);
   }
 
@@ -2272,7 +2272,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterRowEnd(final TableFooterRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterRowEnd(h);
   }
 
@@ -2286,7 +2286,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   TableFooterRow tableFooterRow() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.tableFooterRow();
   }
 
@@ -2315,7 +2315,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterCellBegin(final TableFooterCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterCellBegin(h);
   }
 
@@ -2330,7 +2330,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableFooterCellEnd(final TableFooterCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableFooterCellEnd(h);
   }
 
@@ -2378,7 +2378,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tablePageBegin(final TablePage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tablePageBegin(h);
   }
 
@@ -2393,7 +2393,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tablePageEnd(final TablePage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tablePageEnd(h);
   }
 
@@ -2422,7 +2422,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyRowBegin(final TableBodyRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyRowBegin(h);
   }
 
@@ -2437,7 +2437,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyRowEnd(h);
   }
 
@@ -2479,7 +2479,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyCellBegin(final TableBodyCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyCellBegin(h);
   }
 
@@ -2494,7 +2494,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void tableBodyCellEnd(final TableBodyCell h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.tableBodyCellEnd(h);
   }
 
@@ -2554,7 +2554,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subscriptBegin(final Subscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subscriptBegin(h);
   }
 
@@ -2569,7 +2569,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void subscriptEnd(final Subscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.subscriptEnd(h);
   }
 
@@ -2611,7 +2611,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void superscriptBegin(final Superscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.superscriptBegin(h);
   }
 
@@ -2626,7 +2626,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void superscriptEnd(final Superscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.superscriptEnd(h);
   }
 
@@ -2667,7 +2667,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void emphasizeBegin(final Emphasize h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.emphasizeBegin(h);
   }
 
@@ -2682,7 +2682,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void emphasizeEnd(final Emphasize h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.emphasizeEnd(h);
   }
 
@@ -2726,7 +2726,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void inQuotesBegin(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.inQuotesBegin(h);
   }
 
@@ -2741,7 +2741,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void inQuotesEnd(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.inQuotesEnd(h);
   }
 
@@ -2757,7 +2757,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   InQuotes inQuotes(final EQuotes quotes) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.inQuotes(quotes);
   }
 
@@ -2791,7 +2791,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void equationBegin(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.equationBegin(h);
   }
 
@@ -2806,7 +2806,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void equationEnd(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.equationEnd(h);
   }
 
@@ -2825,7 +2825,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   Equation equation(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.equation(label);
   }
 
@@ -2853,7 +2853,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void equationBodyBegin(final EquationBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.equationBodyBegin(h);
   }
 
@@ -2868,7 +2868,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void equationBodyEnd(final EquationBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.equationBodyEnd(h);
   }
 
@@ -2910,7 +2910,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void inlineMathBegin(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.inlineMathBegin(h);
   }
 
@@ -2925,7 +2925,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void inlineMathEnd(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.inlineMathEnd(h);
   }
 
@@ -2967,7 +2967,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void normalTextBegin(final NormalText h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.normalTextBegin(h);
   }
 
@@ -2982,7 +2982,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void normalTextEnd(final NormalText h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.normalTextEnd(h);
   }
 
@@ -3024,7 +3024,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathSubscriptBegin(final MathSubscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathSubscriptBegin(h);
   }
 
@@ -3039,7 +3039,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathSubscriptEnd(final MathSubscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathSubscriptEnd(h);
   }
 
@@ -3081,7 +3081,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathSuperscriptBegin(final MathSuperscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathSuperscriptBegin(h);
   }
 
@@ -3096,7 +3096,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathSuperscriptEnd(final MathSuperscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathSuperscriptEnd(h);
   }
 
@@ -3110,7 +3110,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   MathSuperscript mathSuperscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.mathSuperscript();
   }
 
@@ -3141,7 +3141,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathNameBegin(final MathName h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathNameBegin(h);
   }
 
@@ -3156,7 +3156,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathNameEnd(final MathName h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathNameEnd(h);
   }
 
@@ -3172,7 +3172,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   MathName mathName(final EMathName type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.mathName(type);
   }
 
@@ -3203,7 +3203,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathOpBegin(final MathOp h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathOpBegin(h);
   }
 
@@ -3233,7 +3233,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   MathOp mathOp(final EMathOp type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.mathOp(type);
   }
 
@@ -3261,7 +3261,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathOpParamBegin(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathOpParamBegin(h);
   }
 
@@ -3276,7 +3276,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void mathOpParamEnd(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.mathOpParamEnd(h);
   }
 
@@ -3361,7 +3361,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   Macro macro(final MacroDescriptor desc) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.macro(desc);
   }
 
@@ -3404,7 +3404,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void macroInvocationBegin(final MacroInvocation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.macroInvocationBegin(h);
   }
 
@@ -3419,7 +3419,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void macroInvocationEnd(final MacroInvocation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.macroInvocationEnd(h);
   }
 
@@ -3464,7 +3464,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void macroParameterBegin(final MacroParameter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.macroParameterBegin(h);
   }
 
@@ -3479,7 +3479,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void macroParameterEnd(final MacroParameter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_document.macroParameterEnd(h);
   }
 
@@ -3493,7 +3493,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   MacroParameter macroParameter() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.m_document.macroParameter();
   }
 
@@ -3543,7 +3543,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void documentBegin(final Document d) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     ((Context) (this.m_owner)).documentBegin(d);
   }
 
@@ -3558,7 +3558,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    *           if the document state is inconsistent
    */
   void documentEnd(final Document h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     ((Context) (this.m_owner)).documentEnd(h);
   }
 

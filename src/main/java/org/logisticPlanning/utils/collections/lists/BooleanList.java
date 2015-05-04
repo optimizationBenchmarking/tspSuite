@@ -9,7 +9,7 @@ package org.logisticPlanning.utils.collections.lists;
  * {@code long} values.
  */
 public class BooleanList extends
-BasicArrayList<java.lang.Boolean, boolean[]> {
+    BasicArrayList<java.lang.Boolean, boolean[]> {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -30,8 +30,8 @@ BasicArrayList<java.lang.Boolean, boolean[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_BOOLEANS
         : //
-          new boolean[(capacity > 0) ? capacity
-              : BasicArrayList.DEFAULT_LIST_SIZE]);
+        new boolean[(capacity > 0) ? capacity
+            : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */

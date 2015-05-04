@@ -32,7 +32,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *          the node type
  */
 public final class TreeWrapper<NT extends Node<NT>> extends
-UnaryOperator<NT> {
+    UnaryOperator<NT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

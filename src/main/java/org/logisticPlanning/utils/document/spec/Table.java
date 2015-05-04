@@ -8,7 +8,7 @@ import java.util.Iterator;
  * The table element.
  */
 public class Table extends _MultiLabeledElement implements
-Iterable<TableCellDef> {
+    Iterable<TableCellDef> {
 
   /** the caption state */
   private static final int STATE_CAPTION = (Element.STATE_NOTHING + 1);
@@ -201,7 +201,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableCaptionEnd(final TableCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_CAPTION) {
       throw new IllegalStateException(//
@@ -215,7 +215,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   public TableCaption tableCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.tableCaption();
   }
 
@@ -274,7 +274,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderBegin(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_AFTER_CAPTION) {
       throw new IllegalStateException(//
@@ -290,7 +290,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderEnd(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_HEADER) {
       throw new IllegalStateException(//
@@ -313,7 +313,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   public TableHeader tableHeader() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.tableHeader();
   }
 
@@ -327,7 +327,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterBegin(final TableFooter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_AFTER_HEADER) {
       throw new IllegalStateException(//
@@ -343,7 +343,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterEnd(final TableFooter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_FOOTER) {
       throw new IllegalStateException(//
@@ -361,7 +361,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   public TableFooter tableFooter() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.tableFooter();
   }
 
@@ -375,7 +375,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyBegin(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state == Table.STATE_AFTER_HEADER) {
       try (final TableFooter tf = this.tableFooter()) {
@@ -396,7 +396,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyEnd(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -737,7 +737,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -750,7 +750,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//
@@ -785,7 +785,7 @@ Iterable<TableCellDef> {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != Table.STATE_BODY) {
       throw new IllegalStateException(//

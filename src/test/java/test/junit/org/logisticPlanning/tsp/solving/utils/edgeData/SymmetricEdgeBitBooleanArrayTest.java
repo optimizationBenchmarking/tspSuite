@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.utils.edgeData._SymmetricEdgeBitBooleanA
  * The basic test for symmetric edge bits
  */
 public class SymmetricEdgeBitBooleanArrayTest extends
-_SymmetricEdgeBitTest {
+    _SymmetricEdgeBitTest {
 
   /** instantiate */
   public SymmetricEdgeBitBooleanArrayTest() {

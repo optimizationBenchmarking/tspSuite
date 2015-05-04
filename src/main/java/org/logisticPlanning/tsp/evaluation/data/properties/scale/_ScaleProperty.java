@@ -17,7 +17,7 @@ import org.logisticPlanning.utils.document.spec.Header;
  *          the property result type
  */
 abstract class _ScaleProperty<DT extends DataSet<?>, PT> extends
-Property<DT, PT> {
+    Property<DT, PT> {
 
   /** the base of the scale */
   final int m_base;

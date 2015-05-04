@@ -14,7 +14,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * all depots have been tested or the runtime is up.
  */
 public class IteratedNearestNeighborHeuristic extends
-NearestNeighborHeuristic {
+    NearestNeighborHeuristic {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

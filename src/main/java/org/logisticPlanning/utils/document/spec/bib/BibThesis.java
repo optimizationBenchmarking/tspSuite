@@ -83,11 +83,11 @@ public class BibThesis extends BibBook {
   @Override
   final int _hashCode() {
     return HashUtils.combineHashes(
-        //
+    //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_school)),//
-            HashUtils.combineHashes(HashUtils.hashCode(this.m_schoolAddress),//
-                HashUtils.hashCode(this.m_type)));
+        HashUtils.combineHashes(HashUtils.hashCode(this.m_schoolAddress),//
+            HashUtils.hashCode(this.m_type)));
   }
 
   /**
@@ -127,7 +127,7 @@ public class BibThesis extends BibBook {
 
       return (ComparisonUtils.equals(this.m_type, x.m_type) && //
           ComparisonUtils.equals(this.m_school, x.m_school) && //
-          ComparisonUtils.equals(this.m_schoolAddress, x.m_schoolAddress));
+      ComparisonUtils.equals(this.m_schoolAddress, x.m_schoolAddress));
     }
 
     return false;

@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * A base class for MAs with Lin-Kernighan search.
  */
 abstract class _HeuristicInitLinKernighanMA extends
-PermutationHeuristicInitMA {
+    PermutationHeuristicInitMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

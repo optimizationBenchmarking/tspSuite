@@ -35,7 +35,7 @@ public final class Michalewicz_2 extends ScalarAggregate {
   public final void visitDouble(final double value) {
     this.m_sum.visitDouble(//
         Math.sin(value) * //
-        Math.sin(((++this.m_i) * value * value) / Math.PI));
+            Math.sin(((++this.m_i) * value * value) / Math.PI));
   }
 
   /** {@inheritDoc} */

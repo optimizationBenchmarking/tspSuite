@@ -32,8 +32,8 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
     super();
     this.m_data = ((capacity == 0) ? org.logisticPlanning.utils.utils.EmptyUtils.EMPTY_INTS
         : //
-          new int[(capacity > 0) ? capacity
-              : BasicArrayList.DEFAULT_LIST_SIZE]);
+        new int[(capacity > 0) ? capacity
+            : BasicArrayList.DEFAULT_LIST_SIZE]);
   }
 
   /** {@inheritDoc} */

@@ -9,7 +9,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * VNS mutation operator}
  */
 public class PermutationVNSMutation_First_Improvement_Test extends
-PermutationVNSMutation_Best_Improvement_Test {
+    PermutationVNSMutation_Best_Improvement_Test {
 
   /** instantiate */
   public PermutationVNSMutation_First_Improvement_Test() {

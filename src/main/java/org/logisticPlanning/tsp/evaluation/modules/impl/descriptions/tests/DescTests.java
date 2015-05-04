@@ -237,14 +237,14 @@ public final class DescTests extends DescriptionModule {
           new BibAuthors(//
               new BibAuthor("David C.", "Stone"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Jon", "Ellis")//$NON-NLS-1$//$NON-NLS-2$
-              ),//
-              "Stats Tutorial \u2012 Intro to Instrumental Analysis and Calibration",//$NON-NLS-1$
-              new BibDate(2006, EBibMonth.AUGUST, 23),//
-              "University of Toronto (UofT), Department of Chemistry",//$NON-NLS-1$
-              "Toronto, ON, Canada",//$NON-NLS-1$
-              new URI(
-                  "http://www.chem.utoronto.ca/coursenotes/analsci/StatsTutorial/index.html")//$NON-NLS-1$
-          );
+          ),//
+          "Stats Tutorial \u2012 Intro to Instrumental Analysis and Calibration",//$NON-NLS-1$
+          new BibDate(2006, EBibMonth.AUGUST, 23),//
+          "University of Toronto (UofT), Department of Chemistry",//$NON-NLS-1$
+          "Toronto, ON, Canada",//$NON-NLS-1$
+          new URI(
+              "http://www.chem.utoronto.ca/coursenotes/analsci/StatsTutorial/index.html")//$NON-NLS-1$
+      );
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
     }
@@ -266,17 +266,17 @@ public final class DescTests extends DescriptionModule {
       D2006SCOCOMDS = new BibArticle(
           new BibAuthors(//
               new BibAuthor("Janez", "Dem\u0161ar")//$NON-NLS-1$//$NON-NLS-2$
-              ),//
-              "Statistical Comparisons of Classifiers over Multiple Data Sets",//$NON-NLS-1$
-              new BibDate(2006, EBibMonth.JANUARY), //
-              "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
-              "7",//$NON-NLS-1$
-              "Jan",//$NON-NLS-1$
-              "1",//$NON-NLS-1$
-              "30",//$NON-NLS-1$
-              new URI(
-                  "http://jmlr.csail.mit.edu/papers/volume7/demsar06a/demsar06a.pdf"),//$NON-NLS-1$
-                  null);
+          ),//
+          "Statistical Comparisons of Classifiers over Multiple Data Sets",//$NON-NLS-1$
+          new BibDate(2006, EBibMonth.JANUARY), //
+          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
+          "7",//$NON-NLS-1$
+          "Jan",//$NON-NLS-1$
+          "1",//$NON-NLS-1$
+          "30",//$NON-NLS-1$
+          new URI(
+              "http://jmlr.csail.mit.edu/papers/volume7/demsar06a/demsar06a.pdf"),//$NON-NLS-1$
+          null);
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
     }
@@ -286,17 +286,17 @@ public final class DescTests extends DescriptionModule {
           new BibAuthors(//
               new BibAuthor("Salvador", "Garc\u00eda"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Francisco", "Herrera Triguero")//$NON-NLS-1$//$NON-NLS-2$
-              ),//
-              "An Extension on \u201cStatistical Comparisons of Classifiers over Multiple Data Sets\u201d for all Pairwise Comparisons",//$NON-NLS-1$
-              new BibDate(2008, EBibMonth.DECEMBER), //
-              "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
-              "9",//$NON-NLS-1$
-              "Dec",//$NON-NLS-1$
-              "2677",//$NON-NLS-1$
-              "2694",//$NON-NLS-1$
-              new URI(
-                  "http://jmlr.csail.mit.edu/papers/volume9/garcia08a/garcia08a.pdf"),//$NON-NLS-1$
-                  null);
+          ),//
+          "An Extension on \u201cStatistical Comparisons of Classifiers over Multiple Data Sets\u201d for all Pairwise Comparisons",//$NON-NLS-1$
+          new BibDate(2008, EBibMonth.DECEMBER), //
+          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
+          "9",//$NON-NLS-1$
+          "Dec",//$NON-NLS-1$
+          "2677",//$NON-NLS-1$
+          "2694",//$NON-NLS-1$
+          new URI(
+              "http://jmlr.csail.mit.edu/papers/volume9/garcia08a/garcia08a.pdf"),//$NON-NLS-1$
+          null);
     } catch (final URISyntaxException e) {
       throw new RuntimeException(e);
     }
@@ -357,21 +357,21 @@ public final class DescTests extends DescriptionModule {
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.F1925SMFRW,
         DescTests.L1975NSMBOR, DescTests.SC1988NSFTBS);
     body.write(//
-        " are statistical methods to find out whether a hypothesis about one or multiple distributions (data sets, set of numbers, etc.) holds. For instance, we may observe that the elements (or their mean or median) of one data set "); //$NON-NLS-1$
+    " are statistical methods to find out whether a hypothesis about one or multiple distributions (data sets, set of numbers, etc.) holds. For instance, we may observe that the elements (or their mean or median) of one data set "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(1);
       }
     }
     body.write(//
-        " seem to be smaller than the elements (or their mean or median) of another data set "); //$NON-NLS-1$
+    " seem to be smaller than the elements (or their mean or median) of another data set "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(2);
       }
     }
     body.write(//
-        ". If "); //$NON-NLS-1$
+    ". If "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(1);
@@ -384,44 +384,44 @@ public final class DescTests extends DescriptionModule {
       }
     }
     body.write(//
-        " are results measured from a random experiment, there is a certain probability "); //$NON-NLS-1$
+    " are results measured from a random experiment, there is a certain probability "); //$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        " that this observation just occured by chance, i.e., that our hypothesis (observation) is wrong."); //$NON-NLS-1$
+    " that this observation just occured by chance, i.e., that our hypothesis (observation) is wrong."); //$NON-NLS-1$
 
     body.write(//
-        "With a statistical test, we want to learn about (i.e., try to estimate) "); //$NON-NLS-1$
+    "With a statistical test, we want to learn about (i.e., try to estimate) "); //$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        " in order to find out whether our observation is significant (small values of "); //$NON-NLS-1$
+    " in order to find out whether our observation is significant (small values of "); //$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        " close to 0) or insignificant (likely the result of randomness, high values of "); //$NON-NLS-1$
+    " close to 0) or insignificant (likely the result of randomness, high values of "); //$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        " close to 1)."); //$NON-NLS-1$
+    " close to 1)."); //$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write(//
-        "Here, we use tests mainly to find out whether the values in a data set "); //$NON-NLS-1$
+    "Here, we use tests mainly to find out whether the values in a data set "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(1);
       }
     }
     body.write(//
-        " tend to be larger or smaller than those in a data set "); //$NON-NLS-1$
+    " tend to be larger or smaller than those in a data set "); //$NON-NLS-1$
     try (MacroInvocation mi = body.macroInvocation(Macros.DATA_SAMPLE_I)) {
       try (MacroParameter p = mi.macroParameter()) {
         p.writeInt(2);
       }
     }
     body.write(//
-        ". The idea is that such values are usually either the best objective function values "); //$NON-NLS-1$
+    ". The idea is that such values are usually either the best objective function values "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_BEST);
     body.write(//
-        " found by an algorithm within certain runtime limits or the runtime needed to obtain a certain goal solution quality "); //$NON-NLS-1$
+    " found by an algorithm within certain runtime limits or the runtime needed to obtain a certain goal solution quality "); //$NON-NLS-1$
     body.macroInvoke(Macros.F_THRESHOLD);
 
     lbl = this.m_qm.getLabel(data);
@@ -432,11 +432,11 @@ public final class DescTests extends DescriptionModule {
     }
 
     body.write(//
-        " and we want to know whether an algorithm produces significantly better results or is significantly faster."); //$NON-NLS-1$
+    " and we want to know whether an algorithm produces significantly better results or is significantly faster."); //$NON-NLS-1$
 
     body.writeLinebreak();
     body.write(//
-        "In this context, we make the simplified assumption that a test returns two pieces of information: "); //$NON-NLS-1$
+    "In this context, we make the simplified assumption that a test returns two pieces of information: "); //$NON-NLS-1$
 
     try (Enumeration enu = body.enumeration()) {
       try (EnumerationItem enui = enu.item()) {
@@ -469,7 +469,7 @@ public final class DescTests extends DescriptionModule {
           }
           try (ItemizationItem itmi = itm.item()) {
             itmi.write(//
-                "larger than zero if the elements of "); //$NON-NLS-1$
+            "larger than zero if the elements of "); //$NON-NLS-1$
             try (MacroInvocation mi = itmi
                 .macroInvocation(Macros.DATA_SAMPLE_I)) {
               try (MacroParameter p = mi.macroParameter()) {
@@ -487,10 +487,10 @@ public final class DescTests extends DescriptionModule {
           }
           try (ItemizationItem itmi = itm.item()) {
             itmi.write(//
-                "zero if making any such statement would be wrong with a probability "); //$NON-NLS-1$
+            "zero if making any such statement would be wrong with a probability "); //$NON-NLS-1$
             enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
             itmi.write(//
-                " larger or equal to a limit probability (significance level) "); //$NON-NLS-1$
+            " larger or equal to a limit probability (significance level) "); //$NON-NLS-1$
             enui.macroInvoke(Macros.TEST_MAX_ERROR_PROBABILITY);
             itmi.writeChar('.');
           }
@@ -503,12 +503,12 @@ public final class DescTests extends DescriptionModule {
         enui.write(" itself, with which the statement indicated by "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_COMPARISON_RESULT);
         enui.write(//
-            " is wrong, based on the data sets used for comparison. "); //$NON-NLS-1$
+        " is wrong, based on the data sets used for comparison. "); //$NON-NLS-1$
 
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
 
         enui.write(//
-            " generally is a value between 0 and 1. For the special case that "); //$NON-NLS-1$
+        " generally is a value between 0 and 1. For the special case that "); //$NON-NLS-1$
 
         try (InlineMath mi = enui.inlineMath()) {
           try (MathOp mo = mi.mathOp(EMathOp.CMP_EQUALS)) {
@@ -528,25 +528,25 @@ public final class DescTests extends DescriptionModule {
     }
 
     body.write(//
-        "In other words, our tests are always two-tailed");//$NON-NLS-1$
+    "In other words, our tests are always two-tailed");//$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.SE20061STITIAAC);
     body.write(//
-        ", i.e., make no assumption about which of the compared data sets is larger.");//$NON-NLS-1$
+    ", i.e., make no assumption about which of the compared data sets is larger.");//$NON-NLS-1$
 
     body.writeLinebreak();
 
     body.write(//
-        "There are two general classes of statistical tests: parametric and non-parametric tests. The parametric tests make the assumtion that the values in the data sets follow some general distribution such as the normal distribution. This makes it easier to make statements about ");//$NON-NLS-1$
+    "There are two general classes of statistical tests: parametric and non-parametric tests. The parametric tests make the assumtion that the values in the data sets follow some general distribution such as the normal distribution. This makes it easier to make statements about ");//$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        " but these statemets may be wrong if the data samples do not follow the assumed distribution. Non-parametric tests, on the other hand, make very little assumptions about the nature of the data samples. They are more thus more conservative, i.e., usually lead to higher ");//$NON-NLS-1$
+    " but these statemets may be wrong if the data samples do not follow the assumed distribution. Non-parametric tests, on the other hand, make very little assumptions about the nature of the data samples. They are more thus more conservative, i.e., usually lead to higher ");//$NON-NLS-1$
     body.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
     body.write(//
-        "-values, but also are more likely to lead to correct statements. In the context of optimization, we prefer the class of non-parametric tests, as it usually makes no sense to assume that the output or runtime of an optimization process would be, e.g., normally distributed. Because of this better robustness, we focus on using such tests.");//$NON-NLS-1$
+    "-values, but also are more likely to lead to correct statements. In the context of optimization, we prefer the class of non-parametric tests, as it usually makes no sense to assume that the output or runtime of an optimization process would be, e.g., normally distributed. Because of this better robustness, we focus on using such tests.");//$NON-NLS-1$
 
     body.writeLinebreak();
     body.write(//
-        "Generally, there are two methods to interpret the results of a statistical test:"); //$NON-NLS-1$
+    "Generally, there are two methods to interpret the results of a statistical test:"); //$NON-NLS-1$
 
     try (Enumeration enu = body.enumeration()) {
       try (EnumerationItem enui = enu.item()) {
@@ -611,7 +611,7 @@ public final class DescTests extends DescriptionModule {
           }
         }
         enui.write(//
-            ", the observation would be rejected as insignificant. On the other hand, if "); //$NON-NLS-1$
+        ", the observation would be rejected as insignificant. On the other hand, if "); //$NON-NLS-1$
 
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(" was "); //$NON-NLS-1$
@@ -637,23 +637,23 @@ public final class DescTests extends DescriptionModule {
         enui.write("The second possible interpretation looks at the "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(//
-            "-values directly. The idea is that, on one hand, using error thresholds "); //$NON-NLS-1$
+        "-values directly. The idea is that, on one hand, using error thresholds "); //$NON-NLS-1$
 
         enui.macroInvoke(Macros.TEST_MAX_ERROR_PROBABILITY);
         enui.write(//
-            " does not add any more information (just condenses it to Boolean decisions). On the other hand, "); //$NON-NLS-1$
+        " does not add any more information (just condenses it to Boolean decisions). On the other hand, "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(//
-            " tells us how confident we can be in the observation. The smaller "); //$NON-NLS-1$
+        " tells us how confident we can be in the observation. The smaller "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(//
-            " gets, the more likely the "); //$NON-NLS-1$
+        " gets, the more likely the "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_COMPARISON_RESULT);
         enui.write(//
-            " actually represents the observations we would make when running infinitely many experiments. We therefore could plot "); //$NON-NLS-1$
+        " actually represents the observations we would make when running infinitely many experiments. We therefore could plot "); //$NON-NLS-1$
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(//
-            " in a diagram comparing two algorithms and see how it develops over time."); //$NON-NLS-1$
+        " in a diagram comparing two algorithms and see how it develops over time."); //$NON-NLS-1$
       }
     }
 
@@ -711,14 +711,14 @@ public final class DescTests extends DescriptionModule {
       }
 
       body.write(//
-          " tests directly is not advisable. Instead, additional provisions such as (at least) the conservative Bonferroni correction");//$NON-NLS-1$
+      " tests directly is not advisable. Instead, additional provisions such as (at least) the conservative Bonferroni correction");//$NON-NLS-1$
       body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.D1961MCAM);
       body.write(//
-          " or (better) more sophisticated tests together with post-hoc methods");//$NON-NLS-1$
+      " or (better) more sophisticated tests together with post-hoc methods");//$NON-NLS-1$
       body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.D2006SCOCOMDS,
           DescTests.GH2008AEOSCOCOMDSFAPC);
       body.write(//
-          " are needed. In the current implementation of our system, we apply the Bonferroni correction.");//$NON-NLS-1$
+      " are needed. In the current implementation of our system, we apply the Bonferroni correction.");//$NON-NLS-1$
     }
     super.writeSectionBody(body, data);
   }

@@ -204,7 +204,7 @@ public final class AxisRange2D extends _AxisRange2DDef {
         || (!(ComparisonUtils.isFinite(ma)))) {
       throw new IllegalStateException(
           ((((((x ? 'X' : 'Y') + "-axis range is empty or undefined: [") + //$NON-NLS-1$
-              mi) + ',') + ma) + ']'));
+          mi) + ',') + ma) + ']'));
     }
 
     dest[0] = mi;

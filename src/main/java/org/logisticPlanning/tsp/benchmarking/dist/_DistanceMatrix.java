@@ -22,7 +22,7 @@ import java.io.Serializable;
  * </p>
  */
 abstract class _DistanceMatrix extends DistanceComputer implements
-Serializable {
+    Serializable {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

@@ -49,7 +49,7 @@ import org.logisticPlanning.utils.config.Configuration;
  *          the product type
  */
 public final class BinaryOperatorFollowedByUnary<P> extends
-BinaryOperator<P> {
+    BinaryOperator<P> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

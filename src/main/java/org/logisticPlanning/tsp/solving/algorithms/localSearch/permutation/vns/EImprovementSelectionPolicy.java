@@ -16,10 +16,10 @@ public enum EImprovementSelectionPolicy {
 
   /** always use the best improvement */
   ALWAYS_USE_BEST_IMPROVEMENT {
-    // /** {@inheritDoc} */
-    // @Override
-    // public final boolean useFirstImprovement(){return false;
-    // }
+  // /** {@inheritDoc} */
+  // @Override
+  // public final boolean useFirstImprovement(){return false;
+  // }
   },
 
   /** always use the first improvement discovered */

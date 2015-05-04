@@ -85,7 +85,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
    */
   protected abstract void doTransform(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException;
+      throws IOException;
 
   /** {@inheritDoc} */
   @Override
@@ -120,7 +120,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
    */
   protected void doTransformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
     this.doTransform(in, out, start, end);
   }
 
@@ -128,7 +128,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
   @Override
   public final void transformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
     final String s;
 
     if (this.m_form == null) {

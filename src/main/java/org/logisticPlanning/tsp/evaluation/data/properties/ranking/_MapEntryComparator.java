@@ -12,7 +12,7 @@ import java.util.Map;
  *          the value type being compared
  */
 final class _MapEntryComparator<K, V> implements
-Comparator<Map.Entry<K, V>> {
+    Comparator<Map.Entry<K, V>> {
 
   /** the comparator */
   private final Comparator<? super V> m_cmp;

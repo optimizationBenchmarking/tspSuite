@@ -11,7 +11,7 @@ import org.logisticPlanning.utils.collections.lists.ArraySetView;
  *          the type parameter
  */
 abstract class _ScaleSetBase<T> extends ArraySetView<T> implements
-Comparable<_ScaleSetBase<?>> {
+    Comparable<_ScaleSetBase<?>> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
   /** the lower scale bound */
@@ -123,7 +123,7 @@ Comparable<_ScaleSetBase<?>> {
   @Override
   public String toString() {
     return (((((this.m_data.length + " elements in range [") + //$NON-NLS-1$
-        this.m_lowerScaleBound) + ", ") + //$NON-NLS-1$
-        this.m_upperScaleBound) + ']');
+    this.m_lowerScaleBound) + ", ") + //$NON-NLS-1$
+    this.m_upperScaleBound) + ']');
   }
 }

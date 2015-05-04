@@ -34,8 +34,8 @@ public class DescriptionModule extends _ConcreteModule {
     if (!((owner instanceof DescriptionModule) || (owner instanceof _Descriptions))) {
       throw new IllegalArgumentException(//
           "Instance of class '" + owner.getClass() + //$NON-NLS-1$
-          "' not permitted as owner of instance of '" + //$NON-NLS-1$
-          this.getClass() + "'.");//$NON-NLS-1$
+              "' not permitted as owner of instance of '" + //$NON-NLS-1$
+              this.getClass() + "'.");//$NON-NLS-1$
     }
   }
 

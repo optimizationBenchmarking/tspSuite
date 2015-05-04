@@ -56,15 +56,15 @@ import org.logisticPlanning.utils.utils.comparison.PreciseComparator;
  * </ol>
  */
 public final class AreaUnderCurveComparator extends
-PreciseComparator<AreaUnderCurve> {
+    PreciseComparator<AreaUnderCurve> {
 
   /** smaller areas are better */
   public static final AreaUnderCurveComparator SMALLER_IS_BETTER = //
-      new AreaUnderCurveComparator(true);
+  new AreaUnderCurveComparator(true);
 
   /** larger areas are better */
   public static final AreaUnderCurveComparator LARGER_IS_BETTER = //
-      new AreaUnderCurveComparator(false);
+  new AreaUnderCurveComparator(false);
 
   /** are smaller {@code y} values better or worse? */
   private final boolean m_smallerIsBetter;

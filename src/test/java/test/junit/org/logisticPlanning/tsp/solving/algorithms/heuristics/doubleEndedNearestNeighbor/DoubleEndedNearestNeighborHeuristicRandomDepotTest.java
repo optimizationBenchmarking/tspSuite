@@ -8,7 +8,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.doubleEndedNearest
  * Double-Ended Nearest Neighbor Heuristic} with random depots.
  */
 public class DoubleEndedNearestNeighborHeuristicRandomDepotTest extends
-DoubleEndedNearestNeighborHeuristicDepot1Test {
+    DoubleEndedNearestNeighborHeuristicDepot1Test {
 
   /** create */
   public DoubleEndedNearestNeighborHeuristicRandomDepotTest() {

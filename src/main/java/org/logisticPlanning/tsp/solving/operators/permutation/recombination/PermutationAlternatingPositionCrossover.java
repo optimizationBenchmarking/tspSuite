@@ -73,7 +73,7 @@ import org.logisticPlanning.tsp.solving.operators.BinaryOperator;
  *         </ul>
  */
 public final class PermutationAlternatingPositionCrossover extends
-BinaryOperator<int[]> {
+    BinaryOperator<int[]> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

@@ -85,7 +85,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *          the node type
  */
 public class SubTreeExchangeRecombination<NT extends Node<NT>> extends
-BinaryOperator<NT> {
+    BinaryOperator<NT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -142,7 +142,7 @@ BinaryOperator<NT> {
       e1 = pt1.get(i);
       if (((i + e2.getHeight() + 1) < this.m_maxDepth)
           && e1.getType().getChildTypes(pt1.getChildIndex(i))
-          .containsType(e2.getType())) {
+              .containsType(e2.getType())) {
         dest.solution = pt1.replaceEnd(e2);
         dest.producer = this;
         return;

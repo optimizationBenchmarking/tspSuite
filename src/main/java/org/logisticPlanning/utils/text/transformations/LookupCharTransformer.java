@@ -204,7 +204,7 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
               }
               default: {
                 nextState = (((chrB == chrA) && (b.length() <= 1)) ? //
-                    LookupCharTransformer.STATE_DIRECT
+                LookupCharTransformer.STATE_DIRECT
                     : ((byte) (-1)));
               }
             }
@@ -269,8 +269,8 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
         if (cur == last) {
           throw new IllegalArgumentException(//
               "Double mapping for char " + cur + //$NON-NLS-1$
-              "(0x" + Integer.toHexString(cur) + //$NON-NLS-1$
-              "): " + Arrays.toString(ch));//$NON-NLS-1$
+                  "(0x" + Integer.toHexString(cur) + //$NON-NLS-1$
+                  "): " + Arrays.toString(ch));//$NON-NLS-1$
         }
         last = cur;
       }
@@ -292,8 +292,8 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
   protected final void onUnknown(final char ch) {
     throw new UnsupportedOperationException(//
         "No mapping known for character '" + //$NON-NLS-1$
-        String.valueOf(ch) + "' (0x" + //$NON-NLS-1$
-        Integer.toHexString(ch) + ").");//$NON-NLS-1$
+            String.valueOf(ch) + "' (0x" + //$NON-NLS-1$
+            Integer.toHexString(ch) + ").");//$NON-NLS-1$
 
   }
 
@@ -302,7 +302,7 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
   @Override
   protected final void doTransform(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
 
     final char[][] transform;
     final byte[] state;
@@ -407,7 +407,7 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
   @SuppressWarnings("incomplete-switch")
   protected final void doTransformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
 
     final char[][] transform;
     final byte[] state;

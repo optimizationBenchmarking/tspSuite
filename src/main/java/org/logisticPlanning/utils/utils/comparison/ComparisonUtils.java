@@ -55,9 +55,9 @@ public final class ComparisonUtils {
 
     throw new IllegalStateException(//
         ("Impossible error occured: compare " //$NON-NLS-1$
-            + (a + " (" + (Double.doubleToRawLongBits(a) + //$NON-NLS-1$
-                (") with " + (b + //$NON-NLS-1$
-                    (" (" + Double.doubleToRawLongBits(b))))))) + ')');//$NON-NLS-1$
+        + (a + " (" + (Double.doubleToRawLongBits(a) + //$NON-NLS-1$
+        (") with " + (b + //$NON-NLS-1$
+        (" (" + Double.doubleToRawLongBits(b))))))) + ')');//$NON-NLS-1$
   }
 
   /**

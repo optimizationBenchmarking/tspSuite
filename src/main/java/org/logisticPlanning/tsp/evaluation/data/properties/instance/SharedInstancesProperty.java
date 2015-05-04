@@ -20,26 +20,26 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * A collection of instances for each experiment has some data.
  */
 public final class SharedInstancesProperty extends
-Property<ExperimentSet, ArraySetView<Instance>> {
+    Property<ExperimentSet, ArraySetView<Instance>> {
 
   /**
    * the globally shared instances of the that were not prematurely
    * terminated instance property
    */
   public static final SharedInstancesProperty NON_PREMATURE_SHARED = //
-      new SharedInstancesProperty(InstancesProperty.ALL_INSTANCES,//
-          ConstantCondition.TRUE,//
-          InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_PREMATURLY_TERMINATED);
+  new SharedInstancesProperty(InstancesProperty.ALL_INSTANCES,//
+      ConstantCondition.TRUE,//
+      InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_PREMATURLY_TERMINATED);
 
   /** the globally shared instance of the common instance property */
   public static final SharedInstancesProperty NON_EMPTY_SHARED = //
-      new SharedInstancesProperty(InstancesProperty.ALL_INSTANCES,//
-          ConstantCondition.TRUE,//
-          InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_EMPTY);
+  new SharedInstancesProperty(InstancesProperty.ALL_INSTANCES,//
+      ConstantCondition.TRUE,//
+      InstanceSelectionUtils.ONE_RUN_MUST_BE_NOT_EMPTY);
 
   /** the conditions */
   private static final SharedInstancesProperty[] __ONE_MUST_HAVE_2 = //
-      new SharedInstancesProperty[Accessor.ACCESSORS.size()];
+  new SharedInstancesProperty[Accessor.ACCESSORS.size()];
 
   /** the source property */
   private final Property<? super ExperimentSet, ArraySetView<Instance>> m_source;
@@ -67,8 +67,8 @@ Property<ExperimentSet, ArraySetView<Instance>> {
    */
   public SharedInstancesProperty(
       final Property<? super ExperimentSet, ArraySetView<Instance>> source,
-          final Condition<? super RunSet> exists,
-          final Condition<? super RunSet> forAll) {
+      final Condition<? super RunSet> exists,
+      final Condition<? super RunSet> forAll) {
     this(EPropertyType.TEMPORARILY_STORED, source, exists, forAll);
   }
 
@@ -89,8 +89,8 @@ Property<ExperimentSet, ArraySetView<Instance>> {
   public SharedInstancesProperty(
       final EPropertyType type,
       final Property<? super ExperimentSet, ArraySetView<Instance>> source,
-          final Condition<? super RunSet> exists,
-          final Condition<? super RunSet> forAll) {
+      final Condition<? super RunSet> exists,
+      final Condition<? super RunSet> forAll) {
     super(type);
 
     if ((source == null) || (exists == null) || (forAll == null)) {
@@ -104,7 +104,7 @@ Property<ExperimentSet, ArraySetView<Instance>> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.getClass()),//
             HashUtils.hashCode(this.m_forAll)),//
-            HashUtils.hashCode(this.m_exists));
+        HashUtils.hashCode(this.m_exists));
   }
 
   /** {@inheritDoc} */
@@ -137,7 +137,7 @@ Property<ExperimentSet, ArraySetView<Instance>> {
       return ((sp.m_hc == this.m_hc) && //
           this.m_source.equals(sp.m_source) && //
           this.m_exists.equals(sp.m_exists) && //
-          this.m_forAll.equals(sp.m_forAll));
+      this.m_forAll.equals(sp.m_forAll));
     }
     return false;
   }

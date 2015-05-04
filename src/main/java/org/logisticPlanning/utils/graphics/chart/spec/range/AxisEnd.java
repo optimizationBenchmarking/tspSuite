@@ -57,7 +57,7 @@ public abstract class AxisEnd implements Cloneable {
    */
   static final boolean _isLong(final double d) {
     return ((d >= Long.MIN_VALUE) && (d <= Long.MAX_VALUE) && //
-        ComparisonUtils.isClose(d, Math.rint(d), 3));
+    ComparisonUtils.isClose(d, Math.rint(d), 3));
   }
 
   /**

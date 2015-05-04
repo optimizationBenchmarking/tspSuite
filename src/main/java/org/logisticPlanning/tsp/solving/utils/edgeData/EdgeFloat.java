@@ -106,7 +106,7 @@ public abstract class EdgeFloat extends EdgeNumber {
     }
 
     return (symmetric ? new _SymmetricEdgeFloat(n)
-    : new _AsymmetricEdgeFloat(n));
+        : new _AsymmetricEdgeFloat(n));
   }
 
 }

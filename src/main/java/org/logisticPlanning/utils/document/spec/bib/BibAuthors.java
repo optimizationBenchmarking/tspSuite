@@ -9,7 +9,7 @@ import org.logisticPlanning.utils.collections.iterators.ArrayIterator;
  * a bibliography authors
  */
 public class BibAuthors extends _BibElement<BibAuthors> implements
-Iterable<BibAuthor> {
+    Iterable<BibAuthor> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * RNS mutation operator}
  */
 public class PermutationRNSMutation_Best_Improvement_Test extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationRNSMutation_Best_Improvement_Test() {

@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * the test of the iterated nearest neighbor heuristic
  */
 public class IteratedNearestNeighborHeuristicTest extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public IteratedNearestNeighborHeuristicTest() {

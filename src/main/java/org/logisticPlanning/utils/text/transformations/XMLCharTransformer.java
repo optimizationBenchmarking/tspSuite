@@ -68,7 +68,7 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
 
   /** the lookup */
   private static final char[] LOOKUP = { '0', '1', '2', '3', '4', '5',
-    '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+      '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
 
   /** the default replacement */
   private static final char[] REPLACE = { '&', '#', 'x', 0, 0, 0, 0, ';' };
@@ -89,7 +89,7 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
 
     Arrays.fill(list, '(', ';', XMLCharTransformer.MODE_PASS_THROUGH);
     Arrays
-    .fill(list, '?', ('_' + 1), XMLCharTransformer.MODE_PASS_THROUGH);
+        .fill(list, '?', ('_' + 1), XMLCharTransformer.MODE_PASS_THROUGH);
     Arrays.fill(list, 'a', 126, XMLCharTransformer.MODE_PASS_THROUGH);
     list['!'] = XMLCharTransformer.MODE_PASS_THROUGH;
     list['$'] = XMLCharTransformer.MODE_PASS_THROUGH;
@@ -147,7 +147,7 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
   @Override
   protected final void doTransform(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
 
     char[] replace;
     int i, currentStart, currentChar, mode;
@@ -205,7 +205,7 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
   @Override
   protected final void doTransformHyphenated(final CharInput in,
       final CharOutput out, final int start, final int end)
-          throws IOException {
+      throws IOException {
 
     char[] replace;
     int mode, i, currentStart, currentChar;
@@ -259,25 +259,25 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
       // convert tabs to spaces
       checkContinue: {
         noContinue: {
-        if (mode == XMLCharTransformer.MODE_TO_SPACE) {
-          out.write(' ');
-          break noContinue;
-        }
+          if (mode == XMLCharTransformer.MODE_TO_SPACE) {
+            out.write(' ');
+            break noContinue;
+          }
 
-        // omit ascii control characters
-        if (mode == XMLCharTransformer.MODE_IGNORE) {
-          break noContinue;
-        }
+          // omit ascii control characters
+          if (mode == XMLCharTransformer.MODE_IGNORE) {
+            break noContinue;
+          }
 
-        // omit iso control characters
-        if (Character.isISOControl(currentChar)) {
-          break noContinue;
-        }
+          // omit iso control characters
+          if (Character.isISOControl(currentChar)) {
+            break noContinue;
+          }
 
-        break checkContinue;
-      }
-      notFirst = nextDoHyphen = false;
-      continue outer;
+          break checkContinue;
+        }
+        notFirst = nextDoHyphen = false;
+        continue outer;
       }
 
       // ok, the character is no control char -> transform it!

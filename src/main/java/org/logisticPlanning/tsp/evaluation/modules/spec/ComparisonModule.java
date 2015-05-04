@@ -35,8 +35,8 @@ public class ComparisonModule extends _ConcreteModule {
     if (!((owner instanceof ComparisonModule) || (owner instanceof _Comparisons))) {
       throw new IllegalArgumentException(//
           "Instance of class '" + owner.getClass() + //$NON-NLS-1$
-          "' not permitted as owner of instance of '" + //$NON-NLS-1$
-          this.getClass() + "'.");//$NON-NLS-1$
+              "' not permitted as owner of instance of '" + //$NON-NLS-1$
+              this.getClass() + "'.");//$NON-NLS-1$
     }
   }
 

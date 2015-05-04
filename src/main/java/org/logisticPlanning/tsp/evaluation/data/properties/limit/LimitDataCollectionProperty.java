@@ -25,24 +25,24 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * given run set at a given limit.
  */
 public final class LimitDataCollectionProperty extends
-Property<RunSet, IDataCollection> {
+    Property<RunSet, IDataCollection> {
 
   /** the end of run */
   public static final LimitDataCollectionProperty END_OF_RUN = //
-      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-3),
-          Double.POSITIVE_INFINITY);
+  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-3),
+      Double.POSITIVE_INFINITY);
   /** the first of run */
   public static final LimitDataCollectionProperty FIRST_OF_RUN = //
-      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-2),
-          Double.NEGATIVE_INFINITY);
+  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-2),
+      Double.NEGATIVE_INFINITY);
   /** the convergence point of run */
   public static final LimitDataCollectionProperty CONVERGENCE = //
-      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-1),
-          Double.NEGATIVE_INFINITY);
+  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-1),
+      Double.NEGATIVE_INFINITY);
   /** the optimum of run */
   public static final LimitDataCollectionProperty OPTIMUM = //
-      new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-4),
-          Double.NEGATIVE_INFINITY);
+  new LimitDataCollectionProperty(EPropertyType.TEMPORARILY_STORED, (-4),
+      Double.NEGATIVE_INFINITY);
 
   /** the dimension */
   private final int m_dim;
@@ -78,7 +78,7 @@ Property<RunSet, IDataCollection> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.getClass()),//
             HashUtils.hashCode(this.m_dim)),//
-            HashUtils.hashCode(this.m_value));
+        HashUtils.hashCode(this.m_value));
   }
 
   /** {@inheritDoc} */

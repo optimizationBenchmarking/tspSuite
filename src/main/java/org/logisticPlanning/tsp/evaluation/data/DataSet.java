@@ -77,7 +77,7 @@ import org.logisticPlanning.utils.text.transformations.NormalCharTransformer;
  *          the type
  */
 public class DataSet<DT> extends ArraySetView<DT> implements
-Comparable<Object> {
+    Comparable<Object> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -163,7 +163,7 @@ Comparable<Object> {
         if (n.equalsIgnoreCase(data[j].name())) {
           throw new IllegalArgumentException(//
               "No two names must be alike, but found '" + n + //$NON-NLS-1$
-              "' and '" + data[j].name() + '\'');//$NON-NLS-1$
+                  "' and '" + data[j].name() + '\'');//$NON-NLS-1$
         }
       }
     }
@@ -270,7 +270,7 @@ Comparable<Object> {
 
     sync = this.m_data;
     store = ((type = property.m_type).ordinal() <= //
-        EPropertyType.TEMPORARILY_STORED.ordinal());
+    EPropertyType.TEMPORARILY_STORED.ordinal());
 
     if (store) {
       // if the property can be stored, we first need to check if it has

@@ -203,11 +203,11 @@ public class Point3D extends MutablePoint {
         && //
         (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p
             .get(Point3D.COORD_X)))
-            && //
-            (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p
-                .get(Point3D.COORD_Y))) && //
-                (Double.doubleToLongBits(this.m_z) == Double.doubleToLongBits(p
-                    .get(Point3D.COORD_Z))));
+        && //
+        (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p
+            .get(Point3D.COORD_Y))) && //
+    (Double.doubleToLongBits(this.m_z) == Double.doubleToLongBits(p
+        .get(Point3D.COORD_Z))));
   }
 
   /**
@@ -234,11 +234,11 @@ public class Point3D extends MutablePoint {
     return ((p != null)
         && //
         (Double.doubleToLongBits(this.m_x) == Double
-        .doubleToLongBits(p.m_x))
+            .doubleToLongBits(p.m_x))
         && //
         (Double.doubleToLongBits(this.m_y) == Double
-        .doubleToLongBits(p.m_y)) && //
-        (Double.doubleToLongBits(this.m_z) == Double.doubleToLongBits(p.m_z)));
+            .doubleToLongBits(p.m_y)) && //
+    (Double.doubleToLongBits(this.m_z) == Double.doubleToLongBits(p.m_z)));
   }
 
   /** {@inheritDoc} */

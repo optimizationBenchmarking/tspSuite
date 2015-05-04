@@ -151,10 +151,10 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
 
   /** the default neighborhoods */
   private static final PermutationUpdateOperator[] DEFAULT_NEIGHBORHOODS = new PermutationUpdateOperator[] {//
-    PermutationUpdate_Swap.INSTANCE,//
-    PermutationUpdate_Reverse.INSTANCE,//
-    PermutationUpdate_Rotate_Left.INSTANCE,//
-    PermutationUpdate_Rotate_Right.INSTANCE, };
+  PermutationUpdate_Swap.INSTANCE,//
+      PermutationUpdate_Reverse.INSTANCE,//
+      PermutationUpdate_Rotate_Left.INSTANCE,//
+      PermutationUpdate_Rotate_Right.INSTANCE, };
 
   /**
    * the update operations (neighborhoods)
@@ -299,10 +299,10 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
     Configurable.printKey(
         PermutationRNS.PARAM_IMPROVEMENT_SELECTION_POLICY, ps);
     ps.println(//
-        "should we use the best possible improvement or the first one discovered?"); //$NON-NLS-1$
+    "should we use the best possible improvement or the first one discovered?"); //$NON-NLS-1$
 
     ps.println(//
-        "the minimum number of nodes shuffled when trying to escape a local optimum"); //$NON-NLS-1$
+    "the minimum number of nodes shuffled when trying to escape a local optimum"); //$NON-NLS-1$
 
     for (final Configurable c : this.m_ops) {
       c.printParameters(ps);

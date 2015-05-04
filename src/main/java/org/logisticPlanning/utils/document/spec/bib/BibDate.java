@@ -229,7 +229,7 @@ public class BibDate extends _BibElement<BibDate> {
       return ((this.m_year == x.m_year) && //
           ComparisonUtils.equals(this.m_quarter, x.m_quarter) && //
           ComparisonUtils.equals(this.m_month, x.m_month) && //
-          (this.m_day == x.m_day));
+      (this.m_day == x.m_day));
 
     }
     return false;

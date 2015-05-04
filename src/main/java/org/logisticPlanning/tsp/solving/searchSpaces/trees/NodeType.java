@@ -495,7 +495,7 @@ import org.logisticPlanning.utils.config.Configurable;
  *          instance of)
  */
 public class NodeType<NT extends Node<CT>, CT extends Node<CT>> extends
-Configurable {
+    Configurable {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

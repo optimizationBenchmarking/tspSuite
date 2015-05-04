@@ -552,8 +552,8 @@ final class _Move {
 
   /** the move's names */
   private static final String[] NAMES = new String[] {
-    "reverse(", "rot_left(", "rot_right(", //$NON-NLS-1$//$NON-NLS-3$//$NON-NLS-2$
-    "swap(" //$NON-NLS-1$
+      "reverse(", "rot_left(", "rot_right(", //$NON-NLS-1$//$NON-NLS-3$//$NON-NLS-2$
+      "swap(" //$NON-NLS-1$
   };
 
   /** the move's type */
@@ -853,7 +853,7 @@ final class _Move {
   @Override
   public final String toString() {
     return (((((((_Move.NAMES[this.m_type]) + //
-        this.m_i) + ',') + this.m_j) + ')') + '=') + this.m_delta);
+    this.m_i) + ',') + this.m_j) + ')') + '=') + this.m_delta);
   }
 
   /**

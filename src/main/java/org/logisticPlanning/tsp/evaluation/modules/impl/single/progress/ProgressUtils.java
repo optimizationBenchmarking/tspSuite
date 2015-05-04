@@ -55,7 +55,7 @@ public final class ProgressUtils {
 
   /** the internal selector */
   private static final int[][] __SELECT = new int[Accessor.ACCESSORS
-                                                  .size()][];
+      .size()][];
 
   /**
    * Define a transformation which selects a given dimension and creates

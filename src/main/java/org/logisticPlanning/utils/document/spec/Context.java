@@ -154,7 +154,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected void documentBegin(final Document d) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     log = this.m_logger;
@@ -178,7 +178,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected void documentEnd(final Document h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     if (this.m_state != Context.STATE_IN_DOCUMENT) {
@@ -197,7 +197,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   public final Document document() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Document h;
     h = this.documentCreate(this);
     this.documentBegin(h);
@@ -293,7 +293,7 @@ public abstract class Context extends Element {
   /** {@inheritDoc} */
   @Override
   protected URI relativizeFile(final File file) throws IOException,
-  URISyntaxException {
+      URISyntaxException {
     String s;
 
     s = FileUtils.getRelativeName(this.m_baseDir, file);
@@ -339,9 +339,9 @@ public abstract class Context extends Element {
     final EEncoding s, d;
 
     d = ((encoding == null) ? EEncoding.BINARY : //
-      ((encoding == EEncoding.TEXT) ? //
-          this.m_driver.getPreferedTextEncoding()
-          : encoding));
+        ((encoding == EEncoding.TEXT) ? //
+        this.m_driver.getPreferedTextEncoding()
+            : encoding));
     s = ((d == EEncoding.BINARY) ? EEncoding.BINARY : EEncoding.TEXT);
     Transcoder.copyResourceToFile(clazz, name, s,//
         FileUtils.canonicalize(new File(this.m_baseDir, name)), d);

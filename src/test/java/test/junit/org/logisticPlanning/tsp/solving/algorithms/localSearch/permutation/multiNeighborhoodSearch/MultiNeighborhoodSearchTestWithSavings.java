@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeu
  * heuristic
  */
 public class MultiNeighborhoodSearchTestWithSavings extends
-MultiNeighborhoodSearchTest {
+    MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTestWithSavings() {

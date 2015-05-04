@@ -106,7 +106,7 @@ public abstract class EdgeLong extends EdgeNumber {
     }
 
     return (symmetric ? new _SymmetricEdgeLong(n)
-    : new _AsymmetricEdgeLong(n));
+        : new _AsymmetricEdgeLong(n));
   }
 
 }

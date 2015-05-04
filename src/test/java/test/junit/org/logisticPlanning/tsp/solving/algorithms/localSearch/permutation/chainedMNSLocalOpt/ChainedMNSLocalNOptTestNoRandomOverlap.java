@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * the test of the local n-opt algorithm
  */
 public class ChainedMNSLocalNOptTestNoRandomOverlap extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public ChainedMNSLocalNOptTestNoRandomOverlap() {

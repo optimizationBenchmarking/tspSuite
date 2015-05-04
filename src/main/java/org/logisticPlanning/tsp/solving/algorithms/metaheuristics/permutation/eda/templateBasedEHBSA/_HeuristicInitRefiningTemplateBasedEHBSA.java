@@ -408,7 +408,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * </ol>
  */
 abstract class _HeuristicInitRefiningTemplateBasedEHBSA extends
-HeuristicInitTemplateBasedEHBSA {
+    HeuristicInitTemplateBasedEHBSA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

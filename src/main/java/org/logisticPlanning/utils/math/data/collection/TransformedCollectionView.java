@@ -28,8 +28,8 @@ public final class TransformedCollectionView implements IDataCollection {
     if (transform.length > source.dimension()) {
       throw new IllegalArgumentException(
           "Transformation dimension is " + transform.length + //$NON-NLS-1$
-          " but must not be greater than collection dimension which is " //$NON-NLS-1$
-          + source.dimension());
+              " but must not be greater than collection dimension which is " //$NON-NLS-1$
+              + source.dimension());
     }
     this.m_source = source;
     this.m_transform = transform;

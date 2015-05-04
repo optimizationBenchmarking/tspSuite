@@ -15,7 +15,7 @@ import java.util.Random;
  *          instance of)
  */
 public class ReflectionNodeType<NT extends Node<CT>, CT extends Node<CT>>
-extends NodeType<NT, CT> {
+    extends NodeType<NT, CT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

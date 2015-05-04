@@ -60,7 +60,7 @@ abstract class _ValueSelectionAxisEnd extends AggregatedAxisEnd {
         if (d < prev) {
           throw new IllegalArgumentException(//
               "Selectable values must be sorted, but " + //$NON-NLS-1$
-              d + " follows " + prev);//$NON-NLS-1$
+                  d + " follows " + prev);//$NON-NLS-1$
         }
         if (!(ComparisonUtils.isFinite(d))) {
           throw new IllegalArgumentException(//

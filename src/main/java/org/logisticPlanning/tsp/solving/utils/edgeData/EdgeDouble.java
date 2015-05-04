@@ -106,7 +106,7 @@ public abstract class EdgeDouble extends EdgeNumber {
     }
 
     return (symmetric ? new _SymmetricEdgeDouble(n)
-    : new _AsymmetricEdgeDouble(n));
+        : new _AsymmetricEdgeDouble(n));
   }
 
 }

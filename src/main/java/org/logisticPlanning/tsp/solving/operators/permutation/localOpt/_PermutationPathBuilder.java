@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.utils.MemoryUtils;
 
 /** list some differences and similarities */
 final class _PermutationPathBuilder implements
-Callable<_PermutationPath[]>, Comparator<int[]> {
+    Callable<_PermutationPath[]>, Comparator<int[]> {
 
   /** the length */
   private final int m_length;

@@ -31,7 +31,7 @@ abstract class _PointIterator2D extends BasicIterator<Point2D> {
   @Override
   public final boolean hasNext() {
     return ((this.m_next != null) || //
-        ((this.m_next = this._loadNextPoint()) != null));
+    ((this.m_next = this._loadNextPoint()) != null));
   }
 
   /** {@inheritDoc} */

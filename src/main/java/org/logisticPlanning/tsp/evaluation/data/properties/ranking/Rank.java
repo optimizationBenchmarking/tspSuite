@@ -28,7 +28,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  *          </ol>
  */
 public class Rank<T> extends BasicAssociation<T, Double> implements
-Comparable<Rank<T>> {
+    Comparable<Rank<T>> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -66,8 +66,8 @@ Comparable<Rank<T>> {
     }
     throw new IllegalStateException(//
         "Rank cannot be assigned twice: Object '" + this.m_key + //$NON-NLS-1$
-        "' has already rank '" + this.m_rank + //$NON-NLS-1$
-        "' and cannot be modified anymore."); //$NON-NLS-1$
+            "' has already rank '" + this.m_rank + //$NON-NLS-1$
+            "' and cannot be modified anymore."); //$NON-NLS-1$
   }
 
   /**
@@ -83,8 +83,8 @@ Comparable<Rank<T>> {
     } else {
       throw new IllegalArgumentException(//
           "Object '" + this.m_key + //$NON-NLS-1$
-          "' cannot get invalid rank '" + r + //$NON-NLS-1$
-          "'.");//$NON-NLS-1$
+              "' cannot get invalid rank '" + r + //$NON-NLS-1$
+              "'.");//$NON-NLS-1$
     }
   }
 
@@ -157,13 +157,13 @@ Comparable<Rank<T>> {
     if (o instanceof Rank) {
       r = ((Rank) o);
       return (ComparisonUtils.equals(this.getKey(), r.getKey()) && //
-          (this.m_rank == r.m_rank));
+      (this.m_rank == r.m_rank));
     }
 
     if (o instanceof Map.Entry) {
       e = ((Map.Entry) o);
       return (ComparisonUtils.equals(this.m_key, e.getKey()) && //
-          ComparisonUtils.equals(this.getValue(), e.getValue()));
+      ComparisonUtils.equals(this.getValue(), e.getValue()));
     }
 
     return false;

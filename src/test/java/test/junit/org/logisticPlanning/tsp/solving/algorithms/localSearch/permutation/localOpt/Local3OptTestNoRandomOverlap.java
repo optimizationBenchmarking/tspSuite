@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.localOpt.Exhaustiv
  * the test of the local 3-opt algorithm
  */
 public class Local3OptTestNoRandomOverlap extends
-LocalNOptTestNoRandomOverlap {
+    LocalNOptTestNoRandomOverlap {
 
   /** create */
   public Local3OptTestNoRandomOverlap() {

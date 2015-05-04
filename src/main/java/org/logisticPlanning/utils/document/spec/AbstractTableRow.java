@@ -92,7 +92,7 @@ public abstract class AbstractTableRow extends Element {
    *           if it is not allowed to have a cell here
    */
   public AbstractTableCell cell() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return this.cell(1, 1);
   }
 }

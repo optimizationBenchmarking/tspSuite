@@ -751,7 +751,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
         delta = ((D_im1_ip1 - D_im1_i) + //
             (D_i_j - D_i_ip1) + //
-            (D_i_jp1 - D_j_jp1));
+        (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -768,7 +768,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
         delta = ((D_im1_j - D_im1_i) + //
             (D_i_j - D_j_jp1) + //
-            (D_jm1_jp1 - D_jm1_j));
+        (D_jm1_jp1 - D_jm1_j));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -792,7 +792,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
         delta = ((D_im1_j - D_im1_i) + //
             (D_ip1_j - D_i_ip1) + //
             (D_i_jm1 - D_jm1_j) + //
-            (D_i_jp1 - D_j_jp1));
+        (D_i_jp1 - D_j_jp1));
 
         if (delta < 0) {// move is promising:enqueue
           move = this.allocate(); // allocate the move
@@ -859,11 +859,11 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
     Configurable.printKey(ChainedMNSLocalNOpt.PARAM_MOVE_ORDER, ps);
     ps.println(//
-        "the order in which moves are enqueued and performed"); //$NON-NLS-1$
+    "the order in which moves are enqueued and performed"); //$NON-NLS-1$
 
     Configurable.printKey(ChainedMNSLocalNOpt.PARAM_MAX_ALLOCATIONS, ps);
     ps.println(//
-        "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
+    "the maximum move queue length (to prevent out-of-memory errors)"); //$NON-NLS-1$
 
     Configurable.printKey(ChainedMNSLocalNOpt.PARAM_N_OPT, ps);
     ps.println("The local n-optimizer to use."); //$NON-NLS-1$

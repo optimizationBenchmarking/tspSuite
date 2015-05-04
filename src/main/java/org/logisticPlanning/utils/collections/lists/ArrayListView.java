@@ -105,8 +105,8 @@ public class ArrayListView<DT> extends BasicList<DT> {
     len = this.m_data.length;
 
     out = ((a.length >= len) ? a : //
-      ((T[]) (java.lang.reflect.Array.newInstance(//
-          a.getClass().getComponentType(), len))));
+        ((T[]) (java.lang.reflect.Array.newInstance(//
+            a.getClass().getComponentType(), len))));
     System.arraycopy(this.m_data, 0, out, 0, len);
     if (len < out.length) {
       out[len] = null;
@@ -269,7 +269,7 @@ public class ArrayListView<DT> extends BasicList<DT> {
   @SuppressWarnings({ "rawtypes", "unchecked" })
   public static final <T> ArrayListView<T> makeArrayListView(final T[] data) {
     return (((data != null) && (data.length > 0)) ? new ArrayListView(data)
-    : ((ArrayListView) (ArrayListView.EMPTY_LIST_VIEW)));
+        : ((ArrayListView) (ArrayListView.EMPTY_LIST_VIEW)));
   }
 
   /**

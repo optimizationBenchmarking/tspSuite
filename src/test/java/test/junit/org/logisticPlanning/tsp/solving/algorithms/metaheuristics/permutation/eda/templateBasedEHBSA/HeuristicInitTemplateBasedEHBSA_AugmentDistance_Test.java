@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * template-based EHBSA} with heuristic initialization.
  */
 public class HeuristicInitTemplateBasedEHBSA_AugmentDistance_Test extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public HeuristicInitTemplateBasedEHBSA_AugmentDistance_Test() {

@@ -505,17 +505,17 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *   long time, startTime;
  *   double factor, bestFactor;
  *   int runs, calls, minCalls;
- *
+ * 
  *   bestFactor = Double.POSITIVE_INFINITY;
  *   instance = _SpeedBenchmark.instance();
  *   minCalls = -1;
- *
+ * 
  *   for (runs = 10; (--runs) &gt;= 0;) {
- *
+ * 
  *     calls = 0;
  *     f._beginRun(instance, false);
  *     startTime = System.currentTimeMillis();
- *
+ * 
  *     loopy: for (;;) {
  *       instance.solve(f);
  *       if ((++calls) &gt;= minCalls) {
@@ -526,7 +526,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *       }
  *     }
  *     f._clear();
- *
+ * 
  *     if (calls &gt;= minCalls) {
  *       minCalls = calls;
  *     }
@@ -535,7 +535,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *       bestFactor = factor;
  *     }
  *   }
- *
+ * 
  *   return bestFactor;
  * }
  * </pre>
@@ -566,32 +566,32 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *   int aIdx, bIdx, rem, lastA, lastB, bestIdxA, bestA, bestLenA, bestIdxB, bestLenB, bestB, tempLen, tempNode, i;
  *   int[] temp, res;
  *   long length;
- *
+ * 
  *   // allocate node list
  *   n = f.n();
  *   temp = new int[n];
  *   for (aIdx = 0; aIdx &lt; n;) {
  *     temp[aIdx] = (++aIdx);
  *   }
- *
+ * 
  *   // allocate result array
  *   res = new int[n];
- *
+ * 
  *   length = 0l;
- *
+ * 
  *   aIdx = bIdx = 0;
  *   rem = addB = (n - 1);
  *   res[0] = lastA = lastB = 1;
  *   temp[0] = temp[rem];
  *   bestIdxA = bestIdxB = bestA = bestB = (-1);
  *   bestLenA = bestLenB = tempLen = Integer.MAX_VALUE;
- *
+ * 
  *   for (; rem &gt; 0;) {
- *
+ * 
  *     // find the best end extensions
  *     for (i = rem; (--i) &gt;= 0;) {
  *       tempNode = temp[i];
- *
+ * 
  *       // find the best node at end A
  *       if (bestA &lt;= 0) {
  *         tempLen = f.distance(lastA, tempNode);
@@ -601,7 +601,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *           bestIdxA = i;
  *         }
  *       }
- *
+ * 
  *       // find the best node at end B (except in first round)
  *       if ((bestB &lt;= 0) &amp;&amp; (lastB != lastA)) {
  *         tempLen = f.distance(lastB, tempNode);
@@ -612,7 +612,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *         }
  *       }
  *     }
- *
+ * 
  *     // ok, which end offers the better extension?
  *     if (bestLenA &lt;= bestLenB) { // adding a node at end A seems to be
  *                                 // better
@@ -649,7 +649,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *       bestLenB = Integer.MAX_VALUE;
  *     }
  *   }
- *
+ * 
  *   // add distance of edge connecting both tour ends
  *   length += f.distance(lastA, lastB);
  *   f.registerFE(res, length); // register result
@@ -1180,17 +1180,17 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
- *
+ * 
  * import {@code MyPackage}.{@code MyHeuristic};
- *
+ * 
  * import {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest};
- *
+ * 
  * public class {@code MyHeuristic}Test extends {@link test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest TSPAlgorithmSymmetricTest} {
- *
+ * 
  *   public {@code MyHeuristic}Test() {
  *     super();
  *   }
- *
+ * 
  *   {@code @Override}
  *   protected {@code MyHeuristic} createAlgorithm() {
  *     return new {@code MyHeuristic}();
@@ -1938,104 +1938,104 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments in the log file header */
   private static final char[][] HEADER_COMMENTS = new char[][] { //
-    { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 'l', 'o', 'g', ' ', 'f',
-      'i', 'l', 'e', ' ', 'h', 'a', 's', ' ', 'b', 'e', 'e', 'n', ' ',
-      'g', 'e', 'n', 'e', 'r', 'a', 't', 'e', 'd', ' ', 'w', 'i', 't',
-      'h', ' ', 't', 'h', 'e', ' ', '"', 'T', 'S', 'P', ' ', 'S', 'u',
-      'i', 't', 'e', '"', ' ', 'b', 'e', 'n', 'c', 'h', 'm', 'a', 'r',
-      'k', ' ', 'f', 'a', 'c', 'i', 'l', 'i', 't', 'y', ' ', 'f', 'r',
-      'o', 'm', ' ', 'h', 't', 't', 'p', ':', '/', '/', 'w', 'w', 'w',
-      '.', 'l', 'o', 'g', 'i', 's', 't', 'i', 'c', 'P', 'l', 'a', 'n',
-      'n', 'i', 'n', 'g', '.', 'o', 'r', 'g', '/', 't', 's', 'p' }, //
+      { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 'l', 'o', 'g', ' ', 'f',
+          'i', 'l', 'e', ' ', 'h', 'a', 's', ' ', 'b', 'e', 'e', 'n', ' ',
+          'g', 'e', 'n', 'e', 'r', 'a', 't', 'e', 'd', ' ', 'w', 'i', 't',
+          'h', ' ', 't', 'h', 'e', ' ', '"', 'T', 'S', 'P', ' ', 'S', 'u',
+          'i', 't', 'e', '"', ' ', 'b', 'e', 'n', 'c', 'h', 'm', 'a', 'r',
+          'k', ' ', 'f', 'a', 'c', 'i', 'l', 'i', 't', 'y', ' ', 'f', 'r',
+          'o', 'm', ' ', 'h', 't', 't', 'p', ':', '/', '/', 'w', 'w', 'w',
+          '.', 'l', 'o', 'g', 'i', 's', 't', 'i', 'c', 'P', 'l', 'a', 'n',
+          'n', 'i', 'n', 'g', '.', 'o', 'r', 'g', '/', 't', 's', 'p' }, //
       { '/', '/', ' ', 'P', 'r', 'o', 'j', 'e', 'c', 't', ' ', 'v', 'e',
-        'r', 's', 'i', 'o', 'n', ' ', '0', '.', '9', '.', '8', ',', ' ',
-        'b', 'u', 'i', 'l', 't', ' ', 'o', 'n', ' ', '2', '0', '1', '5',
-        '-', '0', '4', '-', '2', '1', ' ', '0', '6', ':', '4', '5', ':',
-        '0', '2', ' ', 'G', 'M', 'T', '+', '0', '8', '0', '0' }, //
-        ObjectiveFunction.EMPTY_LINE, //
-        ObjectiveFunction.EMPTY_LINE, //
-        ObjectiveFunction.LOG_DATA_SECTION.toCharArray(), //
-        { '/', '/', ' ', 'F', 'o', 'r', 'm', 'a', 't', ':', ' ', 'F', 'E',
+          'r', 's', 'i', 'o', 'n', ' ', '0', '.', '9', '.', '8', ',', ' ',
+          'b', 'u', 'i', 'l', 't', ' ', 'o', 'n', ' ', '2', '0', '1', '5',
+          '-', '0', '4', '-', '2', '1', ' ', '0', '6', ':', '4', '5', ':',
+          '0', '2', ' ', 'G', 'M', 'T', '+', '0', '8', '0', '0' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.LOG_DATA_SECTION.toCharArray(), //
+      { '/', '/', ' ', 'F', 'o', 'r', 'm', 'a', 't', ':', ' ', 'F', 'E',
           ' ', 'D', 'E', ' ', 't', 'i', 'm', 'e', ' ', 'n', 't', 'i', 'm',
           'e', ' ', 'b', 'e', 's', 't', '_', 'F', ' ', 'b', 'e', 's', 't',
           '_', 'F', '_', 'f', 'r', 'a', 'c', ' ', 't', 'y', 'p', 'e' }, //
-          { '/', '/', ' ', 'W', 'h', 'e', 'r', 'e', ':', ' ', '"', 'F', 'E',
-            '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'n', 'u', 'm', 'b',
-            'e', 'r', ' ', 'o', 'f', ' ', 'f', 'u', 'l', 'l', 'y', ' ', 'c',
-            'o', 'n', 's', 't', 'r', 'u', 'c', 't', 'e', 'd', ' ', 'c', 'a',
-            'n', 'd', 'i', 'd', 'a', 't', 'e', ' ', 's', 'o', 'l', 'u', 't',
-            'i', 'o', 'n', 's', '.' }, //
-            { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'D', 'E',
-              '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'n', 'u', 'm', 'b',
-              'e', 'r', ' ', 'o', 'f', ' ', 'c', 'a', 'l', 'l', 's', ' ', 't',
-              'o', ' ', 't', 'h', 'e', ' ', 'd', 'i', 's', 't', 'a', 'n', 'c',
-              'e', ' ', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', ' ', '(', 'b',
-              'e', 't', 'w', 'e', 'e', 'n', ' ', 't', 'w', 'o', ' ', 'n', 'o',
-              'd', 'e', 's', ')', '.' }, //
-              { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 't', 'i',
-                'm', 'e', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'r', 'u',
-                'n', 't', 'i', 'm', 'e', ' ', 'i', 'n', ' ', 'm', 'i', 'l', 'l',
-                'i', 's', 'e', 'c', 'o', 'n', 'd', 's', ' ', 't', 'h', 'a', 't',
-                ' ', 'h', 'a', 's', ' ', 'p', 'a', 's', 's', 'e', 'd', ' ', 'u',
-                'n', 't', 'i', 'l', ' ', 't', 'h', 'e', ' ', 'l', 'o', 'g', ' ',
-                'p', 'o', 'i', 'n', 't', ' ', 'w', 'a', 's', ' ', 'r', 'e', 'a',
-                'c', 'h', 'e', 'd', '.' }, //
-                ("//        \"ntime\" is the normalized runtime that has passed until the log point was reached, i.e., time/FACT where FACT is the runtime that a standardized algorithm (double-ended nearest neighbor heuristic) needs to solve the same problem (see field " + //$NON-NLS-1$
-                    ObjectiveFunction.RUNTIME_NORMALIZATION_FACTOR
-                    + " in section " + ObjectiveFunction.SYSTEM_DATA_SECTION + ')').toCharArray(),//$NON-NLS-1$
-                    { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'b', 'e',
-                  's', 't', '_', 'F', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ',
-                  'o', 'b', 'j', 'e', 'c', 't', 'i', 'v', 'e', ' ', 'v', 'a', 'l',
-                  'u', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'b', 'e', 's',
-                  't', ' ', 'c', 'a', 'n', 'd', 'i', 'd', 'a', 't', 'e', ' ', 's',
-                  'o', 'l', 'u', 't', 'i', 'o', 'n', ' ', 'd', 'i', 's', 'c', 'o',
-                  'v', 'e', 'r', 'e', 'd', ' ', 'u', 'n', 't', 'i', 'l', ' ', 't',
-                  'h', 'a', 't', ' ', 'p', 'o', 'i', 'n', 't', '.' }, //
-                  { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'b', 'e',
-                    's', 't', '_', 'F', '_', 'f', 'r', 'a', 'c', '"', ' ', 'e', 'q',
-                    'u', 'a', 'l', 's', ' ', 't', 'o', ' ', '(', 'b', 'e', 's', 't',
-                    '_', 'F', '-', 'o', 'p', 't', 'i', 'm', 'u', 'm', '_', 'F', ')',
-                    '/', 'o', 'p', 't', 'i', 'm', 'u', 'm', '_', 'F', ',', ' ', 'w',
-                    'h', 'e', 'r', 'e', ' ', '"', 'o', 'p', 't', 'i', 'm', 'u', 'm',
-                    '_', 'F', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'o', 'b',
-                    'j', 'e', 'c', 't', 'i', 'v', 'e', ' ', 'v', 'a', 'l', 'u', 'e',
-                    ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'k', 'n', 'o', 'w', 'n',
-                    ' ', 'g', 'l', 'o', 'b', 'a', 'l', ' ', 'o', 'p', 't', 'i', 'm',
-                    'u', 'm', '.' }, //
-                    { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 't', 'y',
-                      'p', 'e', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'c', 'a',
-                      'u', 's', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'l', 'o',
-                      'g', ' ', 'p', 'o', 'i', 'n', 't', ' ', 'c', 'r', 'e', 'a', 't',
-                      'i', 'o', 'n', ',', ' ', 'a', ' ', 'c', 'o', 'm', 'b', 'i', 'n',
-                      'a', 't', 'i', 'o', 'n', ' ', 'o', 'f', ' ', 'o', '=', 'q', 'u',
-                      'a', 'l', 'i', 't', 'y', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o',
-                      'l', 'd', ' ', 'r', 'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'f',
-                      '=', 'f', 'e', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o', 'l', 'd',
-                      ' ', 'r', 'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'd', '=', 'd',
-                      'e', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o', 'l', 'd', ' ', 'r',
-                      'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'i', '=', 'e', 'n', 'd',
-                      ' ', 'o', 'f', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z',
-                      'a', 't', 'i', 'o', 'n', ',', ' ', 'e', '=', 'e', 'n', 'd', ' ',
-                      'o', 'f', ' ', 'r', 'u', 'n', '.' }, //
-                      ObjectiveFunction.EMPTY_LINE };
+      { '/', '/', ' ', 'W', 'h', 'e', 'r', 'e', ':', ' ', '"', 'F', 'E',
+          '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'n', 'u', 'm', 'b',
+          'e', 'r', ' ', 'o', 'f', ' ', 'f', 'u', 'l', 'l', 'y', ' ', 'c',
+          'o', 'n', 's', 't', 'r', 'u', 'c', 't', 'e', 'd', ' ', 'c', 'a',
+          'n', 'd', 'i', 'd', 'a', 't', 'e', ' ', 's', 'o', 'l', 'u', 't',
+          'i', 'o', 'n', 's', '.' }, //
+      { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'D', 'E',
+          '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'n', 'u', 'm', 'b',
+          'e', 'r', ' ', 'o', 'f', ' ', 'c', 'a', 'l', 'l', 's', ' ', 't',
+          'o', ' ', 't', 'h', 'e', ' ', 'd', 'i', 's', 't', 'a', 'n', 'c',
+          'e', ' ', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', ' ', '(', 'b',
+          'e', 't', 'w', 'e', 'e', 'n', ' ', 't', 'w', 'o', ' ', 'n', 'o',
+          'd', 'e', 's', ')', '.' }, //
+      { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 't', 'i',
+          'm', 'e', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'r', 'u',
+          'n', 't', 'i', 'm', 'e', ' ', 'i', 'n', ' ', 'm', 'i', 'l', 'l',
+          'i', 's', 'e', 'c', 'o', 'n', 'd', 's', ' ', 't', 'h', 'a', 't',
+          ' ', 'h', 'a', 's', ' ', 'p', 'a', 's', 's', 'e', 'd', ' ', 'u',
+          'n', 't', 'i', 'l', ' ', 't', 'h', 'e', ' ', 'l', 'o', 'g', ' ',
+          'p', 'o', 'i', 'n', 't', ' ', 'w', 'a', 's', ' ', 'r', 'e', 'a',
+          'c', 'h', 'e', 'd', '.' }, //
+      ("//        \"ntime\" is the normalized runtime that has passed until the log point was reached, i.e., time/FACT where FACT is the runtime that a standardized algorithm (double-ended nearest neighbor heuristic) needs to solve the same problem (see field " + //$NON-NLS-1$
+          ObjectiveFunction.RUNTIME_NORMALIZATION_FACTOR
+          + " in section " + ObjectiveFunction.SYSTEM_DATA_SECTION + ')').toCharArray(),//$NON-NLS-1$
+      { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'b', 'e',
+          's', 't', '_', 'F', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ',
+          'o', 'b', 'j', 'e', 'c', 't', 'i', 'v', 'e', ' ', 'v', 'a', 'l',
+          'u', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'b', 'e', 's',
+          't', ' ', 'c', 'a', 'n', 'd', 'i', 'd', 'a', 't', 'e', ' ', 's',
+          'o', 'l', 'u', 't', 'i', 'o', 'n', ' ', 'd', 'i', 's', 'c', 'o',
+          'v', 'e', 'r', 'e', 'd', ' ', 'u', 'n', 't', 'i', 'l', ' ', 't',
+          'h', 'a', 't', ' ', 'p', 'o', 'i', 'n', 't', '.' }, //
+      { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 'b', 'e',
+          's', 't', '_', 'F', '_', 'f', 'r', 'a', 'c', '"', ' ', 'e', 'q',
+          'u', 'a', 'l', 's', ' ', 't', 'o', ' ', '(', 'b', 'e', 's', 't',
+          '_', 'F', '-', 'o', 'p', 't', 'i', 'm', 'u', 'm', '_', 'F', ')',
+          '/', 'o', 'p', 't', 'i', 'm', 'u', 'm', '_', 'F', ',', ' ', 'w',
+          'h', 'e', 'r', 'e', ' ', '"', 'o', 'p', 't', 'i', 'm', 'u', 'm',
+          '_', 'F', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'o', 'b',
+          'j', 'e', 'c', 't', 'i', 'v', 'e', ' ', 'v', 'a', 'l', 'u', 'e',
+          ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'k', 'n', 'o', 'w', 'n',
+          ' ', 'g', 'l', 'o', 'b', 'a', 'l', ' ', 'o', 'p', 't', 'i', 'm',
+          'u', 'm', '.' }, //
+      { '/', '/', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '"', 't', 'y',
+          'p', 'e', '"', ' ', 'i', 's', ' ', 't', 'h', 'e', ' ', 'c', 'a',
+          'u', 's', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', 'l', 'o',
+          'g', ' ', 'p', 'o', 'i', 'n', 't', ' ', 'c', 'r', 'e', 'a', 't',
+          'i', 'o', 'n', ',', ' ', 'a', ' ', 'c', 'o', 'm', 'b', 'i', 'n',
+          'a', 't', 'i', 'o', 'n', ' ', 'o', 'f', ' ', 'o', '=', 'q', 'u',
+          'a', 'l', 'i', 't', 'y', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o',
+          'l', 'd', ' ', 'r', 'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'f',
+          '=', 'f', 'e', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o', 'l', 'd',
+          ' ', 'r', 'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'd', '=', 'd',
+          'e', ' ', 't', 'h', 'r', 'e', 's', 'h', 'o', 'l', 'd', ' ', 'r',
+          'e', 'a', 'c', 'h', 'e', 'd', ',', ' ', 'i', '=', 'e', 'n', 'd',
+          ' ', 'o', 'f', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z',
+          'a', 't', 'i', 'o', 'n', ',', ' ', 'e', '=', 'e', 'n', 'd', ' ',
+          'o', 'f', ' ', 'r', 'u', 'n', '.' }, //
+      ObjectiveFunction.EMPTY_LINE };
 
   /** the string indicating that the best solution follows: {@value} */
   public static final String BEST_SOLUTION = "BEST_SOLUTION";//$NON-NLS-1$
 
   /** the comments to be printed before the best solution */
   private static final char[][] SOLUTION_COMMENTS = new char[][] {
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'T', 'h', 'e', ' ', 'b', 'e', 's', 't', ' ', 's',
-      'o', 'l', 'u', 't', 'i', 'o', 'n', ' ', 'd', 'i', 's', 'c', 'o',
-      'v', 'e', 'r', 'e', 'd', ' ', 'b', 'y', ' ', 't', 'h', 'e', ' ',
-      'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', '(', 'o', 'r',
-      ' ', 'o', 'n', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', 'm', ',',
-      ' ', 'i', 'f', ' ', 'm', 'u', 'l', 't', 'i', 'p', 'l', 'e', ' ',
-      's', 'o', 'l', 'u', 't', 'i', 'o', 'n', 's', ' ', 'o', 'f', ' ',
-      't', 'h', 'e', ' ', 's', 'a', 'm', 'e', ' ', 'q', 'u', 'a', 'l',
-      'i', 't', 'y', ' ', 'h', 'a', 'v', 'e', ' ', 'b', 'e', 'e', 'n',
-      ' ', 'd', 'i', 's', 'c', 'o', 'v', 'e', 'r', 'e', 'd', ')', '.' }, };
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'T', 'h', 'e', ' ', 'b', 'e', 's', 't', ' ', 's',
+          'o', 'l', 'u', 't', 'i', 'o', 'n', ' ', 'd', 'i', 's', 'c', 'o',
+          'v', 'e', 'r', 'e', 'd', ' ', 'b', 'y', ' ', 't', 'h', 'e', ' ',
+          'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', '(', 'o', 'r',
+          ' ', 'o', 'n', 'e', ' ', 'o', 'f', ' ', 't', 'h', 'e', 'm', ',',
+          ' ', 'i', 'f', ' ', 'm', 'u', 'l', 't', 'i', 'p', 'l', 'e', ' ',
+          's', 'o', 'l', 'u', 't', 'i', 'o', 'n', 's', ' ', 'o', 'f', ' ',
+          't', 'h', 'e', ' ', 's', 'a', 'm', 'e', ' ', 'q', 'u', 'a', 'l',
+          'i', 't', 'y', ' ', 'h', 'a', 'v', 'e', ' ', 'b', 'e', 'e', 'n',
+          ' ', 'd', 'i', 's', 'c', 'o', 'v', 'e', 'r', 'e', 'd', ')', '.' }, };
 
   /**
    * the identifier of the section in the log files which holds the
@@ -2051,14 +2051,14 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments to be printed before the algorithm information section */
   private static final char[][] ALGORITHM_INFORMATION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'T', 'h', 'e', ' ', 'c', 'o', 'n', 'f', 'i', 'g',
-      'u', 'r', 'a', 't', 'i', 'o', 'n', ' ', 'o', 'f', ' ', 't', 'h',
-      'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', 't',
-      'h', 'a', 't', ' ', 'w', 'a', 's', ' ', 'u', 's', 'e', 'd', ' ',
-      't', 'o', ' ', 'o', 'b', 't', 'a', 'i', 'n', ' ', 't', 'h', 'e',
-      's', 'e', ' ', 'r', 'e', 's', 'u', 'l', 't', 's', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'T', 'h', 'e', ' ', 'c', 'o', 'n', 'f', 'i', 'g',
+          'u', 'r', 'a', 't', 'i', 'o', 'n', ' ', 'o', 'f', ' ', 't', 'h',
+          'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', 't',
+          'h', 'a', 't', ' ', 'w', 'a', 's', ' ', 'u', 's', 'e', 'd', ' ',
+          't', 'o', ' ', 'o', 'b', 't', 'a', 'i', 'n', ' ', 't', 'h', 'e',
+          's', 'e', ' ', 'r', 'e', 's', 'u', 'l', 't', 's', '.' }, //
       ObjectiveFunction.ALGORITHM_DATA_SECTION.toCharArray(), };
 
   /**
@@ -2080,52 +2080,52 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments right before the initializer information section */
   private static final char[][] INITIALIZER_INFORMATION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'T', 'h', 'e', ' ', 'T', 'S', 'P', ' ', 'L', 'i',
-      'b', 'r', 'a', 'r', 'y', ' ', 'f', 'r', 'a', 'm', 'e', 'w', 'o',
-      'r', 'k', ' ', 'a', 'l', 'l', 'o', 'w', 's', ' ', 'y', 'o', 'u',
-      ' ', 't', 'o', ' ', 'u', 's', 'e', ' ', 'o', 'n', 'e', ' ', 'd',
-      'e', 't', 'e', 'r', 'm', 'i', 'n', 'i', 's', 't', 'i', 'c', ' ',
-      'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't', 'i', 'o',
-      'n', ' ', 'p', 'r', 'o', 'c', 'e', 'd', 'u', 'r', 'e', ' ', 'b',
-      'e', 'f', 'o', 'r', 'e', ' ', 'a', 'p', 'p', 'l', 'y', 'i', 'n',
-      'g', ' ', 't', 'h', 'e', ' ', '"', 'r', 'e', 'a', 'l', '"', ' ',
-      'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', '(', 'w', 'h',
-      'o', 's', 'e', ' ', 'c', 'o', 'n', 'f', 'i', 'g', 'u', 'r', 'a',
-      't', 'i', 'o', 'n', ' ', 'i', 's', ' ', 'd', 'e', 's', 'c', 'r',
-      'i', 'b', 'e', 'd', ' ', 'a', 'b', 'o', 'v', 'e', ')', ' ', 't',
-      'o', ' ', 't', 'h', 'e', ' ', 'p', 'r', 'o', 'b', 'l', 'e', 'm',
-    '.' }, //
-    { '/', '/', ' ', 'S', 'u', 'c', 'h', ' ', 'a', ' ', 'p', 'r', 'o',
-      'c', 'e', 'd', 'u', 'r', 'e', ' ', 'i', 's', ' ', 'd', 'e', 't',
-      'e', 'r', 'm', 'i', 'n', 'i', 's', 't', 'i', 'c', ',', ' ', 'i',
-      '.', 'e', '.', ',', ' ', 'a', 'l', 'w', 'a', 'y', 's', ' ', 'h',
-      'a', 's', ' ', 't', 'h', 'e', ' ', 's', 'a', 'm', 'e', ' ', 'r',
-      'e', 's', 'u', 'l', 't', ' ', 'a', 'n', 'd', ' ', 't', 'h', 'e',
-      'r', 'e', 'f', 'o', 'r', 'e', ' ', 'n', 'e', 'e', 'd', 's', ' ',
-      't', 'o', ' ', 'o', 'n', 'l', 'y', ' ', 'b', 'e', ' ', 'p', 'e',
-      'r', 'f', 'o', 'r', 'm', 'e', 'd', ' ', 'o', 'n', 'c', 'e', ' ',
-      'f', 'o', 'r', ' ', 'a', ' ', 'b', 'e', 'n', 'c', 'h', 'm', 'a',
-      'r', 'k', ' ', 'i', 'n', 's', 't', 'a', 'n', 'c', 'e', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'T', 'h', 'e', ' ', 'T', 'S', 'P', ' ', 'L', 'i',
+          'b', 'r', 'a', 'r', 'y', ' ', 'f', 'r', 'a', 'm', 'e', 'w', 'o',
+          'r', 'k', ' ', 'a', 'l', 'l', 'o', 'w', 's', ' ', 'y', 'o', 'u',
+          ' ', 't', 'o', ' ', 'u', 's', 'e', ' ', 'o', 'n', 'e', ' ', 'd',
+          'e', 't', 'e', 'r', 'm', 'i', 'n', 'i', 's', 't', 'i', 'c', ' ',
+          'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't', 'i', 'o',
+          'n', ' ', 'p', 'r', 'o', 'c', 'e', 'd', 'u', 'r', 'e', ' ', 'b',
+          'e', 'f', 'o', 'r', 'e', ' ', 'a', 'p', 'p', 'l', 'y', 'i', 'n',
+          'g', ' ', 't', 'h', 'e', ' ', '"', 'r', 'e', 'a', 'l', '"', ' ',
+          'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', '(', 'w', 'h',
+          'o', 's', 'e', ' ', 'c', 'o', 'n', 'f', 'i', 'g', 'u', 'r', 'a',
+          't', 'i', 'o', 'n', ' ', 'i', 's', ' ', 'd', 'e', 's', 'c', 'r',
+          'i', 'b', 'e', 'd', ' ', 'a', 'b', 'o', 'v', 'e', ')', ' ', 't',
+          'o', ' ', 't', 'h', 'e', ' ', 'p', 'r', 'o', 'b', 'l', 'e', 'm',
+          '.' }, //
+      { '/', '/', ' ', 'S', 'u', 'c', 'h', ' ', 'a', ' ', 'p', 'r', 'o',
+          'c', 'e', 'd', 'u', 'r', 'e', ' ', 'i', 's', ' ', 'd', 'e', 't',
+          'e', 'r', 'm', 'i', 'n', 'i', 's', 't', 'i', 'c', ',', ' ', 'i',
+          '.', 'e', '.', ',', ' ', 'a', 'l', 'w', 'a', 'y', 's', ' ', 'h',
+          'a', 's', ' ', 't', 'h', 'e', ' ', 's', 'a', 'm', 'e', ' ', 'r',
+          'e', 's', 'u', 'l', 't', ' ', 'a', 'n', 'd', ' ', 't', 'h', 'e',
+          'r', 'e', 'f', 'o', 'r', 'e', ' ', 'n', 'e', 'e', 'd', 's', ' ',
+          't', 'o', ' ', 'o', 'n', 'l', 'y', ' ', 'b', 'e', ' ', 'p', 'e',
+          'r', 'f', 'o', 'r', 'm', 'e', 'd', ' ', 'o', 'n', 'c', 'e', ' ',
+          'f', 'o', 'r', ' ', 'a', ' ', 'b', 'e', 'n', 'c', 'h', 'm', 'a',
+          'r', 'k', ' ', 'i', 'n', 's', 't', 'a', 'n', 'c', 'e', '.' }, //
       { '/', '/', ' ', 'I', 't', 's', ' ', 'c', 'o', 'r', 'r', 'e', 's',
-        'p', 'o', 'n', 'd', 'i', 'n', 'g', ' ', 'l', 'o', 'g', ' ', 'p',
-        'o', 'i', 'n', 't', 's', ' ', 'a', 'r', 'e', ' ', 't', 'h', 'e',
-        'n', ' ', 'c', 'a', 'c', 'h', 'e', 'd', ' ', 'a', 'n', 'd', ' ',
-        'a', 'u', 't', 'o', 'm', 'a', 't', 'i', 'c', 'a', 'l', 'l', 'y',
-        ' ', 'p', 'r', 'e', '-', 'p', 'e', 'n', 'd', 'e', 'd', ' ', 't',
-        'o', ' ', 't', 'h', 'e', ' ', 'l', 'o', 'g', 'g', 'i', 'n', 'g',
-        ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n', ' ',
-        'c', 'r', 'e', 'a', 't', 'e', 'd', ' ', 'b', 'y', ' ', 'e', 'a',
-        'c', 'h', ' ', 'r', 'u', 'n', ' ', 'o', 'f', ' ', 't', 'h', 'e',
-        ' ', '"', 'r', 'e', 'a', 'l', '"', ' ', 'a', 'l', 'g', 'o', 'r',
-        'i', 't', 'h', 'm', '.' }, //
-        { '/', '/', ' ', 'I', 't', 's', ' ', 'r', 'e', 's', 'u', 'l', 't',
+          'p', 'o', 'n', 'd', 'i', 'n', 'g', ' ', 'l', 'o', 'g', ' ', 'p',
+          'o', 'i', 'n', 't', 's', ' ', 'a', 'r', 'e', ' ', 't', 'h', 'e',
+          'n', ' ', 'c', 'a', 'c', 'h', 'e', 'd', ' ', 'a', 'n', 'd', ' ',
+          'a', 'u', 't', 'o', 'm', 'a', 't', 'i', 'c', 'a', 'l', 'l', 'y',
+          ' ', 'p', 'r', 'e', '-', 'p', 'e', 'n', 'd', 'e', 'd', ' ', 't',
+          'o', ' ', 't', 'h', 'e', ' ', 'l', 'o', 'g', 'g', 'i', 'n', 'g',
+          ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n', ' ',
+          'c', 'r', 'e', 'a', 't', 'e', 'd', ' ', 'b', 'y', ' ', 'e', 'a',
+          'c', 'h', ' ', 'r', 'u', 'n', ' ', 'o', 'f', ' ', 't', 'h', 'e',
+          ' ', '"', 'r', 'e', 'a', 'l', '"', ' ', 'a', 'l', 'g', 'o', 'r',
+          'i', 't', 'h', 'm', '.' }, //
+      { '/', '/', ' ', 'I', 't', 's', ' ', 'r', 'e', 's', 'u', 'l', 't',
           's', ' ', 'a', 'r', 'e', ' ', 'a', 'v', 'a', 'i', 'l', 'a', 'b',
           'l', 'e', ' ', 't', 'o', ' ', 't', 'h', 'e', ' ', '"', 'r', 'e',
           'a', 'l', '"', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm',
-        '.' }, //
-        { '/', '/', ' ', 'I', 't', 's', ' ', 'r', 'u', 'n', 't', 'i', 'm',
+          '.' }, //
+      { '/', '/', ' ', 'I', 't', 's', ' ', 'r', 'u', 'n', 't', 'i', 'm',
           'e', ',', ' ', 'a', 's', ' ', 'w', 'e', 'l', 'l', ' ', 'a', 's',
           ' ', 'i', 't', 's', ' ', 'c', 'o', 'n', 's', 'u', 'm', 'e', 'd',
           ' ', 'D', 'E', 's', ' ', 'a', 'n', 'd', ' ', 'F', 'E', 's', ',',
@@ -2135,56 +2135,56 @@ public final class ObjectiveFunction extends DistanceComputer {
           'E', 's', ')', ' ', 'o', 'f', ' ', 't', 'h', 'e', ' ', '"', 'r',
           'e', 'a', 'l', '"', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h',
           'm', '.' }, //
-          { '/', '/', ' ', 'H', 'e', 'r', 'e', ' ', 'w', 'e', ' ', 'p', 'r',
-            'o', 'v', 'i', 'd', 'e', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a',
-            't', 'i', 'o', 'n', ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h',
-            'i', 's', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a',
-            't', 'i', 'o', 'n', ' ', 'p', 'h', 'a', 's', 'e', '.' }, //
-            ObjectiveFunction.DETERMINISTIC_INITIALIZATION_SECTION.toCharArray(), };
+      { '/', '/', ' ', 'H', 'e', 'r', 'e', ' ', 'w', 'e', ' ', 'p', 'r',
+          'o', 'v', 'i', 'd', 'e', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a',
+          't', 'i', 'o', 'n', ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h',
+          'i', 's', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a',
+          't', 'i', 'o', 'n', ' ', 'p', 'h', 'a', 's', 'e', '.' }, //
+      ObjectiveFunction.DETERMINISTIC_INITIALIZATION_SECTION.toCharArray(), };
 
   /** the string used to end sections: {@value} */
   public static final String SECTION_END = "SECTION_END";//$NON-NLS-1$
 
   /** the first string at the log file start */
   private static final char[] LOG_FILE_START_A = { '/', '/', ' ', 'T',
-    'h', 'i', 's', ' ', 'f', 'i', 'l', 'e', ' ', 'r', 'e', 'p', 'r',
-    'e', 's', 'e', 'n', 't', 's', ' ', 'a', ' ', 'r', 'u', 'n', ' ',
-    'o', 'f', ' ', 't', 'h', 'e', ' ' };
+      'h', 'i', 's', ' ', 'f', 'i', 'l', 'e', ' ', 'r', 'e', 'p', 'r',
+      'e', 's', 'e', 'n', 't', 's', ' ', 'a', ' ', 'r', 'u', 'n', ' ',
+      'o', 'f', ' ', 't', 'h', 'e', ' ' };
 
   /** the second string at the log file start */
   private static final char[] LOG_FILE_START_A2 = { ' ', 'i', 'n', 'i',
-    't', 'i', 'a', 'l', 'i', 'z', 'e', 'd', ' ', 'w', 'i', 't', 'h',
-    ' ', 't', 'h', 'e', ' ' };
+      't', 'i', 'a', 'l', 'i', 'z', 'e', 'd', ' ', 'w', 'i', 't', 'h',
+      ' ', 't', 'h', 'e', ' ' };
 
   /** the third string at the log file start */
   private static final char[] LOG_FILE_START_B = { ' ', 'a', 'p', 'p',
-    'l', 'i', 'e', 'd', ' ', 't', 'o', ' ', 't', 'h', 'e', ' ' };
+      'l', 'i', 'e', 'd', ' ', 't', 'o', ' ', 't', 'h', 'e', ' ' };
 
   /** another string at the the log file start */
   private static final char[] LOG_FILE_START_X = { '/', '/', ' ', 'T',
-    'h', 'i', 's', ' ', 'f', 'i', 'l', 'e', ' ', 'r', 'e', 'p', 'r',
-    'e', 's', 'e', 'n', 't', 's', ' ', 'a', ' ', 'r', 'u', 'n', ' ',
-    'o', 'f', ' ', 'a', ' ', 's', 'o', 'l', 'v', 'e', 'r', ' ', 'f',
-    'o', 'r', ' ', 't', 'h', 'e', ' ' };
+      'h', 'i', 's', ' ', 'f', 'i', 'l', 'e', ' ', 'r', 'e', 'p', 'r',
+      'e', 's', 'e', 'n', 't', 's', ' ', 'a', ' ', 'r', 'u', 'n', ' ',
+      'o', 'f', ' ', 'a', ' ', 's', 'o', 'l', 'v', 'e', 'r', ' ', 'f',
+      'o', 'r', ' ', 't', 'h', 'e', ' ' };
 
   /** another string at the the log file start */
   private static final char[] LOG_FILE_START_C = { ' ', 'b', 'e', 'n',
-    'c', 'h', 'm', 'a', 'r', 'k', ' ', 'i', 'n', 's', 't', 'a', 'n',
-    'c', 'e', ' ', 'o', 'f', ' ' };
+      'c', 'h', 'm', 'a', 'r', 'k', ' ', 'i', 'n', 's', 't', 'a', 'n',
+      'c', 'e', ' ', 'o', 'f', ' ' };
 
   /** another string at the the log file start */
   private static final char[] LOG_FILE_START_DA = { 't', 'h', 'e', ' ',
-    's', 'y', 'm', 'm', 'e', 't', 'r', 'i', 'c', ' ', 'T', 'r', 'a',
-    'v', 'e', 'l', 'i', 'n', 'g', ' ', 'S', 'a', 'l', 'e', 's', 'm',
-    'a', 'n', ' ', 'P', 'r', 'o', 'b', 'l', 'e', 'm', ' ', '(', 'T',
-    'S', 'P', ')', '.' };
+      's', 'y', 'm', 'm', 'e', 't', 'r', 'i', 'c', ' ', 'T', 'r', 'a',
+      'v', 'e', 'l', 'i', 'n', 'g', ' ', 'S', 'a', 'l', 'e', 's', 'm',
+      'a', 'n', ' ', 'P', 'r', 'o', 'b', 'l', 'e', 'm', ' ', '(', 'T',
+      'S', 'P', ')', '.' };
 
   /** another string at the the log file start */
   private static final char[] LOG_FILE_START_DB = { 't', 'h', 'e', ' ',
-    'a', 's', 'y', 'm', 'm', 'e', 't', 'r', 'i', 'c', ' ', 'T', 'r',
-    'a', 'v', 'e', 'l', 'i', 'n', 'g', ' ', 'S', 'a', 'l', 'e', 's',
-    'm', 'a', 'n', ' ', 'P', 'r', 'o', 'b', 'l', 'e', 'm', ' ', '(',
-    'A', 'T', 'S', 'P', ')', '.' };
+      'a', 's', 'y', 'm', 'm', 'e', 't', 'r', 'i', 'c', ' ', 'T', 'r',
+      'a', 'v', 'e', 'l', 'i', 'n', 'g', ' ', 'S', 'a', 'l', 'e', 's',
+      'm', 'a', 'n', ' ', 'P', 'r', 'o', 'b', 'l', 'e', 'm', ' ', '(',
+      'A', 'T', 'S', 'P', ')', '.' };
 
   /**
    * the string indicating that the solution of the initialization
@@ -2221,14 +2221,14 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments at the benchmark information section */
   private static final char[][] BENCHMARK_INFORMATION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'S', 'o', 'm', 'e', ' ', 'g', 'e', 'n', 'e', 'r',
-      'a', 'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o',
-      'n', ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 'b',
-      'e', 'n', 'c', 'h', 'm', 'a', 'r', 'k', ' ', 'i', 'n', 's', 't',
-      'a', 'n', 'c', 'e', ' ', 'a', 'n', 'd', ' ', 'e', 'x', 'p', 'e',
-      'r', 'i', 'm', 'e', 'n', 't', ' ', 's', 'e', 't', 'u', 'p', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'S', 'o', 'm', 'e', ' ', 'g', 'e', 'n', 'e', 'r',
+          'a', 'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o',
+          'n', ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 'b',
+          'e', 'n', 'c', 'h', 'm', 'a', 'r', 'k', ' ', 'i', 'n', 's', 't',
+          'a', 'n', 'c', 'e', ' ', 'a', 'n', 'd', ' ', 'e', 'x', 'p', 'e',
+          'r', 'i', 'm', 'e', 'n', 't', ' ', 's', 'e', 't', 'u', 'p', '.' }, //
       ObjectiveFunction.BENCHMARK_INFORMATION_SECTION.toCharArray(), };
 
   /** the random seed: {@value} */
@@ -2248,110 +2248,110 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments before the system information section */
   private static final char[][] SYSTEM_INFORMATION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'I', 'n', ' ', 't', 'h', 'i', 's', ' ', 's', 'e',
-      'c', 't', 'i', 'o', 'n', ',', ' ', 'y', 'o', 'u', ' ', 'c', 'a',
-      'n', ' ', 'f', 'i', 'n', 'd', ' ', 'g', 'e', 'n', 'e', 'r', 'a',
-      'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n',
-      ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 's', 'y',
-      's', 't', 'e', 'm', ' ', 'o', 'n', ' ', 'w', 'h', 'i', 'c', 'h',
-      ' ', 't', 'h', 'i', 's', ' ', 'l', 'o', 'g', ' ', 'f', 'i', 'l',
-      'e', ' ', 'w', 'a', 's', ' ', 'g', 'e', 'n', 'e', 'r', 'a', 't',
-      'e', 'd', ',', ' ', 'o', 'n', ' ', 'w', 'h', 'i', 'c', 'h', ' ',
-      't', 'h', 'e', ' ', 'r', 'u', 'n', ' ', 'w', 'a', 's', ' ', 'p',
-      'e', 'r', 'f', 'o', 'r', 'm', 'e', 'd', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'I', 'n', ' ', 't', 'h', 'i', 's', ' ', 's', 'e',
+          'c', 't', 'i', 'o', 'n', ',', ' ', 'y', 'o', 'u', ' ', 'c', 'a',
+          'n', ' ', 'f', 'i', 'n', 'd', ' ', 'g', 'e', 'n', 'e', 'r', 'a',
+          'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n',
+          ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 's', 'y',
+          's', 't', 'e', 'm', ' ', 'o', 'n', ' ', 'w', 'h', 'i', 'c', 'h',
+          ' ', 't', 'h', 'i', 's', ' ', 'l', 'o', 'g', ' ', 'f', 'i', 'l',
+          'e', ' ', 'w', 'a', 's', ' ', 'g', 'e', 'n', 'e', 'r', 'a', 't',
+          'e', 'd', ',', ' ', 'o', 'n', ' ', 'w', 'h', 'i', 'c', 'h', ' ',
+          't', 'h', 'e', ' ', 'r', 'u', 'n', ' ', 'w', 'a', 's', ' ', 'p',
+          'e', 'r', 'f', 'o', 'r', 'm', 'e', 'd', '.' }, //
       ObjectiveFunction.SYSTEM_DATA_SECTION.toCharArray(), };
 
   /** the system information properties to be copied to the logs */
   private static final String[] SYS_INFOS = new String[] {
-    "file.encoding",//$NON-NLS-1$
+      "file.encoding",//$NON-NLS-1$
 
-    "java.class.path",//$NON-NLS-1$
-    "java.class.version",//$NON-NLS-1$
+      "java.class.path",//$NON-NLS-1$
+      "java.class.version",//$NON-NLS-1$
 
-    "java.version",//$NON-NLS-1$
-    "java.vendor",//$NON-NLS-1$
-    "java.vendor.url",//$NON-NLS-1$
+      "java.version",//$NON-NLS-1$
+      "java.vendor",//$NON-NLS-1$
+      "java.vendor.url",//$NON-NLS-1$
 
-    "java.home",//$NON-NLS-1$
+      "java.home",//$NON-NLS-1$
 
-    "java.library.path",//$NON-NLS-1$
-    "java.runtime.name",//$NON-NLS-1$
-    "java.runtime.version",//$NON-NLS-1$
+      "java.library.path",//$NON-NLS-1$
+      "java.runtime.name",//$NON-NLS-1$
+      "java.runtime.version",//$NON-NLS-1$
 
-    "java.specification.name",//$NON-NLS-1$
-    "java.specification.vendor",//$NON-NLS-1$
-    "java.specification.version",//$NON-NLS-1$
+      "java.specification.name",//$NON-NLS-1$
+      "java.specification.vendor",//$NON-NLS-1$
+      "java.specification.version",//$NON-NLS-1$
 
-    "java.vm.name",//$NON-NLS-1$
-    "java.vm.version",//$NON-NLS-1$
-    "java.vm.vendor",//$NON-NLS-1$
-    "java.vm.info",//$NON-NLS-1$
+      "java.vm.name",//$NON-NLS-1$
+      "java.vm.version",//$NON-NLS-1$
+      "java.vm.vendor",//$NON-NLS-1$
+      "java.vm.info",//$NON-NLS-1$
 
-    "java.vm.specification.name",//$NON-NLS-1$
-    "java.vm.specification.version",//$NON-NLS-1$
-    "java.vm.specification.vendor",//$NON-NLS-1$
+      "java.vm.specification.name",//$NON-NLS-1$
+      "java.vm.specification.version",//$NON-NLS-1$
+      "java.vm.specification.vendor",//$NON-NLS-1$
 
-    "java.compile",//$NON-NLS-1$
-    "java.compiler",//$NON-NLS-1$
+      "java.compile",//$NON-NLS-1$
+      "java.compiler",//$NON-NLS-1$
 
-    "sun.arch.data.model",//$NON-NLS-1$
-    "sun.cpu.endian",//$NON-NLS-1$
-    "sun.cpu.isalist",//$NON-NLS-1$
-    "sun.desktop",//$NON-NLS-1$
-    "sun.io.unicode.encoding",//$NON-NLS-1$
-    "sun.java.launcher",//$NON-NLS-1$
-    "sun.jnu.encoding",//$NON-NLS-1$
-    "sun.management.compiler",//$NON-NLS-1$
+      "sun.arch.data.model",//$NON-NLS-1$
+      "sun.cpu.endian",//$NON-NLS-1$
+      "sun.cpu.isalist",//$NON-NLS-1$
+      "sun.desktop",//$NON-NLS-1$
+      "sun.io.unicode.encoding",//$NON-NLS-1$
+      "sun.java.launcher",//$NON-NLS-1$
+      "sun.jnu.encoding",//$NON-NLS-1$
+      "sun.management.compiler",//$NON-NLS-1$
 
-    "os.arch",//$NON-NLS-1$
-    "os.name",//$NON-NLS-1$
-    "os.version",//$NON-NLS-1$
+      "os.arch",//$NON-NLS-1$
+      "os.name",//$NON-NLS-1$
+      "os.version",//$NON-NLS-1$
 
-    "user.country",//$NON-NLS-1$
-    "user.language",//$NON-NLS-1$
+      "user.country",//$NON-NLS-1$
+      "user.language",//$NON-NLS-1$
   };
 
   /** the environment variables to be copied to the logs */
   private static final String[] ENV_INFOS = new String[] {
-    "PROCESSOR_IDENTIFIER",//$NON-NLS-1$
-    "PROCESSOR_ARCHITECTURE",//$NON-NLS-1$
-    "PROCESSOR_LEVEL",//$NON-NLS-1$
-    "PROCESSOR_REVISION",//$NON-NLS-1$
-    "ARCHS",//$NON-NLS-1$
-    "ARCHS_STANDARD_32_64_BIT",//$NON-NLS-1$
-    "ARCHS_STANDARD_32_BIT",//$NON-NLS-1$
-    "ARCHS_UNIVERSAL_IPHONE_OS",//$NON-NLS-1$
-    "AVAILABLE_PLATFORMS",//$NON-NLS-1$
-    "NATIVE_ARCH",//$NON-NLS-1$
-    "NATIVE_ARCH_32_BIT",//$NON-NLS-1$
-    "NATIVE_ARCH_64_BIT",//$NON-NLS-1$
-    "NATIVE_ARCH_ACTUAL",//$NON-NLS-1$
-    "PLATFORM_NAME",//$NON-NLS-1$
-    "PLATFORM_PREFERRED_ARCH",//$NON-NLS-1$
-    "PLATFORM_PRODUCT_BUILD_VERSION",//$NON-NLS-1$
+      "PROCESSOR_IDENTIFIER",//$NON-NLS-1$
+      "PROCESSOR_ARCHITECTURE",//$NON-NLS-1$
+      "PROCESSOR_LEVEL",//$NON-NLS-1$
+      "PROCESSOR_REVISION",//$NON-NLS-1$
+      "ARCHS",//$NON-NLS-1$
+      "ARCHS_STANDARD_32_64_BIT",//$NON-NLS-1$
+      "ARCHS_STANDARD_32_BIT",//$NON-NLS-1$
+      "ARCHS_UNIVERSAL_IPHONE_OS",//$NON-NLS-1$
+      "AVAILABLE_PLATFORMS",//$NON-NLS-1$
+      "NATIVE_ARCH",//$NON-NLS-1$
+      "NATIVE_ARCH_32_BIT",//$NON-NLS-1$
+      "NATIVE_ARCH_64_BIT",//$NON-NLS-1$
+      "NATIVE_ARCH_ACTUAL",//$NON-NLS-1$
+      "PLATFORM_NAME",//$NON-NLS-1$
+      "PLATFORM_PREFERRED_ARCH",//$NON-NLS-1$
+      "PLATFORM_PRODUCT_BUILD_VERSION",//$NON-NLS-1$
 
-    "OS",//$NON-NLS-1$
-    "OSTYPE",//$NON-NLS-1$
-    "MACHTYPE",//$NON-NLS-1$
-    "MACH_O_TYPE",//$NON-NLS-1$
-    "MAC_OS_X_PRODUCT_BUILD_VERSION",//$NON-NLS-1$
-    "MAC_OS_X_VERSION_ACTUAL",//$NON-NLS-1$
-    "MAC_OS_X_VERSION_MAJOR",//$NON-NLS-1$
-    "MAC_OS_X_VERSION_MINOR",//$NON-NLS-1$
-    "HOSTTYPE",//$NON-NLS-1$
+      "OS",//$NON-NLS-1$
+      "OSTYPE",//$NON-NLS-1$
+      "MACHTYPE",//$NON-NLS-1$
+      "MACH_O_TYPE",//$NON-NLS-1$
+      "MAC_OS_X_PRODUCT_BUILD_VERSION",//$NON-NLS-1$
+      "MAC_OS_X_VERSION_ACTUAL",//$NON-NLS-1$
+      "MAC_OS_X_VERSION_MAJOR",//$NON-NLS-1$
+      "MAC_OS_X_VERSION_MINOR",//$NON-NLS-1$
+      "HOSTTYPE",//$NON-NLS-1$
 
-    "SYSTEMROOT",//$NON-NLS-1$
-    "WINDIR",//$NON-NLS-1$
-    "windir",//$NON-NLS-1$
+      "SYSTEMROOT",//$NON-NLS-1$
+      "WINDIR",//$NON-NLS-1$
+      "windir",//$NON-NLS-1$
 
-    "SHELL",//$NON-NLS-1$
-    "BASH_VERSION",//$NON-NLS-1$
-    "POSIXLY_CORRECT",//$NON-NLS-1$
-    "THREADLIB",//$NON-NLS-1$
+      "SHELL",//$NON-NLS-1$
+      "BASH_VERSION",//$NON-NLS-1$
+      "POSIXLY_CORRECT",//$NON-NLS-1$
+      "THREADLIB",//$NON-NLS-1$
 
-    "LANG",//$NON-NLS-1$
+      "LANG",//$NON-NLS-1$
 
   };
 
@@ -2375,17 +2375,17 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments right before the information regarding the creator */
   private static final char[][] CREATOR_INFORMATION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'I', 'n', ' ', 't', 'h', 'i', 's', ' ', 's', 'e',
-      'c', 't', 'i', 'o', 'n', ',', ' ', 'y', 'o', 'u', ' ', 'c', 'a',
-      'n', ' ', 'f', 'i', 'n', 'd', ' ', 'g', 'e', 'n', 'e', 'r', 'a',
-      'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n',
-      ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 'r', 'e',
-      's', 'e', 'a', 'r', 'c', 'h', 'e', 'r', ' ', 'a', 'n', 'd', '/',
-      'o', 'r', ' ', 'g', 'r', 'o', 'u', 'p', ' ', 'w', 'h', 'o', ' ',
-      'c', 'r', 'e', 'a', 't', 'e', 'd', ' ', 't', 'h', 'e', ' ', 'l',
-      'o', 'g', ' ', 'f', 'i', 'l', 'e', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'I', 'n', ' ', 't', 'h', 'i', 's', ' ', 's', 'e',
+          'c', 't', 'i', 'o', 'n', ',', ' ', 'y', 'o', 'u', ' ', 'c', 'a',
+          'n', ' ', 'f', 'i', 'n', 'd', ' ', 'g', 'e', 'n', 'e', 'r', 'a',
+          'l', ' ', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n',
+          ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'e', ' ', 'r', 'e',
+          's', 'e', 'a', 'r', 'c', 'h', 'e', 'r', ' ', 'a', 'n', 'd', '/',
+          'o', 'r', ' ', 'g', 'r', 'o', 'u', 'p', ' ', 'w', 'h', 'o', ' ',
+          'c', 'r', 'e', 'a', 't', 'e', 'd', ' ', 't', 'h', 'e', ' ', 'l',
+          'o', 'g', ' ', 'f', 'i', 'l', 'e', '.' }, //
       ObjectiveFunction.CREATOR_INFORMATION_SECTION.toCharArray(), };
 
   /**
@@ -2396,27 +2396,27 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments before the initialization exception section */
   private static final char[][] INITIALIZATION_EXCEPTION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 's', 'e', 'c', 't', 'i',
-      'o', 'n', ' ', 'w', 'a', 's', ' ', 'a', 'd', 'd', 'e', 'd', ' ',
-      's', 'i', 'n', 'c', 'e', ' ', 'a', 'n', ' ', 'e', 'x', 'c', 'e',
-      'p', 't', 'i', 'o', 'n', ' ', 'w', 'a', 's', ' ', 'c', 'a', 'u',
-      'g', 'h', 't', ' ', 'd', 'u', 'r', 'i', 'n', 'g', ' ', 't', 'h',
-      'e', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't',
-      'i', 'o', 'n', ' ', 'p', 'r', 'o', 'c', 'e', 'd', 'u', 'r', 'e',
-    '.' }, //
-    { '/', '/', ' ', 'W', 'A', 'R', 'N', 'I', 'N', 'G', ':', ' ', 'I',
-      'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't', 'i', 'o', 'n',
-      ' ', 'd', 'i', 'd', ' ', 'N', 'O', 'T', ' ', 'c', 'o', 'm', 'p',
-      'l', 'e', 't', 'e', ' ', 's', 'u', 'c', 'c', 'e', 's', 's', 'f',
-      'u', 'l', 'l', 'y', '!' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 's', 'e', 'c', 't', 'i',
+          'o', 'n', ' ', 'w', 'a', 's', ' ', 'a', 'd', 'd', 'e', 'd', ' ',
+          's', 'i', 'n', 'c', 'e', ' ', 'a', 'n', ' ', 'e', 'x', 'c', 'e',
+          'p', 't', 'i', 'o', 'n', ' ', 'w', 'a', 's', ' ', 'c', 'a', 'u',
+          'g', 'h', 't', ' ', 'd', 'u', 'r', 'i', 'n', 'g', ' ', 't', 'h',
+          'e', ' ', 'i', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't',
+          'i', 'o', 'n', ' ', 'p', 'r', 'o', 'c', 'e', 'd', 'u', 'r', 'e',
+          '.' }, //
+      { '/', '/', ' ', 'W', 'A', 'R', 'N', 'I', 'N', 'G', ':', ' ', 'I',
+          'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'a', 't', 'i', 'o', 'n',
+          ' ', 'd', 'i', 'd', ' ', 'N', 'O', 'T', ' ', 'c', 'o', 'm', 'p',
+          'l', 'e', 't', 'e', ' ', 's', 'u', 'c', 'c', 'e', 's', 's', 'f',
+          'u', 'l', 'l', 'y', '!' }, //
       { '/', '/', ' ', 'H', 'e', 'r', 'e', ' ', 'y', 'o', 'u', ' ', 'c',
-        'a', 'n', ' ', 'f', 'i', 'n', 'd', ' ', 'i', 'n', 'f', 'o', 'r',
-        'm', 'a', 't', 'i', 'o', 'n', ' ', 'a', 'b', 'o', 'u', 't', ' ',
-        't', 'h', 'a', 't', ' ', 'e', 'x', 'c', 'e', 'p', 't', 'i', 'o',
-        'n', '.' }, //
-        ObjectiveFunction.INITIALIZATION_EXCEPTION_SECTION.toCharArray(), };
+          'a', 'n', ' ', 'f', 'i', 'n', 'd', ' ', 'i', 'n', 'f', 'o', 'r',
+          'm', 'a', 't', 'i', 'o', 'n', ' ', 'a', 'b', 'o', 'u', 't', ' ',
+          't', 'h', 'a', 't', ' ', 'e', 'x', 'c', 'e', 'p', 't', 'i', 'o',
+          'n', '.' }, //
+      ObjectiveFunction.INITIALIZATION_EXCEPTION_SECTION.toCharArray(), };
 
   /**
    * this section holds an exception that might have occured during an the
@@ -2426,26 +2426,26 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /** the comments before the algorithm exception section */
   private static final char[][] ALGORITHM_EXCEPTION = new char[][] { //
-    ObjectiveFunction.EMPTY_LINE, //
-    ObjectiveFunction.EMPTY_LINE, //
-    { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 's', 'e', 'c', 't', 'i',
-      'o', 'n', ' ', 'w', 'a', 's', ' ', 'a', 'd', 'd', 'e', 'd', ' ',
-      's', 'i', 'n', 'c', 'e', ' ', 'a', 'n', ' ', 'e', 'x', 'c', 'e',
-      'p', 't', 'i', 'o', 'n', ' ', 'w', 'a', 's', ' ', 'c', 'a', 'u',
-      'g', 'h', 't', ' ', 'd', 'u', 'r', 'i', 'n', 'g', ' ', 't', 'h',
-      'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', 'r',
-      'u', 'n', '.' }, //
+      ObjectiveFunction.EMPTY_LINE, //
+      ObjectiveFunction.EMPTY_LINE, //
+      { '/', '/', ' ', 'T', 'h', 'i', 's', ' ', 's', 'e', 'c', 't', 'i',
+          'o', 'n', ' ', 'w', 'a', 's', ' ', 'a', 'd', 'd', 'e', 'd', ' ',
+          's', 'i', 'n', 'c', 'e', ' ', 'a', 'n', ' ', 'e', 'x', 'c', 'e',
+          'p', 't', 'i', 'o', 'n', ' ', 'w', 'a', 's', ' ', 'c', 'a', 'u',
+          'g', 'h', 't', ' ', 'd', 'u', 'r', 'i', 'n', 'g', ' ', 't', 'h',
+          'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ', 'r',
+          'u', 'n', '.' }, //
       { '/', '/', ' ', 'W', 'A', 'R', 'N', 'I', 'N', 'G', ':', ' ', 'T',
-        'h', 'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ',
-        'r', 'u', 'n', ' ', 'd', 'i', 'd', ' ', 'N', 'O', 'T', ' ', 'c',
-        'o', 'm', 'p', 'l', 'e', 't', 'e', ' ', 's', 'u', 'c', 'c', 'e',
-        's', 's', 'f', 'u', 'l', 'l', 'y', '!' }, //
-        { '/', '/', ' ', 'H', 'e', 'r', 'e', ' ', 'y', 'o', 'u', ' ', 'c',
+          'h', 'e', ' ', 'a', 'l', 'g', 'o', 'r', 'i', 't', 'h', 'm', ' ',
+          'r', 'u', 'n', ' ', 'd', 'i', 'd', ' ', 'N', 'O', 'T', ' ', 'c',
+          'o', 'm', 'p', 'l', 'e', 't', 'e', ' ', 's', 'u', 'c', 'c', 'e',
+          's', 's', 'f', 'u', 'l', 'l', 'y', '!' }, //
+      { '/', '/', ' ', 'H', 'e', 'r', 'e', ' ', 'y', 'o', 'u', ' ', 'c',
           'a', 'n', ' ', 'f', 'i', 'n', 'd', ' ', 'i', 'n', 'f', 'o', 'r',
           'm', 'a', 't', 'i', 'o', 'n', ' ', 'a', 'b', 'o', 'u', 't', ' ',
           't', 'h', 'a', 't', ' ', 'e', 'x', 'c', 'e', 'p', 't', 'i', 'o',
           'n', '.' }, //
-          ObjectiveFunction.ALGORITHM_EXCEPTION_SECTION.toCharArray(), };
+      ObjectiveFunction.ALGORITHM_EXCEPTION_SECTION.toCharArray(), };
 
   /** nothing is going on: {@value} */
   private static final int STATE_NOTHING = 0;
@@ -3168,7 +3168,7 @@ public final class ObjectiveFunction extends DistanceComputer {
           // this code should never be reached, but, well, whatever
           fallback = org.logisticPlanning.utils.text.TextUtils.prepare(//
               org.logisticPlanning.utils.text.transformations.NormalCharTransformer.INSTANCE
-              .transform(name));
+                  .transform(name));
           if (fallback != null) {
             return fallback;
           }
@@ -3571,11 +3571,11 @@ public final class ObjectiveFunction extends DistanceComputer {
             ps.println(this.m_initLP.m_f);
 
             Configurable
-            .printKey(ObjectiveFunction.INITIALIZATION_DES, ps);
+                .printKey(ObjectiveFunction.INITIALIZATION_DES, ps);
             ps.println(this.m_initLP.m_de);
 
             Configurable
-            .printKey(ObjectiveFunction.INITIALIZATION_FES, ps);
+                .printKey(ObjectiveFunction.INITIALIZATION_FES, ps);
             ps.println(this.m_initLP.m_fe);
 
             Configurable.printKey(

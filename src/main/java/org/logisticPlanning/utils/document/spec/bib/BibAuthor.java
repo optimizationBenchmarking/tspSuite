@@ -80,7 +80,7 @@ public class BibAuthor extends _BibElement<BibAuthor> {
     if (o instanceof BibAuthor) {
       b = ((BibAuthor) o);
       return (this.m_familyName.equals(b.m_familyName) && //
-          this.m_personalName.equals(b.m_personalName));
+      this.m_personalName.equals(b.m_personalName));
     }
     return false;
   }

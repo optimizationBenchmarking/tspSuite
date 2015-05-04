@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * The base class for points. A point can have 1, 2, or 3 dimensions.
  */
 public abstract class Point implements Serializable, Cloneable,
-IDataCollection {
+    IDataCollection {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

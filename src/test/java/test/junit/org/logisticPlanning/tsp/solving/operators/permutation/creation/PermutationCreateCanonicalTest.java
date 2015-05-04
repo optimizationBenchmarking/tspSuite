@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation cycle recombination operator
  */
 public class PermutationCreateCanonicalTest extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationCreateCanonicalTest() {

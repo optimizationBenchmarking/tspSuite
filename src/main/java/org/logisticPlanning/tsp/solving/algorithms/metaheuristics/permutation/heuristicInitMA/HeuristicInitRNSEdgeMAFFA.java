@@ -740,7 +740,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fit
  * </ol>
  */
 public final class HeuristicInitRNSEdgeMAFFA extends
-_HeuristicInitRNSEdgeMA {
+    _HeuristicInitRNSEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

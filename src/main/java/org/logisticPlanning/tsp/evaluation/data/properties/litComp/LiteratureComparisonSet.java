@@ -135,7 +135,7 @@ public abstract class LiteratureComparisonSet<T> extends ArraySetView<T> {
 
     // ok, we cannot decide, that's really odd ... let's go with similar
     if (count[ESingleComparison.SIMILAR.ordinal()] > count[ESingleComparison.MAYBE_SIMILAR
-                                                           .ordinal()]) {
+        .ordinal()]) {
       return ESingleComparison.SIMILAR;
     }
     return ESingleComparison.MAYBE_SIMILAR;

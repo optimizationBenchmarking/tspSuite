@@ -34,7 +34,7 @@ public class StableSum extends ScalarAggregate implements IStatisticPoint {
 
   /** the list of supported statistic parameters */
   private static final ArraySetView<EStatisticParameter> LIST = //
-      EStatisticParameter.makeList(EStatisticParameter.SUM);
+  EStatisticParameter.makeList(EStatisticParameter.SUM);
 
   /** the sum */
   private double m_sum;

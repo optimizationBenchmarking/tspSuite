@@ -361,8 +361,8 @@ public class Evaluator extends LoggerOwner implements Runnable {
         log.info("Finished loading data using the '" + ds.name() + //$NON-NLS-1$
             "' data source, discovered " + //$NON-NLS-1$
             ((es == null) ? " no experiment set" : //$NON-NLS-1$
-              (" a set of " + es.size() + //$NON-NLS-1$
-                  " experiments.")));//$NON-NLS-1$
+                (" a set of " + es.size() + //$NON-NLS-1$
+                " experiments.")));//$NON-NLS-1$
       }
     }
 

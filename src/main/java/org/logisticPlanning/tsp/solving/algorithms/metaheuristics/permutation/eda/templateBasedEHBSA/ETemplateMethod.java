@@ -38,7 +38,7 @@ public enum ETemplateMethod {
         return (int) ((n * p) + 0.5d);
       }
       return (n - (int) ((n * (1.0d - //
-          Math.pow(1.0d - p, (1.0d - gamma) / gamma))) + 0.5d));
+      Math.pow(1.0d - p, (1.0d - gamma) / gamma))) + 0.5d));
     }
   },
 

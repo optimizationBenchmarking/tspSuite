@@ -55,7 +55,7 @@ public class Body extends Element {
   /** {@inheritDoc} */
   @Override
   protected void sectionBegin(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     if ((this.m_state != Element.STATE_NOTHING)
         && (this.m_state != Body.STATE_AFTER_SECTION)) {
       throw new IllegalStateException(//
@@ -68,7 +68,7 @@ public class Body extends Element {
   /** {@inheritDoc} */
   @Override
   protected void sectionEnd(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     if (this.m_state != Body.STATE_IN_SECTION) {
       throw new IllegalStateException(//
           "Sections can only end after they have been begun."); //$NON-NLS-1$
@@ -80,7 +80,7 @@ public class Body extends Element {
   /** {@inheritDoc} */
   @Override
   public Section section(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.section(label);
   }
 }

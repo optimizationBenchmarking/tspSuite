@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
  *          the element type this condition applies to.
  */
 public final class CollectiveCondition<T> extends
-Condition<Collection<? extends T>> {
+    Condition<Collection<? extends T>> {
 
   /** the condition */
   private final Condition<? super T> m_condition;
@@ -83,7 +83,7 @@ Condition<Collection<? extends T>> {
     if (o instanceof CollectiveCondition) {
       c = ((CollectiveCondition) o);
       return ((this.m_and == c.m_and) && //
-          (this.m_condition.equals(c.m_condition)));
+      (this.m_condition.equals(c.m_condition)));
     }
     return false;
   }

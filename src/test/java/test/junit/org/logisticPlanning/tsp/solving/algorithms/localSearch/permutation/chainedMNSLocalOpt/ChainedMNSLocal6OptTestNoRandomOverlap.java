@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.localOpt.Exhaustiv
  * the test of the local 6-opt algorithm
  */
 public class ChainedMNSLocal6OptTestNoRandomOverlap extends
-ChainedMNSLocalNOptTestNoRandomOverlap {
+    ChainedMNSLocalNOptTestNoRandomOverlap {
 
   /** create */
   public ChainedMNSLocal6OptTestNoRandomOverlap() {

@@ -52,7 +52,7 @@ public class FigureSeries extends _MultiLabeledElement {
    */
   protected FigureSeries(final SectionBody owner, final Label label,
       final int cols, final int rows, final boolean colspan)
-          throws IOException {
+      throws IOException {
     super(owner, label);
 
     if (cols < 1) {
@@ -189,7 +189,7 @@ public class FigureSeries extends _MultiLabeledElement {
   /** {@inheritDoc} */
   @Override
   public FigureSeriesCaption figureSeriesCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.figureSeriesCaption();
   }
 
@@ -237,7 +237,7 @@ public class FigureSeries extends _MultiLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != FigureSeries.STATE_IN_BODY) {
       throw new IllegalStateException(//
@@ -250,7 +250,7 @@ public class FigureSeries extends _MultiLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != FigureSeries.STATE_IN_BODY) {
       throw new IllegalStateException(//

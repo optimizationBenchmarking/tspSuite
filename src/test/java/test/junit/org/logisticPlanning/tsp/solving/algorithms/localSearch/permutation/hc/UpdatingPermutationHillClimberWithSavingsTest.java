@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.savings.SavingsHeu
  * Savings heuristic
  */
 public class UpdatingPermutationHillClimberWithSavingsTest extends
-UpdatingPermutationHillClimberTest {
+    UpdatingPermutationHillClimberTest {
 
   /** create */
   public UpdatingPermutationHillClimberWithSavingsTest() {

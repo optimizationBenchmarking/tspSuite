@@ -27,132 +27,132 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * href="#cite_D2006SCOCOMDS" style="font-weight:bold">2</a>].
  */
 public class TestComparisonProperty extends
-Property<ExperimentSet, TestComparisonResult> {
+    Property<ExperimentSet, TestComparisonResult> {
 
   /** the end-of-run mann-whitney u test 2% error threshold comparator */
   public static final TestComparisonProperty END_OF_RUN_F_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.END_OF_RUN, //
-          new TwoTailedMannWhitneyUTest(), Accessor.F, 0.02d, true);
+  new TestComparisonProperty(
+  //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.END_OF_RUN, //
+      new TwoTailedMannWhitneyUTest(), Accessor.F, 0.02d, true);
 
   /** the end-of-run mann-whitney u test 5% error threshold comparator */
   public static final TestComparisonProperty END_OF_RUN_F_005_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.END_OF_RUN,//
-          new TwoTailedMannWhitneyUTest(), Accessor.F, 0.05d, true);
+  new TestComparisonProperty(
+  //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.END_OF_RUN,//
+      new TwoTailedMannWhitneyUTest(), Accessor.F, 0.05d, true);
 
   /**
    * the end-of-run mann-whitney u test optimum FE error threshold
    * comparator
    */
   public static final TestComparisonProperty OPTIMUM_FE_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.02d, true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.02d, true);
 
   /**
    * the end-of-run mann-whitney u test optimum FE error threshold
    * comparator
    */
   public static final TestComparisonProperty OPTIMUM_FE_005_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.05d, true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.05d, true);
 
   /** the optimum mann-whitney u test optimum DE error threshold comparator */
   public static final TestComparisonProperty OPTIMUM_DE_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.02d, true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.02d, true);
 
   /** the optimum mann-whitney u test optimum DE error threshold comparator */
   public static final TestComparisonProperty OPTIMUM_DE_005_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.05d, true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.05d, true);
 
   /**
    * the optimum mann-whitney u test optimum normalized runtime error
    * threshold comparator
    */
   public static final TestComparisonProperty OPTIMUM_NORMALIZED_RUNTIME_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.02d,
-          true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.02d,
+      true);
 
   /**
    * the optimum mann-whitney u test optimum normalized runtime error
    * threshold comparator
    */
   public static final TestComparisonProperty OPTIMUM_NORMALIZED_RUNTIME_005_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
-          new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.05d,
-          true);
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty.create(DataPoint.RELATIVE_F_INDEX, 0d),
+      new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.05d,
+      true);
 
   /**
    * the 1%-off the optimum mann-whitney u test optimum FE error threshold
    * comparator
    */
   public static final TestComparisonProperty REL_F_001_FE_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty
           .create(DataPoint.RELATIVE_F_INDEX, 0.01d),
-          new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.02d, true);
+      new TwoTailedMannWhitneyUTest(), Accessor.FE, 0.02d, true);
 
   /**
    * the 1%-off the optimum mann-whitney u test optimum DE error threshold
    * comparator
    */
   public static final TestComparisonProperty REL_F_001_DE_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty
           .create(DataPoint.RELATIVE_F_INDEX, 0.01d),
-          new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.02d, true);
+      new TwoTailedMannWhitneyUTest(), Accessor.DE, 0.02d, true);
   /**
    * the 1%-off the optimum mann-whitney u test optimum normalized runtime
    * error threshold comparator
    */
   public static final TestComparisonProperty REL_F_001_NORMALIZED_RUNTIME_002_MWU = //
-      new TestComparisonProperty(
-          //
-          EPropertyType.TEMPORARILY_STORED,//
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          LimitDataCollectionProperty
+  new TestComparisonProperty(
+      //
+      EPropertyType.TEMPORARILY_STORED,//
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      LimitDataCollectionProperty
           .create(DataPoint.RELATIVE_F_INDEX, 0.01d),
-          new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.02d,
-          true);
+      new TwoTailedMannWhitneyUTest(), Accessor.NORMALIZED_RUNTIME, 0.02d,
+      true);
 
   /**
    * a property for pre-selecting the instances over which we will do the
@@ -219,15 +219,15 @@ Property<ExperimentSet, TestComparisonResult> {
             HashUtils.combineHashes(//
                 HashUtils.hashCode(this.getClass()),//
                 HashUtils.hashCode(this.m_errorThreshold)),//
-                HashUtils.combineHashes(//
-                    HashUtils.hashCode(this.m_limit),//
-                    HashUtils.hashCode(this.m_test))),//
-                    HashUtils.combineHashes(
-                        //
-                        HashUtils.combineHashes(//
-                            HashUtils.hashCode(this.m_axs),//
-                            HashUtils.hashCode(this.m_smallerIsBetter)),
-                            HashUtils.hashCode(this.m_instances)));
+            HashUtils.combineHashes(//
+                HashUtils.hashCode(this.m_limit),//
+                HashUtils.hashCode(this.m_test))),//
+        HashUtils.combineHashes(
+            //
+            HashUtils.combineHashes(//
+                HashUtils.hashCode(this.m_axs),//
+                HashUtils.hashCode(this.m_smallerIsBetter)),
+            HashUtils.hashCode(this.m_instances)));
   }
 
   /**
@@ -243,7 +243,7 @@ Property<ExperimentSet, TestComparisonResult> {
   @Override
   public String toString() {
     return (((this.m_limit.toString() + this.m_test.toString()) + //
-        this.m_errorThreshold) + this.m_axs.getShortName());
+    this.m_errorThreshold) + this.m_axs.getShortName());
   }
 
   /** {@inheritDoc} */
@@ -376,7 +376,7 @@ Property<ExperimentSet, TestComparisonResult> {
           (this.m_errorThreshold == prop.m_errorThreshold) && //
           (this.m_limit.equals(prop.m_limit)) && //
           (this.m_instances.equals(prop.m_instances)) && //
-          (this.m_test.equals(prop.m_test)));
+      (this.m_test.equals(prop.m_test)));
     }
     return false;
   }

@@ -11,7 +11,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.Fit
  * Evolutionary Algorithms}.
  */
 public final class FitnessIsObjectiveValue extends
-FitnessAssignmentProcess {
+    FitnessAssignmentProcess {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

@@ -13,7 +13,7 @@ import java.util.NoSuchElementException;
  *          the type to iterate about
  */
 public class BasicIterator<T> implements Iterator<T>, Enumeration<T>,
-Serializable {
+    Serializable {
 
   /** The serial version uid */
   private static final long serialVersionUID = 1L;

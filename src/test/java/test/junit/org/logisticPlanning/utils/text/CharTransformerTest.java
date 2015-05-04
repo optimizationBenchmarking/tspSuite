@@ -66,7 +66,7 @@ public abstract class CharTransformerTest extends TestBase {
 
     try (InputStream is = this.getClass().getResourceAsStream(
         this.getClass().getSimpleName() + //
-        ".cases")) { //$NON-NLS-1$
+            ".cases")) { //$NON-NLS-1$
       try (InputStreamReader r = new InputStreamReader(is)) {
         try (BufferedReader br = new BufferedReader(r)) {
           while ((s = br.readLine()) != null) {

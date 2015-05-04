@@ -9,7 +9,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * RNS mutation operator}
  */
 public class PermutationRNSMutation_First_Improvement_Test extends
-PermutationRNSMutation_Best_Improvement_Test {
+    PermutationRNSMutation_Best_Improvement_Test {
 
   /** instantiate */
   public PermutationRNSMutation_First_Improvement_Test() {

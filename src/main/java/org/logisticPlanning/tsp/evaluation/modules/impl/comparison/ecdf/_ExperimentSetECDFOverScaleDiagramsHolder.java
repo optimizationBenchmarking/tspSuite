@@ -55,7 +55,7 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetECDFOverScaleDiagramsHolder extends
-ComparisonModule {
+    ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -101,11 +101,11 @@ ComparisonModule {
               RunSetECDFProperty.getInstance(axs, goal),//
               scale,//
               ((scale.getBase() == 2) && (goal <= 0d) && //
-                  Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-                  // ((axs == Accessor.DE) || //
-                  // (axs == Accessor.FE) || //
-                  // (axs == Accessor.NORMALIZED_RUNTIME))
-                  ));
+              Accessor.UNBIASED_TIME_MEASURES.contains(axs)
+              // ((axs == Accessor.DE) || //
+              // (axs == Accessor.FE) || //
+              // (axs == Accessor.NORMALIZED_RUNTIME))
+              ));
         }
       }
     }
@@ -117,6 +117,6 @@ ComparisonModule {
       final ExperimentSet data) throws IOException {
     title.macroInvoke(Macros.ECDF);
     title
-    .write(" over Problem Scale for Different Time Measures and Goals"); //$NON-NLS-1$
+        .write(" over Problem Scale for Different Time Measures and Goals"); //$NON-NLS-1$
   }
 }

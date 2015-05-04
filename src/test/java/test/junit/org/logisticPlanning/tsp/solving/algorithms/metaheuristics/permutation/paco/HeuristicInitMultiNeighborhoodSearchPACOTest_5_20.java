@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.pa
  * the test of the heuristically initialized population-based ACO
  */
 public class HeuristicInitMultiNeighborhoodSearchPACOTest_5_20 extends
-HeuristicInitMultiNeighborhoodSearchPACOTest {
+    HeuristicInitMultiNeighborhoodSearchPACOTest {
 
   /** create */
   public HeuristicInitMultiNeighborhoodSearchPACOTest_5_20() {

@@ -115,7 +115,7 @@ public class RunSetECDFProperty extends Property<RunSet, IDataCollection> {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_axs),//
             HashUtils.hashCode(this.m_goal)),//
-            HashUtils.hashCode(this.getClass()));
+        HashUtils.hashCode(this.getClass()));
   }
 
   /**

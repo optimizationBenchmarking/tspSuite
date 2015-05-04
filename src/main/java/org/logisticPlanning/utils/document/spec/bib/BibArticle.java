@@ -97,15 +97,15 @@ public class BibArticle extends BibRecord {
         //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_journal)),//
+        HashUtils.combineHashes(
+            HashUtils.hashCode(this.m_volume),//
             HashUtils.combineHashes(
-                HashUtils.hashCode(this.m_volume),//
+                //
                 HashUtils.combineHashes(
                     //
-                    HashUtils.combineHashes(
-                        //
-                        HashUtils.hashCode(this.m_number),
-                        HashUtils.hashCode(this.m_startPage)),
-                        HashUtils.hashCode(this.m_endPage))));
+                    HashUtils.hashCode(this.m_number),
+                    HashUtils.hashCode(this.m_startPage)),
+                HashUtils.hashCode(this.m_endPage))));
   }
 
   /**
@@ -165,7 +165,7 @@ public class BibArticle extends BibRecord {
           ComparisonUtils.equals(this.m_volume, x.m_volume) && //
           ComparisonUtils.equals(this.m_number, x.m_number) && //
           ComparisonUtils.equals(this.m_startPage, x.m_startPage) && //
-          ComparisonUtils.equals(this.m_endPage, x.m_endPage));
+      ComparisonUtils.equals(this.m_endPage, x.m_endPage));
     }
 
     return false;

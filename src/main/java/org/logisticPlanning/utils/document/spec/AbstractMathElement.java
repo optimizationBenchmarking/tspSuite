@@ -29,14 +29,14 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   protected void normalTextBegin(final NormalText h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.normalTextBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void normalTextEnd(final NormalText h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.normalTextEnd(h);
   }
 
@@ -70,7 +70,7 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   public MathSubscript mathSubscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.mathSubscript();
   }
 
@@ -98,7 +98,7 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   public MathSuperscript mathSuperscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.mathSuperscript();
   }
 
@@ -112,21 +112,21 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   protected void mathNameBegin(final MathName h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.mathNameBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void mathNameEnd(final MathName h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.mathNameEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public MathName mathName(final EMathName type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.mathName(type);
   }
 
@@ -140,21 +140,21 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
   /** {@inheritDoc} */
   @Override
   protected void mathOpBegin(final MathOp h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.mathOpBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void mathOpEnd(final MathOp h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.mathOpEnd(h);
   }
 
   /** {@inheritDoc} */
   @Override
   public MathOp mathOp(final EMathOp type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.mathOp(type);
   }
 }

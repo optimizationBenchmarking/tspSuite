@@ -17,7 +17,7 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * algorithm over a given time measure for a scale of benchmarks .
  */
 final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder
-extends ComparisonModule {
+    extends ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -53,12 +53,12 @@ extends ComparisonModule {
                 EPropertyType.TEMPORARILY_STORED, //
                 SharedInstancesProperty.oneMustHave2PointsOfAccessor(axs),//
                 scale), //
-                ((scale == 2) && //
-                    Accessor.UNBIASED_TIME_MEASURES.contains(axs)
-                    // ((axs == Accessor.DE) || //
-                    // (axs == Accessor.FE) || //
-                    // (axs == Accessor.NORMALIZED_RUNTIME))
-                    ));
+            ((scale == 2) && //
+            Accessor.UNBIASED_TIME_MEASURES.contains(axs)
+            // ((axs == Accessor.DE) || //
+            // (axs == Accessor.FE) || //
+            // (axs == Accessor.NORMALIZED_RUNTIME))
+            ));
       }
     }
   }

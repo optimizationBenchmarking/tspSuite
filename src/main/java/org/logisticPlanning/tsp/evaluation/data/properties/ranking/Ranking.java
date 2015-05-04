@@ -79,7 +79,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
     }
     throw new IllegalArgumentException(//
         "There is no rank for object '" + String.valueOf(key) //$NON-NLS-1$
-        + '\'');
+            + '\'');
   }
 
   /**

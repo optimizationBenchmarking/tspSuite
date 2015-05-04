@@ -93,7 +93,7 @@ import org.logisticPlanning.utils.math.statistics.aggregates.StableSum;
  * </ol>
  */
 public final class ERTSeries extends ArraySetView<ERTPoint> implements
-IDataCollection {
+    IDataCollection {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -190,12 +190,12 @@ IDataCollection {
 
     opt = rs.getInstance().optimum();
     thresholdsF = ((thresholds != null) ? thresholds : //
-      Benchmark.getLogObjectiveValues(opt));
+        Benchmark.getLogObjectiveValues(opt));
 
     temp = new ERTPoint[thresholdsF.length - 3];
 
     ti = ((axs.canAccessAsLong()) ? //
-        ERTSeries.__makeERTSeriesL(rs, opt, thresholdsF, axs, temp)//
+    ERTSeries.__makeERTSeriesL(rs, opt, thresholdsF, axs, temp)//
         : ERTSeries.__makeERTSeriesD(rs, opt, thresholdsF, axs, temp));
 
     if (ti == temp.length) {

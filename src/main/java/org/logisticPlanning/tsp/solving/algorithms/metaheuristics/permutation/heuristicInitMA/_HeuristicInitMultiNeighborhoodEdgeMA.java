@@ -640,7 +640,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
  * </ol>
  */
 class _HeuristicInitMultiNeighborhoodEdgeMA extends
-_HeuristicInitMultiNeighborhoodMA {
+    _HeuristicInitMultiNeighborhoodMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

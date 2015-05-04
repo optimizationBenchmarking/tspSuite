@@ -102,72 +102,72 @@ final class _DG1997ACOCTSP extends LiteratureResultPointSet {
         // Accessor.F, 2810d,
         // EStatisticParameter.ARITHMETIC_MEAN),//
         //
-        new LiteratureResultPoint(Instance.RY48P,//
-            Accessor.RUNTIME, 2e3d,//
-            Accessor.F, 14422d, EStatisticParameter.MINIMUM),//
+            new LiteratureResultPoint(Instance.RY48P,//
+                Accessor.RUNTIME, 2e3d,//
+                Accessor.F, 14422d, EStatisticParameter.MINIMUM),//
             // //
             new LiteratureResultPoint(Instance.RY48P,//
                 Accessor.RUNTIME, 19e3d,//
                 Accessor.F, 14422d, EStatisticParameter.ARITHMETIC_MEAN),//
-                //
-                new LiteratureResultPoint(Instance.FT70,//
-                    Accessor.RUNTIME, 3e3d,//
-                    Accessor.F, 38673d, EStatisticParameter.MINIMUM),//
-                    // //
-                    new LiteratureResultPoint(Instance.FT70,//
-                        Accessor.RUNTIME, 6e3d,//
-                        Accessor.F, 38679.8d, EStatisticParameter.ARITHMETIC_MEAN),//
-                        //
-                        new LiteratureResultPoint(Instance.KRO124P,//
-                            Accessor.RUNTIME, 3e3d,//
-                            Accessor.F, 36230, EStatisticParameter.MINIMUM),//
-                            // //
-                            new LiteratureResultPoint(Instance.KRO124P,//
-                                Accessor.RUNTIME, 25e3d,//
-                                Accessor.F, 36230d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                //
-                                new LiteratureResultPoint(Instance.FTV170,//
-                                    Accessor.RUNTIME, 17e3d,//
-                                    Accessor.F, 2755d, EStatisticParameter.MINIMUM),//
-                                    // //
-                                    new LiteratureResultPoint(Instance.FTV170,//
-                                        Accessor.RUNTIME, 68e3d,//
-                                        Accessor.F, 2755d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                        //
-                                        //
-                                        new LiteratureResultPoint(Instance.D198,//
-                                            Accessor.RUNTIME, 16e3d,//
-                                            Accessor.F, 15780d, EStatisticParameter.MINIMUM),//
-                                            // //
-                                            new LiteratureResultPoint(Instance.D198,//
-                                                Accessor.RUNTIME, 238e3d,//
-                                                Accessor.F, 15781.7d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                //
-                                                new LiteratureResultPoint(Instance.LIN318,//
-                                                    Accessor.RUNTIME, 101e3d,//
-                                                    Accessor.F, 42029d, EStatisticParameter.MINIMUM),//
-                                                    // //
-                                                    new LiteratureResultPoint(Instance.LIN318,//
-                                                        Accessor.RUNTIME, 537e3d,//
-                                                        Accessor.F, 42029d, EStatisticParameter.ARITHMETIC_MEAN),// //
-                                                        //
-                                                        new LiteratureResultPoint(Instance.ATT532,//
-                                                            Accessor.RUNTIME, 133e3d,//
-                                                            Accessor.F, 27693d, EStatisticParameter.MINIMUM),//
-                                                            // //
-                                                            new LiteratureResultPoint(Instance.ATT532,//
-                                                                Accessor.RUNTIME, 810e3d,//
-                                                                Accessor.F, 27718.2d, EStatisticParameter.ARITHMETIC_MEAN),// //
-                                                                //
-                                                                new LiteratureResultPoint(Instance.RAT783,//
-                                                                    Accessor.RUNTIME, 1317e3d,//
-                                                                    Accessor.F, 8818d, EStatisticParameter.MINIMUM),//
-                                                                    // //
-                                                                    new LiteratureResultPoint(Instance.RAT783,//
-                                                                        Accessor.RUNTIME, 1280e3d,//
-                                                                        Accessor.F, 8837.9d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.FT70,//
+                Accessor.RUNTIME, 3e3d,//
+                Accessor.F, 38673d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.FT70,//
+                Accessor.RUNTIME, 6e3d,//
+                Accessor.F, 38679.8d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KRO124P,//
+                Accessor.RUNTIME, 3e3d,//
+                Accessor.F, 36230, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.KRO124P,//
+                Accessor.RUNTIME, 25e3d,//
+                Accessor.F, 36230d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.FTV170,//
+                Accessor.RUNTIME, 17e3d,//
+                Accessor.F, 2755d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.FTV170,//
+                Accessor.RUNTIME, 68e3d,//
+                Accessor.F, 2755d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            //
+            new LiteratureResultPoint(Instance.D198,//
+                Accessor.RUNTIME, 16e3d,//
+                Accessor.F, 15780d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.D198,//
+                Accessor.RUNTIME, 238e3d,//
+                Accessor.F, 15781.7d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.LIN318,//
+                Accessor.RUNTIME, 101e3d,//
+                Accessor.F, 42029d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.LIN318,//
+                Accessor.RUNTIME, 537e3d,//
+                Accessor.F, 42029d, EStatisticParameter.ARITHMETIC_MEAN),// //
+            //
+            new LiteratureResultPoint(Instance.ATT532,//
+                Accessor.RUNTIME, 133e3d,//
+                Accessor.F, 27693d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.ATT532,//
+                Accessor.RUNTIME, 810e3d,//
+                Accessor.F, 27718.2d, EStatisticParameter.ARITHMETIC_MEAN),// //
+            //
+            new LiteratureResultPoint(Instance.RAT783,//
+                Accessor.RUNTIME, 1317e3d,//
+                Accessor.F, 8818d, EStatisticParameter.MINIMUM),//
+            // //
+            new LiteratureResultPoint(Instance.RAT783,//
+                Accessor.RUNTIME, 1280e3d,//
+                Accessor.F, 8837.9d, EStatisticParameter.ARITHMETIC_MEAN),//
 
-    });
+        });
   }
 
   /**
@@ -182,17 +182,17 @@ final class _DG1997ACOCTSP extends LiteratureResultPointSet {
           new BibAuthors(//
               new BibAuthor("Marco", "Dorigo"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Luca Maria", "Gambardella")//$NON-NLS-1$//$NON-NLS-2$
-              ),//
-              "Ant Colony System: A Cooperative Learning Approach to the Traveling Salesman Problem",//$NON-NLS-1$
-              new BibDate(1997, EBibMonth.APRIL),//
-              "IEEE Transactions on Evolutionary Computation",//$NON-NLS-1$
-              "1",//$NON-NLS-1$
-              "1",//$NON-NLS-1$
-              "53",//$NON-NLS-1$
-              "66",//$NON-NLS-1$
-              new URI("http://www.idsia.ch/~luca/acs-ec97.pdf"),//$NON-NLS-1$
-              "10.1109/4235.585892"//$NON-NLS-1$
-          );
+          ),//
+          "Ant Colony System: A Cooperative Learning Approach to the Traveling Salesman Problem",//$NON-NLS-1$
+          new BibDate(1997, EBibMonth.APRIL),//
+          "IEEE Transactions on Evolutionary Computation",//$NON-NLS-1$
+          "1",//$NON-NLS-1$
+          "1",//$NON-NLS-1$
+          "53",//$NON-NLS-1$
+          "66",//$NON-NLS-1$
+          new URI("http://www.idsia.ch/~luca/acs-ec97.pdf"),//$NON-NLS-1$
+          "10.1109/4235.585892"//$NON-NLS-1$
+      );
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
     }

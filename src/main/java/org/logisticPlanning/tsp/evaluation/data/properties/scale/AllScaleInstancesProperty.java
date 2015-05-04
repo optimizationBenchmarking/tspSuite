@@ -20,46 +20,46 @@ import org.logisticPlanning.utils.document.spec.Document;
  *          the data set type
  */
 public final class AllScaleInstancesProperty<T extends DataSet<?>> extends
-Property<T, AllScaleInstances> {
+    Property<T, AllScaleInstances> {
 
   /**
    * the scale set with powers of 10 for the instances of a given
    * experiment
    */
   public static final AllScaleInstancesProperty<Experiment> EXPERIMENT_POWERS_OF_10 = //
-      new AllScaleInstancesProperty<>(//
-          EPropertyType.TEMPORARILY_STORED, //
-          ExperimentInstancesProperty.NON_PREMATURE,//
-          10);
+  new AllScaleInstancesProperty<>(//
+      EPropertyType.TEMPORARILY_STORED, //
+      ExperimentInstancesProperty.NON_PREMATURE,//
+      10);
 
   /**
    * the scale set with powers of 2 for the instances of a given experiment
    */
   public static final AllScaleInstancesProperty<Experiment> EXPERIMENT_POWERS_OF_2 = //
-      new AllScaleInstancesProperty<>(//
-          EPropertyType.TEMPORARILY_STORED, //
-          ExperimentInstancesProperty.NON_PREMATURE,//
-          2);
+  new AllScaleInstancesProperty<>(//
+      EPropertyType.TEMPORARILY_STORED, //
+      ExperimentInstancesProperty.NON_PREMATURE,//
+      2);
 
   /**
    * the scale set with powers of 10 for the instances of a given
    * experiment set
    */
   public static final AllScaleInstancesProperty<ExperimentSet> SHARED_POWERS_OF_10 = //
-      new AllScaleInstancesProperty<>(//
-          EPropertyType.TEMPORARILY_STORED, //
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          10);
+  new AllScaleInstancesProperty<>(//
+      EPropertyType.TEMPORARILY_STORED, //
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      10);
 
   /**
    * the scale set with powers of 2 for the instances of a given experiment
    * set
    */
   public static final AllScaleInstancesProperty<ExperimentSet> SHARED_POWERS_OF_2 = //
-      new AllScaleInstancesProperty<>(//
-          EPropertyType.TEMPORARILY_STORED, //
-          SharedInstancesProperty.NON_EMPTY_SHARED,//
-          2);
+  new AllScaleInstancesProperty<>(//
+      EPropertyType.TEMPORARILY_STORED, //
+      SharedInstancesProperty.NON_EMPTY_SHARED,//
+      2);
 
   /** the source instances property */
   private final Property<? super T, ArraySetView<Instance>> m_source;
@@ -78,7 +78,7 @@ Property<T, AllScaleInstances> {
    */
   public AllScaleInstancesProperty(final EPropertyType type,
       final Property<? super T, ArraySetView<Instance>> source,
-          final int base) {
+      final int base) {
     super(type);
 
     if ((base <= 1) || (base > 10000)) {
@@ -137,8 +137,8 @@ Property<T, AllScaleInstances> {
       sze = same.size();
       if (sze > 0) {
         all.add(//
-            new SameScaleInstances(lowerLimit, upperLimit, currentLow,
-                currentHigh, same.toArray(new Instance[sze]), scale));
+        new SameScaleInstances(lowerLimit, upperLimit, currentLow,
+            currentHigh, same.toArray(new Instance[sze]), scale));
         same.clear();
 
         if (lowerLimit < lowestLimit) {

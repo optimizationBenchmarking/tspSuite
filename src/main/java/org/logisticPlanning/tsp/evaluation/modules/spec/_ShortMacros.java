@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.document.spec.MacroDefinition;
  * descriptors for the short-name macros.
  */
 final class _ShortMacros extends
-Property<ExperimentSet, HashMap<String, MacroDefinition>> {
+    Property<ExperimentSet, HashMap<String, MacroDefinition>> {
 
   /** create */
   _ShortMacros() {

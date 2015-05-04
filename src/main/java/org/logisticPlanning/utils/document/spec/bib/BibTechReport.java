@@ -75,12 +75,12 @@ public class BibTechReport extends BibRecord {
         //
         HashUtils.combineHashes(super._hashCode(),//
             HashUtils.hashCode(this.m_institute)),//
+        HashUtils.combineHashes(
+            HashUtils.hashCode(this.m_instituteAddress),//
             HashUtils.combineHashes(
-                HashUtils.hashCode(this.m_instituteAddress),//
-                HashUtils.combineHashes(
-                    //
-                    HashUtils.hashCode(this.m_series),
-                    HashUtils.hashCode(this.m_number))));
+                //
+                HashUtils.hashCode(this.m_series),
+                HashUtils.hashCode(this.m_number))));
   }
 
   /**
@@ -130,8 +130,8 @@ public class BibTechReport extends BibRecord {
       return (ComparisonUtils.equals(this.m_institute, x.m_institute) && //
           ComparisonUtils.equals(this.m_instituteAddress,
               x.m_instituteAddress) && //
-              ComparisonUtils.equals(this.m_series, x.m_series) && //
-              ComparisonUtils.equals(this.m_number, x.m_number));
+          ComparisonUtils.equals(this.m_series, x.m_series) && //
+      ComparisonUtils.equals(this.m_number, x.m_number));
     }
 
     return false;

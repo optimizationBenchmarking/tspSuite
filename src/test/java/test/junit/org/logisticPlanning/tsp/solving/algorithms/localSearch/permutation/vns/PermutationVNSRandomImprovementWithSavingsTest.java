@@ -11,7 +11,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.P
  * Savings heuristic}
  */
 public class PermutationVNSRandomImprovementWithSavingsTest extends
-PermutationVNSBestImprovementWithSavingsTest {
+    PermutationVNSBestImprovementWithSavingsTest {
 
   /** create */
   public PermutationVNSRandomImprovementWithSavingsTest() {

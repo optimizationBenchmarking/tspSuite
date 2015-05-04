@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.heuristics.nearestNeighbor.Ne
  * neighbor heuristic
  */
 public class MultiNeighborhoodSearchTestWithNearestNeighbor extends
-MultiNeighborhoodSearchTest {
+    MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTestWithNearestNeighbor() {

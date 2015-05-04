@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.multi
  * the test of the multi neighborhood search with queue length 3
  */
 public class MultiNeighborhoodSearchTest_QueueLength_3 extends
-MultiNeighborhoodSearchTest {
+    MultiNeighborhoodSearchTest {
 
   /** create */
   public MultiNeighborhoodSearchTest_QueueLength_3() {

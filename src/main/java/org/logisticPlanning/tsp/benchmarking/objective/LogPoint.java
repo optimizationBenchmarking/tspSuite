@@ -413,7 +413,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
         (p.m_fe == this.m_fe) && //
         (p.m_time == this.m_time) && //
         (p.m_f == this.m_f) && //
-        (p.m_type == this.m_type));
+    (p.m_type == this.m_type));
   }
 
   /**
@@ -432,7 +432,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
     return ((this.m_de == p.get(LogPoint.DE_INDEX)) && //
         (this.m_fe == p.get(LogPoint.FE_INDEX)) && //
         (this.m_time == p.get(LogPoint.TIME_INDEX)) && //
-        (this.m_f == p.get(LogPoint.F_INDEX)));
+    (this.m_f == p.get(LogPoint.F_INDEX)));
   }
 
   /** {@inheritDoc} */

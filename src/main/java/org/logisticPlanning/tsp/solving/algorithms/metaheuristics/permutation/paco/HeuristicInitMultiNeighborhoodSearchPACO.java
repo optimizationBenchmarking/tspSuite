@@ -619,7 +619,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.mutation.Permutati
  * </ol>
  */
 public class HeuristicInitMultiNeighborhoodSearchPACO extends
-_HeuristicInitLocalSearchPACO {
+    _HeuristicInitLocalSearchPACO {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

@@ -8,7 +8,7 @@ import test.junit.org.logisticPlanning.tsp.solving.operators.permutation.Permuta
  * test the permutation alternating position recombination operator
  */
 public class PermutationAlternatingPositionCrossoverTest extends
-PermutationOperatorTest {
+    PermutationOperatorTest {
 
   /** instantiate */
   public PermutationAlternatingPositionCrossoverTest() {

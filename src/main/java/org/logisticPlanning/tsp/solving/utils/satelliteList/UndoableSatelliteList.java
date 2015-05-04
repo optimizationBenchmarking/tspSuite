@@ -464,7 +464,7 @@ package org.logisticPlanning.tsp.solving.utils.satelliteList;
  * @since TSP Suite/0.9.8
  */
 public class UndoableSatelliteList<NT extends UndoableSatelliteNode>
-extends SatelliteList<NT> {
+    extends SatelliteList<NT> {
 
   /**
    * Create a mutable satellite list of {@code n} nodes.

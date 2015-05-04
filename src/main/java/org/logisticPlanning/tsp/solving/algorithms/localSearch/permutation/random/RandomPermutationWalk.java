@@ -125,7 +125,7 @@ public final class RandomPermutationWalk extends TSPAlgorithm {
     super.printConfiguration(ps);
 
     Configurable
-    .printKey(RandomPermutationWalk.PARAM_UPDATE_OPERATION, ps);
+        .printKey(RandomPermutationWalk.PARAM_UPDATE_OPERATION, ps);
     ps.println(this.m_update);
   }
 
@@ -136,7 +136,7 @@ public final class RandomPermutationWalk extends TSPAlgorithm {
     super.printParameters(ps);
 
     Configurable
-    .printKey(RandomPermutationWalk.PARAM_UPDATE_OPERATION, ps);
+        .printKey(RandomPermutationWalk.PARAM_UPDATE_OPERATION, ps);
     ps.println("the update operation to use in the walk."); //$NON-NLS-1$
   }
 

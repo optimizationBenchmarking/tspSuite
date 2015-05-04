@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.utils.edge.UndirectedPriorityEdgeNeighbo
  * This is an internal class that manages the neighbor lists for each node.
  */
 public final class SavingsEdgeNeighborhoodList extends
-UndirectedPriorityEdgeNeighborList<SavingsEdge> {
+    UndirectedPriorityEdgeNeighborList<SavingsEdge> {
 
   /**
    * create

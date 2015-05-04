@@ -176,7 +176,7 @@ public abstract class MultivariateTest extends NamedObject {
     }
     if (this.isTwoTailed()) {
       return ((n == 2) ? new BivariateTwoTailedTestResult()
-      : new MultivariateTwoTailedTestResult(n));
+          : new MultivariateTwoTailedTestResult(n));
     }
     throw new UnsupportedOperationException();
   }

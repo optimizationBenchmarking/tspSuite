@@ -81,31 +81,31 @@ final class _GM1998IOOFTT extends LiteratureResultPointSet {
           new BibAuthors(//
               new BibAuthor("Guo", "Tao"),//$NON-NLS-1$//$NON-NLS-2$
               new BibAuthor("Zbigniew", "Michalewicz")//$NON-NLS-1$//$NON-NLS-2$
+          ),//
+          "Inver-over Operator for the TSP",//$NON-NLS-1$
+          new BibProceedings(//
+              "PPSN V: Proceedings of the 5th International Conference on Parallel Problem Solving from Nature",//$NON-NLS-1$
+              new BibDate(1998, EBibMonth.AUGUST, 27),//
+              new BibDate(1998, EBibMonth.AUGUST, 30), //
+              new BibAuthors(//
+                  new BibAuthor("\u00c1goston E.", "Eiben"),//$NON-NLS-1$//$NON-NLS-2$
+                  new BibAuthor("Thomas", "B\u00e4ck"),//$NON-NLS-1$//$NON-NLS-2$
+                  new BibAuthor("Marc", "Schoenauer"),//$NON-NLS-1$//$NON-NLS-2$
+                  new BibAuthor("Hans-Paul", "Schwefel")//$NON-NLS-1$//$NON-NLS-2$
               ),//
-              "Inver-over Operator for the TSP",//$NON-NLS-1$
-              new BibProceedings(//
-                  "PPSN V: Proceedings of the 5th International Conference on Parallel Problem Solving from Nature",//$NON-NLS-1$
-                  new BibDate(1998, EBibMonth.AUGUST, 27),//
-                  new BibDate(1998, EBibMonth.AUGUST, 30), //
-                  new BibAuthors(//
-                      new BibAuthor("\u00c1goston E.", "Eiben"),//$NON-NLS-1$//$NON-NLS-2$
-                      new BibAuthor("Thomas", "B\u00e4ck"),//$NON-NLS-1$//$NON-NLS-2$
-                      new BibAuthor("Marc", "Schoenauer"),//$NON-NLS-1$//$NON-NLS-2$
-                      new BibAuthor("Hans-Paul", "Schwefel")//$NON-NLS-1$//$NON-NLS-2$
-                      ),//
-                      "Amsterdam, The Netherlands",//$NON-NLS-1$
-                      "Springer-Verlag GmbH",//$NON-NLS-1$
-                      "Berlin, Germany",//$NON-NLS-1$
-                      "Lecture Notes in Computer Science (LNCS)",//$NON-NLS-1$
-                      "1498/1998",//$NON-NLS-1$
-                      null,//
-                      "10.1007/BFb0056843"//$NON-NLS-1$
-                  ),//
-                  "803", "812",//$NON-NLS-1$//$NON-NLS-2$
-                  null,//
-                  new URI("http://cs.adelaide.edu.au/~zbyszek/Papers/p44.pdf"),//$NON-NLS-1$
-                  "10.1007/BFb0056922"//$NON-NLS-1$
-          );
+              "Amsterdam, The Netherlands",//$NON-NLS-1$
+              "Springer-Verlag GmbH",//$NON-NLS-1$
+              "Berlin, Germany",//$NON-NLS-1$
+              "Lecture Notes in Computer Science (LNCS)",//$NON-NLS-1$
+              "1498/1998",//$NON-NLS-1$
+              null,//
+              "10.1007/BFb0056843"//$NON-NLS-1$
+          ),//
+          "803", "812",//$NON-NLS-1$//$NON-NLS-2$
+          null,//
+          new URI("http://cs.adelaide.edu.au/~zbyszek/Papers/p44.pdf"),//$NON-NLS-1$
+          "10.1007/BFb0056922"//$NON-NLS-1$
+      );
 
     } catch (final URISyntaxException use) {
       throw new RuntimeException(use);
@@ -119,87 +119,87 @@ final class _GM1998IOOFTT extends LiteratureResultPointSet {
         new BibRecord[] { _GM1998IOOFTT.__rec() },//
         new LiteratureResultPoint[] {//
 
-        //
-        new LiteratureResultPoint(Instance.EIL51,//
-            Accessor.FE, (399 * 100),//
-            Accessor.F, 426d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.EIL51,//
+                Accessor.FE, (399 * 100),//
+                Accessor.F, 426d, EStatisticParameter.ARITHMETIC_MEAN),//
             //
             new LiteratureResultPoint(Instance.EIL51,//
                 Accessor.RUNTIME, 1.09e3d,//
                 Accessor.F, 426d, EStatisticParameter.ARITHMETIC_MEAN),//
-                //
-                new LiteratureResultPoint(Instance.EIL76,//
-                    Accessor.FE, (651 * 100),//
-                    Accessor.F, 538d, EStatisticParameter.ARITHMETIC_MEAN),//
-                    //
-                    new LiteratureResultPoint(Instance.EIL76,//
-                        Accessor.RUNTIME, 2.11e3d,//
-                        Accessor.F, 538d, EStatisticParameter.ARITHMETIC_MEAN),//
-                        //
-                        new LiteratureResultPoint(Instance.EIL101,//
-                            Accessor.FE, (2447 * 100),//
-                            Accessor.F, 629.2d, EStatisticParameter.ARITHMETIC_MEAN),//
-                            //
-                            new LiteratureResultPoint(Instance.EIL101,//
-                                Accessor.RUNTIME, 7.52e3d,//
-                                Accessor.F, 629.2d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                //
-                                new LiteratureResultPoint(Instance.ST70,//
-                                    Accessor.FE, (643 * 100),//
-                                    Accessor.F, 675d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                    //
-                                    new LiteratureResultPoint(Instance.ST70,//
-                                        Accessor.RUNTIME, 1.98e3d,//
-                                        Accessor.F, 675d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                        //
-                                        new LiteratureResultPoint(Instance.KROA100,//
-                                            Accessor.FE, (785 * 100),//
-                                            Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                            //
-                                            new LiteratureResultPoint(Instance.KROA100,//
-                                                Accessor.RUNTIME, 2.94e3d,//
-                                                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                //
-                                                new LiteratureResultPoint(Instance.KROC100,//
-                                                    Accessor.FE, (874 * 100),//
-                                                    Accessor.F, 20749d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                    //
-                                                    new LiteratureResultPoint(Instance.KROC100,//
-                                                        Accessor.RUNTIME, 3.23e3d,//
-                                                        Accessor.F, 20749d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                        //
-                                                        new LiteratureResultPoint(Instance.KROD100,//
-                                                            Accessor.FE, (1221 * 100),//
-                                                            Accessor.F, 21294d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                            //
-                                                            new LiteratureResultPoint(Instance.KROD100,//
-                                                                Accessor.RUNTIME, 4.13e3d,//
-                                                                Accessor.F, 21294d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                //
-                                                                new LiteratureResultPoint(Instance.LIN105,//
-                                                                    Accessor.FE, (876 * 100),//
-                                                                    Accessor.F, 14379d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                    //
-                                                                    new LiteratureResultPoint(Instance.LIN105,//
-                                                                        Accessor.RUNTIME, 3.34e3d,//
-                                                                        Accessor.F, 14379d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                        //
-                                                                        new LiteratureResultPoint(Instance.PCB442,//
-                                                                            Accessor.FE, (23265 * 100),//
-                                                                            Accessor.F, 51097.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                            //
-                                                                            new LiteratureResultPoint(Instance.PCB442,//
-                                                                                Accessor.RUNTIME, 172.21e3d,//
-                                                                                Accessor.F, 51097.5d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                                //
-                                                                                new LiteratureResultPoint(Instance.PR2392,//
-                                                                                    Accessor.FE, (126846 * 100),//
-                                                                                    Accessor.F, 388095d, EStatisticParameter.ARITHMETIC_MEAN),//
-                                                                                    //
-                                                                                    new LiteratureResultPoint(Instance.PR2392,//
-                                                                                        Accessor.RUNTIME, 5366.23e3d,//
-                                                                                        Accessor.F, 388095d, EStatisticParameter.ARITHMETIC_MEAN),//
-    });
+            //
+            new LiteratureResultPoint(Instance.EIL76,//
+                Accessor.FE, (651 * 100),//
+                Accessor.F, 538d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.EIL76,//
+                Accessor.RUNTIME, 2.11e3d,//
+                Accessor.F, 538d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.EIL101,//
+                Accessor.FE, (2447 * 100),//
+                Accessor.F, 629.2d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.EIL101,//
+                Accessor.RUNTIME, 7.52e3d,//
+                Accessor.F, 629.2d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.ST70,//
+                Accessor.FE, (643 * 100),//
+                Accessor.F, 675d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.ST70,//
+                Accessor.RUNTIME, 1.98e3d,//
+                Accessor.F, 675d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROA100,//
+                Accessor.FE, (785 * 100),//
+                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROA100,//
+                Accessor.RUNTIME, 2.94e3d,//
+                Accessor.F, 21282d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROC100,//
+                Accessor.FE, (874 * 100),//
+                Accessor.F, 20749d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROC100,//
+                Accessor.RUNTIME, 3.23e3d,//
+                Accessor.F, 20749d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROD100,//
+                Accessor.FE, (1221 * 100),//
+                Accessor.F, 21294d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.KROD100,//
+                Accessor.RUNTIME, 4.13e3d,//
+                Accessor.F, 21294d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.LIN105,//
+                Accessor.FE, (876 * 100),//
+                Accessor.F, 14379d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.LIN105,//
+                Accessor.RUNTIME, 3.34e3d,//
+                Accessor.F, 14379d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.PCB442,//
+                Accessor.FE, (23265 * 100),//
+                Accessor.F, 51097.5d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.PCB442,//
+                Accessor.RUNTIME, 172.21e3d,//
+                Accessor.F, 51097.5d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.PR2392,//
+                Accessor.FE, (126846 * 100),//
+                Accessor.F, 388095d, EStatisticParameter.ARITHMETIC_MEAN),//
+            //
+            new LiteratureResultPoint(Instance.PR2392,//
+                Accessor.RUNTIME, 5366.23e3d,//
+                Accessor.F, 388095d, EStatisticParameter.ARITHMETIC_MEAN),//
+        });
   }
 
   /** {@inheritDoc} */

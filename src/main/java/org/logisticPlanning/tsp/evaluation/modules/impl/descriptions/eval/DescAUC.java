@@ -89,14 +89,14 @@ public final class DescAUC extends DescriptionModule {
   private static final BibArticle F2006AITRA = new BibArticle(//
       new BibAuthors(//
           new BibAuthor("Tom", "Fawcett")), //$NON-NLS-1$//$NON-NLS-2$
-          "An Introduction to ROC Analysis",//$NON-NLS-1$
-          new BibDate(2006, EBibMonth.JUNE),//
-          "Pattern Recognition Letters",//$NON-NLS-1$
-          "27", "8", //$NON-NLS-1$//$NON-NLS-2$
-          "861", "874", //$NON-NLS-1$//$NON-NLS-2$
-          null,//
-          "10.1016/j.patrec.2005.10.010"//$NON-NLS-1$
-      );
+      "An Introduction to ROC Analysis",//$NON-NLS-1$
+      new BibDate(2006, EBibMonth.JUNE),//
+      "Pattern Recognition Letters",//$NON-NLS-1$
+      "27", "8", //$NON-NLS-1$//$NON-NLS-2$
+      "861", "874", //$NON-NLS-1$//$NON-NLS-2$
+      null,//
+      "10.1016/j.patrec.2005.10.010"//$NON-NLS-1$
+  );
   /**
    * the technical report&nbsp;[<a href="#cite_B1997TUOTAUTRCITEOMLA"
    * style="font-weight:bold">2</a>]
@@ -105,14 +105,14 @@ public final class DescAUC extends DescriptionModule {
       //
       new BibAuthors(//
           new BibAuthor("Andrew P.", "Bradley")), //$NON-NLS-1$//$NON-NLS-2$
-          "The Use of the Area Under the ROC Curve in the Evaluation of Machine Learning Algorithms",//$NON-NLS-1$
-          new BibDate(1997, EBibMonth.JULY),//
-          "Pattern Recognition",//$NON-NLS-1$
-          "30", "7", //$NON-NLS-1$//$NON-NLS-2$
-          "1145", "1159", //$NON-NLS-1$//$NON-NLS-2$
-          null,//
-          "10.1016/S0031-3203(96)00142-2"//$NON-NLS-1$
-      );
+      "The Use of the Area Under the ROC Curve in the Evaluation of Machine Learning Algorithms",//$NON-NLS-1$
+      new BibDate(1997, EBibMonth.JULY),//
+      "Pattern Recognition",//$NON-NLS-1$
+      "30", "7", //$NON-NLS-1$//$NON-NLS-2$
+      "1145", "1159", //$NON-NLS-1$//$NON-NLS-2$
+      null,//
+      "10.1016/S0031-3203(96)00142-2"//$NON-NLS-1$
+  );
 
   /** the ranking description */
   private final DescRanking m_rank;
@@ -162,13 +162,13 @@ public final class DescAUC extends DescriptionModule {
     LineChart2D lc;
 
     body.write(//
-        "Many of the performance measures used in this work are actually of graphical nature, i.e., commonly represented as charts or line diagrams to be evaluated by a human researcher. The researcher will, for instance, analyze whether one curve in a diagram representing algorithm "); //$NON-NLS-1$
+    "Many of the performance measures used in this work are actually of graphical nature, i.e., commonly represented as charts or line diagrams to be evaluated by a human researcher. The researcher will, for instance, analyze whether one curve in a diagram representing algorithm "); //$NON-NLS-1$
     DescAUC.__meth(body, 'A');
     body.write(//
-        " tends to be lower than the curve corresponding to an algorithm "); //$NON-NLS-1$
+    " tends to be lower than the curve corresponding to an algorithm "); //$NON-NLS-1$
     DescAUC.__meth(body, 'B');
     body.write(//
-        ". If that is the case and smaller values indicate better performance"); //$NON-NLS-1$
+    ". If that is the case and smaller values indicate better performance"); //$NON-NLS-1$
 
     root = this.getRoot();
     ert = root.findInstance(DescERT.class);
@@ -183,10 +183,10 @@ public final class DescAUC extends DescriptionModule {
 
     if (ert != null) {
       body.write(//
-          " (as it is true in case of, e.g., the "); //$NON-NLS-1$
+      " (as it is true in case of, e.g., the "); //$NON-NLS-1$
       body.macroInvoke(Macros.ERT);
       body.write(//
-          " discussed in "); //$NON-NLS-1$
+      " discussed in "); //$NON-NLS-1$
       body.reference(ert.getLabel(data));
       body.writeChar(')');
     }
@@ -196,18 +196,18 @@ public final class DescAUC extends DescriptionModule {
     DescAUC.__meth(body, 'B');
 
     body.write(//
-        ". If larger values of the performance metric are better"); //$NON-NLS-1$
+    ". If larger values of the performance metric are better"); //$NON-NLS-1$
     if (ecdf != null) {
       body.write(//
-          ", which is the case for the "); //$NON-NLS-1$
+      ", which is the case for the "); //$NON-NLS-1$
       body.macroInvoke(Macros.ECDF);
       body.write(//
-          " discussed in "); //$NON-NLS-1$
+      " discussed in "); //$NON-NLS-1$
       body.reference(ecdf.getLabel(data));
       body.write(", for instance"); //$NON-NLS-1$
     }
     body.write(//
-        ", then it would be the other way around. An automated evaluation system can support the researcher in discovering such trends automatically. One way to test which curve tends to higher and which tends to be lower is well-known in the field of Machine Learning: The Area Under the Curve ("); //$NON-NLS-1$
+    ", then it would be the other way around. An automated evaluation system can support the researcher in discovering such trends automatically. One way to test which curve tends to higher and which tends to be lower is well-known in the field of Machine Learning: The Area Under the Curve ("); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(") "); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescAUC.F2006AITRA,
@@ -271,88 +271,88 @@ public final class DescAUC extends DescriptionModule {
     body.write("Different from the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " used in Machine Learning, the areas under the performance curve do not represent a classifier's utility. We use them only to determine if one graph tends to be larger than another one. Furthermore, different from Machine Learning, we have to deal with two major problems when determining the areas:"); //$NON-NLS-1$
+    " used in Machine Learning, the areas under the performance curve do not represent a classifier's utility. We use them only to determine if one graph tends to be larger than another one. Furthermore, different from Machine Learning, we have to deal with two major problems when determining the areas:"); //$NON-NLS-1$
 
     try (Enumeration en = body.enumeration()) {
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "Sometimes, a curve may go to infinity."); //$NON-NLS-1$
+        "Sometimes, a curve may go to infinity."); //$NON-NLS-1$
         if (ert != null) {
           ei.write(//
-              " The "); //$NON-NLS-1$
+          " The "); //$NON-NLS-1$
           ei.macroInvoke(Macros.ERT);
           ei.write(//
-              " for a solution quality threshold, which was never reached by any run in a given benchmark scenario, is infinite, for example."); //$NON-NLS-1$
+          " for a solution quality threshold, which was never reached by any run in a given benchmark scenario, is infinite, for example."); //$NON-NLS-1$
         }
       }
 
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "Some curves may cover a longer range on the x-axis than others, making the comparison unfair. If one run took significantly longer than another one, it will cover a longer range on a time axis, for instance."); //$NON-NLS-1$
+        "Some curves may cover a longer range on the x-axis than others, making the comparison unfair. If one run took significantly longer than another one, it will cover a longer range on a time axis, for instance."); //$NON-NLS-1$
       }
     }
 
     body.write(//
-        "Luckily, we are not interested in the precise areas, but merely in which areas tend to be bigger. Thus, we can solve the first issue by dividing the curve into different segments:"); //$NON-NLS-1$
+    "Luckily, we are not interested in the precise areas, but merely in which areas tend to be bigger. Thus, we can solve the first issue by dividing the curve into different segments:"); //$NON-NLS-1$
 
     try (Enumeration en = body.enumeration()) {
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "A segment where the performance measure (y-values) are finite and thus the areas under the curve are finite too. Such areas can be compared directly and in an ideal comparison situation, this segment encompasses the whole curve.");//$NON-NLS-1$
+        "A segment where the performance measure (y-values) are finite and thus the areas under the curve are finite too. Such areas can be compared directly and in an ideal comparison situation, this segment encompasses the whole curve.");//$NON-NLS-1$
       }
 
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "An segment where the y-coordinates go to ");//$NON-NLS-1$
+        "An segment where the y-coordinates go to ");//$NON-NLS-1$
         ei.writeDouble(Double.POSITIVE_INFINITY);
         ei.write(//
-            ". Here, instead of computing the area under the curve (which would be infinite), we only compute the range of the x-axis under the infinite area.");//$NON-NLS-1$
+        ". Here, instead of computing the area under the curve (which would be infinite), we only compute the range of the x-axis under the infinite area.");//$NON-NLS-1$
       }
 
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "An segment  where the y-coordinates go to ");//$NON-NLS-1$
+        "An segment  where the y-coordinates go to ");//$NON-NLS-1$
         ei.writeDouble(Double.NEGATIVE_INFINITY);
         ei.write(//
-            ". This case is treated analogously.");//$NON-NLS-1$
+        ". This case is treated analogously.");//$NON-NLS-1$
       }
 
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-            "A segment where the y-coordinates are undefined (");//$NON-NLS-1$
+        "A segment where the y-coordinates are undefined (");//$NON-NLS-1$
         ei.writeDouble(Double.NaN);
         ei.write(//
-            "). This case is treated analogously.");//$NON-NLS-1$
+        "). This case is treated analogously.");//$NON-NLS-1$
       }
     }
 
     body.write("An ");//$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " which is positive infinite over three units along the x-axis, negative infinite over two units along the x-axis, undefined over four units along the x-axis, and has a area of a size of ten square units where both, the x and y values are finite, is denoted as ");//$NON-NLS-1$
+    " which is positive infinite over three units along the x-axis, negative infinite over two units along the x-axis, undefined over four units along the x-axis, and has a area of a size of ten square units where both, the x and y values are finite, is denoted as ");//$NON-NLS-1$
     new AreaUnderCurve(10, 2, 3, 4).write(body);
 
     body.write(//
-        ". When comparing two areas, we first compare the infinite and undefined segments. The area with the larger undefined segment loses each comparison regardless. For infinite segments, the default comparison order of the performance measure holds: If "); //$NON-NLS-1$
+    ". When comparing two areas, we first compare the infinite and undefined segments. The area with the larger undefined segment loses each comparison regardless. For infinite segments, the default comparison order of the performance measure holds: If "); //$NON-NLS-1$
     try (Emphasize em = body.emphasize()) {
       em.write("smaller is better");//$NON-NLS-1$
     }
     body.write(//
-        " holds, then the area with the larger negative-infinite or smaller positive-infinite area wins. A comparison is undecided if one has a smaller negative-infinite but larger positive-infinite area. Finally, if all infinite and/or undefined segments of two curves are the same (ideally "); //$NON-NLS-1$
+    " holds, then the area with the larger negative-infinite or smaller positive-infinite area wins. A comparison is undecided if one has a smaller negative-infinite but larger positive-infinite area. Finally, if all infinite and/or undefined segments of two curves are the same (ideally "); //$NON-NLS-1$
     body.writeInt(0);
     body.write(//
-        " the finite areas are compared directly."); //$NON-NLS-1$
+    " the finite areas are compared directly."); //$NON-NLS-1$
 
     body.writeLinebreak();
     body.write(//
-        "In order to deal with different ranges covered on the x-axis, we can either only look at those parts where data exists for all curves or, alternatively, extend the shorter curves to the x-coordinate of the end of the longest curve, using either its last value or infinity, where appropriate."); //$NON-NLS-1$
+    "In order to deal with different ranges covered on the x-axis, we can either only look at those parts where data exists for all curves or, alternatively, extend the shorter curves to the x-coordinate of the end of the longest curve, using either its last value or infinity, where appropriate."); //$NON-NLS-1$
 
     body.writeLinebreak();
     body.write(//
-        "In any case, the "); //$NON-NLS-1$
+    "In any case, the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " defined like this is, at most, an indicator \u2012 it is by no means an exact measure. It therefore should not be considered as a singular, absolute value. Instead, we will aggregates (medians) of "); //$NON-NLS-1$
+    " defined like this is, at most, an indicator \u2012 it is by no means an exact measure. It therefore should not be considered as a singular, absolute value. Instead, we will aggregates (medians) of "); //$NON-NLS-1$
 
     try (Emphasize em = body.emphasize()) {
       em.write("rankings");//$NON-NLS-1$
@@ -364,7 +364,7 @@ public final class DescAUC extends DescriptionModule {
     body.write(" of the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        "s over many diagrams, in order to extract some more robust trends. Still, even such trends cannot replace a proper manual analysis and understanding of the charts and should just be viewed as one additional hint or indicator."); //$NON-NLS-1$
+    "s over many diagrams, in order to extract some more robust trends. Still, even such trends cannot replace a proper manual analysis and understanding of the charts and should just be viewed as one additional hint or indicator."); //$NON-NLS-1$
 
     body.writeLinebreak();
     body.write("In the example "); //$NON-NLS-1$
@@ -394,7 +394,7 @@ public final class DescAUC extends DescriptionModule {
     aD.write(body);
 
     body.write(//
-        ". If smaller performance measure (y) values would be better, these areas would be ranked as "); //$NON-NLS-1$
+    ". If smaller performance measure (y) values would be better, these areas would be ranked as "); //$NON-NLS-1$
 
     eA = new BasicMapEntry<>(Character.valueOf('A'), aA);
     eB = new BasicMapEntry<>(Character.valueOf('B'), aB);
@@ -432,7 +432,7 @@ public final class DescAUC extends DescriptionModule {
     body.write("In summary, using the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " is an automated way of comparing curves. It easily covers the trivial cases where one curve is always below or above another one (as in those cases, its area is necessarily smaller or larger), but also can provide at least some approximate insight in cases where curves cross each other, as it is the case in our example "); //$NON-NLS-1$
+    " is an automated way of comparing curves. It easily covers the trivial cases where one curve is always below or above another one (as in those cases, its area is necessarily smaller or larger), but also can provide at least some approximate insight in cases where curves cross each other, as it is the case in our example "); //$NON-NLS-1$
     body.reference(label);
     body.writeChar('.');
 

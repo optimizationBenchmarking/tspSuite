@@ -99,7 +99,7 @@ final class _Comparisons extends Module {
           log = this.getLogger();
           if ((log != null) && (log.isLoggable(Level.INFO))) {
             log.info(//
-                "No comparison module is active. Quitting comparison procedure without doing anything."); //$NON-NLS-1$
+            "No comparison module is active. Quitting comparison procedure without doing anything."); //$NON-NLS-1$
           }
         }
       } else {
@@ -125,7 +125,7 @@ final class _Comparisons extends Module {
     log = this.getLogger();
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info(//
-          "Comparison module needs at least two experiments in order to performa a comparison, but the experiment set only contains " //$NON-NLS-1$
+      "Comparison module needs at least two experiments in order to performa a comparison, but the experiment set only contains " //$NON-NLS-1$
           + data.size() + ". Module quits '" + what + //$NON-NLS-1$
           "' without doing anything."); //$NON-NLS-1$
     }

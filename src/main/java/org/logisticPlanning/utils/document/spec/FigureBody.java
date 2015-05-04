@@ -119,14 +119,14 @@ public class FigureBody extends Element {
   /** {@inheritDoc} */
   @Override
   protected void graphicBegin(final Graphic h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.graphicBegin(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void graphicEnd(final Graphic h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     super.graphicEnd(h);
   }
 

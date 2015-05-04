@@ -84,7 +84,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *          the node type
  */
 public class TreeRampedHalfAndHalf<NT extends Node<NT>> extends
-NullaryOperator<NT> {
+    NullaryOperator<NT> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

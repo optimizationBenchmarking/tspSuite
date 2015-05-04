@@ -184,7 +184,7 @@ public class AreaUnderCurve implements Serializable {
         if (lastX > curX) {
           throw new IllegalStateException(//
               "Last x cannot be greater than current x, but " + //$NON-NLS-1$
-              curX + " follows " + lastX);//$NON-NLS-1$
+                  curX + " follows " + lastX);//$NON-NLS-1$
         }
       }
     }
@@ -264,9 +264,9 @@ public class AreaUnderCurve implements Serializable {
         HashUtils.combineHashes(//
             HashUtils.hashCode(this.m_finite),//
             HashUtils.hashCode(this.m_nan)),//
-            HashUtils.combineHashes(//
-                HashUtils.hashCode(this.m_negInfinite),//
-                HashUtils.hashCode(this.m_posInfinite)));
+        HashUtils.combineHashes(//
+            HashUtils.hashCode(this.m_negInfinite),//
+            HashUtils.hashCode(this.m_posInfinite)));
   }
 
   /**

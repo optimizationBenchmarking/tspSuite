@@ -274,7 +274,7 @@ public class BAB_HK extends TSPAlgorithm {
 
         children.clear();
         children
-        .add(this.exclude(currentNode, i, currentNode.m_parent[i]));
+            .add(this.exclude(currentNode, i, currentNode.m_parent[i]));
         for (j = 0; j < this.m_n; j++) {
           if (currentNode.m_parent[j] == i) {
             children.add(this.exclude(currentNode, i, j));

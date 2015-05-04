@@ -704,7 +704,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
  * </ol>
  */
 public final class HeuristicInitRNSSavingsMA extends
-_HeuristicInitRNSSavingsMA {
+    _HeuristicInitRNSSavingsMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

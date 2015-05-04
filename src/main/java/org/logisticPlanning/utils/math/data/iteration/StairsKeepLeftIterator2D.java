@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.math.data.point.Point2D;
  * a line iterator
  */
 public final class StairsKeepLeftIterator2D extends
-_PointIteratorWrapper2D {
+    _PointIteratorWrapper2D {
   /** The serial version uid */
   private static final long serialVersionUID = 1L;
 

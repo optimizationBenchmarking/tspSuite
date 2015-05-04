@@ -92,7 +92,7 @@ public class _InstanceTest extends DistanceComputerTest {
     Assert.assertEquals(DistanceComputerTest.RAW_WRONG_DIMENSION, d2.n(),
         this.m_i.n());
     Assert
-    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
 
     adj = new int[n];
     xa = xb = 0l;
@@ -113,10 +113,10 @@ public class _InstanceTest extends DistanceComputerTest {
         l);
 
     Assert
-    .assertEquals(
-        //
-        DistanceComputerTest.MATRIX_WRONG_EVAL_ADJ,
-        d1.evaluateAdj(adj), l);
+        .assertEquals(
+            //
+            DistanceComputerTest.MATRIX_WRONG_EVAL_ADJ,
+            d1.evaluateAdj(adj), l);
 
     Assert.assertEquals(//
         DistanceComputerTest.RAW_WRONG_EVAL_ADJ, d1.evaluateAdj(adj), l);
@@ -263,7 +263,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /** the permutation update operators */
   private static final PermutationUpdateOperator[] OPERATORS = //
-      PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
+  PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
 
   /**
    * Try to randomly construct quite a few tours and to find whether one of

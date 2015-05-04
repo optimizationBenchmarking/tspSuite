@@ -8,7 +8,7 @@ import org.logisticPlanning.tsp.evaluation.data.RunSet;
  * given normalized runtime limit.
  */
 final class _NormalizedTimeLimitDataCollection extends
-_LimitDataCollection {
+    _LimitDataCollection {
 
   /** the normalized runtime */
   private final double m_normTime;

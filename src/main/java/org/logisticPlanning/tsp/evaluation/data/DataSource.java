@@ -59,10 +59,10 @@ public abstract class DataSource extends LoggerOwner {
     } finally {
       if (((logger != null) && (logger.isLoggable(Level.INFO)))) {
         logger
-        .info("Finished loading data " + //$NON-NLS-1$
-            ((es != null) ? ("and found " + es.size() + //$NON-NLS-1$
+            .info("Finished loading data " + //$NON-NLS-1$
+                ((es != null) ? ("and found " + es.size() + //$NON-NLS-1$
                 " experiments.") //$NON-NLS-1$
-                : "but found no experimental data (now throwing exception ^_^).")); //$NON-NLS-1$
+                    : "but found no experimental data (now throwing exception ^_^).")); //$NON-NLS-1$
       }
     }
 

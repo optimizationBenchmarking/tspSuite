@@ -199,7 +199,7 @@ public class DistanceComputerTest extends TestBase {
 
     n = d1.n();
     Assert
-    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
     for (int i = n; i > 0; i--) {
       sum1 = sum2 = 0l;
       for (int j = n; j > 0; j--) {
@@ -254,7 +254,7 @@ public class DistanceComputerTest extends TestBase {
     Assert.assertNotNull(DistanceComputerTest.RAW_IS_NULL, d2);
     n = d1.n();
     Assert
-    .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
+        .assertEquals(DistanceComputerTest.DISAGREE_DIMENSION, n, d2.n());
     tour = PermutationCreateCanonical.canonical(n);
 
     for (z = DistanceComputerTest.getRequiredTests(n);;) {

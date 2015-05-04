@@ -94,7 +94,7 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
  * </ol>
  */
 final class _ExperimentSetERTOverRelativeObjectiveValueDiagramsHolder
-extends ComparisonModule {
+    extends ComparisonModule {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

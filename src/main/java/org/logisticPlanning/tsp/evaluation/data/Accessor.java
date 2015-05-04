@@ -169,7 +169,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
       Accessor._writeValue(value, txt, format);
       txt.writeNoneBreakingSpace();
       this.writeShortName(txt, true);
@@ -262,7 +262,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
       Accessor._writeValue(value, txt, format);
       txt.writeNoneBreakingSpace();
       this.writeShortName(txt, true);
@@ -362,7 +362,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
       Accessor._writeValue(value, txt, format);
       txt.write("ms");//$NON-NLS-1$
     }
@@ -429,7 +429,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -485,7 +485,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -548,7 +548,7 @@ public enum Accessor {
     @Override
     public final void writeValue(final double value,
         final AbstractTextComplex txt, final NumberFormat format)
-            throws IOException {
+        throws IOException {
 
       try (InlineMath im = txt.inlineMath()) {
         try (MathOp mo = im.mathOp(EMathOp.CMP_EQUALS)) {
@@ -567,26 +567,26 @@ public enum Accessor {
 
   /** the total number of accessors */
   public static final ArraySetView<Accessor> ACCESSORS = //
-      ArraySetView.makeArraySetView(Accessor.values(), false);
+  ArraySetView.makeArraySetView(Accessor.values(), false);
 
   /** the proper x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> TIME_MEASURES = //
-      Accessor.ACCESSORS.select(//
-          new CompoundCondition<>(LAnd.INSTANCE,//
-              NotNullCondition.INSTANCE,//
-              new NotCondition<>(AccessorIsObjective.INSTANCE)));
+  Accessor.ACCESSORS.select(//
+      new CompoundCondition<>(LAnd.INSTANCE,//
+          NotNullCondition.INSTANCE,//
+          new NotCondition<>(AccessorIsObjective.INSTANCE)));
 
   /** the proper unbiased x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> UNBIASED_TIME_MEASURES = //
-      Accessor.TIME_MEASURES.select(//
-          new NotCondition<>(new EqualsCondition(Accessor.RUNTIME)));
+  Accessor.TIME_MEASURES.select(//
+      new NotCondition<>(new EqualsCondition(Accessor.RUNTIME)));
 
   /** the proper x-dimensions for progress diagrams */
   public static final ArraySetView<Accessor> OBJECTIVE_MEASURES = //
-      Accessor.ACCESSORS.select(//
-          new CompoundCondition<>(LAnd.INSTANCE,//
-              NotNullCondition.INSTANCE,//
-              AccessorIsObjective.INSTANCE));
+  Accessor.ACCESSORS.select(//
+      new CompoundCondition<>(LAnd.INSTANCE,//
+          NotNullCondition.INSTANCE,//
+          AccessorIsObjective.INSTANCE));
 
   /** the short name singular macro */
   private final MacroDefinition m_short;
@@ -816,7 +816,7 @@ public enum Accessor {
   public void writeScale(final Element ame) throws IOException {
     throw new IllegalArgumentException(//
         "Accessor " + this + //$NON-NLS-1$
-        " cannot write scale to element " + ame); //$NON-NLS-1$
+            " cannot write scale to element " + ame); //$NON-NLS-1$
   }
 
   /**
@@ -889,7 +889,7 @@ public enum Accessor {
    */
   static final void _writeValue(final double value,
       final AbstractInlineElement txt, final NumberFormat format)
-          throws IOException {
+      throws IOException {
     long l;
 
     if (ComparisonUtils.isInteger(value)) {
@@ -922,6 +922,6 @@ public enum Accessor {
    */
   public abstract void writeValue(final double value,
       final AbstractTextComplex txt, final NumberFormat format)
-          throws IOException;
+      throws IOException;
 
 }

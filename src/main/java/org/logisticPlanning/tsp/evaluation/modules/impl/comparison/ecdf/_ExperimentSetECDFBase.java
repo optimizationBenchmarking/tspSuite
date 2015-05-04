@@ -144,23 +144,23 @@ class _ExperimentSetECDFBase extends RankedComparisonModule {
     ranking = rag.rank(EStatisticParameter.MEDIAN);
 
     body.write(//
-        "For each algorithm and benchmark case, we compute the "); //$NON-NLS-1$
+    "For each algorithm and benchmark case, we compute the "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(" discussed in "); //$NON-NLS-1$
     body.reference(this.m_auc.getLabel(data));
     body.write(//
-        ". We extend the areas to the left by finding the smallest x-coordinate and adding a point with that coordinate and ");//$NON-NLS-1$
+    ". We extend the areas to the left by finding the smallest x-coordinate and adding a point with that coordinate and ");//$NON-NLS-1$
     body.writeInt(0);
     body.write(" as "); //$NON-NLS-1$
     body.macroInvoke(Macros.ECDF);
     body.write(//
-        " to all curves. To the right, we chose the largest x-coordinate amongst all curves. Each curve is then extended by one point with that x-coordinate and the y-coordinate of its right-most point. This extension makes sense instead of cutting the curves off on the right since some algorithms may reach the optimum very quickly, which would make the comparison interval very small. We then compute "); //$NON-NLS-1$
+    " to all curves. To the right, we chose the largest x-coordinate amongst all curves. Each curve is then extended by one point with that x-coordinate and the y-coordinate of its right-most point. This extension makes sense instead of cutting the curves off on the right since some algorithms may reach the optimum very quickly, which would make the comparison interval very small. We then compute "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " for each algorithm and benchmark case, by using the exactly same scaling as in the figures (only the ranges of the axes may differ). For each benchmark case we then rank the methods according to their corresponding "); //$NON-NLS-1$
+    " for each algorithm and benchmark case, by using the exactly same scaling as in the figures (only the ranges of the axes may differ). For each benchmark case we then rank the methods according to their corresponding "); //$NON-NLS-1$
     body.macroInvoke(Macros.AUC);
     body.write(//
-        " (larger areas are better). The methods are then re-ranked according to their median rank over all benchmark cases, as discussed in "); //$NON-NLS-1$
+    " (larger areas are better). The methods are then re-ranked according to their median rank over all benchmark cases, as discussed in "); //$NON-NLS-1$
     body.reference(this.m_descRanking.getLabel(data));
     body.writeChar('.');
 
@@ -237,8 +237,8 @@ class _ExperimentSetECDFBase extends RankedComparisonModule {
     }
 
     agg.aggregateRanks(//
-        Ranking.rank(AreaUnderCurveComparator.LARGER_IS_BETTER,//
-            lst.toArray(new Map.Entry[lst.size()])));
+    Ranking.rank(AreaUnderCurveComparator.LARGER_IS_BETTER,//
+        lst.toArray(new Map.Entry[lst.size()])));
   }
 
   /** {@inheritDoc} */

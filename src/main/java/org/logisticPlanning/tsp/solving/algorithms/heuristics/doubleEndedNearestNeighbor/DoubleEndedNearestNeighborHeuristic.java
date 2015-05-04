@@ -75,7 +75,7 @@ import org.logisticPlanning.tsp.solving.operators.permutation.creation.Permutati
  * </ol>
  */
 public class DoubleEndedNearestNeighborHeuristic extends
-TSPHeuristicWithStartNode {
+    TSPHeuristicWithStartNode {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

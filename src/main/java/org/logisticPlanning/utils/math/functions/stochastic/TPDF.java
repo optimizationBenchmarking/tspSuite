@@ -69,7 +69,7 @@ public final class TPDF extends BinaryFunction {
     return Math.exp(GammaLn.INSTANCE.compute(np1o2)
         - ((0.5d * (Math.log(Math.PI) + Math.log(dof)))
             - GammaLn.INSTANCE.compute(dof * 0.5d) - (np1o2 * Math
-                .log(1d + ((x * x) / dof)))));
+            .log(1d + ((x * x) / dof)))));
   }
 
   /** {@inheritDoc} */

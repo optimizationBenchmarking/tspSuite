@@ -91,7 +91,7 @@ public class TablePage extends AbstractLabeledElement {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.m_owner.tableBodyRowEnd(h);
   }
 

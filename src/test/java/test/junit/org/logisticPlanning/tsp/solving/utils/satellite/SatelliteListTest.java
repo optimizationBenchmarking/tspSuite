@@ -72,7 +72,7 @@ public class SatelliteListTest extends TestBase {
 
         Assert.assertTrue(list.toPath(b));
         Assert
-        .assertTrue(RepresentationUtils.arePathsEquivalentSTSP(a, b));
+            .assertTrue(RepresentationUtils.arePathsEquivalentSTSP(a, b));
       }
     }
   }

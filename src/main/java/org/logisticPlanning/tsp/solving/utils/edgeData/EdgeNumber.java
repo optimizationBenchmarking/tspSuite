@@ -476,7 +476,7 @@ public abstract class EdgeNumber extends EdgeData {
       // data structure
       // if floating point values are required.
       return (symmetric ? new _SymmetricEdgeFloat(n)
-      : new _AsymmetricEdgeFloat(n));
+          : new _AsymmetricEdgeFloat(n));
     }
 
     // can we use bits as backing store? i.e., the possible values must
@@ -490,27 +490,27 @@ public abstract class EdgeNumber extends EdgeData {
     if ((minValue >= (java.lang.Byte.MIN_VALUE))
         && (maxValue <= (java.lang.Byte.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeByte(n)
-      : new _AsymmetricEdgeByte(n));
+          : new _AsymmetricEdgeByte(n));
     }
     // can we use short[] as backing store? i.e., the possible values must
     // be in -32768..32767
     if ((minValue >= (java.lang.Short.MIN_VALUE))
         && (maxValue <= (java.lang.Short.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeShort(n)
-      : new _AsymmetricEdgeShort(n));
+          : new _AsymmetricEdgeShort(n));
     }
     // can we use int[] as backing store? i.e., the possible values must
     // be in -2147483648..2147483647
     if ((minValue >= (java.lang.Integer.MIN_VALUE))
         && (maxValue <= (java.lang.Integer.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeInt(n)
-      : new _AsymmetricEdgeInt(n));
+          : new _AsymmetricEdgeInt(n));
     }
 
     // ok, we exceed all smaller ranges, we have to use long[] as backing
     // store
     return (symmetric ? new _SymmetricEdgeLong(n)
-    : new _AsymmetricEdgeLong(n));
+        : new _AsymmetricEdgeLong(n));
   }
 
   /**
@@ -563,11 +563,11 @@ public abstract class EdgeNumber extends EdgeData {
       if ((minValue >= (-Float.MAX_VALUE))
           && (maxValue <= (Float.MAX_VALUE))) {
         return (symmetric ? new _SymmetricEdgeFloat(n)
-        : new _AsymmetricEdgeFloat(n));
+            : new _AsymmetricEdgeFloat(n));
       }
 
       return (symmetric ? new _SymmetricEdgeDouble(n)
-      : new _AsymmetricEdgeDouble(n));
+          : new _AsymmetricEdgeDouble(n));
     }
 
     // can we use bits as backing store? i.e., the possible values must
@@ -581,26 +581,26 @@ public abstract class EdgeNumber extends EdgeData {
     if ((minValue >= (java.lang.Byte.MIN_VALUE))
         && (maxValue <= (java.lang.Byte.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeByte(n)
-      : new _AsymmetricEdgeByte(n));
+          : new _AsymmetricEdgeByte(n));
     }
     // can we use short[] as backing store? i.e., the possible values must
     // be in -32768..32767
     if ((minValue >= (java.lang.Short.MIN_VALUE))
         && (maxValue <= (java.lang.Short.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeShort(n)
-      : new _AsymmetricEdgeShort(n));
+          : new _AsymmetricEdgeShort(n));
     }
     // can we use int[] as backing store? i.e., the possible values must
     // be in -2147483648..2147483647
     if ((minValue >= (java.lang.Integer.MIN_VALUE))
         && (maxValue <= (java.lang.Integer.MAX_VALUE))) {
       return (symmetric ? new _SymmetricEdgeInt(n)
-      : new _AsymmetricEdgeInt(n));
+          : new _AsymmetricEdgeInt(n));
     }
 
     // ok, we exceed all smaller ranges, we have to use long[] as backing
     // store
     return (symmetric ? new _SymmetricEdgeLong(n)
-    : new _AsymmetricEdgeLong(n));
+        : new _AsymmetricEdgeLong(n));
   }
 }

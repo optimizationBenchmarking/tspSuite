@@ -366,7 +366,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected URI relativizeFile(final File file) throws IOException,
-  URISyntaxException {
+      URISyntaxException {
     return this.m_owner.relativizeFile(file);
   }
 
@@ -441,7 +441,7 @@ public class Document extends Element {
   protected void writeSequence(final Sequence sequence,
       final ESequenceType type,
       final boolean connectLastElementWithNonBreakableSpace)
-          throws IOException {
+      throws IOException {
     //
   }
 
@@ -458,8 +458,8 @@ public class Document extends Element {
     if ((this.m_current != e) || (e == this)) {
       throw new IllegalStateException(//
           "Can only close top-level element (" + //$NON-NLS-1$
-          this.m_current + ") but tried to close " + //$NON-NLS-1$
-          e);
+              this.m_current + ") but tried to close " + //$NON-NLS-1$
+              e);
     }
     this.m_current = e.m_owner;
   }
@@ -473,7 +473,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void headerBegin(final Header h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     log = this.m_owner.getLogger();
@@ -491,7 +491,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void headerEnd(final Header h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     if (this.m_state != Document.STATE_IN_HEADER) {
@@ -530,7 +530,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void bodyBegin(final Body h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     log = this.m_owner.getLogger();
@@ -548,7 +548,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void bodyEnd(final Body h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Logger log;
 
     if (this.m_state != Document.STATE_IN_BODY) {
@@ -611,21 +611,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void authorsBegin(final Authors h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void authorsEnd(final Authors h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final void authors(final BibAuthors authors) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
 
     c = this.m_current;
@@ -645,14 +645,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void titleBegin(final Title h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void titleEnd(final Title h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -678,14 +678,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void summaryBegin(final Summary h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void summaryEnd(final Summary h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -712,21 +712,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void sectionBegin(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void sectionEnd(final Section h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final Section section(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Section h;
 
@@ -754,14 +754,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void sectionTitleEnd(final SectionTitle h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final SectionTitle sectionTitle() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final SectionTitle h;
 
@@ -782,20 +782,20 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyBegin(final SectionBody h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
   @Override
   protected void sectionBodyEnd(final SectionBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final SectionBody sectionBody() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final SectionBody h;
 
@@ -816,14 +816,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void figureBegin(final Figure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureEnd(final Figure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -864,7 +864,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final FigureCaption figureCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final FigureCaption h;
 
@@ -879,21 +879,21 @@ public class Document extends Element {
   @Override
   protected FigureBody figureBodyCreate(final Element owner,
       final URI relativeNameBase, final Dimension2D sizeInMM)
-          throws IOException, URISyntaxException {
+      throws IOException, URISyntaxException {
     return new FigureBody(owner, relativeNameBase, sizeInMM);
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyBegin(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void figureBodyEnd(final FigureBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -923,14 +923,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void graphicBegin(final Graphic h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void graphicEnd(final Graphic h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
@@ -962,7 +962,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void figureSeriesEnd(final FigureSeries h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -971,7 +971,7 @@ public class Document extends Element {
   protected FigureSeries figureSeries(final Label label,
       final Dimension2D subFigureSizeInMM, final String captionTemplate,
       final String subCaptionTemplate, final boolean colspan)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     final int x1, x2;
     final double docW, figW;
     final DocumentDimensions dim;
@@ -990,7 +990,7 @@ public class Document extends Element {
   @Override
   protected final FigureSeries figureSeries(final Label label,
       final int cols, final int rows, final boolean colspan)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
 
     final Element c;
     final FigureSeries h;
@@ -1027,7 +1027,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final FigureSeriesCaption figureSeriesCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     final Element c;
     final FigureSeriesCaption h;
@@ -1070,14 +1070,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void subFigureBegin(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void subFigureEnd(final SubFigure h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1094,19 +1094,19 @@ public class Document extends Element {
     makePage: {
       if (cur instanceof FigureSeriesPage) {
         checkPage: {
-        fig = ((FigureSeries) (cur.m_owner));
-        page = ((FigureSeriesPage) cur);
+          fig = ((FigureSeries) (cur.m_owner));
+          page = ((FigureSeriesPage) cur);
 
-        if ((++page.m_col) > fig.m_cols) {
-          page.m_col = 1;
-          if ((++page.m_row) > fig.m_rows) {
-            // fig.figureSeriesPageEnd(page);
-            page.close();
-            break checkPage;
+          if ((++page.m_col) > fig.m_cols) {
+            page.m_col = 1;
+            if ((++page.m_row) > fig.m_rows) {
+              // fig.figureSeriesPageEnd(page);
+              page.close();
+              break checkPage;
+            }
           }
+          break makePage;
         }
-        break makePage;
-      }
       } else {
         fig = ((FigureSeries) (this.m_current));
       }
@@ -1145,7 +1145,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final SubFigureCaption subFigureCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final SubFigureCaption h;
 
@@ -1166,21 +1166,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void itemizationBegin(final Itemization h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void itemizationEnd(final Itemization h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final Itemization itemization() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Itemization h;
 
@@ -1215,7 +1215,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final ItemizationItem itemizationItem() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final ItemizationItem h;
 
@@ -1236,21 +1236,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void enumerationBegin(final Enumeration h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void enumerationEnd(final Enumeration h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final Enumeration enumeration() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Enumeration h;
 
@@ -1285,7 +1285,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final EnumerationItem enumerationItem() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final EnumerationItem h;
 
@@ -1307,14 +1307,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableBegin(final Table h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tableEnd(final Table h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1322,7 +1322,7 @@ public class Document extends Element {
   @Override
   protected Table table(final Label label, final String captionDraft,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     return this.table(label, Integer.MAX_VALUE, colspan, def);
   }
 
@@ -1330,7 +1330,7 @@ public class Document extends Element {
   @Override
   protected final Table table(final Label label, final int rowsPerPage,
       final boolean colspan, final TableCellDef... def)
-          throws IOException, IllegalStateException {
+      throws IOException, IllegalStateException {
     final Element c;
     final Table h;
 
@@ -1358,14 +1358,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableCaptionEnd(final TableCaption h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final TableCaption tableCaption() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     final Element c;
     final TableCaption h;
@@ -1387,21 +1387,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderBegin(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tableHeaderEnd(final TableHeader h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final TableHeader tableHeader() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final TableHeader h;
 
@@ -1422,20 +1422,20 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableFooterBegin(final TableFooter h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tableFooterEnd(final TableFooter h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final TableFooter tableFooter() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final TableFooter h;
 
@@ -1456,14 +1456,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyBegin(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tableBodyEnd(final TableBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1503,7 +1503,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final TableHeaderRow tableHeaderRow() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     final Element c;
     final TableHeaderRow h;
@@ -1574,7 +1574,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final TableFooterRow tableFooterRow() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     final Element c;
     final TableFooterRow h;
@@ -1632,13 +1632,13 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tablePageBegin(final TablePage h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
   @Override
   protected void tablePageEnd(final TablePage h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1659,14 +1659,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableBodyRowEnd(final TableBodyRow h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final TableBodyRow tableBodyRow() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final TableBodyRow h;
     final Table tbl;
@@ -1740,7 +1740,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void tableHorizontalLine() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
@@ -1754,14 +1754,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void subscriptBegin(final Subscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void subscriptEnd(final Subscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1788,21 +1788,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void superscriptBegin(final Superscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void superscriptEnd(final Superscript h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final Superscript superscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Superscript h;
 
@@ -1823,14 +1823,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void emphasizeBegin(final Emphasize h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void emphasizeEnd(final Emphasize h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -1857,14 +1857,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void inQuotesBegin(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.writeChar(h.getQuotes().getBegin());
   }
 
   /** {@inheritDoc} */
   @Override
   protected void inQuotesEnd(final InQuotes h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     try {
       this.writeChar(h.getQuotes().getEnd());
     } finally {
@@ -1875,7 +1875,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final InQuotes inQuotes(final EQuotes quotes) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final InQuotes h;
 
@@ -1896,21 +1896,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void equationBegin(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void equationEnd(final Equation h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final Equation equation(final Label label) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Equation h;
 
@@ -1938,14 +1938,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void equationBodyEnd(final EquationBody h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   protected EquationBody equationBody() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final EquationBody h;
 
@@ -1966,14 +1966,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void inlineMathBegin(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void inlineMathEnd(final InlineMath h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -2000,13 +2000,13 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void normalTextBegin(final NormalText h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
   @Override
   protected void normalTextEnd(final NormalText h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -2046,7 +2046,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final MathSubscript mathSubscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MathSubscript h;
 
@@ -2081,7 +2081,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final MathSuperscript mathSuperscript() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MathSuperscript h;
 
@@ -2102,20 +2102,20 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void mathNameBegin(final MathName h) throws IOException,
-  IllegalStateException {//
+      IllegalStateException {//
   }
 
   /** {@inheritDoc} */
   @Override
   protected void mathNameEnd(final MathName h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final MathName mathName(final EMathName type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MathName h;
 
@@ -2136,21 +2136,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void mathOpBegin(final MathOp h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void mathOpEnd(final MathOp h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final MathOp mathOp(final EMathOp type) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MathOp h;
 
@@ -2171,21 +2171,21 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamBegin(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamEnd(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
   /** {@inheritDoc} */
   @Override
   final MathOpParam mathOpParam() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MathOpParam h;
 
@@ -2206,14 +2206,14 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   protected void macroBegin(final Macro h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     //
   }
 
   /** {@inheritDoc} */
   @Override
   protected void macroEnd(final Macro h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     this.end(h);
   }
 
@@ -2226,7 +2226,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final Macro macro(final MacroDescriptor desc) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final Macro h;
 
@@ -2253,7 +2253,7 @@ public class Document extends Element {
   @Override
   protected MacroInvocation macroInvocationCreate(
       final AbstractInlineElement owner, final MacroDescriptor desc)
-          throws IOException {
+      throws IOException {
     return new MacroInvocation(owner, desc);
   }
 
@@ -2314,7 +2314,7 @@ public class Document extends Element {
   /** {@inheritDoc} */
   @Override
   final MacroParameter macroParameter() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     final Element c;
     final MacroParameter h;
 

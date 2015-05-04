@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.math.statistics.EStatisticParameter;
  * the literature result
  */
 public class LiteratureResultPoint implements
-Comparable<LiteratureResultPoint> {
+    Comparable<LiteratureResultPoint> {
 
   /** the result point set */
   LiteratureResultPointSet m_set;
@@ -78,25 +78,25 @@ Comparable<LiteratureResultPoint> {
     if (!(resultStatistic.isValue())) {
       throw new IllegalArgumentException(
           "Only value parameters are allowed, but the result was said to be "//$NON-NLS-1$
-          + resultStatistic);
+              + resultStatistic);
     }
 
     if (resultDim == Accessor.F) {
       if (resultVal < inst.optimum()) {
         throw new IllegalArgumentException(//
             "Provided objective value " + resultVal + //$NON-NLS-1$
-            " ("//$NON-NLS-1$
-            + resultStatistic.getShortName()
-            + ") is less than globally optimal objective value "//$NON-NLS-1$
-            + inst.optimum() + " of " + inst.name());//$NON-NLS-1$
+                " ("//$NON-NLS-1$
+                + resultStatistic.getShortName()
+                + ") is less than globally optimal objective value "//$NON-NLS-1$
+                + inst.optimum() + " of " + inst.name());//$NON-NLS-1$
       }
     } else {
       if (resultDim == Accessor.F_RELATIVE) {
         if (resultVal < 0d) {
           throw new IllegalArgumentException(//
               "Provided relative error " + resultVal + //$NON-NLS-1$
-              " (" + resultStatistic.getShortName() + //$NON-NLS-1$
-              ") is less than 0."); //$NON-NLS-1$
+                  " (" + resultStatistic.getShortName() + //$NON-NLS-1$
+                  ") is less than 0."); //$NON-NLS-1$
         }
       }
     }

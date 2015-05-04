@@ -50,32 +50,32 @@ public final class LongParser extends Parser<java.lang.Number> {
 
     check: {
       find: {
-      if (value instanceof java.lang.Number) {
-        ret = ((java.lang.Number) value);
-        number = ret.longValue();
-        break find;
+        if (value instanceof java.lang.Number) {
+          ret = ((java.lang.Number) value);
+          number = ret.longValue();
+          break find;
+        }
+
+        if (value instanceof String) {
+          number = TextUtils.parseLong((String) value);
+        } else {
+          break check;
+        }
+
+        ret = java.lang.Long.valueOf(number);
+      } // end of find
+
+      if (number < this.m_min) {
+        throw new IllegalArgumentException((((Parser.MBLOET + //
+            this.m_min) + Parser.BI) + number) + '.'); //
       }
 
-      if (value instanceof String) {
-        number = TextUtils.parseLong((String) value);
-      } else {
-        break check;
+      if (number > this.m_max) {
+        throw new IllegalArgumentException((((Parser.MBSOET + //
+            this.m_max) + Parser.BI) + number) + '.'); //
       }
 
-      ret = java.lang.Long.valueOf(number);
-    } // end of find
-
-    if (number < this.m_min) {
-      throw new IllegalArgumentException((((Parser.MBLOET + //
-          this.m_min) + Parser.BI) + number) + '.'); //
-    }
-
-    if (number > this.m_max) {
-      throw new IllegalArgumentException((((Parser.MBSOET + //
-          this.m_max) + Parser.BI) + number) + '.'); //
-    }
-
-    return ret;
+      return ret;
     } // end of check
 
     throw new _ClassError(value.getClass(), java.lang.Long.class);

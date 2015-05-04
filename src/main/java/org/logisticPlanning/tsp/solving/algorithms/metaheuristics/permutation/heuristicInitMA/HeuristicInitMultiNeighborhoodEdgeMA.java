@@ -636,7 +636,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
  * </ol>
  */
 public final class HeuristicInitMultiNeighborhoodEdgeMA extends
-_HeuristicInitMultiNeighborhoodEdgeMA {
+    _HeuristicInitMultiNeighborhoodEdgeMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

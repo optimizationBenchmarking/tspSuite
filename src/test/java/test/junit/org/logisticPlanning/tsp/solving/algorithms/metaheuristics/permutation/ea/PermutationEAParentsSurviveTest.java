@@ -10,7 +10,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmet
  * the test of the permutation EA
  */
 public class PermutationEAParentsSurviveTest extends
-TSPAlgorithmSymmetricTest {
+    TSPAlgorithmSymmetricTest {
 
   /** create */
   public PermutationEAParentsSurviveTest() {

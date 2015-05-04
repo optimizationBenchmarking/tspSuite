@@ -12,7 +12,7 @@ import org.logisticPlanning.utils.document.spec.Document;
  *          the property result
  */
 public final class GlobalProperty<DT extends DataSet<?>, PT> extends
-Property<DT, PT> {
+    Property<DT, PT> {
 
   /** the global property to access */
   private final Property<DataSet<?>, PT> m_global;

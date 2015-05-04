@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmAsymme
  * template-based EHBSA}.
  */
 public class TemplateBasedEHBSA_AugmentDistance_Test extends
-TSPAlgorithmAsymmetricTest {
+    TSPAlgorithmAsymmetricTest {
 
   /** create */
   public TemplateBasedEHBSA_AugmentDistance_Test() {

@@ -13,7 +13,7 @@ import org.logisticPlanning.utils.collections.basic.BasicList;
  *          the array type
  */
 public abstract class BasicArrayList<ET, AT> extends BasicList<ET>
-implements Cloneable {
+    implements Cloneable {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
@@ -140,7 +140,7 @@ implements Cloneable {
     if ((index < 0) || (index >= size)) {
       throw new IndexOutOfBoundsException(//
           "Index " + index + //$NON-NLS-1$
-          " is not valid for a list with length " + size); //$NON-NLS-1$
+              " is not valid for a list with length " + size); //$NON-NLS-1$
     }
   }
 

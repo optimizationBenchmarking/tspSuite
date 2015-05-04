@@ -67,8 +67,8 @@ public final class BetaLn extends BinaryFunction {
   @Override
   public final double compute(final double x1, final double x2) {
     return ((GammaLn.INSTANCE.compute(x1) + //
-        GammaLn.INSTANCE.compute(x2)) - //
-        GammaLn.INSTANCE.compute(x1 + x2));
+    GammaLn.INSTANCE.compute(x2)) - //
+    GammaLn.INSTANCE.compute(x1 + x2));
   }
 
   //

@@ -70,7 +70,7 @@ import org.logisticPlanning.utils.graphics.chart.spec.ChartPalette;
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
  */
 final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
-implements DrawingSupplier {
+    implements DrawingSupplier {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
   /** the number of lines in the background */

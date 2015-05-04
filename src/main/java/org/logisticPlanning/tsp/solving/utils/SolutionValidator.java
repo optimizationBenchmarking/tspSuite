@@ -43,7 +43,7 @@ public final class SolutionValidator {
    */
   public static final boolean validatePath(final int[] path,
       final long length, final DistanceComputer dc, final Appendable dest)
-          throws IOException {
+      throws IOException {
     return SolutionValidator.__validatePath(path, length, -1, dc, dest);
   }
 
@@ -190,7 +190,7 @@ public final class SolutionValidator {
               "Dimension of distance computer must be the same as provided dimension. However, the provided dimension is ");//$NON-NLS-1$
           useDest.append(Integer.toString(n));
           useDest
-          .append(" and the dimension of the distance computer is "); //$NON-NLS-1$
+              .append(" and the dimension of the distance computer is "); //$NON-NLS-1$
           useDest.append(Integer.toString(dc.n()));
           return false;
         }
@@ -218,7 +218,7 @@ public final class SolutionValidator {
         useDest.append("Solution length ");//$NON-NLS-1$
         useDest.append(Long.toString(length));
         useDest
-        .append(" is given, but no distance computer to verify it.");//$NON-NLS-1$
+            .append(" is given, but no distance computer to verify it.");//$NON-NLS-1$
         return false;
       }
     }

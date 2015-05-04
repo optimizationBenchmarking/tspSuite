@@ -706,7 +706,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fit
  * </ol>
  */
 public final class HeuristicInitMultiNeighborhoodSavingsMAFFA extends
-_HeuristicInitMultiNeighborhoodSavingsMA {
+    _HeuristicInitMultiNeighborhoodSavingsMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

@@ -685,7 +685,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
     return (((this.m_p1_deleted && (this.m_p1 != null) ? 1 : 0)) + //
         ((this.m_p2_deleted && (this.m_p2 != null) ? 1 : 0)) + //
-        ((this.m_cache_1 != null) ? 1 : 0));
+    ((this.m_cache_1 != null) ? 1 : 0));
   }
 
   /**

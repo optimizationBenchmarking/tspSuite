@@ -106,7 +106,7 @@ public abstract class EdgeByte extends EdgeNumber {
     }
 
     return (symmetric ? new _SymmetricEdgeByte(n)
-    : new _AsymmetricEdgeByte(n));
+        : new _AsymmetricEdgeByte(n));
   }
 
 }

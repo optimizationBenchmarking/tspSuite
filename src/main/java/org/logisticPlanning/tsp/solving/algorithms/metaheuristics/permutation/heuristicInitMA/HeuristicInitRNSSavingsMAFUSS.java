@@ -834,7 +834,7 @@ import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.sel
  * </ol>
  */
 public final class HeuristicInitRNSSavingsMAFUSS extends
-_HeuristicInitRNSSavingsMA {
+    _HeuristicInitRNSSavingsMA {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 

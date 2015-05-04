@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * {@link org.logisticPlanning.tsp.solving.Individual#f fitness} .
  */
 public final class IndividualFitnessComparator extends NamedObject
-implements Comparator<Individual<?>> {
+    implements Comparator<Individual<?>> {
 
   /** the serial version uid */
   private static final long serialVersionUID = 1L;

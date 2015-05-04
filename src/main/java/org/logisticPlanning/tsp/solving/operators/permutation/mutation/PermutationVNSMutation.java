@@ -119,7 +119,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.vns.P
  * </ol>
  */
 public class PermutationVNSMutation extends
-TSPLocalSearchBasedMutation<int[]> {
+    TSPLocalSearchBasedMutation<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
@@ -139,6 +139,6 @@ TSPLocalSearchBasedMutation<int[]> {
   public final void setImprovementSelectionPolicy(
       final EImprovementSelectionPolicy i) {
     ((PermutationVNS) (this.getLocalSearchAlgorithm()))
-    .setImprovementSelectionPolicy(i);
+        .setImprovementSelectionPolicy(i);
   }
 }

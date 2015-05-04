@@ -19,7 +19,7 @@ final class _OpSqrt extends _OpDef {
 
   /** the overlined cell */
   private final static char[] OL = { '<', 't', 'd', ' ', 'c', 'l', 'a',
-    's', 's', '=', '"', 'm', 'a', 't', 'h', 'T', 'L', '"', '>' };
+      's', 's', '=', '"', 'm', 'a', 't', 'h', 'T', 'L', '"', '>' };
 
   /** create */
   private _OpSqrt() {

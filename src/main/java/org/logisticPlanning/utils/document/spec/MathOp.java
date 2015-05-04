@@ -107,7 +107,7 @@ public class MathOp extends Element {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamBegin(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if ((this.m_state != Element.STATE_NOTHING)
         && (this.m_state != MathOp.STATE_AFTER_PARAM)) {
@@ -122,7 +122,7 @@ public class MathOp extends Element {
   /** {@inheritDoc} */
   @Override
   protected void mathOpParamEnd(final MathOpParam h) throws IOException,
-  IllegalStateException {
+      IllegalStateException {
 
     if (this.m_state != MathOp.STATE_IN_PARAM) {
       throw new IllegalStateException(//
@@ -136,7 +136,7 @@ public class MathOp extends Element {
   /** {@inheritDoc} */
   @Override
   public MathOpParam mathOpParam() throws IOException,
-  IllegalStateException {
+      IllegalStateException {
     return super.mathOpParam();
   }
 }

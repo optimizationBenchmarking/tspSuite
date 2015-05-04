@@ -202,8 +202,8 @@ public class Point2D extends MutablePoint {
         && //
         (Double.doubleToLongBits(this.m_x) == Double.doubleToLongBits(p
             .get(Point2D.COORD_X))) && //
-            (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p
-                .get(Point2D.COORD_Y))));
+    (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p
+        .get(Point2D.COORD_Y))));
   }
 
   /**
@@ -228,8 +228,8 @@ public class Point2D extends MutablePoint {
   public final boolean equalsPoint2D(final Point2D p) {
     return ((p != null) && //
         (Double.doubleToLongBits(this.m_x) == Double
-        .doubleToLongBits(p.m_x)) && //
-        (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p.m_y)));
+            .doubleToLongBits(p.m_x)) && //
+    (Double.doubleToLongBits(this.m_y) == Double.doubleToLongBits(p.m_y)));
   }
 
   /** {@inheritDoc} */
