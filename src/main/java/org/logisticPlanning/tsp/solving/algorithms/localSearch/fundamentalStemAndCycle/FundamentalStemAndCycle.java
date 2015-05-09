@@ -25,8 +25,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	private int[] m_neighbors;
 	/** The better tour */
 	private int[] m_betterTour;
-	/** The best tour in PSec*/
-	private int[] m_bestTourPSec;
 	/** The root node */
 	private int m_rootNode;
 	/** The first node of the stem connecting the root node */
@@ -50,12 +48,12 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	/** The length of the rootListESec*/
 	private int m_rootListFSecLength;
 	/** The neighbor list for PSec in the FSec*/
-	private int[][] m_nearestNeighbor;
-	private boolean m_doOnce = true;
+	private CandidateSet m_nearestNeighborhood;
+	//private boolean m_doOnce = true;
 	/** The information of tour */
 	private ObjectiveFunction m_f;
 	private Individual<int[]> m_dst;
-//long temp = Long.MAX_VALUE;
+long temp = Long.MAX_VALUE;
 	/** create */
 	public FundamentalStemAndCycle() {
 		super("Subpath Ejection Algorithm using a fundamental Stem-and-Cycle Datastructure");
@@ -90,6 +88,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		// a list or something, you can allocate it here and store it in a
 		// member variable. you can then use this variable in the localSearch
 		// method
+		this.m_nearestNeighborhood = CandidateSet.allocate(this.m_f, 10, this.m_nearestNeighborhood);
 	}
 	/** {@inheritDoc} */
 	@Override
@@ -100,8 +99,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		super.endRun(f);
 		this.m_neighbors = null; //The left and right node of each node
 		this.m_betterTour = null; // The better tour
-		/** The best tour in PSec*/
-		this.m_bestTourPSec = null;
 		/** The root node */
 		this.m_rootNode = 0;
 		/** The first node of the stem connecting the root node */
@@ -119,7 +116,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		/** The root list for sec in fsec*/
 		this.m_rootListFSec = null;
 		/** The neighbor list for PSec in the FSec*/
-		this.m_nearestNeighbor = null;
+		//this.m_nearestNeighbor = null;
 		/** The information of tour */
 		this.m_f = null;
 		this.m_dst = null;
@@ -131,13 +128,12 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.__resetBestTour();
 		// Initialization of the m_betterTour[]
 		this.m_betterTour = new int[this.m_n];
-		this.m_bestTourPSec = new int[this.m_n];
 		//Initialization of the root list
 		this.m_rootList = new int[this.m_n];
 		//The root list for FSec
 		this.m_rootListFSec = new int[this.m_n];
 		//level in sec is 6, select 10 nearest neighbors
-		this.m_nearestNeighbor = new int[this.m_n][10];
+		//this.m_nearestNeighbor = new int[this.m_n][10];
 //		this.__initRootList();
 //		this.m_rootNode = this.__getRandomRoot();
 //		this.m_beginStemNode = this.m_rootNode;
@@ -157,79 +153,13 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 //			this.__resetBestTour();
 //		}
 		
-		if(this.m_doOnce) {
-			this.m_doOnce = false;
-			CandidateSet candidateSet = null;
-			candidateSet = CandidateSet.allocate(this.m_f, 10, candidateSet);
-			for(int j = 1; j <= this.m_n; j++) {
-				for(int i = 1; i <= 10; i++) {
-					this.m_nearestNeighbor[j -1][i - 1] = candidateSet.getCandidate(j, i);
-				}
-			}
-		}
-		
-		//this.__printNearestNeighbor();
-//		int deletedEdgeLength = 10;
-//		int[] deletedEdge = new int[10];
-//		for(int i =0; i < 10; i++) {
-//			deletedEdge[i] = new Random().nextInt(10) + 1;
-//		}
-//		//Remove the repeated node
-//		for(int i = deletedEdgeLength; i > 0; i--) {
-//			for(int j = i -1; j > 0; j--) {
-//				if(deletedEdge[j - 1] == deletedEdge[i - 1]) {
-//					deletedEdge[j - 1] = deletedEdge[--deletedEdgeLength];
-//					break;
-//				}
-//			}
-//		}
-//		deletedEdge[0] = 3;
-//		deletedEdge[1] = 2;
-//		deletedEdgeLength = 2;
-//		System.out.println("deletedEdge");
-//		for(int i =0; i < deletedEdgeLength; i++) {
-//			System.out.println(deletedEdge[i]);
-//		}
-//		//put the available node to root list
-//		this.m_rootListLength = 0;
-//		for(int i = 0; i < deletedEdgeLength; i++) {
-//			for(int j = 0; j < 10; j++) {
-//				if(this.m_rootListLength == 0) {
-//					this.m_rootList[this.m_rootListLength++] = this.m_nearestNeighbor[deletedEdge[i] - 1][j];
-//				} else {
-//					boolean flag = true;
-//					for(int k = 0; k < this.m_rootListLength; k++) {
-//						if(this.m_rootList[k] == this.m_nearestNeighbor[deletedEdge[i] - 1][j]) {
-//							flag = false;
-//							break;
-//						}
-//					}
-//					if(flag) {
-//						this.m_rootList[this.m_rootListLength++] = this.m_nearestNeighbor[deletedEdge[i] - 1][j];
-//					}
-//				}
-//			}
-//		}
-//		System.out.println("rootList");
-//		for(int i = 0; i < this.m_rootListLength; i++) {
-//			System.out.println(this.m_rootList[i]);
-//		}
 		//this.__pSecRootNoChanged();
+		
 		this.__fSecRootNoChanged();
+		
 		//this.__printTubaEdge();
 		//this.__printTubaList();
 		//System.exit(1);
-	}
-	/**
-	 * print nearest neighbor list
-	 */
-	private final void __printNearestNeighbor() {
-		for(int j = 0; j < this.m_n; j++) {
-			for(int i = 0; i < 10; i++) {
-				System.out.print(this.m_nearestNeighbor[j][i] + " ");
-			}
-			System.out.println();
-		}
 	}
 	/**
 	 * get random root node from root list
@@ -289,13 +219,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		PermutationCreateCanonical.makeCanonical(this.m_rootList);
 	}
 	/**
-	 * initialization of the root list for FSec
-	 */
-	private final void __initRootFSecList() {
-		this.m_rootListFSecLength = this.m_n;
-		PermutationCreateCanonical.makeCanonical(this.m_rootListFSec);
-	}
-	/**
 	 * Imply two rules that root node does not change, do the process of pFsc 
 	 * @return no use
 	 */
@@ -320,46 +243,32 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	 */
 	private final void __fSecRootNoChanged() {
 		this.__pSecRootNoChanged();
-		System.arraycopy(this.m_dst.solution, 0, this.m_bestTourPSec, 0, this.m_n);
 		this.__initRootList();
-		long bestPSec = this.__getBetterTour();
-		boolean first = true;
 		while(this.m_rootListLength > 0 && (!(this.m_f.shouldTerminate()))) {
 			this.__secFirstFsec();
 			this.__pSecForFSec();
-			//Reset the best tour to the current tour
-			if(first && bestPSec < this.m_f.evaluate(this.m_dst.solution)) {
-				this.__resetTour(this.m_bestTourPSec);
-			} else {
-				first = false;
-			}
+			this.__resetBestTour();
 		}
-		if(this.m_f.evaluate(this.m_bestTourPSec) < this.m_f.evaluate(this.m_dst.solution)) {
-			System.arraycopy(this.m_bestTourPSec, 0, this.m_dst.solution, 0, this.m_n);
-		}
-//		this.__resetBestTour();
+		this.__resetBestTour();
+//		this.m_beginStemNode = this.m_rootNode;
+//		this.m_endStemNode = this.m_rootNode;
 //		if(this.__getBetterTour() < temp) {
 //			temp = this.__getBetterTour();
-//			System.out.println(this.__getBetterTour());
+//			System.out.println(this.m_n + " " + this.__getBetterTour());
 //		}
 	}
 	/**
 	 * process of the psec for fsec
 	 */
 	private final void __pSecForFSec() {
-		//this.__resetBestTour();
 		this.m_beginStemNode = this.m_rootNode;
 		this.m_endStemNode = this.m_rootNode;
 		//Before the psec, the best tour length
 		long lastTourLength = this.__getBetterTour();
 		while(this.m_rootListFSecLength > 1) {
-			this.__secRootNoChangedFSec();
-			this.__resetBestTour();
-			this.m_beginStemNode = this.m_rootNode;
-			this.m_endStemNode = this.m_rootNode;
-			long currentTour = this.__getBetterTour();
-			if(currentTour < lastTourLength) {
-				lastTourLength = currentTour;
+			long currentTourLength = this.__secRootNoChangedFSec();
+			if(currentTourLength < lastTourLength) {
+				lastTourLength = currentTourLength;
 				this.__initRootList();
 			}
 		}
@@ -372,7 +281,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_level = 6;
 		long bestTourLength = Integer.MAX_VALUE;
 		int bestLevelLength = 0;
-		//int[] bestSolution = null;
+		int[] bestSolution = this.m_betterTour;
 		//Level is 6, add root node
 		int[] deletedEdge = new int[14];
 		int deletedEdgeLength = 0;
@@ -388,13 +297,15 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			countLevel++;
 			int[] jOnCycle = this.__jOnCycleRootNoChanged();
 			int[] jOnStem = this.__jOnStemNoRootChanged();
-			
+			int trialBefore = this.__trialSolution(this.m_rootNode, 
+					this.__getLeftNeighbor(this.m_rootNode), 
+					this.__getRightNeighbor(this.m_rootNode), 
+					this.m_endStemNode);
 			if(jOnCycle == null && jOnStem == null) {
 				break;
 			}
 			if(jOnCycle != null && (jOnStem == null || jOnCycle[0] >= jOnStem[0])) {
 				this.__addEdge(jOnCycle[2], jOnCycle[3]);
-//				System.out.println("countEdge "  + ++countEdge);
 				//System.out.println("j on cycle Delete edge " + jOnCycle[2] + " " + jOnCycle[3]);
 				this.m_jNode = jOnCycle[2];
 				int formerNode = 0;
@@ -411,25 +322,14 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				
 				if(jOnCycle[1] == 1) {
 					if(this.m_beginStemNode != this.m_rootNode) {
-						if(this.m_jNode != subRoot) {
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(formerNode, this.m_jNode, -1);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = subRoot;
-							this.m_endStemNode = formerNode;
-						} else {
-							System.exit(1);
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = formerNode;
-						}
+						//change the structure
+						this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
+						this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
+						this.__setNeighborSame(formerNode, this.m_jNode, -1);
+						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
+						//change the root node
+						this.m_beginStemNode = subRoot;
+						this.m_endStemNode = formerNode;
 					} else {
 						//change the structure
 						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_jNode);
@@ -462,15 +362,21 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				//When get the best tour, put the edge to deletedEdge[]
 				deletedEdge[deletedEdgeLength++] = jOnCycle[2];
 				deletedEdge[deletedEdgeLength++] = jOnCycle[3];
-				long currentTour = this.__getBetterTour();
-				if(currentTour < bestTourLength) {
-					bestTourLength = currentTour;
-					bestLevelLength = deletedEdgeLength;
-					//bestSolution = this.__getBetterSolution();
+
+				int trialAfter = this.__trialSolution(this.m_rootNode, 
+						this.__getLeftNeighbor(this.m_rootNode), 
+						this.__getRightNeighbor(this.m_rootNode), 
+						this.m_endStemNode);
+				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
+					long currentTourlength = this.__getBetterTour();
+					if(currentTourlength < bestTourLength) {
+						bestTourLength = currentTourlength;
+						bestLevelLength = deletedEdgeLength;
+						bestSolution = this.m_betterTour;
+					}
 				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
 				this.__addEdge(jOnStem[1], jOnStem[2]);
-//				System.out.println("countEdge "  + ++countEdge);
 				//System.out.println("j on stem Delete edge " + jOnStem[1] + " " + jOnStem[2]);
 				this.m_jNode = jOnStem[1];
 				int laterNode = jOnStem[2];
@@ -484,11 +390,18 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				//When get the best tour, put the edge to deletedEdge[]
 				deletedEdge[deletedEdgeLength++] = jOnStem[1];
 				deletedEdge[deletedEdgeLength++] = jOnStem[2];
-				long currentTour = this.__getBetterTour();
-				if(currentTour < bestTourLength) {
-					bestTourLength = currentTour;
-					bestLevelLength = deletedEdgeLength;
-					//bestSolution = this.__getBetterSolution();
+
+				int trialAfter = this.__trialSolution(this.m_rootNode, 
+						this.__getLeftNeighbor(this.m_rootNode), 
+						this.__getRightNeighbor(this.m_rootNode), 
+						this.m_endStemNode);
+				if((jOnStem[0] + trialAfter - trialBefore) > 0) {
+					long currentTourlength = this.__getBetterTour();
+					if(currentTourlength < bestTourLength) {
+						bestTourLength = currentTourlength;
+						bestLevelLength = deletedEdgeLength;
+						bestSolution = this.m_betterTour;
+					}
 				}
 			}
 		}
@@ -501,39 +414,28 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				}
 			}
 		}
-//		for(int i = 0; i < deletedEdgeLength; i++) {
-//			System.out.println(deletedEdge[i]);
-//		}
-//		this.__printNearestNeighbor();
-		//put the available node to root list
+		//Get the 10 nearest neighborhood list
 		this.m_rootListFSecLength = 0;
+		boolean[] rootListFSec = new boolean[this.m_n];
 		for(int i = 0; i < bestLevelLength; i++) {
 			for(int j = 0; j < 10; j++) {
-				if(this.m_rootListFSecLength == 0) {
-					this.m_rootListFSec[this.m_rootListFSecLength++] = this.m_nearestNeighbor[deletedEdge[i] - 1][j];
-				} else {
-					boolean flag = true;
-					for(int k = 0; k < this.m_rootListFSecLength; k++) {
-						if(this.m_rootListFSec[k] == this.m_nearestNeighbor[deletedEdge[i] - 1][j]) {
-							flag = false;
-							break;
-						}
-					}
-					if(flag) {
-						this.m_rootListFSec[this.m_rootListFSecLength++] = this.m_nearestNeighbor[deletedEdge[i] - 1][j];
-					}
-				}
+				int dex = this.m_nearestNeighborhood.getCandidate(deletedEdge[i], j + 1) - 1;
+				rootListFSec[dex] = true;
+			}
+		}
+		for(int i = 0; i < this.m_n; i++) {
+			if(rootListFSec[i]) {
+				this.m_rootListFSec[this.m_rootListFSecLength++] = i + 1;
 			}
 		}
 		//Reset the best solution in the loop
-		//System.arraycopy(bestSolution, 0, this.m_dst.solution, 0, this.m_n);
-		this.__resetBestTour();
+		this.__resetTour(bestSolution);
 	}
 	/**
 	 * process of sec,in the psec of the fsec
 	 * @return 
 	 */
-	private final void __secRootNoChangedFSec() {
+	private final long __secRootNoChangedFSec() {
 		
 		this.__initTubaList();
 		this.m_level = this.m_n<<1;
@@ -541,10 +443,10 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_rootNode = this.m_rootListFSec[--this.m_rootListFSecLength];
 		this.m_beginStemNode = this.m_rootNode;
 		this.m_endStemNode = this.m_rootNode;
-		
+		int[] bestSolution = this.m_betterTour;
+		long bestTourLength = this.__getBetterTour();
 		while(countLevel < this.m_level) {
 			countLevel++;
-			this.__getBetterTour();
 			int trialBefore = this.__trialSolution(this.m_rootNode, 
 					this.__getLeftNeighbor(this.m_rootNode), 
 					this.__getRightNeighbor(this.m_rootNode), 
@@ -573,25 +475,14 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				
 				if(jOnCycle[1] == 1) {
 					if(this.m_beginStemNode != this.m_rootNode) {
-						if(this.m_jNode != subRoot) {
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(formerNode, this.m_jNode, -1);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = subRoot;
-							this.m_endStemNode = formerNode;
-						} else {
-							System.exit(1);
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = formerNode;
-						}
+						//change the structure
+						this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
+						this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
+						this.__setNeighborSame(formerNode, this.m_jNode, -1);
+						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
+						//change the root node
+						this.m_beginStemNode = subRoot;
+						this.m_endStemNode = formerNode;
 					} else {
 						//change the structure
 						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_jNode);
@@ -601,13 +492,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.m_beginStemNode = subRoot;
 						this.m_endStemNode = formerNode;
 					} 
-					int trialAfter = this.__trialSolution(this.m_rootNode, 
-							this.__getLeftNeighbor(this.m_rootNode), 
-							this.__getRightNeighbor(this.m_rootNode), 
-							this.m_endStemNode);
-					if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
-						this.__getBetterTour();
-					}
 				} else if(jOnCycle[1] == 2) {
 					if(this.m_beginStemNode != this.m_rootNode) {
 						//change the structure
@@ -627,12 +511,15 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.m_beginStemNode = subRootAno;
 						this.m_endStemNode = laterNode;
 					}
-					int trialAfter = this.__trialSolution(this.m_rootNode, 
-							this.__getLeftNeighbor(this.m_rootNode), 
-							this.__getRightNeighbor(this.m_rootNode), 
-							this.m_endStemNode);
-					if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
-						this.__getBetterTour();
+				}
+				int trialAfter = this.__trialSolution(this.m_rootNode, 
+						this.__getLeftNeighbor(this.m_rootNode), 
+						this.__getRightNeighbor(this.m_rootNode), 
+						this.m_endStemNode);
+				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
+					long currentTourlength = this.__getBetterTour();
+					if(currentTourlength < bestTourLength) {
+						bestSolution = this.m_betterTour;
 					}
 				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
@@ -652,10 +539,16 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.__getRightNeighbor(this.m_rootNode), 
 						this.m_endStemNode);
 				if((jOnStem[0] + trialAfter - trialBefore) > 0) {
-					this.__getBetterTour();
+					long currentTourlength = this.__getBetterTour();
+					if(currentTourlength < bestTourLength) {
+						bestSolution = this.m_betterTour;
+					}
 				}
 			}
 		}
+		//Set the best solution in the loop
+		this.__resetTour(bestSolution);
+		return bestTourLength;
 	}
 	/**
 	 * process of sec, root is not changed
@@ -667,7 +560,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		//this.__initRootList();
 		this.m_level = this.m_n<<1;
 		int countLevel = 0;
-//		int countEdge = 0;
 		this.m_rootNode = this.__getRandomRoot();
 		this.m_beginStemNode = this.m_rootNode;
 		this.m_endStemNode = this.m_rootNode;
@@ -685,7 +577,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			}
 			if(jOnCycle != null && (jOnStem == null || jOnCycle[0] >= jOnStem[0])) {
 				this.__addEdge(jOnCycle[2], jOnCycle[3]);
-//				System.out.println("countEdge "  + ++countEdge);
 				//System.out.println("j on cycle Delete edge " + jOnCycle[2] + " " + jOnCycle[3]);
 				this.m_jNode = jOnCycle[2];
 				int formerNode = 0;
@@ -702,25 +593,14 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				
 				if(jOnCycle[1] == 1) {
 					if(this.m_beginStemNode != this.m_rootNode) {
-						if(this.m_jNode != subRoot) {
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(formerNode, this.m_jNode, -1);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = subRoot;
-							this.m_endStemNode = formerNode;
-						} else {
-							System.exit(1);
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = formerNode;
-						}
+						//change the structure
+						this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
+						this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
+						this.__setNeighborSame(formerNode, this.m_jNode, -1);
+						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
+						//change the root node
+						this.m_beginStemNode = subRoot;
+						this.m_endStemNode = formerNode;
 					} else {
 						//change the structure
 						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_jNode);
@@ -730,13 +610,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.m_beginStemNode = subRoot;
 						this.m_endStemNode = formerNode;
 					} 
-					int trialAfter = this.__trialSolution(this.m_rootNode, 
-							this.__getLeftNeighbor(this.m_rootNode), 
-							this.__getRightNeighbor(this.m_rootNode), 
-							this.m_endStemNode);
-					if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
-						this.__getBetterTour();
-					}
 				} else if(jOnCycle[1] == 2) {
 					if(this.m_beginStemNode != this.m_rootNode) {
 						//change the structure
@@ -756,17 +629,16 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.m_beginStemNode = subRootAno;
 						this.m_endStemNode = laterNode;
 					}
-					int trialAfter = this.__trialSolution(this.m_rootNode, 
-							this.__getLeftNeighbor(this.m_rootNode), 
-							this.__getRightNeighbor(this.m_rootNode), 
-							this.m_endStemNode);
-					if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
-						this.__getBetterTour();
-					}
+				}
+				int trialAfter = this.__trialSolution(this.m_rootNode, 
+						this.__getLeftNeighbor(this.m_rootNode), 
+						this.__getRightNeighbor(this.m_rootNode), 
+						this.m_endStemNode);
+				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
+					this.__getBetterTour();
 				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
 				this.__addEdge(jOnStem[1], jOnStem[2]);
-//				System.out.println("countEdge "  + ++countEdge);
 				//System.out.println("j on stem Delete edge " + jOnStem[1] + " " + jOnStem[2]);
 				this.m_jNode = jOnStem[1];
 				int laterNode = jOnStem[2];
@@ -785,19 +657,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 					this.__getBetterTour();
 				}
 			}
-//			System.out.println("While Level " + countLevel);
-//			if(countLevel == countEdge + 5) {
-//				System.out.println("jOnCycle " + jOnCycle[0]);
-//				System.out.println("jOnCycle " + jOnCycle[1]);
-//				System.out.println("jOnCycle " + jOnCycle[2]);
-//				System.out.println("jOnCycle " + jOnCycle[3]);
-//				System.out.println("jOnStem " + jOnStem[0]);
-//				System.out.println("jOnStem " + jOnStem[1]);
-//				System.out.println("jOnStem " + jOnStem[2]);
-//				System.exit(1);
-//			}
 		}
-		//System.out.println("End Level " + countLevel);
 	}
 
 	/**
