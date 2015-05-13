@@ -53,7 +53,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	/** The information of tour */
 	private ObjectiveFunction m_f;
 	private Individual<int[]> m_dst;
-long temp = Long.MAX_VALUE;
+//long temp = Long.MAX_VALUE;
 	/** create */
 	public FundamentalStemAndCycle() {
 		super("Subpath Ejection Algorithm using a fundamental Stem-and-Cycle Datastructure");
@@ -153,9 +153,9 @@ long temp = Long.MAX_VALUE;
 //			this.__resetBestTour();
 //		}
 		
-		//this.__pSecRootNoChanged();
+		this.__pSecRootNoChanged();
 		
-		this.__fSecRootNoChanged();
+		//this.__fSecRootNoChanged();
 		
 		//this.__printTubaEdge();
 		//this.__printTubaList();
