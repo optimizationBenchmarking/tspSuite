@@ -188,9 +188,11 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     this.m_update = config.getInstance(
 	         SimulatedAnnealing.PARAM_UPDATE_OPERATION,
 	         PermutationUpdateOperator.class, null, this.m_update);
+	     
+	     //max value for initialTemp set for args
 	     this.initialTemp = config.getDouble(
 	    		 SimulatedAnnealing.INITIAL_TEMPERATURE,
-	    		 0 , ,this.initialTemp);
+	    		 0 , 1000000, this.initialTemp);
 	     
 	     this.coolingRate = config.getDouble(
 	    		 SimulatedAnnealing.COOLING_RATE, 
