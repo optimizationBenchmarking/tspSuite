@@ -50,9 +50,6 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 		  super("Simulated Annealing");
 		  this.m_update = PermutationUpdate_Swap.INSTANCE;
 		  
-		  //initialize initialTemp and coolingRate
-		  this.initialTemp;
-		  this.coolingRate;
 	  }
 	  
 	  
@@ -116,7 +113,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	  
 	    	   
 	    	   if (( metroProbability > r.nextDouble())||
-	    		  (metroProbability <=   r.nextDouble() && temp < 1 && constProbability >  r.nextDouble()))
+	    		  ( temp < 1 && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE
@@ -192,7 +189,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     //max value for initialTemp set for args
 	     this.initialTemp = config.getDouble(
 	    		 SimulatedAnnealing.INITIAL_TEMPERATURE,
-	    		 0 , 1000000, this.initialTemp);
+	    		 0 , Math.pow(10, 10), this.initialTemp);
 	     
 	     this.coolingRate = config.getDouble(
 	    		 SimulatedAnnealing.COOLING_RATE, 
