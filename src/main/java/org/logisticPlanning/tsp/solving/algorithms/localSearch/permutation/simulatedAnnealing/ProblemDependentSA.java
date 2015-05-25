@@ -3,6 +3,7 @@ package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.simu
 
 import java.io.PrintStream;
 
+import org.jfree.data.statistics.MeanAndStandardDeviation;
 import org.logisticPlanning.tsp.benchmarking.instances.Instance;
 import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
 import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
@@ -15,19 +16,21 @@ import org.logisticPlanning.utils.config.Configurable;
 import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
-public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgorithm
+
+public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgorithm
 {
-	  /** the serial version uid */
+	
+	 /** the serial version uid */
 	  private static final long serialVersionUID = 1L;
 	  
 	  /** the parameter for the update operation: {@value} */
 	  public static final String PARAM_UPDATE_OPERATION = "updateOperation";
 	  
-	  /** the parameter for the initial temperature: {@value} */
-	  public static final String INITIAL_TEMPERATURE = "initialTemperature";
-	  
 	  /** the parameter for the cooling rate: {@value} */
 	  public static final String COOLING_RATE = "coolingRate";
+	  
+	  /** the parameter for the standard deviation multiplier: {@value} */
+	  public static final String STD_DEVIATION_MULTIPLIER = "stdDeviaitionMultiplier";
 
 	  /** the permutation */
 	  private transient int[] m_sol;
@@ -41,17 +44,20 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	  /** set cooling rate */
 	  private double coolingRate;
 	  
-	 //theoretical value of constant probability
+	 /** theoretical value of constant probability */
 	  private double constProbability; 
 	  
+	  /** */
+	  private int stdDevMultiplier;
 	  
-	  public SimulatedAnnealing()
+	  
+	  public ProblemDependentSA()
 	  {
-		  super("Simulated Annealing");
+		  super("ProblemDependentSA");
 		  this.m_update = PermutationUpdate_Swap.INSTANCE;
 		  
 		  this.coolingRate = 0.99;
-		  this.initialTemp = 10000;
+		  
 		  this.constProbability = 0.07;
 		  
 	  }
@@ -67,10 +73,9 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	  @Override
 	  public final void solve(final ObjectiveFunction f)
 	 { 
-	        // Set temp to initial temp
-		     double temp = initialTemp;
+	        // Set initial temp
+		    double temp = initialTemp;
 
-   
 	        final int n;
 	        final Randomizer r;
 	        final PermutationUpdateOperator op;
@@ -109,9 +114,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   change = op.delta(sol, f, pos1, pos2);
 	    	   
 	    	   //calculate Metropolis probability
-	    	   double metroProbability = acceptMetropolisProb(change, temp);
-	    	   
-	    	  
+	    	   double metroProbability = acceptMetropolisProb(change, temp);	    	  
 	    	   
 	    	   if (( metroProbability > r.nextDouble())||
 	    		  ( temp < 1 && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
@@ -127,7 +130,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   temp *= coolingRate;
 	        
 	       }	        	        
-     }
+   }
 	
 	  // Calculate the Metropolis acceptance probability
 	   public final double acceptMetropolisProb(double change, double temperature) 
@@ -138,15 +141,71 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       }
 	        // If the new solution is worse, calculate an acceptance probability
 	       return Math.exp( - change / temperature);
-        
-     }
-
+      
+        }
 	   
-	   @Override
-	   public SimulatedAnnealing clone()
+	   //calculate initial temperature
+	   public final static double getInitialTemp(final ObjectiveFunction f, int N, int stdDevMultiplier)
 	   {
-		   final SimulatedAnnealing clo;
-		   clo = ((SimulatedAnnealing)(super.clone()));
+		    final int n;
+	        final Randomizer r;
+	        
+	        int[] sol;
+	        long tourLength;
+	        long[] allTour;
+	        long tourSum = 0;
+	        
+	        //standard deviation of all tours
+	        double stdDevTour;
+	        double mean;
+	        double initialTemperature;
+	        
+	        r = f.getRandom();
+	        n = f.n();
+
+	        sol = new int[n];
+            allTour = new long[N];
+            
+	       // initialize permutation
+	        PermutationCreateCanonical.makeCanonical(sol, n);
+	        
+	        //calculate the sum of N randomly generated tours
+	        for (int i = 0; i < N; i++)
+	        { 	
+	            r.shuffle(sol, 0, n);
+	            // get the length of each permutation
+	            tourLength = f.evaluate(sol);
+	            allTour[i] = tourLength;
+	            tourSum += tourLength;
+	        }
+	        
+	        mean = tourSum/(double)N;
+	        
+	        long stdVal, stdSum = 0;
+	        
+	        //calculate standard deviation
+	        for (int j = 0; j < N; j++)
+	        {
+	        	stdVal = (long)Math.pow((allTour[j]-mean),2);
+	        	stdSum += stdVal;
+	        }
+	        
+	        stdDevTour = Math.sqrt(stdSum/N);
+	        
+	        //calculate the initial temperature from the standard deviation
+	        initialTemperature = stdDevTour*stdDevMultiplier;
+	        
+	        return initialTemperature;
+	        
+	   }
+	   
+	   
+	   	   
+	   @Override
+	   public ProblemDependentSA clone()
+	   {
+		   final ProblemDependentSA clo;
+		   clo = ((ProblemDependentSA)(super.clone()));
 		   clo.m_sol = null;
 		   clo.m_update = clo.m_update.clone();
 		   
@@ -165,6 +224,10 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     super.beginRun(f);
 	     this.m_update.beginRun(f);
 	     this.m_sol = new int[f.n()];
+	     
+	     int N = 100;
+	     
+	     this.initialTemp = getInitialTemp(f, N, this.stdDevMultiplier);
 
 	   }
 
@@ -185,17 +248,17 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     super.configure(config);
 
 	     this.m_update = config.getInstance(
-	         SimulatedAnnealing.PARAM_UPDATE_OPERATION,
+	    		 ProblemDependentSA.PARAM_UPDATE_OPERATION,
 	         PermutationUpdateOperator.class, null, this.m_update);
-	     
-	     //max value for initialTemp set for args
-	     this.initialTemp = config.getDouble(
-	    		 SimulatedAnnealing.INITIAL_TEMPERATURE,
-	    		 0 , Math.pow(10, 10), this.initialTemp);
+	  
+	     this.stdDevMultiplier = config.getInt(
+	    		 ProblemDependentSA.STD_DEVIATION_MULTIPLIER
+	    		 , 0, 100, this.stdDevMultiplier);
 	     
 	     this.coolingRate = config.getDouble(
-	    		 SimulatedAnnealing.COOLING_RATE, 
-	    		 0, 1, this.coolingRate);
+	    		 ProblemDependentSA.COOLING_RATE, 
+	    		 0, 1, this.coolingRate); 
+	     	     
 	   }
 
 	   /** {@inheritDoc} */
@@ -203,14 +266,14 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	   public void printConfiguration(final PrintStream ps) {
 	     super.printConfiguration(ps);
 
-	     Configurable.printKey(SimulatedAnnealing.PARAM_UPDATE_OPERATION, ps);
+	     Configurable.printKey(ProblemDependentSA.PARAM_UPDATE_OPERATION, ps);
 	     
 	     ps.println(this.m_update);
 	     
-	     Configurable.printKey(SimulatedAnnealing.INITIAL_TEMPERATURE, ps);
-	     ps.println(this.initialTemp);
+	    Configurable.printKey(ProblemDependentSA.STD_DEVIATION_MULTIPLIER, ps);
+	    ps.println(this.stdDevMultiplier);
 	     
-	     Configurable.printKey(SimulatedAnnealing.COOLING_RATE, ps);
+	     Configurable.printKey(ProblemDependentSA.COOLING_RATE, ps);
 	     ps.println(this.coolingRate);
 	     
 	   }
@@ -221,19 +284,18 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 
 	     super.printParameters(ps);
 
-	     Configurable.printKey(SimulatedAnnealing.PARAM_UPDATE_OPERATION, ps);
+	     Configurable.printKey(ProblemDependentSA.PARAM_UPDATE_OPERATION, ps);
 	     ps.println("the update operation to use in the annealing."); //$NON-NLS-1$
 	     
-	     Configurable.printKey(SimulatedAnnealing.INITIAL_TEMPERATURE, ps);
-	     ps.println("The initial temperature used in the simulated annealing: ");
+	     Configurable.printKey(ProblemDependentSA.STD_DEVIATION_MULTIPLIER, ps);
+	     ps.println("The standard deviation nultiplier used to determine "
+	     		+ "initial temperature in the simulated annealing: ");
 	     
-	     Configurable.printKey(SimulatedAnnealing.COOLING_RATE, ps);
+	     Configurable.printKey(ProblemDependentSA.COOLING_RATE, ps);
 	     ps.println("The cooling rate used in the simulated annealing"
 	     		+ "(e.g.cooling rate = 0.99, "
-	     		+ "then every time the temperature will be by 0.99*temperature : ");
+	     		+ "then every time the temperature will be 0.99 *temperature : ");
 	   }
 
+
 }
-
-
-
