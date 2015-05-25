@@ -26,6 +26,7 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   
   /** the parameter of the alpha */
   public static final String PARAM_A = "A";
+  /** the parameter of the alpha */
   public static final String PARAM_B = "B";
 
   /**
@@ -38,6 +39,7 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   private double m_beta;
   /** the parameter of the alpha */
   private int m_A;
+  /** the parameter of the alpha */
   private int m_B;
   
   /** the instance variable of Random */
@@ -49,13 +51,16 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   
   /** the probability of power law distribution  */
   private double[] m_Nprobability;
+  /** the probability of power law distribution  */
   private double[] m_N1probability;
   /** the sum of the probability */
   double sum1;
+  /** the sum of the probability */
   double sum2;
   
   /** the potential Energy of each city */
   private int[] m_cityPotentialEnergy;
+  /** the copy of potential Energy of each city */
   private int[] m_cityPotentialEnergy_copy;
   
   /** the index of each city in srcdst */
@@ -63,6 +68,7 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
 
   /** the changed Energy of the city */
   private int[] m_cityChangedEnergy;
+  /** the copy of changed Energy of the city */
   private int[] m_cityChangedEnergy_copy;
   
   /** instantiate */
