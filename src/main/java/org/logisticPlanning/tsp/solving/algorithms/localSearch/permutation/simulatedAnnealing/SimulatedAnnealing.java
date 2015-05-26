@@ -41,18 +41,27 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	  /** set cooling rate */
 	  private double coolingRate;
 	  
-	 //theoretical value of constant probability
+	 /** theoretical value of constant probability */
 	  private double constProbability; 
 	  
+	  /** theoretical value of the critical temperature
+	   * when constant probability should start */ 
+	  private double criticalTemp;
 	  
 	  public SimulatedAnnealing()
 	  {
 		  super("Simulated Annealing");
 		  this.m_update = PermutationUpdate_Swap.INSTANCE;
 		  
+		  //Default cooling rate
 		  this.coolingRate = 0.99;
+		  
+		  //Default initial temp
 		  this.initialTemp = 10000;
+		  
 		  this.constProbability = 0.07;
+		  
+		  this.criticalTemp = 5;
 		  
 	  }
 	  
@@ -97,7 +106,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       op = this.m_update;
 	       
 	       //loop until system has cooled 
-	       while (temp > 0)
+	       while (temp > 1)
 	       {
 	    	   // Get two random positions in the tour
 	    	   pos1 = r.nextInt(n);
@@ -114,7 +123,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	  
 	    	   
 	    	   if (( metroProbability > r.nextDouble())||
-	    		  ( temp < 1 && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
+	    		  ( temp < criticalTemp && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE

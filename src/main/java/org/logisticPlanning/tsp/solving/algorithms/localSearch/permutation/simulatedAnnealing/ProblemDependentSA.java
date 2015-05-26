@@ -47,7 +47,11 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	 /** theoretical value of constant probability */
 	  private double constProbability; 
 	  
-	  /** */
+	  /** theoretical value of the critical temperature
+	   * when constant probability should start */ 
+	  private double criticalTemp;
+	  
+	  /** standard deviation multipler for initial temp*/
 	  private int stdDevMultiplier;
 	  
 	  
@@ -56,9 +60,17 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 		  super("ProblemDependentSA");
 		  this.m_update = PermutationUpdate_Swap.INSTANCE;
 		  
+		  //Default cooling rate
 		  this.coolingRate = 0.99;
+		  //Default initial temp
+		  this.initialTemp = 10000;
 		  
 		  this.constProbability = 0.07;
+		  this.criticalTemp = 5;
+		  
+		  //Default stdDevMultiplier
+		  //this.stdDevMultiplier = 50;
+		 
 		  
 	  }
 	  
@@ -102,7 +114,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       op = this.m_update;
 	       
 	       //loop until system has cooled 
-	       while (temp > 0)
+	       while (temp > 1)
 	       {
 	    	   // Get two random positions in the tour
 	    	   pos1 = r.nextInt(n);
@@ -117,7 +129,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   double metroProbability = acceptMetropolisProb(change, temp);	    	  
 	    	   
 	    	   if (( metroProbability > r.nextDouble())||
-	    		  ( temp < 1 && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
+	    		  ( temp < criticalTemp && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE
@@ -225,6 +237,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     this.m_update.beginRun(f);
 	     this.m_sol = new int[f.n()];
 	     
+	     //number of runs to decide initial temp
 	     int N = 100;
 	     
 	     this.initialTemp = getInitialTemp(f, N, this.stdDevMultiplier);
