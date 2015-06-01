@@ -31,6 +31,12 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	  
 	  /** the parameter for the standard deviation multiplier: {@value} */
 	  public static final String STD_DEVIATION_MULTIPLIER = "stdDeviaitionMultiplier";
+	  
+	  /** the parameter for the critical temperature: {@value} */
+	  public static final String CRITICAL_TEMPERATURE = "criticalTemp";
+	  
+	  /** the parameter for the constant probability: {@value} */
+	  public static final String CONSTANT_PROBABILITY = "constantProbability";
 
 	  /** the permutation */
 	  private transient int[] m_sol;
@@ -61,12 +67,12 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 		  this.m_update = PermutationUpdate_Swap.INSTANCE;
 		  
 		  //Default cooling rate
-		  this.coolingRate = 0.99;
+		  this.coolingRate = 0.997;
 		  //Default initial temp
 		  this.initialTemp = 10000;
 		  
 		  this.constProbability = 0.07;
-		  this.criticalTemp = 5;
+		  this.criticalTemp = 2;
 		  
 		  //Default stdDevMultiplier
 		  //this.stdDevMultiplier = 50;
@@ -224,6 +230,10 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 		   clo.initialTemp = this.initialTemp;
 		   clo.coolingRate = this.coolingRate;
 		   
+		   clo.constProbability = this.constProbability;
+		   clo.criticalTemp = this.criticalTemp;
+		   clo.stdDevMultiplier = this.stdDevMultiplier;
+		   
 		   return clo;
 		   
 	   }
@@ -271,6 +281,15 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     this.coolingRate = config.getDouble(
 	    		 ProblemDependentSA.COOLING_RATE, 
 	    		 0, 1, this.coolingRate); 
+	     
+	     this.criticalTemp = config.getDouble(
+	    		 ProblemDependentSA.CRITICAL_TEMPERATURE, 
+	    		 this.initialTemp/10000, this.initialTemp, 
+	    		 this.criticalTemp);
+	     
+	     this.constProbability = config.getDouble(
+	    		 ProblemDependentSA.CONSTANT_PROBABILITY, 
+	    		 0, 0.1, this.constProbability);
 	     	     
 	   }
 
@@ -288,6 +307,13 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     
 	     Configurable.printKey(ProblemDependentSA.COOLING_RATE, ps);
 	     ps.println(this.coolingRate);
+	     
+	     Configurable.printKey(ProblemDependentSA.CRITICAL_TEMPERATURE, ps);
+	     ps.println(this.criticalTemp);
+	     
+	     Configurable.printKey(ProblemDependentSA.CONSTANT_PROBABILITY, ps);
+	     ps.println(this.constProbability);
+	     
 	     
 	   }
 
@@ -308,6 +334,14 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	     ps.println("The cooling rate used in the simulated annealing"
 	     		+ "(e.g.cooling rate = 0.99, "
 	     		+ "then every time the temperature will be 0.99 *temperature : ");
+	     
+	     Configurable.printKey(ProblemDependentSA.CRITICAL_TEMPERATURE, ps);
+	     ps.println("The ciritical temperature that divides "
+	     		+ "between Metropolis acceptance probability and"
+	     		+ "constant acceptance probability :");
+	     
+	     Configurable.printKey(ProblemDependentSA.CONSTANT_PROBABILITY, ps);
+	     ps.println("The constant acceptance probability :");
 	   }
 
 
