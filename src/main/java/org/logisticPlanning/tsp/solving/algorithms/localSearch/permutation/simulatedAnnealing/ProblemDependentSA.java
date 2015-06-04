@@ -60,7 +60,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	  /** standard deviation multipler for initial temp*/
 	  private int stdDevMultiplier;
 	  
-	  
+	  /** instantiate */
 	  public ProblemDependentSA()
 	  {
 		  super("ProblemDependentSA");
@@ -73,13 +73,15 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 		  
 		  this.constProbability = 0.07;
 		  this.criticalTemp = 2;
-		  
-		  //Default stdDevMultiplier
-		  //this.stdDevMultiplier = 50;
-		 
-		  
+		  		  
 	  }
 	  
+	  /**
+	   * Perform the problem dependent simulated annealing algorithm
+	   * 
+	   * @param args
+	   *          the command line arguments
+	   */
 	  
 	  public static void main(final String[] args) 
 	  {
@@ -120,7 +122,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       op = this.m_update;
 	       
 	       //loop until system has cooled 
-	       while (temp > 1)
+	       while (temp > 1 && f.shouldTerminate())
 	       {
 	    	   // Get two random positions in the tour
 	    	   pos1 = r.nextInt(n);
@@ -132,10 +134,12 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   change = op.delta(sol, f, pos1, pos2);
 	    	   
 	    	   //calculate Metropolis probability
-	    	   double metroProbability = acceptMetropolisProb(change, temp);	    	  
+	    	   double metroProbability = acceptMetropolisProb(change, temp);	 
 	    	   
-	    	   if (( metroProbability > r.nextDouble())||
-	    		  ( temp < criticalTemp && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
+	    	   double randomCheck = r.nextDouble();
+	    	   
+	    	   if (( metroProbability > randomCheck) ||
+	    		  ( temp < criticalTemp && metroProbability <= randomCheck && constProbability > randomCheck))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE
@@ -150,7 +154,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       }	        	        
    }
 	
-	  // Calculate the Metropolis acceptance probability
+	  /** Calculate the Metropolis acceptance probability */
 	   public final double acceptMetropolisProb(double change, double temperature) 
 	   {
 	       // If the new solution is better, accept it
@@ -162,7 +166,7 @@ public class ProblemDependentSA extends org.logisticPlanning.tsp.solving.TSPAlgo
       
         }
 	   
-	   //calculate initial temperature
+	   /**calculate initial temperature */
 	   public final static double getInitialTemp(final ObjectiveFunction f, int N, int stdDevMultiplier)
 	   {
 		    final int n;

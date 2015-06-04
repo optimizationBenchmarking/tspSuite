@@ -54,6 +54,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	   * when constant probability should start */ 
 	  private double criticalTemp;
 	  
+	  /** instantiate */
 	  public SimulatedAnnealing()
 	  {
 		  super("Simulated Annealing");
@@ -71,6 +72,13 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 		  
 	  }
 	  
+	  
+	  /**
+	   * Perform the simulated annealing algorithm
+	   * 
+	   * @param args
+	   *          the command line arguments
+	   */
 	  
 	  public static void main(final String[] args) 
 	  {
@@ -112,7 +120,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       op = this.m_update;
 	       
 	       //loop until system has cooled 
-	       while (temp > 1)
+	       while (temp > 1 && f.shouldTerminate())
 	       {
 	    	   // Get two random positions in the tour
 	    	   pos1 = r.nextInt(n);
@@ -126,10 +134,10 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   //calculate Metropolis probability
 	    	   double metroProbability = acceptMetropolisProb(change, temp);
 	    	   
-	    	  
+	    	   double randomCheck = r.nextDouble();
 	    	   
-	    	   if (( metroProbability > r.nextDouble())||
-	    		  ( temp < criticalTemp && metroProbability <=   r.nextDouble() && constProbability >  r.nextDouble()))
+	    	   if (( metroProbability > randomCheck) ||
+	    		  ( temp < criticalTemp && metroProbability <= randomCheck && constProbability > randomCheck))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE
@@ -144,7 +152,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	       }	        	        
      }
 	
-	  // Calculate the Metropolis acceptance probability
+	  /** Calculate the Metropolis acceptance probability */
 	   public final double acceptMetropolisProb(double change, double temperature) 
 	   {
 	       // If the new solution is better, accept it
