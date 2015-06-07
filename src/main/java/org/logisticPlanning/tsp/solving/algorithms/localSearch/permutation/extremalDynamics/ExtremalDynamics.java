@@ -15,19 +15,19 @@ import org.logisticPlanning.utils.config.Configuration;
 /**
  * The Extremal Dynamics algorithm.
  */
-public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
+public final class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   /** the serial version uid */
   private static final long serialVersionUID = 1L;
 
-  /** the parameter of the power law distribution*/
+  /** the parameter of the power law distribution */
   public static final String PARAM_ALPHA = "alpha";//$NON-NLS-1$
   /** the parameter of the power law distribution */
   public static final String PARAM_Beta = "Beta"; //$NON-NLS-1$
-  
+
   /** the parameter of the alpha */
-  public static final String PARAM_A = "A";
+  public static final String PARAM_A = "A";//$NON-NLS-1$
   /** the parameter of the alpha */
-  public static final String PARAM_B = "B";
+  public static final String PARAM_B = "B";//$NON-NLS-1$
 
   /**
    * An example for a possible parameter
@@ -41,28 +41,28 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   private int m_A;
   /** the parameter of the alpha */
   private int m_B;
-  
+
   /** the instance variable of Random */
   private Random m_r;
   /** the index of nearstCity */
   private int[] m_nearestCity;
   /** the index of next city connected to current city */
   private int[] m_nextCity;
-  
-  /** the probability of power law distribution  */
+
+  /** the probability of power law distribution */
   private double[] m_Nprobability;
-  /** the probability of power law distribution  */
+  /** the probability of power law distribution */
   private double[] m_N1probability;
   /** the sum of the probability */
-  double sum1;
+  private double m_sum1;
   /** the sum of the probability */
-  double sum2;
-  
+  private double m_sum2;
+
   /** the potential Energy of each city */
   private int[] m_cityPotentialEnergy;
   /** the copy of potential Energy of each city */
   private int[] m_cityPotentialEnergy_copy;
-  
+
   /** the index of each city in srcdst */
   private int[] m_cityIndex;
 
@@ -70,23 +70,23 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   private int[] m_cityChangedEnergy;
   /** the copy of changed Energy of the city */
   private int[] m_cityChangedEnergy_copy;
-  
+
   /** instantiate */
   public ExtremalDynamics() {
-    super("Extremal Dynamics");//$NON-NLS-1$ 
+    super("Extremal Dynamics");//$NON-NLS-1$
     this.m_alpha = 1;
     this.m_beta = 1;// some initial value
   }
 
- 
   /**
-   * 
-   * @param F the probability density function
-   * @param sum the sum of all the probability
-   * @return a random value according to the power law
-   *         distribution
+   * @param F
+   *          the probability density function
+   * @param sum
+   *          the sum of all the probability
+   * @return a random value according to the power law distribution
    */
-  private final int powerLawDistribution(double[] F, double sum) {
+  private final int __powerLawDistribution(final double[] F,
+      final double sum) {
     double r;
     int k;
 
@@ -115,9 +115,8 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
    *          return the kth max value.
    * @return the kth max/min value in the array start from @start end to @end
    */
-  private static final int kthValue(final int[] nums, final int k, final int start,
-      final int end, final boolean tag) {
-
+  private static final int __kthValue(final int[] nums, final int k,
+      final int start, final int end, final boolean tag) {
 
     final int sentry = nums[end];
     int i = start - 1;
@@ -148,9 +147,10 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
       return nums[i + 1];
     } else
       if (((i + 2) - start) > k) {
-        return kthValue(nums, k, start, i, tag);
+        return ExtremalDynamics.__kthValue(nums, k, start, i, tag);
       } else {
-        return kthValue(nums, k - ((i + 2) - start), i + 2, end, tag);
+        return ExtremalDynamics.__kthValue(nums, k - ((i + 2) - start),
+            i + 2, end, tag);
       }
   }
 
@@ -161,7 +161,8 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
    *          city index
    * @return return the index of the nearest city of city {@code c}
    */
-  private static final int nearestCityIndex(final ObjectiveFunction f, final int c) {
+  private static final int __nearestCityIndex(final ObjectiveFunction f,
+      final int c) {
     final int n = f.n();
     int dstCity = 0;
     int i;
@@ -180,32 +181,36 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * return potential Energy of each city, the index is 1-base
+   *
    * @param srcdst
-   * 			the object that store the current solution
-   * @param f	
-   * 			the ObjectiveFunction that store the city information
+   *          the object that store the current solution
+   * @param f
+   *          the ObjectiveFunction that store the city information
    * @param energy
-   * 			the array store each city potential energy
-   * @param start
-   * 			the start place in the path we need to change the potential energy
+   *          the array store each city potential energy
+   * @param xstart
+   *          the start place in the path we need to change the potential
+   *          energy
    * @param end
-   * 			the end place in the path that we need to change the potential energy
+   *          the end place in the path that we need to change the
+   *          potential energy
    */
-  private final void potentialEnergy(final Individual<int[]> srcdst,
-      final ObjectiveFunction f, int[] energy, int start, int end) {
-    final int n = f.n();
-    int i;
-    int curCity;
-    int nextCity;
-    int nearestCity;
+  private final void __potentialEnergy(final Individual<int[]> srcdst,
+      final ObjectiveFunction f, final int[] energy, final int xstart,
+      final int end) {
+    final int n;
+    int i, curCity, nextCity, nearestCity, start;
 
-    if (start == -1){
-    	curCity = srcdst.solution[f.n()-1];
-    	nextCity = srcdst.solution[0];
-    	nearestCity = this.m_nearestCity[curCity];
-    	energy[curCity] = f.distance(curCity, nextCity)
-    	          - f.distance(curCity, nearestCity);
-    	start++;
+    n = f.n();
+    start = xstart;
+
+    if (start == -1) {
+      curCity = srcdst.solution[f.n() - 1];
+      nextCity = srcdst.solution[0];
+      nearestCity = this.m_nearestCity[curCity];
+      energy[curCity] = f.distance(curCity, nextCity)
+          - f.distance(curCity, nearestCity);
+      start++;
     }
     for (i = start; i <= end; i++) {
       curCity = srcdst.solution[i];
@@ -217,25 +222,26 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   }
 
   /**
-   * 
    * @param srcdst
-   * 			current solution object
-   * @param f	
-   * 			ObjectiveFunction store the city information
+   *          current solution object
+   * @param f
+   *          ObjectiveFunction store the city information
    * @param connectedCity
-   * 			the array stores the index of connected city
-   * @param start
-   * 			the start place in the path we need to change connected city
+   *          the array stores the index of connected city
+   * @param xstart
+   *          the start place in the path we need to change connected city
    * @param end
-   * 			the end place in the path we need to change connected city
+   *          the end place in the path we need to change connected city
    */
-  private final void nextCity(final Individual<int[]> srcdst,
-      final ObjectiveFunction f, int[] connectedCity, int start, int end) {
+  private final void __nextCity(final Individual<int[]> srcdst,
+      final ObjectiveFunction f, final int[] connectedCity,
+      final int xstart, final int end) {
+    int i, start;
 
-    int i;
-    if (start == -1){
-    	connectedCity[srcdst.solution[f.n()-1]] = srcdst.solution[0];
-    	start++;
+    start = xstart;
+    if (start == -1) {
+      connectedCity[srcdst.solution[f.n() - 1]] = srcdst.solution[0];
+      start++;
     }
     for (i = start; i <= end; i++) {
       connectedCity[srcdst.solution[i]] = srcdst.solution[(i + 1) % f.n()];
@@ -250,28 +256,32 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
    * @param firstCity
    *          the chosen city to use 2-opt method
    * @param deltaEnergy
-   * 			the array that store the changed energy according to the chosen city
+   *          the array that store the changed energy according to the
+   *          chosen city
    */
- private final void changedEnergy(final Individual<int[]> srcdst,
-      final ObjectiveFunction f, final int firstCity, int[] deltaEnergy) {
+  private final void __changedEnergy(final Individual<int[]> srcdst,
+      final ObjectiveFunction f, final int firstCity,
+      final int[] deltaEnergy) {
     int i;
 
-    /*int t_disab,t_discd,t_disac,t_disbd;
-    int t_length;*/
-    
+    /*
+     * int t_disab,t_discd,t_disac,t_disbd; int t_length;
+     */
+
     for (i = 1; i <= f.n(); i++) {
       if (i != firstCity) {
         if ((i != this.m_nextCity[firstCity])
             && (this.m_nextCity[i] != firstCity)
             && (this.m_nextCity[i] != this.m_nextCity[firstCity])) {
-        	
-        	/*t_disab = f.distance(firstCity, this.m_nextCity[firstCity]);
-        	t_discd = f.distance(i, this.m_nextCity[i]);
-        	t_disac = f.distance(firstCity,i);
-        	t_disbd = f.distance(this.m_nextCity[firstCity],this.m_nextCity[i]);
-        	
-        	t_length = t_disac+t_disbd-t_disab-t_discd;*/
-        	
+
+          /*
+           * t_disab = f.distance(firstCity, this.m_nextCity[firstCity]);
+           * t_discd = f.distance(i, this.m_nextCity[i]); t_disac =
+           * f.distance(firstCity,i); t_disbd =
+           * f.distance(this.m_nextCity[firstCity],this.m_nextCity[i]);
+           * t_length = t_disac+t_disbd-t_disab-t_discd;
+           */
+
           deltaEnergy[i] = (f.distance(firstCity, i) + f.distance(
               this.m_nextCity[firstCity], this.m_nextCity[i]))
               - f.distance(firstCity, this.m_nextCity[firstCity])
@@ -291,19 +301,21 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
    * @param f
    *          ObjectiveFunction of city information
    * @param index
-   * 			the array store the index of the city in srcdst
-   * @param start
-   * 			the start place in the path we need to changed the city index
+   *          the array store the index of the city in srcdst
+   * @param xstart
+   *          the start place in the path we need to changed the city index
    * @param end
-   * 			the end place in the path we need to changed the city index
+   *          the end place in the path we need to changed the city index
    */
- private final void cityInDstIndex(final Individual<int[]> srcdst,
-      final ObjectiveFunction f, int[] index, int start, int end) {
-    int i;
-    
-    if(start == -1){
-    	index[srcdst.solution[f.n()-1]] = f.n()-1;
-    	start++;
+  private final void __cityInDstIndex(final Individual<int[]> srcdst,
+      final ObjectiveFunction f, final int[] index, final int xstart,
+      final int end) {
+    int i, start;
+
+    start = xstart;
+    if (start == -1) {
+      index[srcdst.solution[f.n() - 1]] = f.n() - 1;
+      start++;
     }
     for (i = start; i <= end; i++) {
       index[srcdst.solution[i]] = i;
@@ -314,37 +326,16 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
   @Override
   public void localSearch(final Individual<int[]> srcdst,
       final ObjectiveFunction f) {
-
-    // 1. srcdst contains an existing solution which is the input to your
-    // algorithm. It could be randomly generated or come from a heuristic.
-    // srcdst.solution = a permutation in form of an int[] of n cities to
-    // visit
-    // srcdst.tourLength = the tour length of the tour
-    // srcdst.tourLength = f.evaluate(srcdst.solution);
-    // 2. Your algorithm modifies srcdst.solution and srcdst.tourLength
-    // during the local search
-
-    // 3. the ObjectiveFunction f can provide you with all information you
-    // need during the search:
-    // f.distance(i, j) returns the distance between city i and city j
-    // f.evaluate(nodes) computes the length of a tour
-    // f.n() gives you the number of cities
-
-    // 4. in every loop, your algorithm must check f.shouldTerminate(). If
-    // it becomes true, you need to return / exit this method
-
-
     int firstChosenCity = 0, secondChosenCity = 0;
     int cityB;
-    int index1 = 1, index2 = f.n()-1;
+    int index1 = 1, index2 = f.n() - 1;
     int index1_copy = index1, index2_copy = index2;
     int temp;
     int kthHigh, uthLow;
     int kthHighValue, uthLowValue;
     int i;
-    
-  //  long t_length;
- 
+
+    // long t_length;
 
     final int[] bestSolution = new int[f.n()];
     long bestLength;
@@ -357,26 +348,27 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
     System.arraycopy(srcdst.solution, 0, bestSolution, 0, f.n());
     srcdst.tourLength = f.evaluate(srcdst.solution);
     bestLength = srcdst.tourLength;
-    
+
     for (;;) {
-  
-      this.nextCity(srcdst, f, this.m_nextCity, (index1_copy-1), index2_copy);
-      	//this.nextCity(srcdst, f, this.m_nextCity, 0, f.n()-1);
-      this.cityInDstIndex(srcdst, f, this.m_cityIndex, (index1_copy-1), index2_copy); 
-      	//this.cityInDstIndex(srcdst, f, this.m_cityIndex, 0, f.n()-1);
-      this.potentialEnergy(srcdst, f, this.m_cityPotentialEnergy, (index1_copy-1), index2_copy);
-      	//this.potentialEnergy(srcdst, f, this.m_cityPotentialEnergy, 0, f.n()-1);
-    
-    	
-    	
-       
-        
+
+      this.__nextCity(srcdst, f, this.m_nextCity, (index1_copy - 1),
+          index2_copy);
+      // this.nextCity(srcdst, f, this.m_nextCity, 0, f.n()-1);
+      this.__cityInDstIndex(srcdst, f, this.m_cityIndex,
+          (index1_copy - 1), index2_copy);
+      // this.cityInDstIndex(srcdst, f, this.m_cityIndex, 0, f.n()-1);
+      this.__potentialEnergy(srcdst, f, this.m_cityPotentialEnergy,
+          (index1_copy - 1), index2_copy);
+      // this.potentialEnergy(srcdst, f, this.m_cityPotentialEnergy, 0,
+      // f.n()-1);
 
       // choose the first city
-      kthHigh = this.powerLawDistribution(this.m_Nprobability, this.sum1);
-      System.arraycopy(this.m_cityPotentialEnergy,0,this.m_cityPotentialEnergy_copy,0,f.n()+1);
-      kthHighValue = kthValue(this.m_cityPotentialEnergy_copy, kthHigh, 1, f.n(),
-          false);
+      kthHigh = this.__powerLawDistribution(this.m_Nprobability,
+          this.m_sum1);
+      System.arraycopy(this.m_cityPotentialEnergy, 0,
+          this.m_cityPotentialEnergy_copy, 0, f.n() + 1);
+      kthHighValue = ExtremalDynamics.__kthValue(
+          this.m_cityPotentialEnergy_copy, kthHigh, 1, f.n(), false);
       for (i = 1; i <= f.n(); i++) {
         if (this.m_cityPotentialEnergy[i] == kthHighValue) {
           firstChosenCity = i;
@@ -385,11 +377,14 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
       }
 
       // choose the 2-opt method exchange city
-      this.changedEnergy(srcdst, f, firstChosenCity, this.m_cityChangedEnergy);
-      uthLow = this.powerLawDistribution(this.m_N1probability, this.sum2);
-      System.arraycopy(this.m_cityChangedEnergy, 0, this.m_cityChangedEnergy_copy, 0, f.n()+1);
-      uthLowValue = kthValue(this.m_cityChangedEnergy_copy, uthLow + 1, 1, f.n(),
-          true);
+      this.__changedEnergy(srcdst, f, firstChosenCity,
+          this.m_cityChangedEnergy);
+      uthLow = this.__powerLawDistribution(this.m_N1probability,
+          this.m_sum2);
+      System.arraycopy(this.m_cityChangedEnergy, 0,
+          this.m_cityChangedEnergy_copy, 0, f.n() + 1);
+      uthLowValue = ExtremalDynamics.__kthValue(
+          this.m_cityChangedEnergy_copy, uthLow + 1, 1, f.n(), true);
       for (i = 1; i <= f.n(); i++) {
         if (this.m_cityChangedEnergy[i] == uthLowValue) {
           secondChosenCity = i;
@@ -410,35 +405,36 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
         // cityC = cityNext[secondChosenCity];
         index1 = this.m_cityIndex[cityB];
         index2 = this.m_cityIndex[secondChosenCity];
-        
-        if(index1 > index2){
-        	cityB = this.m_nextCity[secondChosenCity];
-        	index1 = this.m_cityIndex[cityB];
-        	index2 = this.m_cityIndex[firstChosenCity];
+
+        if (index1 > index2) {
+          cityB = this.m_nextCity[secondChosenCity];
+          index1 = this.m_cityIndex[cityB];
+          index2 = this.m_cityIndex[firstChosenCity];
         }
-        
+
         index1_copy = index1;
         index2_copy = index2;
         // 2-opt method to change the connected city
-        	while (index1 < index2) {
-        		temp = srcdst.solution[index1];
-        		srcdst.solution[index1] = srcdst.solution[index2];
-        		srcdst.solution[index2] = temp;
-        		index1++;
-        		index2--;
-        	}
-        
-        	
-        srcdst.tourLength = srcdst.tourLength + this.m_cityChangedEnergy[secondChosenCity];
-        	//t_length = srcdst.tourLength + this.m_cityChangedEnergy[secondChosenCity];
-        	//srcdst.tourLength = f.evaluate(srcdst.solution);
-        	f.registerFE(srcdst.solution, srcdst.tourLength);
+        while (index1 < index2) {
+          temp = srcdst.solution[index1];
+          srcdst.solution[index1] = srcdst.solution[index2];
+          srcdst.solution[index2] = temp;
+          index1++;
+          index2--;
+        }
+
+        srcdst.tourLength = srcdst.tourLength
+            + this.m_cityChangedEnergy[secondChosenCity];
+        // t_length = srcdst.tourLength +
+        // this.m_cityChangedEnergy[secondChosenCity];
+        // srcdst.tourLength = f.evaluate(srcdst.solution);
+        f.registerFE(srcdst.solution, srcdst.tourLength);
       }
 
       if (bestLength > srcdst.tourLength) {
-    	System.arraycopy(srcdst.solution, 0, bestSolution, 0, f.n());
+        System.arraycopy(srcdst.solution, 0, bestSolution, 0, f.n());
         bestLength = srcdst.tourLength;
-        
+
       }
 
       if (f.shouldTerminate()) {
@@ -459,8 +455,11 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
     ExtremalDynamics m;
 
     m = ((ExtremalDynamics) (super.clone()));
-    // TODO: reset all member variables
-
+    m.m_cityPotentialEnergy = null;
+    m.m_cityPotentialEnergy_copy = null;
+    m.m_cityIndex = null;
+    m.m_cityChangedEnergy = null;
+    m.m_cityChangedEnergy_copy = null;
     return m;
   }
 
@@ -493,10 +492,10 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
     "the beta of the power distribution"); //$NON-NLS-1$
     Configurable.printKey(ExtremalDynamics.PARAM_A, ps);
     ps.println(//
-    "the A of the alpha");
+    "the A of the alpha");//$NON-NLS-1$
     Configurable.printKey(ExtremalDynamics.PARAM_B, ps);
     ps.println(//
-    "the B of the alpha");
+    "the B of the alpha");//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -505,52 +504,52 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
     super.configure(config);
 
     // TODO: load the values of the parameters
-    this.m_alpha = config.getDouble(ExtremalDynamics.PARAM_ALPHA, 0, Integer.MAX_VALUE,
-        this.m_alpha);
-    this.m_beta = config.getDouble(ExtremalDynamics.PARAM_Beta, 0, Integer.MAX_VALUE,
-        this.m_beta);
+    this.m_alpha = config.getDouble(ExtremalDynamics.PARAM_ALPHA, 0,
+        Integer.MAX_VALUE, this.m_alpha);
+    this.m_beta = config.getDouble(ExtremalDynamics.PARAM_Beta, 0,
+        Integer.MAX_VALUE, this.m_beta);
     this.m_A = config.getInt(ExtremalDynamics.PARAM_A, 0, 10, this.m_A);
     this.m_B = config.getInt(ExtremalDynamics.PARAM_A, 0, 10, this.m_B);
   }
 
   /** {@inheritDoc} */
   @Override
-  public void beginRun(final ObjectiveFunction f) {
+  public final void beginRun(final ObjectiveFunction f) {
     super.beginRun(f);
 
-    this.m_alpha = this.m_A + this.m_B/Math.abs(Math.log(f.n()));
-    
+    this.m_alpha = this.m_A + (this.m_B / Math.abs(Math.log(f.n())));
+
     this.m_r = f.getRandom();
     this.m_nearestCity = new int[f.n() + 1];
     for (int i = 1; i <= f.n(); i++) {
-      this.m_nearestCity[i] = nearestCityIndex(f, i);
+      this.m_nearestCity[i] = ExtremalDynamics.__nearestCityIndex(f, i);
     }
-    
+
     this.m_Nprobability = new double[f.n()];
     for (int i = 0; i < f.n(); i++) {
-        // sum +=
-        // (-alpha+1)/(Math.pow((double)n,(-alpha+1))-1)*Math.pow((double)i,-alpha);
-        this.sum1 += Math.pow((i + 1), -m_alpha);
-        m_Nprobability[i] = this.sum1;
+      // sum +=
+      // (-alpha+1)/(Math.pow((double)n,(-alpha+1))-1)*Math.pow((double)i,-alpha);
+      this.m_sum1 += Math.pow((i + 1), -this.m_alpha);
+      this.m_Nprobability[i] = this.m_sum1;
     }
-    
-    this.m_N1probability = new double[f.n()-1];
-    for (int i = 0; i < f.n()-1; i++) {
-        // sum +=
-        // (-alpha+1)/(Math.pow((double)n,(-alpha+1))-1)*Math.pow((double)i,-alpha);
-        this.sum2 += Math.pow((i + 1), -m_beta);
-        m_N1probability[i] = this.sum2;
+
+    this.m_N1probability = new double[f.n() - 1];
+    for (int i = 0; i < (f.n() - 1); i++) {
+      // sum +=
+      // (-alpha+1)/(Math.pow((double)n,(-alpha+1))-1)*Math.pow((double)i,-alpha);
+      this.m_sum2 += Math.pow((i + 1), -this.m_beta);
+      this.m_N1probability[i] = this.m_sum2;
     }
-    
-    this.m_cityPotentialEnergy = new int[f.n()+1];
-    this.m_cityPotentialEnergy_copy = new int[f.n()+1];
-    
+
+    this.m_cityPotentialEnergy = new int[f.n() + 1];
+    this.m_cityPotentialEnergy_copy = new int[f.n() + 1];
+
     this.m_nextCity = new int[f.n() + 1];
     this.m_cityChangedEnergy = new int[f.n() + 1];
-    this.m_cityChangedEnergy_copy = new int[f.n()+1];
-    
+    this.m_cityChangedEnergy_copy = new int[f.n() + 1];
+
     this.m_cityIndex = new int[f.n() + 1];
-    
+
   }
 
   /** {@inheritDoc} */
@@ -575,7 +574,7 @@ public class ExtremalDynamics extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the Extremal dynamics
-   * 
+   *
    * @param args
    *          the command line arguments
    */
