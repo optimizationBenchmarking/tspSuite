@@ -137,7 +137,7 @@ public class SimulatedAnnealing extends org.logisticPlanning.tsp.solving.TSPAlgo
 	    	   double randomCheck = r.nextDouble();
 	    	   
 	    	   if (( metroProbability > randomCheck) ||
-	    		  ( temp < criticalTemp && metroProbability <= randomCheck && constProbability > randomCheck))
+	    		  ( temp < criticalTemp && constProbability > randomCheck))
 	    	   {
 	    		   //accept change under METROPOLIS criterion or CONSTANT criterion 
 	    		   //apply change, register FE
