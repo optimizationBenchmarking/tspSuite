@@ -58,14 +58,14 @@ public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_update = PermutationUpdate_Swap.INSTANCE;
 
 		// Default cooling rate
-		this.m_coolingRate = 0.997;
+		this.m_coolingRate = 0.99;
 
 		// Default initial temp
 		this.m_initialTemp = 10000;
 
 		this.m_constProbability = 0.07;
 
-		this.m_criticalTemp = 2;
+		this.m_criticalTemp = 5;
 
 	}
 
