@@ -15,6 +15,8 @@ import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
  * An SA algorithm initializing its temperature based on the problem.
+ * 
+ * @author Jiahui Liu, jl4161@columbia.edu
  */
 public final class ProblemDependentSA extends
     TSPLocalSearchAlgorithm<int[]> {
