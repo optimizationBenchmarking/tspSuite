@@ -21,7 +21,7 @@ public class BibProceedings extends BibBook {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param title
    *          the title
    * @param uri
@@ -76,7 +76,7 @@ public class BibProceedings extends BibBook {
 
   /**
    * Get the location
-   * 
+   *
    * @return the location
    */
   public final String getLocation() {
@@ -85,7 +85,7 @@ public class BibProceedings extends BibBook {
 
   /**
    * Get the start date of the conference
-   * 
+   *
    * @return the start date of the conference
    */
   public final BibDate getStartDate() {
@@ -94,7 +94,7 @@ public class BibProceedings extends BibBook {
 
   /**
    * Get the end date of the conference
-   * 
+   *
    * @return the end date of the conference
    */
   public final BibDate getEndDate() {

@@ -136,7 +136,7 @@ public final class ERTUtils {
 
   /**
    * Make the default left end for lines in a progress diagram
-   * 
+   *
    * @return the default left end for lines in a progress diagram
    */
   public static final Point2D makeDefaultLeftLineEnd() {
@@ -145,7 +145,7 @@ public final class ERTUtils {
 
   /**
    * compute the protected logarithm
-   * 
+   *
    * @param d
    *          the d
    * @return the protected logarithm
@@ -166,7 +166,7 @@ public final class ERTUtils {
   /***
    * Get a data collection representing the progress in terms of ert over
    * scale
-   * 
+   *
    * @param instances
    *          the instances
    * @param runSets

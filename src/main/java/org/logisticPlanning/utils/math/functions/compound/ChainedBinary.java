@@ -18,7 +18,7 @@ public abstract class ChainedBinary extends UnaryFunction {
 
   /**
    * Chain a unary function through another binary one
-   * 
+   *
    * @param a
    *          the double constant being the first argument of the binary
    *          function
@@ -35,7 +35,7 @@ public abstract class ChainedBinary extends UnaryFunction {
 
   /**
    * Chain a unary function through another binary one
-   * 
+   *
    * @param a
    *          the unary function being the first argument
    * @param b

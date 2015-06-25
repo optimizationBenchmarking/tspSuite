@@ -73,7 +73,7 @@ final class _ExperimentSetProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -108,7 +108,7 @@ final class _ExperimentSetProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param axs
@@ -124,7 +124,6 @@ final class _ExperimentSetProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final ArraySetView<Instance> insts, final Accessor axs,
       final Document doc, final ArrayList<Line2D> lines,

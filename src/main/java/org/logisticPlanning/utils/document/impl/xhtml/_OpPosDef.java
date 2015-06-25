@@ -20,7 +20,7 @@ final class _OpPosDef extends _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param before
    *          the before
    * @param middle

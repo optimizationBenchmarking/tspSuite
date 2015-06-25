@@ -24,7 +24,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * create a record for technical records
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -85,7 +85,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the institute
-   * 
+   *
    * @return the institute
    */
   public final String getInstitute() {
@@ -94,7 +94,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the institute's address
-   * 
+   *
    * @return the institute's address
    */
   public final String getInstituteAddress() {
@@ -103,7 +103,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the series
-   * 
+   *
    * @return the series
    */
   public final String getSeries() {
@@ -112,7 +112,7 @@ public class BibTechReport extends BibRecord {
 
   /**
    * Get the number
-   * 
+   *
    * @return the number
    */
   public final String getNumber() {

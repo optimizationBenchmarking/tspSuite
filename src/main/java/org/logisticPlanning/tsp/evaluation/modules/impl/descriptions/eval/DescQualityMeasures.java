@@ -260,7 +260,7 @@ public final class DescQualityMeasures extends DescriptionModule {
     tao = "Universit\u00e9 Paris Sud, Institut National de Recherche en Informatique et en Automatique (INRIA) Futurs, \u00c9quipe TAO";//$NON-NLS-1$
     taoa = "Orsay, France";//$NON-NLS-1$
 
-    ustc = "University of Science and Technology of China (USTC), School of Computer Science and Technology, Nature Inspired Computation and Applications Laboratory (NICAL)";//$NON-NLS-1$ 
+    ustc = "University of Science and Technology of China (USTC), School of Computer Science and Technology, Nature Inspired Computation and Applications Laboratory (NICAL)";//$NON-NLS-1$
     hefei = "Hefei, Anhui, China";//$NON-NLS-1$
 
     nh = new BibAuthor("Nikolaus", "Hansen"); //$NON-NLS-1$//$NON-NLS-2$
@@ -324,7 +324,7 @@ public final class DescQualityMeasures extends DescriptionModule {
           new BibAuthors(aa, nh),//
           "Performance Evaluation of an Advanced Local Search Evolutionary Algorithm",//$NON-NLS-1$
           PROC2005CEC, "1777", "1784", null,//$NON-NLS-1$//$NON-NLS-2$
-          new URI("http://www.lri.fr/~hansen/cec2005localcmaes.pdf"),//$NON-NLS-1$          
+          new URI("http://www.lri.fr/~hansen/cec2005localcmaes.pdf"),//$NON-NLS-1$
           "10.1109/CEC.2005.1554903");//$NON-NLS-1$
 
     } catch (final URISyntaxException u) {
@@ -390,7 +390,7 @@ public final class DescQualityMeasures extends DescriptionModule {
                   new BibAuthor("Natesa Sastri", "Sridharan")//$NON-NLS-1$//$NON-NLS-2$
               ),//
               "Detroit, MI, USA",//$NON-NLS-1$
-              "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$ 
+              "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
               "San Francisco, CA, USA",//$NON-NLS-1$
               null,
               null, //
@@ -411,7 +411,7 @@ public final class DescQualityMeasures extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -437,7 +437,7 @@ public final class DescQualityMeasures extends DescriptionModule {
 
   /**
    * create the next double
-   * 
+   *
    * @param r
    *          the randomizer
    * @return the double
@@ -462,7 +462,7 @@ public final class DescQualityMeasures extends DescriptionModule {
 
   /**
    * make a random data collection
-   * 
+   *
    * @return the collection
    */
   private static final Line2D[] __makeRandom() {

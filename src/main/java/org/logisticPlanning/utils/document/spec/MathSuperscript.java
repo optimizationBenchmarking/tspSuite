@@ -9,7 +9,7 @@ public class MathSuperscript extends AbstractMathElement {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

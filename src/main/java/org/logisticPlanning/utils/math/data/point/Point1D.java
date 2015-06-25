@@ -17,7 +17,7 @@ public class Point1D extends MutablePoint {
 
   /**
    * create the 1-dimensional point
-   * 
+   *
    * @param x
    *          the value of the x-coordinate
    */
@@ -37,7 +37,7 @@ public class Point1D extends MutablePoint {
   /** create the 1-dimensional point */
   /**
    * Get the x-value of this point
-   * 
+   *
    * @return the x-value of this point
    */
   public final double getX() {
@@ -46,7 +46,7 @@ public class Point1D extends MutablePoint {
 
   /**
    * Set the x-value of this point
-   * 
+   *
    * @param x
    *          the new x-value for this point
    */
@@ -121,7 +121,7 @@ public class Point1D extends MutablePoint {
 
   /**
    * Copy the values of another {@code Point1D} instance into this one
-   * 
+   *
    * @param p
    *          the {@code Point1D} instance to copy
    */
@@ -131,7 +131,7 @@ public class Point1D extends MutablePoint {
 
   /**
    * Does this point equal to another {@code Point1D} instance?
-   * 
+   *
    * @param p
    *          the other {@code Point1D} instance
    * @return {@code true} if and only if the point is identical to this

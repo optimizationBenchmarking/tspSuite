@@ -77,7 +77,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * create the LaTeX driver
-   * 
+   *
    * @param name
    *          the driver's name
    */
@@ -92,7 +92,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Is this document human readable?
-   * 
+   *
    * @return {@code true} for human-readable output, {@code false} for
    *         condensed output
    */
@@ -102,7 +102,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Set whether the output should be human readable or not?
-   * 
+   *
    * @param read
    *          {@code true} if the output should be human readable,
    *          {@code false} otherwise
@@ -115,7 +115,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Get the dots per inch for images
-   * 
+   *
    * @return the dots per inch for images
    */
   public final int getImageDPI() {
@@ -124,7 +124,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * set the image dpi
-   * 
+   *
    * @param dpi
    *          the image dpi
    */
@@ -139,7 +139,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Get the image type
-   * 
+   *
    * @return the image type
    */
   public final EImageType getImageType() {
@@ -148,7 +148,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * set the image type
-   * 
+   *
    * @param type
    *          the image type
    */
@@ -163,7 +163,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Get the image color model
-   * 
+   *
    * @return the image colorModel
    */
   public final EImageColorModel getImageColorModel() {
@@ -174,7 +174,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * set the image color model
-   * 
+   *
    * @param colorModel
    *          the image colorModel
    */
@@ -256,7 +256,7 @@ public class XHTMLDriver extends DocumentDriver {
 
   /**
    * Create an instance of the default html document driver
-   * 
+   *
    * @return an instance of the default html document driver
    */
   public static final XHTMLDriver createDefaultHTMLriver() {

@@ -15,7 +15,7 @@ public class Body extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

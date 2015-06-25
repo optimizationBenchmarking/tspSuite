@@ -74,7 +74,7 @@ public enum ESingleComparison {
 
   /**
    * Create a new single comparison
-   * 
+   *
    * @param srt
    *          the short name
    * @param lng
@@ -100,7 +100,7 @@ public enum ESingleComparison {
 
   /**
    * Create a new single comparison
-   * 
+   *
    * @param other
    *          the single comparison to "maybe"
    */
@@ -116,7 +116,7 @@ public enum ESingleComparison {
 
   /**
    * get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -125,7 +125,7 @@ public enum ESingleComparison {
 
   /**
    * get the long name
-   * 
+   *
    * @param plural
    *          the plural of the long name
    * @return the long name
@@ -136,7 +136,7 @@ public enum ESingleComparison {
 
   /**
    * is this a maybe?
-   * 
+   *
    * @return {@code true} if this result is a potential result due to
    *         runtime differences, @code false} otherwise
    */
@@ -148,7 +148,7 @@ public enum ESingleComparison {
    * The comparison result that would have been returned if the used time
    * measure was not a real/clock time if this measure is a step index, or
    * the other way around otherwise
-   * 
+   *
    * @return the result
    */
   public ESingleComparison getOther() {

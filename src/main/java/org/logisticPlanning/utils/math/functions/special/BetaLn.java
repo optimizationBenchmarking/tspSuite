@@ -81,7 +81,7 @@ public final class BetaLn extends BinaryFunction {
    * with the singleton instance {@link BetaLn#INSTANCE BetaLn.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link BetaLn#INSTANCE
    *         BetaLn.INSTANCE})
    */
@@ -94,7 +94,7 @@ public final class BetaLn extends BinaryFunction {
    * with the singleton instance {@link BetaLn#INSTANCE BetaLn.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link BetaLn#INSTANCE
    *         BetaLn.INSTANCE})
    */

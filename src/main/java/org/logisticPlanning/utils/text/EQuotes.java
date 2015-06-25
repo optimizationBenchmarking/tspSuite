@@ -88,7 +88,7 @@ public enum EQuotes {
 
   /**
    * Create
-   * 
+   *
    * @param begin
    *          the beginning character
    * @param end
@@ -104,7 +104,7 @@ public enum EQuotes {
 
   /**
    * Get the beginning char
-   * 
+   *
    * @return the beginning char
    */
   public final char getBegin() {
@@ -113,7 +113,7 @@ public enum EQuotes {
 
   /**
    * Get the end char
-   * 
+   *
    * @return the end char
    */
   public final char getEnd() {
@@ -122,7 +122,7 @@ public enum EQuotes {
 
   /**
    * Get the dash count of the quote
-   * 
+   *
    * @return the dash count of the quote
    */
   public final int getDashCount() {

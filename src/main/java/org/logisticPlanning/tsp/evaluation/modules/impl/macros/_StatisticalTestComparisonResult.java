@@ -46,7 +46,7 @@ final class _StatisticalTestComparisonResult extends MacroDefinition {
    * _StatisticalTestComparisonResult.INSTANCE} for serialization, i.e.,
    * when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _StatisticalTestComparisonResult#INSTANCE
    *         _StatisticalTestComparisonResult.INSTANCE})
@@ -62,7 +62,7 @@ final class _StatisticalTestComparisonResult extends MacroDefinition {
    * _StatisticalTestComparisonResult.INSTANCE} after serialization, i.e.,
    * when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link _StatisticalTestComparisonResult#INSTANCE
    *         _StatisticalTestComparisonResult.INSTANCE})

@@ -14,7 +14,7 @@ final class _RelativeFLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param relF
    *          the relative objective value
    * @param rs

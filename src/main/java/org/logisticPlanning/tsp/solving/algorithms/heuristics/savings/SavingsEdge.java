@@ -14,7 +14,7 @@ public final class SavingsEdge extends PriorityEdge {
 
   /**
    * Create an edge with the given nodes, priority, and distance.
-   * 
+   *
    * @param pa
    *          the first node
    * @param pb

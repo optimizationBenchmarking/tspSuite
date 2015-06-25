@@ -89,7 +89,7 @@ public class RunSetECDFProperty extends Property<RunSet, IDataCollection> {
   /**
    * Create the ecdf for a given accessor (time measure) and goal objective
    * value
-   * 
+   *
    * @param type
    *          the property type
    * @param axs
@@ -120,7 +120,7 @@ public class RunSetECDFProperty extends Property<RunSet, IDataCollection> {
 
   /**
    * Get the accessor used in this property
-   * 
+   *
    * @return the accessor used in this property
    */
   public final Accessor getAccessor() {
@@ -129,7 +129,7 @@ public class RunSetECDFProperty extends Property<RunSet, IDataCollection> {
 
   /**
    * Get the relative goal objective value used in this property
-   * 
+   *
    * @return the relative goal objective value used in this property
    */
   public final double getGoal() {
@@ -139,7 +139,7 @@ public class RunSetECDFProperty extends Property<RunSet, IDataCollection> {
   /**
    * Get the default instance of the ecdf for a given accessor (time
    * measure) and goal objective value
-   * 
+   *
    * @param axs
    *          the accessor
    * @param goal

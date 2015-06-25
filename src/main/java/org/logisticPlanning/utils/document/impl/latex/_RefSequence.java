@@ -238,7 +238,7 @@ final class _RefSequence extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param labels
    *          the labels
    * @param doc

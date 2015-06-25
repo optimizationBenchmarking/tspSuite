@@ -29,7 +29,7 @@ final class _Output {
 
   /**
    * create
-   * 
+   *
    * @param writer
    *          the destination writer
    * @param next
@@ -44,7 +44,7 @@ final class _Output {
 
   /**
    * create
-   * 
+   *
    * @param next
    *          the next
    */
@@ -54,7 +54,7 @@ final class _Output {
 
   /**
    * get the characters
-   * 
+   *
    * @return the characters
    */
   final char[] _getChars() {
@@ -69,7 +69,7 @@ final class _Output {
 
   /**
    * get the data at the given index
-   * 
+   *
    * @param idx
    *          the index
    * @return the data
@@ -83,7 +83,7 @@ final class _Output {
 
   /**
    * add a data element
-   * 
+   *
    * @param data
    *          the data element
    */
@@ -106,7 +106,7 @@ final class _Output {
 
   /**
    * take the data
-   * 
+   *
    * @return the data
    */
   final char[][] take() {

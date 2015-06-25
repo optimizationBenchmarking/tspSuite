@@ -23,7 +23,7 @@ public final class TempDir implements AutoCloseable {
 
   /**
    * Get the temporary directory
-   * 
+   *
    * @return the temporary directory
    * @throws IOException
    *           if something fails
@@ -67,7 +67,7 @@ public final class TempDir implements AutoCloseable {
 
   /**
    * delete a file
-   * 
+   *
    * @param f
    *          the file
    * @throws IOException

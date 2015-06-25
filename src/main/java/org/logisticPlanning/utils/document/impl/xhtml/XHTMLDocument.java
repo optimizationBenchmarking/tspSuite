@@ -260,7 +260,7 @@ public class XHTMLDocument extends Document {
   XMLCharTransformer.INSTANCE.transform("\u25b2").toCharArray(); //$NON-NLS-1$
   /** the label above char */
   private static final char[] REF_BELOW = //
-  XMLCharTransformer.INSTANCE.transform("\u25bc").toCharArray(); //$NON-NLS-1$ 
+  XMLCharTransformer.INSTANCE.transform("\u25bc").toCharArray(); //$NON-NLS-1$
 
   /** the 1st part of a reference */
   private static final char[] REF_1 = { '<', 'a', ' ', 'h', 'r', 'e', 'f',
@@ -678,7 +678,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @param file
@@ -711,7 +711,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * pop a char array writer
-   * 
+   *
    * @return the contents written to the writer, {@code null} if empty
    */
   private final char[] __popCharArrayWriter() {
@@ -725,7 +725,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * write a conditional line feed
-   * 
+   *
    * @throws IOException
    *           if i/o fails
    */
@@ -741,7 +741,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * change the depth
-   * 
+   *
    * @param add
    *          the adder
    */
@@ -950,7 +950,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * write a single reference
-   * 
+   *
    * @param label
    *          the reference
    * @throws IOException
@@ -1091,7 +1091,7 @@ public class XHTMLDocument extends Document {
   /**
    * Get the date string for printing in the document header, or
    * {@code null} if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForHeader() {
@@ -1101,7 +1101,7 @@ public class XHTMLDocument extends Document {
   /**
    * Get the date string for printing in the document body, or {@code null}
    * if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForBody() {
@@ -1727,7 +1727,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * end the figure row
-   * 
+   *
    * @param h
    *          the page
    * @throws IOException
@@ -2289,7 +2289,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * get the cell mode
-   * 
+   *
    * @param cell
    *          the cell
    * @throws IOException
@@ -2787,7 +2787,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * Make the bibliography style, file, and references
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -2915,7 +2915,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * print a single reference
-   * 
+   *
    * @param printAuthors
    *          the author names
    * @param ref
@@ -2968,7 +2968,7 @@ public class XHTMLDocument extends Document {
 
   /**
    * make a string
-   * 
+   *
    * @param d
    *          the double value
    * @return the string

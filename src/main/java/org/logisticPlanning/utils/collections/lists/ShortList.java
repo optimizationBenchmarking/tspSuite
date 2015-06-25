@@ -25,7 +25,7 @@ public class ShortList extends
 
   /**
    * Instantiate the {@code ShortList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -73,7 +73,7 @@ public class ShortList extends
   /**
    * Add/insert the 16 bit signed integer (short) (short) at the given
    * index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -93,7 +93,7 @@ public class ShortList extends
   /**
    * Add/insert the 16 bit signed integer (short) (short) at the end of the
    * list
-   * 
+   *
    * @param element
    *          the short to be added
    */
@@ -138,7 +138,7 @@ public class ShortList extends
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -150,7 +150,7 @@ public class ShortList extends
   /**
    * Aggregate: Visit all the data of this list. There is no guarantee
    * about the order in which the elements are visited.
-   * 
+   *
    * @param aggregate
    *          the aggregate
    */
@@ -172,7 +172,7 @@ public class ShortList extends
 
   /**
    * Get the {@code short} at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the {@code short} at that index
@@ -185,7 +185,7 @@ public class ShortList extends
   /**
    * Ensure that there are at least {@code size} free {@code short}s
    * starting at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -253,7 +253,7 @@ public class ShortList extends
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -283,6 +283,7 @@ public class ShortList extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

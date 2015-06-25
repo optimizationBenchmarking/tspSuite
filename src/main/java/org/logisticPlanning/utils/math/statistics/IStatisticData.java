@@ -9,7 +9,7 @@ public interface IStatisticData {
 
   /**
    * Obtain a list of the supported statistic parameters.
-   * 
+   *
    * @return a list of the supported statistic parameters.
    */
   public abstract ArraySetView<EStatisticParameter> getParameters();

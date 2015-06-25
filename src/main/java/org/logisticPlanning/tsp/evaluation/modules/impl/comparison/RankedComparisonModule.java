@@ -28,7 +28,7 @@ public class RankedComparisonModule extends ComparisonModule {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -50,7 +50,7 @@ public class RankedComparisonModule extends ComparisonModule {
    * preceded by something like &quot;
    * <code>From the results plotted in Figures 1 to 10</code>&quot; in
    * order to form a complete sentence.
-   * 
+   *
    * @param ranks
    *          the comparison result
    * @param body
@@ -122,7 +122,7 @@ public class RankedComparisonModule extends ComparisonModule {
 
   /**
    * Propagate ranking to the overall ranking statistic.
-   * 
+   *
    * @param ranking
    *          the ranking to propagate
    * @param data

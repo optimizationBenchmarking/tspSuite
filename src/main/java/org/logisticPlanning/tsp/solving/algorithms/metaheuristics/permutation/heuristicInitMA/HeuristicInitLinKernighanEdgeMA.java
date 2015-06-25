@@ -20,7 +20,7 @@ public final class HeuristicInitLinKernighanEdgeMA extends
 
   /**
    * Perform the heuristic init mns edge MA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

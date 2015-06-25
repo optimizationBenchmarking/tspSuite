@@ -135,7 +135,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -181,7 +181,7 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param instances
@@ -195,7 +195,6 @@ final class _ExperimentSetECDFOverScaleDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final SameScaleInstances instances, final Document doc,
       final ArrayList<Line2D> lines,

@@ -23,7 +23,7 @@ public final class StairsPreviewRightIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    */

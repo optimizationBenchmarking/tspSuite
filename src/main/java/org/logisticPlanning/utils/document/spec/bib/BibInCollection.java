@@ -13,7 +13,7 @@ public class BibInCollection extends _BibInBook<BibBook> {
   /**
    * Create a new bibliography record for papers that appeared in a
    * collection/book
-   * 
+   *
    * @param authors
    *          the authors
    * @param title

@@ -62,7 +62,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * PPN:&nbsp;<a
  * href="http://gso.gbv.de/PPNSET?PPN=01945077X">01945077X</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>

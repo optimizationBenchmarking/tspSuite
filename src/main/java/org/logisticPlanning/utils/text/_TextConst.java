@@ -257,7 +257,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -284,7 +284,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -309,7 +309,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -326,7 +326,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -338,7 +338,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param b
@@ -350,7 +350,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * create a text constant
-   * 
+   *
    * @param n
    *          the name
    * @param d
@@ -365,7 +365,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have an integer
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasInt() {
@@ -374,7 +374,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have a double
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasDouble() {
@@ -383,7 +383,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * do we have a boolean
-   * 
+   *
    * @return {@code true} if yes, {@code false} if no
    */
   final boolean hasBoolean() {
@@ -409,7 +409,7 @@ final class _TextConst implements Comparable<_TextConst> {
 
   /**
    * find a numerical constant with the given name
-   * 
+   *
    * @param constName
    *          the name
    * @return the constant, or {@code null} if not found

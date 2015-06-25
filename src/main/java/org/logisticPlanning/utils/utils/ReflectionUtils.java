@@ -23,7 +23,7 @@ public final class ReflectionUtils {
 
   /**
    * Try to obtain a class-class.
-   * 
+   *
    * @param name
    *          the string identifying the class
    * @param targetBase
@@ -106,7 +106,7 @@ public final class ReflectionUtils {
    * Try to obtain the value of a static constant. This method will try to
    * divide the identifier passed in into a class name and a constant/field
    * name.
-   * 
+   *
    * @param identifier
    *          the string identifying the class and constant
    * @param target
@@ -178,7 +178,7 @@ public final class ReflectionUtils {
 
   /**
    * Try to obtain the value of a static constant.
-   * 
+   *
    * @param clazz
    *          the class which contains the constant
    * @param constant

@@ -5,7 +5,7 @@ import org.logisticPlanning.utils.document.spec.Document;
 /**
  * A property which returns the result of a property of the owner of a data
  * set when invoked on a data set. *
- * 
+ *
  * @param <DT>
  *          the data set type
  * @param <PT>
@@ -19,7 +19,7 @@ public final class GlobalProperty<DT extends DataSet<?>, PT> extends
 
   /**
    * create
-   * 
+   *
    * @param global
    *          the global property
    */

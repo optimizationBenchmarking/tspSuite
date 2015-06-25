@@ -114,7 +114,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
    * to&nbsp;[<a href="#cite_A2013CMTACML" style="font-weight:bold">1</a>]
    * but rounded as suggested by&nbsp;[<a href="#cite_SE20061STITIAAC"
    * style="font-weight:bold">2</a>].
-   * 
+   *
    * @param v1
    *          first sample variance
    * @param v2
@@ -137,7 +137,7 @@ public final class TwoTailedTTestTest extends BivariateTwoTailedTest {
   /**
    * Computes t test statistic for 2-sample t-test as defined in&nbsp;[<a
    * href="#cite_A2013CMTACML" style="font-weight:bold">1</a>].
-   * 
+   *
    * @param m1
    *          first sample mean
    * @param m2

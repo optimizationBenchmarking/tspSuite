@@ -11,7 +11,7 @@ public abstract class AbstractTextPlain extends AbstractInlineElement {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

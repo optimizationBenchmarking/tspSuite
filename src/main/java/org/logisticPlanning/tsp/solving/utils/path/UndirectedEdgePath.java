@@ -16,7 +16,7 @@ public class UndirectedEdgePath {
 
   /**
    * Create a new undirected edge path builder.
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -42,7 +42,7 @@ public class UndirectedEdgePath {
 
   /**
    * get one of the ends of the path
-   * 
+   *
    * @return one of the ends of the path
    */
   public final EdgePathElement getEnd() {
@@ -51,7 +51,7 @@ public class UndirectedEdgePath {
 
   /**
    * Try to add an edge to a path
-   * 
+   *
    * @param edge
    *          the edge to be added
    * @return {@code true} if the edge was added, {@code false} if not
@@ -63,7 +63,7 @@ public class UndirectedEdgePath {
 
   /**
    * Try to add an edge to a path
-   * 
+   *
    * @param a
    *          the first path element that we want to connect
    * @param b
@@ -152,7 +152,7 @@ public class UndirectedEdgePath {
 
   /**
    * Check if we can add an edge to the path.
-   * 
+   *
    * @param a
    *          the first path element that we want to connect
    * @param b
@@ -216,7 +216,7 @@ public class UndirectedEdgePath {
 
   /**
    * find (another) candidate to augment this edge path
-   * 
+   *
    * @param end
    *          the end that should be augmented
    * @param last

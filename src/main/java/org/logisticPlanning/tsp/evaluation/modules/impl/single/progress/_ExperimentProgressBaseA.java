@@ -36,7 +36,7 @@ class _ExperimentProgressBaseA extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name

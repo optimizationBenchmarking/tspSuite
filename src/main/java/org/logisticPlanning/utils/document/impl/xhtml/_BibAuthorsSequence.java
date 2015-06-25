@@ -22,7 +22,7 @@ final class _BibAuthorsSequence extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param authors
    *          the authors
    * @param begin

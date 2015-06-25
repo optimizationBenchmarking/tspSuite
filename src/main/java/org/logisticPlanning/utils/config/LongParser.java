@@ -18,7 +18,7 @@ public final class LongParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code LongParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException

@@ -101,12 +101,12 @@ final class _ExperimentSetERTOverScaleDiagramsHolder extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetERTOverScaleDiagramsHolder(final Module owner) {
-    super(_ExperimentSetERTDiagramsBase._NAME_PFX + "OverScale",//$NON-NLS-1$ 
+    super(_ExperimentSetERTDiagramsBase._NAME_PFX + "OverScale",//$NON-NLS-1$
         owner, false);
   }
 

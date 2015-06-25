@@ -14,7 +14,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * primitive thing that could be done: Picking a random sub-sequence of
  * solution in path representation and shuffle it. Obviously, this has
  * complexity <em>O(n)</em>.
- * 
+ *
  * @since 0.9.8
  */
 public class PathShufflePerturbation extends PerturbationOperator<int[]> {
@@ -24,7 +24,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
 
   /**
    * the default minimum number of nodes to shuffle: {@value}
-   * 
+   *
    * @see #m_minShuffle
    * @see #PARAM_MIN_SHUFFLE
    */
@@ -32,7 +32,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
 
   /**
    * the parameter for the minimum number of nodes to shuffle: {@value}
-   * 
+   *
    * @see #DEFAULT_MIN_SHUFFLE
    * @see #m_minShuffle
    */
@@ -41,7 +41,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
   /**
    * the default minimum number of nodes that should remain un-shuffled: *
    * * * * {@value}
-   * 
+   *
    * @see #m_minLeaveAsIs
    * @see #PARAM_MIN_LEAVE_AS_IS_
    */
@@ -50,7 +50,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
   /**
    * the parameter for the minimum number of nodes to leave as they are: *
    * * * * {@value}
-   * 
+   *
    * @see #DEFAULT_MIN_LEAVE_AS_IS
    * @see #m_minLeaveAsIs
    */
@@ -58,7 +58,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
 
   /**
    * the minimum number of nodes to shuffle
-   * 
+   *
    * @serial a positive integer
    * @see #DEFAULT_MIN_SHUFFLE
    * @see #PARAM_MIN_SHUFFLE
@@ -67,7 +67,7 @@ public class PathShufflePerturbation extends PerturbationOperator<int[]> {
 
   /**
    * the minimum number of nodes to leave as they are
-   * 
+   *
    * @serial a positive integer
    * @see #DEFAULT_MIN_LEAVE_AS_IS
    * @see #PARAM_MIN_LEAVE_AS_IS_

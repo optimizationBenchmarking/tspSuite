@@ -14,7 +14,7 @@ public class PrintStreamCharOutput extends CharOutput {
 
   /**
    * Create
-   * 
+   *
    * @param out
    *          the output destination
    */

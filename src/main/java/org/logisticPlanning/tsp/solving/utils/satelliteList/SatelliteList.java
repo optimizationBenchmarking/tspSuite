@@ -9,7 +9,7 @@ package org.logisticPlanning.tsp.solving.utils.satelliteList;
  * {@link org.logisticPlanning.tsp.solving.utils.satelliteList.UndoableSatelliteList
  * backtracking}.
  * </p>
- * 
+ *
  * @param <NT>
  *          the node type <h2>Satellite List Representation</h2>
  *          <p>
@@ -473,7 +473,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Create a satellite list of {@code n} nodes.
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -495,7 +495,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Get the number of nodes in the list
-   * 
+   *
    * @return the number of nodes in the list
    */
   public final int n() {
@@ -504,7 +504,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Create a new node of the given id
-   * 
+   *
    * @param id
    *          the id
    * @return the node
@@ -516,7 +516,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Get the node of the given id
-   * 
+   *
    * @param id
    *          the node id
    * @return the node
@@ -527,7 +527,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Load a solution in path representation into this satellite list.
-   * 
+   *
    * @param path
    *          the solution in path representation
    */
@@ -560,7 +560,7 @@ public class SatelliteList<NT extends SatelliteNode> {
    * <em>2<sup>32</sup>-1</em> consecutive calls. During the following (and
    * only the following) call, it would return {@code false} again either
    * way.
-   * 
+   *
    * @param path
    *          the path
    * @return {@code true} if the satellite list represents a correct
@@ -607,7 +607,7 @@ public class SatelliteList<NT extends SatelliteNode> {
 
   /**
    * Write this node's text to a string builder
-   * 
+   *
    * @param sb
    *          the destination string builder
    */

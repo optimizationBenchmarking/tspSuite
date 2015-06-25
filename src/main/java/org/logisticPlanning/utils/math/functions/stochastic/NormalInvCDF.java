@@ -163,7 +163,7 @@ public final class NormalInvCDF extends UnaryFunction {
    * with the singleton instance {@link NormalInvCDF#INSTANCE
    * NormalInvCDF.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link NormalInvCDF#INSTANCE
    *         NormalInvCDF.INSTANCE})
    */
@@ -176,7 +176,7 @@ public final class NormalInvCDF extends UnaryFunction {
    * with the singleton instance {@link NormalInvCDF#INSTANCE
    * NormalInvCDF.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link NormalInvCDF#INSTANCE
    *         NormalInvCDF.INSTANCE})
    */

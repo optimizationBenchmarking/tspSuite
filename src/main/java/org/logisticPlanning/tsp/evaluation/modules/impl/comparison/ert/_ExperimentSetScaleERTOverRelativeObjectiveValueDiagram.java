@@ -153,7 +153,7 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
   static final String SCAP_4 = " instance with "; //$NON-NLS-1$
 
   /** the y-axis caption part 1 */
-  static final String Y_AXIS_1b = "lg(med " + //$NON-NLS-1$ 
+  static final String Y_AXIS_1b = "lg(med " + //$NON-NLS-1$
       Macros.ERT.getPlaceholder();
 
   /** the property */
@@ -163,7 +163,7 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property

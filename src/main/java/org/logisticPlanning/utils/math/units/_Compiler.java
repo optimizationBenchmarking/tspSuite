@@ -14,7 +14,7 @@ final class _Compiler {
 
   /**
    * create
-   * 
+   *
    * @param length
    *          the length
    */
@@ -26,7 +26,7 @@ final class _Compiler {
 
   /**
    * set the given value
-   * 
+   *
    * @param from
    *          the source unit
    * @param to
@@ -102,7 +102,7 @@ final class _Compiler {
 
   /**
    * compile to a double array
-   * 
+   *
    * @return the double array
    */
   final double[][] _compile() {

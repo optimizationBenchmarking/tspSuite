@@ -4,7 +4,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
 
 /**
  * The negation of a condition
- * 
+ *
  * @param <T>
  *          the element type this condition applies to.
  */
@@ -17,7 +17,7 @@ public final class NotCondition<T> extends Condition<T> {
 
   /**
    * The condition
-   * 
+   *
    * @param c
    *          the condition
    */

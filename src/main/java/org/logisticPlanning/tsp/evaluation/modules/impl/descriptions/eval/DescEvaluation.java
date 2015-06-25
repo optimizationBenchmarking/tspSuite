@@ -16,7 +16,7 @@ public final class DescEvaluation extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */

@@ -61,7 +61,7 @@ public enum ELocalSearchTermination {
 
   /**
    * Should the local search terminate
-   * 
+   *
    * @param currentTourLength
    *          the current tour length
    * @param originalTourLength

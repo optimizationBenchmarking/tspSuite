@@ -74,7 +74,7 @@ public final class ATanh extends UnaryFunction {
    * with the singleton instance {@link ATanh#INSTANCE ATanh.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link ATanh#INSTANCE
    *         ATanh.INSTANCE})
    */
@@ -87,7 +87,7 @@ public final class ATanh extends UnaryFunction {
    * with the singleton instance {@link ATanh#INSTANCE ATanh.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link ATanh#INSTANCE
    *         ATanh.INSTANCE})
    */

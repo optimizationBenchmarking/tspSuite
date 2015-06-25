@@ -13,7 +13,7 @@ public final class _CanonicalPermutation {
 
   /**
    * get the blueprint of at least length {@code n}
-   * 
+   *
    * @param n
    *          the number of elements
    * @return the blueprint
@@ -45,7 +45,7 @@ public final class _CanonicalPermutation {
    * {@code (10, 10, 10, 10, 10, 10, 10)} , {@code start=1} and
    * {@code count=4} to this method leads to
    * {@code (10, 1, 2, 3, 4, 10, 10)}.
-   * 
+   *
    * @param dest
    *          the destination array
    * @param start
@@ -68,7 +68,7 @@ public final class _CanonicalPermutation {
    * {@code (10, 10, 10, 10, 10, 10, 10)}, {@code start=1} and
    * {@code count=4} to this method leads to
    * {@code (10, 0, 1, 2, 3, 10, 10)}.
-   * 
+   *
    * @param dest
    *          the destination array
    * @param start
@@ -95,7 +95,7 @@ public final class _CanonicalPermutation {
    * Fill an array with a canonical permutation whose first element is one.
    * Passing in the array {@code (10, 10, 10, 10, 10, 10, 10)} to this
    * method leads to {@code (1, 2, 3, 4, 5, 6, 7)}.
-   * 
+   *
    * @param dest
    *          the destination array
    */
@@ -110,7 +110,7 @@ public final class _CanonicalPermutation {
    * Fill an array with a canonical permutation whose first element is
    * zero. Passing in the array {@code (10, 10, 10, 10, 10, 10, 10)} to
    * this method leads to {@code (0, 1, 2, 3, 4, 5, 6)}.
-   * 
+   *
    * @param dest
    *          the destination array
    */
@@ -130,7 +130,7 @@ public final class _CanonicalPermutation {
    * Create a canonical permutation of a given length whose first element
    * is one. Passing in {@code count=4} to this method leads to
    * {@code (1, 2, 3, 4)}.
-   * 
+   *
    * @param count
    *          the length of the canonical permutation to create
    * @return the permutation
@@ -154,7 +154,7 @@ public final class _CanonicalPermutation {
    * Create a canonical permutation of a given length whose first element
    * is zero. Passing in {@code count=4} to this method leads to
    * {@code (0, 1, 2, 3)}.
-   * 
+   *
    * @param count
    *          the length of the canonical permutation to create
    * @return the permutation

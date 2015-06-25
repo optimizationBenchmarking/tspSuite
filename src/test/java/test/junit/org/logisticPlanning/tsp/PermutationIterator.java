@@ -88,7 +88,7 @@ public final class PermutationIterator extends BasicIterator<int[]> {
 
   /**
    * instantiate
-   * 
+   *
    * @param n
    *          the start n
    * @param autoIncrease
@@ -108,7 +108,7 @@ public final class PermutationIterator extends BasicIterator<int[]> {
 
   /**
    * setup with a given {@code n}.
-   * 
+   *
    * @param n
    *          size of the permutation
    */

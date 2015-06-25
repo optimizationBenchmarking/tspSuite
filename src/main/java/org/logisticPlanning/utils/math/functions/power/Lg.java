@@ -68,7 +68,7 @@ public final class Lg extends UnaryFunction {
    * with the singleton instance {@link Lg#INSTANCE INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Lg#INSTANCE INSTANCE})
    */
   private final Object writeReplace() {
@@ -80,7 +80,7 @@ public final class Lg extends UnaryFunction {
    * with the singleton instance {@link Lg#INSTANCE INSTANCE} after
    * serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Lg#INSTANCE INSTANCE})
    */
   private final Object readResolve() {

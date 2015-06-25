@@ -13,7 +13,7 @@ public final class SameScaleInstances extends _ScaleSetBase<Instance> {
 
   /**
    * Create a scale run set
-   * 
+   *
    * @param lowerScaleBound
    *          the lower scale bound
    * @param upperScaleBound
@@ -38,7 +38,7 @@ public final class SameScaleInstances extends _ScaleSetBase<Instance> {
    * The base scale:
    * <code>{@link #getLowerScaleBound()}=base<sup>scale</sup></code> and
    * <code>{@link #getUpperScaleBound()}=base<sup>scale+1</sup>-1</code>
-   * 
+   *
    * @return the base scale
    */
   public final int getScale() {

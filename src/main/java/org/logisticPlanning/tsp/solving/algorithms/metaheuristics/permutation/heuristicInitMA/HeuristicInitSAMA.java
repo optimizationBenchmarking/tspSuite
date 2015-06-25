@@ -9,42 +9,46 @@ import org.logisticPlanning.tsp.solving.operators.permutation.recombination.Perm
 
 /**
  * A base class for MAs with Simulated Annealing search.
+ *
+ * @author Jiahui Liu, jl4161@columbia.edu
  */
 public class HeuristicInitSAMA extends PermutationHeuristicInitMA {
-	/** the serial version uid */
-	private static final long serialVersionUID = 1L;
+  /** the serial version uid */
+  private static final long serialVersionUID = 1L;
 
-	/**
-	 * create the ea
-	 * 
-	 * @param name
-	 *            a string to be added to the base name
-	 */
-	public HeuristicInitSAMA(final String name) {
-		super(
-				"Permutation-based heuristic-initialized SA Memetic Algorithm " + //$NON-NLS-1$
-						name);
-	}
+  /**
+   * create the MA
+   *
+   * @param name
+   *          a string to be added to the base name
+   */
+  public HeuristicInitSAMA(final String name) {
+    super(//
+        "Permutation-based heuristic-initialized SA Memetic Algorithm " + //$NON-NLS-1$
+            name);
+  }
 
-	/** {@inheritDoc} */
-	@Override
-	protected final UnaryOperator<int[]> createUnary() {
-		return new PermutationSAMutation();
-	}
+  /** {@inheritDoc} */
+  @Override
+  protected final UnaryOperator<int[]> createUnary() {
+    return new PermutationSAMutation();
+  }
 
-	@Override
-	protected BinaryOperator<int[]> createBinary() {
-		return new PermutationEdgeCrossover();
-	}
-	  /**
-	   * Perform the heuristic init sa edge MA
-	   * 
-	   * @param args
-	   *          the command line arguments
-	   */
-	  public final static void main(final String[] args) {
-	    TSPAlgorithmRunner.benchmark(Instance.SYMMETRIC_INSTANCES,
-	    		HeuristicInitSAMA.class,//
-	        args);
-	  }
-	}
+  /** {@inheritDoc} */
+  @Override
+  protected final BinaryOperator<int[]> createBinary() {
+    return new PermutationEdgeCrossover();
+  }
+
+  /**
+   * Perform the heuristic init sa edge MA
+   *
+   * @param args
+   *          the command line arguments
+   */
+  public final static void main(final String[] args) {
+    TSPAlgorithmRunner.benchmark(Instance.SYMMETRIC_INSTANCES,
+        HeuristicInitSAMA.class,//
+        args);
+  }
+}

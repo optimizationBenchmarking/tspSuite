@@ -41,7 +41,7 @@ public class ExperimentInstancesProperty extends
 
   /**
    * Create
-   * 
+   *
    * @param type
    *          the property type
    * @param cond
@@ -116,7 +116,7 @@ public class ExperimentInstancesProperty extends
    * Get the condition for non-empty, non-prematurely killed run sets, at
    * least one run must have two points with different values for a given
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor accessor}.
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the condition

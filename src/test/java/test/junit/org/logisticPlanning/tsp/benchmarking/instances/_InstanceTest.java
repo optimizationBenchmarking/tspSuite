@@ -42,7 +42,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /**
    * test a given instance
-   * 
+   *
    * @param i
    *          the instance
    */
@@ -62,7 +62,7 @@ public class _InstanceTest extends DistanceComputerTest {
   /**
    * If the length of the canonical tour is known from the documentation,
    * test whether it is equal to what we get by evaluating said tour.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -126,7 +126,7 @@ public class _InstanceTest extends DistanceComputerTest {
    * If the optimal tour is known from the documentation, test whether
    * evaluating that tour step-by-step via the point distance leads to the
    * same length as found in the documentation.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -170,7 +170,7 @@ public class _InstanceTest extends DistanceComputerTest {
    * If the optimal tour is known from the documentation, test whether
    * evaluating that tour leads to the same length as found in the
    * documentation.
-   * 
+   *
    * @throws Throwable
    *           if loading fails
    */
@@ -343,7 +343,7 @@ public class _InstanceTest extends DistanceComputerTest {
 
   /**
    * try to load the optimal tour
-   * 
+   *
    * @return the optimal tour, or null
    */
   private final int[] loadTour() {

@@ -38,7 +38,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * {@link org.logisticPlanning.utils.math.statistics.tests.impl.TwoTailedMannWhitneyUTest
  * Mann-Whitney U test}.
  * </p>
- * 
+ *
  * @param <T>
  *          the type of element being ranked <h2>References</h2>
  *          <ol>
@@ -56,7 +56,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * instantiate
-   * 
+   *
    * @param ranks
    *          the ranks
    */
@@ -66,7 +66,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Get the rank of a given object
-   * 
+   *
    * @param key
    *          the object
    * @return the associated rank
@@ -84,7 +84,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Get the rank of the best object
-   * 
+   *
    * @return the rank of the best object
    */
   public final double getBestRank() {
@@ -93,7 +93,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Get the rank of the worst object
-   * 
+   *
    * @return the rank of the worst object
    */
   public final double getWorstRank() {
@@ -102,9 +102,10 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Get the set of the best objects, according to this ranking
-   * 
+   *
    * @return the set of the best objects, according to this ranking
    */
+  @SuppressWarnings("unchecked")
   public final ArrayListView<T> getBest() {
     Object[] best, ret;
     final int s;
@@ -136,9 +137,10 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Get the set of the worst objects, according to this ranking
-   * 
+   *
    * @return the set of the worst objects, according to this ranking
    */
+  @SuppressWarnings("unchecked")
   public final ArrayListView<T> getWorst() {
     Object[] worst, ret;
     final int s;
@@ -171,7 +173,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Check if this ranking is equivalent to another ranking.
-   * 
+   *
    * @param ranks
    *          the other ranking
    * @return {@code true} if this ranking represents exactly the same data
@@ -210,7 +212,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Assign the same rank to the elements from start to end
-   * 
+   *
    * @param ranks
    *          the ranks
    * @param start
@@ -242,7 +244,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * check the data
-   * 
+   *
    * @param len
    *          the length
    */
@@ -254,7 +256,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
 
   /**
    * Rank some elements in an array.
-   * 
+   *
    * @param comp
    *          the comparator
    * @param data
@@ -301,7 +303,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
   /**
    * Create a new (sorted) array with rankings for assignments of objects
    * to values
-   * 
+   *
    * @param comp
    *          the comparator
    * @param data
@@ -358,7 +360,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
   /**
    * Create a new (sorted) array with rankings for assignments of objects
    * to values (which are comparable)
-   * 
+   *
    * @param data
    *          the data &ndash; <em>Warning:</em> This array will be sorted!
    * @return the rankings, sorted by rank (best first, worst last)
@@ -376,7 +378,7 @@ public final class Ranking<T> extends ArraySetView<Rank<T>> {
   /**
    * Create a new (sorted) array with rankings for assignments of objects
    * to values
-   * 
+   *
    * @param comp
    *          the comparator
    * @param data

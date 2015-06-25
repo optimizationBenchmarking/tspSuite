@@ -88,7 +88,7 @@ final class _ExperimentScaleProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -130,7 +130,7 @@ final class _ExperimentScaleProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param collection
    *          the run set collection to use
    * @param includeMean
@@ -144,7 +144,6 @@ final class _ExperimentScaleProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final Collection<RunSet> collection,
       final boolean includeMean, final boolean includeHighQuantiles,
       final ArrayList<Line2D> lines, final ArrayList<Line2D> back)

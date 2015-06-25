@@ -75,7 +75,7 @@ public final class GlobalRankingSummary extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

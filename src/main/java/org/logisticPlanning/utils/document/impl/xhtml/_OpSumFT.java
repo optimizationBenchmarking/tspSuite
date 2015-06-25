@@ -23,7 +23,7 @@ final class _OpSumFT extends _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param type
    *          the type
    */

@@ -44,7 +44,7 @@ public class RandomizerNextLongSequenceTest extends TestBase {
 
   /**
    * test the sequences
-   * 
+   *
    * @throws Throwable
    *           if something goes wrong
    */
@@ -77,7 +77,7 @@ public class RandomizerNextLongSequenceTest extends TestBase {
 
   /**
    * the program to create sequence
-   * 
+   *
    * @param args
    *          the command line
    */

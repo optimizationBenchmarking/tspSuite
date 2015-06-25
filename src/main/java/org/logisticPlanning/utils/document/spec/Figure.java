@@ -30,7 +30,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -50,7 +50,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * Does this figure span over all columns in a multi-column document?
-   * 
+   *
    * @return {@code true} if this figure spans over all columns,
    *         {@code false} if it only uses a single columns
    */
@@ -60,7 +60,7 @@ public class Figure extends AbstractLabeledElement {
 
   /**
    * Get the figure index
-   * 
+   *
    * @return the figure index
    */
   public final int getFigureIndex() {

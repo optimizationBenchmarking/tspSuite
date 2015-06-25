@@ -11,7 +11,7 @@ public final class Variable extends Function {
 
   /**
    * Create a variable
-   * 
+   *
    * @param in
    *          the node information record
    * @param idx
@@ -30,7 +30,7 @@ public final class Variable extends Function {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */

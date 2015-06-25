@@ -18,7 +18,7 @@ public class SubFigure extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -40,7 +40,7 @@ public class SubFigure extends AbstractLabeledElement {
 
   /**
    * get the row in which this sub-figure appears
-   * 
+   *
    * @return the row in which this sub-figure appears
    */
   public final int getRow() {
@@ -50,7 +50,7 @@ public class SubFigure extends AbstractLabeledElement {
   /**
    * get the col in which this sub-figure appears, {@code 1} for first
    * column
-   * 
+   *
    * @return the col in which this sub-figure appears, {@code 1} for first
    *         column
    */

@@ -34,7 +34,7 @@ public abstract class EdgeShort extends EdgeNumber {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -69,7 +69,7 @@ public abstract class EdgeShort extends EdgeNumber {
   /**
    * Allocate an edge short array with all {@code short}s set to
    * {@code ((short)(0))}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -86,7 +86,7 @@ public abstract class EdgeShort extends EdgeNumber {
   /**
    * Allocate an edge short array with all {@code short}s set to
    * {@code ((short)(0))}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

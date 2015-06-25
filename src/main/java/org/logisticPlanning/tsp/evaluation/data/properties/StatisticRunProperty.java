@@ -81,7 +81,7 @@ public final class StatisticRunProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param dimX
@@ -103,7 +103,7 @@ public final class StatisticRunProperty extends
 
   /**
    * get the property for the given x- and y- dimension.
-   * 
+   *
    * @param dimX
    *          the x-dimension
    * @param dimY
@@ -118,7 +118,7 @@ public final class StatisticRunProperty extends
 
   /**
    * get the property for the given x- and y- dimension.
-   * 
+   *
    * @param dimX
    *          the x-dimension
    * @param dimY
@@ -174,7 +174,7 @@ public final class StatisticRunProperty extends
 
   /**
    * Get the x dimension
-   * 
+   *
    * @return the x dimension
    */
   public final int getDimX() {
@@ -183,7 +183,7 @@ public final class StatisticRunProperty extends
 
   /**
    * Get the y dimension
-   * 
+   *
    * @return the y dimension
    */
   public final int getDimY() {

@@ -61,7 +61,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * href="http://www.it-weise.de/documents/files/OWDC2013SADAFTSP.pdf"
  * >1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:oyjmical@mail.ustc.edu.cn">Jin Ouyang</a></em>
@@ -108,7 +108,7 @@ public final class DevUpdatingGPM extends GPM<Function> {
 
   /**
    * the developmentally updating gpm
-   * 
+   *
    * @param algorithm
    *          the algorithm
    */
@@ -216,7 +216,7 @@ public final class DevUpdatingGPM extends GPM<Function> {
     done = 0l; // no move done so far
 
     mainLoop: for (move = 1; move <= maxSteps; move++) {// perform the
-                                                        // moves
+      // moves
       it.next(ab, n, r); // get the next index pair
       a = ab[0];
       b = ab[1];

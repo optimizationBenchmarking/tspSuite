@@ -11,7 +11,7 @@ import test.junit.org.logisticPlanning.tsp.benchmarking.objective.ObjectiveTest;
 
 /**
  * the internal class to test an operator's behavior
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -28,7 +28,7 @@ class _OperatorTest<P> extends ObjectiveTest {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    */

@@ -28,7 +28,7 @@ public final class NumberReader {
 
   /**
    * instantiate
-   * 
+   *
    * @param br
    *          the reader
    */
@@ -39,7 +39,7 @@ public final class NumberReader {
 
   /**
    * Read the next string from the source.
-   * 
+   *
    * @return the next string, or {@code null} if an end criterion is met
    * @throws IOException
    *           if something fails
@@ -110,7 +110,7 @@ public final class NumberReader {
 
   /**
    * Read the next 8 bit signed integer (byte) from the source.
-   * 
+   *
    * @return the next byte read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next byte fails (maybe
@@ -133,7 +133,7 @@ public final class NumberReader {
 
   /**
    * Read the next 16 bit signed integer (short) from the source.
-   * 
+   *
    * @return the next short read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next short fails
@@ -156,7 +156,7 @@ public final class NumberReader {
 
   /**
    * Read the next 32 bit signed integer (int) from the source.
-   * 
+   *
    * @return the next int read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next int fails (maybe
@@ -179,7 +179,7 @@ public final class NumberReader {
 
   /**
    * Read the next 64 bit signed integer (long) from the source.
-   * 
+   *
    * @return the next long read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next long fails (maybe
@@ -203,7 +203,7 @@ public final class NumberReader {
   /**
    * Read the next single-precision (32-bit) floating point number (float)
    * from the source.
-   * 
+   *
    * @return the next float read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next float fails
@@ -227,7 +227,7 @@ public final class NumberReader {
   /**
    * Read the next double-precision (64-bit) floating point number (double)
    * from the source.
-   * 
+   *
    * @return the next double read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next double fails
@@ -250,7 +250,7 @@ public final class NumberReader {
 
   /**
    * Read the next Boolean (true/false) from the source.
-   * 
+   *
    * @return the next Boolean read from the source
    * @throws IOException
    *           an {@code IOException} if loading the next Boolean fails

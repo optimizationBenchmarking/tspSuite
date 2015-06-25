@@ -51,7 +51,7 @@ class _DistanceMatrixAsymmetric extends _DistanceMatrix {
 
   /**
    * create the _DistanceMatrixAsymmetric
-   * 
+   *
    * @param n
    *          the number of nodes
    */

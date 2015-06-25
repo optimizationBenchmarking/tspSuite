@@ -296,7 +296,7 @@ public class BAB_HK extends TSPAlgorithm {
 
   /**
    * exclude something
-   * 
+   *
    * @param node
    *          the node
    * @param i
@@ -320,7 +320,7 @@ public class BAB_HK extends TSPAlgorithm {
 
   /**
    * compute the held-karp
-   * 
+   *
    * @param node
    *          the node
    */
@@ -364,7 +364,7 @@ public class BAB_HK extends TSPAlgorithm {
 
   /**
    * Compute the 1-tree
-   * 
+   *
    * @param node
    *          the node with the search information
    */
@@ -590,7 +590,7 @@ public class BAB_HK extends TSPAlgorithm {
 
   /**
    * add an edge
-   * 
+   *
    * @param node
    *          the node
    * @param i
@@ -609,7 +609,7 @@ public class BAB_HK extends TSPAlgorithm {
 
   /**
    * Perform the branch and bound with held-karp
-   * 
+   *
    * @param args
    *          the command line arguments
    */

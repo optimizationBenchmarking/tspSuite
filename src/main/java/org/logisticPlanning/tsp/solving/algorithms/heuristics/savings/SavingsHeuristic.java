@@ -218,14 +218,14 @@ public class SavingsHeuristic extends TSPHeuristicWithStartNode {
 
   /**
    * the neighbor list length
-   * 
+   *
    * @serial serializable field
    */
   private int m_neighborListLength;
 
   /**
    * augment missing edges with the first fitting edge discovered?
-   * 
+   *
    * @serial serializable field
    */
   public boolean m_augmentByAddingFirstCandidate;
@@ -241,7 +241,7 @@ public class SavingsHeuristic extends TSPHeuristicWithStartNode {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -571,7 +571,7 @@ public class SavingsHeuristic extends TSPHeuristicWithStartNode {
 
   /**
    * Perform the savings heuristic.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

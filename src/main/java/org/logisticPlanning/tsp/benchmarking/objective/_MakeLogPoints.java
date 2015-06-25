@@ -20,7 +20,7 @@ final class _MakeLogPoints {
 
   /**
    * The main method
-   * 
+   *
    * @param args
    *          ignored
    */

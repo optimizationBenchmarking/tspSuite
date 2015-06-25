@@ -264,7 +264,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * {@link ExhaustivelyEnumeratingLocal6Optimizer}. This method makes a
    * sub-sequence of length 6 inside {@code path}, starting right after
    * index {@code beforeStart}, optimal.
-   * 
+   *
    * @param path
    *          the candidate solution in path representation
    * @param beforeStart
@@ -696,7 +696,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,3,4,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,3,4,6,5)
    */
@@ -963,7 +963,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,3,6,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,3,6,5,4)
    */
@@ -1194,7 +1194,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,3,5,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,3,5,4,6)
    */
@@ -1425,7 +1425,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,6,5,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,6,5,4,3)
    */
@@ -1652,7 +1652,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,4,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,4,3,6)
    */
@@ -1858,7 +1858,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,3,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,3,5,6)
    */
@@ -2047,7 +2047,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,4,3,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,4,3,2,6)
    */
@@ -2290,7 +2290,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,5,4,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,5,4,3,2)
    */
@@ -2422,7 +2422,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,3,2,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,3,2,5,6)
    */
@@ -2583,7 +2583,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,2,4,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2,4,5,6)
    */
@@ -2729,7 +2729,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,3,2,1,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,3,2,1,5,6)
    */
@@ -2948,7 +2948,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,4,3,2,1,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,4,3,2,1,6)
    */
@@ -3105,7 +3105,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,5,4,3,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,5,4,3,2,1)
    */
@@ -3170,7 +3170,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,1,4,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,1,4,5,6)
    */
@@ -3303,7 +3303,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,4,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,4,5,6)
    */
@@ -3400,7 +3400,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,6,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,6,4,3)
    */
@@ -3570,7 +3570,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,6,4,3,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,6,4,3,5)
    */
@@ -3793,7 +3793,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,3,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,3,6,5)
    */
@@ -3989,7 +3989,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,6,4,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,6,4,3,2)
    */
@@ -4136,7 +4136,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,4,3,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,4,3,2,5)
    */
@@ -4335,7 +4335,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,3,2,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,3,2,6,5)
    */
@@ -4478,7 +4478,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,3,6,4,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,3,6,4,5)
    */
@@ -4635,7 +4635,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,2,4,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2,4,6,5)
    */
@@ -4810,7 +4810,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,3,5,6,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,3,5,6,4)
    */
@@ -5036,7 +5036,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,3,2,1,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,3,2,1,6,5)
    */
@@ -5188,7 +5188,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,4,3,2,1,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,4,3,2,1,5)
    */
@@ -5278,7 +5278,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,6,4,3,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,6,4,3,2,1)
    */
@@ -5323,7 +5323,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,1,4,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,1,4,6,5)
    */
@@ -5450,7 +5450,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,4,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,4,6,5)
    */
@@ -5510,7 +5510,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,5,6,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,5,6,3)
    */
@@ -5690,7 +5690,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,6,3,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,6,3,5,4)
    */
@@ -5923,7 +5923,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,5,6,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,5,6,3,2)
    */
@@ -6032,7 +6032,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,6,3,2,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,6,3,2,4)
    */
@@ -6206,7 +6206,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,2,6,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2,6,5,4)
    */
@@ -6345,7 +6345,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,3,2,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,3,2,5,4)
    */
@@ -6501,7 +6501,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,6,3,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,6,3,2,1)
    */
@@ -6546,7 +6546,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,6,3,2,1,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,6,3,2,1,4)
    */
@@ -6636,7 +6636,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,1,6,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,1,6,5,4)
    */
@@ -6777,7 +6777,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,3,2,1,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,3,2,1,5,4)
    */
@@ -6884,7 +6884,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,6,3,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,6,3,4)
    */
@@ -6976,7 +6976,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,6,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,6,5,4)
    */
@@ -7053,7 +7053,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,5,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,5,3,6)
    */
@@ -7210,7 +7210,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,6,4,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,6,4,5,3)
    */
@@ -7374,7 +7374,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,4,5,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,4,5,3,2)
    */
@@ -7467,7 +7467,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,5,3,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,5,3,2,6)
    */
@@ -7542,7 +7542,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,3,2,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,3,2,4,6)
    */
@@ -7699,7 +7699,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,2,5,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2,5,4,6)
    */
@@ -7804,7 +7804,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,4,5,3,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,4,5,3,2,1)
    */
@@ -7866,7 +7866,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,3,2,1,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,3,2,1,6)
    */
@@ -7958,7 +7958,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,3,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,3,4,6)
    */
@@ -8018,7 +8018,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,3,2,1,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,3,2,1,4,6)
    */
@@ -8108,7 +8108,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,1,5,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,1,5,4,6)
    */
@@ -8183,7 +8183,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,5,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,5,4,6)
    */
@@ -8260,7 +8260,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,5,6,2,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,5,6,2,3)
    */
@@ -8384,7 +8384,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,5,6,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,5,6,2)
    */
@@ -8444,7 +8444,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,6,3,4,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,6,3,4,5)
    */
@@ -8566,7 +8566,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,4,5,6,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,4,5,6,2,1)
    */
@@ -8626,7 +8626,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,2,5,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,2,5,4,3)
    */
@@ -8733,7 +8733,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,6,2,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,6,2,4,3)
    */
@@ -8808,7 +8808,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,6,2,1,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,6,2,1,3)
    */
@@ -8853,7 +8853,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,6,5,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,6,5,4,3)
    */
@@ -8928,7 +8928,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,2,1,5,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,2,1,5,4,3)
    */
@@ -9003,7 +9003,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,6,2,1,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,6,2,1,4,3)
    */
@@ -9063,7 +9063,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,5,2,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,5,2,3,6)
    */
@@ -9123,7 +9123,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,3,4,5,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,3,4,5,2)
    */
@@ -9198,7 +9198,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,5,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,5,2,6)
    */
@@ -9258,7 +9258,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,4,6,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,4,6,3)
    */
@@ -9397,7 +9397,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,2,4,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,2,4,3,6)
    */
@@ -9487,7 +9487,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,2,1,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,2,1,3,6)
    */
@@ -9547,7 +9547,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,5,4,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,5,4,3,6)
    */
@@ -9592,7 +9592,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,2,1,4,3,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,2,1,4,3,6)
    */
@@ -9637,7 +9637,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,2,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,2,5,6)
    */
@@ -9697,7 +9697,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,5,3,4,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,5,3,4,2)
    */
@@ -9772,7 +9772,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,3,4,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,3,4,2,6)
    */
@@ -9847,7 +9847,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,6,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,6,5,3)
    */
@@ -9955,7 +9955,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,5,3,4,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,5,3,4,2,1)
    */
@@ -10030,7 +10030,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,3,4,2,1,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,3,4,2,1,6)
    */
@@ -10090,7 +10090,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,2,1,3,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,2,1,3,5,6)
    */
@@ -10165,7 +10165,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,4,3,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,4,3,5,6)
    */
@@ -10210,7 +10210,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,1,3,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,1,3,2,6)
    */
@@ -10285,7 +10285,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,1,4,3,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,1,4,3,2,6)
    */
@@ -10375,7 +10375,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,2,3,4,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,2,3,4,5)
    */
@@ -10420,7 +10420,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,6,2,3,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,6,2,3,4)
    */
@@ -10465,7 +10465,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,6,1,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,6,1,3,2)
    */
@@ -10555,7 +10555,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,6,1,4,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,6,1,4,3,2)
    */
@@ -10630,7 +10630,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,5,2,3,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,5,2,3,4)
    */
@@ -10675,7 +10675,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,1,5,4,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,1,5,4,3,2)
    */
@@ -10720,7 +10720,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,1,3,2,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,1,3,2,5,6)
    */
@@ -10810,7 +10810,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,3,6,5,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,3,6,5,2)
    */
@@ -10870,7 +10870,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,6,5,2,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,6,5,2,3)
    */
@@ -10915,7 +10915,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,5,4,2,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,5,4,2,6)
    */
@@ -10960,7 +10960,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,6,5,4,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,6,5,4,2)
    */
@@ -11005,7 +11005,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,4,2,3,1,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,4,2,3,1,6)
    */
@@ -11065,7 +11065,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,3,2,6,5,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,3,2,6,5,1)
    */
@@ -11110,7 +11110,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,4,3,6,1,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,4,3,6,1,2)
    */
@@ -11155,7 +11155,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,5,4,1,2,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,5,4,1,2,3)
    */
@@ -11200,7 +11200,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,6,5,4,1,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,6,5,4,1,2)
    */
@@ -11245,7 +11245,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,5,4,1,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,5,4,1,6)
    */
@@ -11290,7 +11290,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,6,5,4,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,6,5,4,1)
    */
@@ -11335,7 +11335,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,4,3,1,5,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,4,3,1,5,6)
    */
@@ -11380,7 +11380,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,6,5,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,6,5,2)
    */
@@ -11425,7 +11425,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,4,6,5,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,4,6,5,2,1)
    */
@@ -11502,7 +11502,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,2,6,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,2,6,4,3)
    */
@@ -11547,7 +11547,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,5,2,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,5,2,4,3)
    */
@@ -11592,7 +11592,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,6,5,2,1,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,6,5,2,1,3)
    */
@@ -11637,7 +11637,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,5,2,1,4,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,5,2,1,4,3)
    */
@@ -11682,7 +11682,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,6,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,6,2,5)
    */
@@ -11757,7 +11757,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,2,4,3,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,2,4,3,5)
    */
@@ -11849,7 +11849,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,3,4,6,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,3,4,6,2)
    */
@@ -11909,7 +11909,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,3,4,6,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,3,4,6,2,1)
    */
@@ -11954,7 +11954,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,4,6,3,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,4,6,3,5)
    */
@@ -12029,7 +12029,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,4,6,2,1,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,4,6,2,1,5)
    */
@@ -12074,7 +12074,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,6,2,1,3,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,6,2,1,3,5)
    */
@@ -12134,7 +12134,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,6,4,3,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,6,4,3,5)
    */
@@ -12179,7 +12179,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,4,2,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,4,2,6,5)
    */
@@ -12224,7 +12224,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,3,4,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,3,4,2,5)
    */
@@ -12299,7 +12299,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,3,4,2,1,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,3,4,2,1,5)
    */
@@ -12344,7 +12344,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,2,1,3,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,2,1,3,6,5)
    */
@@ -12404,7 +12404,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,6,5,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,6,5,3,2)
    */
@@ -12449,7 +12449,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,4,6,5,1,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,4,6,5,1,2)
    */
@@ -12509,7 +12509,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,4,6,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,4,6,3,2)
    */
@@ -12554,7 +12554,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,6,5,1,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,6,5,1,3,2)
    */
@@ -12599,7 +12599,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,4,3,5,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,4,3,5,2)
    */
@@ -12644,7 +12644,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,4,6,1,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,4,6,1,2,5)
    */
@@ -12704,7 +12704,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,6,1,3,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,6,1,3,2,5)
    */
@@ -12779,7 +12779,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,6,3,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,6,3,2,5)
    */
@@ -12824,7 +12824,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,3,4,6,1,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,3,4,6,1,5)
    */
@@ -12869,7 +12869,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,1,3,2,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,1,3,2,6,5)
    */
@@ -12929,7 +12929,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,3,4,1,6,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,3,4,1,6,5)
    */
@@ -12974,7 +12974,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,6,4,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,6,4,5)
    */
@@ -13034,7 +13034,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,6,4,2,5).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,6,4,2,5)
    */
@@ -13079,7 +13079,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,5,6,4,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,5,6,4,2)
    */
@@ -13139,7 +13139,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,2,5,3,6,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,2,5,3,6,4)
    */
@@ -13199,7 +13199,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,3,5,6,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,3,5,6,4)
    */
@@ -13244,7 +13244,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,2,5,6,4,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,2,5,6,4,1)
    */
@@ -13289,7 +13289,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,2,5,6,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,2,5,6,3)
    */
@@ -13334,7 +13334,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,4,2,6,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,4,2,6,3)
    */
@@ -13379,7 +13379,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,2,1,5,6,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,2,1,5,6,3)
    */
@@ -13424,7 +13424,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (4,5,3,6,2,1).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (4,5,3,6,2,1)
    */
@@ -13469,7 +13469,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,5,3,6,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,5,3,6,2)
    */
@@ -13514,7 +13514,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (5,3,6,2,1,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (5,3,6,2,1,4)
    */
@@ -13589,7 +13589,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,5,3,6,2,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,5,3,6,2,4)
    */
@@ -13634,7 +13634,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (2,1,6,3,5,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (2,1,6,3,5,4)
    */
@@ -13679,7 +13679,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,6,5,2,4).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,6,5,2,4)
    */
@@ -13724,7 +13724,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,3,5,4,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,3,5,4,2)
    */
@@ -13769,7 +13769,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,4,6,2,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,4,6,2,5,3)
    */
@@ -13829,7 +13829,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,2,4,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,2,4,5,3)
    */
@@ -13874,7 +13874,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,5,4,6,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,5,4,6,2)
    */
@@ -13919,7 +13919,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (6,2,1,4,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (6,2,1,4,5,3)
    */
@@ -13964,7 +13964,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (3,5,4,6,1,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (3,5,4,6,1,2)
    */
@@ -14009,7 +14009,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,3,5,2,4,6).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,5,2,4,6)
    */
@@ -14054,7 +14054,7 @@ public final class ExhaustivelyEnumeratingLocal6Optimizer
    * shorter sequence of 2-opt moves starting at the canonical permutation
    * which yields the child-permutations traced here than the path going
    * over (1,6,4,2,5,3).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,6,4,2,5,3)
    */

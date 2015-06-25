@@ -71,7 +71,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -333,7 +333,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * Make a table for the given setup items
-   * 
+   *
    * @param table
    *          the table
    * @param iterator
@@ -394,7 +394,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * Print a configuration value
-   * 
+   *
    * @param value
    *          the value
    * @param out
@@ -495,7 +495,7 @@ public class SingleSetups extends SingleModule {
 
   /**
    * cleanse the list
-   * 
+   *
    * @param list
    *          the list to cleanse
    */

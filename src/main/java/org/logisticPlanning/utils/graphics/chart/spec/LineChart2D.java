@@ -33,7 +33,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Create a new line chart
-   * 
+   *
    * @param driver
    *          the line chart's driver
    * @param range
@@ -49,7 +49,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given line
-   * 
+   *
    * @param line
    *          the line
    */
@@ -64,7 +64,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given lines
-   * 
+   *
    * @param lines
    *          the lines
    */
@@ -79,7 +79,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given lines
-   * 
+   *
    * @param lines
    *          the lines
    */
@@ -94,7 +94,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given background line
-   * 
+   *
    * @param line
    *          the line
    */
@@ -109,7 +109,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given background lines
-   * 
+   *
    * @param lines
    *          the lines
    */
@@ -124,7 +124,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Add the given background lines
-   * 
+   *
    * @param lines
    *          the lines
    */
@@ -139,7 +139,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * get a list with the lines
-   * 
+   *
    * @return a list with the lines
    */
   protected final List<Line2D> getLines() {
@@ -148,7 +148,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * set the legend type
-   * 
+   *
    * @param legend
    *          the legend type
    */
@@ -159,7 +159,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Get the legend type
-   * 
+   *
    * @return the legend type
    */
   public final ELegendType getLegendType() {
@@ -168,7 +168,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * get a list with the background lines
-   * 
+   *
    * @return a list with the background lines
    */
   protected final List<Line2D> getBackgroundLines() {
@@ -177,7 +177,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Get the axis range object
-   * 
+   *
    * @return the axis range object
    */
   protected final AxisRange2D getAxisRange() {
@@ -192,7 +192,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * set the title of the x-axis
-   * 
+   *
    * @param title
    *          the axis title
    */
@@ -203,7 +203,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * set the title of the y-axis
-   * 
+   *
    * @param title
    *          the axis title
    */
@@ -214,7 +214,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Get the title of the x-axis
-   * 
+   *
    * @return the title of the x-axis
    */
   protected final String getAxisTitleX() {
@@ -223,7 +223,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * Get the title of the y-axis
-   * 
+   *
    * @return the title of the y-axis
    */
   protected final String getAxisTitleY() {
@@ -232,7 +232,7 @@ public abstract class LineChart2D extends AbstractChart {
 
   /**
    * iterate over all the points in a given line in an effective way
-   * 
+   *
    * @param line
    *          the line
    * @return the iterator

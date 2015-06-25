@@ -71,7 +71,7 @@ public final class GammaRegularizedQ extends BinaryFunction {
   /**
    * Adapted from Apache Software Foundation (ASF)'s commons.math. Returns
    * the regularized gamma function Q(a, x) = 1 - P(a, x).
-   * 
+   *
    * @param a
    *          the a parameter.
    * @param x
@@ -118,7 +118,7 @@ public final class GammaRegularizedQ extends BinaryFunction {
    * GammaRegularizedQ.INSTANCE} for serialization, i.e., when the instance
    * is written with {@link java.io.ObjectOutputStream#writeObject(Object)}
    * .
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaRegularizedQ#INSTANCE GammaRegularizedQ.INSTANCE})
    */
@@ -131,7 +131,7 @@ public final class GammaRegularizedQ extends BinaryFunction {
    * with the singleton instance {@link GammaRegularizedQ#INSTANCE
    * GammaRegularizedQ.INSTANCE} after serialization, i.e., when the
    * instance is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link GammaRegularizedQ#INSTANCE GammaRegularizedQ.INSTANCE})
    */

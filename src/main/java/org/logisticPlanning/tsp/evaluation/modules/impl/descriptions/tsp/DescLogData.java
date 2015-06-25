@@ -28,7 +28,7 @@ public final class DescLogData extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

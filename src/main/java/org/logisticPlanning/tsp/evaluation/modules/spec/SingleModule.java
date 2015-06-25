@@ -19,7 +19,7 @@ public class SingleModule extends _ConcreteModule {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -53,7 +53,7 @@ public class SingleModule extends _ConcreteModule {
    * Get the label via which this module's section for the data set
    * {@code data} can be referenced, or {@code null} if this module has no
    * section dedicated to the specified data set.
-   * 
+   *
    * @param data
    *          the data set
    * @return the label
@@ -64,7 +64,7 @@ public class SingleModule extends _ConcreteModule {
 
   /**
    * Write this module's section title
-   * 
+   *
    * @param title
    *          the title
    * @param data
@@ -72,7 +72,6 @@ public class SingleModule extends _ConcreteModule {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void writeSectionTitle(final SectionTitle title,
       final Experiment data) throws IOException {
     //
@@ -80,7 +79,7 @@ public class SingleModule extends _ConcreteModule {
 
   /**
    * Write this module's section body
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -119,7 +118,7 @@ public class SingleModule extends _ConcreteModule {
 
   /**
    * Initialize this module on a data set.
-   * 
+   *
    * @param header
    *          the header of the document
    * @param data
@@ -169,7 +168,7 @@ public class SingleModule extends _ConcreteModule {
 
   /**
    * Does this module have any printable contents for a given data set?
-   * 
+   *
    * @param data
    *          the data set
    * @return {@code true} if the module has printable contents,

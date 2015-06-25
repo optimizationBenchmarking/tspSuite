@@ -82,7 +82,7 @@ final class _ExperimentInstanceProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param axs
@@ -121,7 +121,7 @@ final class _ExperimentInstanceProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param ss
    *          the statistic series to use
    * @param rs
@@ -139,7 +139,6 @@ final class _ExperimentInstanceProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final StatisticSeries ss,
       final RunSet rs, final Instance inst, final boolean includeMean,
       final boolean includeHighQuantiles, final ArrayList<Line2D> lines,

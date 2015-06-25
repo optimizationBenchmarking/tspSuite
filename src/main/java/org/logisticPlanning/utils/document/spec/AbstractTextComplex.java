@@ -11,7 +11,7 @@ public abstract class AbstractTextComplex extends AbstractText {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -23,7 +23,7 @@ public abstract class AbstractTextComplex extends AbstractText {
 
   /**
    * Write a set of references.
-   * 
+   *
    * @param ref
    *          the references
    * @throws IOException

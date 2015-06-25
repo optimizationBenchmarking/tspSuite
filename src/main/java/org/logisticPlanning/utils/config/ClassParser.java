@@ -4,7 +4,7 @@ import org.logisticPlanning.utils.utils.ReflectionUtils;
 
 /**
  * A parser takes an object and translates it to a class
- * 
+ *
  * @param <T>
  *          the instance type
  */
@@ -15,7 +15,7 @@ public final class ClassParser<T> extends Parser<Class<T>> {
 
   /**
    * create
-   * 
+   *
    * @param base
    *          the base class
    */

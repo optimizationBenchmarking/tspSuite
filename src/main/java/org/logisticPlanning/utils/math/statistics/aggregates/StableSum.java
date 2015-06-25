@@ -52,7 +52,7 @@ public class StableSum extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Visit a given {@code double}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -87,7 +87,7 @@ public class StableSum extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Visit a given {@code long}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -107,7 +107,7 @@ public class StableSum extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Visit a given {@code int}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -127,7 +127,7 @@ public class StableSum extends ScalarAggregate implements IStatisticPoint {
 
   /**
    * Obtain the current running sum.
-   * 
+   *
    * @return the current running sum
    */
   @Override

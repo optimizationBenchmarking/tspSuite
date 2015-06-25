@@ -18,7 +18,7 @@ final class _EmptyTestResult extends MultivariateTestResult {
 
   /**
    * Create a new bivariate test result
-   * 
+   *
    * @param tt
    *          the tailed-ness
    */

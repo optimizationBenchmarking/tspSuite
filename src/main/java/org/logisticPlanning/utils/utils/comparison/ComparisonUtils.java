@@ -20,7 +20,7 @@ public final class ComparisonUtils {
    * <code>{@link java.lang.Double#doubleToLongBits(double) Double.doubleToLongBits(-0d)==-9223372036854775808}</code>
    * . <code>equals(0d, -0d) == true</code>. {@link java.lang.Double#NaN}
    * values are treated as equal to each other.
-   * 
+   *
    * @param a
    *          the first {@code double}
    * @param b
@@ -67,7 +67,7 @@ public final class ComparisonUtils {
    * while
    * <code>{@link java.lang.Double#doubleToLongBits(double) Double.doubleToLongBits(-0d)==-9223372036854775808}</code>
    * . <code>equals(0d, -0d) == true</code>.
-   * 
+   *
    * @param a
    *          the first {@code double}
    * @param b
@@ -103,7 +103,7 @@ public final class ComparisonUtils {
 
   /**
    * Does one object equal another one
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -125,7 +125,7 @@ public final class ComparisonUtils {
 
   /**
    * Compare one object equal another one
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -141,7 +141,7 @@ public final class ComparisonUtils {
 
   /**
    * Compare one object equal another one
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -165,7 +165,7 @@ public final class ComparisonUtils {
   /**
    * Check if a given value is zero or not. This method returns
    * {@code true} for {@code d == 0d} and {@code d == -0d}.
-   * 
+   *
    * @param d
    *          the double
    * @return true if the value is zero, false if not
@@ -178,7 +178,7 @@ public final class ComparisonUtils {
    * Check if a given value is integer or not. This method returns
    * {@code true} if and only if {@code d} is exactly (not just
    * approximately!) an integer.
-   * 
+   *
    * @param d
    *          the double
    * @return true if the value is integer, false if not
@@ -209,7 +209,7 @@ public final class ComparisonUtils {
    * <em>Warning:</em> supplying large values of {@code maxValuesInBetween}
    * will make the computation really slow.
    * </p>
-   * 
+   *
    * @param a
    *          the first double
    * @param b
@@ -263,7 +263,7 @@ public final class ComparisonUtils {
 
   /**
    * Check whether a given {@code double} value is finite
-   * 
+   *
    * @param d
    *          the double value
    * @return {@code true} if {@code value} is not

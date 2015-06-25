@@ -27,7 +27,7 @@ public enum ECitationMode {
 
   /**
    * create
-   * 
+   *
    * @param atStart
    *          at sentence start
    * @param printAuth
@@ -40,7 +40,7 @@ public enum ECitationMode {
 
   /**
    * Is this reference at the sentence start
-   * 
+   *
    * @return {@code true} if this reference is at the sentence start,
    *         {@code false} otherwise
    */
@@ -50,7 +50,7 @@ public enum ECitationMode {
 
   /**
    * Print the author names?
-   * 
+   *
    * @return {@code true} if author names should be printed, {@code false}
    *         if the id should be printed
    */

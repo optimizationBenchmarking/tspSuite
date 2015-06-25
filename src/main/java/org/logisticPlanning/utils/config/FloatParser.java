@@ -18,7 +18,7 @@ public final class FloatParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code FloatParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException

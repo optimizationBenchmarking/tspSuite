@@ -45,7 +45,7 @@ public final class AutoProcess {
 
   /**
    * Create the auto process.
-   * 
+   *
    * @param outLog
    *          the output logger
    * @param outLevel
@@ -99,7 +99,7 @@ public final class AutoProcess {
 
   /**
    * Create the auto process.
-   * 
+   *
    * @param log
    *          the logger
    * @param outLevel
@@ -119,7 +119,7 @@ public final class AutoProcess {
 
   /**
    * Create the auto process.
-   * 
+   *
    * @param log
    *          the logger
    * @param outLevel
@@ -137,7 +137,7 @@ public final class AutoProcess {
 
   /**
    * Create the auto process.
-   * 
+   *
    * @param log
    *          the logger
    * @param outLevel
@@ -153,7 +153,7 @@ public final class AutoProcess {
 
   /**
    * log an error
-   * 
+   *
    * @param description
    *          the description of the error to be logged
    * @param t
@@ -181,7 +181,7 @@ public final class AutoProcess {
 
   /**
    * Wait until the process has terminated.
-   * 
+   *
    * @return the return code of the process
    */
   public final int waitFor() {

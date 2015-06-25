@@ -15,28 +15,28 @@ public class Experiment extends _OwnedSet<RunSet, ExperimentSet> {
 
   /**
    * the experiment setup
-   * 
+   *
    * @serial the object holding the setup of this experiment
    */
   private final ExperimentSetup m_setup;
 
   /**
    * the long name
-   * 
+   *
    * @serial the long, full name of this experiment
    */
   private final String m_longName;
 
   /**
    * the short name
-   * 
+   *
    * @serial the short name of this experiment
    */
   private final String m_shortName;
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the experiment name
    * @param setup
@@ -69,7 +69,7 @@ public class Experiment extends _OwnedSet<RunSet, ExperimentSet> {
 
   /**
    * Get the experiment setup
-   * 
+   *
    * @return the experiment setup
    */
   public final ExperimentSetup getSetup() {
@@ -78,7 +78,7 @@ public class Experiment extends _OwnedSet<RunSet, ExperimentSet> {
 
   /**
    * Get the short name of the experiment/algorithm
-   * 
+   *
    * @return the short name of the experiment/algorithm
    */
   public final String shortName() {
@@ -87,7 +87,7 @@ public class Experiment extends _OwnedSet<RunSet, ExperimentSet> {
 
   /**
    * Get the long name of the experiment/algorithm
-   * 
+   *
    * @return the long name of the experiment/algorithm
    */
   public final String longName() {
@@ -96,7 +96,7 @@ public class Experiment extends _OwnedSet<RunSet, ExperimentSet> {
 
   /**
    * Get the run set for the given instance
-   * 
+   *
    * @param inst
    *          the instance
    * @return the run set belonging to that instance, or {@code null} if no

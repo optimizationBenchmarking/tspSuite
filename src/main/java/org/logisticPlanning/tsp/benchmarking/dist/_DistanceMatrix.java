@@ -35,7 +35,7 @@ abstract class _DistanceMatrix extends DistanceComputer implements
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -45,7 +45,7 @@ abstract class _DistanceMatrix extends DistanceComputer implements
 
   /**
    * set the distance between two cities
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -57,7 +57,7 @@ abstract class _DistanceMatrix extends DistanceComputer implements
 
   /**
    * fill this matrix from the given source
-   * 
+   *
    * @param src
    *          the source
    */

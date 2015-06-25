@@ -189,7 +189,7 @@ import org.logisticPlanning.tsp.solving.Individual;
  * ="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.39.307"
  * >10.1.1.39 .307</a></div></div></li>
  * </ol>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -202,7 +202,7 @@ public class BinaryOperator<P> extends Operator<P> {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name of this object
    */
@@ -232,7 +232,7 @@ public class BinaryOperator<P> extends Operator<P> {
    * {@link org.logisticPlanning.tsp.solving.Individual#tourLength tour
    * length} directly and safe that computational effort.
    * </p>
-   * 
+   *
    * @param dest
    *          the destination individual
    * @param f

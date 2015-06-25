@@ -281,7 +281,7 @@ import org.logisticPlanning.utils.math.functions.arithmetic.Identity;
  * et en Automatique (INRIA), Centre de Recherche Saclay &#8211;
  * &#206;le-de-France</div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:oyjmical@mail.ustc.edu.cn">Jin Ouyang</a></em>
@@ -346,7 +346,7 @@ public class DevUpdatingEA extends EA {
 
   /**
    * make the node type set
-   * 
+   *
    * @return the node type set
    */
   @SuppressWarnings("unchecked")
@@ -369,7 +369,7 @@ public class DevUpdatingEA extends EA {
 
   /**
    * Perform the developmental updating EA
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -56,7 +56,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * create the table cell definition
-   * 
+   *
    * @param name
    *          the name
    * @param type
@@ -79,7 +79,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * resolve the table state
-   * 
+   *
    * @param state
    *          the state
    * @return the table cell definition
@@ -139,7 +139,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * get the type
-   * 
+   *
    * @return the type
    */
   public final int getType() {
@@ -148,7 +148,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * Does this cell have a relative width?
-   * 
+   *
    * @return the relative width
    */
   public final boolean hasRelativeWidth() {
@@ -157,7 +157,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * Get the relative width of this cell
-   * 
+   *
    * @return the relative width of this cell
    * @throws UnsupportedOperationException
    *           if {@link #hasRelativeWidth()} returns {@code false}
@@ -175,7 +175,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * read resolve
-   * 
+   *
    * @return the resolved instance
    */
   private final Object readResolve() {
@@ -187,7 +187,7 @@ public class TableCellDef extends NamedObject {
 
   /**
    * write replace
-   * 
+   *
    * @return the resolved instance
    */
   private final Object writeReplace() {

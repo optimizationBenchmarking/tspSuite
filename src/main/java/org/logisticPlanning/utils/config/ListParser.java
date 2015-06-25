@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.text.TextUtils;
  * encoded as one big string, then the string is split at occurrences of
  * {@link java.io.File#pathSeparatorChar} (';' characters in Windows, ':'
  * in Linux) and the elements are then parsed by the sub-parser.
- * 
+ *
  * @param <T>
  *          the item type
  */
@@ -37,7 +37,7 @@ public final class ListParser<T> extends Parser<List<T>> {
 
   /**
    * create
-   * 
+   *
    * @param items
    *          the item parser
    */

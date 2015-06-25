@@ -80,7 +80,7 @@ import org.logisticPlanning.tsp.solving.TSPModule;
  * href="http://www.it-weise.de/documents/files/OWDC2013SADAFTSP.pdf"
  * >1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <G>
  *          the set of genotypes
  */
@@ -91,7 +91,7 @@ public class GPM<G> extends TSPModule {
 
   /**
    * create the gpm
-   * 
+   *
    * @param name
    *          the name of the gpm
    */
@@ -101,7 +101,7 @@ public class GPM<G> extends TSPModule {
 
   /**
    * Map a genotype to a phenotype
-   * 
+   *
    * @param f
    *          the objective function and distance computer
    * @param p
@@ -112,7 +112,7 @@ public class GPM<G> extends TSPModule {
 
   /**
    * a method called before each generation
-   * 
+   *
    * @param f
    *          the objective function
    */
@@ -122,7 +122,7 @@ public class GPM<G> extends TSPModule {
 
   /**
    * a method called after each generation
-   * 
+   *
    * @param f
    *          the objective function
    */

@@ -123,7 +123,7 @@ class _Constants {
 
   /**
    * put a tuple
-   * 
+   *
    * @param key
    *          the key
    * @param value

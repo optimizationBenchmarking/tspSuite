@@ -16,7 +16,7 @@ abstract class _TwoTailedComparisonTestResult extends
 
   /**
    * Check the parameters
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -32,7 +32,7 @@ abstract class _TwoTailedComparisonTestResult extends
 
   /**
    * do get the error probability
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -68,7 +68,7 @@ abstract class _TwoTailedComparisonTestResult extends
 
   /**
    * compare
-   * 
+   *
    * @param i
    *          the i
    * @param j
@@ -96,7 +96,7 @@ abstract class _TwoTailedComparisonTestResult extends
 
   /**
    * set the result
-   * 
+   *
    * @param i
    *          the i
    * @param j

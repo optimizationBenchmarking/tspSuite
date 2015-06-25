@@ -12,7 +12,7 @@ public class MacroParameter extends AbstractTextPlain {
 
   /**
    * create the document macro parameter element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -25,7 +25,7 @@ public class MacroParameter extends AbstractTextPlain {
 
   /**
    * Get the macro parameter's index
-   * 
+   *
    * @return the macro parameter's index
    */
   public final int getIndex() {

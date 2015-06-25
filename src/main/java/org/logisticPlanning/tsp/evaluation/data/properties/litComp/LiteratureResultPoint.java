@@ -30,7 +30,7 @@ public class LiteratureResultPoint implements
 
   /**
    * the literature result
-   * 
+   *
    * @param inst
    *          the instance
    * @param timeDim
@@ -77,25 +77,25 @@ public class LiteratureResultPoint implements
 
     if (!(resultStatistic.isValue())) {
       throw new IllegalArgumentException(
-          "Only value parameters are allowed, but the result was said to be "//$NON-NLS-1$ 
+          "Only value parameters are allowed, but the result was said to be "//$NON-NLS-1$
               + resultStatistic);
     }
 
     if (resultDim == Accessor.F) {
       if (resultVal < inst.optimum()) {
         throw new IllegalArgumentException(//
-            "Provided objective value " + resultVal + //$NON-NLS-1$  
+            "Provided objective value " + resultVal + //$NON-NLS-1$
                 " ("//$NON-NLS-1$
                 + resultStatistic.getShortName()
                 + ") is less than globally optimal objective value "//$NON-NLS-1$
-                + inst.optimum() + " of " + inst.name());//$NON-NLS-1$ 
+                + inst.optimum() + " of " + inst.name());//$NON-NLS-1$
       }
     } else {
       if (resultDim == Accessor.F_RELATIVE) {
         if (resultVal < 0d) {
           throw new IllegalArgumentException(//
-              "Provided relative error " + resultVal + //$NON-NLS-1$  
-                  " (" + resultStatistic.getShortName() + //$NON-NLS-1$ 
+              "Provided relative error " + resultVal + //$NON-NLS-1$
+                  " (" + resultStatistic.getShortName() + //$NON-NLS-1$
                   ") is less than 0."); //$NON-NLS-1$
         }
       }
@@ -116,7 +116,7 @@ public class LiteratureResultPoint implements
    * or
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor#NORMALIZED_RUNTIME}
    * .
-   * 
+   *
    * @return the time dimension
    */
   public final Accessor getTimeDimension() {
@@ -125,7 +125,7 @@ public class LiteratureResultPoint implements
 
   /**
    * Get the time and quality value
-   * 
+   *
    * @return the time and quality value
    */
   public final ResPoint getData() {
@@ -136,7 +136,7 @@ public class LiteratureResultPoint implements
    * Get the result dimension, must be either
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor#F} or
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor#F_RELATIVE} .
-   * 
+   *
    * @return the result dimension
    */
   public final Accessor getResultDimension() {
@@ -145,7 +145,7 @@ public class LiteratureResultPoint implements
 
   /**
    * Get the problem instance
-   * 
+   *
    * @return the problem instance
    */
   public final Instance getInstance() {
@@ -154,7 +154,7 @@ public class LiteratureResultPoint implements
 
   /**
    * Obtain the result statistic parameter
-   * 
+   *
    * @return the result statistic parameter
    */
   public final EStatisticParameter getResultStatistic() {
@@ -163,7 +163,7 @@ public class LiteratureResultPoint implements
 
   /**
    * Get the result set
-   * 
+   *
    * @return the result set owning this result point
    */
   public final LiteratureResultPointSet getResultSet() {

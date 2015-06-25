@@ -184,14 +184,14 @@ public final class DescERT extends DescriptionModule {
 
   /**
    * the time measures
-   * 
+   *
    * @serial the internal reference to the time measures description
    */
   private final DescTimeMeasures m_time;
 
   /**
    * the relative objective values
-   * 
+   *
    * @serial the internal reference to the relative objective value
    *         description
    */
@@ -199,14 +199,14 @@ public final class DescERT extends DescriptionModule {
 
   /**
    * the quality measures
-   * 
+   *
    * @serial the internal reference to the quality measure description
    */
   private final DescQualityMeasures m_quality;
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -318,13 +318,13 @@ public final class DescERT extends DescriptionModule {
 
                   try (MathOpParam sfa1 = sfa.mathOpParam()) {
                     try (NormalText tn1 = sfa1.normalText()) {
-                      tn1.write("runtime measured in "); //$NON-NLS-1$                    
+                      tn1.write("runtime measured in "); //$NON-NLS-1$
                     }
                     try (MathName mn = sfa1.mathName(EMathName.SCALAR)) {
                       mn.writeChar('T');
                     }
                     try (NormalText tn2 = sfa1.normalText()) {
-                      tn2.write(" until "); //$NON-NLS-1$                
+                      tn2.write(" until "); //$NON-NLS-1$
                     }
                     sfa1.macroInvoke(Macros.F_THRESHOLD);
                     try (NormalText tn3 = sfa1.normalText()) {

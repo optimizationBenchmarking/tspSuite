@@ -166,7 +166,7 @@ public enum ELength {
   /** a parsec */
   PARSEC("parsec"), //$NON-NLS-1$
   /** red shift */
-  RED_SHIFT("red shift", "z"), //$NON-NLS-1$//$NON-NLS-2$ 
+  RED_SHIFT("red shift", "z"), //$NON-NLS-1$//$NON-NLS-2$
   ;
 
   /** the nanometer */
@@ -352,7 +352,7 @@ public enum ELength {
 
   /**
    * Create
-   * 
+   *
    * @param name
    *          the name
    * @param shortcut
@@ -369,7 +369,7 @@ public enum ELength {
 
   /**
    * Create
-   * 
+   *
    * @param name
    *          the name
    * @param shortcut
@@ -381,7 +381,7 @@ public enum ELength {
 
   /**
    * Create the name
-   * 
+   *
    * @param name
    *          the name
    */
@@ -399,7 +399,7 @@ public enum ELength {
   /**
    * Convert the given value from the length dimension {@code from} to the
    * length dimension {@code to}
-   * 
+   *
    * @param value
    *          the value
    * @param from
@@ -419,7 +419,7 @@ public enum ELength {
   /**
    * Get the conversion factor from the length dimension {@code from} to
    * the length dimension {@code to}
-   * 
+   *
    * @param from
    *          the length dimension {@code value} is specified in
    * @param to

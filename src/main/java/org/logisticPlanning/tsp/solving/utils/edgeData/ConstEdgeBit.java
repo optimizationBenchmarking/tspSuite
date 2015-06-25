@@ -4,8 +4,8 @@ package org.logisticPlanning.tsp.solving.utils.edgeData;
  * <p>
  * An edge bit set which is constant.
  * </p>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -17,14 +17,14 @@ public final class ConstEdgeBit extends EdgeBit {
 
   /**
    * the constant edge bit value
-   * 
+   *
    * @serial a boolean
    */
   private final boolean m_value;
 
   /**
    * the internal constructor of the edge bit set
-   * 
+   *
    * @param n
    *          the number of nodes in the TSP
    * @param value

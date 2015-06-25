@@ -12,7 +12,7 @@ public abstract class AbstractItem extends AbstractTextBlock {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -25,7 +25,7 @@ public abstract class AbstractItem extends AbstractTextBlock {
 
   /**
    * Get the index of this enumeration item
-   * 
+   *
    * @return the index of this enumeration item
    */
   public final int getIndex() {
@@ -40,7 +40,7 @@ public abstract class AbstractItem extends AbstractTextBlock {
 
   /**
    * Get the hierarchy of indexes
-   * 
+   *
    * @return the hierarchy of indexes
    */
   @SuppressWarnings("resource")

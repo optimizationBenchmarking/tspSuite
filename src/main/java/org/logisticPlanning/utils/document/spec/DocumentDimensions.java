@@ -28,7 +28,7 @@ public class DocumentDimensions {
 
   /**
    * The number of columns
-   * 
+   *
    * @return the number of columns
    */
   public int getColumnCount() {
@@ -37,7 +37,7 @@ public class DocumentDimensions {
 
   /**
    * the page width in millimeters
-   * 
+   *
    * @return the page width in millimeters
    */
   public double getPageWidthMM() {
@@ -54,7 +54,7 @@ public class DocumentDimensions {
 
   /**
    * the page height in millimeters
-   * 
+   *
    * @return the page height in millimeters
    */
   public double getPageHeightMM() {
@@ -63,7 +63,7 @@ public class DocumentDimensions {
 
   /**
    * the column width in millimeters
-   * 
+   *
    * @return the page width in millimeters
    */
   public double getColumnWidthMM() {
@@ -72,7 +72,7 @@ public class DocumentDimensions {
 
   /**
    * check whether an integer value is valid
-   * 
+   *
    * @param i
    *          the int
    * @return {@code true} if {@code i} is a valid dimension
@@ -83,7 +83,7 @@ public class DocumentDimensions {
 
   /**
    * check whether an double value is valid
-   * 
+   *
    * @param d
    *          the double
    * @return {@code true} if {@code i} is a valid dimension
@@ -94,7 +94,7 @@ public class DocumentDimensions {
 
   /**
    * Get the default dimension of the figure with the size {@code size}
-   * 
+   *
    * @param size
    *          the size definition
    * @return the default dimension of the large figure that spans over the
@@ -211,7 +211,7 @@ public class DocumentDimensions {
 
   /**
    * Get the default dimension of the figure with the size {@code size}
-   * 
+   *
    * @param size
    *          the size definition
    * @return the default dimension of the large figure that spans over the

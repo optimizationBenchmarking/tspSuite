@@ -424,7 +424,7 @@ package org.logisticPlanning.tsp.solving.utils.satelliteList;
  * -0426-3</a>; OCLC:&nbsp;<a
  * href="https://www.worldcat.org/oclc/19702892">19702892</a></div></li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 public class UndoableSatelliteNode extends SatelliteNode {
@@ -447,7 +447,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * create
-   * 
+   *
    * @param pid
    *          the node if
    */
@@ -493,7 +493,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
    * with the addition of edges connected to this node. In other words,
    * this function will return {@code true} if the same number of edges
    * that is connected to the node is added and deleted.
-   * 
+   *
    * @return {@code true} if the same amount of edges is added and deleted
    *         to this node.
    */
@@ -504,7 +504,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * Delete the connection to node {@code node} in a reversible way.
-   * 
+   *
    * @param node
    *          the node
    * @see #undoDisconnect(SatelliteNode)
@@ -535,7 +535,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * Undo the deletion of the connection to node {@code n}
-   * 
+   *
    * @param node
    *          the node
    * @see #doDisconnect(SatelliteNode)
@@ -574,7 +574,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * Connect this node to another node {@code node} in a reversible way.
-   * 
+   *
    * @param node
    *          the other node
    * @see #undoConnect(SatelliteNode)
@@ -598,7 +598,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * Undo the connection to the given node {@code node}.
-   * 
+   *
    * @param node
    *          the node
    * @see #doConnect(SatelliteNode)
@@ -614,8 +614,8 @@ public class UndoableSatelliteNode extends SatelliteNode {
         if (this.m_cache_1 == node) { // cache 1? remove
           this.m_cache_1 = this.m_cache_2;
         } // otherwise it must have been in cache 2
-          // else if (this.m_cache_2 != node) { throw new
-          // IllegalStateException(); }// TODO
+        // else if (this.m_cache_2 != node) { throw new
+        // IllegalStateException(); }// TODO
       }
     }
     // cache 2 must be set to null either way
@@ -666,7 +666,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * This node is part of how many edges pending deletion?
-   * 
+   *
    * @return the number of edges pending deletion that this node is part of
    */
   public final int numberOfPendingDeletions() {
@@ -675,7 +675,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
 
   /**
    * This node is part of how many edges pending additions?
-   * 
+   *
    * @return the number of edges pending addition that this node is part of
    */
   public final int numberOfPendingAdditions() {
@@ -691,7 +691,7 @@ public class UndoableSatelliteNode extends SatelliteNode {
   /**
    * Is the given node a neighbor of this node or has it been a neighbor
    * before?
-   * 
+   *
    * @param node
    *          the node
    * @return {@code true} if it is a neighbor, {@code false} otherwise

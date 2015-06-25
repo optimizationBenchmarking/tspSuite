@@ -26,7 +26,7 @@ public final class InstanceSelectionCondition extends Condition<Instance> {
 
   /**
    * create
-   * 
+   *
    * @param set
    *          the set
    * @param exists

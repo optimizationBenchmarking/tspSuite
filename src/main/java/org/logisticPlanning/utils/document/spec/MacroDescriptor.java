@@ -29,7 +29,7 @@ public class MacroDescriptor extends NamedObject {
 
   /**
    * Create a new macro descriptor.
-   * 
+   *
    * @param name
    *          the macro's name
    * @param paramCount
@@ -61,7 +61,7 @@ public class MacroDescriptor extends NamedObject {
 
   /**
    * Get the number of macro parameters
-   * 
+   *
    * @return the number of macro parameters
    */
   public final int getParamCount() {
@@ -70,7 +70,7 @@ public class MacroDescriptor extends NamedObject {
 
   /**
    * Get the macro placeholder
-   * 
+   *
    * @return the macro placeholder
    */
   public final String getPlaceholder() {
@@ -79,7 +79,7 @@ public class MacroDescriptor extends NamedObject {
 
   /**
    * make an admissible macro name
-   * 
+   *
    * @param name
    *          the name blueprint
    * @return the macro name
@@ -111,7 +111,7 @@ public class MacroDescriptor extends NamedObject {
 
   /**
    * validate the number of parameters
-   * 
+   *
    * @param clazz
    *          the class
    * @param maxParams

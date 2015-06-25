@@ -99,7 +99,7 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
 
   /**
    * Obtain the count of elements evaluated.
-   * 
+   *
    * @return The count of elements evaluated.
    */
   public final long getCount() {
@@ -175,7 +175,7 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
 
   /**
    * Obtain the coefficient of variation.
-   * 
+   *
    * @return The coefficient of variation.
    */
   public final double getCoefficientOfVariation() {
@@ -206,7 +206,7 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
 
   /**
    * Obtain the range of the values visited.
-   * 
+   *
    * @return The range of the values visited.
    */
   public final double getRange() {

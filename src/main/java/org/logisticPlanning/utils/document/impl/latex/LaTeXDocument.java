@@ -778,7 +778,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @param file
@@ -828,7 +828,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * end a line
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -998,7 +998,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * write a single reference
-   * 
+   *
    * @param label
    *          the reference
    * @throws IOException
@@ -1043,7 +1043,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * print a parameterized header command
-   * 
+   *
    * @param cmd
    *          the command
    * @param param
@@ -1081,7 +1081,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * write the document class
-   * 
+   *
    * @param clazz
    *          the document class
    * @param args
@@ -1096,19 +1096,19 @@ public class LaTeXDocument extends Document {
 
   /**
    * put the document class
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
   protected void putDocumentClass() throws IOException {
     this.writeDocumentClass("article", //$NON-NLS-1$
-        "11pt", "twoside", //$NON-NLS-1$ //$NON-NLS-2$ 
-        "a4paper", "notitlepage"); //$NON-NLS-1$ //$NON-NLS-2$ 
+        "11pt", "twoside", //$NON-NLS-1$ //$NON-NLS-2$
+        "a4paper", "notitlepage"); //$NON-NLS-1$ //$NON-NLS-2$
   }
 
   /**
    * require a package
-   * 
+   *
    * @param pack
    *          the package name
    * @param args
@@ -1123,7 +1123,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * put the packages
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1131,7 +1131,7 @@ public class LaTeXDocument extends Document {
     String s;
 
     this.writeRequirePackage("amssymb"); //$NON-NLS-1$
-    this.writeRequirePackage("amsmath"); //$NON-NLS-1$    
+    this.writeRequirePackage("amsmath"); //$NON-NLS-1$
     this.writeRequirePackage("fixltx2e"); //$NON-NLS-1$
     this.m_out.write(LaTeXDocument.LINE_END, LaTeXDocument.LINE_END_BEGIN,
         LaTeXDocument.LINE_END_END);
@@ -1243,7 +1243,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * ensure that we are in the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1264,7 +1264,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * ensure that we are have the title
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -1304,7 +1304,7 @@ public class LaTeXDocument extends Document {
   /**
    * Get the date string for printing in the document header, or
    * {@code null} if no date should be printed
-   * 
+   *
    * @return the date string
    */
   protected String getDateForHeader() {
@@ -1369,7 +1369,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Is the summary a command or an environment?
-   * 
+   *
    * @return {@code true} if the summary is embedded in a command,
    *         {@code false} if it is embedded into an environment
    */
@@ -1432,7 +1432,7 @@ public class LaTeXDocument extends Document {
   /**
    * get the number to be added to the section depth in order to obtain the
    * right command
-   * 
+   *
    * @return the number to be added to the section depth in order to obtain
    *         the right command
    */
@@ -1525,7 +1525,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Should we use starred environments for multi-figures and tables?
-   * 
+   *
    * @return {@code true} if we should use starred environments,
    *         {@code false} otherwise
    */
@@ -1641,7 +1641,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * check a given figure body
-   * 
+   *
    * @param h
    *          the figure body
    */
@@ -2017,7 +2017,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a new float, flush outstanding ones if necessary the floats
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -2181,7 +2181,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a row
-   * 
+   *
    * @param h
    *          the row
    * @throws IOException
@@ -2238,7 +2238,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Iterate over the table cell definitions
-   * 
+   *
    * @param h
    *          the cell definitions
    * @throws IOException
@@ -2287,7 +2287,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * begin a cell
-   * 
+   *
    * @param h
    *          the cell
    * @throws IOException
@@ -2330,7 +2330,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * end a cell
-   * 
+   *
    * @param h
    *          the cell
    * @param min
@@ -2901,7 +2901,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * get the bibliography style
-   * 
+   *
    * @return the bibliography style
    */
   protected String getBibliographyStyle() {
@@ -2910,7 +2910,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * should the bibliography be small?
-   * 
+   *
    * @return {@code true} if we put the bibliography into a small
    *         environment, {@code false} otherwise
    */
@@ -2920,7 +2920,7 @@ public class LaTeXDocument extends Document {
 
   /**
    * Make the bibliography style, file, and references
-   * 
+   *
    * @throws IOException
    *           if io fails
    */

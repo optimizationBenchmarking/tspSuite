@@ -130,7 +130,7 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
 
   /**
    * create the ert series property
-   * 
+   *
    * @param axs
    *          the accessor
    */
@@ -167,7 +167,7 @@ public final class ERTSeriesProperty extends Property<RunSet, ERTSeries> {
 
   /**
    * Get the ert serues property for the given accessor
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the corresponding property

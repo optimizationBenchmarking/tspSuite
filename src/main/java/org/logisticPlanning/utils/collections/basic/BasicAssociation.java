@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * A basic implementation of the {@link java.util.Map.Entry} interface
  * which leaves all value-related information abstract but provides methods
  * for hash codes and equality checking.
- * 
+ *
  * @param <K>
  *          the key type
  * @param <V>
@@ -26,7 +26,7 @@ public abstract class BasicAssociation<K, V> implements Map.Entry<K, V>,
 
   /**
    * create
-   * 
+   *
    * @param key
    *          the key
    */

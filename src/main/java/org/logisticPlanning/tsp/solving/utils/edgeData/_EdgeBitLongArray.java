@@ -22,7 +22,7 @@ abstract class _EdgeBitLongArray extends EdgeBit {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes in the tsp
    */

@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.config.Configurable;
 import org.logisticPlanning.utils.config.Configuration;
 
 /**
- * 
+ *
  <p>
  * This the base class for versions of the
  * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.TemplateBasedEHBSA
@@ -418,7 +418,7 @@ abstract class _HeuristicInitRefiningTemplateBasedEHBSA extends
   /**
    * the {@link org.logisticPlanning.tsp.solving.operators.UnaryOperator
    * unary search operator} which performs the local search
-   * 
+   *
    * @serial serializable field
    */
   private UnaryOperator<int[]> m_unary;
@@ -428,7 +428,7 @@ abstract class _HeuristicInitRefiningTemplateBasedEHBSA extends
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name
    */
@@ -439,13 +439,14 @@ abstract class _HeuristicInitRefiningTemplateBasedEHBSA extends
 
   /**
    * create the unary operator
-   * 
+   *
    * @return the unary operator
    */
   abstract UnaryOperator<int[]> createUnary();
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public HeuristicInitTemplateBasedEHBSA clone() {
     _HeuristicInitRefiningTemplateBasedEHBSA cfg;
 

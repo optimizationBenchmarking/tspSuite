@@ -18,7 +18,7 @@ public final class ByteParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code ByteParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException

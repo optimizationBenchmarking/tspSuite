@@ -24,7 +24,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -92,7 +92,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Get the thesis type
-   * 
+   *
    * @return the thesis type
    */
   public final EThesisType getType() {
@@ -101,7 +101,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Get the school
-   * 
+   *
    * @return the school
    */
   public final String getSchool() {
@@ -110,7 +110,7 @@ public class BibThesis extends BibBook {
 
   /**
    * Get the school's address
-   * 
+   *
    * @return the school's address
    */
   public final String getSchoolAddress() {

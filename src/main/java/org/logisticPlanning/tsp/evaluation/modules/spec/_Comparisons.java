@@ -26,7 +26,7 @@ final class _Comparisons extends Module {
 
   /**
    * create
-   * 
+   *
    * @param owner
    *          the owning module
    */
@@ -113,7 +113,7 @@ final class _Comparisons extends Module {
 
   /**
    * log that there is not enough data
-   * 
+   *
    * @param data
    *          the data
    * @param what

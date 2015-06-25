@@ -105,7 +105,7 @@ public final class GammaLn extends UnaryFunction {
    * with the singleton instance {@link GammaLn#INSTANCE GammaLn.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link GammaLn#INSTANCE
    *         GammaLn.INSTANCE})
    */
@@ -118,7 +118,7 @@ public final class GammaLn extends UnaryFunction {
    * with the singleton instance {@link GammaLn#INSTANCE GammaLn.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link GammaLn#INSTANCE
    *         GammaLn.INSTANCE})
    */

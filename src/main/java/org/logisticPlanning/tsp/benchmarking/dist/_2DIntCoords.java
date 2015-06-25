@@ -367,8 +367,8 @@ import org.logisticPlanning.utils.NumberReader;
  * further information: [<a href="http://icannga05.dei.uc.pt/">1</a>]</div>
  * </li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -380,7 +380,7 @@ abstract class _2DIntCoords extends DistanceComputer {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -391,7 +391,7 @@ abstract class _2DIntCoords extends DistanceComputer {
 
   /**
    * add a new coordinate pair
-   * 
+   *
    * @param i
    *          the index
    * @param x
@@ -416,7 +416,7 @@ abstract class _2DIntCoords extends DistanceComputer {
 
   /**
    * Print to a print writer.
-   * 
+   *
    * @param out
    *          the print writer for output
    * @param distType
@@ -451,7 +451,7 @@ abstract class _2DIntCoords extends DistanceComputer {
 
   /**
    * write the object
-   * 
+   *
    * @param s
    *          the stream
    * @throws IOException
@@ -474,7 +474,7 @@ abstract class _2DIntCoords extends DistanceComputer {
 
   /**
    * read an object
-   * 
+   *
    * @param s
    *          the input stream
    * @throws IOException

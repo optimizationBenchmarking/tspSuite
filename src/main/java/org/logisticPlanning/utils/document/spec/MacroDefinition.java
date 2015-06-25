@@ -11,7 +11,7 @@ public abstract class MacroDefinition extends MacroDescriptor {
 
   /**
    * Create a new macro descriptor.
-   * 
+   *
    * @param name
    *          the macro's name
    * @param paramCount
@@ -26,7 +26,7 @@ public abstract class MacroDefinition extends MacroDescriptor {
 
   /**
    * Define this macro
-   * 
+   *
    * @param macro
    *          the macro
    * @throws IOException
@@ -36,13 +36,12 @@ public abstract class MacroDefinition extends MacroDescriptor {
 
   /**
    * Define all required macros
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void defineRequirements(final Header header)
       throws IOException {
     //
@@ -50,7 +49,7 @@ public abstract class MacroDefinition extends MacroDescriptor {
 
   /**
    * Define the macro, if it has not already been defined
-   * 
+   *
    * @param header
    *          the header into which it should be defined
    * @throws IOException

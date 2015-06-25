@@ -15,7 +15,7 @@ public final class RunSetsForInstancesCondition extends Condition<RunSet> {
 
   /**
    * create
-   * 
+   *
    * @param insts
    *          the instances
    */

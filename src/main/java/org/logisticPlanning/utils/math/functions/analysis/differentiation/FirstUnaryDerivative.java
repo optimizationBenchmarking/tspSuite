@@ -59,7 +59,7 @@ public final class FirstUnaryDerivative extends BasicUnaryDerivative {
 
   /**
    * Create
-   * 
+   *
    * @param f
    *          the function
    */

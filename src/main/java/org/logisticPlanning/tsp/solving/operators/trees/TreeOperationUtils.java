@@ -17,7 +17,7 @@ public final class TreeOperationUtils {
    * setting the parameter 'full' apropriately. It can be used to create
    * trees during the random population initialization phase or during
    * mutation steps.
-   * 
+   *
    * @param types
    *          the node types available for creating the tree
    * @param maxDepth

@@ -32,7 +32,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -67,7 +67,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -157,7 +157,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the bibliography editors
-   * 
+   *
    * @return the bibliography editors
    */
   public final BibAuthors getEditors() {
@@ -166,7 +166,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the publisher
-   * 
+   *
    * @return the publisher
    */
   public final String getPublisher() {
@@ -175,7 +175,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the publisher's address
-   * 
+   *
    * @return the publisher's address
    */
   public final String getPublisherAddress() {
@@ -184,7 +184,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the series
-   * 
+   *
    * @return the series
    */
   public final String getSeries() {
@@ -193,7 +193,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the volume
-   * 
+   *
    * @return the volume
    */
   public final String getVolume() {
@@ -202,7 +202,7 @@ public class BibBook extends BibRecord {
 
   /**
    * Get the edition
-   * 
+   *
    * @return the edition
    */
   public final String getEdition() {

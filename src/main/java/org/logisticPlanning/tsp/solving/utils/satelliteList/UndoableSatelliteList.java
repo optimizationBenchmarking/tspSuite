@@ -9,7 +9,7 @@ package org.logisticPlanning.tsp.solving.utils.satelliteList;
  * mutable satellite nodes} that can accept two additions and deletions in
  * an undoable fashion, ideal for local searches with backtracking.
  * </p>
- * 
+ *
  * @param <NT>
  *          the node type <h2>Satellite List Representation</h2>
  *          <p>
@@ -468,7 +468,7 @@ public class UndoableSatelliteList<NT extends UndoableSatelliteNode>
 
   /**
    * Create a mutable satellite list of {@code n} nodes.
-   * 
+   *
    * @param n
    *          the number of nodes
    */

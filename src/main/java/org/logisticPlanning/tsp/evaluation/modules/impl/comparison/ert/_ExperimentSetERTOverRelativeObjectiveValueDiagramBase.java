@@ -155,7 +155,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
       .getPlaceholder();
 
   /** the y-axis caption part 1 */
-  static final String Y_AXIS_1 = "max{0, lg(med " + //$NON-NLS-1$ 
+  static final String Y_AXIS_1 = "max{0, lg(med " + //$NON-NLS-1$
       Macros.ERT.getPlaceholder();
   /** the y-axis caption part 2 */
   static final String Y_AXIS_2 = ")}";//$NON-NLS-1$
@@ -167,7 +167,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
 
   /**
    * create!
-   * 
+   *
    * @param name
    *          the name
    * @param owner
@@ -190,7 +190,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
   /**
    * Aggregate the experiment performance based on the area under the
    * curve.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg
@@ -258,7 +258,7 @@ abstract class _ExperimentSetERTOverRelativeObjectiveValueDiagramBase
 
   /**
    * Make the figure
-   * 
+   *
    * @param data
    *          the data
    * @param prop

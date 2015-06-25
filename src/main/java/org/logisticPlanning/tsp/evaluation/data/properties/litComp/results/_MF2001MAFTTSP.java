@@ -52,7 +52,7 @@ final class _MF2001MAFTTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {

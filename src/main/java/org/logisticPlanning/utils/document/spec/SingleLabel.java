@@ -21,7 +21,7 @@ public class SingleLabel extends _OwnedLabel {
 
   /**
    * Create a single label
-   * 
+   *
    * @param type
    *          the label type
    * @param key
@@ -47,7 +47,7 @@ public class SingleLabel extends _OwnedLabel {
 
   /**
    * Has the label already been written?
-   * 
+   *
    * @return {@code true} if the label has already been written,
    *         {@code false} otherwise
    */
@@ -57,7 +57,7 @@ public class SingleLabel extends _OwnedLabel {
 
   /**
    * Get the label type
-   * 
+   *
    * @return the label type
    */
   public final ELabelType getType() {
@@ -66,7 +66,7 @@ public class SingleLabel extends _OwnedLabel {
 
   /**
    * Get the label key
-   * 
+   *
    * @return the label key
    */
   public final String getKey() {
@@ -84,7 +84,7 @@ public class SingleLabel extends _OwnedLabel {
    * {@link org.logisticPlanning.utils.document.spec.Document#writeSingleLabel(SingleLabel, String)}
    * . Before the label is written, this function will throw a
    * {@link java.lang.IllegalStateException}
-   * 
+   *
    * @return the information string
    */
   public final String getInfo() {

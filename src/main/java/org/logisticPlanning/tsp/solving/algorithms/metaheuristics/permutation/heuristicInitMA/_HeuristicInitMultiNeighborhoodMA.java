@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationMultiNeighborhoodMutation;
 
 /**
- * 
+ *
  <p>
  * This class is an internal class. You should never load or instantiate
  * it. Use the classes derived from it.
@@ -569,7 +569,7 @@ abstract class _HeuristicInitMultiNeighborhoodMA extends
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          a string to be added to the base name
    */

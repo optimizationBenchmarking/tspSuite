@@ -14,7 +14,7 @@ public class ArrayPoint extends MutablePoint {
 
   /**
    * create
-   * 
+   *
    * @param array
    *          the array
    */

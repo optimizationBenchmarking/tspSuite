@@ -35,7 +35,7 @@ public final class DescSystem extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -79,7 +79,7 @@ public final class DescSystem extends DescriptionModule {
     "The benchmarking system collects log points based on the four time measures"); //$NON-NLS-1$
     lbl = this.m_tm.getLabel(data);
     if (lbl != null) {
-      body.write(" introduced in ");//$NON-NLS-1$    
+      body.write(" introduced in ");//$NON-NLS-1$
       body.reference(lbl);
     }
     body.write(//

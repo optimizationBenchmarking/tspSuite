@@ -278,7 +278,7 @@ final class _Compiler {
 
   /**
    * instantiate
-   * 
+   *
    * @param ctx
    *          the context
    */
@@ -342,7 +342,7 @@ final class _Compiler {
 
   /**
    * file-to-string
-   * 
+   *
    * @param f
    *          the file
    * @return the string version
@@ -379,7 +379,7 @@ final class _Compiler {
             try {
               new File(this.m_dir, (this.m_baseName + ".blg")).delete();//$NON-NLS-1$
             } finally {
-              new File(this.m_dir, (this.m_baseName + ".out")).delete();//$NON-NLS-1$          
+              new File(this.m_dir, (this.m_baseName + ".out")).delete();//$NON-NLS-1$
             }
           }
         }
@@ -393,7 +393,7 @@ final class _Compiler {
 
   /**
    * compile the latex file
-   * 
+   *
    * @return {@code true} if compiling was possible, {@code false}
    *         otherwise
    * @throws IOException
@@ -497,7 +497,7 @@ final class _Compiler {
 
   /**
    * compile the xelatex file
-   * 
+   *
    * @return {@code true} if compiling was possible, {@code false}
    *         otherwise
    * @throws IOException
@@ -563,7 +563,7 @@ final class _Compiler {
 
   /**
    * run!
-   * 
+   *
    * @return the latex file
    * @throws IOException
    *           if io fails
@@ -626,7 +626,7 @@ final class _Compiler {
 
   /**
    * get the file size
-   * 
+   *
    * @param f
    *          the file
    * @return the file size
@@ -640,7 +640,7 @@ final class _Compiler {
 
   /**
    * run a process
-   * 
+   *
    * @param pb
    *          the process builder
    * @return {@code true} if and only if the execution we successful,
@@ -681,7 +681,7 @@ final class _Compiler {
 
   /**
    * compile the latex file
-   * 
+   *
    * @return {@code true} if and only if the execution we successful,
    *         {@code false} otherwise
    * @throws IOException
@@ -697,7 +697,7 @@ final class _Compiler {
 
   /**
    * compile the xelatex file if io fails
-   * 
+   *
    * @return {@code true} if and only if the execution we successful,
    *         {@code false} otherwise
    * @throws IOException
@@ -713,7 +713,7 @@ final class _Compiler {
 
   /**
    * compile the bibtex file
-   * 
+   *
    * @return {@code true} if and only if the execution we successful,
    *         {@code false} otherwise
    * @throws IOException
@@ -732,7 +732,7 @@ final class _Compiler {
 
   /**
    * compile the dvi file
-   * 
+   *
    * @return {@code true} if and only if the execution we successful,
    *         {@code false} otherwise
    * @throws IOException
@@ -743,7 +743,7 @@ final class _Compiler {
 
     if (this.m_dvi2Ps != null) {
       pb = new ProcessBuilder();
-      pb.command(this.m_dvi2Ps, this.m_dviName, "-o", this.m_psName); //$NON-NLS-1$    
+      pb.command(this.m_dvi2Ps, this.m_dviName, "-o", this.m_psName); //$NON-NLS-1$
       return this.__run(pb);
     }
 
@@ -752,7 +752,7 @@ final class _Compiler {
 
   /**
    * compile the ps file
-   * 
+   *
    * @return {@code true} if and only if the execution we successful,
    *         {@code false} otherwise
    * @throws IOException
@@ -781,12 +781,12 @@ final class _Compiler {
 
     if (this.m_ghostScript != null) {
       pb = new ProcessBuilder();
-      pb.command(this.m_ghostScript, "-q", //$NON-NLS-1$    
+      pb.command(this.m_ghostScript, "-q", //$NON-NLS-1$
           "-dNOPAUSE",//$NON-NLS-1$
-          "-sDEVICE=pdfwrite",//$NON-NLS-1$    
-          ("-sOutputFile=" + this.m_pdfName),//$NON-NLS-1$    
-          this.m_psName, "-c", //$NON-NLS-1$    
-          "quit");//$NON-NLS-1$  
+          "-sDEVICE=pdfwrite",//$NON-NLS-1$
+          ("-sOutputFile=" + this.m_pdfName),//$NON-NLS-1$
+          this.m_psName, "-c", //$NON-NLS-1$
+          "quit");//$NON-NLS-1$
       return this.__run(pb);
     }
 

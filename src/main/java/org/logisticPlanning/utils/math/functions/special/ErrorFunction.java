@@ -88,7 +88,7 @@ public final class ErrorFunction extends UnaryFunction {
    * with the singleton instance {@link ErrorFunction#INSTANCE
    * ErrorFunction.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ErrorFunction#INSTANCE ErrorFunction.INSTANCE})
    */
@@ -101,7 +101,7 @@ public final class ErrorFunction extends UnaryFunction {
    * with the singleton instance {@link ErrorFunction#INSTANCE
    * ErrorFunction.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ErrorFunction#INSTANCE ErrorFunction.INSTANCE})
    */

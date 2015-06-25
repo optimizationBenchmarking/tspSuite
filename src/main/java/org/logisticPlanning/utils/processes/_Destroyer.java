@@ -12,7 +12,7 @@ final class _Destroyer extends Thread {
 
   /**
    * create the destroyer
-   * 
+   *
    * @param owner
    *          the owner
    * @param maxHang

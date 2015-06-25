@@ -10,7 +10,7 @@ public final class ResPoint implements Comparable<ResPoint> {
 
   /**
    * create
-   * 
+   *
    * @param t
    *          the time
    * @param q
@@ -24,7 +24,7 @@ public final class ResPoint implements Comparable<ResPoint> {
 
   /**
    * get the time
-   * 
+   *
    * @return the time
    */
   public final double getTime() {
@@ -33,7 +33,7 @@ public final class ResPoint implements Comparable<ResPoint> {
 
   /**
    * get the quality
-   * 
+   *
    * @return the quality
    */
   public final double getQuality() {

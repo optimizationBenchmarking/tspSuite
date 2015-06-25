@@ -3,7 +3,7 @@ package org.logisticPlanning.utils.collections.conditions;
 /**
  * A condition is a Boolean function which is either {@code true} or
  * {@code false}.
- * 
+ *
  * @param <T>
  *          the element type this condition applies to.
  */
@@ -16,7 +16,7 @@ public abstract class Condition<T> {
 
   /**
    * Check if the condition is met.
-   * 
+   *
    * @param param
    *          the parameter
    * @return {@code true} if the condition is met by {@code param},

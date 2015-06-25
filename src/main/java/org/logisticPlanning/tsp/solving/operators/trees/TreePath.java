@@ -14,7 +14,7 @@ import org.logisticPlanning.tsp.solving.searchSpaces.trees.Node;
  * side-effects if an individual is selected more than once), all
  * modifications (such as the replacement of a node) will lead to the
  * creation of new trees.
- * 
+ *
  * @param <NT>
  *          the node type
  */
@@ -39,7 +39,7 @@ public class TreePath<NT extends Node<NT>> {
 
   /**
    * Get the path length
-   * 
+   *
    * @return the path length
    */
   public final int size() {
@@ -48,7 +48,7 @@ public class TreePath<NT extends Node<NT>> {
 
   /**
    * Get the element at the specified index
-   * 
+   *
    * @param index
    *          the index
    * @return the element
@@ -59,7 +59,7 @@ public class TreePath<NT extends Node<NT>> {
 
   /**
    * Get the index of the next child in the path
-   * 
+   *
    * @param index
    *          the index of the current parent
    * @return the index of the next child in the path
@@ -71,7 +71,7 @@ public class TreePath<NT extends Node<NT>> {
   /**
    * Create a random path through the tree. Each node in the tree is
    * selected with exactly the same probability.
-   * 
+   *
    * @param node
    *          the node
    * @param r
@@ -112,7 +112,7 @@ public class TreePath<NT extends Node<NT>> {
 
   /**
    * An internal method used to add an element to the path.
-   * 
+   *
    * @param node
    *          the node
    * @param pi
@@ -149,7 +149,7 @@ public class TreePath<NT extends Node<NT>> {
    * immuatable, this will result in the creation of a completely new tree
    * and a new root node. The path is updated while this operation is
    * performed, i.e., it is still valid afterwards.
-   * 
+   *
    * @param newNode
    *          the new node
    * @return the result new root node of the path

@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
  * Ranking} and
  * {@link org.logisticPlanning.tsp.evaluation.modules.impl.descriptions.eval.DescRanking
  * DescRanking} in detail.
- * 
+ *
  * @param <T>
  *          the type of object being ranked <h2>References</h2>
  *          <ol>
@@ -40,7 +40,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Create the rank object
-   * 
+   *
    * @param key
    *          the object being ranked
    */
@@ -72,7 +72,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Set the rank of this object. This method can only be called once.
-   * 
+   *
    * @param r
    *          the rank
    */
@@ -90,7 +90,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Get the rank of the {@link #getKey() object}
-   * 
+   *
    * @return the rank
    */
   public final double getRank() {
@@ -121,7 +121,7 @@ public class Rank<T> extends BasicAssociation<T, Double> implements
 
   /**
    * Get the rank
-   * 
+   *
    * @return the rank
    */
   @Override

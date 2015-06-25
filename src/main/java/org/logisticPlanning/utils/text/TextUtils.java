@@ -161,7 +161,7 @@ public final class TextUtils {
 
   /**
    * obtain the line separator
-   * 
+   *
    * @return the line separator
    */
   private static final String getLineSeparator() {
@@ -233,7 +233,7 @@ public final class TextUtils {
 
   /**
    * Parse a boolean value
-   * 
+   *
    * @param s
    *          the string to parse
    * @return -1 for false, 1 for true, 0 for undecided
@@ -276,7 +276,7 @@ public final class TextUtils {
    * Parse a {@link java.lang.String} to a 8 bit signed integer (byte)
    * value. This method tries to first convert the string directly, then
    * looks for synonyms and constant values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the byte value
@@ -294,7 +294,7 @@ public final class TextUtils {
    * Parse a {@link java.lang.String} to a 16 bit signed integer (short)
    * value. This method tries to first convert the string directly, then
    * looks for synonyms and constant values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the short value
@@ -310,7 +310,7 @@ public final class TextUtils {
 
   /**
    * get the base identified by the character
-   * 
+   *
    * @param chr
    *          the identifier
    * @return the base, or {@code 0} if none
@@ -342,7 +342,7 @@ public final class TextUtils {
    * Parse a {@link java.lang.String} to a 32 bit signed integer (int)
    * value. This method tries to first convert the string directly, then
    * looks for synonyms and constant values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the int value
@@ -443,7 +443,7 @@ public final class TextUtils {
    * Parse a {@link java.lang.String} to a 64 bit signed integer (long)
    * value. This method tries to first convert the string directly, then
    * looks for synonyms and constant values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the long value
@@ -545,7 +545,7 @@ public final class TextUtils {
    * floating point number (float) value. This method tries to first
    * convert the string directly, then looks for synonyms and constant
    * values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the float value
@@ -562,7 +562,7 @@ public final class TextUtils {
    * floating point number (double) value. This method tries to first
    * convert the string directly, then looks for synonyms and constant
    * values that may match to the string.
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the double value
@@ -660,7 +660,7 @@ public final class TextUtils {
 
   /**
    * Parse a character
-   * 
+   *
    * @param s
    *          the string to parse
    * @return the character value
@@ -674,7 +674,7 @@ public final class TextUtils {
 
   /**
    * convert a double to a short string
-   * 
+   *
    * @param t
    *          the double
    * @return the string
@@ -696,7 +696,7 @@ public final class TextUtils {
 
   /**
    * convert a double to string
-   * 
+   *
    * @param t
    *          the double
    * @return the string
@@ -707,7 +707,7 @@ public final class TextUtils {
 
   /**
    * convert a double to string
-   * 
+   *
    * @param t
    *          the double
    * @param steps
@@ -756,7 +756,7 @@ public final class TextUtils {
   /**
    * Prepare a string by trimming it and setting it to {@code null} if the
    * length is 0.
-   * 
+   *
    * @param s
    *          the string
    * @return the prepared version of {@code s}, {@code null} if it was
@@ -791,7 +791,7 @@ public final class TextUtils {
    * textual names, this should preserve the identity of strings while
    * turning them into valid identifiers in virtually all reasonable
    * textual formats or programming language.
-   * 
+   *
    * @param name
    *          the name to be sanitized
    * @return the name to be sanitized
@@ -805,7 +805,7 @@ public final class TextUtils {
    * the appropriate
    * {@link org.logisticPlanning.utils.text.EQuotes#getDashCount() dash
    * count} . See also {@link org.logisticPlanning.utils.text.EQuotes}.
-   * 
+   *
    * @param character
    *          the character
    * @return {@code 0} if the character is not a quotation character, 1 for
@@ -916,7 +916,7 @@ public final class TextUtils {
   /**
    * checks whether a character is a brace or not. See also
    * {@link org.logisticPlanning.utils.text.EBraces}.
-   * 
+   *
    * @param character
    *          the character
    * @return {@code 0} if the character is not a brace, a positive value
@@ -1014,7 +1014,7 @@ public final class TextUtils {
 
   /**
    * Get an easy-to-use representation of a class.
-   * 
+   *
    * @param c
    *          the class
    * @return the name
@@ -1052,7 +1052,7 @@ public final class TextUtils {
    * Append a {@code long} to a string builder in a representation which
    * does not contain any numbers and only textually describes the value of
    * the number.
-   * 
+   *
    * @param number
    *          the number
    * @param dest
@@ -1067,7 +1067,7 @@ public final class TextUtils {
    * Convert a {@code long} to a full textual representation, i.e., to a
    * representation which does not contain any numbers and only textually
    * describes the value of the number.
-   * 
+   *
    * @param number
    *          the number
    * @return the string version of {@code number}
@@ -1084,7 +1084,7 @@ public final class TextUtils {
    * Append a {@code double} to a string builder in a representation which
    * does not contain any numbers and only textually describes the value of
    * the number.
-   * 
+   *
    * @param number
    *          the number
    * @param dest
@@ -1099,7 +1099,7 @@ public final class TextUtils {
    * Convert a {@code double} to textual representation, i.e., to a
    * representation which does not contain any numbers and only textually
    * describes the value of the number.
-   * 
+   *
    * @param number
    *          the number
    * @return the string version of {@code number}

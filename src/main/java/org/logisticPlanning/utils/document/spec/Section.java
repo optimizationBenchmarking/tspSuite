@@ -30,7 +30,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -70,7 +70,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the index of this section
-   * 
+   *
    * @return the index of this section
    */
   public final int getIndex() {
@@ -79,7 +79,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the section depth: {@code 1} for the top-level section
-   * 
+   *
    * @return the section depth
    */
   public final int getDepth() {
@@ -88,7 +88,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * Get the hierarchy of indexes
-   * 
+   *
    * @return the hierarchy of indexes
    */
   public final int[] getAllIndexes() {
@@ -112,7 +112,7 @@ public class Section extends AbstractLabeledElement {
 
   /**
    * get the id of the next section
-   * 
+   *
    * @return the id of the next section
    */
   private final int nextSection() {
@@ -226,7 +226,7 @@ public class Section extends AbstractLabeledElement {
   /**
    * Open a new section, either as a sub-section or as a top-level section
    * in a document body.
-   * 
+   *
    * @param element
    *          the current element which should contain the new section
    * @param label

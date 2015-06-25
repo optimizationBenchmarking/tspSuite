@@ -6,7 +6,7 @@ import org.logisticPlanning.utils.utils.CloneUtils;
 
 /**
  * The base class for operators that can perturb a given solution.
- * 
+ *
  * @param <P>
  *          the product type
  * @since 0.9.8
@@ -18,7 +18,7 @@ public abstract class PerturbationOperator<P> extends UnaryOperator<P> {
 
   /**
    * Create a new pertubation operator
-   * 
+   *
    * @param name
    *          the operator's name
    */
@@ -37,7 +37,7 @@ public abstract class PerturbationOperator<P> extends UnaryOperator<P> {
    * and it will replace this value with the new
    * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction#evaluate(int[])
    * tour length}.
-   * 
+   *
    * @param srcdst
    *          the individual record holding the solution to be perturbed
    * @param f

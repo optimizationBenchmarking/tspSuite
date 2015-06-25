@@ -59,7 +59,7 @@
  * href ="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.9438">
  * 10.1 .1.15.9438</a></div></div></li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 package org.logisticPlanning.tsp.solving.algorithms.localSearch.satelliteList.LKW;

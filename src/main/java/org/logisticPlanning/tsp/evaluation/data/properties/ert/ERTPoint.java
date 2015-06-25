@@ -110,7 +110,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
 
   /**
    * instantiate
-   * 
+   *
    * @param t
    *          the threshold
    * @param rt
@@ -148,7 +148,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
 
   /**
    * Get the relative threshold
-   * 
+   *
    * @return the relative threshold
    */
   public final double getRelThreshold() {
@@ -157,7 +157,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
 
   /**
    * Get the threshold
-   * 
+   *
    * @return the threshold
    */
   public final double getThreshold() {
@@ -166,7 +166,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
 
   /**
    * Get the ert
-   * 
+   *
    * @return the ert
    */
   public final double getERT() {
@@ -175,7 +175,7 @@ public final class ERTPoint extends Point implements Comparable<ERTPoint> {
 
   /**
    * Get the number of successful runs
-   * 
+   *
    * @return the number of successful runs
    */
   public final int getSuccessful() {

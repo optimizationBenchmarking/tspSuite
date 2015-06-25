@@ -39,7 +39,7 @@ public abstract class MultivariateTest extends NamedObject {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the test name
    */
@@ -50,7 +50,7 @@ public abstract class MultivariateTest extends NamedObject {
   /**
    * Return {@code true} if and only if the test is two tailed,
    * {@code false} for one-tailed tests
-   * 
+   *
    * @return {@code true} if and only if the test is two tailed,
    *         {@code false} for one-tailed tests
    */
@@ -59,7 +59,7 @@ public abstract class MultivariateTest extends NamedObject {
   /**
    * Compare the a set of data collections in terms of dimension
    * {@code dim}
-   * 
+   *
    * @param dataSets
    *          the data sets
    * @param dim
@@ -75,7 +75,7 @@ public abstract class MultivariateTest extends NamedObject {
 
   /**
    * Initialize the destination
-   * 
+   *
    * @param dest
    *          the destination
    * @param n
@@ -95,7 +95,7 @@ public abstract class MultivariateTest extends NamedObject {
 
     if (dest.n() != n) {
       throw new IllegalArgumentException(//
-          ((("Dimension must be same, but are " + dest.n()) + ',') + n)); //$NON-NLS-1$          
+          ((("Dimension must be same, but are " + dest.n()) + ',') + n)); //$NON-NLS-1$
     }
 
     dest.clear();
@@ -105,7 +105,7 @@ public abstract class MultivariateTest extends NamedObject {
   /**
    * compare the a set of data collections in terms of dimension
    * {@code dim}
-   * 
+   *
    * @param dataSets
    *          the data sets
    * @param dim
@@ -138,7 +138,7 @@ public abstract class MultivariateTest extends NamedObject {
 
   /**
    * Set the test result
-   * 
+   *
    * @param i
    *          the first compared distribution
    * @param j
@@ -164,7 +164,7 @@ public abstract class MultivariateTest extends NamedObject {
 
   /**
    * Create a result record
-   * 
+   *
    * @param n
    *          the number of compared data sets
    * @return the result

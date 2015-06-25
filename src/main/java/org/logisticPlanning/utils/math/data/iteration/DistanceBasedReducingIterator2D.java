@@ -35,7 +35,7 @@ public final class DistanceBasedReducingIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param minDist
    *          the minimum distance
    * @param source
@@ -48,7 +48,7 @@ public final class DistanceBasedReducingIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param minDist
    *          the minimum distance
    * @param source

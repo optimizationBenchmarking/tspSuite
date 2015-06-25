@@ -16,7 +16,7 @@ final class _Frac {
 
   /**
    * create
-   * 
+   *
    * @param up
    *          the up
    * @param down
@@ -30,7 +30,7 @@ final class _Frac {
 
   /**
    * get the double value
-   * 
+   *
    * @param f
    *          the frac
    * @return the double value
@@ -44,7 +44,7 @@ final class _Frac {
 
   /**
    * make a new fraction
-   * 
+   *
    * @param up
    *          the up
    * @param down
@@ -64,7 +64,7 @@ final class _Frac {
 
   /**
    * invert a fraction
-   * 
+   *
    * @param a
    *          the fraction
    * @return the inverse
@@ -75,7 +75,7 @@ final class _Frac {
 
   /**
    * multiply
-   * 
+   *
    * @param a_up
    *          the a_up
    * @param a_down
@@ -140,7 +140,7 @@ final class _Frac {
 
   /**
    * multiply two fractions
-   * 
+   *
    * @param a
    *          the first fraction
    * @param b
@@ -153,7 +153,7 @@ final class _Frac {
 
   /**
    * divide two fractions
-   * 
+   *
    * @param a
    *          the first fraction
    * @param b

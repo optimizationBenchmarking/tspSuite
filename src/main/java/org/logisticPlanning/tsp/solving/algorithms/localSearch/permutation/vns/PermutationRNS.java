@@ -158,7 +158,7 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the update operations (neighborhoods)
-   * 
+   *
    * @serial a non-null array with the (non-null) updating operations
    *         (neighborhoods)
    */
@@ -167,7 +167,7 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * the policy regarding whether we should use the first improvement or
    * best improvement
-   * 
+   *
    * @serial the non-null improvement selection policy
    */
   private EImprovementSelectionPolicy m_improvementSelectionPolicy;
@@ -185,7 +185,7 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the RNS
-   * 
+   *
    * @param args
    *          the command line arguments
    */
@@ -328,7 +328,7 @@ public class PermutationRNS extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * set the policy regarding whether the first improvement or the best
    * improvement should be used
-   * 
+   *
    * @param i
    *          the policy
    */

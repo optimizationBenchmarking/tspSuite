@@ -127,7 +127,7 @@ public final class DescBenchmarks extends DescriptionModule {
           "TSPLIB \u2012 A Traveling Salesman Problem Library",//$NON-NLS-1$
           new BibDate(1991, EBibQuarter.FALL),//
           "ORSA Journal on Computing",//$NON-NLS-1$
-          "3", "4",//$NON-NLS-1$//$NON-NLS-2$ 
+          "3", "4",//$NON-NLS-1$//$NON-NLS-2$
           "376", "384",//$NON-NLS-1$//$NON-NLS-2$
           null, "10.1287/ijoc.3.4.376");//$NON-NLS-1$
 
@@ -151,7 +151,7 @@ public final class DescBenchmarks extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -161,7 +161,7 @@ public final class DescBenchmarks extends DescriptionModule {
 
   /**
    * cite the tsp lib
-   * 
+   *
    * @param mode
    *          the citation mode
    * @param dest
@@ -213,7 +213,7 @@ public final class DescBenchmarks extends DescriptionModule {
     body.write(" cities and "); //$NON-NLS-1$
 
     body.writeInt(Instance.ASYMMETRIC_INSTANCES.size());
-    body.write(" asymmetric instances with dimensions "); //$NON-NLS-1$    
+    body.write(" asymmetric instances with dimensions "); //$NON-NLS-1$
     body.macroInvoke(Macros.SCALE);
     body.write(" ranging from "); //$NON-NLS-1$
     body.writeInt(Instance.ASYMMETRIC_INSTANCES.first().n());

@@ -121,7 +121,7 @@ public class ExperimentERTProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param ert
    *          the ert
    * @param insts
@@ -134,7 +134,7 @@ public class ExperimentERTProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param ert

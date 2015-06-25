@@ -720,7 +720,7 @@ public enum EComparison {
 
   /**
    * create
-   * 
+   *
    * @param cmp
    *          the comparison result to be returned by
    *          {@link org.logisticPlanning.utils.utils.comparison.PreciseComparator#preciseCompare(Object, Object)}
@@ -731,7 +731,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -742,7 +742,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -753,7 +753,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -764,7 +764,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -775,7 +775,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -786,7 +786,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first number
    * @param b
@@ -797,7 +797,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first object
    * @param b
@@ -808,7 +808,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first boolean
    * @param b
@@ -819,7 +819,7 @@ public enum EComparison {
 
   /**
    * compare {@code a} and {@code b}.
-   * 
+   *
    * @param a
    *          the first character
    * @param b
@@ -831,7 +831,7 @@ public enum EComparison {
   /**
    * Get the equivalent result of a {@link java.util.Comparator}, i.e.,
    * either {@code -1}, {@code 0}, or {@code 1}.
-   * 
+   *
    * @return the equivalent result of a {@link java.util.Comparator}.
    */
   public final int getComparisonResult() {

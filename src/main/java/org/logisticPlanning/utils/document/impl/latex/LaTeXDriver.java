@@ -370,7 +370,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * create the LaTeX driver
-   * 
+   *
    * @param name
    *          the driver's name
    */
@@ -391,7 +391,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * find a latex executable
-   * 
+   *
    * @param s
    *          the string
    * @return the file
@@ -414,7 +414,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * can we use LaTeX?
-   * 
+   *
    * @return {@code true} if the latex tool chain is enabled, {@code false}
    *         otherwise
    */
@@ -426,7 +426,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set whether we can use the LaTeX tool chain or not
-   * 
+   *
    * @param canUse
    *          {@code true} for enabling the latex tool chain, {@code false}
    *          otherwise
@@ -439,7 +439,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * Should we compile the LaTeX document to PDF?
-   * 
+   *
    * @return {@code true} if compiling LaTeX is enabled, {@code false}
    *         otherwise
    */
@@ -451,7 +451,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * Set whether we can compile LaTeX documents or not
-   * 
+   *
    * @param canCompile
    *          {@code true} for enabling LaTeX compilation , {@code false}
    *          otherwise
@@ -464,7 +464,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * Should we log the process output?
-   * 
+   *
    * @return {@code true} if process output should be logged, {@code false}
    *         if it should silently be discarted
    */
@@ -476,7 +476,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set whether we log the process output
-   * 
+   *
    * @param logProcessOutput
    *          {@code true} if process output should be logged,
    *          {@code false} if it should silently be discarted
@@ -489,7 +489,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * can we use XeLaTeX?
-   * 
+   *
    * @return {@code true} if the xelatex tool chain is enabled,
    *         {@code false} otherwise
    */
@@ -501,7 +501,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set whether we can use the XeLaTeX tool chain or not
-   * 
+   *
    * @param canUse
    *          {@code true} for enabling the xelatex tool chain,
    *          {@code false} otherwise
@@ -514,7 +514,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the LaTeX executable
-   * 
+   *
    * @return the LaTeX executable
    */
   public final File getLaTeX() {
@@ -525,7 +525,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the LaTeX executable
-   * 
+   *
    * @param f
    *          the new value of the LaTeX executable
    */
@@ -537,7 +537,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the XeLaTeX executable
-   * 
+   *
    * @return the XeLaTeX executable
    */
   public final File getXeLaTeX() {
@@ -548,7 +548,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the XeLaTeX executable
-   * 
+   *
    * @param f
    *          the new value of the XeLaTeX executable
    */
@@ -560,7 +560,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the BibTeX executable
-   * 
+   *
    * @return the BibTeX executable
    */
   public final File getBibTeX() {
@@ -571,7 +571,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the BibTeX executable
-   * 
+   *
    * @param f
    *          the new value of the BibTeX executable
    */
@@ -583,7 +583,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the DVI2PS executable
-   * 
+   *
    * @return the DVI2PS executable
    */
   public final File getDvi2Ps() {
@@ -594,7 +594,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the DVI2PS executable
-   * 
+   *
    * @param f
    *          the new value of the DVI2PS executable
    */
@@ -606,7 +606,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the Ps2Pdf executable
-   * 
+   *
    * @return the Ps2Pdf executable
    */
   public final File getPs2Pdf() {
@@ -617,7 +617,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the Ps2Pdf executable
-   * 
+   *
    * @param f
    *          the new value of the Ps2Pdf executable
    */
@@ -629,7 +629,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * get the ghost script executable
-   * 
+   *
    * @return the ghost script executable
    */
   public final File getGhostScript() {
@@ -640,7 +640,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * set the ghost script executable
-   * 
+   *
    * @param f
    *          the new value of the ghost script executable
    */
@@ -830,7 +830,7 @@ public class LaTeXDriver extends DocumentDriver {
 
   /**
    * Create an instance of the default LaTeX document driver
-   * 
+   *
    * @return an instance of the default LaTeX document driver
    */
   public static final LaTeXDriver createDefaultLaTeXDriver() {

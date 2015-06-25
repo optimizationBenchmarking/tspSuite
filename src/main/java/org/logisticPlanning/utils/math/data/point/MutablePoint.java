@@ -16,7 +16,7 @@ public abstract class MutablePoint extends Point {
 
   /**
    * Set the value at dimension {@code dimension}.
-   * 
+   *
    * @param dimension
    *          the dimension
    * @param value
@@ -26,7 +26,7 @@ public abstract class MutablePoint extends Point {
 
   /**
    * Copy the values of another point into this one
-   * 
+   *
    * @param p
    *          the point to copy
    */
@@ -44,7 +44,7 @@ public abstract class MutablePoint extends Point {
 
   /**
    * load the data of this point from an array
-   * 
+   *
    * @param src
    *          the source array
    * @param srcStart
@@ -62,7 +62,7 @@ public abstract class MutablePoint extends Point {
 
   /**
    * Load the values of this point from a data collection
-   * 
+   *
    * @param data
    *          the data collection
    * @param index

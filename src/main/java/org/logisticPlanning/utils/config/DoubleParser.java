@@ -18,7 +18,7 @@ public final class DoubleParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code DoubleParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException

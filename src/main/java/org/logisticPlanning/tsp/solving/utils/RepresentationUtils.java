@@ -330,7 +330,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * further information: [<a href="http://icannga05.dei.uc.pt/">1</a>]</div>
  * </li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 public final class RepresentationUtils {
@@ -343,7 +343,7 @@ public final class RepresentationUtils {
    * {@code (1, 2, 3, 4)} &#8801; {@code (4, 3, 2, 1)} &#8801;
    * {@code (4, 1, 2, 3)} &#8801; {@code (3, 4, 1, 2)} &#8801;
    * {@code (2, 1, 4, 3)} but &#8802; {@code (1, 3, 2, 4)}.
-   * 
+   *
    * @param path1
    *          the first tour in <a href="#pathRepresentation">
    *          <em>path representation</em></a>
@@ -431,7 +431,7 @@ public final class RepresentationUtils {
    * for a symmetric TSP. In this case, the tours {@code (1, 2, 3, 4)}
    * &#8801; {@code (4, 3, 2, 1)} in path representation are equivalent to
    * the adjacency lists {@code (2, 3, 4, 1)} and {@code (4, 1, 2, 3)}.
-   * 
+   *
    * @param path
    *          the first tour, given in <a href="#pathRepresentation">
    *          <em>path representation</em></a>
@@ -499,7 +499,7 @@ public final class RepresentationUtils {
    * Check if two tours in <a href="#adjacencyRepresentation">
    * <em>adjacency representation</em></a> are equivalent from the
    * perspective of a symmetric TSP.
-   * 
+   *
    * @param adjacencyList1
    *          the first tour in <a href="#adjacencyRepresentation">
    *          <em>adjacency representation</em></a>
@@ -574,7 +574,7 @@ public final class RepresentationUtils {
    * <em>path representation</em></a> in normal form: Start at node
    * {@code 1} and continuing into the direction of its lowest valued
    * neighbor.
-   * 
+   *
    * @param path
    *          the tour in <a href="#pathRepresentation">
    *          <em>path representation</em></a>
@@ -619,7 +619,7 @@ public final class RepresentationUtils {
    * city which should appear after that element. A path, too, is a
    * permutation represented as integer array. Here, the element at index
    * {@code i} will come at position {@code i} in the tour.
-   * 
+   *
    * @param adjacencyList
    *          the source, an {@code int[]} holding a solution in <a
    *          href="#adjacencyRepresentation">
@@ -651,7 +651,7 @@ public final class RepresentationUtils {
    * city which should appear after that element. A path, too, is a
    * permutation represented as integer array. Here, the element at index
    * {@code i} will come at position {@code i} in the tour.
-   * 
+   *
    * @param path
    *          the source: an {@code int[]} holding a permutation in
    *          representing a solution in <a href="#pathRepresentation">
@@ -678,7 +678,7 @@ public final class RepresentationUtils {
    * {@link org.logisticPlanning.tsp.solving.utils.edge.Edge edges} to a
    * solution in <a href="#adjacencyRepresentation">
    * <em>adjacency representation</em></a>.
-   * 
+   *
    * @param edges
    *          the array of directed
    *          {@link org.logisticPlanning.tsp.solving.utils.edge.Edge
@@ -703,7 +703,7 @@ public final class RepresentationUtils {
    * undirected, makes the conversion a bit more complex than in the
    * {@link #directedEdgesToAdjacencyList(org.logisticPlanning.tsp.solving.utils.edge.Edge[],int[])
    * directed case}.
-   * 
+   *
    * @param edges
    *          the array of undirected
    *          {@link org.logisticPlanning.tsp.solving.utils.edge.Edge
@@ -733,7 +733,7 @@ public final class RepresentationUtils {
    * {@link org.logisticPlanning.tsp.solving.utils.edge.Edge edges} to a
    * solution in <a href="#adjacencyRepresentation">
    * <em>adjacency representation</em></a>.
-   * 
+   *
    * @param edges
    *          the {@link java.lang.Iterable iterable} of directed
    *          {@link org.logisticPlanning.tsp.solving.utils.edge.Edge
@@ -758,7 +758,7 @@ public final class RepresentationUtils {
    * undirected, makes the conversion a bit more complex than in the
    * {@link #directedEdgesToAdjacencyList(java.lang.Iterable,int[])
    * directed case}.
-   * 
+   *
    * @param edges
    *          the {@link java.lang.Iterable iterable} of undirected
    *          {@link org.logisticPlanning.tsp.solving.utils.edge.Edge
@@ -791,7 +791,7 @@ public final class RepresentationUtils {
    * filled with existing instances of
    * {@link org.logisticPlanning.tsp.solving.utils.edge.Edge}, i.e., there
    * must be no {@code null} elements in it.
-   * 
+   *
    * @param adjacencyList
    *          the source, an {@code int[]} holding a solution in <a
    *          href="#adjacencyRepresentation">
@@ -824,7 +824,7 @@ public final class RepresentationUtils {
    * filled with existing instances of
    * {@link org.logisticPlanning.tsp.solving.utils.edge.Edge}, i.e., there
    * must be no {@code null} elements in it.
-   * 
+   *
    * @param path
    *          the source, an {@code int[]} holding a solution in <a
    *          href="#pathRepresentation"><em>path representation</em></a>
@@ -881,7 +881,7 @@ public final class RepresentationUtils {
    * sure if two solutions are different. They give an indicator that two
    * solutions <em>may</em> be equivalent.
    * </p>
-   * 
+   *
    * @param path
    *          the tour in <a href="#pathRepresentation">
    *          <em>path representation</em></a>

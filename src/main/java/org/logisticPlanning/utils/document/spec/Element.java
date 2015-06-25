@@ -36,13 +36,12 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   Element(final Element owner) throws IOException {
     super();
 
@@ -68,7 +67,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Get the owning element
-   * 
+   *
    * @return the owning element
    */
   public Element getOwner() {
@@ -77,7 +76,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Get the document
-   * 
+   *
    * @return the document
    */
   public final Document getDocument() {
@@ -97,7 +96,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write a single character
-   * 
+   *
    * @param data
    *          the character
    * @throws IOException
@@ -110,7 +109,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write given string
-   * 
+   *
    * @param data
    *          the string
    * @throws IOException
@@ -123,7 +122,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write given string in a hyphenated fashion
-   * 
+   *
    * @param data
    *          the string
    * @throws IOException
@@ -136,7 +135,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code boolean} value to this output stream.
-   * 
+   *
    * @param v
    *          the boolean to be written.
    * @throws IOException
@@ -149,7 +148,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes an {@code int} value
-   * 
+   *
    * @param v
    *          the {@code int} value to be written.
    * @throws IOException
@@ -163,7 +162,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
   /**
    * Writes a {@code int} value in text, representing small values as text
    * and larger or negative values as numbers.
-   * 
+   *
    * @param v
    *          the {@code int} value to be written.
    * @param beginUpperCase
@@ -180,7 +179,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
   /**
    * Writes a {@code long} value in text, representing small values as text
    * and larger or negative values as numbers.
-   * 
+   *
    * @param v
    *          the {@code long} value to be written.
    * @param beginUpperCase
@@ -196,7 +195,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code int} value
-   * 
+   *
    * @param v
    *          the {@code int} value to be written.
    * @param format
@@ -212,7 +211,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code long} value
-   * 
+   *
    * @param v
    *          the {@code long} value to be written.
    * @param format
@@ -229,7 +228,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code long} value
-   * 
+   *
    * @param v
    *          the {@code long} value to be written.
    * @throws IOException
@@ -242,7 +241,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code double} value
-   * 
+   *
    * @param v
    *          the {@code double} value to be written.
    * @throws IOException
@@ -255,7 +254,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Writes a {@code double} value
-   * 
+   *
    * @param v
    *          the {@code double} value to be written.
    * @param format
@@ -272,7 +271,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write a non-breaking space
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -283,7 +282,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write a line break
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -294,7 +293,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Write a reference to the given reference
-   * 
+   *
    * @param type
    *          the sequence type defining how the references should be
    *          connected
@@ -320,7 +319,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * {@link org.logisticPlanning.utils.document.spec.Sequence#write(int)}
    * methods. Between these strings, the document will automatically put
    * appropriate separators such as {@code "and"}, {@code ","}, etc.
-   * 
+   *
    * @param sequence
    *          the sequence
    * @param type
@@ -357,7 +356,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Resolve a relative name in form of a uri to a file.
-   * 
+   *
    * @param relativeName
    *          the relative name
    * @return an absolute file representing the relative uri
@@ -373,7 +372,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Turn a file into a relative uri
-   * 
+   *
    * @param file
    *          the absolute file
    * @return the relative uri representing the absolute file
@@ -393,7 +392,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * check if we can end here
-   * 
+   *
    * @param minState
    *          the minimum state in which the object must be
    * @return {@code true} if some closing action needs to be carried out,
@@ -417,7 +416,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * carry out the closing
-   * 
+   *
    * @throws IOException
    *           if closing fails
    */
@@ -429,7 +428,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a new single label
-   * 
+   *
    * @param type
    *          the label type
    * @param key
@@ -438,7 +437,6 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   SingleLabel createSingleLabel(final ELabelType type, final String key)
       throws IOException {
     return this.m_document.createSingleLabel(type, key);
@@ -446,7 +444,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * write a single label to the output stream
-   * 
+   *
    * @param label
    *          the label
    * @param info
@@ -461,7 +459,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a header element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -474,7 +472,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a header element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -489,7 +487,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a header element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -503,7 +501,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a header
-   * 
+   *
    * @return the header
    * @throws IOException
    *           if io fails
@@ -516,7 +514,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a body element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -529,7 +527,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -543,7 +541,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -557,7 +555,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a body
-   * 
+   *
    * @return the body
    * @throws IOException
    *           if io fails
@@ -570,7 +568,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a authors element
-   * 
+   *
    * @param authors
    *          the bibliography authors
    * @param owner
@@ -586,7 +584,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a authors element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -601,7 +599,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a authors element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -616,7 +614,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a authors
-   * 
+   *
    * @param authors
    *          the bibliography authors
    * @throws IOException
@@ -631,7 +629,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a title element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -644,7 +642,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a title element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -658,7 +656,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a title element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -672,7 +670,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a title
-   * 
+   *
    * @return the title
    * @throws IOException
    *           if io fails
@@ -685,7 +683,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a summary element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -698,7 +696,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a summary element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -713,7 +711,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a summary element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -728,7 +726,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a summary
-   * 
+   *
    * @return the summary
    * @throws IOException
    *           if io fails
@@ -741,7 +739,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a section element
-   * 
+   *
    * @param owner
    *          the owner
    * @param label
@@ -760,7 +758,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a section element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -775,7 +773,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a section element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -790,7 +788,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a section
-   * 
+   *
    * @param label
    *          the label for the section, or {@code null} if none is
    *          required, or
@@ -809,7 +807,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a section title element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -822,7 +820,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a section title element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -837,7 +835,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a section title element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -852,7 +850,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a section title
-   * 
+   *
    * @return the section title
    * @throws IOException
    *           if io fails
@@ -865,7 +863,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a section body element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -878,7 +876,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a section body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -893,7 +891,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a section body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -908,7 +906,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a section body
-   * 
+   *
    * @return the section body
    * @throws IOException
    *           if io fails
@@ -921,7 +919,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure element
-   * 
+   *
    * @param owner
    *          the owner
    * @param label
@@ -943,7 +941,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -958,7 +956,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -972,7 +970,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a figure
-   * 
+   *
    * @param label
    *          the label for the figure, or {@code null} if none is
    *          required, or
@@ -994,7 +992,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure caption element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1007,7 +1005,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1022,7 +1020,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1037,7 +1035,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a figure caption
-   * 
+   *
    * @return the figure caption
    * @throws IOException
    *           if io fails
@@ -1050,7 +1048,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure body element
-   * 
+   *
    * @param relativeNameBase
    *          the uri denoting the basis for the relative name of this
    *          graphic
@@ -1073,7 +1071,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1088,7 +1086,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1103,7 +1101,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a figure body
-   * 
+   *
    * @param relativeNameBase
    *          the uri denoting the basis for the relative name of this
    *          graphic
@@ -1125,7 +1123,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a graphic element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1138,7 +1136,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a graphic element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1153,7 +1151,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a graphic element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1168,7 +1166,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a graphic
-   * 
+   *
    * @return the graphic
    * @throws IOException
    *           if io fails
@@ -1181,7 +1179,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure series element
-   * 
+   *
    * @param label
    *          the label for the section, or {@code null} if none is
    *          required, or
@@ -1209,7 +1207,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure series element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1224,7 +1222,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure series element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1246,7 +1244,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * and column definition. It is tried to automatically approximate the
    * right number of rows and columns of the figure series based on the
    * size of the figures and the templates for the captions.
-   * 
+   *
    * @param label
    *          the label for the section, or {@code null} if none is
    *          required, or
@@ -1284,7 +1282,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * that case, a figure series may automatically be divided into several
    * figures, each containing a number of sub-figures according to the row-
    * and column definition.
-   * 
+   *
    * @param label
    *          the label for the section, or {@code null} if none is
    *          required, or
@@ -1311,7 +1309,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure series caption element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1325,7 +1323,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure series caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1340,7 +1338,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure series caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1355,7 +1353,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a figure series caption
-   * 
+   *
    * @return the figure series caption
    * @throws IOException
    *           if io fails
@@ -1369,7 +1367,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a figure page element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1383,7 +1381,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a figure page element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1398,7 +1396,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a figure page element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1413,7 +1411,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a figure page
-   * 
+   *
    * @param pageNumber
    *          the page number
    * @return the figure page
@@ -1429,7 +1427,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a sub figure element
-   * 
+   *
    * @param owner
    *          the owner
    * @param label
@@ -1449,7 +1447,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a sub figure element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1464,7 +1462,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a sub figure element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1479,7 +1477,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a sub figure
-   * 
+   *
    * @param label
    *          the label for the section, or {@code null} if none is
    *          required, or
@@ -1497,7 +1495,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a sub-figure caption element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1511,7 +1509,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a sub-figure caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1526,7 +1524,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a sub-figure caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1541,7 +1539,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a sub-figure caption
-   * 
+   *
    * @return the sub-figure caption
    * @throws IOException
    *           if io fails
@@ -1555,7 +1553,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a itemization element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1569,7 +1567,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a itemization element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1584,7 +1582,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a itemization element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1599,7 +1597,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a itemization
-   * 
+   *
    * @return the itemization
    * @throws IOException
    *           if io fails
@@ -1612,7 +1610,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a itemizationItem element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1626,7 +1624,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a itemization item element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1641,7 +1639,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a itemization item element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1656,7 +1654,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a itemization item
-   * 
+   *
    * @return the itemization item
    * @throws IOException
    *           if io fails
@@ -1670,7 +1668,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a enumeration element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1684,7 +1682,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a enumeration element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1699,7 +1697,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a enumeration element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1714,7 +1712,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a enumeration
-   * 
+   *
    * @return the enumeration
    * @throws IOException
    *           if io fails
@@ -1727,7 +1725,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a enumerationItem element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1741,7 +1739,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a enumeration item element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1756,7 +1754,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a enumeration item element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1771,7 +1769,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a enumeration item
-   * 
+   *
    * @return the enumeration item
    * @throws IOException
    *           if io fails
@@ -1785,7 +1783,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table element
-   * 
+   *
    * @param owner
    *          the owner
    * @param label
@@ -1810,7 +1808,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1824,7 +1822,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1840,7 +1838,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * Begin a table following the given table definition which will
    * automatically be divided into tables with at most {@code rowsPerPage}
    * rows.
-   * 
+   *
    * @param label
    *          the label of this component
    * @param def
@@ -1866,7 +1864,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * Provide a table according to the given column definition. The space
    * that a single table needs is computed based on the key values of the
    * current document and the space requirement of the caption draft.
-   * 
+   *
    * @param label
    *          the label of this component
    * @param captionDraft
@@ -1890,7 +1888,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table caption element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1903,7 +1901,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1918,7 +1916,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table caption element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1933,7 +1931,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table caption
-   * 
+   *
    * @return the tableCaption
    * @throws IOException
    *           if io fails
@@ -1946,7 +1944,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table header element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -1959,7 +1957,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table header element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1974,7 +1972,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table header element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -1989,7 +1987,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table header
-   * 
+   *
    * @return the tableHeader
    * @throws IOException
    *           if io fails
@@ -2002,7 +2000,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table footer element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2015,7 +2013,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table footer element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2030,7 +2028,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table footer element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2045,7 +2043,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table footer
-   * 
+   *
    * @return the tableFooter
    * @throws IOException
    *           if io fails
@@ -2058,7 +2056,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table body element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2071,7 +2069,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2086,7 +2084,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2101,7 +2099,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table body
-   * 
+   *
    * @return the tableBody
    * @throws IOException
    *           if io fails
@@ -2114,7 +2112,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table header row element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2128,7 +2126,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table header row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2143,7 +2141,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table header row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2158,7 +2156,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table header row
-   * 
+   *
    * @return the tableHeaderRow
    * @throws IOException
    *           if io fails
@@ -2172,7 +2170,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table header cell element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2186,7 +2184,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table header cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2201,7 +2199,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table header cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2216,7 +2214,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table header cell
-   * 
+   *
    * @param cols
    *          the number of columns occupied by the cell
    * @param rows
@@ -2236,7 +2234,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table footer row element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2250,7 +2248,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table footer row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2265,7 +2263,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table footer row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2280,7 +2278,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table footer row
-   * 
+   *
    * @return the tableFooterRow
    * @throws IOException
    *           if io fails
@@ -2294,7 +2292,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table footer cell element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2308,7 +2306,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table footer cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2323,7 +2321,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table footer cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2338,7 +2336,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table footer cell
-   * 
+   *
    * @param cols
    *          the number of columns occupied by the cell
    * @param rows
@@ -2358,7 +2356,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table page element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2371,7 +2369,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table page element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2386,7 +2384,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table page element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2401,7 +2399,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table body row element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2415,7 +2413,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table body row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2430,7 +2428,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table body row element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2445,7 +2443,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table body row
-   * 
+   *
    * @return the tableBodyRow
    * @throws IOException
    *           if io fails
@@ -2458,7 +2456,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a table body cell element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2472,7 +2470,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a table body cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2487,7 +2485,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a table body cell element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2502,7 +2500,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a table body cell
-   * 
+   *
    * @param cols
    *          the number of columns occupied by the cell
    * @param rows
@@ -2522,7 +2520,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Draw a horizontal line in the table
-   * 
+   *
    * @throws IOException
    *           if io fails
    * @throws IllegalStateException
@@ -2534,7 +2532,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a subscript element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2547,7 +2545,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a subscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2562,7 +2560,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a subscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2577,7 +2575,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a subscript
-   * 
+   *
    * @return the subscript
    * @throws IOException
    *           if io fails
@@ -2590,7 +2588,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a superscript element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2604,7 +2602,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a superscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2619,7 +2617,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a superscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2634,7 +2632,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a superscript
-   * 
+   *
    * @return the superscript
    * @throws IOException
    *           if io fails
@@ -2647,7 +2645,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a emphasize element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2660,7 +2658,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a emphasize element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2675,7 +2673,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a emphasize element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2690,7 +2688,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a emphasize
-   * 
+   *
    * @return the emphasize
    * @throws IOException
    *           if io fails
@@ -2703,7 +2701,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a in-quotes element
-   * 
+   *
    * @param owner
    *          the owner
    * @param quotes
@@ -2719,7 +2717,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a in-quotes element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2734,7 +2732,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a in-quotes element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2749,7 +2747,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a in-quotes
-   * 
+   *
    * @param quotes
    *          the quotes to use
    * @return the in-quotes
@@ -2765,7 +2763,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a equation element
-   * 
+   *
    * @param owner
    *          the owner
    * @param label
@@ -2784,7 +2782,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a equation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2799,7 +2797,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a equation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2814,7 +2812,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a equation
-   * 
+   *
    * @param label
    *          the label for the equation, or {@code null} if none is
    *          required, or
@@ -2833,7 +2831,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a equation body element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2846,7 +2844,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a equation body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2861,7 +2859,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a equation body element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2876,7 +2874,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a equation body
-   * 
+   *
    * @return the equationBody
    * @throws IOException
    *           if io fails
@@ -2889,7 +2887,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a inline math element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2903,7 +2901,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a inline math element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2918,7 +2916,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a inline math element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2933,7 +2931,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a inline math
-   * 
+   *
    * @return the inlineMath
    * @throws IOException
    *           if io fails
@@ -2946,7 +2944,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a normal text element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -2960,7 +2958,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a normal text element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2975,7 +2973,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a normal text element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -2990,7 +2988,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a normal text
-   * 
+   *
    * @return the normalText
    * @throws IOException
    *           if io fails
@@ -3003,7 +3001,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a math subscript element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -3017,7 +3015,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a math subscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3032,7 +3030,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a math subscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3047,7 +3045,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a math subscript
-   * 
+   *
    * @return the math subscript
    * @throws IOException
    *           if io fails
@@ -3060,7 +3058,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a math superscript element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -3074,7 +3072,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a math superscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3089,7 +3087,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a math superscript element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3104,7 +3102,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a math superscript
-   * 
+   *
    * @return the mathSuperscript
    * @throws IOException
    *           if io fails
@@ -3118,7 +3116,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a math name element
-   * 
+   *
    * @param owner
    *          the owner
    * @param type
@@ -3134,7 +3132,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a math name element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3149,7 +3147,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a math name element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3164,7 +3162,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a math name
-   * 
+   *
    * @param type
    *          the math name type
    * @return the math name
@@ -3180,7 +3178,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a math operation element
-   * 
+   *
    * @param owner
    *          the owner
    * @param type
@@ -3196,7 +3194,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a math operation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3211,7 +3209,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a math operation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3225,7 +3223,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a math operation
-   * 
+   *
    * @param type
    *          the math operation type
    * @return the math operation
@@ -3241,7 +3239,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a math operation parameter element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -3254,7 +3252,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a math operation parameter element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3269,7 +3267,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a math operation parameter element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3284,7 +3282,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a math operation parameter
-   * 
+   *
    * @return the math operation parameter
    * @throws IOException
    *           if io fails
@@ -3297,7 +3295,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a macro element
-   * 
+   *
    * @param owner
    *          the owner
    * @param desc
@@ -3313,7 +3311,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a macro element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3327,7 +3325,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a macro element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3341,7 +3339,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Is the macro defined?
-   * 
+   *
    * @param desc
    *          the macro defined
    * @return {@code true} if the macro is already defined, {@code false}
@@ -3353,7 +3351,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a macro
-   * 
+   *
    * @param desc
    *          the macro descriptor
    * @return the macro
@@ -3369,7 +3367,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * print a macro parameter's value
-   * 
+   *
    * @param id
    *          the macro parameter's value
    * @throws IOException
@@ -3381,7 +3379,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a macro invocation element
-   * 
+   *
    * @param owner
    *          the owner
    * @param desc
@@ -3397,7 +3395,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a macro invocation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3412,7 +3410,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a macro invocation element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3427,7 +3425,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a macro invocation
-   * 
+   *
    * @param desc
    *          the macroInvocation descriptor
    * @return the macroInvocation
@@ -3443,7 +3441,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a macro parameter element
-   * 
+   *
    * @param owner
    *          the owner
    * @return the element
@@ -3457,7 +3455,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a macro parameter element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3472,7 +3470,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a macro parameter element
-   * 
+   *
    * @param h
    *          the element
    * @throws IOException
@@ -3487,7 +3485,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a macro parameter
-   * 
+   *
    * @return the macroParameter
    * @throws IOException
    *           if io fails
@@ -3501,7 +3499,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Make a reference to a given bibliography record
-   * 
+   *
    * @param mode
    *          the citation mode
    * @param records
@@ -3521,7 +3519,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Create a document
-   * 
+   *
    * @param owner
    *          the owning context
    * @return the document
@@ -3536,7 +3534,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Begin a document
-   * 
+   *
    * @param d
    *          the document
    * @throws IOException
@@ -3551,7 +3549,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * end a document element
-   * 
+   *
    * @param h
    *          the document element
    * @throws IOException
@@ -3566,7 +3564,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
 
   /**
    * Provide a document
-   * 
+   *
    * @return the document
    * @throws IOException
    *           if io fails
@@ -3582,7 +3580,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * characters {@code 'A'} to {@code 'Z'}. This makes it suitable for any
    * kind of naming scheme, regardless whether it is case-sensitive or not,
    * and regardless whether it allows numbers or not.
-   * 
+   *
    * @return the unique name
    */
   protected String autoName() {
@@ -3593,7 +3591,7 @@ public abstract class Element extends _AbstractBase implements Closeable {
    * Get the logger, i.e., the destination to write log information to.
    * During the generation of a document, it is possible to provide
    * progress or debug information to a log.
-   * 
+   *
    * @return the logger
    */
   public Logger getLogger() {

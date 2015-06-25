@@ -100,14 +100,14 @@ final class _ExperimentSetERTOverRelativeObjectiveValueDiagramsHolder
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetERTOverRelativeObjectiveValueDiagramsHolder(
       final Module owner) {
     super(_ExperimentSetERTDiagramsBase._NAME_PFX
-        + "OverRelativeObjectiveValues",//$NON-NLS-1$ 
+        + "OverRelativeObjectiveValues",//$NON-NLS-1$
         owner, false);
   }
 

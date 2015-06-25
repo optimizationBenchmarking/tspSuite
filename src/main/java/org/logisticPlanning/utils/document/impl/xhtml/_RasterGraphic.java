@@ -18,7 +18,7 @@ final class _RasterGraphic extends ProxyGraphic<Graphics2D> {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    * @param img

@@ -14,7 +14,7 @@ final class _FLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param f
    *          the f limit
    * @param rs

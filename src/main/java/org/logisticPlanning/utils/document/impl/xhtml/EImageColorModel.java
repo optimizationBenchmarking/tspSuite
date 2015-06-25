@@ -36,7 +36,7 @@ public enum EImageColorModel {
 
   /**
    * Create the image color model
-   * 
+   *
    * @param biType
    *          the buffered image type, for use with
    *          {@link java.awt.image.BufferedImage}
@@ -48,7 +48,7 @@ public enum EImageColorModel {
   /**
    * Get the color model type to be used when instantiating the
    * {@link java.awt.image.BufferedImage buffered image}
-   * 
+   *
    * @return the color model type to be used when instantiating the
    *         {@link java.awt.image.BufferedImage buffered image}
    */

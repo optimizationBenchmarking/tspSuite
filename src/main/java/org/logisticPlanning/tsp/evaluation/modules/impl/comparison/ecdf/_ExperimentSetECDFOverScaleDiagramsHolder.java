@@ -61,12 +61,12 @@ final class _ExperimentSetECDFOverScaleDiagramsHolder extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetECDFOverScaleDiagramsHolder(final Module owner) {
-    super(_ExperimentSetECDFBase._NAME_PFX + "OverScale",//$NON-NLS-1$ 
+    super(_ExperimentSetECDFBase._NAME_PFX + "OverScale",//$NON-NLS-1$
         owner, false);
   }
 

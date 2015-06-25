@@ -20,7 +20,7 @@ public class MathOp extends Element {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param op
@@ -40,7 +40,7 @@ public class MathOp extends Element {
 
   /**
    * get the next argument index
-   * 
+   *
    * @return the next argument index
    */
   final int nextArg() {
@@ -57,7 +57,7 @@ public class MathOp extends Element {
 
   /**
    * Get the mathematical operator
-   * 
+   *
    * @return the mathematical operator
    */
   public final EMathOp getOperator() {

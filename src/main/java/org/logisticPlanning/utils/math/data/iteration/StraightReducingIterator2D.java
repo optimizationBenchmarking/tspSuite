@@ -46,7 +46,7 @@ public final class StraightReducingIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    */
@@ -63,7 +63,7 @@ public final class StraightReducingIterator2D extends
 
   /**
    * check if either {@code a<=b<=c} or {@code a>=b>=c}
-   * 
+   *
    * @param a
    *          the first point
    * @param b
@@ -90,7 +90,7 @@ public final class StraightReducingIterator2D extends
 
   /**
    * load and validate the next point
-   * 
+   *
    * @param last
    *          the last point
    * @return the next point, or {@code null} if none was found
@@ -162,7 +162,7 @@ public final class StraightReducingIterator2D extends
 
   /**
    * fill the queue
-   * 
+   *
    * @return {@code true} if the queue remains empty, {@code false} if
    *         there is at least one point
    */
@@ -215,7 +215,7 @@ public final class StraightReducingIterator2D extends
    * Check if some points lie on a line along one of the two coordinate
    * axes and compactify the queue, if possible. There must be at least two
    * points in the queue.
-   * 
+   *
    * @param axis
    *          the axis
    * @return {@code true} if the points are on the same line, {@code false}

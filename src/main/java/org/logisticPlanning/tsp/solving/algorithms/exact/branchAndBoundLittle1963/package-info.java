@@ -1,5 +1,5 @@
 /**
- * 
+ *
  <p>
  * A first Branch and Bound algorithm for Traveling Salesman Problems was
  * published in the paper
@@ -202,7 +202,7 @@
  * and&nbsp;<a
  * href="http://www.amazon.com/dp/8120335171">8120335171</a></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ljjy23@mail.ustc.edu.cn">Yan Jiang</a></em>

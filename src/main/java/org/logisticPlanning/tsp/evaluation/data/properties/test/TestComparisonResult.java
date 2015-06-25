@@ -29,7 +29,7 @@ public class TestComparisonResult {
 
   /**
    * Create the comparison results record
-   * 
+   *
    * @param es
    *          the experiment set
    */
@@ -55,7 +55,7 @@ public class TestComparisonResult {
 
   /**
    * add a comparison result
-   * 
+   *
    * @param cr
    *          the result to add
    */
@@ -80,7 +80,7 @@ public class TestComparisonResult {
 
   /**
    * add a test result
-   * 
+   *
    * @param tr
    *          the test result
    * @param isSmallerBetter
@@ -131,7 +131,7 @@ public class TestComparisonResult {
   /**
    * Get the number of wins of algorithm {@code i} versus algorithm
    * {@code  j}
-   * 
+   *
    * @param i
    *          the first algorithm
    * @param j
@@ -145,7 +145,7 @@ public class TestComparisonResult {
   /**
    * Get the number of losses of algorithm {@code i} versus algorithm
    * {@code  j}
-   * 
+   *
    * @param i
    *          the first algorithm
    * @param j
@@ -159,7 +159,7 @@ public class TestComparisonResult {
   /**
    * Get the number of evens of algorithm {@code i} versus algorithm
    * {@code  j}
-   * 
+   *
    * @param i
    *          the first algorithm
    * @param j
@@ -180,7 +180,7 @@ public class TestComparisonResult {
 
   /**
    * Get the scores, sorted in the same order as the experiment
-   * 
+   *
    * @return the scores, sorted in the same order as the experiment
    */
   public final ArrayListView<TestScore> getScores() {
@@ -190,7 +190,7 @@ public class TestComparisonResult {
 
   /**
    * Get the ranked test scores, ordered by rank
-   * 
+   *
    * @return the ranked test scores
    */
   public final Ranking<Experiment> getRankedScores() {

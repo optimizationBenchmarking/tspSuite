@@ -55,7 +55,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * href="http://ijcai.org/Past%20Proceedings/IJCAI-85-VOL1/PDF/029.pdf"
  * >1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>

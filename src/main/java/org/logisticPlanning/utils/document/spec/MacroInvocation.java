@@ -21,7 +21,7 @@ public class MacroInvocation extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param desc
@@ -42,7 +42,7 @@ public class MacroInvocation extends Element {
 
   /**
    * get the next parameter index
-   * 
+   *
    * @return the next parameter index
    */
   final int nextParam() {
@@ -52,7 +52,7 @@ public class MacroInvocation extends Element {
     if (i > this.m_desc.m_paramCount) {
       throw new IllegalStateException(//
           "Macro '" + this.m_desc.name() + //$NON-NLS-1$
-              "' can only have up to "//$NON-NLS-1$ 
+              "' can only have up to "//$NON-NLS-1$
               + this.m_desc.m_paramCount + //
               " parameters."); //$NON-NLS-1$
     }
@@ -90,7 +90,7 @@ public class MacroInvocation extends Element {
 
   /**
    * Get the macro descriptor
-   * 
+   *
    * @return the macro descriptor
    */
   public final MacroDescriptor getDescriptor() {

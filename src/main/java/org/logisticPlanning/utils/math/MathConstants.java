@@ -62,7 +62,7 @@ public final class MathConstants {
   /**
    * The natural logarithm of Double.MAX_VALUE, or, in other words, the
    * biggest value where <code>Math.exp(x)</code> produces an exact result.
-   * 
+   *
    * @see Double#MAX_VALUE
    */
   public static final double LN_MAX_DOUBLE = Math.log(Double.MAX_VALUE);
@@ -71,7 +71,7 @@ public final class MathConstants {
    * The natural logarithm of Double.MIN_VALUE, or, in other words, the
    * smallest value where <code>Math.exp(x)</code> produces an exact
    * result.
-   * 
+   *
    * @see Double#MIN_VALUE
    */
   public static final double LN_MIN_DOUBLE = Math.log(Double.MIN_VALUE);

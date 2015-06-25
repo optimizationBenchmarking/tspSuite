@@ -61,7 +61,7 @@ import org.logisticPlanning.tsp.solving.operators.BinaryOperator;
  * ="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.54.1276"
  * >10.1.1.54 .1276</a></div></div></li>
  * </ol>
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="mailto:ls503@mail.ustc.edu.cn">Shan Lin</a></em>

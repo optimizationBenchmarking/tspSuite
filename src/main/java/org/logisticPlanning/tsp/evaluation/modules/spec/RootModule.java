@@ -62,7 +62,7 @@ public final class RootModule extends Module {
 
   /**
    * create
-   * 
+   *
    * @param evaluator
    *          the evaluator
    */
@@ -128,10 +128,11 @@ public final class RootModule extends Module {
 
   /**
    * add an instance of the given class to the module list
-   * 
+   *
    * @param clazz
    *          the class
    */
+  @SuppressWarnings("unchecked")
   public final void addModule(final Class<? extends Module> clazz) {
     Module m, owner;
     Constructor<Module>[] c;
@@ -205,7 +206,7 @@ public final class RootModule extends Module {
 
   /**
    * Apply all modules to the experiment set.
-   * 
+   *
    * @param body
    *          the document body to write the output to
    * @param data
@@ -217,7 +218,7 @@ public final class RootModule extends Module {
 
   /**
    * Initialize all modules to the experiment set.
-   * 
+   *
    * @param header
    *          the document header to write the output to
    * @param data
@@ -237,7 +238,7 @@ public final class RootModule extends Module {
 
   /**
    * the authors of all the experiments
-   * 
+   *
    * @param data
    *          the experiment data
    * @return the authors
@@ -282,7 +283,7 @@ public final class RootModule extends Module {
 
   /**
    * Do the initialization
-   * 
+   *
    * @param header
    *          the header
    * @param data
@@ -438,7 +439,7 @@ public final class RootModule extends Module {
 
   /**
    * the macro of the long name of a given experiment
-   * 
+   *
    * @param experiment
    *          the experiment
    * @return the long name for that experiment
@@ -450,7 +451,7 @@ public final class RootModule extends Module {
 
   /**
    * the macro of the short name of a given experiment
-   * 
+   *
    * @param experiment
    *          the experiment
    * @return the long name for that experiment
@@ -463,10 +464,12 @@ public final class RootModule extends Module {
   /**
    * Find an instance of the given class in the hierarchical tree of
    * modules
-   * 
+   *
    * @param clazz
    *          the class
    * @return the instance, or {@code null} if none was found
+   * @param <T>
+   *          the type of the module
    */
   @SuppressWarnings("unchecked")
   public final <T extends Module> T findInstance(

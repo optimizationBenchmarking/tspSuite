@@ -508,7 +508,7 @@ public final class TournamentSelection extends SelectionAlgorithm {
 
   /**
    * the tournament selection
-   * 
+   *
    * @param k
    *          the tournament size
    */

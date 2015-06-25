@@ -33,7 +33,7 @@ public class StableProduct extends ScalarAggregate {
 
   /**
    * Visit a given {@code double}, i.e., add it to the stable sum.
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -108,7 +108,7 @@ public class StableProduct extends ScalarAggregate {
 
   /**
    * Obtain the current running sum.
-   * 
+   *
    * @return the current running sum
    */
   @Override

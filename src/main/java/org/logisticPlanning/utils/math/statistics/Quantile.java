@@ -77,8 +77,8 @@ package org.logisticPlanning.utils.math.statistics;
  * href="https://commons.apache.org/proper/commons-math/">1</
  * a>]</div></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -94,7 +94,7 @@ public final class Quantile {
    * approximate fraction of {@code quantile*count} elements in the list is
    * smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code byte} values
    * @param start
@@ -157,7 +157,7 @@ public final class Quantile {
    * approximate fraction of {@code quantile*count} elements in the list is
    * smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code short} values
    * @param start
@@ -220,7 +220,7 @@ public final class Quantile {
    * approximate fraction of {@code quantile*count} elements in the list is
    * smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code int} values
    * @param start
@@ -283,7 +283,7 @@ public final class Quantile {
    * approximate fraction of {@code quantile*count} elements in the list is
    * smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code long} values
    * @param start
@@ -346,7 +346,7 @@ public final class Quantile {
    * approximate fraction of {@code quantile*count} elements in the list is
    * smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code float} values
    * @param start
@@ -409,7 +409,7 @@ public final class Quantile {
    * an approximate fraction of {@code quantile*count} elements in the list
    * is smaller then {@code V} and approximately {@code (1-quantile)*count}
    * elements are larger than {@code Q}.
-   * 
+   *
    * @param sortedList
    *          the sorted list of {@code double} values
    * @param start

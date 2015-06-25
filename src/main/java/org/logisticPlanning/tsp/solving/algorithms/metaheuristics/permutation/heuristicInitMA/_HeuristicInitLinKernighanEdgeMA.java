@@ -13,7 +13,7 @@ class _HeuristicInitLinKernighanEdgeMA extends
 
   /**
    * create the ea
-   * 
+   *
    * @param name
    *          a string to be added to the base name
    */

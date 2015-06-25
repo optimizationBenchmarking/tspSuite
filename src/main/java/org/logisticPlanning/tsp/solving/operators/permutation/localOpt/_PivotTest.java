@@ -11,7 +11,7 @@ public final class _PivotTest implements Comparator<int[]> {
 
   /**
    * the main method
-   * 
+   *
    * @param args
    *          the args
    */
@@ -75,7 +75,7 @@ public final class _PivotTest implements Comparator<int[]> {
 
   /**
    * print the pair differences
-   * 
+   *
    * @param p
    *          the p pairs
    * @param q
@@ -100,7 +100,7 @@ public final class _PivotTest implements Comparator<int[]> {
 
   /**
    * load all the pairs
-   * 
+   *
    * @param perm
    *          the perm
    * @param pairs
@@ -129,7 +129,7 @@ public final class _PivotTest implements Comparator<int[]> {
 
   /**
    * print an index
-   * 
+   *
    * @param i
    *          the index
    */
@@ -155,7 +155,7 @@ public final class _PivotTest implements Comparator<int[]> {
 
   /**
    * print the array
-   * 
+   *
    * @param array
    *          the array
    */

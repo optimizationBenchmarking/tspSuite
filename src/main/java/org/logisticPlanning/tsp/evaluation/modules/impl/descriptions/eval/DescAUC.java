@@ -119,7 +119,7 @@ public final class DescAUC extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -276,7 +276,7 @@ public final class DescAUC extends DescriptionModule {
     try (Enumeration en = body.enumeration()) {
       try (EnumerationItem ei = en.item()) {
         ei.write(//
-        "Sometimes, a curve may go to infinity."); //$NON-NLS-1$        
+        "Sometimes, a curve may go to infinity."); //$NON-NLS-1$
         if (ert != null) {
           ei.write(//
           " The "); //$NON-NLS-1$
@@ -441,7 +441,7 @@ public final class DescAUC extends DescriptionModule {
 
   /**
    * write a method name
-   * 
+   *
    * @param txt
    *          the destination
    * @param m

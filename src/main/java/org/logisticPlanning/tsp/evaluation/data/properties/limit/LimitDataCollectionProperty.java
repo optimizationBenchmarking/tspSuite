@@ -55,7 +55,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * create the property
-   * 
+   *
    * @param type
    *          the type
    * @param dim
@@ -119,7 +119,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Write the short name
-   * 
+   *
    * @param out
    *          the output destination
    * @throws IOException
@@ -256,7 +256,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * the dimension error
-   * 
+   *
    * @param dim
    *          the dimension error
    */
@@ -266,7 +266,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Get a sentence fraction describing the limit used
-   * 
+   *
    * @return the in-text description
    */
   public final String getInTextDescription() {
@@ -276,7 +276,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * Write a sentence fraction describing the limit used
-   * 
+   *
    * @param out
    *          the output destination
    * @throws IOException
@@ -359,7 +359,7 @@ public final class LimitDataCollectionProperty extends
       case DataPoint.RELATIVE_F_INDEX: {
         out.write("the earliest log point of each run where the best known relative objective value "); //$NON-NLS-1$
         out.macroInvoke(Macros.F_BEST_RELATIVE);
-        out.write(" became less or equal to "); //$NON-NLS-1$        
+        out.write(" became less or equal to "); //$NON-NLS-1$
         out.writeDouble(this.m_value);
         return;
       }
@@ -429,7 +429,7 @@ public final class LimitDataCollectionProperty extends
 
   /**
    * create the property
-   * 
+   *
    * @param dim
    *          the dimension
    * @param value

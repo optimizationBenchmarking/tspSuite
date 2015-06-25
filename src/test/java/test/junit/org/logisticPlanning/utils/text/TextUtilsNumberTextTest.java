@@ -21,8 +21,8 @@ import org.logisticPlanning.utils.text.TextUtils;
  * "http://stackoverflow.com/questions/3911966/how-to-convert-number-to-words-in-java"
  * >1</a>]</div></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -138,12 +138,11 @@ public class TextUtilsNumberTextTest {
 
   /**
    * test if the long-to-text transformation works as it should
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testLongToText() throws IOException {
     int i;
     for (i = 0; i < TextUtilsNumberTextTest.LONG_TEST_CASES.length; i++) {
@@ -156,12 +155,11 @@ public class TextUtilsNumberTextTest {
 
   /**
    * test if the double-to-text transformation works as it should
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testDoubleToTextAsLongs() throws IOException {
     int i;
     long t;
@@ -180,12 +178,11 @@ public class TextUtilsNumberTextTest {
 
   /**
    * test if the double-to-text transformation works as it should
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
   @Test(timeout = 3600000)
-  @SuppressWarnings("unused")
   public void testDoubleToText() throws IOException {
     int i;
     for (i = 0; i < TextUtilsNumberTextTest.DOUBLE_TEST_CASES.length; i++) {

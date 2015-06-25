@@ -67,7 +67,7 @@ public final class ChiSquarePass extends BinaryFunction {
    * Returns the probability with that a random distribution with the
    * calculated chi-square-value d and dof degrees of freedom passes the
    * chi-square org.sfc.ztest.
-   * 
+   *
    * @param d
    *          chi-square value of a measurement series
    * @param dof
@@ -112,7 +112,7 @@ public final class ChiSquarePass extends BinaryFunction {
    * with the singleton instance {@link ChiSquarePass#INSTANCE
    * ChiSquarePass.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ChiSquarePass#INSTANCE ChiSquarePass.INSTANCE})
    */
@@ -125,7 +125,7 @@ public final class ChiSquarePass extends BinaryFunction {
    * with the singleton instance {@link ChiSquarePass#INSTANCE
    * ChiSquarePass.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ChiSquarePass#INSTANCE ChiSquarePass.INSTANCE})
    */

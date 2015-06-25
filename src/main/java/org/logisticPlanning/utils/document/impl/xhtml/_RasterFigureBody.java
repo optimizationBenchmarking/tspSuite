@@ -22,7 +22,7 @@ final class _RasterFigureBody extends FigureBody {
 
   /**
    * create the figure body element
-   * 
+   *
    * @param relativeNameBase
    *          the uri denoting the basis for the relative name of this
    *          graphic. this name may be extended or modified by

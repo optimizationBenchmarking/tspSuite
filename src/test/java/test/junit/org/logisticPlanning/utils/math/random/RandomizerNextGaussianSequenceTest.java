@@ -44,7 +44,7 @@ public class RandomizerNextGaussianSequenceTest extends TestBase {
 
   /**
    * test the sequences
-   * 
+   *
    * @throws Throwable
    *           if something goes wrong
    */
@@ -78,7 +78,7 @@ public class RandomizerNextGaussianSequenceTest extends TestBase {
 
   /**
    * the program to create sequence
-   * 
+   *
    * @param args
    *          the command line
    */

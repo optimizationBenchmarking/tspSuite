@@ -21,7 +21,7 @@ final class _CmpAlgoSeq extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param rc
    *          the rc
    * @param txt

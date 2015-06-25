@@ -20,7 +20,7 @@ public abstract class ScalarAggregate extends Aggregate {
 
   /**
    * Obtain the current value of the aggregate
-   * 
+   *
    * @return the current value of the aggregate
    */
   public abstract double getResult();

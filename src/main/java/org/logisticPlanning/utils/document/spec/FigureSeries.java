@@ -35,7 +35,7 @@ public class FigureSeries extends _MultiLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -72,7 +72,7 @@ public class FigureSeries extends _MultiLabeledElement {
   /**
    * Does this figure series span over all columns in a multi-column
    * document?
-   * 
+   *
    * @return {@code true} if this figure series spans over all columns,
    *         {@code false} if it only uses a single columns
    */
@@ -83,7 +83,7 @@ public class FigureSeries extends _MultiLabeledElement {
   /**
    * Get the figure index. Warning: This value may increase when the figure
    * pages increase.
-   * 
+   *
    * @return the figure index
    */
   public final int getFigureIndex() {
@@ -92,7 +92,7 @@ public class FigureSeries extends _MultiLabeledElement {
 
   /**
    * get the index of the next page
-   * 
+   *
    * @return the index of the next page
    */
   final int nextPage() {
@@ -107,7 +107,7 @@ public class FigureSeries extends _MultiLabeledElement {
 
   /**
    * Get the number of columns
-   * 
+   *
    * @return the number of columns
    */
   public final int getColumnsPerRow() {
@@ -116,7 +116,7 @@ public class FigureSeries extends _MultiLabeledElement {
 
   /**
    * Get the number of rows
-   * 
+   *
    * @return the number of rows
    */
   public final int getRowsPerPage() {

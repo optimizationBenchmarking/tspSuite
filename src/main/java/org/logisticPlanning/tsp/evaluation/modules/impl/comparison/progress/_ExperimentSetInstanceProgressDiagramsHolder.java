@@ -19,7 +19,7 @@ final class _ExperimentSetInstanceProgressDiagramsHolder extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

@@ -26,7 +26,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * create a record for technical records
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -110,7 +110,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the journal
-   * 
+   *
    * @return the journal
    */
   public final String getJournal() {
@@ -119,7 +119,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the volume
-   * 
+   *
    * @return the volume
    */
   public final String getVolume() {
@@ -128,7 +128,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the number
-   * 
+   *
    * @return the number
    */
   public final String getNumber() {
@@ -137,7 +137,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the start page
-   * 
+   *
    * @return the start page
    */
   public final String getStartPage() {
@@ -146,7 +146,7 @@ public class BibArticle extends BibRecord {
 
   /**
    * Get the end page
-   * 
+   *
    * @return the end page
    */
   public final String getEndPage() {

@@ -238,7 +238,7 @@ public class LaTeXContext extends Context {
 
   /**
    * create the LaTeX context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir
@@ -260,7 +260,7 @@ public class LaTeXContext extends Context {
 
   /**
    * Get the document file
-   * 
+   *
    * @return the document file
    */
   public final File getDocumentFile() {
@@ -269,7 +269,7 @@ public class LaTeXContext extends Context {
 
   /**
    * Instantiate the document
-   * 
+   *
    * @param owner
    *          the owner
    * @param f
@@ -305,7 +305,7 @@ public class LaTeXContext extends Context {
     log = this.getLogger();
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info("Document file is '" + this.m_documentFile + //$NON-NLS-1$
-          "'."); //$NON-NLS-1$ 
+          "'."); //$NON-NLS-1$
     }
 
     return this.documentInstantiate(((LaTeXContext) owner),
@@ -314,7 +314,7 @@ public class LaTeXContext extends Context {
 
   /**
    * Create the bibliography file based on the reference set.
-   * 
+   *
    * @param refs
    *          the reference set
    * @return the relative path to the bibliography file
@@ -336,7 +336,7 @@ public class LaTeXContext extends Context {
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info("Begin writing " + ((refs != null) ? refs.length : 0) + //$NON-NLS-1$
           " bibliographic records to BiBTeX file '" + fr + //$NON-NLS-1$
-          "'."); //$NON-NLS-1$ 
+          "'."); //$NON-NLS-1$
     }
 
     try (FileOutputStream fos = new FileOutputStream(fr)) {
@@ -350,8 +350,8 @@ public class LaTeXContext extends Context {
 
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info("Finished writing " + fr.length() + //$NON-NLS-1$
-          " bytes of bibliographic information to BiBTeX file '"//$NON-NLS-1$ 
-          + fr + "'."); //$NON-NLS-1$ 
+          " bytes of bibliographic information to BiBTeX file '"//$NON-NLS-1$
+          + fr + "'."); //$NON-NLS-1$
     }
 
     return name;

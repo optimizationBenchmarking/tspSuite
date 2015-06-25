@@ -78,7 +78,7 @@ public enum EDefaultFigureSize {
 
   /**
    * create a default figure size
-   * 
+   *
    * @param nx
    *          the number of figures of that size that should fit along the
    *          x-axis, {@code -1} if unspecified
@@ -100,7 +100,7 @@ public enum EDefaultFigureSize {
   /**
    * Get the number of figures of that size that should fit along the
    * x-axis, {@code -1} if unspecified
-   * 
+   *
    * @return the number of figures of that size that should fit along the
    *         x-axis, {@code -1} if unspecified
    */
@@ -111,7 +111,7 @@ public enum EDefaultFigureSize {
   /**
    * Get the number of figures of that size that should fit along the
    * y-axis, {@code -1} if unspecified
-   * 
+   *
    * @return the number of figures of that size that should fit along the
    *         y-axis, {@code -1} if unspecified
    */
@@ -122,7 +122,7 @@ public enum EDefaultFigureSize {
   /**
    * Get does the x-axis span over all columns (i.e., the complete page,
    * {@code true}), or does it only span a single columns ({@code false})?
-   * 
+   *
    * @return does the x-axis span over all columns (i.e., the complete
    *         page, {@code true}), or does it only span a single columns (
    *         {@code false} )?

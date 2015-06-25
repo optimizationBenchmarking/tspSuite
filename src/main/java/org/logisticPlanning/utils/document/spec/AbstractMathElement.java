@@ -9,7 +9,7 @@ public abstract class AbstractMathElement extends AbstractInlineElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

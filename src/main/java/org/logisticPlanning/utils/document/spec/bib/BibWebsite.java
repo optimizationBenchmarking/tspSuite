@@ -20,7 +20,7 @@ public class BibWebsite extends BibRecord {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -61,7 +61,7 @@ public class BibWebsite extends BibRecord {
 
   /**
    * Get the publisher
-   * 
+   *
    * @return the publisher
    */
   public final String getPublisher() {
@@ -70,7 +70,7 @@ public class BibWebsite extends BibRecord {
 
   /**
    * Get the publisher's address
-   * 
+   *
    * @return the publisher's address
    */
   public final String getPublisherAddress() {

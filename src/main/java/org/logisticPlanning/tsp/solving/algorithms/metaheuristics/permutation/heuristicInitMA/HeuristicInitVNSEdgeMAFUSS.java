@@ -5,7 +5,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithmRunner;
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.selection.FitnessUniformSelection;
 
 /**
- * 
+ *
  <p>
  * A Memetic Algorithm (MA)&nbsp;[<a href="#cite_M1989MA"
  * style="font-weight:bold">1</a>, <a href="#cite_M2002MA"
@@ -827,7 +827,7 @@ public final class HeuristicInitVNSEdgeMAFUSS extends
 
   /**
    * Perform the heuristic init vns edge MA with FUSS
-   * 
+   *
    * @param args
    *          the command line arguments
    */

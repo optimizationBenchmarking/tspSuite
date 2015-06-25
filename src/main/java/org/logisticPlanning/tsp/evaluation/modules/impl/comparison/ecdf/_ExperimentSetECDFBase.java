@@ -99,7 +99,7 @@ class _ExperimentSetECDFBase extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name
@@ -128,7 +128,7 @@ class _ExperimentSetECDFBase extends RankedComparisonModule {
 
   /**
    * Write a description of the ranking result
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -178,7 +178,7 @@ class _ExperimentSetECDFBase extends RankedComparisonModule {
    * collections and add point {@code (s, 0)} to all collections. We then
    * find the largest x-coordinate and simply extend the collections with
    * their last y-coordinate to that x-coordinate.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg

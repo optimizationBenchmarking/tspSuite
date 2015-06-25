@@ -205,7 +205,7 @@ final class _Bibliography {
 
   /**
    * Write a record
-   * 
+   *
    * @param r
    *          the record
    * @param out
@@ -254,7 +254,7 @@ final class _Bibliography {
 
   /**
    * write a full date
-   * 
+   *
    * @param year
    *          the year
    * @param quarter
@@ -303,7 +303,7 @@ final class _Bibliography {
 
   /**
    * write date
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -434,7 +434,7 @@ final class _Bibliography {
 
   /**
    * Write the beginning of a record
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -473,7 +473,7 @@ final class _Bibliography {
 
   /**
    * Write the beginning of a record
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -536,7 +536,7 @@ final class _Bibliography {
 
   /**
    * Write an article
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -616,7 +616,7 @@ final class _Bibliography {
 
   /**
    * write the book data
-   * 
+   *
    * @param printTitle
    *          should we print the book title?
    * @param ref
@@ -762,7 +762,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -787,7 +787,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -838,7 +838,7 @@ final class _Bibliography {
 
   /**
    * Write a proceedings
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -864,7 +864,7 @@ final class _Bibliography {
 
   /**
    * Write an in proceedings
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -936,7 +936,7 @@ final class _Bibliography {
 
   /**
    * Write an in collection
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -1007,7 +1007,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param ref
    *          the article
    * @param wco
@@ -1097,7 +1097,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param ref
    *          the article
    * @param wco

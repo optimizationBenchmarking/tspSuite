@@ -174,7 +174,7 @@ public class TestComparisonProperty extends
 
   /**
    * create!
-   * 
+   *
    * @param type
    *          the property type
    * @param instances
@@ -232,7 +232,7 @@ public class TestComparisonProperty extends
 
   /**
    * Get the property that returns the shared instances
-   * 
+   *
    * @return the property that returns the shared instances
    */
   public final SharedInstancesProperty getSharedInstancesProperty() {
@@ -257,7 +257,7 @@ public class TestComparisonProperty extends
 
   /**
    * write the short title
-   * 
+   *
    * @param out
    *          the destination
    * @throws IOException
@@ -273,7 +273,7 @@ public class TestComparisonProperty extends
 
   /**
    * Get the test
-   * 
+   *
    * @return the test
    */
   public final MultivariateTest getTest() {
@@ -282,7 +282,7 @@ public class TestComparisonProperty extends
 
   /**
    * Get the error threshold
-   * 
+   *
    * @return the error threshold
    */
   public final double getErrorThreshold() {
@@ -291,7 +291,7 @@ public class TestComparisonProperty extends
 
   /**
    * Get the compared dimension
-   * 
+   *
    * @return the compared dimension
    */
   public final Accessor getComparedDimension() {
@@ -300,7 +300,7 @@ public class TestComparisonProperty extends
 
   /**
    * Get the limit data property
-   * 
+   *
    * @return the limit data property
    */
   public final LimitDataCollectionProperty getLimitProperty() {
@@ -309,7 +309,7 @@ public class TestComparisonProperty extends
 
   /**
    * Are smaller values better?
-   * 
+   *
    * @return {@code true} if smaller values are better, {@code false} if
    *         larger values are better
    */

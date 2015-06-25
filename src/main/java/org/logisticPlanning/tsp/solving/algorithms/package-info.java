@@ -1,5 +1,5 @@
 /**
- * 
+ *
  In this package, as port of TSP Suite, we provide a comprehensive set of
  * implemented algorithms for solving the Traveling Salesman Problem (TSP).
  * <h2 id="algorithmList">{@linkplain org.logisticPlanning.tsp.solving

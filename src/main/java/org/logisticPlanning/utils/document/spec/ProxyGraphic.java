@@ -32,7 +32,7 @@ import java.util.Map;
  * calls to a different graphics object. Additionally, it provides the
  * interface {@link java.lang.AutoCloseable} which can be used to put all
  * work on an output graphics object into a {@code try...with} statement.
- * 
+ *
  * @param <GT>
  *          the proxy graphics type
  */
@@ -43,7 +43,7 @@ public abstract class ProxyGraphic<GT extends Graphics2D> extends Graphic {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    * @param graphic
@@ -51,7 +51,6 @@ public abstract class ProxyGraphic<GT extends Graphics2D> extends Graphic {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected ProxyGraphic(final FigureBody owner, final GT graphic)
       throws IOException {
     super(owner);
@@ -598,7 +597,7 @@ public abstract class ProxyGraphic<GT extends Graphics2D> extends Graphic {
 
   /**
    * close the graphics object
-   * 
+   *
    * @param graphics
    *          the graphics object
    * @throws Throwable

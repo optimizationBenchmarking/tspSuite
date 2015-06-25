@@ -34,7 +34,7 @@ public abstract class EdgeFloat extends EdgeNumber {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -69,7 +69,7 @@ public abstract class EdgeFloat extends EdgeNumber {
   /**
    * Allocate an edge float array with all {@code float}s set to
    * {@code (0f)}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -86,7 +86,7 @@ public abstract class EdgeFloat extends EdgeNumber {
   /**
    * Allocate an edge float array with all {@code float}s set to
    * {@code (0f)}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

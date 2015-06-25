@@ -16,7 +16,7 @@ public final class ComplementUpdateOperator extends
 
   /**
    * create
-   * 
+   *
    * @param u
    *          the operator to complement
    */

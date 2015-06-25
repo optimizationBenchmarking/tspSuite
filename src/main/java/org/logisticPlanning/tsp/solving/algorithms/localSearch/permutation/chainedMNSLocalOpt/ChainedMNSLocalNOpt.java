@@ -45,14 +45,14 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the maximum number of moves to allocate
-   * 
+   *
    * @serial serializable field
    */
   private int m_maxMoveAllocations;
 
   /**
    * the move order
-   * 
+   *
    * @serial serializable field
    */
   private EMoveComparator m_cmp;
@@ -126,7 +126,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the multi-neighborhood search
-   * 
+   *
    * @param f
    *          the objective function
    * @param srcdst
@@ -315,7 +315,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the local n-opt search
-   * 
+   *
    * @param f
    *          the objective function
    * @param srcdst
@@ -424,7 +424,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Set the local optimizer
-   * 
+   *
    * @param opt
    *          the local optimizer
    */
@@ -434,7 +434,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Should we also test randomly overlapping patches?
-   * 
+   *
    * @param overlap
    *          {@code true} if we also should test randomly overlapping
    *          patches
@@ -445,7 +445,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * set the {@link EMoveComparator move comparator}
-   * 
+   *
    * @param cmp
    *          the {@link EMoveComparator move comparator} to used
    */
@@ -456,7 +456,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * get the {@link EMoveComparator move comparator}
-   * 
+   *
    * @return the {@link EMoveComparator move comparator} used
    */
   public final EMoveComparator getMoveComparator() {
@@ -465,7 +465,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Set the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @param max
    *          the maximum number of move records to allocate and hold in
    *          memory
@@ -476,7 +476,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Get the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @return max the maximum number of move records to allocate and hold in
    *         memory
    */
@@ -487,7 +487,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * compute the total length of the solution and initialize the distance
    * array
-   * 
+   *
    * @param f
    *          the objective function
    * @param n
@@ -522,7 +522,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
    * and will allocate a new move if the old queue is empty. However, if
    * the maximum number of move allocations has been reached, {@code null}
    * will be returned.
-   * 
+   *
    * @return the new move, or {@code null} if the maximum number of move
    *         allocations has been exhausted
    */
@@ -572,7 +572,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * enqueue a move
-   * 
+   *
    * @param move
    *          the move to enqueue
    */
@@ -629,7 +629,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
    * Then, only moves need to be investigated which intersect with the
    * changed region in the next call.
    * </p>
-   * 
+   *
    * @param lastChangeStart
    *          the first index of the interesting range
    * @param lastChangeEnd
@@ -918,7 +918,7 @@ public class ChainedMNSLocalNOpt extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the MNS chained with Local Optimization
-   * 
+   *
    * @param args
    *          the command line arguments
    */

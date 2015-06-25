@@ -14,7 +14,7 @@ final class _ClassError extends IllegalArgumentException {
 
   /**
    * the class error
-   * 
+   *
    * @param is
    *          the real class
    * @param must
@@ -27,7 +27,7 @@ final class _ClassError extends IllegalArgumentException {
 
   /**
    * the class error
-   * 
+   *
    * @param is
    *          the real class
    * @param must
@@ -42,7 +42,7 @@ final class _ClassError extends IllegalArgumentException {
 
   /**
    * the class error
-   * 
+   *
    * @param isContainer
    *          the real container class
    * @param is

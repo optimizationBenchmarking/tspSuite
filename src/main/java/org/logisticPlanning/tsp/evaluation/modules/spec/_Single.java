@@ -26,7 +26,7 @@ final class _Single extends Module {
 
   /**
    * create
-   * 
+   *
    * @param owner
    *          the owning module
    */
@@ -130,7 +130,7 @@ final class _Single extends Module {
 
   /**
    * Write the single sections, one section per experiment
-   * 
+   *
    * @param body
    *          the body
    * @param ds
@@ -160,7 +160,7 @@ final class _Single extends Module {
 
   /**
    * log that there is not enough data
-   * 
+   *
    * @param data
    *          the data
    * @param what

@@ -15,7 +15,7 @@ public final class StatisticInfoComparator extends
 
   /**
    * Create!
-   * 
+   *
    * @param param
    *          the parameter to be compared.
    */

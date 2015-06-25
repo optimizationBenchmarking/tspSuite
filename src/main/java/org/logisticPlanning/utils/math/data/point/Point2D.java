@@ -22,7 +22,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * create the 2-dimensional point
-   * 
+   *
    * @param x
    *          the value of the x-coordinate
    * @param y
@@ -45,7 +45,7 @@ public class Point2D extends MutablePoint {
   /** create the 2-dimensional point */
   /**
    * Get the x-value of this point
-   * 
+   *
    * @return the x-value of this point
    */
   public final double getX() {
@@ -54,7 +54,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * Set the x-value of this point
-   * 
+   *
    * @param x
    *          the new x-value for this point
    */
@@ -64,7 +64,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * Get the y-value of this point
-   * 
+   *
    * @return the y-value of this point
    */
   public final double getY() {
@@ -73,7 +73,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * Set the y-value of this point
-   * 
+   *
    * @param y
    *          the new y-value for this point
    */
@@ -124,7 +124,7 @@ public class Point2D extends MutablePoint {
    * {@code true}, and the y-coordinate if {@code x} is {@code false}. This
    * is a quicker version of {@link #get(int)} since it bypasses the
    * dimension check.
-   * 
+   *
    * @param x
    *          should we use the x-coordinate ({@code x==true}) or the
    *          y-coordinate ({@code x==false})
@@ -139,7 +139,7 @@ public class Point2D extends MutablePoint {
    * {@code true}, and the y-coordinate if {@code x} is {@code false}. This
    * is a quicker version of {@link #get(int)} since it bypasses the
    * dimension check.
-   * 
+   *
    * @param x
    *          should we use the x-coordinate ({@code x==true}) or the
    *          y-coordinate ({@code x==false})
@@ -208,7 +208,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * Copy the values of another {@code Point2D} instance into this one
-   * 
+   *
    * @param p
    *          the {@code Point2D} instance to copy
    */
@@ -219,7 +219,7 @@ public class Point2D extends MutablePoint {
 
   /**
    * Does this point equal to another {@code Point2D} instance?
-   * 
+   *
    * @param p
    *          the other {@code Point2D} instance
    * @return {@code true} if and only if the point is identical to this

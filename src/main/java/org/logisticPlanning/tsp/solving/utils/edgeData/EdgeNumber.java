@@ -166,7 +166,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -176,7 +176,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -188,7 +188,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -199,7 +199,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -211,7 +211,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -223,7 +223,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -234,7 +234,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -246,7 +246,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -258,7 +258,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -269,7 +269,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -281,7 +281,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -293,7 +293,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -304,7 +304,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -316,7 +316,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -328,7 +328,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -339,7 +339,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -351,7 +351,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Set the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -364,7 +364,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the value of the given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -375,7 +375,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Add a given to the value stored for a given edge
-   * 
+   *
    * @param a
    *          the first city
    * @param b
@@ -388,7 +388,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Increase the value of an edge by 1
-   * 
+   *
    * @param a
    *          the first city of the edge
    * @param b
@@ -398,7 +398,7 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Decrease the value of an edge by 1
-   * 
+   *
    * @param a
    *          the first city of the edge
    * @param b
@@ -408,21 +408,21 @@ public abstract class EdgeNumber extends EdgeData {
 
   /**
    * Get the minimum value allowed by this class
-   * 
+   *
    * @return the minimum value allowed by this class
    */
   public abstract long getMinimumAllowedValue();
 
   /**
    * Get the maximum value allowed by this class
-   * 
+   *
    * @return the maximum value allowed by this class
    */
   public abstract long getMaximumAllowedValue();
 
   /**
    * Is storing floating point numbers allowed?
-   * 
+   *
    * @return is the storage of floating point numbers allowed?
    */
   public abstract boolean areFloatsAllowed();
@@ -435,7 +435,7 @@ public abstract class EdgeNumber extends EdgeData {
    * allocate} in class
    * {@link org.logisticPlanning.tsp.solving.utils.candidates.CandidateEdgeNumber
    * CandidateEdgeNumber} if you want to reduce the memory footprint.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -521,7 +521,7 @@ public abstract class EdgeNumber extends EdgeData {
    * allocate} in class
    * {@link org.logisticPlanning.tsp.solving.utils.candidates.CandidateEdgeNumber
    * CandidateEdgeNumber} if you want to reduce the memory footprint.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

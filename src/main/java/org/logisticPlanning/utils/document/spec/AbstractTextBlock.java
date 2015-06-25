@@ -9,7 +9,7 @@ public abstract class AbstractTextBlock extends AbstractTextComplex {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

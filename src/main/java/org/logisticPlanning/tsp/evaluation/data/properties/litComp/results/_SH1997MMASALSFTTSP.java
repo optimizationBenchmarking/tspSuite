@@ -71,7 +71,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
@@ -345,7 +345,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
     dest.write(this.getShortName());
     dest.write(") are introduced. In this ACO variant, each ant creates a solution to a TSP instance and some of these solutions undergo a subsequent local search. "); //$NON-NLS-1$
     this.cite(ECitationMode.BY_ID_AT_SENTENCE_START, dest);
-    dest.write(" provide different ways to choose which one should undergo the local search: either all out of a set of 10 ants, the best out of a set of 10, and a version where "); //$NON-NLS-1$    
+    dest.write(" provide different ways to choose which one should undergo the local search: either all out of a set of 10 ants, the best out of a set of 10, and a version where "); //$NON-NLS-1$
     dest.macroInvoke(Macros.SCALE);
     dest.write(" ants are used and the best one is improved with local search. As local search, 2-opt is used for symmetric TSP instances and a 3-opt variant for asymmetric ones. Candidate sets are used in some configurations to decrease the runtime. The authors report results over 10 independent runs for several benchmark instances, both for fixed numbers of "); //$NON-NLS-1$
     Accessor.FE.writeLongName(dest, true);
@@ -468,7 +468,7 @@ final class _SH1997MMASALSFTTSP extends LiteratureResultPointSet {
 
   /**
    * calculate the number of steps
-   * 
+   *
    * @param inst
    *          the instance
    * @param cnst

@@ -25,7 +25,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
 
   /**
    * Instantiate
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param candidates
@@ -55,7 +55,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
    * CandidateSet} instance that may be used to reduce the storage
    * requirements (at the cost of higher access time).
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric
@@ -175,7 +175,7 @@ public abstract class CandidateEdgeNumber extends EdgeNumber {
    * CandidateSet} instance that may be used to reduce the storage
    * requirements (at the cost of higher access time).
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

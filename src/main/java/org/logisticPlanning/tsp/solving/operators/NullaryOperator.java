@@ -35,7 +35,7 @@ import org.logisticPlanning.tsp.solving.Individual;
  * and invokes them. This allows for a more targeted allocation and
  * de-allocation of data structures for each run.
  * </p>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -48,7 +48,7 @@ public class NullaryOperator<P> extends Operator<P> {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the name of this object
    */
@@ -78,7 +78,7 @@ public class NullaryOperator<P> extends Operator<P> {
    * {@link org.logisticPlanning.tsp.solving.Individual#tourLength tour
    * length} directly and safe that computational effort.
    * </p>
-   * 
+   *
    * @param dest
    *          the destination individual
    * @param f

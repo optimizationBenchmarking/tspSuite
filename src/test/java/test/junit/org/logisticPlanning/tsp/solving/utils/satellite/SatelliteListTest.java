@@ -23,7 +23,7 @@ public class SatelliteListTest extends TestBase {
 
   /**
    * create a virgin satellite list
-   * 
+   *
    * @param n
    *          the number of nodes
    * @return satellite list

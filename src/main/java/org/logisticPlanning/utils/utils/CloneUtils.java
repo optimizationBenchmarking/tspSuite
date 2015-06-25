@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.io.ByteArrayIOStream;
 
 /**
  * A static utility class for cloning objects.
- * 
+ *
  * @since 0.9.8
  */
 public final class CloneUtils {
@@ -34,12 +34,14 @@ public final class CloneUtils {
    * to serialize it to a stream in memory and the deserialize it to get a
    * new instance.</li>
    * <ol>
-   * 
+   *
    * @param object
    *          the object
    * @return a deep copy of the object, or the object itself if it is an
    *         instance of an immutable class, or {@code null} if
    *         {@code object==null}
+   * @param <T>
+   *          the type of the object to clone
    * @throws IllegalArgumentException
    *           if the cloning has failed
    */

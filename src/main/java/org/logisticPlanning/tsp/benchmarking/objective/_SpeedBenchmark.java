@@ -105,7 +105,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  * <table border="1" id="timeMeasurementAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * static final double _timeBenchmarkRun(final ObjectiveFunction f) {
  *   final _SpeedBenchmark instance;
@@ -146,7 +146,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *   return bestFactor;
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -165,7 +165,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  * <table border="1" id="timeBenchmarkAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public final void solve(final ObjectiveFunction f) {
  *   final int n, addB;
@@ -261,7 +261,7 @@ import org.logisticPlanning.tsp.solving.TSPAlgorithm;
  *   f.registerFE(res, length); // register result
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -426,7 +426,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14
    * BURMA14}).
    * </p>
-   * 
+   *
    * @return the instance
    */
   private static final _SpeedBenchmark instance() {
@@ -463,7 +463,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
    * style="font-weight:bold">3</a>, <a href="#cite_JMG2004EAOHFTS"
    * style="font-weight:bold">2</a>] used to measure the performance of the
    * system on which we perform the experiments.
-   * 
+   *
    * @param f
    *          the objective function
    */
@@ -566,7 +566,7 @@ final class _SpeedBenchmark extends TSPAlgorithm {
 
   /**
    * Perform the time benchmark run one time
-   * 
+   *
    * @param f
    *          the objective function
    * @return the result

@@ -15,7 +15,7 @@ public class TablePage extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -32,7 +32,7 @@ public class TablePage extends AbstractLabeledElement {
 
   /**
    * Get the table index of this page
-   * 
+   *
    * @return the table index of this page
    */
   public final int getTableIndex() {
@@ -41,7 +41,7 @@ public class TablePage extends AbstractLabeledElement {
 
   /**
    * Get the page number
-   * 
+   *
    * @return the page number
    */
   public final int getPageNumber() {

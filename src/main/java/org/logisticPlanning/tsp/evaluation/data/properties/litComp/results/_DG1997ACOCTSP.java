@@ -172,7 +172,7 @@ final class _DG1997ACOCTSP extends LiteratureResultPointSet {
 
   /**
    * create the literature references
-   * 
+   *
    * @return the literature references
    */
   private static final BibRecord __lit() {

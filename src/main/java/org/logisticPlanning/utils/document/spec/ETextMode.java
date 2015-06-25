@@ -19,7 +19,7 @@ public enum ETextMode {
 
   /**
    * create
-   * 
+   *
    * @param s
    *          the default size
    */

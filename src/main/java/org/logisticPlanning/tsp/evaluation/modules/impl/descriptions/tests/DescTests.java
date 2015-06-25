@@ -254,7 +254,7 @@ public final class DescTests extends DescriptionModule {
         ),//
         "Multiple Comparisons Among Means",//$NON-NLS-1$
         new BibDate(1961, EBibMonth.MARCH), //
-        "Journal of the American Statistical Association",//$NON-NLS-1$        
+        "Journal of the American Statistical Association",//$NON-NLS-1$
         "56",//$NON-NLS-1$
         "293",//$NON-NLS-1$
         "52",//$NON-NLS-1$
@@ -269,7 +269,7 @@ public final class DescTests extends DescriptionModule {
           ),//
           "Statistical Comparisons of Classifiers over Multiple Data Sets",//$NON-NLS-1$
           new BibDate(2006, EBibMonth.JANUARY), //
-          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$        
+          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
           "7",//$NON-NLS-1$
           "Jan",//$NON-NLS-1$
           "1",//$NON-NLS-1$
@@ -289,7 +289,7 @@ public final class DescTests extends DescriptionModule {
           ),//
           "An Extension on \u201cStatistical Comparisons of Classifiers over Multiple Data Sets\u201d for all Pairwise Comparisons",//$NON-NLS-1$
           new BibDate(2008, EBibMonth.DECEMBER), //
-          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$        
+          "Journal of Machine Learning Research (JMLR)",//$NON-NLS-1$
           "9",//$NON-NLS-1$
           "Dec",//$NON-NLS-1$
           "2677",//$NON-NLS-1$
@@ -307,7 +307,7 @@ public final class DescTests extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -353,7 +353,7 @@ public final class DescTests extends DescriptionModule {
 
     final Label lbl;
 
-    body.write("Statistical tests"); //$NON-NLS-1$    
+    body.write("Statistical tests"); //$NON-NLS-1$
     body.cite(ECitationMode.BY_ID_IN_SENTENCE, DescTests.F1925SMFRW,
         DescTests.L1975NSMBOR, DescTests.SC1988NSFTBS);
     body.write(//
@@ -599,7 +599,7 @@ public final class DescTests extends DescriptionModule {
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(" to err of "); //$NON-NLS-1$
         enui.writeDouble(0.07d);
-        enui.write(" under a given threshold of "); //$NON-NLS-1$    
+        enui.write(" under a given threshold of "); //$NON-NLS-1$
         try (InlineMath mi = enui.inlineMath()) {
           try (MathOp mo = mi.mathOp(EMathOp.CMP_LESS)) {
             try (MathOpParam p1 = mo.mathOpParam()) {
@@ -616,7 +616,7 @@ public final class DescTests extends DescriptionModule {
         enui.macroInvoke(Macros.TEST_ERROR_PROBABILITY);
         enui.write(" was "); //$NON-NLS-1$
         enui.writeDouble(0.007d);
-        enui.write(", one would state that the elements in "); //$NON-NLS-1$   
+        enui.write(", one would state that the elements in "); //$NON-NLS-1$
         try (MacroInvocation mi = enui
             .macroInvocation(Macros.DATA_SAMPLE_I)) {
           try (MacroParameter p = mi.macroParameter()) {
@@ -725,7 +725,7 @@ public final class DescTests extends DescriptionModule {
 
   /**
    * get the description class for the given test class
-   * 
+   *
    * @param clazz
    *          the test class
    * @return the description class

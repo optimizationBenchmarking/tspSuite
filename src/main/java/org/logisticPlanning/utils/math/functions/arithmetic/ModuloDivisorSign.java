@@ -46,7 +46,7 @@ public final class ModuloDivisorSign extends BinaryFunction {
   /**
    * Compute the modulo, i.e., the remainder of the division of {@code x0}
    * by {@code x1}. The result will have the same sign as {@code x1}.
-   * 
+   *
    * @param x0
    *          the dividend
    * @param x1
@@ -67,7 +67,7 @@ public final class ModuloDivisorSign extends BinaryFunction {
   /**
    * Compute the modulo, i.e., the remainder of the division of {@code x0}
    * by {@code x1}. The result will have the same sign as {@code x1}.
-   * 
+   *
    * @param x0
    *          the dividend
    * @param x1
@@ -88,7 +88,7 @@ public final class ModuloDivisorSign extends BinaryFunction {
   /**
    * Compute the modulo, i.e., the remainder of the division of {@code x0}
    * by {@code x1}. The result will have the same sign as {@code x1}.
-   * 
+   *
    * @param x0
    *          the divident
    * @param x1
@@ -138,7 +138,7 @@ public final class ModuloDivisorSign extends BinaryFunction {
    * with the singleton instance {@link ModuloDivisorSign#INSTANCE
    * INSTANCE} for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ModuloDivisorSign#INSTANCE INSTANCE})
    */
@@ -151,7 +151,7 @@ public final class ModuloDivisorSign extends BinaryFunction {
    * with the singleton instance {@link ModuloDivisorSign#INSTANCE
    * INSTANCE} after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link ModuloDivisorSign#INSTANCE INSTANCE})
    */

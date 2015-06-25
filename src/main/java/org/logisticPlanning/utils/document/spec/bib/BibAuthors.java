@@ -22,7 +22,7 @@ public class BibAuthors extends _BibElement<BibAuthors> implements
 
   /**
    * Create the bibliography authors.
-   * 
+   *
    * @param authors
    *          the authors
    */
@@ -32,7 +32,7 @@ public class BibAuthors extends _BibElement<BibAuthors> implements
 
   /**
    * Create the bibliography authors.
-   * 
+   *
    * @param authors
    *          the authors
    * @param cannotBeEmpty
@@ -62,13 +62,13 @@ public class BibAuthors extends _BibElement<BibAuthors> implements
 
       if (a == null) {
         throw new IllegalArgumentException(//
-            "Author cannot be null."); //$NON-NLS-1$ 
+            "Author cannot be null."); //$NON-NLS-1$
       }
 
       for (j = i; (--j) >= 0;) {
         if (a.equals(authors[j])) {
-          throw new IllegalArgumentException("Author '" + a + //$NON-NLS-1$ 
-              "' occurs twice in author list."); //$NON-NLS-1$ 
+          throw new IllegalArgumentException("Author '" + a + //$NON-NLS-1$
+              "' occurs twice in author list."); //$NON-NLS-1$
         }
       }
     }
@@ -127,7 +127,7 @@ public class BibAuthors extends _BibElement<BibAuthors> implements
 
   /**
    * Get the number of authors.
-   * 
+   *
    * @return the number of authors
    */
   public final int size() {
@@ -136,7 +136,7 @@ public class BibAuthors extends _BibElement<BibAuthors> implements
 
   /**
    * Get the author at a specific index {@code i}
-   * 
+   *
    * @param i
    *          the index
    * @return the author at a specific index {@code i}

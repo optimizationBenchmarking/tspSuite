@@ -24,7 +24,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /**
    * Instantiate the {@code IntList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -71,7 +71,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /**
    * Add/insert the 32 bit signed integer (int) (int) at the given index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -91,7 +91,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
   /**
    * Add/insert the 32 bit signed integer (int) (int) at the end of the
    * list
-   * 
+   *
    * @param element
    *          the int to be added
    */
@@ -136,7 +136,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -148,7 +148,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
   /**
    * Aggregate: Visit all the data of this list. There is no guarantee
    * about the order in which the elements are visited.
-   * 
+   *
    * @param aggregate
    *          the aggregate
    */
@@ -170,7 +170,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /**
    * Get the {@code int} at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the {@code int} at that index
@@ -183,7 +183,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
   /**
    * Ensure that there are at least {@code size} free {@code int}s starting
    * at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -251,7 +251,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -281,6 +281,7 @@ public class IntList extends _BasicNumericList<java.lang.Number, int[]> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

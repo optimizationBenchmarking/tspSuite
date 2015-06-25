@@ -31,7 +31,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel
@@ -84,7 +84,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * get the default small per line aggregate
-   * 
+   *
    * @param agg
    *          the aggregate
    * @return the default small per line aggregate
@@ -96,7 +96,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * get the default big per line aggregate
-   * 
+   *
    * @param agg
    *          the aggregate
    * @return the default big per line aggregate
@@ -108,7 +108,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * get the default small total aggregate
-   * 
+   *
    * @param agg
    *          the aggregate
    * @return the default small total aggregate
@@ -120,7 +120,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * get the default big total aggregate
-   * 
+   *
    * @param agg
    *          the aggregate
    * @return the default big total aggregate
@@ -178,7 +178,7 @@ public class AggregatedAxisEnd extends AxisEnd {
 
   /**
    * Calculate the end value from an aggregate
-   * 
+   *
    * @param aggregate
    *          the aggregate
    * @return the result

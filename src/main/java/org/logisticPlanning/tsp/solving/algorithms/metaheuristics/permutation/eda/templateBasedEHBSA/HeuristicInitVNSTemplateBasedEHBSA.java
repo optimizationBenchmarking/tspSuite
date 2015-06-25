@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.operators.UnaryOperator;
 import org.logisticPlanning.tsp.solving.operators.permutation.mutation.PermutationVNSMutation;
 
 /**
- * 
+ *
  <p>
  * This is a version of the
  * {@link org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.eda.templateBasedEHBSA.TemplateBasedEHBSA
@@ -802,7 +802,7 @@ public class HeuristicInitVNSTemplateBasedEHBSA extends
   /**
    * Perform the template-based EHBSA with heuristic initialization and VNS
    * local search
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -24,7 +24,7 @@ public final class _ThresholdSequence extends Sequence {
 
   /**
    * Create the log point threshold sequence
-   * 
+   *
    * @param data
    *          the data
    * @param start

@@ -103,7 +103,7 @@ import org.logisticPlanning.tsp.solving.Individual;
  * "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.2503">10.1
  * .1.26 .2503</a></div></div></li>
  * </ol>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -116,7 +116,7 @@ public class UnaryOperator<P> extends Operator<P> {
 
   /**
    * Create an operator that creates modified copies of given genotypes
-   * 
+   *
    * @param name
    *          the name of this object
    */
@@ -146,7 +146,7 @@ public class UnaryOperator<P> extends Operator<P> {
    * {@link org.logisticPlanning.tsp.solving.Individual#tourLength tour
    * length} directly and safe that computational effort.
    * </p>
-   * 
+   *
    * @param f
    *          the objective function
    * @param parent

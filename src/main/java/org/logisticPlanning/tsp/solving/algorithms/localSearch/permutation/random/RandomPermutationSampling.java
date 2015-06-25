@@ -22,7 +22,7 @@ public final class RandomPermutationSampling extends TSPAlgorithm {
 
   /**
    * Perform the random sampling algorithm
-   * 
+   *
    * @param args
    *          the command line arguments
    */

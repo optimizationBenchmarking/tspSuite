@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.AcceptanceCriteri
 
 /**
  * Always accept the new solution.
- * 
+ *
  * @since 0.9.8
  */
 public final class AlwaysAccept extends AcceptanceCriterion {
@@ -30,7 +30,7 @@ public final class AlwaysAccept extends AcceptanceCriterion {
 
   /**
    * Returns {@link #INSTANCE}.
-   * 
+   *
    * @return {@link #INSTANCE}
    */
   @Override

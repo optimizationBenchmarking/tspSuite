@@ -126,7 +126,7 @@ class _ExperimentERTDiagramsBase extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name

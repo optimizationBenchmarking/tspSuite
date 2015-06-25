@@ -418,7 +418,7 @@
  * -0426-3</a>; OCLC:&nbsp;<a
  * href="https://www.worldcat.org/oclc/19702892">19702892</a></div></li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 package org.logisticPlanning.tsp.solving.utils.satelliteList;

@@ -25,7 +25,7 @@ public class SpringerConfContext extends LaTeXContext {
   /**
    * create the Springer Lecture Notes on Computer Science-based Conference
    * context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir

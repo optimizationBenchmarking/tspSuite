@@ -122,7 +122,7 @@ public final class DescECDF extends DescriptionModule {
               null, "10.1007/11527695"),//$NON-NLS-1$
           "306", "320", null,//$NON-NLS-1$//$NON-NLS-2$
           new URI(
-              "http://ubcsat.dtompkins.com/downloads/sat04proc-ubcsat.pdf?attredirects=0"),//$NON-NLS-1$          
+              "http://ubcsat.dtompkins.com/downloads/sat04proc-ubcsat.pdf?attredirects=0"),//$NON-NLS-1$
           "10.1007/11527695_24");//$NON-NLS-1$
 
     } catch (final URISyntaxException use) {
@@ -141,7 +141,7 @@ public final class DescECDF extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -213,7 +213,7 @@ public final class DescECDF extends DescriptionModule {
     body.write("In order to be able to aggregate the "); //$NON-NLS-1$
     body.macroInvoke(Macros.ECDF);
     body.write(//
-    "s over different scenarios, we use relative objective value goals instead of absolute ones (see "); //$NON-NLS-1$    
+    "s over different scenarios, we use relative objective value goals instead of absolute ones (see "); //$NON-NLS-1$
     body.reference(this.m_rel.getLabel(data));
     body.write(//
     "). Aggregation is done by computing the arithmetic mean instead of counting successes of all runs. This avoids problems if there are more runs available for one benchmark instance than for another one."); //$NON-NLS-1$

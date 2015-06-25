@@ -115,7 +115,7 @@ public class UpdatingPermutationHillClimber extends TSPAlgorithm {
 
   /**
    * Perform the hill climbing
-   * 
+   *
    * @param args
    *          the command line arguments
    */

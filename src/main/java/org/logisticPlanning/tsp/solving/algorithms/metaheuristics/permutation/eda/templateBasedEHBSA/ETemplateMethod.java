@@ -3,11 +3,11 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.e
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  The template methods are used to compute how many elements of a new
  * &quot;sample&quot; should actually be sampled from the histogram model.
  * The remaining elements will come from the template.
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="http://www2.hannan-u.ac.jp/~tsutsui/index-e.html">Shigeyoshi Tsutsui</a></em>
@@ -71,7 +71,7 @@ public enum ETemplateMethod {
 
   /**
    * Calculate the sample length
-   * 
+   *
    * @param n
    *          the n
    * @param gamma

@@ -117,7 +117,7 @@ public class NearestNeighborHeuristic extends TSPHeuristicWithStartNode {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name prefix
    */
@@ -214,7 +214,7 @@ public class NearestNeighborHeuristic extends TSPHeuristicWithStartNode {
 
   /**
    * Perform the nearest-neighbor heuristic.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

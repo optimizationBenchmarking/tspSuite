@@ -9,7 +9,7 @@ public class FigureSeriesCaption extends AbstractTextComplex {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

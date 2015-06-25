@@ -46,7 +46,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * create
-   * 
+   *
    * @param length
    *          the sub-path length for which we generate code
    * @param className
@@ -120,7 +120,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * Begin the main method
-   * 
+   *
    * @param root
    *          the root
    */
@@ -180,7 +180,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * call a function
-   * 
+   *
    * @param path
    *          the function path
    */
@@ -213,7 +213,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * make a function and all required sub-functions
-   * 
+   *
    * @param path
    *          the function path
    */
@@ -271,7 +271,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * make a function and all required sub-functions
-   * 
+   *
    * @param path
    *          the function path
    * @param currentDelta
@@ -334,7 +334,7 @@ public final class CodeGenerator extends PrintWriter implements
     this.print(CodeGenerator.BEFORE_START);
     this.println(';');
     for (i = 1; i <= this.m_length; i++) {
-      this.println("if ((++i) >= length) { i = 0; }");//$NON-NLS-1$   
+      this.println("if ((++i) >= length) { i = 0; }");//$NON-NLS-1$
       this.print("if (");//$NON-NLS-1$
       this.__bestNode(i);
       this.print(" > 0) { path[i] = ");//$NON-NLS-1$
@@ -395,7 +395,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * check the best permutation
-   * 
+   *
    * @param perm
    *          the permutation
    */
@@ -487,7 +487,7 @@ public final class CodeGenerator extends PrintWriter implements
     this.print(CodeGenerator.BEST_NODE);
     this.print(this.m_length);
     this.println(//
-    "}; otherwise these variables are not used */"); //$NON-NLS-1$    
+    "}; otherwise these variables are not used */"); //$NON-NLS-1$
     this.print("private long "); //$NON-NLS-1$
     this.print(CodeGenerator.BEST_IMPROVEMENT);
     this.println(';');
@@ -521,7 +521,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access an original node
-   * 
+   *
    * @param index
    *          the index
    */
@@ -541,7 +541,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access a best node
-   * 
+   *
    * @param index
    *          the index
    */
@@ -575,7 +575,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * access the distance cache
-   * 
+   *
    * @param a
    *          the first index
    * @param b
@@ -723,7 +723,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * run the code generator
-   * 
+   *
    * @param args
    *          the arguments
    * @throws IOException
@@ -787,7 +787,7 @@ public final class CodeGenerator extends PrintWriter implements
 
   /**
    * the permutation printer
-   * 
+   *
    * @param perm
    *          the permutation to print
    */

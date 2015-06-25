@@ -23,7 +23,7 @@ public final class StairsKeepLeftIterator2D extends
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    */

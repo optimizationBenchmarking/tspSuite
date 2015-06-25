@@ -189,7 +189,7 @@ public final class RandomPermutationWalk extends TSPAlgorithm {
 
   /**
    * Perform the random walk heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

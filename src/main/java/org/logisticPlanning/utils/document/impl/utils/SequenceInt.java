@@ -23,7 +23,7 @@ public class SequenceInt extends Sequence {
 
   /**
    * create a sequence of doubles
-   * 
+   *
    * @param dest
    *          the destination
    * @param nf

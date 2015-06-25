@@ -223,7 +223,7 @@ public final class RepresentationUtilsTest extends TourValidatorTestBase {
 
   /**
    * invalidate an array of edges
-   * 
+   *
    * @param edges
    *          the edges
    */

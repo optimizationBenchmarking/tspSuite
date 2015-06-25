@@ -72,7 +72,7 @@ public class ExperimentECDFProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param ecdf
    *          the ecdf
    * @param insts
@@ -85,7 +85,7 @@ public class ExperimentECDFProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param ecdf

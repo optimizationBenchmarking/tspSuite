@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.benchmarking.objective;
 import org.logisticPlanning.utils.math.data.point.Point;
 
 /**
- * 
+ *
  <p>
  * A data point is basically a de-serialized
  * {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint
@@ -165,7 +165,7 @@ public final class DataPoint extends LogPoint {
   /**
    * the relative objective value, measured as
    * {@code (absolute objective value - optimum)/optimum}
-   * 
+   *
    * @serial a double with the relative objective value, a value greater or
    *         equal to {@code 0}
    */
@@ -173,7 +173,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * the normalized runtime
-   * 
+   *
    * @serial the normalized runtime: the runtime of the algorithm divided
    *         by the runtime of a
    *         {@link org.logisticPlanning.tsp.benchmarking.objective._SpeedBenchmark
@@ -183,7 +183,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Create a new data point with the following information:
-   * 
+   *
    * @param fes
    *          the consumed function evaluations
    * @param des
@@ -262,7 +262,7 @@ public final class DataPoint extends LogPoint {
    * run where this is {@code true} will only hold a single log point, and
    * this single log point will have
    * <code>{@link #isPrematureTermination()}==true</code>.
-   * 
+   *
    * @return {@code true} if the log point signifies a prematurely
    *         terminated run, i.e., a run that did not even generate a
    *         single solution, {@code false} if it is a normal log point
@@ -273,7 +273,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Get the relative objective value
-   * 
+   *
    * @return the relative objective value
    */
   public final double getRelBestF() {
@@ -282,7 +282,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Get the normalized runtime.
-   * 
+   *
    * @return the normalized runtime
    */
   public final double getConsumedNormalizedRuntime() {
@@ -292,7 +292,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an objective
    * function threshold was surpassed?
-   * 
+   *
    * @return {@code true} if an objective function threshold was the reason
    *         for logging this point, {@code false} otherwise
    */
@@ -303,7 +303,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an FE threshold was
    * surpassed?
-   * 
+   *
    * @return {@code true} if an FE threshold was the reason for logging
    *         this point, {@code false} otherwise
    */
@@ -314,7 +314,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that an DE threshold was
    * surpassed?
-   * 
+   *
    * @return {@code true} if an DE threshold was the reason for logging
    *         this point, {@code false} otherwise
    */
@@ -325,7 +325,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that the algorithm
    * terminated?
-   * 
+   *
    * @return {@code true} if algorithm termination was the reason for
    *         logging this point, {@code false} otherwise
    */
@@ -336,7 +336,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Was one of the reasons for logging this point that the initialization
    * algorithm terminated?
-   * 
+   *
    * @return {@code true} if initialization algorithm termination was the
    *         reason for logging this point, {@code false} otherwise
    */
@@ -346,7 +346,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * As this object is immutable, cloning it will return the object itself.
-   * 
+   *
    * @return {@code this}
    */
   @Override
@@ -357,7 +357,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Obtain the value associated with the given dimension of the data
    * point.
-   * 
+   *
    * @param dimension
    *          one of
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#DE_INDEX
@@ -421,7 +421,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Does this point equal to another data point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -441,7 +441,7 @@ public final class DataPoint extends LogPoint {
 
   /**
    * Does this point equal to another point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -493,7 +493,7 @@ public final class DataPoint extends LogPoint {
    * run. If the log point is a
    * {@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint data
    * point}, the additional fields will also be validated.
-   * 
+   *
    * @param point
    *          the log point
    * @throws IllegalArgumentException
@@ -511,7 +511,7 @@ public final class DataPoint extends LogPoint {
    * Validate a
    * {@link org.logisticPlanning.tsp.benchmarking.objective.DataPoint data
    * point}.
-   * 
+   *
    * @param point
    *          the log point
    * @throws IllegalArgumentException
@@ -526,13 +526,13 @@ public final class DataPoint extends LogPoint {
     }
     if ((point.m_relF >= Long.MAX_VALUE) && (point.m_fe > 0l)) {
       throw new IllegalArgumentException(//
-          "If at least one objective function has been performed, the best _relative_ objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$ 
+          "If at least one objective function has been performed, the best _relative_ objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$
               + point.m_fe + " an the objective value is " + point.m_relF); //$NON-NLS-1$
     }
 
     if ((point.m_fe <= 0l) && (point.m_relF < Double.POSITIVE_INFINITY)) {
       throw new IllegalArgumentException(//
-          "No function evaluation was performed, so the best known relative objective value must be infinite. However, it is "//$NON-NLS-1$ 
+          "No function evaluation was performed, so the best known relative objective value must be infinite. However, it is "//$NON-NLS-1$
               + point.m_relF);
     }
 
@@ -547,7 +547,7 @@ public final class DataPoint extends LogPoint {
    * {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint log
    * point} : check if it is sane and could have occurred in this way in a
    * run.
-   * 
+   *
    * @param point
    *          the log point
    * @return {@code true} if the point belongs to a prematurely terminated
@@ -615,7 +615,7 @@ public final class DataPoint extends LogPoint {
     }
     if ((point.m_f >= Long.MAX_VALUE) && (point.m_fe > 0l)) {
       throw new IllegalArgumentException(//
-          "If at least one objective function has been performed, the best known objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$ 
+          "If at least one objective function has been performed, the best known objective value must be better than Long.MAX_VALUE. However, the fe index is "//$NON-NLS-1$
               + point.m_fe + " an the objective value is " + point.m_f); //$NON-NLS-1$
     }
 
@@ -632,7 +632,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given log point {@code after} can follow a log point
    * {@code before} in a single run. Both points will also be validated.
-   * 
+   *
    * @param before
    *          the log point before (or {@code null} if not given)
    * @param after
@@ -658,7 +658,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given log point {@code after} can follow a log point
    * {@code before} in a single run
-   * 
+   *
    * @param before
    *          the log point before (must not be {@code null})
    * @param after
@@ -736,7 +736,7 @@ public final class DataPoint extends LogPoint {
   /**
    * Check if a given data point {@code after} and follow a log point
    * {@code before} in a single run. Both points will also be validated.
-   * 
+   *
    * @param before
    *          the log point before (or {@code null} if not given)
    * @param after

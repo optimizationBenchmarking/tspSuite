@@ -18,7 +18,7 @@ public abstract class CharInput {
 
   /**
    * get the character at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the character
@@ -27,7 +27,7 @@ public abstract class CharInput {
 
   /**
    * write a portion of the data to an output device
-   * 
+   *
    * @param out
    *          the output
    * @param start
@@ -42,7 +42,7 @@ public abstract class CharInput {
 
   /**
    * convert a portion to a string
-   * 
+   *
    * @param start
    *          the start
    * @param end

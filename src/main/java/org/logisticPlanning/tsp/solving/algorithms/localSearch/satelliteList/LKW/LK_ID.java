@@ -85,7 +85,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.9438">10.1
  * .1.15 .9438</a></div></div></li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
@@ -94,7 +94,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the default number of candidates
-   * 
+   *
    * @see #CONFIG_CANDIDATE_COUNT
    * @see #PARAM_CANDIDATE_COUNT
    * @see #m_candidateCount
@@ -106,7 +106,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
    * the parameter governing the number of nearest neighbors in the
    * candidate list to per node: {@value} , {@code -1} means use all nodes
    * as candidates
-   * 
+   *
    * @see #CONFIG_CANDIDATE_COUNT
    * @see #DEFAULT_CANDIDATE_COUNT
    * @see #m_candidateCount
@@ -116,7 +116,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the actual size of the candidate list: {@value}
-   * 
+   *
    * @see #DEFAULT_CANDIDATE_COUNT
    * @see #PARAM_CANDIDATE_COUNT
    * @see #m_candidateCount
@@ -127,7 +127,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * the start max depth for recursion: the algorithm may initially add and
    * remove at most <em>{@value}+1</em> edges.
-   * 
+   *
    * @see #PARAM_START_MAX_RECURSION_DEPTH
    * @see #m_startMaxDepth
    */
@@ -135,7 +135,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the parameter with the initial maximum recursion depth: {@value}
-   * 
+   *
    * @see #DEFAULT_START_MAX_RECURSION_DEPTH
    * @see #m_startMaxDepth
    */
@@ -144,7 +144,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * the maximum max depth for recursion: the algorithm may add and remove
    * at most <em>{@value}+1</em> edges.
-   * 
+   *
    * @see #PARAM_MAXIMUM_MAX_RECURSION_DEPTH
    * @see #m_maxMaxDepth
    */
@@ -152,7 +152,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the parameter with the maximum maximum recursion depth: {@value}
-   * 
+   *
    * @see #DEFAULT_MAX_MAX_RECURSION_DEPTH
    * @see #m_maxMaxDepth
    */
@@ -161,7 +161,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
   /**
    * The probability to increase the search depth if no improvement could
    * be found.
-   * 
+   *
    * @see #PARAM_DEPTH_INCREASING_PROBABILITY
    * @see #m_depthIncreasingProbability
    */
@@ -169,7 +169,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * the parameter governing the depth increasing probability: {@value}
-   * 
+   *
    * @see #DEFAULT_DEPTH_INCREASING_PROBABILITY
    * @see #m_depthIncreasingProbability
    */
@@ -222,7 +222,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /** instantiate */
   public LK_ID() {
-    super("Iterative Deepening Lin-Kerninghan Heuristic");//$NON-NLS-1$    
+    super("Iterative Deepening Lin-Kerninghan Heuristic");//$NON-NLS-1$
 
     this.m_candidateCount = LK_ID.DEFAULT_CANDIDATE_COUNT;
     this.m_startMaxDepth = LK_ID.DEFAULT_START_MAX_RECURSION_DEPTH;
@@ -255,7 +255,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Perform the VNS
-   * 
+   *
    * @param args
    *          the command line arguments
    */
@@ -348,7 +348,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * recurse
-   * 
+   *
    * @param depth
    *          the depth
    * @param a
@@ -507,7 +507,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Set the maximum max depth
-   * 
+   *
    * @param i
    *          the value
    */
@@ -521,7 +521,7 @@ public class LK_ID extends TSPLocalSearchAlgorithm<int[]> {
 
   /**
    * Set the start max depth
-   * 
+   *
    * @param i
    *          the value
    */

@@ -182,7 +182,7 @@ public enum EMathOp {
 
   /**
    * Instantiate
-   * 
+   *
    * @param op
    *          the operation
    * @param minArgs
@@ -204,7 +204,7 @@ public enum EMathOp {
 
   /**
    * Get the minimum number of arguments.
-   * 
+   *
    * @return the minimum number of arguments
    */
   public final int getMinArgs() {
@@ -213,7 +213,7 @@ public enum EMathOp {
 
   /**
    * Get the maximum number of arguments.
-   * 
+   *
    * @return the maximum number of arguments
    */
   public final int getMaxArgs() {

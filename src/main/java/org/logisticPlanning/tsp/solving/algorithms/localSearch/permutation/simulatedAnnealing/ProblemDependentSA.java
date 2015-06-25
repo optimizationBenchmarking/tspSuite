@@ -15,6 +15,8 @@ import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
  * An SA algorithm initializing its temperature based on the problem.
+ * 
+ * @author Jiahui Liu, jl4161@columbia.edu
  */
 public final class ProblemDependentSA extends
 TSPLocalSearchAlgorithm<int[]> {
@@ -55,7 +57,7 @@ TSPLocalSearchAlgorithm<int[]> {
 	 */
 	private double m_criticalTemp;
 
-	/** standard deviation multiplier for initial temp */
+	/** standard deviation multipler for initial temp */
 	private int m_stdDevMultiplier;
 
 	/** instantiate */
@@ -64,14 +66,12 @@ TSPLocalSearchAlgorithm<int[]> {
 		this.m_update = PermutationUpdate_Swap.INSTANCE;
 
 		// Default cooling rate
-		this.m_coolingRate = 0.99;
+		this.m_coolingRate = 0.997;
 		// Default initial temp
 		this.m_initialTemp = 10000;
 
 		this.m_constProbability = 0.07;
-		this.m_criticalTemp =  5;
-		
-		this.m_stdDevMultiplier = 2;
+		this.m_criticalTemp = 2;
 
 	}
 

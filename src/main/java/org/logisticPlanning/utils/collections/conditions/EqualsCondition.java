@@ -16,7 +16,7 @@ public final class EqualsCondition extends Condition<Object> {
 
   /**
    * create
-   * 
+   *
    * @param obj
    *          the object
    */

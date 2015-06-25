@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.document.spec.Header;
 /**
  * A abstract class that can be extended to compute properties. Properties
  * are features of data sets that may be cached.
- * 
+ *
  * @param <DT>
  *          the data set type
  * @param <PT>
@@ -21,7 +21,7 @@ public abstract class Property<DT extends DataSet<?>, PT> {
 
   /**
    * create
-   * 
+   *
    * @param type
    *          the property type
    */
@@ -37,20 +37,19 @@ public abstract class Property<DT extends DataSet<?>, PT> {
 
   /**
    * Initialize this property
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException
    *           if i/o fails
    */
-  @SuppressWarnings("unused")
   public void initialize(final Header header) throws IOException {
     //
   }
 
   /**
    * Compute the property
-   * 
+   *
    * @param dataset
    *          the data set
    * @param doc
@@ -62,7 +61,7 @@ public abstract class Property<DT extends DataSet<?>, PT> {
   /**
    * Get the value of this property from the given data set {@code data}
    * and the document {@code doc}
-   * 
+   *
    * @param data
    *          the data set
    * @param doc

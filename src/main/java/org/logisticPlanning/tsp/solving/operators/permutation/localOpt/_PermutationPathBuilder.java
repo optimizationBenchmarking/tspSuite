@@ -18,7 +18,7 @@ final class _PermutationPathBuilder implements
 
   /**
    * create
-   * 
+   *
    * @param length
    *          the length
    */
@@ -177,7 +177,7 @@ final class _PermutationPathBuilder implements
 
   /**
    * load all the pairs
-   * 
+   *
    * @param perm
    *          the perm
    * @param pairs

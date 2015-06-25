@@ -15,7 +15,7 @@ public final class TransformedCollectionView implements IDataCollection {
 
   /**
    * create
-   * 
+   *
    * @param source
    *          the source collection
    * @param transform

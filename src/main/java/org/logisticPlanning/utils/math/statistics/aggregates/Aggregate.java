@@ -16,7 +16,7 @@ public abstract class Aggregate extends Point {
 
   /**
    * Visit a given {@code double}.
-   * 
+   *
    * @param value
    *          the value to visit
    */
@@ -26,7 +26,7 @@ public abstract class Aggregate extends Point {
    * Visit a given {@code float}. By default, this method forwards to
    * {@link #visitDouble(double)}, but it may be overridden to do some
    * special computation for {@code float} values.
-   * 
+   *
    * @param value
    *          the value to visit
    */
@@ -38,7 +38,7 @@ public abstract class Aggregate extends Point {
    * Visit a given {@code long}. By default, this method forwards to
    * {@link #visitDouble(double)}, but it may be overridden to do some
    * special computation for {@code long} values.
-   * 
+   *
    * @param value
    *          the value to visit
    */
@@ -50,7 +50,7 @@ public abstract class Aggregate extends Point {
    * Visit a given {@code int}. By default, this method forwards to
    * {@link #visitLong(long)}, but it may be overridden to do some special
    * computation for {@code int} values.
-   * 
+   *
    * @param value
    *          the value to visit
    */
@@ -62,7 +62,7 @@ public abstract class Aggregate extends Point {
    * Visit a given {@code short}. By default, this method forwards to
    * {@link #visitInt(int)}, but it may be overridden to do some special
    * computation for {@code short} values.
-   * 
+   *
    * @param value
    *          the value to visit
    */
@@ -74,7 +74,7 @@ public abstract class Aggregate extends Point {
    * Visit a given {@code byte}. By default, this method forwards to
    * {@link #visitShort(short)}, but it may be overridden to do some
    * special computation for {@code byte} values.
-   * 
+   *
    * @param value
    *          the value to visit
    */

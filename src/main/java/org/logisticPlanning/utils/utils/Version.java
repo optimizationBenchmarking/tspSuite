@@ -33,7 +33,7 @@ public class Version {
 
   /**
    * Create
-   * 
+   *
    * @param major
    *          the major version
    * @param minor
@@ -73,7 +73,7 @@ public class Version {
 
   /**
    * Get the major version number
-   * 
+   *
    * @return the major version number
    */
   public final int getMajor() {
@@ -82,7 +82,7 @@ public class Version {
 
   /**
    * Get the minor version number
-   * 
+   *
    * @return the minor version number
    */
   public final int getMinor() {
@@ -91,7 +91,7 @@ public class Version {
 
   /**
    * Get the revision number
-   * 
+   *
    * @return the revision number
    */
   public final int getRevision() {
@@ -100,7 +100,7 @@ public class Version {
 
   /**
    * Get the version string
-   * 
+   *
    * @return the version string
    */
   public final String getVersion() {
@@ -112,7 +112,7 @@ public class Version {
 
   /**
    * Get the build time stamp
-   * 
+   *
    * @return the build time stamp
    */
   public final long getBuildTimeStamp() {
@@ -121,7 +121,7 @@ public class Version {
 
   /**
    * Get the build date
-   * 
+   *
    * @return the build date
    */
   public final String getBuildDate() {
@@ -134,7 +134,7 @@ public class Version {
 
   /**
    * Get the target platform
-   * 
+   *
    * @return the target platform
    */
   public final String getTargetPlatform() {

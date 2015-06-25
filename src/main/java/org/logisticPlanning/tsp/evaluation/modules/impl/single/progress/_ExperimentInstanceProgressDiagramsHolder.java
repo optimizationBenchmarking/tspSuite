@@ -18,7 +18,7 @@ final class _ExperimentInstanceProgressDiagramsHolder extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

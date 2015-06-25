@@ -27,7 +27,7 @@ final class _PushBackReader extends BufferedReader {
 
   /**
    * instantiate
-   * 
+   *
    * @param sub
    *          the reader
    * @param pb
@@ -49,7 +49,7 @@ final class _PushBackReader extends BufferedReader {
 
   /**
    * wrap
-   * 
+   *
    * @param l
    *          the list
    * @param br
@@ -66,7 +66,7 @@ final class _PushBackReader extends BufferedReader {
 
   /**
    * push back some string
-   * 
+   *
    * @param l
    *          the list
    * @param s

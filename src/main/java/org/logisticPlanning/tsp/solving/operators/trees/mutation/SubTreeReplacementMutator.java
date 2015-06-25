@@ -81,7 +81,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * 2009, Germany: it-weise.de (self-published). <div>link: [<a
  * href="http://www.it-weise.de/projects/book.pdf">1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <NT>
  *          the node type
  */
@@ -97,7 +97,7 @@ public final class SubTreeReplacementMutator<NT extends Node<NT>> extends
 
   /**
    * Create a new tree mutation operation
-   * 
+   *
    * @param md
    *          the maximum tree depth
    */
@@ -148,6 +148,7 @@ public final class SubTreeReplacementMutator<NT extends Node<NT>> extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final SubTreeReplacementMutator<NT> clone() {
     SubTreeReplacementMutator<NT> r;
 

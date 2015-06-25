@@ -34,7 +34,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
 
   /**
    * create the tsp algorithm
-   * 
+   *
    * @return the tsp algorithm
    */
   protected TSPAlgorithm createAlgorithm() {
@@ -43,7 +43,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
 
   /**
    * create the tsp algorithm
-   * 
+   *
    * @return the tsp algorithm
    */
   public final TSPAlgorithm getAlgorithm() {
@@ -55,7 +55,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
 
   /**
    * create the tsp algorithm
-   * 
+   *
    * @return the tsp algorithm
    */
   protected TSPAlgorithm createInitAlgorithm() {
@@ -64,7 +64,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
 
   /**
    * create the tsp algorithm
-   * 
+   *
    * @return the tsp algorithm
    */
   public final TSPAlgorithm getInitAlgorithm() {
@@ -85,7 +85,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Run the algorithm on a given benchmark instance. We perform one long
    * test (with at most 40s runtime), one medium test with at most 12s
    * runtime, and five short tests of at most 5s.
-   * 
+   *
    * @param inst
    *          the instance
    * @throws Throwable
@@ -120,7 +120,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ATT48}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -133,7 +133,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYG29}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -146,7 +146,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BAYS29}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -159,7 +159,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BERLIN52}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -172,7 +172,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BRAZIL58}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -185,7 +185,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BURMA14}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -198,7 +198,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#DANTZIG42}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -211,7 +211,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL51}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -224,7 +224,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#EIL76}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -237,7 +237,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FRI26}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -249,7 +249,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR17}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -261,7 +261,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR21}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -273,7 +273,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR24}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -285,7 +285,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR48}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -297,7 +297,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#GR96}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -309,7 +309,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#HK48}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -322,7 +322,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROA100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -335,7 +335,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROB100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -348,7 +348,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROC100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -361,7 +361,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROD100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -374,7 +374,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KROE100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -386,7 +386,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#PR76}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -399,7 +399,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RAT99}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -412,7 +412,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RD100}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -424,7 +424,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
   /**
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ST70}.
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -437,7 +437,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SWISS42}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -450,7 +450,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES16}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -463,7 +463,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#ULYSSES22}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */
@@ -476,7 +476,7 @@ public class TSPAlgorithmSymmetricTest extends ObjectiveFunctionValidator {
    * Test whether solving works correctly on the symmetric instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RL5934}
    * .
-   * 
+   *
    * @throws Throwable
    *           if I/O fails, or whatever
    */

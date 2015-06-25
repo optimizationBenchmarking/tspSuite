@@ -21,7 +21,7 @@ import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  <p>
  * A version of the {@link PACO Population-based ACO} where the first
  * population is initialized with different heuristic methods.
@@ -323,14 +323,14 @@ public class HeuristicInitPACO extends PACO {
 
   /**
    * the heuristics used for initialization
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristic[] m_initOnce;
 
   /**
    * the multi-times heuristic
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristicWithStartNode[] m_initMulti;
@@ -344,7 +344,7 @@ public class HeuristicInitPACO extends PACO {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name
    */
@@ -380,7 +380,7 @@ public class HeuristicInitPACO extends PACO {
    * population size and the available runtime. Also, each created
    * individual will be refined via
    * {@link #refineSolution(int[], long, ObjectiveFunction)}.
-   * 
+   *
    * @param pop
    *          the population to fill
    * @param f
@@ -487,7 +487,7 @@ public class HeuristicInitPACO extends PACO {
 
   /**
    * Perform the population-based ACO
-   * 
+   *
    * @param args
    *          the command line arguments
    */

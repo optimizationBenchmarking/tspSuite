@@ -34,7 +34,7 @@ public final class DataCollectionIterator2D extends _PointIterator2D {
 
   /**
    * instantiate
-   * 
+   *
    * @param left
    *          the left point
    * @param right
@@ -91,7 +91,7 @@ public final class DataCollectionIterator2D extends _PointIterator2D {
 
   /**
    * instantiate
-   * 
+   *
    * @param data
    *          the data
    */

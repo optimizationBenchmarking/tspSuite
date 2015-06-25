@@ -7,7 +7,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
 /**
  * A collective condition is a condition which is checked on the elements
  * of a collection.
- * 
+ *
  * @param <T>
  *          the element type this condition applies to.
  */
@@ -33,7 +33,7 @@ public final class CollectiveCondition<T> extends
    * the condition is an {@code or} condition, it will be {@code true} if
    * and only if at least one element in a collection meets the
    * sub-condition.
-   * 
+   *
    * @param condition
    *          condition
    * @param and

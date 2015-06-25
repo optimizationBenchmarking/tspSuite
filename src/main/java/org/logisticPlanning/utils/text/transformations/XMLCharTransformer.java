@@ -106,7 +106,7 @@ public final class XMLCharTransformer extends NormalizedCharTransformer {
 
   /**
    * the character-to-entity conversion
-   * 
+   *
    * @param chr
    *          the char
    * @param dest

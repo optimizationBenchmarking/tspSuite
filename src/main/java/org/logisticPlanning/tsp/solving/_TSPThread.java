@@ -53,7 +53,7 @@ final class _TSPThread extends Thread {
 
   /**
    * Create
-   * 
+   *
    * @param algo
    *          the algorithm
    * @param init
@@ -77,7 +77,7 @@ final class _TSPThread extends Thread {
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.logp(Level.INFO, _TSPThread.SOURCE_CLASS,
           _TSPThread.SOURCE_CONSTRUCTOR,
-          ("Executor thread #" + this.getId() + //$NON-NLS-1$ 
+          ("Executor thread #" + this.getId() + //$NON-NLS-1$
           " created.")); //$NON-NLS-1$
     }
 

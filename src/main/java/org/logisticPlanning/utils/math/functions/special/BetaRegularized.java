@@ -78,7 +78,7 @@ public final class BetaRegularized extends TernaryFunction {
    * <li><a href="http://functions.wolfram.com/06.21.10.0001.01">
    * Regularized Pow CEC2012_Function</a>.</li>
    * </ul>
-   * 
+   *
    * @param x
    *          the value.
    * @param a
@@ -127,7 +127,7 @@ public final class BetaRegularized extends TernaryFunction {
    * BetaRegularized.INSTANCE} for serialization, i.e., when the instance
    * is written with {@link java.io.ObjectOutputStream#writeObject(Object)}
    * .
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BetaRegularized#INSTANCE BetaRegularized.INSTANCE})
    */
@@ -140,7 +140,7 @@ public final class BetaRegularized extends TernaryFunction {
    * with the singleton instance {@link BetaRegularized#INSTANCE
    * BetaRegularized.INSTANCE} after serialization, i.e., when the instance
    * is read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always
    *         {@link BetaRegularized#INSTANCE BetaRegularized.INSTANCE})
    */

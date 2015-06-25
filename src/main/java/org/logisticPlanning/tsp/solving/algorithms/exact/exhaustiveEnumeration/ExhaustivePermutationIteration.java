@@ -234,7 +234,7 @@ public final class ExhaustivePermutationIteration extends TSPAlgorithm {
 
   /**
    * Perform the exhaustive permutation enumeration heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

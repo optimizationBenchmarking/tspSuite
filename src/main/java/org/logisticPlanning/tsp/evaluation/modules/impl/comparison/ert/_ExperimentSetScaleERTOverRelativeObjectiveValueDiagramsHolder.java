@@ -23,14 +23,14 @@ final class _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
   _ExperimentSetScaleERTOverRelativeObjectiveValueDiagramsHolder(
       final Module owner) {
     super(_ExperimentSetERTDiagramsBase._NAME_PFX
-        + "ScaleOverRelativeObjectiveValues", owner, false);//$NON-NLS-1$ 
+        + "ScaleOverRelativeObjectiveValues", owner, false);//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */

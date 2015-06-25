@@ -240,7 +240,7 @@ final class _EPSFigureBody extends FigureBody {
 
   /**
    * create the figure body element
-   * 
+   *
    * @param relativeNameBase
    *          the uri denoting the basis for the relative name of this
    *          graphic. this name may be extended or modified by
@@ -286,7 +286,7 @@ final class _EPSFigureBody extends FigureBody {
 
   /**
    * get the dimension of the postscript figure
-   * 
+   *
    * @return the dimension of the postscript figure
    */
   final Dimension getDimensionsInPT() {
@@ -302,7 +302,7 @@ final class _EPSFigureBody extends FigureBody {
 
   /**
    * get the file associated to this figure's body
-   * 
+   *
    * @return the file associated to this figure's body
    */
   final File getFile() {

@@ -18,7 +18,7 @@ public final class ModuleUtils {
 
   /**
    * Create a new decimal format
-   * 
+   *
    * @param spec
    *          the specification
    * @return the format

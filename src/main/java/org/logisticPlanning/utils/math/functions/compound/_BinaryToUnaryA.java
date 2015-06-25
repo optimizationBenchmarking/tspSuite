@@ -13,20 +13,20 @@ final class _BinaryToUnaryA extends ChainedBinary {
 
   /**
    * the first argument of the binary function
-   * 
+   *
    * @serial the double constant being the input of the first argument of
    *         the binary function
    */
   private final double m_a;
   /**
    * the second argument of the binary function
-   * 
+   *
    * @serial the unary function being the second input
    */
   private final UnaryFunction m_b;
   /**
    * the binary function
-   * 
+   *
    * @serial the unary function being the second input of the binary
    *         function
    */
@@ -34,7 +34,7 @@ final class _BinaryToUnaryA extends ChainedBinary {
 
   /**
    * Create
-   * 
+   *
    * @param a
    *          the double constant being the first argument of the binary
    *          function

@@ -114,7 +114,7 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
   /**
    * Validate the state of an objective function. This class checks some
    * basic invariants that must always hold.
-   * 
+   *
    * @param i
    *          the instance of the benchmark problem, or {@code null} if
    *          unknown
@@ -517,7 +517,7 @@ public class ObjectiveFunctionValidator extends TourValidatorTestBase {
    * Apply a test to a given problem instance. This method implements the
    * framework logic to load instances, link their output to temporary
    * files, and run a certain test.
-   * 
+   *
    * @param inst
    *          the benchmark instance
    * @param test

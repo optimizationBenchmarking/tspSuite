@@ -52,7 +52,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param name
@@ -76,7 +76,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
 
   /**
    * Write a description of the ranking result
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -119,7 +119,7 @@ class _ExperimentSetProgressBase extends RankedComparisonModule {
    * curve. We we limit the areas to the left by the biggest smallest
    * x-coordinate over all methods and to the right with the largest
    * biggest x-coordinate.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg

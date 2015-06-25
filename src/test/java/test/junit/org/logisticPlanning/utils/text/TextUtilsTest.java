@@ -44,7 +44,7 @@ public class TextUtilsTest extends TestBase {
 
   /**
    * test a double
-   * 
+   *
    * @param s
    *          the string
    * @param d

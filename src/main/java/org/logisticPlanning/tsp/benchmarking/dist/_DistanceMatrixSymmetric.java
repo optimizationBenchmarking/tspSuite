@@ -51,7 +51,7 @@ final class _DistanceMatrixSymmetric extends _DistanceMatrix {
 
   /**
    * create the _DistanceMatrixSymmetric
-   * 
+   *
    * @param n
    *          the number of nodes
    */

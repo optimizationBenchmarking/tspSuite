@@ -9,7 +9,7 @@ abstract class _MultiLabeledElement extends _LabeledElement<_MultiLabel> {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label

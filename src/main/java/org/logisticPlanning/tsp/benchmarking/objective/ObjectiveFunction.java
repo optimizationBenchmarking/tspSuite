@@ -498,7 +498,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * <table border="1" id="timeMeasurementAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * static final double _timeBenchmarkRun(final ObjectiveFunction f) {
  *   final _SpeedBenchmark instance;
@@ -539,7 +539,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *   return bestFactor;
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -559,7 +559,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * <table border="1" id="timeBenchmarkAlgo" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public final void solve(final ObjectiveFunction f) {
  *   final int n, addB;
@@ -655,7 +655,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *   f.registerFE(res, length); // register result
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -1057,7 +1057,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * <table border="1" id="invokeMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public static void main(final String[] args) {
  *     {@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner TSPAlgorithmRunner}.{@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner#benchmark(org.logisticPlanning.utils.collections.lists.ArrayListView, java.lang.Class, java.lang.String[]) benchmark}({@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SYMMETRIC_INSTANCES Instance.SYMMETRIC_INSTANCES},
@@ -1065,7 +1065,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *         args);
  *   }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -1177,7 +1177,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * <table border="1" id="testMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
  * 
@@ -1197,7 +1197,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  *   }
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -1934,7 +1934,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * the <a href="#runtimeNormalization">runtime normalization factor</a>:
    * * * {@value}
    */
-  public static final String RUNTIME_NORMALIZATION_FACTOR = "runtimeNormalizationFactor"; //$NON-NLS-1$  
+  public static final String RUNTIME_NORMALIZATION_FACTOR = "runtimeNormalizationFactor"; //$NON-NLS-1$
 
   /** the comments in the log file header */
   private static final char[][] HEADER_COMMENTS = new char[][] { //
@@ -2514,7 +2514,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * symmetric: the benchmark instance represents a
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#symmetric()
    * symmetric} TSP
-   * 
+   *
    * @serial a boolean value indicating whether the problem is symmetric (
    *         {@code true}) or not ({@code false})
    */
@@ -2525,7 +2525,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the benchmark object
-   * 
+   *
    * @serial the non-null handle to the benchmark instance
    */
   private final Benchmark m_benchmark;
@@ -2534,7 +2534,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * the maximum function evaluations (FEs), used in
    * {@link #shouldTerminate()} which becomes {@code true} once this many
    * FEs have been performed
-   * 
+   *
    * @serial a {@code long} value (&gt;0) indicating the maximum number of
    *         allowed function evaluations (FEs)
    */
@@ -2544,7 +2544,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * the maximum distance evaluations (DE)s, used in
    * {@link #shouldTerminate()} which becomes {@code true} once this many
    * DEs have been performed
-   * 
+   *
    * @serial a {@code long} value (&gt;0) indicating the maximum number of
    *         allowed distance evaluations (DEs)
    */
@@ -2554,7 +2554,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * the best possible objective value, used in {@link #shouldTerminate()}
    * which becomes {@code true} once a solution (tour) with this length is
    * found
-   * 
+   *
    * @serial a {@code long} value (&gt;0) holding the objective value of
    *         the globally optimal tour
    */
@@ -2568,21 +2568,21 @@ public final class ObjectiveFunction extends DistanceComputer {
    * the parameter
    * {@link org.logisticPlanning.tsp.benchmarking.objective.Benchmark#m_limitDim}
    * .
-   * 
+   *
    * @serial the non-null instance of the distance computer
    */
   private final DistanceComputer m_dist;
 
   /**
    * the pre-allocated array with log points
-   * 
+   *
    * @serial serializable field
    */
   private final LogPoint[] m_log;
 
   /**
    * the current log length
-   * 
+   *
    * @serial the number of points in the log array
    */
   private int m_logSize;
@@ -2590,14 +2590,14 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the values to log: thresholds for the objective value/ tour length at
    * which log points will be taken
-   * 
+   *
    * @serial an array of {@code long} values
    */
   private final long[] m_valuesToLog;
 
   /**
    * thresholds for the FEs and DEs where log points should be taken
-   * 
+   *
    * @serial an array of {@code long} values
    */
   private final long[] m_FEsDEsToLog;
@@ -2612,14 +2612,14 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the next Function evaluation where a log point should be taken
-   * 
+   *
    * @serial a {@code long} value larger or equal to {@code 0}
    */
   private long m_nextFE;
 
   /**
    * the index in {@link #m_FEsDEsToLog} for the next threshold FE
-   * 
+   *
    * @serial an integer index larger or equal to 0
    */
   private int m_feIdx;
@@ -2627,35 +2627,35 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the current log point: this variable provides information about the
    * current state of the search.
-   * 
+   *
    * @serial a non-null instance of LogPoint
    */
   private final LogPoint m_currentLP;
 
   /**
    * the log point after the initialization process
-   * 
+   *
    * @serial an instance of log point
    */
   private final LogPoint m_initLP;
 
   /**
    * the log point of the last improvement
-   * 
+   *
    * @serial a non-null instance of LogPoint
    */
   private final LogPoint m_lastImprovementLP;
 
   /**
    * the index in {@link #m_FEsDEsToLog} for the next threshold DE
-   * 
+   *
    * @serial an integer index larger or equal to 0
    */
   private int m_deIdx;
 
   /**
    * the next distance evaluation where a log point should be taken
-   * 
+   *
    * @serial a {@code long} value larger or equal to {@code 0}
    */
   private long m_nextDE;
@@ -2663,21 +2663,21 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the index in {@link #m_valuesToLog} for the next threshold objective
    * value
-   * 
+   *
    * @serial an integer index larger or equal to 0
    */
   private int m_fIdx;
 
   /**
    * the next objective value where a log point should be taken
-   * 
+   *
    * @serial a {@code long} value larger or equal to {@code 0}
    */
   private long m_nextF;
 
   /**
    * should we terminate?
-   * 
+   *
    * @serial a {@code boolean} value indicating whether termination is
    *         necessary
    */
@@ -2685,14 +2685,14 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * The seed of the random number generation {@link #m_r}.
-   * 
+   *
    * @serial a {@code long} holding the seed of the random number generator
    */
   private long m_randSeed;
 
   /**
    * the internal randomizer, seeded with {@link #m_randSeed}
-   * 
+   *
    * @serial a non-null instance of the random number generator
    */
   private final Randomizer m_r;
@@ -2700,7 +2700,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the start time, obtained from
    * {@link java.lang.System#currentTimeMillis()}
-   * 
+   *
    * @serial a {@code long} time value
    */
   private long m_startTime;
@@ -2708,7 +2708,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the end time, obtained from
    * {@link java.lang.System#currentTimeMillis()}
-   * 
+   *
    * @serial a {@code long} time value
    */
   long m_endTime;
@@ -2716,7 +2716,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the best candidate solution found in <a
    * href="#pathRepresentation">path representation</a>.
-   * 
+   *
    * @serial an integer array
    */
   private final int[] m_bestX;
@@ -2724,7 +2724,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * Should we take a log point when the next FE or DE boundary is reached?
    * This is only necessary if an improvement was made.
-   * 
+   *
    * @serial a boolean value indicating whether or not to take a log point
    *         when reaching the next FE or DE boundary
    */
@@ -2732,14 +2732,14 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * The calendar instance used to format times.
-   * 
+   *
    * @serial a non-null Calendar instance
    */
   private final Calendar m_calendar;
 
   /**
    * did the objective value improve?
-   * 
+   *
    * @serial a boolean becoming {@code true} if the objective value has
    *         improved
    */
@@ -2747,21 +2747,21 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the algorithm object
-   * 
+   *
    * @serial the algorithm object instance
    */
   private NamedObject m_algorithm;
 
   /**
    * the (optional) deterministic initializer
-   * 
+   *
    * @serial the initialization algorithm object instance
    */
   private NamedObject m_initializer;
 
   /**
    * the log size after initialization
-   * 
+   *
    * @serial an integer holding the number of log points after
    *         initialization
    */
@@ -2769,7 +2769,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the function value index after initialization
-   * 
+   *
    * @serial an integer holding the objective value index after
    *         initialization
    */
@@ -2777,7 +2777,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the next function value after initialization
-   * 
+   *
    * @serial a long with the next objective function threshold after
    *         initialization
    */
@@ -2785,35 +2785,35 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * the de index after initialization
-   * 
+   *
    * @serial an int with the next de index after initialization
    */
   private int m_i_deIdx;
 
   /**
    * the next de after initialization
-   * 
+   *
    * @serial the next de after initialization
    */
   private long m_i_nextDE;
 
   /**
    * the FE index after initialization
-   * 
+   *
    * @serial the FE index after initialization
    */
   private int m_i_feIdx;
 
   /**
    * the next FE after initialization
-   * 
+   *
    * @serial the next FE after initialization
    */
   private long m_i_nextFE;
 
   /**
    * the best candidate solution after initialization
-   * 
+   *
    * @serial in int array
    */
   private final int[] m_i_bestX;
@@ -2824,7 +2824,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the end time of the initialization process, obtained from
    * {@link java.lang.System#currentTimeMillis()}
-   * 
+   *
    * @serial a {@code long} time value
    */
   private long m_i_endTime;
@@ -2832,7 +2832,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the random seed of the initialization process, obtained from
    * {@link java.lang.System#currentTimeMillis()}
-   * 
+   *
    * @serial a {@code long} time value
    */
   private long m_i_randSeed;
@@ -2840,7 +2840,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the time offset to be added to all runtime information, obtained from
    * {@link java.lang.System#currentTimeMillis()}
-   * 
+   *
    * @serial a {@code long} time value
    */
   private long m_time_offset;
@@ -2848,28 +2848,28 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * the factor used to <a href="#timeNormalization">normalize</a> the
    * runtime measure
-   * 
+   *
    * @serial a positive double value
    */
   private final double m_timeNormalizationFactor;
 
   /**
    * the creator information record
-   * 
+   *
    * @serial an instance of the creator init
    */
   private CreatorInfo m_creator;
 
   /**
    * the initialization exception
-   * 
+   *
    * @serial any potential error captured during initialization
    */
   private Throwable m_exceptionDuringInit;
 
   /**
    * the exception that was caught during the algorithm run
-   * 
+   *
    * @serial any potential error captured during algorithm execution
    */
   private Throwable m_exceptionDuringRun;
@@ -2879,7 +2879,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * create the objective function
-   * 
+   *
    * @param benchmark
    *          the benchmark instance to which this objective function
    *          belongs
@@ -2933,7 +2933,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * Store an exception that has occured during the initialization
    * procedure for logging. Warning: Only the first exception passed to
    * this method will be remembered.
-   * 
+   *
    * @param t
    *          the exception
    */
@@ -2947,7 +2947,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * Store an exception that has occured during the optimization algorithm
    * run for logging. Warning: Only the first exception passed to this
    * method will be remembered.
-   * 
+   *
    * @param t
    *          the exception
    */
@@ -2977,7 +2977,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * calls (calls to {@link java.lang.System#currentTimeMillis()
    * currentTimeMillis()}).
    * </p>
-   * 
+   *
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs()
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs()
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF()
@@ -2994,7 +2994,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * LogPoint} that represents the state of the search after the
    * deterministic initialization was applied. If no such procedure was
    * applied, the log point will provide no useful information.
-   * 
+   *
    * @see #beginDeterministicInitialization(NamedObject)
    * @see #endDeterministicInitialization()
    * @see #deleteDeterministicInitialization()
@@ -3020,7 +3020,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * from this instance, however, will be very time consuming as it will
    * lead to a call to a system call and to checking of the termination
    * criterion.
-   * 
+   *
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedDEs()
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getConsumedFEs()
    * @see org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF()
@@ -3039,7 +3039,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * be measured and logged in memory. Once the run has {@link #endRun()
    * ended} (and {@link #endRun()} is called), the logged information will
    * be written to a log file.
-   * 
+   *
    * @param algorithm
    *          the algorithm object
    * @see #endRun()
@@ -3051,7 +3051,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * Begin a new run: this method allows us to skip making a file, as is
    * necessary for the speed benchmark.
-   * 
+   *
    * @param algorithm
    *          the algorithm name
    * @param makeFile
@@ -3088,7 +3088,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * Make a directory or file name prefix based on a combination of the
    * name of the {@link #m_initializer deterministic initialization
    * heuristic} and the {@link #m_algorithm optimization algorithm}.
-   * 
+   *
    * @param algo
    *          the algorithm configuration of the algorithm, or {@code null}
    * @param init
@@ -3125,7 +3125,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * This function takes a name and removes spaces and control characters
    * and is used in {@link #__makeName(NamedObject, NamedObject)} to
    * generate a viable filename or directory.
-   * 
+   *
    * @param named
    *          the named object
    * @return the sanitized name
@@ -3182,7 +3182,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * begin a new deterministic initialization procedure
-   * 
+   *
    * @param algorithm
    *          the deterministic initialization procedure
    */
@@ -3218,7 +3218,7 @@ public final class ObjectiveFunction extends DistanceComputer {
   /**
    * Delete all data and in-memory log entries generated by any
    * deterministic initialization procedure.
-   * 
+   *
    * @see #beginDeterministicInitialization(NamedObject)
    * @see #endDeterministicInitialization()
    */
@@ -3251,7 +3251,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * begin a run or initialization procedure
-   * 
+   *
    * @param useInit
    *          use the results from the initialization procedure (or not)
    */
@@ -3751,7 +3751,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * print an exception to the log
-   * 
+   *
    * @param t
    *          the exception
    * @param prefix
@@ -3770,7 +3770,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * Set the creator information to be written to each log file
-   * 
+   *
    * @param info
    *          the creator information, or {@code null} if no such info
    *          should be written
@@ -3781,7 +3781,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * Get the creator information which is written to each log file
-   * 
+   *
    * @return the creator information record
    */
   public final CreatorInfo getCreatorInfo() {
@@ -3846,7 +3846,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * discovered so far, it will be copied into an internal variable and
    * become accessible via {@link #getCopyOfBest(int[])}.
    * </p>
-   * 
+   *
    * @param nodes
    *          the candidate solution to be evaluated
    * @return the total resulting tour length of {@code nodes}
@@ -3881,7 +3881,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * registered solution is not better than the best solution known so far,
    * the return value is {@code false}.
    * </p>
-   * 
+   *
    * @param nodes
    *          the candidate solution. If set to {@code null} the internal
    *          best solution will not be updated. Use only if you know that
@@ -3919,7 +3919,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * registered solution is not better than the best solution known so far,
    * the return value is {@code false}.
    * </p>
-   * 
+   *
    * @param fes
    *          the number of function evaluation that have (implicitly) been
    *          performed
@@ -3962,7 +3962,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * solution discovered so far, it will be copied into an internal
    * variable and become accessible via {@link #getCopyOfBestAdj(int[])}.
    * </p>
-   * 
+   *
    * @param adjacencyList
    *          the adjacency list representing the candidate solution to be
    *          evaluated
@@ -4003,7 +4003,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * registered solution is not better than the best solution known so far,
    * the return value is {@code false}.
    * </p>
-   * 
+   *
    * @param adjacencyList
    *          the candidate solution in <a href="#adjacencyRepresentation">
    *          <em>adjacency representation</em></a>. If set to {@code null}
@@ -4047,7 +4047,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * return a copy of it. If the registered solution is not better than the
    * best solution known so far, the return value is {@code false}.
    * </p>
-   * 
+   *
    * @param fes
    *          the number of function evaluation that have (implicitly) been
    *          performed
@@ -4080,7 +4080,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * memory record and {@link #getCopyOfBest(int[])} will return a copy of
    * it. If the registered solution is not better than the best solution
    * known so far, the return value is {@code false}.
-   * 
+   *
    * @param nodes
    *          the candidate solution. Can be set to {@code null} if the
    *          solution cannot be better than the current one or if the new
@@ -4241,7 +4241,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * as well as
    * <code>{@link #getLastImprovementLogPoint() getLastImprovementLogPoint()}.{#link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() getBestF()}</code>
    * .
-   * 
+   *
    * @param nodes
    *          the destination array
    * @throws IllegalStateException
@@ -4270,7 +4270,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * as well as
    * <code>{@link #getLastImprovementLogPoint() getLastImprovementLogPoint()}.{#link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#getBestF() getBestF()}</code>
    * .
-   * 
+   *
    * @param adjacencyList
    *          the destination array to receive the solution in <a
    *          href="#adjacencyRepresentation">
@@ -4294,7 +4294,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * {@link org.logisticPlanning.utils.math.random.Randomizer} to be used
    * by the optimization algorithm. This must be the only source of random
    * numbers to be used.
-   * 
+   *
    * @return the instance of
    *         {@link org.logisticPlanning.utils.math.random.Randomizer} to
    *         be used by the optimization algorithm
@@ -4349,7 +4349,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * any self-defined termination criterion or flag variables in your
    * algorithm.
    * </p>
-   * 
+   *
    * @return {@code true} if the run is completed and the algorithm can
    *         stop now, {@code false} if the algorithm should keep exploring
    *         new solutions
@@ -4370,7 +4370,7 @@ public final class ObjectiveFunction extends DistanceComputer {
    * however, that there are other reasons for which
    * {@link #shouldTerminate()} can become {@code true} as well, such as
    * exhausting the computational budget of the experiment.
-   * 
+   *
    * @see #shouldTerminate()
    */
   public final void terminate() {
@@ -4379,7 +4379,7 @@ public final class ObjectiveFunction extends DistanceComputer {
 
   /**
    * Is the problem symmetric?
-   * 
+   *
    * @return {@code true} if the problem is symmetric, {@code false}
    *         otherwise
    */

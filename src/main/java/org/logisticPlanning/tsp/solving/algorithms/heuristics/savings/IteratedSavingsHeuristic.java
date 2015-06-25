@@ -42,7 +42,7 @@ public class IteratedSavingsHeuristic extends SavingsHeuristic {
 
   /**
    * Execute the iterated savings heuristic
-   * 
+   *
    * @param args
    *          the command line arguments
    */

@@ -27,7 +27,7 @@ public final class LiteratureComparisonPoint implements
 
   /**
    * create a result comparison point
-   * 
+   *
    * @param point
    *          the point
    * @param ser
@@ -127,7 +127,7 @@ public final class LiteratureComparisonPoint implements
 
   /**
    * make a point
-   * 
+   *
    * @param ser
    *          the series
    * @param idx
@@ -166,7 +166,7 @@ public final class LiteratureComparisonPoint implements
 
   /**
    * Get the literature result point
-   * 
+   *
    * @return the literature result point
    */
   public final LiteratureResultPoint getLiteratureResultPoint() {
@@ -176,7 +176,7 @@ public final class LiteratureComparisonPoint implements
   /**
    * Get the point where the quality is at least as good as described in
    * literature, or {@code null} if no such point exists.
-   * 
+   *
    * @return the point where the quality is at least as good as described
    *         in literature -- or {@code null} if no such point exists
    */
@@ -187,7 +187,7 @@ public final class LiteratureComparisonPoint implements
   /**
    * Get the closest point with less or equally much consumed runtime than
    * in the literature, or {@code null} if no such point is needed
-   * 
+   *
    * @return the closest point with less or equally much consumed runtime
    *         than in the literature, or {@code null} if no such point is
    *         needed
@@ -199,7 +199,7 @@ public final class LiteratureComparisonPoint implements
   /**
    * Get the closest point with greater or equally much consumed runtime
    * than in the literature, or {@code null} if no such point is needed
-   * 
+   *
    * @return the closest point with greater or equally much consumed
    *         runtime than in the literature, or {@code null} if no such
    *         point is needed
@@ -210,7 +210,7 @@ public final class LiteratureComparisonPoint implements
 
   /**
    * the comparison result
-   * 
+   *
    * @return the comparison result
    */
   public final ESingleComparison getComparisonResult() {

@@ -24,7 +24,7 @@ class _Descriptions extends Module {
 
   /**
    * create
-   * 
+   *
    * @param owner
    *          the owning module
    */

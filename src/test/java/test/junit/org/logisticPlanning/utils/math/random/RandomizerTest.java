@@ -21,7 +21,7 @@ public class RandomizerTest extends TestBase {
 
   /**
    * create a new randomizer
-   * 
+   *
    * @return the randomizer
    */
   protected Randomizer createRandomizer() {

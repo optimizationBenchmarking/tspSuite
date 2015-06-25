@@ -21,7 +21,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -38,7 +38,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * Get the figure index of this page
-   * 
+   *
    * @return the figure index of this page
    */
   public final int getFigureIndex() {
@@ -47,7 +47,7 @@ public class FigureSeriesPage extends AbstractLabeledElement {
 
   /**
    * Get the page number
-   * 
+   *
    * @return the page number
    */
   public final int getPageNumber() {

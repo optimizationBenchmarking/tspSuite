@@ -430,7 +430,7 @@ final class _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param start
    *          the start string
    * @param end
@@ -442,7 +442,7 @@ final class _OpDef {
 
   /**
    * create
-   * 
+   *
    * @param start
    *          the start string
    * @param end

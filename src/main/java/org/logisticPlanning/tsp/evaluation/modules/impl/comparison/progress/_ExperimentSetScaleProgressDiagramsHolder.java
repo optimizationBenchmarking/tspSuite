@@ -22,7 +22,7 @@ final class _ExperimentSetScaleProgressDiagramsHolder extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

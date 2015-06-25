@@ -10,7 +10,7 @@ public final class FixedAxisEnd extends AxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param end
    *          the axis end
    */

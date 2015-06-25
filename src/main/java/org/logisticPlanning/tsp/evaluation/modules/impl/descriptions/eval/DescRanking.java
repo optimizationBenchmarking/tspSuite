@@ -128,20 +128,20 @@ public final class DescRanking extends DescriptionModule {
         ),//
         "Ordinal Principal Component Analysis Theory and an Application",//$NON-NLS-1$
         new BibDate(1998, EBibMonth.FEBRUARY, 6), //
-        "Computational Statistics & Data Analysis",//$NON-NLS-1$        
-        "26", "4",//$NON-NLS-1$ //$NON-NLS-2$       
+        "Computational Statistics & Data Analysis",//$NON-NLS-1$
+        "26", "4",//$NON-NLS-1$ //$NON-NLS-2$
         "411", "424",//$NON-NLS-1$ //$NON-NLS-2$
         null, "10.1016/S0167-9473(97)00038-8");//$NON-NLS-1$
 
     try {//
       M2010TNRCRIINAIBTOSIN = new BibArticle(
           new BibAuthors(//
-              new BibAuthor("Sudhanshu Kumar", "Mishra")//$NON-NLS-1$//$NON-NLS-2$              
+              new BibAuthor("Sudhanshu Kumar", "Mishra")//$NON-NLS-1$//$NON-NLS-2$
           ),//
           "The Most Representative Composite Rank Ordering of Multi-Attribute Objects by the Particle Swarm Optimization Method",//$NON-NLS-1$
           new BibDate(2010, EBibMonth.JULY), //
-          "Journal of Quantitative Economics",//$NON-NLS-1$        
-          "8", "2",//$NON-NLS-1$ //$NON-NLS-2$       
+          "Journal of Quantitative Economics",//$NON-NLS-1$
+          "8", "2",//$NON-NLS-1$ //$NON-NLS-2$
           "165", "200",//$NON-NLS-1$ //$NON-NLS-2$
           new URI("http://www.jqe.co.in/journals/JQE_v8_n2_2010_p11.pdf"),//$NON-NLS-1$
           null);
@@ -152,12 +152,12 @@ public final class DescRanking extends DescriptionModule {
     try {//
       M1956TMNSPMTSLOOCFPI = new BibArticle(
           new BibAuthors(//
-              new BibAuthor("George Armitage", "Miller")//$NON-NLS-1$//$NON-NLS-2$              
+              new BibAuthor("George Armitage", "Miller")//$NON-NLS-1$//$NON-NLS-2$
           ),//
           "The Magical Number Seven, Plus or Minus Two: Some Limits on our Capacity for Processing Information",//$NON-NLS-1$
           new BibDate(1956, EBibMonth.MARCH), //
-          "Psychological Review",//$NON-NLS-1$        
-          "63", "2",//$NON-NLS-1$ //$NON-NLS-2$       
+          "Psychological Review",//$NON-NLS-1$
+          "63", "2",//$NON-NLS-1$ //$NON-NLS-2$
           "81", "97",//$NON-NLS-1$ //$NON-NLS-2$
           new URI("http://www.musanim.com/miller1956/"),//$NON-NLS-1$
           null);
@@ -169,7 +169,7 @@ public final class DescRanking extends DescriptionModule {
       B1990BCAPRFM = new BibInProceedings(
           //
           new BibAuthors(//
-              new BibAuthor("Denis", "Bouyssou")//$NON-NLS-1$//$NON-NLS-2$    
+              new BibAuthor("Denis", "Bouyssou")//$NON-NLS-1$//$NON-NLS-2$
           ),//
           "Building Criteria: A Prerequisite For MCDA",//$NON-NLS-1$
           new BibProceedings(//
@@ -177,7 +177,7 @@ public final class DescRanking extends DescriptionModule {
               new BibDate(1998, EBibMonth.JULY, 23),//
               new BibDate(1998, EBibMonth.JULY, 27),//
               new BibAuthors(//
-                  new BibAuthor("Carlos A.", "Bana e Costa")//$NON-NLS-1$//$NON-NLS-2$    
+                  new BibAuthor("Carlos A.", "Bana e Costa")//$NON-NLS-1$//$NON-NLS-2$
               ),//
               "Monte Estoril, Lisbon, Portugal",//$NON-NLS-1$
               "Springer-Verlag GmbH",//$NON-NLS-1$
@@ -197,7 +197,7 @@ public final class DescRanking extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */
@@ -333,7 +333,7 @@ public final class DescRanking extends DescriptionModule {
 
   /**
    * write a math char
-   * 
+   *
    * @param txt
    *          the destination
    * @param m

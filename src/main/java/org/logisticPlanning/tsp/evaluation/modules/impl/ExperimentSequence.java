@@ -29,7 +29,7 @@ public final class ExperimentSequence extends Sequence {
 
   /**
    * Create the experiment sequence
-   * 
+   *
    * @param root
    *          the root module
    * @param exps

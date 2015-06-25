@@ -132,7 +132,7 @@ public class PermutationVNSMutation extends
   /**
    * set the policy regarding whether the first improvement or the best
    * improvement should be used
-   * 
+   *
    * @param i
    *          the policy
    */

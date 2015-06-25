@@ -9,7 +9,7 @@ public abstract class AbstractTablePart extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -27,7 +27,7 @@ public abstract class AbstractTablePart extends Element {
 
   /**
    * Begin a new table row
-   * 
+   *
    * @return the table row
    * @throws IOException
    *           if io fails
@@ -53,7 +53,7 @@ public abstract class AbstractTablePart extends Element {
 
   /**
    * Get the index of the current row
-   * 
+   *
    * @return the index of the current row
    */
   public final int getCurrentRowIndex() {
@@ -62,7 +62,7 @@ public abstract class AbstractTablePart extends Element {
 
   /**
    * Get the index of the current page row
-   * 
+   *
    * @return the index of the current page row
    */
   public final int getCurrentPageRowIndex() {
@@ -71,7 +71,7 @@ public abstract class AbstractTablePart extends Element {
 
   /**
    * Get the index of the current page
-   * 
+   *
    * @return the index of the current page
    */
   public final int getCurrentPageIndex() {

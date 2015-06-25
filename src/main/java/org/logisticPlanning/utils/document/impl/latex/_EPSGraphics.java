@@ -228,7 +228,7 @@ final class _EPSGraphics extends ProxyGraphic<PSGraphics2D> {
 
   /**
    * instantiate
-   * 
+   *
    * @param owner
    *          the owner
    * @param graphic

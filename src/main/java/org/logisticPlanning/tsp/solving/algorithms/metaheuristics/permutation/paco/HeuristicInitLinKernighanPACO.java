@@ -16,7 +16,7 @@ public class HeuristicInitLinKernighanPACO extends
    * instantiate
    */
   public HeuristicInitLinKernighanPACO() {
-    super("Lin-Kernighan ");//$NON-NLS-1$ 
+    super("Lin-Kernighan ");//$NON-NLS-1$
   }
 
   /** {@inheritDoc} */
@@ -27,7 +27,7 @@ public class HeuristicInitLinKernighanPACO extends
 
   /**
    * Perform the population-based ACO
-   * 
+   *
    * @param args
    *          the command line arguments
    */

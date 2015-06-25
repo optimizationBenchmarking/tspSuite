@@ -16,7 +16,7 @@ final class _PreparedString {
 
   /**
    * create the prepared string
-   * 
+   *
    * @param s
    *          the string
    */
@@ -28,7 +28,7 @@ final class _PreparedString {
 
   /**
    * get a boolean return value
-   * 
+   *
    * @param b
    *          the boolean to be formatted
    * @return the return value
@@ -39,7 +39,7 @@ final class _PreparedString {
 
   /**
    * get an int return value
-   * 
+   *
    * @param b
    *          the int to be formatted
    * @return the return value
@@ -61,7 +61,7 @@ final class _PreparedString {
 
   /**
    * get a long return value
-   * 
+   *
    * @param b
    *          the long to be formatted
    * @return the return value
@@ -83,7 +83,7 @@ final class _PreparedString {
 
   /**
    * get a double return value
-   * 
+   *
    * @param b
    *          the double to be formatted
    * @return the return value
@@ -105,7 +105,7 @@ final class _PreparedString {
 
   /**
    * Get the next string
-   * 
+   *
    * @return the next string
    */
   @SuppressWarnings("fallthrough")

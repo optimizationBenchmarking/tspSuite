@@ -10,7 +10,7 @@ public final class SavingsEdgeNeighborhoodList extends
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the node count
    * @param nls

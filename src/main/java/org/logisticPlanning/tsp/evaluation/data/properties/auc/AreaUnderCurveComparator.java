@@ -71,7 +71,7 @@ public final class AreaUnderCurveComparator extends
 
   /**
    * The area under the curve comparator
-   * 
+   *
    * @param isSmallerBetter
    *          are smaller {@code y} better
    */
@@ -82,7 +82,7 @@ public final class AreaUnderCurveComparator extends
 
   /**
    * Compare to areas under a curve in a semantically correct way.
-   * 
+   *
    * @param a
    *          the first area
    * @param b
@@ -182,7 +182,7 @@ public final class AreaUnderCurveComparator extends
 
   /**
    * compare two double values
-   * 
+   *
    * @param a
    *          the first value
    * @param b

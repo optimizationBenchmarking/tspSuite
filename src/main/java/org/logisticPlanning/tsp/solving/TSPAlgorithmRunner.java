@@ -217,7 +217,7 @@ import org.logisticPlanning.utils.config.LoggerOwner;
  * <table border="1" id="invokeMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * public static void main(final String[] args) {
  *     {@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner TSPAlgorithmRunner}.{@link org.logisticPlanning.tsp.solving.TSPAlgorithmRunner#benchmark(org.logisticPlanning.utils.collections.lists.ArrayListView, java.lang.Class, java.lang.String[]) benchmark}({@link org.logisticPlanning.tsp.benchmarking.instances.Instance#SYMMETRIC_INSTANCES Instance.SYMMETRIC_INSTANCES},
@@ -225,7 +225,7 @@ import org.logisticPlanning.utils.config.LoggerOwner;
  *         args);
  *   }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -337,7 +337,7 @@ import org.logisticPlanning.utils.config.LoggerOwner;
  * <table border="1" id="testMyHeuristic" style="margin-left:auto;margin-right:auto">
  * <tr>
  * <td>
- * 
+ *
  * <pre class="altColor">
  * package test.junit.{@code MyPackage}.{@code MyHeuristic};
  * 
@@ -357,7 +357,7 @@ import org.logisticPlanning.utils.config.LoggerOwner;
  *   }
  * }
  * </pre>
- * 
+ *
  * </td>
  * </tr>
  * <tr>
@@ -818,7 +818,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
 
   /**
    * instantiate
-   * 
+   *
    * @param instances
    *          the instances
    * @param algo
@@ -858,7 +858,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
    * Obtain a handle to the creator information. Via this handle, you can
    * set some additional information to be logged by the objective
    * function.
-   * 
+   *
    * @return the creator info
    */
   public final CreatorInfo getCreatorInfo() {
@@ -867,7 +867,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
 
   /**
    * instantiate
-   * 
+   *
    * @param instances
    *          the instances
    * @param algo
@@ -883,7 +883,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
 
   /**
    * instantiate
-   * 
+   *
    * @param instances
    *          the instances
    * @param algoInst
@@ -898,7 +898,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
 
   /**
    * instantiate
-   * 
+   *
    * @param instances
    *          the instances
    */
@@ -1037,7 +1037,7 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
 
   /**
    * benchmark a tsp algorithm
-   * 
+   *
    * @param instances
    *          the instances
    * @param algo

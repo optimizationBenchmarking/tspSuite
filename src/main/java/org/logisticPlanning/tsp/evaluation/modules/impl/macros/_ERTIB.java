@@ -144,7 +144,7 @@ final class _ERTIB extends MacroDefinition {
    * with the singleton instance {@link _ERTIB#INSTANCE _ERTIB.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link _ERTIB#INSTANCE
    *         _ERTIB.INSTANCE})
    */
@@ -157,7 +157,7 @@ final class _ERTIB extends MacroDefinition {
    * with the singleton instance {@link _ERTIB#INSTANCE _ERTIB.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link _ERTIB#INSTANCE
    *         _ERTIB.INSTANCE})
    */

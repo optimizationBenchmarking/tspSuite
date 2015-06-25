@@ -577,14 +577,14 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * the maximum number of moves to allocate
-   * 
+   *
    * @serial serializable field
    */
   private int m_maxMoveAllocations;
 
   /**
    * the move order
-   * 
+   *
    * @serial serializable field
    */
   private EMoveComparator m_cmp;
@@ -610,7 +610,7 @@ public class MultiNeighborhoodSearch extends
 
   /** instantiate */
   public MultiNeighborhoodSearch() {
-    super("Multiple-Neighborhood Search");//$NON-NLS-1$ 
+    super("Multiple-Neighborhood Search");//$NON-NLS-1$
     this.m_cmp = MultiNeighborhoodSearch.DEFAULT_MOVE_COMPARATOR;
     this.m_maxMoveAllocations = MultiNeighborhoodSearch.DEFAULT_MAX_ALLOCATIONS;
   }
@@ -800,7 +800,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * set the {@link EMoveComparator move comparator}
-   * 
+   *
    * @param cmp
    *          the {@link EMoveComparator move comparator} to used
    */
@@ -811,7 +811,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * get the {@link EMoveComparator move comparator}
-   * 
+   *
    * @return the {@link EMoveComparator move comparator} used
    */
   public final EMoveComparator getMoveComparator() {
@@ -820,7 +820,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Set the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @param max
    *          the maximum number of move records to allocate and hold in
    *          memory
@@ -831,7 +831,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Get the maximum number of move records to allocate and hold in memory
-   * 
+   *
    * @return max the maximum number of move records to allocate and hold in
    *         memory
    */
@@ -842,7 +842,7 @@ public class MultiNeighborhoodSearch extends
   /**
    * compute the total length of the solution and initialize the distance
    * array
-   * 
+   *
    * @param f
    *          the objective function
    * @param n
@@ -877,7 +877,7 @@ public class MultiNeighborhoodSearch extends
    * and will allocate a new move if the old queue is empty. However, if
    * the maximum number of move allocations has been reached, {@code null}
    * will be returned.
-   * 
+   *
    * @return the new move, or {@code null} if the maximum number of move
    *         allocations has been exhausted
    */
@@ -927,7 +927,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * enqueue a move
-   * 
+   *
    * @param move
    *          the move to enqueue
    */
@@ -984,7 +984,7 @@ public class MultiNeighborhoodSearch extends
    * Then, only moves need to be investigated which intersect with the
    * changed region in the next call.
    * </p>
-   * 
+   *
    * @param lastChangeStart
    *          the first index of the interesting range
    * @param lastChangeEnd
@@ -1241,7 +1241,7 @@ public class MultiNeighborhoodSearch extends
 
   /**
    * Perform the MNS
-   * 
+   *
    * @param args
    *          the command line arguments
    */

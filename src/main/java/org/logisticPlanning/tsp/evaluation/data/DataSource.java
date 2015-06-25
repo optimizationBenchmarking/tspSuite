@@ -20,7 +20,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Instantiate the data source
-   * 
+   *
    * @param name
    *          the data source
    */
@@ -30,7 +30,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * implement the data loading behavior
-   * 
+   *
    * @return the experiment set
    * @throws IOException
    *           if io fails
@@ -39,7 +39,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Load the data based on the configuration parameters.
-   * 
+   *
    * @return the experiment set
    * @throws IOException
    *           if io fails
@@ -75,7 +75,7 @@ public abstract class DataSource extends LoggerOwner {
 
   /**
    * Create an instance of the default data source type
-   * 
+   *
    * @return an instance of the default data source type
    */
   public static final DataSource createDefaultDataSource() {

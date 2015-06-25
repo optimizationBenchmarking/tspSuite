@@ -15,7 +15,7 @@ import org.logisticPlanning.utils.document.spec.Document;
 
 /**
  * A property that returns the run sets of given scales for an experiment.
- * 
+ *
  * @param <T>
  *          the data set type
  */
@@ -68,7 +68,7 @@ public final class AllScaleInstancesProperty<T extends DataSet<?>> extends
 
   /**
    * Create the property
-   * 
+   *
    * @param source
    *          the instance source property
    * @param base
@@ -175,7 +175,7 @@ public final class AllScaleInstancesProperty<T extends DataSet<?>> extends
 
   /**
    * Get the base of the scale set property
-   * 
+   *
    * @return the base of the scale set property
    */
   public final int getBase() {

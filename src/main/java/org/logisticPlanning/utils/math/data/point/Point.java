@@ -29,7 +29,7 @@ public abstract class Point implements Serializable, Cloneable,
 
   /**
    * Get the value at dimension {@code dimension}.
-   * 
+   *
    * @param dimension
    *          the dimension
    * @return the value at that dimension
@@ -50,7 +50,7 @@ public abstract class Point implements Serializable, Cloneable,
 
   /**
    * Get the dimension of this point
-   * 
+   *
    * @return the dimension of this point
    */
   @Override
@@ -75,7 +75,7 @@ public abstract class Point implements Serializable, Cloneable,
   /**
    * Write a textual representation of this data structure to a string
    * builder.
-   * 
+   *
    * @param sb
    *          the string builder
    */
@@ -118,7 +118,7 @@ public abstract class Point implements Serializable, Cloneable,
 
   /**
    * Does this point equal to another point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -157,7 +157,7 @@ public abstract class Point implements Serializable, Cloneable,
 
   /**
    * store the data of this point into the destination array
-   * 
+   *
    * @param dest
    *          the destination array
    * @param destStart
@@ -175,7 +175,7 @@ public abstract class Point implements Serializable, Cloneable,
 
   /**
    * Copy an existing point
-   * 
+   *
    * @param p
    *          the point
    * @return the copy of it

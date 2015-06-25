@@ -18,7 +18,7 @@ public class ArrayDataCollectionView implements IDataCollection {
 
   /**
    * Instantiate
-   * 
+   *
    * @param data
    *          the data
    * @param size

@@ -22,7 +22,7 @@ import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
- * 
+ *
  <p>
  * A Memetic Algorithm (MA)&nbsp;[<a href="#cite_M1989MA"
  * style="font-weight:bold">1</a>, <a href="#cite_M2002MA"
@@ -409,14 +409,14 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
   /**
    * the heuristics used for initialization
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristic[] m_initOnce;
 
   /**
    * the multi-times heuristic
-   * 
+   *
    * @serial an array of non-null instances
    */
   private TSPHeuristicWithStartNode[] m_initMulti;
@@ -426,7 +426,7 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
   /**
    * Create the permutation MA.
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -468,14 +468,14 @@ public abstract class PermutationHeuristicInitMA extends EA {
 
   /**
    * Create the binary operator to be used
-   * 
+   *
    * @return the binary operator to be used
    */
   protected abstract BinaryOperator<int[]> createBinary();
 
   /**
    * Create the unary operator to be used
-   * 
+   *
    * @return the unary operator to be used
    */
   protected abstract UnaryOperator<int[]> createUnary();

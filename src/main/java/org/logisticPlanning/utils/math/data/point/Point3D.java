@@ -27,7 +27,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * create the 3-dimensional point
-   * 
+   *
    * @param x
    *          the value of the x-coordinate
    * @param y
@@ -53,7 +53,7 @@ public class Point3D extends MutablePoint {
   /** create the 3-dimensional point */
   /**
    * Get the x-value of this point
-   * 
+   *
    * @return the x-value of this point
    */
   public final double getX() {
@@ -62,7 +62,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Set the x-value of this point
-   * 
+   *
    * @param x
    *          the new x-value for this point
    */
@@ -72,7 +72,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Get the y-value of this point
-   * 
+   *
    * @return the y-value of this point
    */
   public final double getY() {
@@ -81,7 +81,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Set the y-value of this point
-   * 
+   *
    * @param y
    *          the new y-value for this point
    */
@@ -91,7 +91,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Get the z-value of this point
-   * 
+   *
    * @return the z-value of this point
    */
   public final double getZ() {
@@ -100,7 +100,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Set the z-value of this point
-   * 
+   *
    * @param z
    *          the new z-value for this point
    */
@@ -212,7 +212,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Copy the values of another {@code Point3D} instance into this one
-   * 
+   *
    * @param p
    *          the {@code Point3D} instance to copy
    */
@@ -224,7 +224,7 @@ public class Point3D extends MutablePoint {
 
   /**
    * Does this point equal to another {@code Point3D} instance?
-   * 
+   *
    * @param p
    *          the other {@code Point3D} instance
    * @return {@code true} if and only if the point is identical to this

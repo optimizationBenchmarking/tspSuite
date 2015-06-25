@@ -24,7 +24,7 @@ public class RunHas2DifferentPoints extends Condition<Run> {
 
   /**
    * create
-   * 
+   *
    * @param axs
    *          the accessor
    */
@@ -80,7 +80,7 @@ public class RunHas2DifferentPoints extends Condition<Run> {
 
   /**
    * Get the instance for a given accessor
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the corresponding instance

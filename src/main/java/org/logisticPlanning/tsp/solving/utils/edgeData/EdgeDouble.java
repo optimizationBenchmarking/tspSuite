@@ -34,7 +34,7 @@ public abstract class EdgeDouble extends EdgeNumber {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -69,7 +69,7 @@ public abstract class EdgeDouble extends EdgeNumber {
   /**
    * Allocate an edge double array with all {@code double}s set to
    * {@code (0d)}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -86,7 +86,7 @@ public abstract class EdgeDouble extends EdgeNumber {
   /**
    * Allocate an edge double array with all {@code double}s set to
    * {@code (0d)}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

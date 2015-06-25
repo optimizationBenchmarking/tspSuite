@@ -14,7 +14,7 @@ public final class LiteratureComparisonPointSet extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owning literature result point set
    * @param points
@@ -37,7 +37,7 @@ public final class LiteratureComparisonPointSet extends
 
   /**
    * Get the owning literature result point set
-   * 
+   *
    * @return the owning literature result point set
    */
   public final LiteratureResultPointSet getLiteratureResultPointSet() {

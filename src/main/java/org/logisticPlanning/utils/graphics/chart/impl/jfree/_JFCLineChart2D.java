@@ -87,8 +87,8 @@ import org.logisticPlanning.utils.utils.EmptyUtils;
  * href="http://www.jfree.org/jfreechart/">1</a>] and&nbsp;[<a
  * href="http://sourceforge.net/projects/jfreechart/">2</a>]</div></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -158,7 +158,7 @@ final class _JFCLineChart2D extends LineChart2D {
 
   /**
    * Create a new line chart
-   * 
+   *
    * @param driver
    *          the line chart's driver
    * @param range
@@ -403,7 +403,7 @@ final class _JFCLineChart2D extends LineChart2D {
   /**
    * Format a double: due to restrictions of the plotting libraries, only a
    * relatively small subset of {@code double} can actually be used
-   * 
+   *
    * @param d
    *          the double
    * @return the formatted value
@@ -429,7 +429,7 @@ final class _JFCLineChart2D extends LineChart2D {
 
   /**
    * Creates a rectangle that is aligned to the frame.
-   * 
+   *
    * @param dimensions
    *          the dimensions for the rectangle.
    * @param frame
@@ -472,7 +472,7 @@ final class _JFCLineChart2D extends LineChart2D {
 
   /**
    * paint a legend
-   * 
+   *
    * @param legend
    *          the legend
    * @param graphics
@@ -514,7 +514,7 @@ final class _JFCLineChart2D extends LineChart2D {
 
   /**
    * paint this chart as legend
-   * 
+   *
    * @param graphics
    *          the graphics
    * @param bounds

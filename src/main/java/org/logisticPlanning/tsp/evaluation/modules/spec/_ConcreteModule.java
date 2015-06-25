@@ -14,8 +14,8 @@ import org.logisticPlanning.utils.document.spec.SectionTitle;
 
 /**
  * A concrete module.
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -30,7 +30,7 @@ abstract class _ConcreteModule extends Module {
 
   /**
    * create
-   * 
+   *
    * @param name
    *          the evaluator name
    * @param owner
@@ -49,7 +49,7 @@ abstract class _ConcreteModule extends Module {
    * children? If this method returns {@code false},
    * {@code writeSectionTitle} and {@code writeSectionBody} may not be
    * called.
-   * 
+   *
    * @param data
    *          the data set
    * @return {@code true} if this module has contents, {@code false}
@@ -64,7 +64,7 @@ abstract class _ConcreteModule extends Module {
    * Get the label via which this module's section for the data set
    * {@code data} can be referenced, or {@code null} if this module has no
    * section dedicated to the specified data set.
-   * 
+   *
    * @param data
    *          the data set
    * @return the label
@@ -75,7 +75,7 @@ abstract class _ConcreteModule extends Module {
 
   /**
    * Write this module as a section
-   * 
+   *
    * @param body
    *          the body
    * @param data
@@ -99,7 +99,7 @@ abstract class _ConcreteModule extends Module {
 
   /**
    * Will we put this as own section?
-   * 
+   *
    * @param data
    *          the data
    * @return {@code true} if the module will be printed as own section,
@@ -146,7 +146,7 @@ abstract class _ConcreteModule extends Module {
 
   /**
    * Write this module's section title
-   * 
+   *
    * @param title
    *          the title
    * @param data
@@ -154,7 +154,6 @@ abstract class _ConcreteModule extends Module {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   void _writeSectionTitle(final SectionTitle title, final DataSet<?> data)
       throws IOException {
     //
@@ -162,7 +161,7 @@ abstract class _ConcreteModule extends Module {
 
   /**
    * Write this module's section body
-   * 
+   *
    * @param body
    *          the body
    * @param data

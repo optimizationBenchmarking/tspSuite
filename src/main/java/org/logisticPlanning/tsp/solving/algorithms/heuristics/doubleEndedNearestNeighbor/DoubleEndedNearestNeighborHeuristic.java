@@ -84,7 +84,7 @@ public class DoubleEndedNearestNeighborHeuristic extends
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the name prefix
    */
@@ -223,7 +223,7 @@ public class DoubleEndedNearestNeighborHeuristic extends
 
   /**
    * Perform the double-ended nearest neighbor heuristic.
-   * 
+   *
    * @param args
    *          the command line arguments
    */

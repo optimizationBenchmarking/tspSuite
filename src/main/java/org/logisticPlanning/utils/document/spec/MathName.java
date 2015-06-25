@@ -12,7 +12,7 @@ public class MathName extends AbstractTextPlain {
 
   /**
    * create the text element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param type
@@ -33,7 +33,7 @@ public class MathName extends AbstractTextPlain {
 
   /**
    * Get the math name type
-   * 
+   *
    * @return the math name type
    */
   public final EMathName getType() {

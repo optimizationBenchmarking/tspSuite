@@ -157,7 +157,7 @@ public final class DescRepresentations extends DescriptionModule {
           "Genetic Algorithms for the Travelling Salesman Problem: A Review of Representations and Operators",//$NON-NLS-1$
           new BibDate(1991, EBibMonth.APRIL),//
           "Journal of Artificial Intelligence Research",//$NON-NLS-1$
-          "13", "2",//$NON-NLS-1$//$NON-NLS-2$ 
+          "13", "2",//$NON-NLS-1$//$NON-NLS-2$
           "129", "170",//$NON-NLS-1$//$NON-NLS-2$
           new URI(
               "http://www.dca.fee.unicamp.br/~gomide/courses/EA072/artigos/Genetic_Algorithm_TSPR_eview_Larranaga_1999.pdf"),//$NON-NLS-1$
@@ -174,7 +174,7 @@ public final class DescRepresentations extends DescriptionModule {
           "Genetic Algorithms for the Traveling Salesman Problem",//$NON-NLS-1$
           new BibDate(1996, EBibMonth.JUNE, 1),//
           "Annals of Operations Research",//$NON-NLS-1$
-          "63", "3",//$NON-NLS-1$//$NON-NLS-2$ 
+          "63", "3",//$NON-NLS-1$//$NON-NLS-2$
           "337", "370",//$NON-NLS-1$//$NON-NLS-2$
           new URI(
               "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.6.4205"),//$NON-NLS-1$
@@ -209,12 +209,12 @@ public final class DescRepresentations extends DescriptionModule {
               new BibAuthor("Michael L.", "Fredman"),//$NON-NLS-1$//$NON-NLS-2$
               DescTimeMeasures.DSJ,//
               DescTimeMeasures.LAMG,//
-              new BibAuthor("Gerard", "Ostheimer")//$NON-NLS-1$//$NON-NLS-2$        
+              new BibAuthor("Gerard", "Ostheimer")//$NON-NLS-1$//$NON-NLS-2$
           ),//
           "Data Structures for Traveling Salesmen",//$NON-NLS-1$
           new BibDate(1995, EBibMonth.MAY),//
           "Journal of Algorithms",//$NON-NLS-1$
-          "18", "3",//$NON-NLS-1$//$NON-NLS-2$ 
+          "18", "3",//$NON-NLS-1$//$NON-NLS-2$
           "432", "479",//$NON-NLS-1$//$NON-NLS-2$
           new URI(
               "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.71.170"),//$NON-NLS-1$
@@ -250,7 +250,7 @@ public final class DescRepresentations extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */
@@ -292,7 +292,7 @@ public final class DescRepresentations extends DescriptionModule {
       iq.write("representation");//$NON-NLS-1$
     }
     body.write(//
-    ") has a strong impact on the algorithm's performance."); //$NON-NLS-1$    
+    ") has a strong impact on the algorithm's performance."); //$NON-NLS-1$
     body.writeLinebreak();
 
     body.write(//

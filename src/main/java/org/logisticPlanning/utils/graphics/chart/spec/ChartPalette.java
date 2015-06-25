@@ -113,7 +113,7 @@ public class ChartPalette {
 
   /**
    * Create the palette for the foreground data colors
-   * 
+   *
    * @return the palette for the foreground data colors
    */
   protected ColorPalette createForegroundDataColors() {
@@ -122,7 +122,7 @@ public class ChartPalette {
 
   /**
    * Create the palette for the background data colors
-   * 
+   *
    * @return the palette for the background data colors
    */
   protected ColorPalette createBackgroundDataColors() {
@@ -131,7 +131,7 @@ public class ChartPalette {
 
   /**
    * calculate the base font
-   * 
+   *
    * @return the base font
    */
   protected Font calculateBaseFont() {
@@ -160,7 +160,7 @@ public class ChartPalette {
 
   /**
    * make a font from a font name
-   * 
+   *
    * @param name
    *          the name
    * @return the font
@@ -171,7 +171,7 @@ public class ChartPalette {
 
   /**
    * check a font
-   * 
+   *
    * @param f
    *          the font
    * @return {@code true} if the font is ok, {@code false} otherwise
@@ -201,7 +201,7 @@ public class ChartPalette {
 
   /**
    * Obtain the base font
-   * 
+   *
    * @return the base font
    */
   protected final Font getBaseFont() {
@@ -217,7 +217,7 @@ public class ChartPalette {
 
   /**
    * Calculate the base stroke
-   * 
+   *
    * @return the base stroke
    */
   protected Stroke calculateBaseStroke() {
@@ -227,7 +227,7 @@ public class ChartPalette {
 
   /**
    * Get the base stroke
-   * 
+   *
    * @return the base stroke
    */
   protected final Stroke getBaseStroke() {
@@ -243,7 +243,7 @@ public class ChartPalette {
 
   /**
    * get the background paint
-   * 
+   *
    * @return the background paint
    */
   protected Color calculateBackgroundColor() {
@@ -252,7 +252,7 @@ public class ChartPalette {
 
   /**
    * get the background paint
-   * 
+   *
    * @return the background paint
    */
   public final Color getBackgroundColor() {
@@ -268,7 +268,7 @@ public class ChartPalette {
 
   /**
    * get the foreground paint
-   * 
+   *
    * @return the foreground paint
    */
   protected Color calculateForegroundColor() {
@@ -278,7 +278,7 @@ public class ChartPalette {
   /**
    * get the foreground paint, which is used by several other color getters
    * as default
-   * 
+   *
    * @return the foreground paint
    */
   protected final Color getForegroundColor() {
@@ -294,7 +294,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis lines
-   * 
+   *
    * @return the color to use to paint axis lines
    */
   protected Color calculateAxisColor() {
@@ -303,7 +303,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis lines
-   * 
+   *
    * @return the color to use to paint axis lines
    */
   public final Color getAxisColor() {
@@ -319,7 +319,7 @@ public class ChartPalette {
 
   /**
    * Calculate the axis stroke
-   * 
+   *
    * @return the axis stroke
    */
   protected Stroke calculateAxisStroke() {
@@ -328,7 +328,7 @@ public class ChartPalette {
 
   /**
    * Get the axis stroke
-   * 
+   *
    * @return the axis stroke
    */
   public final Stroke getAxisStroke() {
@@ -342,7 +342,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the text on the axis ticks
-   * 
+   *
    * @return the font to use for the text on the axis ticks
    */
   protected Font calculateAxisTickFont() {
@@ -351,7 +351,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the text on the axis ticks
-   * 
+   *
    * @return the font to use for the text on the axis ticks
    */
   public final Font getAxisTickFont() {
@@ -367,7 +367,7 @@ public class ChartPalette {
 
   /**
    * Should we use/paint axis ticks or not?
-   * 
+   *
    * @return {@code true} if we use/paint axis ticks, {@code false}
    *         otherwise
    */
@@ -377,7 +377,7 @@ public class ChartPalette {
 
   /**
    * Should we use/paint axis ticks or not?
-   * 
+   *
    * @return {@code true} if we use/paint axis ticks, {@code false}
    *         otherwise
    */
@@ -397,7 +397,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis tick texts
-   * 
+   *
    * @return the color to use to paint axis tick texts
    */
   protected Color calculateAxisTickColor() {
@@ -406,7 +406,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis tick texts
-   * 
+   *
    * @return the color to use to paint axis tick texts
    */
   public final Color getAxisTickColor() {
@@ -423,7 +423,7 @@ public class ChartPalette {
 
   /**
    * Calculate the axis tick stroke
-   * 
+   *
    * @return the axis tick stroke
    */
   protected Stroke calculateAxisTickStroke() {
@@ -446,7 +446,7 @@ public class ChartPalette {
 
   /**
    * Get the axis tick stroke
-   * 
+   *
    * @return the axis tick stroke
    */
   public final Stroke getAxisTickStroke() {
@@ -462,7 +462,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis title texts
-   * 
+   *
    * @return the color to use to paint axis title texts
    */
   protected Color calculateAxisTitleColor() {
@@ -471,7 +471,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the axis title texts
-   * 
+   *
    * @return the color to use to paint axis title texts
    */
   public Color getAxisTitleColor() {
@@ -487,7 +487,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the axis titles
-   * 
+   *
    * @return the font to use for the axis titles
    */
   protected Font calculateAxisTitleFont() {
@@ -503,7 +503,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the axis titles
-   * 
+   *
    * @return the font to use for the axis titles
    */
   public final Font getAxisTitleFont() {
@@ -519,7 +519,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the color to use
@@ -530,7 +530,7 @@ public class ChartPalette {
 
   /**
    * check the stroke index
-   * 
+   *
    * @param index
    *          the stroke index
    */
@@ -549,7 +549,7 @@ public class ChartPalette {
 
   /**
    * get the stroke to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the stroke to use
@@ -561,7 +561,7 @@ public class ChartPalette {
 
   /**
    * get the stroke to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the stroke to use
@@ -596,7 +596,7 @@ public class ChartPalette {
 
   /**
    * get the stroke to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the stroke to use
@@ -625,7 +625,7 @@ public class ChartPalette {
 
   /**
    * get the stroke to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the stroke to use
@@ -660,7 +660,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use for the diagram data
-   * 
+   *
    * @param index
    *          the data index
    * @return the color to use
@@ -671,7 +671,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the legend
-   * 
+   *
    * @return the font to use for the legend
    */
   protected Font calculateLegendFont() {
@@ -680,7 +680,7 @@ public class ChartPalette {
 
   /**
    * get the font to use for the legend
-   * 
+   *
    * @return the font to use for the legend
    */
   public final Font getLegendFont() {
@@ -696,7 +696,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the grid line texts
-   * 
+   *
    * @return the color to use to paint grid line texts
    */
   protected Color calculateGridLineColor() {
@@ -705,7 +705,7 @@ public class ChartPalette {
 
   /**
    * get the paint to use to paint the grid line texts
-   * 
+   *
    * @return the color to use to paint grid line texts
    */
   public final Color getGridLineColor() {
@@ -722,7 +722,7 @@ public class ChartPalette {
 
   /**
    * Calculate the grid line stroke
-   * 
+   *
    * @return the grid line stroke
    */
   protected Stroke calculateGridLineStroke() {
@@ -747,7 +747,7 @@ public class ChartPalette {
 
   /**
    * Get the grid line stroke
-   * 
+   *
    * @return the grid line stroke
    */
   public final Stroke getGridLineStroke() {
@@ -763,7 +763,7 @@ public class ChartPalette {
 
   /**
    * Should we use/paint grid lines or not?
-   * 
+   *
    * @return {@code true} if we use/paint grid lines, {@code false}
    *         otherwise
    */
@@ -773,7 +773,7 @@ public class ChartPalette {
 
   /**
    * Should we use/paint grid lines or not?
-   * 
+   *
    * @return {@code true} if we use/paint grid lines, {@code false}
    *         otherwise
    */

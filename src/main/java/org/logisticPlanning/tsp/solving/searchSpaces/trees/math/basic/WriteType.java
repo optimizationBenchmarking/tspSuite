@@ -21,7 +21,7 @@ public final class WriteType extends NodeType<Write, Function> {
 
   /**
    * Create a new variable type record
-   * 
+   *
    * @param ch
    *          the types of the possible chTypes
    * @param varc
@@ -34,7 +34,7 @@ public final class WriteType extends NodeType<Write, Function> {
 
   /**
    * Instantiate a node
-   * 
+   *
    * @param children
    *          a given set of children
    * @param r

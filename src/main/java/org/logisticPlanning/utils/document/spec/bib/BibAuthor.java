@@ -18,7 +18,7 @@ public class BibAuthor extends _BibElement<BibAuthor> {
 
   /**
    * Create the bibliography author.
-   * 
+   *
    * @param personalName
    *          the personal name
    * @param familyName
@@ -51,7 +51,7 @@ public class BibAuthor extends _BibElement<BibAuthor> {
 
   /**
    * get the personal name
-   * 
+   *
    * @return the personal name
    */
   public final String getPersonalName() {
@@ -60,7 +60,7 @@ public class BibAuthor extends _BibElement<BibAuthor> {
 
   /**
    * get the family name
-   * 
+   *
    * @return the family name
    */
   public final String getFamilyName() {

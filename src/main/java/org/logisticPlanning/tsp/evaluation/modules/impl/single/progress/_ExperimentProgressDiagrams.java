@@ -64,7 +64,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -96,7 +96,7 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
 
   /**
    * make a figure
-   * 
+   *
    * @param exp
    *          the experiment
    * @param includeMean
@@ -112,7 +112,6 @@ final class _ExperimentProgressDiagrams extends _ExperimentProgressBaseB {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ArraySetView<RunSet> exp,
       final boolean includeMean, final Accessor axs,
       final boolean includeHighQuantiles, final ArrayList<Line2D> lines,

@@ -63,8 +63,8 @@ import org.logisticPlanning.utils.graphics.chart.spec.ChartPalette;
  * href="http://www.jfree.org/jfreechart/">1</a>] and&nbsp;[<a
  * href="http://sourceforge.net/projects/jfreechart/">2</a>]</div></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -95,7 +95,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * create
-   * 
+   *
    * @param palette
    *          the palette
    */
@@ -107,7 +107,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Get the paint for the given item
-   * 
+   *
    * @param row
    *          the row (series)
    * @param column
@@ -121,7 +121,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Get the series paint for the given series
-   * 
+   *
    * @param series
    *          the series
    * @return the paint
@@ -133,7 +133,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * lookup the series paint for the given series
-   * 
+   *
    * @param series
    *          the series
    * @return the paint
@@ -149,7 +149,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Get the stroke for the given item
-   * 
+   *
    * @param row
    *          the row (series)
    * @param column
@@ -163,7 +163,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Get the series stroke for the given series
-   * 
+   *
    * @param series
    *          the series
    * @return the stroke
@@ -175,7 +175,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * lookup the series stroke for the given series
-   * 
+   *
    * @param series
    *          the series
    * @return the stroke
@@ -221,7 +221,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Returns always {@code null}
-   * 
+   *
    * @return {@code null}
    */
   @Override
@@ -231,7 +231,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Returns always {@code this}
-   * 
+   *
    * @return {@code this}
    */
   @Override
@@ -241,7 +241,7 @@ final class _JFCXYLineAndShapeRenderer extends XYLineAndShapeRenderer
 
   /**
    * Returns always {@code false}
-   * 
+   *
    * @return {@code false}
    */
   @Override

@@ -79,7 +79,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
  * 2009, Germany: it-weise.de (self-published). <div>link: [<a
  * href="http://www.it-weise.de/projects/book.pdf">1</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <NT>
  *          the node type
  */
@@ -96,7 +96,7 @@ public class TreeRampedHalfAndHalf<NT extends Node<NT>> extends
 
   /**
    * Create a new ramped-half-and-half
-   * 
+   *
    * @param md
    *          the maximum tree depth
    * @param ptypes

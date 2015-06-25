@@ -18,7 +18,7 @@ public final class ShortParser extends Parser<java.lang.Number> {
 
   /**
    * Create an {@code ShortParser} instance.
-   * 
+   *
    * @param min
    *          the minimum allowed value, a
    *          {@link java.lang.IllegalArgumentException

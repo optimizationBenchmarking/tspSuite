@@ -420,7 +420,7 @@ public class FitnessAssignmentProcess extends TSPModule {
 
   /**
    * the fitness assignment algorithm constructor
-   * 
+   *
    * @param name
    *          the algorithm's name
    */
@@ -430,7 +430,7 @@ public class FitnessAssignmentProcess extends TSPModule {
 
   /**
    * assign the fitness
-   * 
+   *
    * @param pop
    *          the population holding the individuals to select from
    * @param f

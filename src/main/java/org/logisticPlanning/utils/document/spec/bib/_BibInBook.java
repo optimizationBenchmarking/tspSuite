@@ -7,7 +7,7 @@ import org.logisticPlanning.utils.utils.comparison.ComparisonUtils;
 
 /**
  * a bibliographic record for a thing that appeared in a book
- * 
+ *
  * @param <B>
  *          the book type
  */
@@ -30,7 +30,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Create a new bibliography record for things that are parts of book
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -87,7 +87,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the book containing this chapter or paper
-   * 
+   *
    * @return the bibliography editors
    */
   public final B getBook() {
@@ -96,7 +96,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the start page
-   * 
+   *
    * @return the start page
    */
   public final String getStartPage() {
@@ -105,7 +105,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the end page
-   * 
+   *
    * @return the end page
    */
   public final String getEndPage() {
@@ -114,7 +114,7 @@ class _BibInBook<B extends BibBook> extends BibRecord {
 
   /**
    * Get the chapter
-   * 
+   *
    * @return the chapter
    */
   public final String getChapter() {

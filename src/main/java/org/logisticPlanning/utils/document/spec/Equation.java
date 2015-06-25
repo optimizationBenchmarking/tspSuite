@@ -17,7 +17,7 @@ public class Equation extends AbstractLabeledElement {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -33,7 +33,7 @@ public class Equation extends AbstractLabeledElement {
 
   /**
    * Get the equation index
-   * 
+   *
    * @return the equation index
    */
   public final int getEquationIndex() {

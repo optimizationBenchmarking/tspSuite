@@ -21,7 +21,7 @@ public final class DescRelativeObjectiveValues extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

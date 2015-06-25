@@ -329,7 +329,7 @@ final class _NumberText {
 
   /**
    * append the thousand chars
-   * 
+   *
    * @param thousand
    *          the thousand to append
    * @param dest
@@ -379,7 +379,7 @@ final class _NumberText {
 
   /**
    * Append a long to a string builder
-   * 
+   *
    * @param number
    *          the number
    * @param dest
@@ -457,7 +457,7 @@ final class _NumberText {
 
   /**
    * Append a long to a string builder
-   * 
+   *
    * @param number
    *          the number
    * @param dest

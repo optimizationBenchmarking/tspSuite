@@ -29,7 +29,7 @@ final class _TSPQueue extends Configurable {
 
   /**
    * instantiate
-   * 
+   *
    * @param inst
    *          the instances
    */
@@ -82,7 +82,7 @@ final class _TSPQueue extends Configurable {
 
   /**
    * get the next benchmark to work on
-   * 
+   *
    * @return the next benchmark to work on
    */
   final Benchmark next() {

@@ -13,7 +13,7 @@ public abstract class LocalOptimizer extends TSPModule {
 
   /**
    * The local optimization operator
-   * 
+   *
    * @param length
    *          the length the operator can process
    */
@@ -26,7 +26,7 @@ public abstract class LocalOptimizer extends TSPModule {
    * index {@code start} is already optimal with respect to this operator,
    * {@code 0} will be returned. Otherwise, the path will be modified and
    * the length change (always negative) will be returned.
-   * 
+   *
    * @param path
    *          the path
    * @param beforeStart
@@ -48,7 +48,7 @@ public abstract class LocalOptimizer extends TSPModule {
 
   /**
    * Get the length of the sub-path which can be optimized
-   * 
+   *
    * @return the length of the sub-path which can be optimized
    */
   public abstract int getSubPathLength();

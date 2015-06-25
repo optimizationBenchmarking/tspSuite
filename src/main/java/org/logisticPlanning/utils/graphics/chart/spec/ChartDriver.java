@@ -43,8 +43,8 @@ import org.logisticPlanning.utils.math.MathConstants;
  * collections} and {@link org.logisticPlanning.utils.math.data.iteration
  * iteration} classes.
  * </p>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -69,7 +69,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * create the chart driver
-   * 
+   *
    * @param name
    *          the chart driver
    */
@@ -81,7 +81,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Create the chart palette
-   * 
+   *
    * @return the chart palette
    */
   protected ChartPalette createPalette() {
@@ -90,7 +90,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Get the chart palette
-   * 
+   *
    * @return the chart palette
    */
   public final ChartPalette getPalette() {
@@ -99,7 +99,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Get the approximate upper limit for the number of points per line
-   * 
+   *
    * @return the approximate upper limit for the number of points per lint
    */
   public final int getMaxPointsPerLine() {
@@ -108,7 +108,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Set the approximate upper limit for the number of points per line
-   * 
+   *
    * @param val
    *          the approximate upper limit for the number of points per line
    */
@@ -144,7 +144,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Create a 2D line chart
-   * 
+   *
    * @param range
    *          the object used for computing the axis range
    * @return the line chart
@@ -153,7 +153,7 @@ public abstract class ChartDriver extends Configurable {
 
   /**
    * Create an instance of the default chart driver
-   * 
+   *
    * @return an instance of the default chart driver
    */
   public static final ChartDriver createDefaultChartDriver() {

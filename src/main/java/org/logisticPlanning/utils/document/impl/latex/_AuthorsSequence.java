@@ -231,7 +231,7 @@ final class _AuthorsSequence extends Sequence {
 
   /**
    * create
-   * 
+   *
    * @param authors
    *          the authors
    * @param doc

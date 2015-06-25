@@ -15,7 +15,7 @@ final class _TableCellDefIterator implements Iterator<TableCellDef> {
 
   /**
    * instantiate
-   * 
+   *
    * @param tableCell
    *          the tableCell
    */

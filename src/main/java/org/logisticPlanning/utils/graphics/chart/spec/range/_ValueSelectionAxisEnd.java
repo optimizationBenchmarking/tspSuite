@@ -20,7 +20,7 @@ abstract class _ValueSelectionAxisEnd extends AggregatedAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel

@@ -39,14 +39,14 @@ public abstract class CharTransformerTest extends TestBase {
 
   /**
    * get the char transformer
-   * 
+   *
    * @return the char transformer
    */
   protected abstract CharTransformer getTransformer();
 
   /**
    * get the test cases
-   * 
+   *
    * @return the test cases
    * @throws IOException
    *           if io fails
@@ -94,7 +94,7 @@ public abstract class CharTransformerTest extends TestBase {
 
   /**
    * prepare a string
-   * 
+   *
    * @param orig
    *          the original string
    * @return the prepared string
@@ -129,11 +129,10 @@ public abstract class CharTransformerTest extends TestBase {
 
   /**
    * test if the transformer can correctly load
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
-  @SuppressWarnings("unused")
   @Test(timeout = 3600000)
   public void testCharTransformerNotNull() throws IOException {
     Assert.assertNotNull(this.getTransformer());
@@ -141,7 +140,7 @@ public abstract class CharTransformerTest extends TestBase {
 
   /**
    * test if the transformer can correctly transform single characters
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */
@@ -157,7 +156,7 @@ public abstract class CharTransformerTest extends TestBase {
 
   /**
    * test if the transformer can correctly transform single characters
-   * 
+   *
    * @throws IOException
    *           the io exception if io fails
    */

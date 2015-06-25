@@ -11,7 +11,7 @@ public final class SetupItem extends BasicMapEntry<String, String>
 
   /**
    * create
-   * 
+   *
    * @param key
    *          the key
    * @param value

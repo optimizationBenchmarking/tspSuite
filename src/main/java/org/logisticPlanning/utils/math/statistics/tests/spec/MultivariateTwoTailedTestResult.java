@@ -22,7 +22,7 @@ public final class MultivariateTwoTailedTestResult extends
 
   /**
    * the test result
-   * 
+   *
    * @param n
    *          the number of compared distributions
    */

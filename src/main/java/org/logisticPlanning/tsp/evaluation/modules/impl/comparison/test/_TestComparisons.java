@@ -85,7 +85,7 @@ public class _TestComparisons extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -124,7 +124,7 @@ public class _TestComparisons extends RankedComparisonModule {
 
   /**
    * make the table definition
-   * 
+   *
    * @param expCount
    *          the number of experiments
    * @return the table definition
@@ -148,7 +148,7 @@ public class _TestComparisons extends RankedComparisonModule {
 
   /**
    * Make a table
-   * 
+   *
    * @param tbl
    *          the table
    * @param root
@@ -317,7 +317,7 @@ public class _TestComparisons extends RankedComparisonModule {
 
   /**
    * write the body text describing the tables
-   * 
+   *
    * @param root
    *          the root module
    * @param body

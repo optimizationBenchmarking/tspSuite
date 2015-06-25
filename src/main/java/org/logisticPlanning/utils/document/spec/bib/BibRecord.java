@@ -31,7 +31,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * Create a new bibliography record
-   * 
+   *
    * @param authors
    *          the authors
    * @param title
@@ -84,7 +84,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * Get the bibliography authors
-   * 
+   *
    * @return the bibliography authors
    */
   public final BibAuthors getAuthors() {
@@ -93,7 +93,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * Get the title
-   * 
+   *
    * @return the title
    */
   public final String getTitle() {
@@ -102,7 +102,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * Get the doi
-   * 
+   *
    * @return the doi
    */
   public final String getDoi() {
@@ -111,7 +111,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * Get the uri
-   * 
+   *
    * @return the uri
    */
   public final URI getURI() {
@@ -120,7 +120,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * get the bibliography date
-   * 
+   *
    * @return the bibliography date
    */
   public final BibDate getDate() {
@@ -145,7 +145,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * compare to another bib record
-   * 
+   *
    * @param r
    *          the bib record
    * @return {@code true} if this object is the
@@ -210,7 +210,7 @@ public abstract class BibRecord extends _BibElement<BibRecord> {
 
   /**
    * compare the rest of the bib record
-   * 
+   *
    * @param o
    *          the other bib record
    * @return the result

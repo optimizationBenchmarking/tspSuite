@@ -231,7 +231,7 @@ abstract class _OpDef {
 
     map.put(EMathOp.ENCLOSING_INEQUALITY_BRACKETS, //
         new _OpPosDef(//
-            XMLCharTransformer.INSTANCE.transform("\u300a").toCharArray(), //$NON-NLS-1$            
+            XMLCharTransformer.INSTANCE.transform("\u300a").toCharArray(), //$NON-NLS-1$
             null,//
             XMLCharTransformer.INSTANCE.transform("\u300b").toCharArray())); //$NON-NLS-1$
 
@@ -252,7 +252,7 @@ abstract class _OpDef {
 
   /**
    * render the math operation
-   * 
+   *
    * @param out
    *          the output
    * @param ops

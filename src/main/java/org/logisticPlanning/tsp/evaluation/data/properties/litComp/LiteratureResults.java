@@ -16,7 +16,7 @@ public final class LiteratureResults extends
 
   /**
    * Create
-   * 
+   *
    * @param pointSets
    *          the point sets.
    */
@@ -27,7 +27,7 @@ public final class LiteratureResults extends
 
   /**
    * Initialize the result point sets
-   * 
+   *
    * @param header
    *          the header
    * @throws IOException

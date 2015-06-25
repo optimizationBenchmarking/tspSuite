@@ -65,7 +65,7 @@ final class _CHZ2012APBGAWBMARHFTTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
@@ -80,7 +80,7 @@ final class _CHZ2012APBGAWBMARHFTTSP extends LiteratureResultPointSet {
           "A Puzzle-Based Genetic Algorithm with Block Mining and Recombination Heuristic for the Traveling Salesman Problem",//$NON-NLS-1$
           new BibDate(2012, EBibMonth.SEPTEMBER, 5),//
           "Journal of Computer Science and Technology",//$NON-NLS-1$
-          "27", "5",//$NON-NLS-1$//$NON-NLS-2$ 
+          "27", "5",//$NON-NLS-1$//$NON-NLS-2$
           "937", "949",//$NON-NLS-1$//$NON-NLS-2$
           new URI(
               "http://jcst.ict.ac.cn:8080/jcst/EN/10.1007/s11390-012-1275-3"),//$NON-NLS-1$
@@ -653,7 +653,7 @@ final class _CHZ2012APBGAWBMARHFTTSP extends LiteratureResultPointSet {
    * A conservative estimate of the number of FEs performed by the p-ACGA
    * algorithm. Equals population size*n*100 FEs, does not include any
    * overhead for "artificial chromosomes"
-   * 
+   *
    * @param inst
    *          the instance
    * @return the lower bound of used FEs
@@ -685,7 +685,7 @@ final class _CHZ2012APBGAWBMARHFTTSP extends LiteratureResultPointSet {
         }
       }
     }
-    dest.write(" generations. As the number of artificial chromosomes used and the injection frequency is sort of random, we only consider population size times iteration limit to infer the number of consumed "); //$NON-NLS-1$    
+    dest.write(" generations. As the number of artificial chromosomes used and the injection frequency is sort of random, we only consider population size times iteration limit to infer the number of consumed "); //$NON-NLS-1$
     Accessor.FE.writeShortName(dest, true);
     dest.write(". Also, for some benchmark instances different results are reported, in which case we always chose those in favour of "); //$NON-NLS-1$
     dest.write(this.getShortName());

@@ -41,7 +41,7 @@ final class _PermutationPath {
 
   /**
    * create the path
-   * 
+   *
    * @param permutation
    *          the permutation
    * @param id

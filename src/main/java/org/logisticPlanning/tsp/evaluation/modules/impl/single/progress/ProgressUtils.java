@@ -61,7 +61,7 @@ public final class ProgressUtils {
    * Define a transformation which selects a given dimension and creates
    * data collections representing scaled x-values and relative objective
    * values.
-   * 
+   *
    * @param axs
    *          the accessor
    * @param runs
@@ -112,7 +112,7 @@ public final class ProgressUtils {
    * Define a transformation which selects a given dimension and creates
    * data collections representing scaled x-values and relative objective
    * values.
-   * 
+   *
    * @param axs
    *          the accessor
    * @param runsets
@@ -130,7 +130,7 @@ public final class ProgressUtils {
 
   /**
    * Transformation a set of run sets to a data collection array,
-   * 
+   *
    * @param axs
    *          the accessor
    * @param runsets

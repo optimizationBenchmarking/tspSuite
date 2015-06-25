@@ -27,7 +27,7 @@ public class TourValidatorTestBase extends TestBase {
 
   /**
    * Validate a permutation
-   * 
+   *
    * @param permutation
    *          the permutation
    * @param dc
@@ -39,7 +39,7 @@ public class TourValidatorTestBase extends TestBase {
       final DistanceComputer dc) {
     final int n;
 
-    Assert.assertNotNull("The permutation must not be null.",//$NON-NLS-1$ 
+    Assert.assertNotNull("The permutation must not be null.",//$NON-NLS-1$
         permutation);
 
     if (dc != null) {
@@ -65,7 +65,7 @@ public class TourValidatorTestBase extends TestBase {
 
   /**
    * validate a array
-   * 
+   *
    * @param array
    *          the array
    * @param dc
@@ -77,7 +77,7 @@ public class TourValidatorTestBase extends TestBase {
       final DistanceComputer dc) {
     final int n;
 
-    Assert.assertNotNull("The array must not be null.",//$NON-NLS-1$ 
+    Assert.assertNotNull("The array must not be null.",//$NON-NLS-1$
         array);
 
     if (dc != null) {
@@ -103,7 +103,7 @@ public class TourValidatorTestBase extends TestBase {
 
   /**
    * Validate a permutation.
-   * 
+   *
    * @param path
    *          the path permutation
    * @param dc
@@ -175,7 +175,7 @@ public class TourValidatorTestBase extends TestBase {
    * where the element at index {@code (i-1)} stands for the city {@code i}
    * and holds the index of the city which should appear after that
    * element.
-   * 
+   *
    * @param adjacencyList
    *          the adjacencyList
    * @param dc
@@ -265,7 +265,7 @@ public class TourValidatorTestBase extends TestBase {
 
   /**
    * Validate a edge list, i.e., a list of undirected edges.
-   * 
+   *
    * @param edges
    *          the edges
    * @param dc

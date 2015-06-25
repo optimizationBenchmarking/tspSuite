@@ -18,7 +18,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -30,7 +30,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * Get the row index
-   * 
+   *
    * @return the row index
    */
   public final int getRowIndex() {
@@ -39,7 +39,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * Get the row on page
-   * 
+   *
    * @return the row on the page
    */
   public final int getRowOnPage() {
@@ -48,7 +48,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * Get the page of this row
-   * 
+   *
    * @return the page of this row
    */
   public final int getPage() {
@@ -58,7 +58,7 @@ public abstract class AbstractTableRow extends Element {
   /**
    * Is this row a body row ({@code true} will be returned) or a
    * header/footer row ({@code false} will be returned)?
-   * 
+   *
    * @return {@code true} for body rows, {@code false} for header or footer
    *         rows
    */
@@ -66,7 +66,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * Open a new table cell
-   * 
+   *
    * @param cols
    *          the number of columns occupied by the cell
    * @param rows
@@ -84,7 +84,7 @@ public abstract class AbstractTableRow extends Element {
 
   /**
    * Open a new table cell
-   * 
+   *
    * @return the handle to the new cell
    * @throws IOException
    *           if io fails

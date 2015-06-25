@@ -100,7 +100,7 @@ public final class DiGamma extends UnaryFunction {
    * with the singleton instance {@link DiGamma#INSTANCE DiGamma.INSTANCE}
    * for serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link DiGamma#INSTANCE
    *         DiGamma.INSTANCE})
    */
@@ -113,7 +113,7 @@ public final class DiGamma extends UnaryFunction {
    * with the singleton instance {@link DiGamma#INSTANCE DiGamma.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link DiGamma#INSTANCE
    *         DiGamma.INSTANCE})
    */

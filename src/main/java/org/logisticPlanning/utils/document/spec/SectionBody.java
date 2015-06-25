@@ -10,7 +10,7 @@ public class SectionBody extends AbstractTextBlock {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

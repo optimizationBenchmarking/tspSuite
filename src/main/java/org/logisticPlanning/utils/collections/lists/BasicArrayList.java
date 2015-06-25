@@ -6,7 +6,7 @@ import org.logisticPlanning.utils.collections.basic.BasicList;
 
 /**
  * The base class for array-based collections.
- * 
+ *
  * @param <ET>
  *          the element type
  * @param <AT>
@@ -37,7 +37,7 @@ public abstract class BasicArrayList<ET, AT> extends BasicList<ET>
   /**
    * Ensure that there are at least {@code size} free elements starting at
    * {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -64,7 +64,7 @@ public abstract class BasicArrayList<ET, AT> extends BasicList<ET>
 
   /**
    * Get a copy the array with the internal data
-   * 
+   *
    * @return the copied array
    */
   public abstract AT toDataArray();
@@ -112,6 +112,7 @@ public abstract class BasicArrayList<ET, AT> extends BasicList<ET>
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public AbstractList<ET> clone() {
     BasicArrayList<ET, AT> r;
 
@@ -129,7 +130,7 @@ public abstract class BasicArrayList<ET, AT> extends BasicList<ET>
 
   /**
    * check an index
-   * 
+   *
    * @param index
    *          the index
    * @param size

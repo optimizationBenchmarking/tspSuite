@@ -68,7 +68,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label
@@ -135,7 +135,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Does this table span over all columns in a multi-column document?
-   * 
+   *
    * @return {@code true} if this table spans over all columns,
    *         {@code false} if it only uses a single columns
    */
@@ -145,7 +145,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Get the index of the current row
-   * 
+   *
    * @return the index of the current row
    */
   public final int getCurrentRowIndex() {
@@ -154,7 +154,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Get the index of the current page row
-   * 
+   *
    * @return the index of the current page row
    */
   public final int getCurrentPageRowIndex() {
@@ -164,7 +164,7 @@ public class Table extends _MultiLabeledElement implements
   /**
    * Get the table index. Warning: This value may increase when the table
    * pages increase.
-   * 
+   *
    * @return the figure index
    */
   public final int getTableIndex() {
@@ -221,7 +221,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Get the number of columns
-   * 
+   *
    * @return the number of columns
    */
   public final int getColumnCount() {
@@ -422,7 +422,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * begin a row
-   * 
+   *
    * @return {@code true} if a new page is needed, {@code false} if not
    */
   final boolean beginRow() {
@@ -458,7 +458,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * get the index of the current page
-   * 
+   *
    * @return the index of the current page
    */
   public final int getCurrentPageIndex() {
@@ -467,7 +467,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * begin a table cell
-   * 
+   *
    * @param cell
    *          the table cell
    * @param def
@@ -571,7 +571,7 @@ public class Table extends _MultiLabeledElement implements
 
   /**
    * Initialize the table row
-   * 
+   *
    * @param row
    *          the table row
    */

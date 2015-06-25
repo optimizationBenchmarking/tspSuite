@@ -4,7 +4,7 @@ import org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer;
 
 /**
  * a distance computer always returning the same distance: {@code 0}
- * 
+ *
  * @since 0.9.8
  */
 final class _Distance0Computer extends DistanceComputer {
@@ -19,7 +19,7 @@ final class _Distance0Computer extends DistanceComputer {
 
   /**
    * always returns {@code 0}
-   * 
+   *
    * @param i
    *          the first city
    * @param j
@@ -33,7 +33,7 @@ final class _Distance0Computer extends DistanceComputer {
 
   /**
    * always returns {@code 0}
-   * 
+   *
    * @param nodes
    *          the permutation
    * @return {@code 0}
@@ -45,7 +45,7 @@ final class _Distance0Computer extends DistanceComputer {
 
   /**
    * always returns {@code 0}
-   * 
+   *
    * @param adjacencyList
    *          the adjacency list permutation
    * @return {@code 0}

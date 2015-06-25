@@ -39,7 +39,7 @@ final class _AsymmetricCandidateEdgeShort extends CandidateEdgeNumber {
 
   /**
    * Instantiate
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param candidates

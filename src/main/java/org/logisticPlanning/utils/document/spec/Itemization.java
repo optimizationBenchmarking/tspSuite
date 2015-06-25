@@ -9,7 +9,7 @@ public class Itemization extends AbstractList {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException

@@ -28,7 +28,7 @@ public class GlobalRanking {
 
   /**
    * create!
-   * 
+   *
    * @param experiments
    *          the experiments
    */
@@ -41,7 +41,7 @@ public class GlobalRanking {
 
   /**
    * put the label
-   * 
+   *
    * @param label
    *          the label
    */
@@ -54,7 +54,7 @@ public class GlobalRanking {
 
   /**
    * Aggregate a given ranking
-   * 
+   *
    * @param label
    *          the label of the section where the data is from
    * @param ranks
@@ -71,7 +71,7 @@ public class GlobalRanking {
 
   /**
    * Aggregate a given ranking
-   * 
+   *
    * @param label
    *          the label of the section where the data is from
    * @param ranks
@@ -88,7 +88,7 @@ public class GlobalRanking {
   /**
    * Get a ranking according to the given statistic parameter over the
    * registered ranks...
-   * 
+   *
    * @param param
    *          the parameter
    * @return the ranks

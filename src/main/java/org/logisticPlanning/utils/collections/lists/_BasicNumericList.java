@@ -4,7 +4,7 @@ import org.logisticPlanning.utils.math.data.collection.IDataCollection;
 
 /**
  * The base class for collections that can be viewed as functions.
- * 
+ *
  * @param <ET>
  *          the base type (normally {@link java.lang.Number})
  * @param <AT>
@@ -31,7 +31,7 @@ abstract class _BasicNumericList<ET, AT> extends BasicArrayList<ET, AT>
 
   /**
    * get the double at the given index
-   * 
+   *
    * @param index
    *          the index
    * @return the double at that index

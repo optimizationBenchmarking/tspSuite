@@ -22,7 +22,7 @@ public final class ConstantType extends NodeType<Constant, Function> {
 
   /**
    * Instantiate a node
-   * 
+   *
    * @param children
    *          a given set of children
    * @param r
@@ -37,7 +37,7 @@ public final class ConstantType extends NodeType<Constant, Function> {
 
   /**
    * Instantiate a new constant
-   * 
+   *
    * @param v
    *          the value of the constant
    * @return the constant

@@ -34,7 +34,7 @@ public abstract class EdgeByte extends EdgeNumber {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -69,7 +69,7 @@ public abstract class EdgeByte extends EdgeNumber {
   /**
    * Allocate an edge byte array with all {@code byte}s set to
    * {@code ((byte)(0))}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -86,7 +86,7 @@ public abstract class EdgeByte extends EdgeNumber {
   /**
    * Allocate an edge byte array with all {@code byte}s set to
    * {@code ((byte)(0))}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

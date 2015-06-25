@@ -10,7 +10,7 @@ public final class LiteratureComparisonResult extends
 
   /**
    * create!
-   * 
+   *
    * @param data
    *          the data
    */

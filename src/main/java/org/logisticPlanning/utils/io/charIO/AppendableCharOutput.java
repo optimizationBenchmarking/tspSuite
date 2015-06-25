@@ -14,7 +14,7 @@ public class AppendableCharOutput extends CharOutput {
 
   /**
    * Create
-   * 
+   *
    * @param out
    *          the output destination
    */

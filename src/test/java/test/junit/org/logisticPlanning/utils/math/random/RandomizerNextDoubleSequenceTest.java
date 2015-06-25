@@ -44,7 +44,7 @@ public class RandomizerNextDoubleSequenceTest extends TestBase {
 
   /**
    * test the sequences
-   * 
+   *
    * @throws Throwable
    *           if something goes wrong
    */
@@ -79,7 +79,7 @@ public class RandomizerNextDoubleSequenceTest extends TestBase {
 
   /**
    * the program to create sequence
-   * 
+   *
    * @param args
    *          the command line
    */

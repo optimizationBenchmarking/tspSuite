@@ -263,7 +263,7 @@ final class _NameDef {
 
   /**
    * create
-   * 
+   *
    * @param start
    *          the start string
    * @param end

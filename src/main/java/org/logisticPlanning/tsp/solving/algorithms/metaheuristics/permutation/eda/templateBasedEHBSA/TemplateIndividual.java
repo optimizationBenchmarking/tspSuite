@@ -3,10 +3,10 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.e
 import org.logisticPlanning.tsp.solving.Individual;
 
 /**
- * 
+ *
  an individual record that also remembers whether it was part of the
  * model.
- * 
+ *
  * @author <ul>
  *         <li>
  *         <em><a href="http://www2.hannan-u.ac.jp/~tsutsui/index-e.html">Shigeyoshi Tsutsui</a></em>

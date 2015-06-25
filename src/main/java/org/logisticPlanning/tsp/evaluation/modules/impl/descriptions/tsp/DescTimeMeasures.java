@@ -191,7 +191,7 @@ public final class DescTimeMeasures extends DescriptionModule {
               DescTimeMeasures.DSJ, DescTSP.GG, DescTimeMeasures.LAMG,//
               new BibAuthor("Anders", "Yeo"),//$NON-NLS-1$ //$NON-NLS-2$
               new BibAuthor("Weixiong", "Zhang"),//$NON-NLS-1$ //$NON-NLS-2$
-              new BibAuthor("Alexei", "Zverovitch")//$NON-NLS-1$ //$NON-NLS-2$           
+              new BibAuthor("Alexei", "Zverovitch")//$NON-NLS-1$ //$NON-NLS-2$
           ),//
           "Experimental Analysis of Heuristics for the ATSP",//$NON-NLS-1$
           DescTSP.GP2004TTSPAIV,
@@ -222,7 +222,7 @@ public final class DescTimeMeasures extends DescriptionModule {
       HS1998ELVAPAR = new BibInProceedings(
           new BibAuthors(//
               DescTimeMeasures.HOLGER_H_HOOS,//
-              new BibAuthor("Thomas", "St\u00fctzle")//$NON-NLS-1$ //$NON-NLS-2$           
+              new BibAuthor("Thomas", "St\u00fctzle")//$NON-NLS-1$ //$NON-NLS-2$
           ),//
           "Evaluating Las Vegas Algorithms \u2012 Pitfalls and Remedies",//$NON-NLS-1$
           new BibProceedings(//
@@ -231,7 +231,7 @@ public final class DescTimeMeasures extends DescriptionModule {
               new BibDate(1998, EBibMonth.JULY, 26),//
               new BibAuthors(//
                   new BibAuthor("Gregory F.", "Cooper"),//$NON-NLS-1$ //$NON-NLS-2$
-                  new BibAuthor("Serafin", "Moral")//$NON-NLS-1$ //$NON-NLS-2$           
+                  new BibAuthor("Serafin", "Moral")//$NON-NLS-1$ //$NON-NLS-2$
               ),//
               "Madison, WI, USA",//$NON-NLS-1$
               "Morgan Kaufmann Publishers Inc.",//$NON-NLS-1$
@@ -239,7 +239,7 @@ public final class DescTimeMeasures extends DescriptionModule {
               null, null,//
               null, null//
           ),//
-          "238", "245", null,//$NON-NLS-1$//$NON-NLS-2$   
+          "238", "245", null,//$NON-NLS-1$//$NON-NLS-2$
           new URI(
               "http://www.intellektik.informatik.tu-darmstadt.de/TR/1998/98-02.ps.Z"),//$NON-NLS-1$
           null);
@@ -251,7 +251,7 @@ public final class DescTimeMeasures extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

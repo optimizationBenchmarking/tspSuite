@@ -49,7 +49,7 @@ public abstract class Context extends Element {
 
   /**
    * create the context
-   * 
+   *
    * @param driver
    *          the driver of this context
    * @param baseDir
@@ -87,7 +87,7 @@ public abstract class Context extends Element {
   /**
    * Obtain the base directory of this context. All output of this context
    * will be written to this directory.
-   * 
+   *
    * @return the base directory of this context
    */
   public final File getBaseDir() {
@@ -96,7 +96,7 @@ public abstract class Context extends Element {
 
   /**
    * Get the driver
-   * 
+   *
    * @return the driver
    */
   public DocumentDriver getDriver() {
@@ -105,18 +105,17 @@ public abstract class Context extends Element {
 
   /**
    * Perform any pre-processing necessary before creating a document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void doPreprocess() throws IOException {
     //
   }
 
   /**
    * Perform any pre-processing necessary before creating a document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -208,11 +207,10 @@ public abstract class Context extends Element {
   /**
    * Perform any post-processing necessary after creating a document, e.g.,
    * compiling the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void doPostprocess() throws IOException {
     //
   }
@@ -220,7 +218,7 @@ public abstract class Context extends Element {
   /**
    * Perform any post-processing necessary after creating a document, e.g.,
    * compiling the document
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -326,7 +324,7 @@ public abstract class Context extends Element {
   /**
    * Load a resource file from a given class into the directory of this
    * context
-   * 
+   *
    * @param clazz
    *          the class to load the resource from
    * @param name
@@ -352,7 +350,7 @@ public abstract class Context extends Element {
 
   /**
    * Load a resource file into the directory of this context
-   * 
+   *
    * @param name
    *          the resource file name
    * @param encoding

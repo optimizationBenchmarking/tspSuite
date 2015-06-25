@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.benchmarking.objective;
 import org.logisticPlanning.utils.math.data.point.Point;
 
 /**
- * 
+ *
  <p>
  * Instances of this class are used by the
  * {@link org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction
@@ -242,35 +242,35 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * the consumed distance evaluations (DEs)
-   * 
+   *
    * @serial a positive long value with the consumed DEs
    */
   long m_de;
 
   /**
    * the consumed function evaluations (FEs)
-   * 
+   *
    * @serial a positive long value with the consumed FEs
    */
   long m_fe;
 
   /**
    * the consumed/passed runtime in milliseconds
-   * 
+   *
    * @serial a positive-or-zero long value with the consumed runtime
    */
   long m_time;
 
   /**
    * the objective value
-   * 
+   *
    * @serial a positive long value holding the (best-so-far) tour length
    */
   long m_f;
 
   /**
    * the log point type
-   * 
+   *
    * @serial an integer holding a bitmask indicating the log point type
    */
   int m_type;
@@ -283,7 +283,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * create by copying
-   * 
+   *
    * @param copy
    *          the point to copy
    */
@@ -303,7 +303,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * Get the number of FEs that were consumed since the run started.
-   * 
+   *
    * @return the number of FEs that were consumed since the run started
    */
   public final long getConsumedFEs() {
@@ -312,7 +312,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * Get the number of DEs that were consumed since the run started.
-   * 
+   *
    * @return the number of DEs that were consumed since the run started
    */
   public final long getConsumedDEs() {
@@ -324,7 +324,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
    * &quot;now&quot; is identified as the point in time at which
    * {@link #getConsumedDEs()} DEs and {@link #getConsumedFEs()} were
    * consumed).
-   * 
+   *
    * @return the best objective value discovered until now
    */
   public final long getBestF() {
@@ -334,7 +334,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
   /**
    * Get an estimate of the amount of runtime in milliseconds consumed
    * until the current point in time.
-   * 
+   *
    * @return the amount of milliseconds consumed.
    */
   public long getConsumedRuntime() {
@@ -343,7 +343,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * assign this log point to the values from another log point
-   * 
+   *
    * @param p
    *          the log point to assign to.
    */
@@ -361,7 +361,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
    * {@link #getConsumedDEs()}, {@link #getConsumedFEs()}, and
    * {@link #getConsumedRuntime()}. This copy will be immutable, meaning
    * that its contents will never change.
-   * 
+   *
    * @return A copy holding the current data of this log point.
    */
   @Override
@@ -376,7 +376,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
   /**
    * the internal version of the {@link #toStringBuilder(StringBuilder)}
    * method
-   * 
+   *
    * @param sb
    *          the string builder
    */
@@ -402,7 +402,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * Does this point equal to another log point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -418,7 +418,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * Does this point equal to another point?
-   * 
+   *
    * @param p
    *          the other point
    * @return {@code true} if and only if the point is identical to this
@@ -520,7 +520,7 @@ public class LogPoint extends Point implements Comparable<LogPoint> {
 
   /**
    * Obtain the value associated with the given dimension of the log point.
-   * 
+   *
    * @param dimension
    *          one of
    *          {@link org.logisticPlanning.tsp.benchmarking.objective.LogPoint#DE_INDEX

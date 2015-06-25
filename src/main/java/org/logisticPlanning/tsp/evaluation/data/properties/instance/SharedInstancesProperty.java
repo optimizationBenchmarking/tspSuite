@@ -55,7 +55,7 @@ public final class SharedInstancesProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param source
    *          the source property
    * @param exists
@@ -74,7 +74,7 @@ public final class SharedInstancesProperty extends
 
   /**
    * Create the property
-   * 
+   *
    * @param type
    *          the property type
    * @param source
@@ -152,7 +152,7 @@ public final class SharedInstancesProperty extends
    * Get the condition for non-empty, non-prematurely killed run sets, at
    * least one run must have two points with different values for a given
    * {@link org.logisticPlanning.tsp.evaluation.data.Accessor accessor}.
-   * 
+   *
    * @param axs
    *          the accessor
    * @return the condition

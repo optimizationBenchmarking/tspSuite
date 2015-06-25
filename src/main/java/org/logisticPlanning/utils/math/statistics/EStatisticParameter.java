@@ -183,7 +183,7 @@ public enum EStatisticParameter {
 
   /**
    * create
-   * 
+   *
    * @param shrt
    *          the short name
    * @param lng
@@ -210,7 +210,7 @@ public enum EStatisticParameter {
 
   /**
    * Get the short name
-   * 
+   *
    * @return the short name
    */
   public final String getShortName() {
@@ -219,7 +219,7 @@ public enum EStatisticParameter {
 
   /**
    * Get the long name
-   * 
+   *
    * @param plural
    *          should we return the plural form ({@code true}) or the
    *          singular form ({@code false})
@@ -232,7 +232,7 @@ public enum EStatisticParameter {
   /**
    * Is this a value parameter, i.e., a parameter that represents actual
    * values from the distribution?
-   * 
+   *
    * @return {@code true} if this is a value parameter, i.e., a parameter
    *         that represents actual values from the distribution,
    *         {@code false} otherwise.
@@ -244,7 +244,7 @@ public enum EStatisticParameter {
   /**
    * Is this a spread parameter, i.e., a parameter that relates to the
    * range or spread of the values from this distribution
-   * 
+   *
    * @return {@code true} if this is a spread parameter, i.e., a parameter
    *         that relates to the range or spread of the values from this
    *         distribution, {@code false} otherwise.
@@ -256,7 +256,7 @@ public enum EStatisticParameter {
   /**
    * Is this a shape parameter, i.e., a parameter that relates to the shape
    * of this distribution
-   * 
+   *
    * @return {@code true} if this is a shape parameter, i.e., a parameter
    *         that relates to the shape of this distribution, {@code false}
    *         otherwise.
@@ -267,7 +267,7 @@ public enum EStatisticParameter {
 
   /**
    * create a list of statistic parameters
-   * 
+   *
    * @param list
    *          the parameters
    * @return the list
@@ -307,7 +307,7 @@ public enum EStatisticParameter {
    * {@link org.logisticPlanning.utils.utils.comparison.EComparison#GREATER
    * GREATER} if {@code val1} seems to be greater or worse than
    * {@code val2} and other constants are appropriately used
-   * 
+   *
    * @param val1
    *          the first value
    * @param val2

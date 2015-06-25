@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * the internal class for sorting assignments
- * 
+ *
  * @param <K>
  *          the key type
  * @param <V>
@@ -19,7 +19,7 @@ final class _MapEntryComparator<K, V> implements
 
   /**
    * compare
-   * 
+   *
    * @param cmp
    *          the comparator
    */

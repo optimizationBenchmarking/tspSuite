@@ -16,7 +16,7 @@ public final class CharArrayCharSequence implements CharSequence {
 
   /**
    * Instantiate
-   * 
+   *
    * @param data
    *          the data
    * @param start

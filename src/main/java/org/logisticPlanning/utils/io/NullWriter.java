@@ -4,7 +4,7 @@ import java.io.Writer;
 
 /**
  * An writer that throws away all its input.
- * 
+ *
  * @since 0.9.8
  */
 public final class NullWriter extends Writer {

@@ -23,7 +23,7 @@ public final class EdgePathElement {
 
   /**
    * create
-   * 
+   *
    * @param nodeID
    *          the node id
    */
@@ -47,7 +47,7 @@ public final class EdgePathElement {
    * reached. This method must only be used when serializing the
    * constructed path to a permutation (candidate solution), as it will
    * modify the internal state of the path.
-   * 
+   *
    * @return the next element of the path, or {@code null} if the end was
    *         reached
    */

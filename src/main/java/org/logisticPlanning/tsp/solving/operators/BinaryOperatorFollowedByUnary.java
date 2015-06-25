@@ -44,7 +44,7 @@ import org.logisticPlanning.utils.config.Configuration;
  * and invokes them. This allows for a more targeted allocation and
  * de-allocation of data structures for each run.
  * </p>
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -70,7 +70,7 @@ public final class BinaryOperatorFollowedByUnary<P> extends
 
   /**
    * Create
-   * 
+   *
    * @param binary
    *          the binary operator
    * @param unary
@@ -102,6 +102,7 @@ public final class BinaryOperatorFollowedByUnary<P> extends
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final BinaryOperatorFollowedByUnary<P> clone() {
     final BinaryOperatorFollowedByUnary<P> res;
 
@@ -159,7 +160,7 @@ public final class BinaryOperatorFollowedByUnary<P> extends
 
   /**
    * Get the binary operator applied by this compound operator.
-   * 
+   *
    * @return the binary operator applied by this compound operator.
    */
   public final BinaryOperator<P> getBinaryOperator() {
@@ -168,7 +169,7 @@ public final class BinaryOperatorFollowedByUnary<P> extends
 
   /**
    * Get the unary operator applied by this compound operator.
-   * 
+   *
    * @return the unary operator applied by this compound operator.
    */
   public final UnaryOperator<P> getUnaryOperator() {

@@ -9,7 +9,7 @@ public final class MultipleOfAxisSmallEnd extends _MultipleOfAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param step
@@ -21,7 +21,7 @@ public final class MultipleOfAxisSmallEnd extends _MultipleOfAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel
@@ -36,7 +36,7 @@ public final class MultipleOfAxisSmallEnd extends _MultipleOfAxisEnd {
 
   /**
    * create
-   * 
+   *
    * @param dim
    *          the dimension
    * @param sel

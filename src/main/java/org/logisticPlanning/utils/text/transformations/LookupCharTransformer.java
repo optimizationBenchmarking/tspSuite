@@ -57,8 +57,8 @@ import org.logisticPlanning.utils.utils.EmptyUtils;
  * href="http://books.google.com/books?id=Yn1UAAAAMAAJ"
  * >Yn1UAAAAMAAJ</a></div></li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -111,7 +111,7 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
 
   /**
    * instantiate
-   * 
+   *
    * @param form
    *          the form
    * @param resource
@@ -283,7 +283,7 @@ public class LookupCharTransformer extends NormalizedCharTransformer {
   /**
    * This method is called when an unknown character is encountered. By
    * default it throws an {@link java.lang.UnsupportedOperationException}.
-   * 
+   *
    * @param ch
    *          the character
    * @throws UnsupportedOperationException

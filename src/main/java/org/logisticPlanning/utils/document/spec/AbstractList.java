@@ -21,7 +21,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -43,7 +43,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * get the next index
-   * 
+   *
    * @return the next index
    */
   final int nextIndex() {
@@ -53,7 +53,7 @@ public abstract class AbstractList extends Element {
   /**
    * Get the nesting level of this list, i.e., the number of lists it is
    * contained in plus 1
-   * 
+   *
    * @return the nesting level
    */
   public final int getDepth() {
@@ -62,7 +62,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * Create a list item
-   * 
+   *
    * @return the list item
    * @throws IOException
    *           if io fails
@@ -80,7 +80,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * begin an item
-   * 
+   *
    * @param item
    *          the item
    */
@@ -95,7 +95,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * end an item
-   * 
+   *
    * @param item
    *          the item
    */
@@ -109,7 +109,7 @@ public abstract class AbstractList extends Element {
 
   /**
    * check if we should be closing
-   * 
+   *
    * @return {@code true} if some closing action needs to be carried out,
    *         {@code false} otherwise
    */

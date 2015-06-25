@@ -11,7 +11,7 @@ public abstract class BivariateTwoTailedTest extends MultivariateTest {
 
   /**
    * instantiate
-   * 
+   *
    * @param name
    *          the test name
    */
@@ -27,7 +27,7 @@ public abstract class BivariateTwoTailedTest extends MultivariateTest {
 
   /**
    * do test
-   * 
+   *
    * @param dest
    *          the destination
    * @param a

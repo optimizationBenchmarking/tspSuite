@@ -407,7 +407,7 @@ final class _2DCeiledEuclideanDistanceInt extends _2DIntCoords {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -449,7 +449,7 @@ final class _2DCeiledEuclideanDistanceInt extends _2DIntCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param nodes
    *          The permutation of the nodes from {@code 1..n}
    * @return the total distance sum
@@ -501,7 +501,7 @@ final class _2DCeiledEuclideanDistanceInt extends _2DIntCoords {
    * using
    * {@link org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer#distance(int,int)}
    * {@code n} times.
-   * 
+   *
    * @param adj
    *          The adjacency list representation of the solution
    * @return the total distance sum

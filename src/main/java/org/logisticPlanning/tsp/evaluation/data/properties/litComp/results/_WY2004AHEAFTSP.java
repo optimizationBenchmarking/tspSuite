@@ -126,7 +126,7 @@ final class _WY2004AHEAFTSP extends LiteratureResultPointSet {
    * calculate the FEs: population size is {@code n}, 1000 generations with
    * initialization, and in each generation, there are {@code n/2}
    * offspring from crossover which then undergo a local search.
-   * 
+   *
    * @param inst
    *          the instance
    * @return the FEs

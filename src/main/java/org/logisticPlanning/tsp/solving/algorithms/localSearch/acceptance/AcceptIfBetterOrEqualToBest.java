@@ -7,7 +7,7 @@ import org.logisticPlanning.tsp.solving.algorithms.localSearch.AcceptanceCriteri
 /**
  * Accept a solution if it is better or equal to the best currently known
  * solution.
- * 
+ *
  * @since 0.9.8
  */
 public final class AcceptIfBetterOrEqualToBest extends AcceptanceCriterion {
@@ -31,7 +31,7 @@ public final class AcceptIfBetterOrEqualToBest extends AcceptanceCriterion {
 
   /**
    * Returns {@link #INSTANCE}.
-   * 
+   *
    * @return {@link #INSTANCE}
    */
   @Override

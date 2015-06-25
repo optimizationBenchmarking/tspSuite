@@ -66,7 +66,7 @@ public class Document extends Element {
 
   /**
    * instantiate
-   * 
+   *
    * @param context
    *          the owning context
    * @throws IOException
@@ -88,7 +88,7 @@ public class Document extends Element {
 
   /**
    * get the id of the next section
-   * 
+   *
    * @return the id of the next section
    */
   final int nextSection() {
@@ -97,7 +97,7 @@ public class Document extends Element {
 
   /**
    * get the id of the next figure
-   * 
+   *
    * @return the id of the next figure
    */
   final int nextFigure() {
@@ -106,7 +106,7 @@ public class Document extends Element {
 
   /**
    * get the id of the next equation
-   * 
+   *
    * @return the id of the next equation
    */
   final int nextEquation() {
@@ -115,7 +115,7 @@ public class Document extends Element {
 
   /**
    * get the id of the next table
-   * 
+   *
    * @return the id of the next table
    */
   final int nextTable() {
@@ -224,7 +224,7 @@ public class Document extends Element {
 
   /**
    * print the positive or negative infinity
-   * 
+   *
    * @param positive
    *          is the infinity value positive or negative
    * @throws IOException
@@ -237,7 +237,7 @@ public class Document extends Element {
 
   /**
    * print NaN
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -247,7 +247,7 @@ public class Document extends Element {
 
   /**
    * write a number represented as string
-   * 
+   *
    * @param number
    *          the number represented as string
    * @throws IOException
@@ -259,7 +259,7 @@ public class Document extends Element {
 
   /**
    * write a formatted number represented as string
-   * 
+   *
    * @param number
    *          the formatted number represented as string
    * @throws IOException
@@ -303,7 +303,7 @@ public class Document extends Element {
 
   /**
    * unpack a label
-   * 
+   *
    * @param ref
    *          the label
    * @param lst
@@ -385,7 +385,7 @@ public class Document extends Element {
 
   /**
    * Create a new label for future use
-   * 
+   *
    * @param type
    *          the label type
    * @return the label
@@ -397,13 +397,12 @@ public class Document extends Element {
 
   /**
    * write a single label to the output stream
-   * 
+   *
    * @param label
    *          the label
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void doWriteSingleLabel(final SingleLabel label)
       throws IOException {
     //
@@ -424,7 +423,7 @@ public class Document extends Element {
 
   /**
    * Write a reference to the given labels
-   * 
+   *
    * @param type
    *          the way in which the references should be connected
    * @param labels
@@ -432,7 +431,6 @@ public class Document extends Element {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void writeReference(final ESequenceType type,
       final SingleLabel[] labels) throws IOException {
     //
@@ -452,7 +450,7 @@ public class Document extends Element {
   //
   /**
    * end the given element
-   * 
+   *
    * @param e
    *          the given element
    */
@@ -2329,7 +2327,7 @@ public class Document extends Element {
 
   /**
    * Create a new bibliographic reference holder
-   * 
+   *
    * @param index
    *          the index
    * @param id
@@ -2345,7 +2343,7 @@ public class Document extends Element {
 
   /**
    * Reference a set of bibliographic entries
-   * 
+   *
    * @param mode
    *          the citation mode
    * @param references
@@ -2353,7 +2351,6 @@ public class Document extends Element {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   protected void cite(final ECitationMode mode,
       final BibReference... references) throws IOException {
     //
@@ -2361,7 +2358,7 @@ public class Document extends Element {
 
   /**
    * Get the list of all bibliographic references made so far
-   * 
+   *
    * @return the references
    */
   protected BibReference[] getReferences() {
@@ -2385,7 +2382,7 @@ public class Document extends Element {
     len = records.length;
     if (len <= 0) {
       throw new IllegalArgumentException(//
-          "There must be at least one record in a reference."); //$NON-NLS-1$      
+          "There must be at least one record in a reference."); //$NON-NLS-1$
     }
 
     if (mode == null) {
@@ -2412,7 +2409,7 @@ public class Document extends Element {
 
   /**
    * Get an object holding information about the document dimensions
-   * 
+   *
    * @return an object holding information about the document dimensions
    */
   public DocumentDimensions getDimensions() {

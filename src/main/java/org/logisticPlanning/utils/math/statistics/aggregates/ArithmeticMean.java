@@ -29,7 +29,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code double}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -41,7 +41,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code long}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -53,7 +53,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Visit a given {@code int}, i.e., incorporate it into the mean
-   * 
+   *
    * @param value
    *          the value to add
    */
@@ -65,7 +65,7 @@ public final class ArithmeticMean extends StableSum {
 
   /**
    * Obtain the current running mean.
-   * 
+   *
    * @return the current running mean
    */
   @Override

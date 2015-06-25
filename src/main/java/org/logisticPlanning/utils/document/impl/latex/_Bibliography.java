@@ -368,7 +368,7 @@ final class _Bibliography {
 
   /**
    * Create the bibliography file based on the reference set.
-   * 
+   *
    * @param refs
    *          the reference set
    * @param wco
@@ -389,7 +389,7 @@ final class _Bibliography {
 
   /**
    * Write a reference
-   * 
+   *
    * @param ref
    *          the reference
    * @param wco
@@ -445,7 +445,7 @@ final class _Bibliography {
 
   /**
    * write a string
-   * 
+   *
    * @param what
    *          what to write
    * @param t
@@ -472,7 +472,7 @@ final class _Bibliography {
 
   /**
    * write a string
-   * 
+   *
    * @param what
    *          what to write
    * @param auth
@@ -532,7 +532,7 @@ final class _Bibliography {
 
   /**
    * write a full date
-   * 
+   *
    * @param year
    *          the year
    * @param quarter
@@ -581,7 +581,7 @@ final class _Bibliography {
 
   /**
    * write date
-   * 
+   *
    * @param start
    *          the start
    * @param end
@@ -720,7 +720,7 @@ final class _Bibliography {
 
   /**
    * write the address
-   * 
+   *
    * @param what
    *          what -- the key
    * @param institution
@@ -765,7 +765,7 @@ final class _Bibliography {
 
   /**
    * write pages
-   * 
+   *
    * @param start
    *          the start string
    * @param end
@@ -808,7 +808,7 @@ final class _Bibliography {
 
   /**
    * Write an article
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -845,7 +845,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -883,7 +883,7 @@ final class _Bibliography {
 
   /**
    * Write a book
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -918,7 +918,7 @@ final class _Bibliography {
 
   /**
    * Write a proceedings
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -961,7 +961,7 @@ final class _Bibliography {
 
   /**
    * Write an in proceedings
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1023,7 +1023,7 @@ final class _Bibliography {
 
   /**
    * Write an in collection
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1083,7 +1083,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1120,7 +1120,7 @@ final class _Bibliography {
 
   /**
    * Write a tech report
-   * 
+   *
    * @param id
    *          the id
    * @param ref
@@ -1163,7 +1163,7 @@ final class _Bibliography {
 
   /**
    * Write a record
-   * 
+   *
    * @param id
    *          the id
    * @param ref

@@ -183,7 +183,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param axs
@@ -208,7 +208,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
   /**
    * Aggregate the experiment performance based on the area under the
    * curve.
-   * 
+   *
    * @param lst
    *          the list of assignments of experiments to data collections
    * @param agg
@@ -257,7 +257,7 @@ final class _ExperimentSetERTOverScaleDiagram extends
 
   /**
    * Make the figure
-   * 
+   *
    * @param instances
    *          the instances
    * @param data

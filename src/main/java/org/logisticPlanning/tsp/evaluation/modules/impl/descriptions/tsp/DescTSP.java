@@ -147,7 +147,7 @@ public final class DescTSP extends DescriptionModule {
   /** gregory gutin */
   static final BibAuthor GG = new BibAuthor("Gregory Z.", "Gutin"); //$NON-NLS-1$ //$NON-NLS-2$
   /** abraham p punnen */
-  static final BibAuthor APP = new BibAuthor("Abraham P.", "Punnen");//$NON-NLS-1$ //$NON-NLS-2$   
+  static final BibAuthor APP = new BibAuthor("Abraham P.", "Punnen");//$NON-NLS-1$ //$NON-NLS-2$
 
   /** william j cook */
   static final BibAuthors WJC_A = new BibAuthors(DescTSP.WJC);
@@ -198,7 +198,7 @@ public final class DescTSP extends DescriptionModule {
       G2008TSP = new BibBook(
           //
           new BibAuthors(//
-              new BibAuthor("Federico", "Greco") //$NON-NLS-1$ //$NON-NLS-2$          
+              new BibAuthor("Federico", "Greco") //$NON-NLS-1$ //$NON-NLS-2$
           ),//
           "Traveling Salesman Problem",//$NON-NLS-1$
           new BibDate(2008, EBibMonth.SEPTEMBER),//
@@ -222,7 +222,7 @@ public final class DescTSP extends DescriptionModule {
             new BibAuthor("Eugene Leighton (Gene)", "Lawler"), //$NON-NLS-1$ //$NON-NLS-2$
             new BibAuthor("Jan Karel", "Lenstra"),//$NON-NLS-1$ //$NON-NLS-2$
             new BibAuthor("Alexander Hendrik George", "Rinnooy Kan"),//$NON-NLS-1$ //$NON-NLS-2$
-            new BibAuthor("David B.", "Shmoys") //$NON-NLS-1$ //$NON-NLS-2$           
+            new BibAuthor("David B.", "Shmoys") //$NON-NLS-1$ //$NON-NLS-2$
         ),//
         "The Traveling Salesman Problem: A Guided Tour of Combinatorial Optimization",//$NON-NLS-1$
         new BibDate(1989, EBibMonth.SEPTEMBER),//
@@ -256,7 +256,7 @@ public final class DescTSP extends DescriptionModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the owner
    */

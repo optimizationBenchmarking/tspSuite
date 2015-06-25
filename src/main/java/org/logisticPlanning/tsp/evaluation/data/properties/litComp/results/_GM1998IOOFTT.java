@@ -70,7 +70,7 @@ final class _GM1998IOOFTT extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {

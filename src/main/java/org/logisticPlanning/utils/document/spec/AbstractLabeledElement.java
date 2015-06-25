@@ -10,7 +10,7 @@ public abstract class AbstractLabeledElement extends
 
   /**
    * create the document element
-   * 
+   *
    * @param owner
    *          the owning element
    * @param label

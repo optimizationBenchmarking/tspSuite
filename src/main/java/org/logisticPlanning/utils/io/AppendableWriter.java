@@ -8,7 +8,7 @@ import org.logisticPlanning.utils.text.CharArrayCharSequence;
 
 /**
  * A writer writing to any appendable.
- * 
+ *
  * @since 0.9.8
  */
 public final class AppendableWriter extends Writer {
@@ -18,7 +18,7 @@ public final class AppendableWriter extends Writer {
 
   /**
    * create
-   * 
+   *
    * @param dest
    *          the destination
    */

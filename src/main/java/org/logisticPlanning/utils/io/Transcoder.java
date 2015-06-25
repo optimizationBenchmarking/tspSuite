@@ -23,7 +23,7 @@ public class Transcoder {
   /**
    * Copy data from a source to a destination. The streams may be closed
    * during this process.
-   * 
+   *
    * @param source
    *          the source reader
    * @param dest
@@ -51,7 +51,7 @@ public class Transcoder {
   /**
    * Copy data from a source to a destination. The streams may be closed
    * during this process.
-   * 
+   *
    * @param source
    *          the source reader
    * @param dest
@@ -78,7 +78,7 @@ public class Transcoder {
 
   /**
    * Copy binary data from an input stream to an output stream.
-   * 
+   *
    * @param source
    *          the source stream
    * @param dest
@@ -110,7 +110,7 @@ public class Transcoder {
 
   /**
    * check two encodings
-   * 
+   *
    * @param se
    *          the source encoding
    * @param de
@@ -137,7 +137,7 @@ public class Transcoder {
   /**
    * Copy data from an input stream to an output stream. The streams may be
    * closed during this process.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -169,7 +169,7 @@ public class Transcoder {
   /**
    * Copy text data from an input stream to an output stream. The streams
    * may be closed during this process.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -199,7 +199,7 @@ public class Transcoder {
 
   /**
    * Copy data from a file to another file.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -234,7 +234,7 @@ public class Transcoder {
 
   /**
    * Copy a file to another file
-   * 
+   *
    * @param src
    *          the source file
    * @param dest
@@ -258,7 +258,7 @@ public class Transcoder {
 
   /**
    * Copy data from a file to another file.
-   * 
+   *
    * @param source
    *          the source stream
    * @param sourceEncoding
@@ -293,7 +293,7 @@ public class Transcoder {
 
   /**
    * Copy data from a resource to an output stream
-   * 
+   *
    * @param owningClazz
    *          the owning class
    * @param resourceName
@@ -332,7 +332,7 @@ public class Transcoder {
 
   /**
    * Copy data from a resource to a file
-   * 
+   *
    * @param owningClazz
    *          the owning class
    * @param resourceName
@@ -372,7 +372,7 @@ public class Transcoder {
 
   /**
    * calculate an appropriate buffer size
-   * 
+   *
    * @param available
    *          the available items
    * @return the buffer size

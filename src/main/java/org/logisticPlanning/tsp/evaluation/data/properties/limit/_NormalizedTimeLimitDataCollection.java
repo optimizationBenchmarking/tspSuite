@@ -15,7 +15,7 @@ final class _NormalizedTimeLimitDataCollection extends
 
   /**
    * the run set
-   * 
+   *
    * @param normTime
    *          the normalized runtime
    * @param rs

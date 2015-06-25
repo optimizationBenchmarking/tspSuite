@@ -40,7 +40,7 @@ public final class Configuration {
   /**
    * get an instance of the type {@code T} stored under the given
    * {@code key}
-   * 
+   *
    * @param key
    *          the key
    * @param parser
@@ -73,7 +73,7 @@ public final class Configuration {
 
   /**
    * Get a parameter which is a class.
-   * 
+   *
    * @param key
    *          the key
    * @param defClass
@@ -108,7 +108,7 @@ public final class Configuration {
    * as parameter. This also holds if it is decided to return
    * {@code defInstance} .
    * </p>
-   * 
+   *
    * @param key
    *          the key
    * @param defInstance
@@ -166,7 +166,7 @@ public final class Configuration {
    * configured automatically. They are static and should be considered as
    * immutable anyway.
    * </p>
-   * 
+   *
    * @param key
    *          the key
    * @param defInstance
@@ -199,7 +199,7 @@ public final class Configuration {
 
   /**
    * check a key
-   * 
+   *
    * @param key
    *          the key
    * @return the key for matching
@@ -218,7 +218,7 @@ public final class Configuration {
 
   /**
    * Get a file parameter
-   * 
+   *
    * @param key
    *          the key
    * @param def
@@ -231,7 +231,7 @@ public final class Configuration {
 
   /**
    * Get a 8 bit signed integer (byte) parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -275,7 +275,7 @@ public final class Configuration {
 
   /**
    * Get a 16 bit signed integer (short) parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -320,7 +320,7 @@ public final class Configuration {
 
   /**
    * Get a 32 bit signed integer (int) parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -364,7 +364,7 @@ public final class Configuration {
 
   /**
    * Get a 64 bit signed integer (long) parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -409,7 +409,7 @@ public final class Configuration {
   /**
    * Get a single-precision (32-bit) floating point number (float)
    * parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -455,7 +455,7 @@ public final class Configuration {
   /**
    * Get a double-precision (64-bit) floating point number (double)
    * parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param min
@@ -500,7 +500,7 @@ public final class Configuration {
 
   /**
    * Get a Boolean parameter.
-   * 
+   *
    * @param key
    *          the key identifying the parameter
    * @param def
@@ -515,7 +515,7 @@ public final class Configuration {
 
   /**
    * Get a parameter which is a string.
-   * 
+   *
    * @param key
    *          the key
    * @param def
@@ -528,7 +528,7 @@ public final class Configuration {
 
   /**
    * Get a parameter which is a list of strings.
-   * 
+   *
    * @param key
    *          the key
    * @param def
@@ -542,7 +542,7 @@ public final class Configuration {
 
   /**
    * get a logger
-   * 
+   *
    * @param key
    *          the key
    * @param def
@@ -557,7 +557,7 @@ public final class Configuration {
 
   /**
    * Put a string parameter: Overwrite whatever is already stored.
-   * 
+   *
    * @param key
    *          the key
    * @param value
@@ -582,7 +582,7 @@ public final class Configuration {
    * {@code key=value} or {@code key:value} and may be preceeded by any
    * number of {@code -} or {@code /}-es. If the value part is missing
    * {@code "true"} is used as value.
-   * 
+   *
    * @param s
    *          the string
    */
@@ -627,7 +627,7 @@ public final class Configuration {
 
   /**
    * Load command line arguments into a map
-   * 
+   *
    * @param args
    *          the arguments
    */
@@ -641,7 +641,7 @@ public final class Configuration {
 
   /**
    * Store some information from a map
-   * 
+   *
    * @param map
    *          the map
    */
@@ -659,7 +659,7 @@ public final class Configuration {
 
   /**
    * Store some information from a properties set
-   * 
+   *
    * @param prop
    *          the properties
    */
@@ -669,7 +669,7 @@ public final class Configuration {
 
   /**
    * Store some information from a properties set
-   * 
+   *
    * @param file
    *          the properties file
    * @throws IOException
@@ -688,7 +688,7 @@ public final class Configuration {
 
   /**
    * Put the properties identified by a configuration file
-   * 
+   *
    * @throws IOException
    *           if io fails
    */
@@ -703,7 +703,7 @@ public final class Configuration {
 
   /**
    * Configure this configuration from a set of command line parameters
-   * 
+   *
    * @param args
    *          the command line arguments
    * @throws IOException
@@ -720,7 +720,7 @@ public final class Configuration {
    * Prepare a string and consider that it may be embedded into quotation
    * characters. This procedure removes trailing and leading quotation
    * marks. If the resulting string is empty, {@code null} is returned
-   * 
+   *
    * @param s
    *          the string
    * @return the prepared version of {@code s}, {@code null} if it was

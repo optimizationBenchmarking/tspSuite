@@ -13,7 +13,7 @@ import org.logisticPlanning.utils.utils.EmptyUtils;
 
 /**
  * An immutable {@link java.util.List list} view on an array.
- * 
+ *
  * @param <DT>
  *          the type
  */
@@ -30,7 +30,7 @@ public class ArrayListView<DT> extends BasicList<DT> {
 
   /**
    * instantiate
-   * 
+   *
    * @param data
    *          the data of the set - will not be copied or cloned, but used
    *          directly
@@ -49,7 +49,7 @@ public class ArrayListView<DT> extends BasicList<DT> {
 
   /**
    * copy another list view
-   * 
+   *
    * @param copy
    *          the other list view
    */
@@ -97,6 +97,7 @@ public class ArrayListView<DT> extends BasicList<DT> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] out;
     final int len;
@@ -257,11 +258,13 @@ public class ArrayListView<DT> extends BasicList<DT> {
 
   /**
    * Make an array list view from a given set of data
-   * 
+   *
    * @param data
    *          the data array to be wrapped into an array list view - will
    *          not be copied or cloned, but used directly
    * @return the array list view representing the data
+   * @param <T>
+   *          the type of the array elements
    */
   @SuppressWarnings({ "rawtypes", "unchecked" })
   public static final <T> ArrayListView<T> makeArrayListView(final T[] data) {

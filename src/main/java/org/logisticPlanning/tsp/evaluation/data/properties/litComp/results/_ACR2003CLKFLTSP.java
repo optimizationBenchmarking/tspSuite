@@ -299,7 +299,7 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
 
   /**
    * calculate the value
-   * 
+   *
    * @param inst
    *          the instance
    * @param percent
@@ -338,7 +338,7 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
 
   /**
    * get the bib record
-   * 
+   *
    * @return the bib record
    */
   private static final BibRecord __rec() {
@@ -375,6 +375,6 @@ final class _ACR2003CLKFLTSP extends LiteratureResultPointSet {
     dest.write(this.getLongName());
     dest.write(" ("); //$NON-NLS-1$
     dest.write(this.getShortName());
-    dest.write(") for large TSP instances is introduced. The algorithm is initialized with Quick-Bor\u016fvka and the kicks are 50 step and 100 step random walks. Experiments are performed on a 300 MHz Pentium II workstation and the results are aggregated over five independent runs per benchmark."); //$NON-NLS-1$    
+    dest.write(") for large TSP instances is introduced. The algorithm is initialized with Quick-Bor\u016fvka and the kicks are 50 step and 100 step random walks. Experiments are performed on a 300 MHz Pentium II workstation and the results are aggregated over five independent runs per benchmark."); //$NON-NLS-1$
   }
 }

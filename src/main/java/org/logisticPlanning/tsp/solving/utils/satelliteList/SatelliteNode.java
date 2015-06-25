@@ -423,7 +423,7 @@ import org.logisticPlanning.utils.utils.HashUtils;
  * -0426-3</a>; OCLC:&nbsp;<a
  * href="https://www.worldcat.org/oclc/19702892">19702892</a></div></li>
  * </ol>
- * 
+ *
  * @since TSP Suite/0.9.8
  */
 public class SatelliteNode {
@@ -445,7 +445,7 @@ public class SatelliteNode {
 
   /**
    * create the satellite node
-   * 
+   *
    * @param pid
    *          the node id
    */
@@ -461,7 +461,7 @@ public class SatelliteNode {
    * as the neighbor is missing. Even if the neighbor at index {@code 0} is
    * {@code null}, there may still be a neighbor which is not {@code null}
    * at index {@code 1}.
-   * 
+   *
    * @param index
    *          the index
    * @return the neighbor, or {@code null} if none is found at that index
@@ -476,7 +476,7 @@ public class SatelliteNode {
   /**
    * Check whether the node is a feasible part of a route, i.e., has
    * exactly two neighbors.
-   * 
+   *
    * @return {@code true} if the node is a feasible, balanced part of a
    *         route.
    */
@@ -505,7 +505,7 @@ public class SatelliteNode {
 
   /**
    * Write this node's text to a string builder
-   * 
+   *
    * @param sb
    *          the destination string builder
    */
@@ -556,7 +556,7 @@ public class SatelliteNode {
 
   /**
    * Delete the connection to node {@code node} in a reversible way.
-   * 
+   *
    * @param node
    *          the node
    * @see #undoDisconnect(SatelliteNode)
@@ -571,7 +571,7 @@ public class SatelliteNode {
 
   /**
    * Undo the deletion of the connection to node {@code n}
-   * 
+   *
    * @param node
    *          the node
    * @see #doDisconnect(SatelliteNode)
@@ -586,7 +586,7 @@ public class SatelliteNode {
 
   /**
    * Connect this node to another node {@code node} in a reversible way.
-   * 
+   *
    * @param node
    *          the other node
    * @see #undoConnect(SatelliteNode)
@@ -601,7 +601,7 @@ public class SatelliteNode {
 
   /**
    * Undo the connection to the given node {@code node}.
-   * 
+   *
    * @param node
    *          the node
    * @see #doConnect(SatelliteNode)
@@ -616,7 +616,7 @@ public class SatelliteNode {
 
   /**
    * Is the given node a neighbor of this node?
-   * 
+   *
    * @param node
    *          the node
    * @return {@code true} if it is a neighbor, {@code false} otherwise

@@ -17,7 +17,7 @@ public final class ExperimentProgressHolder extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

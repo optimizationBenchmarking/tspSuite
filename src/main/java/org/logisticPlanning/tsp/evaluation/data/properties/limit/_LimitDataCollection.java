@@ -14,7 +14,7 @@ public abstract class _LimitDataCollection implements IDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param rs
    *          the run set
    */

@@ -28,7 +28,7 @@ public enum ELabelType {
 
   /**
    * create the reference type
-   * 
+   *
    * @param m
    *          the multiple text
    */
@@ -40,7 +40,7 @@ public enum ELabelType {
   /**
    * get the string to be used when referencing single elements of this
    * type
-   * 
+   *
    * @return the string to be used when referencing single elements of this
    *         type
    */
@@ -51,7 +51,7 @@ public enum ELabelType {
   /**
    * get the string to be used when referencing multiple elements of this
    * type
-   * 
+   *
    * @return the string to be used when referencing multiple elements of
    *         this type
    */

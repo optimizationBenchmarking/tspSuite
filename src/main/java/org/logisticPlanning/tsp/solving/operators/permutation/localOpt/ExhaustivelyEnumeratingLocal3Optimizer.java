@@ -132,7 +132,7 @@ public final class ExhaustivelyEnumeratingLocal3Optimizer
    * {@link ExhaustivelyEnumeratingLocal3Optimizer}. This method makes a
    * sub-sequence of length 3 inside {@code path}, starting right after
    * index {@code beforeStart}, optimal.
-   * 
+   *
    * @param path
    *          the candidate solution in path representation
    * @param beforeStart
@@ -273,7 +273,7 @@ public final class ExhaustivelyEnumeratingLocal3Optimizer
    * sequence of 2-opt moves starting at the canonical permutation which
    * yields the child-permutations traced here than the path going over
    * (1,3,2).
-   * 
+   *
    * @param parent_delta
    *          the length change between the original tour and (1,3,2)
    */

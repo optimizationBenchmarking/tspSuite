@@ -16,7 +16,7 @@ public abstract class BinaryBooleanFunction extends BinaryFunction {
 
   /**
    * Compute the function value
-   * 
+   *
    * @param x1
    *          the first boolean value
    * @param x2
@@ -35,7 +35,7 @@ public abstract class BinaryBooleanFunction extends BinaryFunction {
    * expression, it is not even necessary to evaluate that expression,
    * since we don't care about {@code x2}. Thus, lazy evaluation can safe a
    * lot of runtime.
-   * 
+   *
    * @param x1
    *          the first argument of the expression
    * @return <ol>

@@ -56,7 +56,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
 
   /**
    * Create
-   * 
+   *
    * @param form
    *          the form, or {@code null} if no such transformation it to be
    *          performed
@@ -71,7 +71,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
    * starting at index {@code start} (inclusive) and the end index
    * {@code end} (exclusive) from input {@code in} to the output
    * {@code out}.
-   * 
+   *
    * @param in
    *          the input
    * @param out
@@ -106,7 +106,7 @@ public abstract class NormalizedCharTransformer extends CharTransformer {
    * starting at index {@code start} (inclusive) and the end index
    * {@code end} (exclusive) from input {@code in} to the output
    * {@code out} and insert hyphens where possible.
-   * 
+   *
    * @param in
    *          the input
    * @param out

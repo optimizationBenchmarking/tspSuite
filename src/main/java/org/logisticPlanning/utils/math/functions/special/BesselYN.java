@@ -67,7 +67,7 @@ public final class BesselYN extends BinaryFunction {
   /**
    * Compute the Bessel function of the second kind, of order n of the
    * argument.
-   * 
+   *
    * @param n
    *          integer order
    * @param x
@@ -114,7 +114,7 @@ public final class BesselYN extends BinaryFunction {
    * with the singleton instance {@link BesselYN#INSTANCE
    * BesselYN.INSTANCE} for serialization, i.e., when the instance is
    * written with {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link BesselYN#INSTANCE
    *         BesselYN.INSTANCE})
    */
@@ -127,7 +127,7 @@ public final class BesselYN extends BinaryFunction {
    * with the singleton instance {@link BesselYN#INSTANCE
    * BesselYN.INSTANCE} after serialization, i.e., when the instance is
    * read with {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link BesselYN#INSTANCE
    *         BesselYN.INSTANCE})
    */

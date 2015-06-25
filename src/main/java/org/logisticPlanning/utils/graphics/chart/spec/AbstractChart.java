@@ -20,7 +20,7 @@ public class AbstractChart {
 
   /**
    * Create a new abstract chart
-   * 
+   *
    * @param driver
    *          the line chart's driver
    */
@@ -37,7 +37,7 @@ public class AbstractChart {
 
   /**
    * Get the chart driver
-   * 
+   *
    * @return the line chart's driver
    */
   public ChartDriver getDriver() {
@@ -46,7 +46,7 @@ public class AbstractChart {
 
   /**
    * Paint this chart
-   * 
+   *
    * @param graph
    *          the graphics object to paint o.
    * @param bounds
@@ -75,7 +75,7 @@ public class AbstractChart {
 
   /**
    * Paint this chart
-   * 
+   *
    * @param graph
    *          the graphics object to paint o.
    * @param bounds
@@ -92,7 +92,7 @@ public class AbstractChart {
 
   /**
    * Paint this chart on the given graphics context
-   * 
+   *
    * @param graph
    *          graphics context
    */

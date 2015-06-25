@@ -16,7 +16,7 @@ public final class CollectionPart implements IDataCollection {
 
   /**
    * Create the data collection part
-   * 
+   *
    * @param src
    *          the source collection
    * @param start

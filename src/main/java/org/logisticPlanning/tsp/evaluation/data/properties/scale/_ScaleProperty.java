@@ -10,7 +10,7 @@ import org.logisticPlanning.utils.document.spec.Header;
 
 /**
  * A property that returns the run sets of given scales for an experiment.
- * 
+ *
  * @param <DT>
  *          the dataset type
  * @param <PT>
@@ -24,7 +24,7 @@ abstract class _ScaleProperty<DT extends DataSet<?>, PT> extends
 
   /**
    * Create the property
-   * 
+   *
    * @param base
    *          the base
    * @param type
@@ -50,7 +50,7 @@ abstract class _ScaleProperty<DT extends DataSet<?>, PT> extends
 
   /**
    * Get the base of the scale
-   * 
+   *
    * @return the base of the scale
    */
   public final int getBase() {

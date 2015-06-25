@@ -42,7 +42,7 @@ public final class TestComparisonsHolder extends RankedComparisonModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    */

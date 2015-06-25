@@ -29,7 +29,7 @@ public class AreaUnderCurveTest {
   /**
    * Add a random finite area, beginning at the last x-coordinate in the
    * dest (or a random point)
-   * 
+   *
    * @param dest
    *          the destination array
    * @param rand

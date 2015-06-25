@@ -6,7 +6,7 @@ import org.logisticPlanning.tsp.benchmarking.instances.Instance;
 
 /**
  * Test a search operator for symmetric and asymmetric cases
- * 
+ *
  * @param <P>
  *          the product type
  */
@@ -22,7 +22,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BR17}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -36,7 +36,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BR17}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -51,7 +51,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BR17}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -65,7 +65,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#BR17}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -79,7 +79,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT53}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -93,7 +93,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT53}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -108,7 +108,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT53}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -122,7 +122,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT53}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -136,7 +136,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT70}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -150,7 +150,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT70}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -165,7 +165,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT70}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -179,7 +179,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FT70}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -193,7 +193,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV33}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -207,7 +207,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV33}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -222,7 +222,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV33}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -236,7 +236,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV33}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -250,7 +250,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV35}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -264,7 +264,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV35}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -279,7 +279,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV35}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -293,7 +293,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV35}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -307,7 +307,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV38}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -321,7 +321,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV38}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -336,7 +336,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV38}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -350,7 +350,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV38}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -364,7 +364,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV44}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -378,7 +378,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV44}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -393,7 +393,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV44}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -407,7 +407,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV44}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -421,7 +421,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV47}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -435,7 +435,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV47}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -450,7 +450,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV47}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -464,7 +464,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV47}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -478,7 +478,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV55}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -492,7 +492,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV55}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -507,7 +507,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV55}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -521,7 +521,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV55}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -535,7 +535,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV64}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -549,7 +549,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV64}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -564,7 +564,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV64}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -578,7 +578,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV64}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -592,7 +592,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV70}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -606,7 +606,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV70}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -621,7 +621,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV70}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -635,7 +635,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV70}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -649,7 +649,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV170}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -663,7 +663,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV170}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -678,7 +678,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV170}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -693,7 +693,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#FTV170}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -707,7 +707,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KRO124P}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -721,7 +721,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KRO124P}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -736,7 +736,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KRO124P}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -751,7 +751,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#KRO124P}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -765,7 +765,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#P43}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -779,7 +779,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#P43}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -794,7 +794,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#P43}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -808,7 +808,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#P43}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -822,7 +822,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RY48P}
    * if the inputs of the operator all are identical.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -836,7 +836,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RY48P}
    * if the inputs of the operator differ slightly.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -851,7 +851,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RY48P}
    * if the inputs of the operator differ much.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */
@@ -865,7 +865,7 @@ public class AsymmetricOperatorTest<P> extends SymmetricOperatorTest<P> {
    * Test whether solving works correctly on the instance
    * {@link org.logisticPlanning.tsp.benchmarking.instances.Instance#RY48P}
    * if the inputs of the operator are outputs of previous applications.
-   * 
+   *
    * @throws Throwable
    *           if io fails
    */

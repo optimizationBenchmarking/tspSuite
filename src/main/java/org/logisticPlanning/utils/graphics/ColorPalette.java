@@ -86,7 +86,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param sync
    *          the synchronizer
    * @param maxColors
@@ -104,7 +104,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param maxColors
    *          the maximum colors
    * @param uniqueColors
@@ -116,7 +116,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * create the color palette
-   * 
+   *
    * @param maxColors
    *          the maximum colors
    */
@@ -131,7 +131,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * Calculate a new color.
-   * 
+   *
    * @param index
    *          the data index
    * @return the color to use
@@ -168,7 +168,7 @@ public class ColorPalette extends AbstractList<Color> {
    * dark or too light, it will be replaced with a pseudo-random color
    * calculated from it. If it is neither too dark nor to light, it is
    * returned unchanged.
-   * 
+   *
    * @param c
    *          the color
    * @return the visible version of the color
@@ -201,7 +201,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * get the distance between two vectors
-   * 
+   *
    * @param c1
    *          the first color
    * @param c2
@@ -239,7 +239,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * Compute the distance between two colors.
-   * 
+   *
    * @param a
    *          the first color
    * @param b
@@ -338,7 +338,7 @@ public class ColorPalette extends AbstractList<Color> {
   /**
    * Make a color unique. This is only called if the palette is supposed to
    * ensure color uniqueness.
-   * 
+   *
    * @param c
    *          the color
    * @param others
@@ -423,7 +423,7 @@ public class ColorPalette extends AbstractList<Color> {
 
   /**
    * get the color at a given index
-   * 
+   *
    * @param index
    *          the index
    * @return the color

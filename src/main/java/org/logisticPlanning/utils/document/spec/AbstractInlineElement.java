@@ -10,7 +10,7 @@ public abstract class AbstractInlineElement extends Element {
 
   /**
    * create the inline element
-   * 
+   *
    * @param owner
    *          the owning element
    * @throws IOException
@@ -96,7 +96,7 @@ public abstract class AbstractInlineElement extends Element {
 
   /**
    * Invoke a parameter-less macro
-   * 
+   *
    * @param desc
    *          the macro descriptor
    * @throws IOException

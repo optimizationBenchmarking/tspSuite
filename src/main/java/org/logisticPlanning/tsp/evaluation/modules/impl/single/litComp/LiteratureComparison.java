@@ -78,7 +78,7 @@ public class LiteratureComparison extends SingleModule {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -261,7 +261,7 @@ public class LiteratureComparison extends SingleModule {
 
   /**
    * write a point
-   * 
+   *
    * @param dest
    *          the dest
    * @param p
@@ -306,7 +306,7 @@ public class LiteratureComparison extends SingleModule {
 
   /**
    * Write a comparison
-   * 
+   *
    * @param set
    *          the result set
    * @param data
@@ -401,7 +401,7 @@ public class LiteratureComparison extends SingleModule {
 
         if (a > 0) {
           text.writeLong(a);
-          text.write(" comparisons indicated ");//$NON-NLS-1$        
+          text.write(" comparisons indicated ");//$NON-NLS-1$
           try (Emphasize em = text.emphasize()) {
             em.write(res2.getShortName());
           }
@@ -409,10 +409,10 @@ public class LiteratureComparison extends SingleModule {
 
         if (b > 0) {
           if (a > 0) {
-            text.write(" and ");//$NON-NLS-1$        
+            text.write(" and ");//$NON-NLS-1$
           }
           text.writeLong(b);
-          text.write(" indicated ");//$NON-NLS-1$        
+          text.write(" indicated ");//$NON-NLS-1$
           try (Emphasize em = text.emphasize()) {
             em.write(res2.getOther().getShortName());
           }

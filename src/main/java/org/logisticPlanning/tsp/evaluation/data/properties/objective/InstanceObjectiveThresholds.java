@@ -21,7 +21,7 @@ public final class InstanceObjectiveThresholds {
    * Get the thresholds for a given instance. Warning: The returned array
    * must not be modified. If you must modify this data,
    * {@link java.lang.Object#clone() clone} it and modify the clone!
-   * 
+   *
    * @param inst
    *          the instance
    * @return the thresholds

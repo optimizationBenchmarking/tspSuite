@@ -62,7 +62,7 @@ public enum EBraces {
 
   /**
    * Create
-   * 
+   *
    * @param begin
    *          the beginning character
    * @param end
@@ -75,7 +75,7 @@ public enum EBraces {
 
   /**
    * Get the beginning char
-   * 
+   *
    * @return the beginning char
    */
   public final char getBegin() {
@@ -84,7 +84,7 @@ public enum EBraces {
 
   /**
    * Get the end char
-   * 
+   *
    * @return the end char
    */
   public final char getEnd() {

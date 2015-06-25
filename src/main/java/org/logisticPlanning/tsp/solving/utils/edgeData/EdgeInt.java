@@ -34,7 +34,7 @@ public abstract class EdgeInt extends EdgeNumber {
 
   /**
    * create
-   * 
+   *
    * @param n
    *          the number of nodes
    */
@@ -68,7 +68,7 @@ public abstract class EdgeInt extends EdgeNumber {
 
   /**
    * Allocate an edge int array with all {@code int}s set to {@code (0)}.
-   * 
+   *
    * @param f
    *          the objective function
    * @param old
@@ -84,7 +84,7 @@ public abstract class EdgeInt extends EdgeNumber {
 
   /**
    * Allocate an edge int array with all {@code int}s set to {@code (0)}.
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param symmetric

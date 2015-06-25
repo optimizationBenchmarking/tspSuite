@@ -41,7 +41,7 @@ public enum ELineMode {
   /**
    * Create an iterator wrapping around the source iterator and inducing
    * the prescribed line behavior
-   * 
+   *
    * @param source
    *          the source iterator
    * @return the iterator with the required line behavior

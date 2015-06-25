@@ -114,7 +114,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
   private static final String CAP_3 = " over all benchmark instances where sufficient data was available, for different time measures (with proper scaling) and goal relative objective values ";//$NON-NLS-1$
 
   /** the sub caption 0 */
-  private static final String SCAP_0 = ("mean ");//$NON-NLS-1$  
+  private static final String SCAP_0 = ("mean ");//$NON-NLS-1$
   /** the sub caption 1 */
   private static final String SCAP_1 = (" over the ");//$NON-NLS-1$
   /** the sub caption 2 */
@@ -129,7 +129,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -163,7 +163,7 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param property
@@ -177,7 +177,6 @@ final class _ExperimentSetECDFDiagrams extends _ExperimentSetECDFBase {
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final ExperimentECDFProperty property, final Document doc,
       final ArrayList<Line2D> lines,

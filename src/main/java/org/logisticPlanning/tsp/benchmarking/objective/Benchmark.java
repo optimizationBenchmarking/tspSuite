@@ -199,49 +199,49 @@ public final class Benchmark extends Configurable {
 
   /**
    * the root directory for all results
-   * 
+   *
    * @serial a file pointing to the root direction for the log files
    */
   private File m_dir;
 
   /**
    * the actual directory to hold this log file
-   * 
+   *
    * @serial a file with the directory for the current log file
    */
   private File m_realDir;
 
   /**
    * the benchmark problem instance
-   * 
+   *
    * @serial the benchmark instance associated with the benchmark
    */
   final Instance m_instance;
 
   /**
    * Are we already running (true), i.e., finished setup, or not (false)?
-   * 
+   *
    * @serial a boolean value indicating whether setup has been finished
    */
   private boolean m_running;
 
   /**
    * the maximum function evaluations (FEs) per run
-   * 
+   *
    * @serial a positive long value with the maximum allowed FEs
    */
   long m_maxFEs;
 
   /**
    * the maximum distance evaluations (DEs) per run
-   * 
+   *
    * @serial a positive long value with the maximum allowed DEs
    */
   long m_maxDEs;
 
   /**
    * the maximum runtime in ms per run
-   * 
+   *
    * @serial a positive long value with the maximum allowed runtime in ms
    */
   long m_maxTime;
@@ -251,7 +251,7 @@ public final class Benchmark extends Configurable {
    * are in a benchmark instance, distances will be computed based on
    * coordinate lists if possible to save memory. If fewer cities are in
    * the instance, the distance lists will automatically be used.
-   * 
+   *
    * @serial an int with the largest number of cities for which distance
    *         matrices will be used
    */
@@ -259,7 +259,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * the maximum number of runs per problem instance
-   * 
+   *
    * @serial an int with the maximum number of runs per instance
    */
   int m_maxRuns;
@@ -275,7 +275,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * Create a setup
-   * 
+   *
    * @param instance
    *          the problem instance
    */
@@ -285,7 +285,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * Create a setup
-   * 
+   *
    * @param instance
    *          the problem instance
    * @param baseDir
@@ -400,7 +400,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * Get the problem instance to be benchmarked
-   * 
+   *
    * @return the problem instance to be benchmarked
    */
   public final Instance getInstance() {
@@ -409,7 +409,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * get a final file to use
-   * 
+   *
    * @param prefix
    *          a prefix or {@code null}
    * @return the temporary file
@@ -440,7 +440,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * The number of runs that still need to be performed
-   * 
+   *
    * @return the number of runs that still need to be performed
    */
   public synchronized final int remainingRunCount() {
@@ -460,7 +460,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * Set the maximum allowed function evaluations (FEs).
-   * 
+   *
    * @param fes
    *          the maximum FEs
    */
@@ -471,7 +471,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * Set the maximum allowed distance evaluations (EEs).
-   * 
+   *
    * @param des
    *          the maximum EEs
    */
@@ -484,7 +484,7 @@ public final class Benchmark extends Configurable {
    * Set the maximum allowed time per run in milliseconds. The actually
    * allocated runtime will probably be bigger than this, as we only check
    * the system time when a log point is reached.
-   * 
+   *
    * @param ms
    *          the maximum time per run in milliseconds
    */
@@ -495,7 +495,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * get the actual directory
-   * 
+   *
    * @return the actual directory
    */
   private synchronized final File __getRealDir() {
@@ -520,7 +520,7 @@ public final class Benchmark extends Configurable {
 
   /**
    * initialize
-   * 
+   *
    * @param makeDirs
    *          should we make the directories?
    */
@@ -561,7 +561,7 @@ public final class Benchmark extends Configurable {
    * s are not thread-safe: one function must be used only in one single
    * thread. However, you can create arbitrarily many such functions, one
    * for each thread you want to use, for instance.
-   * 
+   *
    * @return the new objective function.
    */
   public final ObjectiveFunction createObjective() {
@@ -582,7 +582,7 @@ public final class Benchmark extends Configurable {
    * <p>
    * The values are listed from the largest to the smallest.
    * </p>
-   * 
+   *
    * @param n
    *          the number of nodes
    * @param maxDEs
@@ -770,7 +770,7 @@ public final class Benchmark extends Configurable {
    * <p>
    * The values are sorted from the smallest to the largest.
    * </p>
-   * 
+   *
    * @param optimum
    *          the known optimum or lower bound
    * @return the array of objective values that would trigger logging

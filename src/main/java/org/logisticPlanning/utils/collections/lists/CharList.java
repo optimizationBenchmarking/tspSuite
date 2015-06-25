@@ -21,7 +21,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * Instantiate the {@code CharList}
-   * 
+   *
    * @param capacity
    *          the number of valid elements in the data array
    */
@@ -68,7 +68,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * Add/insert the unicode character (char) at the given index
-   * 
+   *
    * @param index
    *          the index
    * @param element
@@ -87,7 +87,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * Add/insert the unicode character (char) at the end of the list
-   * 
+   *
    * @param element
    *          the char to be added
    */
@@ -132,7 +132,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * fill this list with a given value
-   * 
+   *
    * @param value
    *          the value
    */
@@ -143,7 +143,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * Get the {@code char} at index {@code index}
-   * 
+   *
    * @param index
    *          the index
    * @return the {@code char} at that index
@@ -156,7 +156,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
   /**
    * Ensure that there are at least {@code size} free {@code char}s
    * starting at {@code index}.
-   * 
+   *
    * @param size
    *          the size
    * @param index
@@ -224,7 +224,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /**
    * copy the list's data to an array
-   * 
+   *
    * @param array
    *          the array
    * @param data
@@ -254,6 +254,7 @@ public class CharList extends BasicArrayList<java.lang.Character, char[]> {
 
   /** {@inheritDoc} */
   @Override
+  @SuppressWarnings("unchecked")
   public final <T> T[] toArray(final T[] a) {
     final T[] arr;
     final int size;

@@ -26,7 +26,7 @@ public class InstancesProperty extends
 
   /**
    * Create
-   * 
+   *
    * @param insts
    *          the instances
    */

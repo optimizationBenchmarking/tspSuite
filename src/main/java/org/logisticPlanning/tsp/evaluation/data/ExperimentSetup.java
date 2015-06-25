@@ -53,7 +53,7 @@ public final class ExperimentSetup {
 
   /**
    * create an experiment setup
-   * 
+   *
    * @param algoName
    *          the algorithm
    * @param initName
@@ -101,7 +101,7 @@ public final class ExperimentSetup {
 
   /**
    * Get the authors of the algorithm and experiment, if known.
-   * 
+   *
    * @return the authors of the algorithm and experiment, if known (
    *         {@link org.logisticPlanning.utils.document.spec.bib.BibAuthors#EMPTY}
    *         if no author information could be detected)
@@ -112,7 +112,7 @@ public final class ExperimentSetup {
 
   /**
    * get the algorithm name
-   * 
+   *
    * @return the algorithm name
    */
   public final String getAlgorithmName() {
@@ -121,7 +121,7 @@ public final class ExperimentSetup {
 
   /**
    * get the initializer name
-   * 
+   *
    * @return the initializer name
    */
   public final String getInitName() {
@@ -130,7 +130,7 @@ public final class ExperimentSetup {
 
   /**
    * get the setup name
-   * 
+   *
    * @return the setup name
    */
   public final String getSetupName() {
@@ -139,7 +139,7 @@ public final class ExperimentSetup {
 
   /**
    * get the setup of the algorithm
-   * 
+   *
    * @return the setup of the algorithm
    */
   public final ArraySetView<SetupItem> getAlgoSetup() {
@@ -148,7 +148,7 @@ public final class ExperimentSetup {
 
   /**
    * get the setup of the initialization algorithm
-   * 
+   *
    * @return the setup of the initialization algorithm
    */
   public final ArraySetView<SetupItem> getInitSetup() {
@@ -157,7 +157,7 @@ public final class ExperimentSetup {
 
   /**
    * get the creator information
-   * 
+   *
    * @return the creator information
    */
   public final ArraySetView<SetupItem> getCreator() {
@@ -166,7 +166,7 @@ public final class ExperimentSetup {
 
   /**
    * get the setup of the system where the algorithms where running
-   * 
+   *
    * @return the setup of the system where the algorithms where running
    */
   public final ArraySetView<SetupItem> getSysSetup() {
@@ -175,7 +175,7 @@ public final class ExperimentSetup {
 
   /**
    * find the authors
-   * 
+   *
    * @return the authors
    */
   private final BibAuthors __findAuthors() {
@@ -205,7 +205,7 @@ public final class ExperimentSetup {
 
   /**
    * Get an author name from a given string
-   * 
+   *
    * @param s
    *          the string
    * @param auth
@@ -246,7 +246,7 @@ public final class ExperimentSetup {
 
   /**
    * a single bibliography author
-   * 
+   *
    * @param s
    *          the string
    * @return the author

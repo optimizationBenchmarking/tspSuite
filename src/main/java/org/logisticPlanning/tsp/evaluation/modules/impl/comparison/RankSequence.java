@@ -31,7 +31,7 @@ public final class RankSequence extends Sequence {
 
   /**
    * Create the rank sequence
-   * 
+   *
    * @param root
    *          the root module
    * @param ranking

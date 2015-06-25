@@ -10,7 +10,7 @@ import org.logisticPlanning.tsp.solving.searchSpaces.trees.math.Function;
 public final class ASin extends Function {
   /**
    * Create a node with the given children
-   * 
+   *
    * @param pchildren
    *          the child nodes
    * @param in
@@ -28,7 +28,7 @@ public final class ASin extends Function {
 
   /**
    * Fill in the text associated with this node
-   * 
+   *
    * @param sb
    *          the string builder
    */

@@ -10,7 +10,7 @@ public final class StringBuilderCharOutput extends CharOutput {
 
   /**
    * Create
-   * 
+   *
    * @param out
    *          the output destination
    */
@@ -21,7 +21,7 @@ public final class StringBuilderCharOutput extends CharOutput {
 
   /**
    * Get the string builder that is written to
-   * 
+   *
    * @return the string builder that is written to
    */
   public final StringBuilder getStringBuilder() {

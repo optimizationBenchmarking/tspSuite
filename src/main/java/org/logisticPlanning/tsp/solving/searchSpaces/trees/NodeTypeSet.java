@@ -484,7 +484,7 @@ import org.logisticPlanning.utils.config.Configurable;
  * href="http://personal.d.bbn.com/~dmontana/papers/stgp.pdf"
  * >3</a>]</div></div></li>
  * </ol>
- * 
+ *
  * @param <CT>
  *          the node type
  */
@@ -572,7 +572,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the number of entries
-   * 
+   *
    * @return the number of entries
    */
   public final int size() {
@@ -581,7 +581,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the node type at the specified index
-   * 
+   *
    * @param index
    *          the index into the information set
    * @return the node type at the specified index
@@ -592,7 +592,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the number of terminal node types
-   * 
+   *
    * @return the number of terminal node types
    */
   public final int terminalCount() {
@@ -601,7 +601,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the terminal node type at the specified index
-   * 
+   *
    * @param index
    *          the index into the information set
    * @return the node type at the specified index
@@ -612,7 +612,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the number of non-terminal node types
-   * 
+   *
    * @return the number of non-terminal node types
    */
   public final int nonTerminalCount() {
@@ -621,7 +621,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Get the non-terminal node type at the specified index
-   * 
+   *
    * @param index
    *          the index into the information set
    * @return the node type at the specified index
@@ -632,7 +632,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * IfThenElse a new entry to the node type set
-   * 
+   *
    * @param type
    *          the node type to be added
    */
@@ -682,7 +682,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Obtain a random node type
-   * 
+   *
    * @param r
    *          the random number generator
    * @return the node type
@@ -699,7 +699,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Obtain a random terminal node type
-   * 
+   *
    * @param r
    *          the random number generator
    * @return the terminal node type
@@ -716,7 +716,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Obtain a random non-terminal node type
-   * 
+   *
    * @param r
    *          the random number generator
    * @return the non-terminal node type
@@ -733,7 +733,7 @@ public final class NodeTypeSet<CT extends Node<CT>> extends Configurable {
 
   /**
    * Check whether the given node type is contained in this type set or not
-   * 
+   *
    * @param t
    *          the node type
    * @return true if the type is contained, false otherwise

@@ -30,7 +30,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
 
   /**
    * instantiate
-   * 
+   *
    * @param source
    *          the source iterator
    */
@@ -93,7 +93,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
 
   /**
    * a special preview routine
-   * 
+   *
    * @return {@code true} if there is a next element, {@code false}
    *         otherwise
    */
@@ -104,7 +104,7 @@ class _PointIteratorWrapper2D extends _PointIterator2D {
   /**
    * Compare two doubles: considers doubles which are extremely close to
    * each other (neighbors and second neighbors) as the same.
-   * 
+   *
    * @param a
    *          the first double
    * @param b

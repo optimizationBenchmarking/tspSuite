@@ -15,7 +15,7 @@ public final class AllScaleInstances extends
 
   /**
    * Create a scale run set
-   * 
+   *
    * @param lowerScaleBound
    *          the lower scale bound
    * @param upperScaleBound
@@ -39,7 +39,7 @@ public final class AllScaleInstances extends
 
   /**
    * Get the base of the scale set property
-   * 
+   *
    * @return the base of the scale set property
    */
   public final int getBase() {

@@ -404,8 +404,8 @@ import java.util.ArrayList;
  * further information: [<a href="http://icannga05.dei.uc.pt/">1</a>]</div>
  * </li>
  * </ol>
- * 
- * 
+ *
+ *
  @author <em><a href="http://www.it-weise.de/">Thomas Weise</a></em>,
  *         Email:&nbsp;<a
  *         href="mailto:tweise@ustc.edu.cn">tweise@ustc.edu.cn</a>
@@ -417,7 +417,7 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * the distance computer
-   * 
+   *
    * @param n
    *          the dimension
    */
@@ -433,7 +433,7 @@ public abstract class DistanceComputer extends _Constants {
    * Compute the distance between two cities or nodes. All distances are
    * 1-based, meaning valid node/city indices are in {@code 1..}
    * {@link #n()}.
-   * 
+   *
    * @param i
    *          the first city (or node), this index is 1-based
    * @param j
@@ -457,7 +457,7 @@ public abstract class DistanceComputer extends _Constants {
    * href="#cite_LKMUB1999GAFTTSPARORAO" style="font-weight:bold">6</a>, <a
    * href="#cite_P1996GAFTTSP" style="font-weight:bold">9</a>].
    * </p>
-   * 
+   *
    * @param nodes
    *          The permutation of the nodes from {@code 1..n}
    * @return the total distance sum
@@ -498,7 +498,7 @@ public abstract class DistanceComputer extends _Constants {
    * style="font-weight:bold">6</a>, <a href="#cite_P1996GAFTTSP"
    * style="font-weight:bold">9</a>].
    * </p>
-   * 
+   *
    * @param adjacencyList
    *          the adjacency list representing the candidate solution to be
    *          evaluated
@@ -524,7 +524,7 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * Obtain the number of cities.
-   * 
+   *
    * @return the number of cities
    */
   public final int n() {
@@ -533,7 +533,7 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * Print the contents of this distance measuring object.
-   * 
+   *
    * @param out
    *          the {@link java.io.PrintWriter}
    */
@@ -544,13 +544,12 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * Print the contents of this distance measuring object to a writer.
-   * 
+   *
    * @param w
    *          the {@link java.io.Writer}
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   public final void print(final Writer w) throws IOException {
     try (PrintWriter pw = new PrintWriter(w)) {
       this.print(pw);
@@ -560,7 +559,7 @@ public abstract class DistanceComputer extends _Constants {
   /**
    * Print the contents of this distance measuring object to an output
    * stream.
-   * 
+   *
    * @param s
    *          the output stream
    * @throws IOException
@@ -574,7 +573,7 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * Print the contents of this distance measuring object to a file
-   * 
+   *
    * @param f
    *          the file
    * @throws IOException
@@ -588,13 +587,12 @@ public abstract class DistanceComputer extends _Constants {
 
   /**
    * Load the contents of this distance measuring object.
-   * 
+   *
    * @param in
    *          the {@link java.io.BufferedReader}
    * @throws IOException
    *           on failure
    */
-  @SuppressWarnings("unused")
   void load(final BufferedReader in) throws IOException {
     //
   }
@@ -654,7 +652,7 @@ public abstract class DistanceComputer extends _Constants {
    * is asymmetric, you will get wrong results or even an
    * {@link java.io.IOException} on loading.
    * </p>
-   * 
+   *
    * @param br
    *          the buffered reader
    * @param intHint
@@ -887,7 +885,7 @@ public abstract class DistanceComputer extends _Constants {
    * {@link #read(BufferedReader, int, boolean, boolean)} for a detailed
    * explanation of the parameters.
    * </p>
-   * 
+   *
    * @param r
    *          the reader
    * @param intHint
@@ -927,7 +925,7 @@ public abstract class DistanceComputer extends _Constants {
    * {@link #read(BufferedReader, int, boolean, boolean)} for a detailed
    * explanation of the parameters.
    * </p>
-   * 
+   *
    * @param is
    *          the input stream
    * @param intHint
@@ -967,7 +965,7 @@ public abstract class DistanceComputer extends _Constants {
    * {@link #read(BufferedReader, int, boolean, boolean)} for a detailed
    * explanation of the parameters.
    * </p>
-   * 
+   *
    * @param f
    *          the file
    * @param intHint

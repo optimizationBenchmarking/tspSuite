@@ -34,7 +34,7 @@ public final class Hypot extends BinaryFunction {
    * with the singleton instance {@link Hypot#INSTANCE Hypot.INSTANCE} for
    * serialization, i.e., when the instance is written with
    * {@link java.io.ObjectOutputStream#writeObject(Object)}.
-   * 
+   *
    * @return the replacement instance (always {@link Hypot#INSTANCE
    *         Hypot.INSTANCE})
    */
@@ -47,7 +47,7 @@ public final class Hypot extends BinaryFunction {
    * with the singleton instance {@link Hypot#INSTANCE Hypot.INSTANCE}
    * after serialization, i.e., when the instance is read with
    * {@link java.io.ObjectInputStream#readObject()}.
-   * 
+   *
    * @return the replacement instance (always {@link Hypot#INSTANCE
    *         Hypot.INSTANCE})
    */

@@ -14,7 +14,7 @@ final class _TimeLimitDataCollection extends _LimitDataCollection {
 
   /**
    * the run set
-   * 
+   *
    * @param time
    *          the time limit
    * @param rs

@@ -13,7 +13,7 @@ public final class SubListView extends _SubView {
 
   /**
    * Create a new point list view
-   * 
+   *
    * @param list
    *          the list
    * @param dims

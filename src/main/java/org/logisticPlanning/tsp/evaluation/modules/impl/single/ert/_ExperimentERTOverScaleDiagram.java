@@ -163,7 +163,7 @@ final class _ExperimentERTOverScaleDiagram extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param isActive
@@ -198,7 +198,7 @@ final class _ExperimentERTOverScaleDiagram extends
 
   /**
    * Make the figure
-   * 
+   *
    * @param instances
    *          the instances
    * @param data

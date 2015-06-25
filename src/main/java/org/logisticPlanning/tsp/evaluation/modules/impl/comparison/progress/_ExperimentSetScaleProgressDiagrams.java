@@ -91,7 +91,7 @@ final class _ExperimentSetScaleProgressDiagrams extends
 
   /**
    * create!
-   * 
+   *
    * @param owner
    *          the macro's owner
    * @param property
@@ -132,7 +132,7 @@ final class _ExperimentSetScaleProgressDiagrams extends
 
   /**
    * make a figure
-   * 
+   *
    * @param expset
    *          the experiment set
    * @param lines
@@ -144,7 +144,6 @@ final class _ExperimentSetScaleProgressDiagrams extends
    * @throws IOException
    *           if io fails
    */
-  @SuppressWarnings("unused")
   private final void __makeFigure(final ExperimentSet expset,
       final SameScaleInstances insts, final ArrayList<Line2D> lines,
       final ArrayList<Map.Entry<Experiment, Object>> areaLines)
