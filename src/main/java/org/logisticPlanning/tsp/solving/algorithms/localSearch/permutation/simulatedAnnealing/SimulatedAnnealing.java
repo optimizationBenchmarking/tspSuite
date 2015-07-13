@@ -14,7 +14,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
  * An SA algorithm.
- * 
+ *
  * @author Jiahui Liu, jl4161@columbia.edu
  */
 public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
@@ -199,12 +199,12 @@ public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
         0, 1, this.m_coolingRate);
 
     this.m_criticalTemp = config.getDouble(
-        ProblemDependentSA.CRITICAL_TEMPERATURE,
+        SimulatedAnnealing.CRITICAL_TEMPERATURE,
         this.m_initialTemp / 10000, this.m_initialTemp,
         this.m_criticalTemp);
 
     this.m_constProbability = config.getDouble(
-        ProblemDependentSA.CONSTANT_PROBABILITY, 0, 0.1,
+        SimulatedAnnealing.CONSTANT_PROBABILITY, 0, 0.1,
         this.m_constProbability);
   }
 
@@ -223,10 +223,10 @@ public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
     Configurable.printKey(SimulatedAnnealing.COOLING_RATE, ps);
     ps.println(this.m_coolingRate);
 
-    Configurable.printKey(ProblemDependentSA.CRITICAL_TEMPERATURE, ps);
+    Configurable.printKey(SimulatedAnnealing.CRITICAL_TEMPERATURE, ps);
     ps.println(this.m_criticalTemp);
 
-    Configurable.printKey(ProblemDependentSA.CONSTANT_PROBABILITY, ps);
+    Configurable.printKey(SimulatedAnnealing.CONSTANT_PROBABILITY, ps);
     ps.println(this.m_constProbability);
 
   }
@@ -247,12 +247,12 @@ public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
         + "(e.g.cooling rate = 0.99, "//$NON-NLS-1$
         + "then every time the temperature will be by 0.99*temperature : ");//$NON-NLS-1$
 
-    Configurable.printKey(ProblemDependentSA.CRITICAL_TEMPERATURE, ps);
+    Configurable.printKey(SimulatedAnnealing.CRITICAL_TEMPERATURE, ps);
     ps.println("The ciritical temperature that divides "//$NON-NLS-1$
         + "between Metropolis acceptance probability and"//$NON-NLS-1$
         + "constant acceptance probability :");//$NON-NLS-1$
 
-    Configurable.printKey(ProblemDependentSA.CONSTANT_PROBABILITY, ps);
+    Configurable.printKey(SimulatedAnnealing.CONSTANT_PROBABILITY, ps);
     ps.println("The constant acceptance probability :");//$NON-NLS-1$
   }
 }
