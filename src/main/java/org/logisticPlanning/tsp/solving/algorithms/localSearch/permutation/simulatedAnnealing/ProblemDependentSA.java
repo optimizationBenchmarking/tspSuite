@@ -66,7 +66,7 @@ TSPLocalSearchAlgorithm<int[]> {
 		this.m_update = PermutationUpdate_Swap.INSTANCE;
 
 		// Default cooling rate
-		this.m_coolingRate = 0.997;
+		this.m_coolingRate = 0.99;
 		// Default initial temp
 		this.m_initialTemp = 10000;
 
