@@ -25,6 +25,8 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	private int[] m_neighbors;
 	/** The better tour */
 	private int[] m_betterTour;
+//	/** Store the tour length of the best tour*/
+//	private long m_bestTourLength = Long.MAX_VALUE;
 	/** The root node */
 	private int m_rootNode;
 	/** The first node of the stem connecting the root node */
@@ -33,8 +35,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	private int m_endStemNode;
 	/** The j node, selecting form the available nodes */
 	private int m_jNode;
-	/** Store four values that present whether change the structure in the four methods */
-	private boolean[] m_flags;
 	/** The level to change the structure*/
 	private int m_level;
 	/** Store the deleted edges*/
@@ -49,10 +49,17 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	private int m_rootListFSecLength;
 	/** The neighbor list for PSec in the FSec*/
 	private CandidateSet m_nearestNeighborhood;
+	/** The best solution in the loop of FSec , in the embedded PSec*/
+	private int[] m_bestSolutionFSec;
+	/** The length of best solution in the loop of FSec, in the embedded PSec*/
+	private long m_bestSolutionLengthFSec;
+	/** The improvement of the current solution compared with the best solution*/
+	private int m_improvement;
 	//private boolean m_doOnce = true;
 	/** The information of tour */
 	private ObjectiveFunction m_f;
 	private Individual<int[]> m_dst;
+	private boolean debug = false;
 //long temp = Long.MAX_VALUE;
 	/** create */
 	public FundamentalStemAndCycle() {
@@ -107,8 +114,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_endStemNode = 0;
 		/** The j node, selecting form the available nodes */
 		this.m_jNode = 0;
-		/**Store the variance for four method, 0 presents no change occur, 1 present change*/
-		this.m_flags = null;
 		/** Store the deleted edges*/
 		this.m_tubaEdge = null;
 		/** The list of root node can be selected*/
@@ -117,6 +122,8 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_rootListFSec = null;
 		/** The neighbor list for PSec in the FSec*/
 		//this.m_nearestNeighbor = null;
+		/** The best solution in the loop of FSec , in the embeded PSec*/
+		this.m_bestSolutionFSec = null;
 		/** The information of tour */
 		this.m_f = null;
 		this.m_dst = null;
@@ -132,28 +139,19 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_rootList = new int[this.m_n];
 		//The root list for FSec
 		this.m_rootListFSec = new int[this.m_n];
+		this.m_bestSolutionFSec = new int[this.m_n];
 		//level in sec is 6, select 10 nearest neighbors
-		//this.m_nearestNeighbor = new int[this.m_n][10];
-//		this.__initRootList();
-//		this.m_rootNode = this.__getRandomRoot();
-//		this.m_beginStemNode = this.m_rootNode;
-//		this.m_endStemNode = this.m_rootNode;
-		this.m_flags = new boolean[4];
 		this.m_level = this.m_n<<1;
 		//The end of the int[][m_level] store the length of the int[]
 		this.m_tubaEdge = new boolean[this.m_n][this.m_n];
-		//System.out.println("**********Start*************");
-		//this.__initTubaList();
-//		this.__initRootList();
-//		this.__secRootNoChanged();
-//		if(this.m_doOnce) {
-//			this.m_doOnce = false;
-//			this.__greedAlgorithm();
-//			this.__changeToTour();
-//			this.__resetBestTour();
-//		}
+		if(this.debug) {
+			System.out.println("**********Start*************");
+		}
 		
 		this.__pSecRootNoChanged();
+		
+//		this.__initRootList();
+//		this.__secRootNoChanged();
 		
 		//this.__fSecRootNoChanged();
 		
@@ -171,12 +169,14 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			int index = this.m_f.getRandom().nextInt(this.m_rootListLength);
 			root = this.m_rootList[index];
 			this.m_rootList[index] = this.m_rootList[--this.m_rootListLength];
-			//System.out.println("root list length" + this.m_rootListLength);
 		} else {
 			System.out.println("root list is empoty!!");
 			int[] i = new int[2];
 			i[2] = 8;
 			System.exit(1);
+		}
+		if(this.debug) {
+			System.out.println("root" + root);
 		}
 		return root;
 	}
@@ -223,19 +223,19 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	 * @return no use
 	 */
 	private final void __pSecRootNoChanged() {
-		long lastTourLength = Integer.MAX_VALUE;
+		long lastTourLength = Long.MAX_VALUE;
 		this.__initRootList();
-		while(this.m_rootListLength != 0 && (!(this.m_f.shouldTerminate()))) {
+		while(this.m_rootListLength > this.m_n * 0.85 && (!(this.m_f.shouldTerminate()))) {
+			//this.m_n * 0.85
+//			System.out.println("this.m_rootListLength "+this.m_rootListLength);
+//			System.out.println("(this.m_n/2) "+(this.m_n/2));
+			this.m_improvement = 0;
 			this.__secRootNoChanged();
 			this.__resetBestTour();
-			this.m_beginStemNode = this.m_rootNode;
-			this.m_endStemNode = this.m_rootNode;
-			long currentTour = this.__getBetterTour();
-			if(currentTour < lastTourLength) {
-				lastTourLength = currentTour;
+			if(this.m_dst.tourLength < lastTourLength) {
+				lastTourLength = this.m_dst.tourLength;
 				this.__initRootList();
 			}
-			//System.out.println("root list length " + this.m_rootListLength);
 		}
 	}
 	/**
@@ -265,10 +265,13 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_endStemNode = this.m_rootNode;
 		//Before the psec, the best tour length
 		long lastTourLength = this.__getBetterTour();
+		this.m_bestSolutionLengthFSec = lastTourLength;
+		System.arraycopy(this.m_betterTour, 0, this.m_bestSolutionFSec, 0, this.m_n);
 		while(this.m_rootListFSecLength > 1) {
-			long currentTourLength = this.__secRootNoChangedFSec();
-			if(currentTourLength < lastTourLength) {
-				lastTourLength = currentTourLength;
+			this.m_improvement = 0;
+			this.__secRootNoChangedFSec();
+			if(this.m_bestSolutionLengthFSec < lastTourLength) {
+				lastTourLength = this.m_bestSolutionLengthFSec;
 				this.__initRootList();
 			}
 		}
@@ -279,9 +282,9 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 	private final void __secFirstFsec() {
 		//Set for the FSec
 		this.m_level = 6;
-		long bestTourLength = Integer.MAX_VALUE;
-		int bestLevelLength = 0;
-		int[] bestSolution = this.m_betterTour;
+//		long bestTourLength = Long.MAX_VALUE;
+//		int bestLevelLength = 0;
+//		int[] bestSolution = new int[this.m_n];
 		//Level is 6, add root node
 		int[] deletedEdge = new int[14];
 		int deletedEdgeLength = 0;
@@ -297,10 +300,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			countLevel++;
 			int[] jOnCycle = this.__jOnCycleRootNoChanged();
 			int[] jOnStem = this.__jOnStemNoRootChanged();
-			int trialBefore = this.__trialSolution(this.m_rootNode, 
-					this.__getLeftNeighbor(this.m_rootNode), 
-					this.__getRightNeighbor(this.m_rootNode), 
-					this.m_endStemNode);
 			if(jOnCycle == null && jOnStem == null) {
 				break;
 			}
@@ -363,18 +362,13 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				deletedEdge[deletedEdgeLength++] = jOnCycle[2];
 				deletedEdge[deletedEdgeLength++] = jOnCycle[3];
 
-				int trialAfter = this.__trialSolution(this.m_rootNode, 
-						this.__getLeftNeighbor(this.m_rootNode), 
-						this.__getRightNeighbor(this.m_rootNode), 
-						this.m_endStemNode);
-				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
-					long currentTourlength = this.__getBetterTour();
-					if(currentTourlength < bestTourLength) {
-						bestTourLength = currentTourlength;
-						bestLevelLength = deletedEdgeLength;
-						bestSolution = this.m_betterTour;
-					}
-				}
+//				long currentTourlength = this.__getBetterTour();
+//				if(currentTourlength < bestTourLength) {
+//					bestTourLength = currentTourlength;
+//					bestLevelLength = deletedEdgeLength;
+//					System.arraycopy(this.m_betterTour, 0, bestSolution, 0, this.m_n);
+//					//bestSolution = this.m_betterTour;
+//				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
 				this.__addEdge(jOnStem[1], jOnStem[2]);
 				//System.out.println("j on stem Delete edge " + jOnStem[1] + " " + jOnStem[2]);
@@ -391,18 +385,13 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				deletedEdge[deletedEdgeLength++] = jOnStem[1];
 				deletedEdge[deletedEdgeLength++] = jOnStem[2];
 
-				int trialAfter = this.__trialSolution(this.m_rootNode, 
-						this.__getLeftNeighbor(this.m_rootNode), 
-						this.__getRightNeighbor(this.m_rootNode), 
-						this.m_endStemNode);
-				if((jOnStem[0] + trialAfter - trialBefore) > 0) {
-					long currentTourlength = this.__getBetterTour();
-					if(currentTourlength < bestTourLength) {
-						bestTourLength = currentTourlength;
-						bestLevelLength = deletedEdgeLength;
-						bestSolution = this.m_betterTour;
-					}
-				}
+//				long currentTourlength = this.__getBetterTour();
+//				if(currentTourlength < bestTourLength) {
+//					bestTourLength = currentTourlength;
+//					bestLevelLength = deletedEdgeLength;
+//					System.arraycopy(this.m_betterTour, 0, bestSolution, 0, this.m_n);
+//					//bestSolution = this.m_betterTour;
+//				}
 			}
 		}
 		//Remove the repeated node
@@ -417,7 +406,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		//Get the 10 nearest neighborhood list
 		this.m_rootListFSecLength = 0;
 		boolean[] rootListFSec = new boolean[this.m_n];
-		for(int i = 0; i < bestLevelLength; i++) {
+		for(int i = 0; i < deletedEdgeLength; i++) {
 			for(int j = 0; j < 10; j++) {
 				int dex = this.m_nearestNeighborhood.getCandidate(deletedEdge[i], j + 1) - 1;
 				rootListFSec[dex] = true;
@@ -429,13 +418,14 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			}
 		}
 		//Reset the best solution in the loop
-		this.__resetTour(bestSolution);
+		this.__resetTour(this.__getBetterSolution());
+//		this.__resetTour(bestSolution);
 	}
 	/**
 	 * process of sec,in the psec of the fsec
 	 * @return 
 	 */
-	private final long __secRootNoChangedFSec() {
+	private final void __secRootNoChangedFSec() {
 		
 		this.__initTubaList();
 		this.m_level = this.m_n<<1;
@@ -443,8 +433,9 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		this.m_rootNode = this.m_rootListFSec[--this.m_rootListFSecLength];
 		this.m_beginStemNode = this.m_rootNode;
 		this.m_endStemNode = this.m_rootNode;
-		int[] bestSolution = this.m_betterTour;
-		long bestTourLength = this.__getBetterTour();
+		//long bestTourLength = this.__getBetterTour();
+		//int[] bestSolution = new int[this.m_n];
+		//System.arraycopy(this.m_betterTour, 0, this.m_bestSolutionFSec, 0, this.m_n);
 		while(countLevel < this.m_level) {
 			countLevel++;
 			int trialBefore = this.__trialSolution(this.m_rootNode, 
@@ -516,10 +507,13 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.__getLeftNeighbor(this.m_rootNode), 
 						this.__getRightNeighbor(this.m_rootNode), 
 						this.m_endStemNode);
-				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
+				this.m_improvement += jOnCycle[0] + trialAfter - trialBefore;
+				if(this.m_improvement > 0) {
+					this.m_improvement = 0;
 					long currentTourlength = this.__getBetterTour();
-					if(currentTourlength < bestTourLength) {
-						bestSolution = this.m_betterTour;
+					if(currentTourlength < this.m_bestSolutionLengthFSec) {
+						System.arraycopy(this.m_betterTour, 0, this.m_bestSolutionFSec, 0, this.m_n);
+						this.m_bestSolutionLengthFSec = currentTourlength;
 					}
 				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
@@ -538,37 +532,39 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.__getLeftNeighbor(this.m_rootNode), 
 						this.__getRightNeighbor(this.m_rootNode), 
 						this.m_endStemNode);
-				if((jOnStem[0] + trialAfter - trialBefore) > 0) {
+				this.m_improvement += jOnStem[0] + trialAfter - trialBefore;
+				if(this.m_improvement > 0) {
+					this.m_improvement = 0;
 					long currentTourlength = this.__getBetterTour();
-					if(currentTourlength < bestTourLength) {
-						bestSolution = this.m_betterTour;
+					if(currentTourlength < this.m_bestSolutionLengthFSec) {
+						System.arraycopy(this.m_betterTour, 0, this.m_bestSolutionFSec, 0, this.m_n);
+						this.m_bestSolutionLengthFSec = currentTourlength;
 					}
 				}
 			}
 		}
 		//Set the best solution in the loop
-		this.__resetTour(bestSolution);
-		return bestTourLength;
+		this.__resetTour(this.m_bestSolutionFSec);
 	}
 	/**
 	 * process of sec, root is not changed
-	 * @return 
 	 */
 	private final void __secRootNoChanged() {
 		
 		this.__initTubaList();
 		//this.__initRootList();
-		this.m_level = this.m_n<<1;
+		//this.m_level = this.m_n;
+		this.m_level = (int) (this.m_n * 0.45);
+		if(this.m_level < 2) {
+			this.m_level = 2;
+		}
 		int countLevel = 0;
 		this.m_rootNode = this.__getRandomRoot();
 		this.m_beginStemNode = this.m_rootNode;
 		this.m_endStemNode = this.m_rootNode;
+		
 		while(countLevel < this.m_level) {
 			countLevel++;
-			int trialBefore = this.__trialSolution(this.m_rootNode, 
-					this.__getLeftNeighbor(this.m_rootNode), 
-					this.__getRightNeighbor(this.m_rootNode), 
-					this.m_endStemNode);
 			int[] jOnCycle = this.__jOnCycleRootNoChanged();
 			int[] jOnStem = this.__jOnStemNoRootChanged();
 			
@@ -634,8 +630,10 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.__getLeftNeighbor(this.m_rootNode), 
 						this.__getRightNeighbor(this.m_rootNode), 
 						this.m_endStemNode);
-				if((jOnCycle[0] + trialAfter - trialBefore) > 0) {
+				this.m_improvement += jOnCycle[0];
+				if(this.m_improvement + trialAfter > 0) {
 					this.__getBetterTour();
+					this.m_improvement = -trialAfter;
 				}
 			} else if(jOnStem != null && (jOnCycle == null || jOnStem[0] >= jOnCycle[0])) {
 				this.__addEdge(jOnStem[1], jOnStem[2]);
@@ -653,8 +651,10 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 						this.__getLeftNeighbor(this.m_rootNode), 
 						this.__getRightNeighbor(this.m_rootNode), 
 						this.m_endStemNode);
-				if((jOnStem[0] + trialAfter - trialBefore) > 0) {
+				this.m_improvement += jOnStem[0] ;
+				if(this.m_improvement + trialAfter> 0) {
 					this.__getBetterTour();
+					this.m_improvement = -trialAfter;
 				}
 			}
 		}
@@ -686,7 +686,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 		}
 		while(this.m_jNode != subRootAno) {
 			if(!this.__inTubaList(this.m_jNode, formerNode)) {
-				distance[0] = this.m_f.distance(this.m_jNode, formerNode)
+				distance[0] = this.m_f.distance(this.m_jNode, formerNode) 
 						- this.m_f.distance(this.m_jNode, this.m_endStemNode);
 				if(distance[0] > bestEK) {
 					bestEK = distance[0];
@@ -696,7 +696,7 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 				}
 			}
 			if(!this.__inTubaList(this.m_jNode, laterNode)) {
-				distance[1] = this.m_f.distance(this.m_jNode, laterNode)
+				distance[1] = this.m_f.distance(this.m_jNode, laterNode) 
 						- this.m_f.distance(this.m_jNode, this.m_endStemNode);
 				if(distance[1] > bestEK) {
 					bestEK = distance[1];
@@ -818,60 +818,6 @@ public class FundamentalStemAndCycle extends TSPLocalSearchAlgorithm<int[]> {
 			System.out.println();
 		}
 	}
-	
-	/**
-	 * Greed algorithm, once change the structure, then make an improvement
-	 */
-	private final void __greedAlgorithm() {
-		this.__initRootList();
-		//this.m_rootNode = this.m_f.getRandom().nextInt(this.m_n) + 1;//Need add 1, easy to fault
-		this.m_rootNode = this.__getRandomRoot();
-		this.m_beginStemNode = this.m_rootNode;
-		this.m_endStemNode = this.m_rootNode;
-		//Greed algorithm
-		while(this.m_rootListLength > 0 && (!(this.m_f.shouldTerminate()))) {
-			if(this.__doRules()) {
-				this.__initRootList();
-			} else {
-				this.__changeToTour();
-				this.m_rootNode = this.__getRandomRoot();
-				this.m_beginStemNode = this.m_rootNode;
-				this.m_endStemNode = this.m_rootNode;
-			}
-		}
-	}
-	/**
-	 * Do the four rules
-	 * @return
-	 * true: changed at least one time
-	 * false: no change
-	 */
-	private final boolean __doRules() {
-		
-		if(!this.__tAndJOnCycle() && !this.__qAndJOnCycleDeleteRootEdge()) {
-			return false;
-		}
-		boolean flag = true;
-		while(flag) {
-			for(int i = 0; i < 4; i++) {
-				this.m_flags[i] = false;
-			}
-			this.__tAndJOnCycle();
-			if(this.m_rootNode != this.m_beginStemNode) {
-				this.__qAsSubRootAndJOnStem();//Need stem chain
-				this.__tAndJOnStem();//Need stem chain
-			}
-			this.__qAndJOnCycleDeleteRootEdge();
-			flag = false;
-			for(int i = 0; i < 4; i++) {
-				if(this.m_flags[i]) {
-					flag = true;
-				}
-			}
-		}
-		this.__getBetterTour();
-		return true;
-	}
 	/**
 	 * Change the stem and cycle structure to a tour
 	 */
@@ -919,69 +865,6 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 	}
 	/**
-	 * q is one sub root, j is on stem chain, by comparing sub root with another sub root,
-	 * decide to whether we change, if not, j node moves to next node 
-	 */
-	private final boolean __qAsSubRootAndJOnStem() {
-		// Initialization, create a stem
-		//this.__tempGetStem();// Get a stem chain
-		// Store the sub root that we come from
-		this.m_jNode = this.m_beginStemNode;
-		int formerNode = this.m_rootNode;// The node before the j node
-		while (this.m_jNode != this.m_endStemNode) {
-			// betterNode if is -1, we do not need to change
-			int betterNode = -1;
-			int subRoot = this.__getLeftNeighbor(this.m_rootNode);
-			int subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-			int trialBeforechange = this.__trialSolution(this.m_rootNode, subRoot, subRootAnother, this.m_endStemNode);
-			int oneForTrial = this.__trialSolution(this.m_jNode, subRoot, formerNode, this.m_endStemNode);
-			int twoForTrial = this.__trialSolution(this.m_jNode, subRootAnother, formerNode, this.m_endStemNode);
-			int one = this.m_f.distance(this.m_rootNode, subRoot) 
-					- this.m_f.distance(this.m_jNode, subRoot) 
-					+ oneForTrial - trialBeforechange;
-			int two = this.m_f.distance(this.m_rootNode, subRootAnother) 
-					- this.m_f.distance(this.m_jNode, subRootAnother) 
-					+ twoForTrial - trialBeforechange;
-			
-			if(one > 0 && one >= two) {
-				betterNode = subRoot;
-			} else if(two > 0 && two >= one) {
-				betterNode = subRootAnother;
-			}
-			// If the shortest edge is longer than the add edge, don't need to
-			// change
-			if (betterNode != -1) {
-				//this.m_flags = true, present change occur
-				this.m_flags[3] = true;
-				// better node is sub root or another sub root
-				// Change the relation
-				int laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-				this.__setNeighborSame(betterNode, this.m_rootNode, this.m_jNode);
-				this.__setNeighborSame(this.m_rootNode, betterNode, this.m_beginStemNode);
-				this.__setNeighborDifferent(this.m_jNode, formerNode, betterNode);
-				// change the root node, begin stem node
-				this.m_rootNode = this.m_jNode;
-				this.m_beginStemNode = laterNode;
-				
-				// when change is occur, update j node, sub root and another sub
-				// root
-				// Change the root node, begin stem node and end stem node
-				this.m_jNode = this.m_beginStemNode;
-				formerNode = this.m_rootNode;
-				// Get the better tour
-				//this.__getBetterTour();
-			} else {
-				// Update j node and former node
-				int tempNode = this.m_jNode;
-				this.m_jNode = this.__getNeighbor(this.m_jNode, formerNode);
-				formerNode = tempNode;
-				// System.out.println("No change, next node, j node" +
-				// this.m_jNode);
-			}
-		}
-		return this.m_flags[3];
-	}
-	/**
 	 * The trial solution
 	 * @param root
 	 * @param subRoot
@@ -990,6 +873,9 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 	 * @return the improvement of the trial solution, from stem and cycle to tour
 	 */
 	private final int __trialSolution(int root, int subRoot, int subRootAnother, int endStem) {
+		if(root == endStem) {
+			return 0;
+		}
 		int distanceSub = this.m_f.distance(root, subRoot) 
 				- this.m_f.distance(endStem, subRoot);
 		int distanceSubAnother = this.m_f.distance(root, subRootAnother) 
@@ -1017,472 +903,6 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 		this.__setNeighborSame(five, six, one);
 		this.__setNeighborSame(six, five, -1);
 		this.__setNeighborDifferent(one, two, five);
-	}
-	/**
-	 * t is the end stem node, j is on stem, compare one edge of j with two edges of sub roots,
-	 * delete one of three edges
-	 */
-	private final boolean __tAndJOnStem() {
-		//Initialization, create a stem
-		//this.__tempGetStem();//Get a stem chain
-		// Store the sub root that we come from
-		this.m_jNode = this.m_beginStemNode;
-		int formerNode = this.m_rootNode;// The node before the j node
-		int laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-		int subRoot = this.__getLeftNeighbor(this.m_rootNode);
-		int subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-		
-		while (this.m_jNode != this.m_endStemNode) {
-			//idAndEdge[0] is id of the node, idAndEdge[1] is the shortest edge
-			int betterNode = -1;
-			int trialBeforechange = this.__trialSolution(this.m_rootNode, subRoot, subRootAnother, this.m_endStemNode);
-			int disTrialStem = this.__trialSolution(this.m_rootNode, subRoot, subRootAnother, 
-					laterNode);
-			int disTrialSub = this.__trialSolution(this.m_jNode, this.m_endStemNode, 
-					laterNode, subRoot);
-			int disTrialSubAnother = this.__trialSolution(this.m_jNode, this.m_endStemNode, 
-					laterNode, subRootAnother);
-			
-			int distanceStem = this.m_f.distance(this.m_jNode, this.__getNeighbor(this.m_jNode, formerNode))
-					- this.m_f.distance(this.m_jNode, this.m_endStemNode) 
-					+ disTrialStem - trialBeforechange;
-			int distanceSub = this.m_f.distance(this.m_rootNode, subRoot)
-					- this.m_f.distance(this.m_jNode, this.m_endStemNode) 
-					+ disTrialSub - trialBeforechange;	
-			int distanceSubAnother = this.m_f.distance(this.m_rootNode, subRootAnother)
-					- this.m_f.distance(this.m_jNode, this.m_endStemNode) 
-					+ disTrialSubAnother - trialBeforechange;
-			if(distanceStem <= 0 && distanceSub <= 0 && distanceSubAnother <= 0) {
-				betterNode = -1;
-			} else if(distanceStem >= distanceSub && distanceStem >= distanceSubAnother) {
-				betterNode = this.m_jNode;
-			} else if(distanceSub >= distanceStem && distanceSub >= distanceSubAnother) {
-				betterNode = subRoot;
-			} else if(distanceSubAnother >= distanceStem && distanceSubAnother >= distanceSub) {
-				betterNode = subRootAnother;
-			}
-			// If the shortest edge is longer than the add edge, don't need to change
-			if (betterNode != -1) {
-				//this.__printInformationForDebug();
-				//this.m_flags = true, present change occur
-				this.m_flags[2] = true;
-				// better node is j node
-				if (betterNode == this.m_jNode) {
-					// change the relation
-					this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-					this.__setNeighborDifferent(this.m_jNode, formerNode, this.m_endStemNode);
-					this.__setNeighborSame(laterNode, this.m_jNode, -1);
-					// change the root node, begin stem node
-					this.m_endStemNode = laterNode;
-				} else {
-					//Change the relation
-					this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-					this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-					this.__setNeighborSame(this.m_rootNode, betterNode,this.m_beginStemNode);
-					this.__setNeighborSame(betterNode, this.m_rootNode, -1);
-					//change the root node, begin stem node
-					this.m_rootNode = this.m_jNode;
-					this.m_beginStemNode = formerNode;
-					this.m_endStemNode = betterNode;
-				}
-				// when change is occur, update j node, sub root and another sub
-				// root
-				// Change the root node, begin stem node and end stem node
-				this.m_jNode = this.m_beginStemNode;
-				formerNode = this.m_rootNode;
-				laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-				subRoot = this.__getLeftNeighbor(this.m_rootNode);
-				subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-				// Get the better tour
-				//this.__getBetterTour();
-			} else {
-				// Update j node and former node
-				int tempNode = this.m_jNode;
-				this.m_jNode = this.__getNeighbor(this.m_jNode, formerNode);
-				formerNode = tempNode;
-				laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-			}
-		}
-		return this.m_flags[2];
-	}
-	/**
-	 * q node is sub root,sub root another or begin stem node
-	 * j node is on cycle, delete the edge adjacent root node
-	 */
-	private final boolean __qAndJOnCycleDeleteRootEdge() {
-		int subRoot = this.__getLeftNeighbor(this.m_rootNode);//The node before the j node
-		int subRootAnother = this.__getRightNeighbor(this.m_rootNode);//Another sub root
-		this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);//Store the sub root that we come from
-		int formerNode = subRoot;//The node before the j node
-		
-		while(this.m_jNode != subRootAnother) {
-			int betterNode = -1;
-			int disOneForTrial = 0;
-			int disTwoForTrial = 0;
-			int disThreeForTrial = 0;
-			int trialBeforechange = this.__trialSolution(this.m_rootNode, subRoot, subRootAnother, this.m_endStemNode);
-			if(this.m_rootNode != this.m_beginStemNode) {
-				disOneForTrial = this.__trialSolution(this.m_jNode, formerNode, this.__getNeighbor(this.m_jNode, formerNode), this.m_endStemNode);
-			} else {
-				disOneForTrial = Integer.MIN_VALUE/2;
-			}
-			disTwoForTrial = this.__trialSolution(this.m_jNode, formerNode, subRoot, this.m_endStemNode);
-			disThreeForTrial = this.__trialSolution(this.m_jNode, this.__getNeighbor(this.m_jNode, formerNode), subRootAnother, this.m_endStemNode);
-			int disOne = this.m_f.distance(this.m_rootNode, this.m_beginStemNode)
-					- this.m_f.distance(this.m_beginStemNode, this.m_jNode) 
-					+ disOneForTrial - trialBeforechange;
-			int disTwo = this.m_f.distance(this.m_rootNode, subRoot)
-					- this.m_f.distance(subRoot, this.m_jNode) 
-					+ disTwoForTrial - trialBeforechange;
-			int disThree = this.m_f.distance(this.m_rootNode,subRootAnother)
-					- this.m_f.distance(subRootAnother, this.m_jNode) 
-					+ disThreeForTrial - trialBeforechange;
-			if((disOne <= 0) && (disTwo <= 0)	&& (disThree <= 0)) {
-				betterNode = -1;
-			} else if((disOne >= disTwo)&&(disOne >= disThree)) {
-				betterNode = this.m_beginStemNode;
-			} else if((disTwo >= disOne)&&(disTwo >= disThree)) {
-				betterNode = subRoot;
-			} else if((disThree >= disOne)&&(disThree >= disTwo)) {
-				betterNode = subRootAnother;
-			}
-			//If betterNode == -1, do not need to change the structure
-			if(betterNode != -1) {
-				//this.m_flags = true, present change occur
-				this.m_flags[1] = true;
-				//better node is begin stem node
-				if(betterNode == this.m_beginStemNode) {
-					//change the relation
-					this.__setNeighborSame(this.m_beginStemNode, this.m_rootNode, this.m_jNode);
-					//change the root node, begin stem node
-					this.m_rootNode = this.m_jNode;
-				} else if(betterNode == subRoot) {
-					//change the relation
-					int tempBeginstemNode = this.__getNeighbor(this.m_jNode, formerNode);
-					if(this.m_rootNode != this.m_beginStemNode) {
-						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-					} else {
-						this.__setNeighborSame(this.m_rootNode, subRoot, -1);
-					}
-					this.__setNeighborSame(subRoot, this.m_rootNode, this.m_jNode);
-					this.__setNeighborDifferent(this.m_jNode, formerNode, subRoot);
-					//change the root node and begin stem node
-					this.m_rootNode = this.m_jNode;
-					this.m_beginStemNode = tempBeginstemNode;
-				} else if(betterNode == subRootAnother) {
-					//System.out.println("betterNode == subRootAnother");
-					//change the relation
-					if(this.m_rootNode != this.m_beginStemNode) {
-						this.__setNeighborSame(this.m_rootNode, subRootAnother, this.m_beginStemNode);
-					} else {
-						this.__setNeighborSame(this.m_rootNode, subRootAnother, -1);
-					}
-					this.__setNeighborSame(subRootAnother, this.m_rootNode, this.m_jNode);
-					this.__setNeighborSame(this.m_jNode, formerNode, subRootAnother);
-					//change the root node and begin stem node
-					this.m_rootNode = this.m_jNode;
-					this.m_beginStemNode = formerNode;
-				} else {
-					System.out.println("Error in change the relation");
-				}
-				
-				//when change is occur, update j node, sub root and another sub root
-				//Change the root node, begin stem node and end stem node
-				subRoot = this.__getLeftNeighbor(this.m_rootNode);//The node before the j node
-				subRootAnother = this.__getRightNeighbor(this.m_rootNode);//Another sub root
-				this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);//Store the sub root that we come from
-				formerNode = subRoot;//The node before the j node
-				//Get the better tour
-				//this.__getBetterTour();
-			} else {
-				//Update j node and former node
-				int tempNode = this.m_jNode;
-				this.m_jNode = this.__getNeighbor(this.m_jNode, formerNode);
-				formerNode = tempNode;
-			}
-		}
-		return this.m_flags[1];
-	}
-	/**
-	 * t is the end stem node, j is on the cycle, compare the edges that are adjacent j node
-	 * and root node, get the best node from five nodes( begin stem, sub root, sub root another
-	 * former node, later node) 
-	 */
-	private final boolean __tAndJOnCycle() {
-		int subRoot = this.__getLeftNeighbor(this.m_rootNode);
-		int subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-		this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-		int formerNode = subRoot;
-		int[] typeAndId = new int[2];
-		while (this.m_jNode != subRootAnother) {
-			typeAndId = this.__getBetterNodeFor__tAndJOnCycle(subRoot, formerNode);
-			if (typeAndId[0] != -1) {
-				//this.m_flags = true, present change occur
-				this.m_flags[0] = true;
-				// change the structure
-				if(typeAndId[0] == 1) {//begin stem node is best node
-					//change the structure
-					this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-					this.__setNeighborSame(this.m_beginStemNode, this.m_rootNode, -1);
-					//change the root node
-					this.m_rootNode = this.m_jNode;
-					int temp = this.m_beginStemNode;
-					this.m_beginStemNode = this.m_endStemNode;
-					this.m_endStemNode = temp;
-					
-					subRoot = this.__getLeftNeighbor(this.m_rootNode);
-					subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-					this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-					formerNode = subRoot;
-				} else if(typeAndId[0] == 2) {//sub root node is best node
-					if(this.m_beginStemNode != this.m_rootNode) {
-						//change the structure
-						this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-						if(this.m_jNode != typeAndId[1]) {
-							this.__setNeighborSame(typeAndId[1], this.m_rootNode, -1);
-						}
-						this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-						this.__setNeighborSame(this.m_rootNode, typeAndId[1], this.m_beginStemNode);
-						//change the root node
-						this.m_rootNode = this.m_jNode;
-						this.m_beginStemNode = formerNode;
-						if(this.m_jNode != typeAndId[1]) {
-							this.m_endStemNode = typeAndId[1];
-						} else {
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = this.m_beginStemNode;
-						}
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					} else {
-						//change the structure
-						this.__setNeighborSame(this.m_rootNode, typeAndId[1], this.m_jNode);
-						this.__setNeighborSame(this.m_jNode, formerNode, this.m_rootNode);
-						this.__setNeighborSame(typeAndId[1], this.m_rootNode, -1);
-						//change the root node
-						this.m_rootNode = this.m_jNode;
-						this.m_beginStemNode = formerNode;
-						this.m_endStemNode = typeAndId[1];
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					}
-				} else if(typeAndId[0] == 3) {//sub root another node is best node
-					if(this.m_beginStemNode != this.m_rootNode) {
-						//change the structure
-						int tempLaterNode = this.__getNeighbor(this.m_jNode, formerNode);
-						this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-						if(this.m_jNode != typeAndId[1]) {
-							this.__setNeighborSame(typeAndId[1], this.m_rootNode, -1);
-						}
-						this.__setNeighborDifferent(this.m_jNode, formerNode, this.m_endStemNode);
-						this.__setNeighborSame(this.m_rootNode, typeAndId[1], this.m_beginStemNode);
-						//change the root node
-						if(tempLaterNode != this.m_rootNode) {
-							this.m_beginStemNode = tempLaterNode;
-						} else {
-							this.m_beginStemNode = this.m_jNode;
-						}
-						this.m_rootNode = this.m_jNode;
-						this.m_endStemNode = typeAndId[1];
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					} else {
-						//change the structure
-						int tempLaterNode = this.__getNeighbor(this.m_jNode, formerNode);
-						this.__setNeighborSame(this.m_rootNode, typeAndId[1], this.m_jNode);
-						this.__setNeighborDifferent(this.m_jNode, formerNode, this.m_rootNode);
-						this.__setNeighborSame(typeAndId[1], this.m_rootNode, -1);
-						//change the root node
-						this.m_rootNode = this.m_jNode;
-						this.m_beginStemNode = tempLaterNode;
-						this.m_endStemNode = typeAndId[1];
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					}
-				} else if(typeAndId[0] == 4) {//former node is best node
-					if(this.m_beginStemNode != this.m_rootNode) {
-						if(this.m_jNode != subRoot) {
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(formerNode, this.m_jNode, -1);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = subRoot;
-							this.m_endStemNode = formerNode;
-							subRoot = this.__getLeftNeighbor(this.m_rootNode);
-							subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-							this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-							formerNode = subRoot;
-						} else {
-							System.exit(1);
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, formerNode, this.m_endStemNode);
-							this.__setNeighborSame(this.m_rootNode, subRoot, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = formerNode;
-							subRoot = this.__getLeftNeighbor(this.m_rootNode);
-							subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-							this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-							formerNode = subRoot;
-						}
-					} else {
-						//change the structure
-						this.__setNeighborSame(this.m_rootNode, subRoot, this.m_jNode);
-						this.__setNeighborSame(this.m_jNode, formerNode, this.m_rootNode);
-						this.__setNeighborSame(formerNode, this.m_jNode, -1);
-						//change the root node
-						this.m_beginStemNode = subRoot;
-						this.m_endStemNode = formerNode;
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					} 
-				} else if(typeAndId[0] == 5) {
-					int laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-					if(this.m_beginStemNode != this.m_rootNode) {
-						if(this.m_jNode != subRootAnother) {
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, laterNode, this.m_endStemNode);
-							this.__setNeighborSame(laterNode, this.m_jNode, -1);
-							this.__setNeighborSame(this.m_rootNode, subRootAnother, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = subRootAnother;
-							this.m_endStemNode = laterNode;
-							subRoot = this.__getLeftNeighbor(this.m_rootNode);
-							subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-							this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-							formerNode = subRoot;
-						} else {
-							System.exit(1);
-							//change the structure
-							this.__setNeighborSame(this.m_endStemNode, -1, this.m_jNode);
-							this.__setNeighborSame(this.m_jNode, laterNode, this.m_endStemNode);
-							this.__setNeighborSame(this.m_rootNode, subRootAnother, this.m_beginStemNode);
-							//change the root node
-							this.m_beginStemNode = this.m_rootNode;
-							this.m_endStemNode = laterNode;
-							subRoot = this.__getLeftNeighbor(this.m_rootNode);
-							subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-							this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-							formerNode = subRoot;
-						}
-					} else {
-						//change the structure
-						this.__setNeighborSame(this.m_rootNode, subRootAnother, this.m_jNode);
-						this.__setNeighborSame(this.m_jNode, laterNode, this.m_rootNode);
-						this.__setNeighborSame(laterNode, this.m_jNode, -1);
-						//change the root node
-						this.m_beginStemNode = subRootAnother;
-						this.m_endStemNode = laterNode;
-						subRoot = this.__getLeftNeighbor(this.m_rootNode);
-						subRootAnother = this.__getRightNeighbor(this.m_rootNode);
-						this.m_jNode = this.__getNeighbor(subRoot, this.m_rootNode);
-						formerNode = subRoot;
-					}
-				} 
-				// Get the better tour
-				//this.__getBetterTour();
-			} else {
-				// Update j node and former node
-				int tempNode = this.m_jNode;
-				this.m_jNode = this.__getNeighbor(this.m_jNode, formerNode);
-				formerNode = tempNode;
-			}
-			//this.__getBetterTour();
-		}
-		return this.m_flags[0];
-	}
-	/**
-	 * Get the longest edge of the five edges,<beginStem, root><subroot, root>
-	 * <subrootanother, root><former, j node><later, j node>, if the longest is
-	 * longer than the edge between j node and end stem, return the type and node id
-	 * @param formerNode
-	 * @return typeAndId[0]:
-	 * -1: do not need to change
-	 * 0: better node is begin stem node
-	 * 1: sub root
-	 * 2: sub root another
-	 * 3: former node
-	 * 4: later node
-	 * typeAndId[1]: the id of the better node
-	 */
-	private final int[] __getBetterNodeFor__tAndJOnCycle(int subRoot, int formerNode) {
-		int[] typeAndId = new int[2];
-		typeAndId[0] = -1;
-		typeAndId[1] = Integer.MIN_VALUE;
-		int subRootAnother = this.__getNeighbor(this.m_rootNode, subRoot);
-		int laterNode = this.__getNeighbor(this.m_jNode, formerNode);
-		
-		int[] distance = new int[5];
-		int trialBeforechange = this.__trialSolution(this.m_rootNode, subRoot, subRootAnother, this.m_endStemNode);
-		int beginStemTrial = 0;
-		if(this.m_beginStemNode != this.m_rootNode) {
-			beginStemTrial = this.__trialSolution(this.m_jNode, formerNode, laterNode, this.m_beginStemNode);
-		} else {
-			beginStemTrial = Integer.MIN_VALUE/2;
-		}
-		//System.out.println("distance[0] " + distance[0]);
-		int subTrial = 0;
-		int subAnotherTrial = 0;
-		subTrial = this.__trialSolution(this.m_jNode, this.m_endStemNode, laterNode, subRoot);
-		subAnotherTrial = this.__trialSolution(this.m_jNode, this.m_endStemNode, formerNode, subRootAnother);
-		int formerTrial = 0;
-		int laterTrial = 0;
-		if(subRoot != subRootAnother) {
-			formerTrial = this.__trialSolution(this.m_rootNode, this.m_beginStemNode, subRootAnother, formerNode);
-			laterTrial = this.__trialSolution(this.m_rootNode, this.m_beginStemNode, subRoot, laterNode);
-		} else {
-			formerTrial = this.__trialSolution(this.m_rootNode, this.m_beginStemNode, subRootAnother, this.m_jNode);
-			laterTrial = this.__trialSolution(this.m_rootNode, this.m_beginStemNode, subRoot, this.m_jNode);
-		}
-		distance[0] = this.m_f.distance(this.m_rootNode, this.m_beginStemNode)
-				- this.m_f.distance(this.m_endStemNode, this.m_jNode) 
-				+ beginStemTrial - trialBeforechange;
-		distance[1] = this.m_f.distance(this.m_rootNode, subRoot)
-				- this.m_f.distance(this.m_endStemNode, this.m_jNode) 
-				+ subTrial - trialBeforechange;
-		distance[2] = this.m_f.distance(this.m_rootNode, subRootAnother)
-				- this.m_f.distance(this.m_endStemNode, this.m_jNode) 
-				+ subAnotherTrial - trialBeforechange;
-		distance[3] = this.m_f.distance(this.m_jNode, formerNode)
-				- this.m_f.distance(this.m_endStemNode, this.m_jNode) 
-				+ formerTrial - trialBeforechange;
-		distance[4] = this.m_f.distance(this.m_jNode, laterNode)
-				- this.m_f.distance(this.m_endStemNode, this.m_jNode) 
-				+ laterTrial - trialBeforechange;
-		for(int i = 0; i < 5; i++) {
-			if((distance[i] > typeAndId[1]) && distance[i] > 0) {
-				typeAndId[0] = i + 1;
-				typeAndId[1] = distance[i];
-			}
-		}
-		if(typeAndId[0] == 1) {
-			typeAndId[1] = this.m_beginStemNode;
-		} else if(typeAndId[0] == 2) {
-			typeAndId[1] = subRoot;
-		} else if(typeAndId[0] == 3) {
-			typeAndId[1] = subRootAnother;
-		} else if(typeAndId[0] == 4) {
-			typeAndId[1] = formerNode;
-		} else if(typeAndId[0] == 5) {
-			typeAndId[1] = laterNode;
-		} else {
-			typeAndId[0] = -1;
-		}
-		return typeAndId;
 	}
 
 	/**
@@ -1631,23 +1051,21 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 		int one = 0;//One of the sub root
 		int another = 0;//Another sub root
 		int better = 0;//Store the better of the node between "one" and "another"
-		one = this.__getLeftNeighbor(this.m_rootNode);
-		another = this.__getRightNeighbor(this.m_rootNode);
-		int distanceOne = this.m_f.distance(this.m_endStemNode, one)
-				- this.m_f.distance(this.m_rootNode, one);
-		int distanceAnother = this.m_f.distance(this.m_endStemNode, another)
-				- this.m_f.distance(this.m_rootNode, another);
-		if(distanceOne < distanceAnother) {
-			better = one;
+		if(this.m_rootNode != this.m_endStemNode) {
+			one = this.__getLeftNeighbor(this.m_rootNode);
+			another = this.__getRightNeighbor(this.m_rootNode);
+			int distanceOne = this.m_f.distance(this.m_endStemNode, one)
+					- this.m_f.distance(this.m_rootNode, one);
+			int distanceAnother = this.m_f.distance(this.m_endStemNode, another)
+					- this.m_f.distance(this.m_rootNode, another);
+			if(distanceOne < distanceAnother) {
+				better = one;
+			} else {
+				better = another;
+			}
 		} else {
-			better = another;
+			better = one;
 		}
-//System.out.println("root  " + this.m_rootNode);
-//System.out.println("begin  " + this.m_beginStemNode);
-//System.out.println("end  " + this.m_endStemNode );
-//System.out.println("one  " + one );
-//System.out.println("another " + another);
-//System.out.println("better " + better);
 		int cursor = better;
 		int former = this.m_rootNode;
 		int count =  0;
@@ -1687,26 +1105,33 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 			this.m_dst.tourLength = tourLength;
 			System.arraycopy(this.m_betterTour, 0, this.m_dst.solution, 0, this.m_n);
 		}
-		//System.out.println("Tour Length" + tourLength);
+		if(this.debug) {
+			System.out.println("Tour Length" + tourLength);
+		}
 		return tourLength;
 	}
 	/**
 	 * get the better solution for the current solution
 	 */
 	private final int[] __getBetterSolution() {
+		int[] betterTour = new int[this.m_n];
 		int one = 0;//One of the sub root
 		int another = 0;//Another sub root
 		int better = 0;//Store the better of the node between "one" and "another"
-		one = this.__getLeftNeighbor(this.m_rootNode);
-		another = this.__getRightNeighbor(this.m_rootNode);
-		int distanceOne = this.m_f.distance(this.m_endStemNode, one)
-				- this.m_f.distance(this.m_rootNode, one);
-		int distanceAnother = this.m_f.distance(this.m_endStemNode, another)
-				- this.m_f.distance(this.m_rootNode, another);
-		if(distanceOne < distanceAnother) {
-			better = one;
+		if(this.m_rootNode != this.m_endStemNode) {
+			one = this.__getLeftNeighbor(this.m_rootNode);
+			another = this.__getRightNeighbor(this.m_rootNode);
+			int distanceOne = this.m_f.distance(this.m_endStemNode, one)
+					- this.m_f.distance(this.m_rootNode, one);
+			int distanceAnother = this.m_f.distance(this.m_endStemNode, another)
+					- this.m_f.distance(this.m_rootNode, another);
+			if(distanceOne < distanceAnother) {
+				better = one;
+			} else {
+				better = another;
+			}
 		} else {
-			better = another;
+			better = one;
 		}
 		int cursor = better;
 		int former = this.m_rootNode;
@@ -1714,19 +1139,19 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 		int tempNode = 0;
 		//Store the cycle nodes from the better sub node to another sub root 
 		while(cursor != this.m_rootNode) {
-			this.m_betterTour[count++] = cursor;
+			betterTour[count++] = cursor;
 			tempNode = cursor;
 			cursor = this.__getNeighbor(cursor, former);
 			former = tempNode;
 		}
 		//Store the root node
-		this.m_betterTour[count++] = this.m_rootNode;
+		betterTour[count++] = this.m_rootNode;
 		//Store the stem from begin stem to end stem node
 		cursor = this.m_beginStemNode;
 		former = this.m_rootNode;
 		while(cursor != -1) {
 			if(this.m_beginStemNode != this.m_rootNode) {
-				this.m_betterTour[count++] = cursor;
+				betterTour[count++] = cursor;
 			} else {
 				cursor = -1;
 			}
@@ -1739,7 +1164,7 @@ System.out.println("%%%%%%%%%%%%%%%%%%%%%");
 				cursor = -1;
 			}
 		}
-		return this.m_betterTour;
+		return betterTour;
 	}
 	/**
 	 * Bootstrap function
