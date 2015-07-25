@@ -14,7 +14,7 @@ import org.logisticPlanning.utils.math.random.Randomizer;
 
 /**
  * An SA algorithm.
- * 
+ *
  * @author Jiahui Liu, jl4161@columbia.edu
  */
 public class SimulatedAnnealing extends TSPLocalSearchAlgorithm<int[]> {
