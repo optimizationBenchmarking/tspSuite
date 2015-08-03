@@ -917,10 +917,16 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
     this.m_algoInst = config.getInstance(
         TSPAlgorithmRunner.PARAM_ALGO_CLASS, TSPAlgorithm.class,
         this.m_algo, this.m_algoInst);
+    if (this.m_algoInst != null) {
+      this.m_algo = this.m_algoInst.getClass();
+    }
 
     this.m_initInst = config.getInstance(
         TSPAlgorithmRunner.PARAM_DET_INIT_CLASS, TSPAlgorithm.class,
         this.m_init, this.m_initInst);
+    if (this.m_initInst != null) {
+      this.m_init = this.m_initInst.getClass();
+    }
 
     this.m_queue.configure(config);
     this.m_creator.configure(config);
@@ -992,8 +998,13 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
     if ((log != null) && (log.isLoggable(Level.INFO))) {
       log.info("Starting up benchmarking procedure with " + //$NON-NLS-1$
           this.m_maxThreads + " threads for algorithm class " + //$NON-NLS-1$
-          this.m_algo + " and initializer class " + //$NON-NLS-1$
-          this.m_init);
+          String.valueOf(((this.m_algoInst != null) ? //
+          this.m_algoInst.getClass()
+              : this.m_algo))//
+          + " and initializer class " + //$NON-NLS-1$
+          String.valueOf((this.m_initInst != null) ? //
+          this.m_initInst.getClass()
+              : this.m_init));
     }
 
     try {
@@ -1028,9 +1039,14 @@ public final class TSPAlgorithmRunner extends LoggerOwner {
     } finally {
       if ((log != null) && (log.isLoggable(Level.INFO))) {
         log.info("Terminating benchmarking procedure with " + //$NON-NLS-1$
-            this.m_maxThreads + " threads for algorithm class " + //$NON-NLS-1$
-            this.m_algo + " and initializer class " + //$NON-NLS-1$
-            this.m_init);
+            this.m_maxThreads + " threads for  algorithm class " + //$NON-NLS-1$
+            String.valueOf(((this.m_algoInst != null) ? //
+            this.m_algoInst.getClass()
+                : this.m_algo))//
+            + " and initializer class " + //$NON-NLS-1$
+            String.valueOf((this.m_initInst != null) ? //
+            this.m_initInst.getClass()
+                : this.m_init));
       }
     }
   }
