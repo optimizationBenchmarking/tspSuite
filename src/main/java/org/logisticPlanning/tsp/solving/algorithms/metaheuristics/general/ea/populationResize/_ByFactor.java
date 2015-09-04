@@ -15,8 +15,10 @@ class _ByFactor extends PopulationResizeStrategy {
   /** the growth factor */
   public static final String PARAM_FACTOR = "factor"; //$NON-NLS-1$
 
-  /** the default factor */
-  public static final double DEFAULT_FACTOR = 0.25d;
+  /**
+   * the default factor to multiply the population size with when shrinking
+   */
+  public static final double DEFAULT_FACTOR = 0.75d;
 
   /** the factor by which the population size should grow */
   double m_factor;

@@ -34,7 +34,7 @@ public class PermutationEAParentsSurviveRandomResizeTest extends
     res.setMu(mu);
     res.setLambda(lambda);
     res.setCrossoverRate(r.nextDouble());
-    res.setResizeStrategy(RandomResize.INSTANCE);
+    res.setResizeStrategy(new RandomResize());
 
     return res;
   }
