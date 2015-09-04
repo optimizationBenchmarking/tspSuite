@@ -1,4 +1,4 @@
-package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea;
+package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.resizeStrategies;
 
 import java.util.Random;
 

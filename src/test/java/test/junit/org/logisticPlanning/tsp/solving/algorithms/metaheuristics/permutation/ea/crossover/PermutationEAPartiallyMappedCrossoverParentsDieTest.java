@@ -1,16 +1,18 @@
-package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea;
+package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.crossover;
 
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.PermutationEA;
 import org.logisticPlanning.tsp.solving.operators.permutation.recombination.PermutationPartiallyMappedCrossover;
 
+import test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.PermutationEAParentsDieTest;
+
 /**
  * the test of the permutation EA with partially-mapped crossover
  */
-public class PermutationEAPartiallyMappedCrossoverParentsSurviveTest
-    extends PermutationEAParentsSurviveTest {
+public class PermutationEAPartiallyMappedCrossoverParentsDieTest extends
+    PermutationEAParentsDieTest {
 
   /** create */
-  public PermutationEAPartiallyMappedCrossoverParentsSurviveTest() {
+  public PermutationEAPartiallyMappedCrossoverParentsDieTest() {
     super();
   }
 

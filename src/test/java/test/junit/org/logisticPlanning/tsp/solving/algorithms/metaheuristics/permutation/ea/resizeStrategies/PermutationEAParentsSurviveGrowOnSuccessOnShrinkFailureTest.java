@@ -1,20 +1,21 @@
-package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea;
+package test.junit.org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.resizeStrategies;
 
 import java.util.Random;
 
-import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.populationResize.ShrinkOnSuccess;
+import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.populationResize.ShrinkOnSuccessGrowOnFailure;
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.permutation.ea.PermutationEA;
 
 import test.junit.org.logisticPlanning.tsp.solving.algorithms.TSPAlgorithmSymmetricTest;
 
 /**
  * the test of the permutation EA with a population shrinking on success
+ * and growing on failure
  */
-public class PermutationEAParentsSurviveShrinkOnSuccessTest extends
-    TSPAlgorithmSymmetricTest {
+public class PermutationEAParentsSurviveGrowOnSuccessOnShrinkFailureTest
+    extends TSPAlgorithmSymmetricTest {
 
   /** create */
-  public PermutationEAParentsSurviveShrinkOnSuccessTest() {
+  public PermutationEAParentsSurviveGrowOnSuccessOnShrinkFailureTest() {
     super();
   }
 
@@ -34,7 +35,7 @@ public class PermutationEAParentsSurviveShrinkOnSuccessTest extends
     res.setMu(mu);
     res.setLambda(lambda);
     res.setCrossoverRate(r.nextDouble());
-    res.setResizeStrategy(new ShrinkOnSuccess());
+    res.setResizeStrategy(new ShrinkOnSuccessGrowOnFailure());
 
     return res;
   }

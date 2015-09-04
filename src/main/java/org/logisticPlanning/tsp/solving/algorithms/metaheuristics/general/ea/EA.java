@@ -2952,14 +2952,16 @@ public class EA extends TSPAlgorithm {
 
       // let's resize lambda, if necessary
       if (resize != 1d) {
-        newSize = ((int) (Math.round(Math.max(1,
-            Math.min(Integer.MAX_VALUE, (resize * currentLambda))))));
+        newSize = Math.max(1, ((int) (Math.round(Math.min(
+            Integer.MAX_VALUE, (resize * currentLambda))))));
         factor = (currentLambda / ((double) origLambda));
         if (factor < minResize) {
-          newSize = ((int) (Math.round(minResize * origLambda)));
+          newSize = Math.max(1, ((int) (Math.round(Math.min(
+              Integer.MAX_VALUE, (minResize * origLambda))))));
         } else {
           if (factor > maxResize) {
-            newSize = ((int) (Math.round(maxResize * origLambda)));
+            newSize = Math.max(1, ((int) (Math.round(Math.min(
+                Integer.MAX_VALUE, (maxResize * origLambda))))));
           }
         }
 
@@ -2989,14 +2991,16 @@ public class EA extends TSPAlgorithm {
 
       // let's resize the mating pool, if necessary
       if (resize != 1d) {
-        newSize = ((int) (Math.round(Math.max(1,
-            Math.min(Integer.MAX_VALUE, (resize * currentMu))))));
+        newSize = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
+            (resize * currentMu))))));
         factor = (currentMu / ((double) origMu));
         if (factor < minResize) {
-          newSize = ((int) (Math.round(minResize * origMu)));
+          newSize = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
+              (minResize * origMu))))));
         } else {
           if (factor > maxResize) {
-            newSize = ((int) (Math.round(maxResize * origMu)));
+            newSize = Math.max(1, ((int) (Math.round(Math.min(
+                currentLambda, (maxResize * origMu))))));
           }
         }
 
