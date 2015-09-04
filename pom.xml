@@ -222,7 +222,7 @@
 						<manifest>
 							<addDefaultImplementationEntries />
 							<addDefaultSpecificationEntries />
-							<mainClass> org.logisticPlanning.tsp.evaluation.Evaluator</mainClass>
+							<mainClass>org.logisticPlanning.tsp.evaluation.Evaluator</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

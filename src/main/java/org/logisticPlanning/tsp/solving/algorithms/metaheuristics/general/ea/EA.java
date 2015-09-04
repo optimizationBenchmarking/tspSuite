@@ -2856,7 +2856,7 @@ public class EA extends TSPAlgorithm {
     Individual<Object>[] pop, mate;
     final boolean ss;
     final int origLambda, origMu;
-    int i, currentMu, currentLambda, newSize;
+    int i, currentMu, nextMu, currentLambda, nextLambda, nextPS;
     final UnaryOperator<Object> op1;
     final BinaryOperator<Object> op2;
     Individual<Object> ind;
@@ -2871,7 +2871,7 @@ public class EA extends TSPAlgorithm {
 
     ss = this.doParentsSurvive();
     currentLambda = origLambda = this.getLambda();
-    currentMu = origMu = this.getMu();
+    nextMu = currentMu = origMu = this.getMu();
     minResize = this.m_minResizeFactor;
     maxResize = this.m_maxResizeFactor;
 
@@ -2923,22 +2923,15 @@ public class EA extends TSPAlgorithm {
       // pleases to do here)
       fap.assignFitness(pop, f);
 
+      // Check if we need to resize the mating pool.
+      currentMu = nextMu;
+      if (mate.length != currentMu) {
+        mate = new Individual[currentMu];
+      }
+
       // select mu individuals out of the population of size lambda (or
       // lambda+mu in the steady-state case)
       sr.select(pop, mate, f);
-
-      if (ss) {
-        // in the steady state case, the population of the next generation
-        // will contain lambda new offspring and the mu selected
-        // individuals)
-        if (pop.length <= currentLambda) {
-          // only in the very first generation, we need to re-allocate the
-          // population array
-          pop = new Individual[currentMu + currentLambda];
-        }
-        // and copy the parents to the next generation
-        System.arraycopy(mate, 0, pop, currentLambda, currentMu);
-      }
 
       // compute the resize factor of the population
       if (this.m_completedGenerations > 0) {
@@ -2950,25 +2943,49 @@ public class EA extends TSPAlgorithm {
         resize = 1d;
       }
 
-      // let's resize lambda, if necessary
+      // let's resize mu and lambda, if necessary
       if (resize != 1d) {
-        newSize = Math.max(1, ((int) (Math.round(Math.min(
+        // first compute the next lambda
+        nextLambda = Math.max(1, ((int) (Math.round(Math.min(
             Integer.MAX_VALUE, (resize * currentLambda))))));
         factor = (currentLambda / ((double) origLambda));
         if (factor < minResize) {
-          newSize = Math.max(1, ((int) (Math.round(Math.min(
+          nextLambda = Math.max(1, ((int) (Math.round(Math.min(
               Integer.MAX_VALUE, (minResize * origLambda))))));
         } else {
           if (factor > maxResize) {
-            newSize = Math.max(1, ((int) (Math.round(Math.min(
+            nextLambda = Math.max(1, ((int) (Math.round(Math.min(
                 Integer.MAX_VALUE, (maxResize * origLambda))))));
           }
         }
 
-        if (newSize != currentLambda) {
-          currentLambda = newSize;
-          pop = new Individual[currentLambda];
+        currentLambda = nextLambda;
+
+        // then compute the nextMu, in 1..nextLambda
+        nextMu = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
+            (resize * currentMu))))));
+        factor = (currentMu / ((double) origMu));
+        if (factor < minResize) {
+          nextMu = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
+              (minResize * origMu))))));
+        } else {
+          if (factor > maxResize) {
+            nextMu = Math.max(1, ((int) (Math.round(Math.min(
+                currentLambda, (maxResize * origMu))))));
+          }
         }
+
+      } else {
+        nextMu = currentMu;
+      }
+
+      // allocate the next population, copy the mating pool if necessary
+      nextPS = (ss ? (currentMu + currentLambda) : currentLambda);
+      if (pop.length != nextPS) {
+        pop = new Individual[nextPS];
+      }
+      if (ss) {
+        System.arraycopy(mate, 0, pop, currentLambda, currentMu);
       }
 
       // now we can fill the population with lambda new offspring
@@ -2986,27 +3003,6 @@ public class EA extends TSPAlgorithm {
         if (f.shouldTerminate()) {
           // if the computational budget is spent, we return
           return;
-        }
-      }
-
-      // let's resize the mating pool, if necessary
-      if (resize != 1d) {
-        newSize = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
-            (resize * currentMu))))));
-        factor = (currentMu / ((double) origMu));
-        if (factor < minResize) {
-          newSize = Math.max(1, ((int) (Math.round(Math.min(currentLambda,
-              (minResize * origMu))))));
-        } else {
-          if (factor > maxResize) {
-            newSize = Math.max(1, ((int) (Math.round(Math.min(
-                currentLambda, (maxResize * origMu))))));
-          }
-        }
-
-        if (newSize != currentMu) {
-          currentMu = newSize;
-          mate = new Individual[currentMu];
         }
       }
     }
