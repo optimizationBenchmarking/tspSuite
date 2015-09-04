@@ -1,5 +1,6 @@
 package snippets;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -8,6 +9,9 @@ import java.util.Collection;
 
 /** the job description generator for our cluster */
 public class Job implements Comparable<Job> {
+
+  /** the java job file */
+  private static final String JAVA_JOB = "java_job.bat"; //$NON-NLS-1$
 
   /** the program to execute */
   private final File m_jar;
@@ -20,7 +24,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * create the job
-   * 
+   *
    * @param j
    *          the jar file
    * @param c
@@ -37,7 +41,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * Make the job text
-   * 
+   *
    * @param bw
    *          the buffered writer to write to
    * @param jar
@@ -55,7 +59,9 @@ public class Job implements Comparable<Job> {
       bw.write('/');
       par = jar.getParentFile();
       bw.write(par.getParentFile().getName());
-      bw.write("/java_job.bat "); //$NON-NLS-1$
+      bw.write(' ');
+      bw.write(Job.JAVA_JOB);
+      bw.write(' ');
       bw.write(par.getName());
       bw.write(' ');
       bw.write(jar.getName());
@@ -70,7 +76,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * Make the job text
-   * 
+   *
    * @param bw
    *          the buffered writer to write to
    * @param submit
@@ -114,7 +120,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * make the batch files
-   * 
+   *
    * @param i
    *          the index of the batch file to make
    * @param next
@@ -139,7 +145,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * Make the batch files
-   * 
+   *
    * @param dir
    *          the directory
    * @param stepWidths
@@ -203,12 +209,41 @@ public class Job implements Comparable<Job> {
                 .getName()) : "[end]")); //$NON-NLS-1$
       }
     }
+  }
 
+  /**
+   * Make the javajob file
+   *
+   * @param dir
+   *          the directory
+   */
+  private static final void makeJavaJob(final File dir) {
+    try (final FileWriter fw = new FileWriter(new File(dir, Job.JAVA_JOB))) {
+      try (final BufferedWriter bw = new BufferedWriter(fw)) {
+        bw.write("#!/bin/sh"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("JOB_WORKING_DIR=~/"); //$NON-NLS-1$
+        bw.write(dir.getName());
+        bw.write("/$1/"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("JOB_EXECUTABLE=$2"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("JOB_CONFIG=$3"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("cd ${JOB_WORKING_DIR}"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("find ${JOB_WORKING_DIR} -type f -empty -delete"); //$NON-NLS-1$
+        bw.newLine();
+        bw.write("~/java/bin/java -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -server -Xnoclassgc -XX:+UseCompressedOops -XX:+AlwaysPreTouch -XX:CompileThreshold=512 -XX:+OptimizeStringConcat -jar ${JOB_WORKING_DIR}${JOB_EXECUTABLE} configFile=${JOB_CONFIG} >> ${JOB_WORKING_DIR}output.txt 2>&1"); //$NON-NLS-1$
+      }
+    } catch (final Throwable error) {
+      error.printStackTrace();
+    }
   }
 
   /**
    * find all jobs in a given directory and append them to a collection
-   * 
+   *
    * @param dir
    *          the directory
    * @param append
@@ -313,7 +348,7 @@ public class Job implements Comparable<Job> {
 
           q3 = new File[batchCount];
           for (int i = q3.length; (--i) >= 0;) {
-            q3[i] = f3 = new File(q, q.getName() + "_" + (i + 1) + //$NON-NLS-1$ 
+            q3[i] = f3 = new File(q, q.getName() + "_" + (i + 1) + //$NON-NLS-1$
                 ".bat");//$NON-NLS-1$
 
             try {
@@ -339,7 +374,7 @@ public class Job implements Comparable<Job> {
 
   /**
    * make the jobs
-   * 
+   *
    * @param dir
    *          the dir
    * @param stepWidths
@@ -354,6 +389,7 @@ public class Job implements Comparable<Job> {
     jobs = l.toArray(new Job[l.size()]);
     Arrays.sort(jobs);
     Job.makeBatch(dir, stepWidths, jobs);
+    Job.makeJavaJob(dir);
   }
 
   /** {@inheritDoc} */
@@ -378,14 +414,14 @@ public class Job implements Comparable<Job> {
 
   /**
    * Run the program
-   * 
+   *
    * @param args
    *          x
    * @throws Throwable
    *           xx
    */
   public static void main(final String[] args) throws Throwable {
-    Job.makeJobs(new File("./jobs/"), new int[] { //$NON-NLS-1$
+    Job.makeJobs(new File("."), new int[] { //$NON-NLS-1$
         7, 7, 6, 5, 4, 3, 2, 1 });
   }
 
