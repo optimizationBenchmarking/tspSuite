@@ -2,10 +2,12 @@ package org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea;
 
 import java.io.PrintStream;
 
+import org.logisticPlanning.tsp.benchmarking.objective.LogPoint;
 import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
 import org.logisticPlanning.tsp.solving.Individual;
 import org.logisticPlanning.tsp.solving.TSPAlgorithm;
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.fitness.FitnessIsObjectiveValue;
+import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.populationResize.StaticPopulationSize;
 import org.logisticPlanning.tsp.solving.algorithms.metaheuristics.general.ea.selection.TruncationSelection;
 import org.logisticPlanning.tsp.solving.gpm.GPM;
 import org.logisticPlanning.tsp.solving.gpm.IdentityMapping;
@@ -2084,6 +2086,22 @@ public class EA extends TSPAlgorithm {
   public static final String PARAM_MU = "mu"; //$NON-NLS-1$
   /** the &#955; parameter: {@value} , see {@link #m_lambda} */
   public static final String PARAM_LAMBDA = "lambda"; //$NON-NLS-1$
+  /**
+   * the maximum resize factor parameter: {@value} , see
+   * {@link #m_maxResizeFactor}
+   */
+  public static final String PARAM_MAX_RESIZE_FACTOR = "maxPopResize"; //$NON-NLS-1$
+  /**
+   * the minimum resize factor parameter: {@value} , see
+   * {@link #m_minResizeFactor}
+   */
+  public static final String PARAM_MIN_RESIZE_FACTOR = "minPopResize"; //$NON-NLS-1$
+
+  /**
+   * the population resize factor strategy: {@value} , see
+   * {@link #m_resizeStrategy}
+   */
+  public static final String PARAM_RESIZE_STRATEGY = "popResize"; //$NON-NLS-1$
 
   /** the steady state parameter: {@value} , see {@link #m_steady} */
   public static final String PARAM_PARENTS_SURVIVE = "parentsSurvive"; //$NON-NLS-1$
@@ -2116,6 +2134,17 @@ public class EA extends TSPAlgorithm {
   /** the default &#955;: {@value} , see {@link #m_lambda} */
   private static final int DEFAULT_LAMBDA = 64;
 
+  /**
+   * the default maximum population resize factor: {@value} , see
+   * {@link #m_maxResizeFactor}
+   */
+  private static final double DEFAULT_MAX_RESIZE = 256;
+  /**
+   * the default minimum population resize factor: {@value} , see
+   * {@link #m_minResizeFactor}
+   */
+  private static final double DEFAULT_MIN_RESIZE = (1d / EA.DEFAULT_MAX_RESIZE);
+
   /** the default parents survival: {@value} , see {@link #m_steady} */
   public static final boolean DEFAULT_PARENTS_SURVIVE = true;
 
@@ -2139,6 +2168,15 @@ public class EA extends TSPAlgorithm {
    * @see #setLambda(int)
    */
   private int m_lambda;
+
+  /** the maximum allowed resize factor */
+  private double m_maxResizeFactor;
+
+  /** the minimum allowed resize factor */
+  private double m_minResizeFactor;
+
+  /** the population resize strategy */
+  private PopulationResizeStrategy m_resizeStrategy;
 
   /**
    * Is the algorithm a steady-state algorithm? If so, parents survive and
@@ -2287,6 +2325,9 @@ public class EA extends TSPAlgorithm {
     this.m_nullary = NullaryOperator.DUMMY;
     this.m_cr = EA.DEFAULT_CR;
     this.m_fap = FitnessIsObjectiveValue.INSTANCE;
+    this.m_minResizeFactor = EA.DEFAULT_MIN_RESIZE;
+    this.m_maxResizeFactor = EA.DEFAULT_MAX_RESIZE;
+    this.m_resizeStrategy = StaticPopulationSize.INSTANCE;
 
     this.m_completedGenerations = (-1);
   }
@@ -2335,6 +2376,79 @@ public class EA extends TSPAlgorithm {
    */
   public final void setLambda(final int lambda) {
     this.m_lambda = ((lambda > 0) ? lambda : EA.DEFAULT_LAMBDA);
+  }
+
+  /**
+   * get the population resize strategy
+   *
+   * @return the population resize strategy
+   * @see #m_resizeStrategy
+   * @see #setResizeStrategy(PopulationResizeStrategy)
+   */
+  public final PopulationResizeStrategy getResizeStrategy() {
+    return this.m_resizeStrategy;
+  }
+
+  /**
+   * set the population resize strategy
+   *
+   * @param strategy
+   *          the population resize strategy
+   * @see #m_resizeStrategy
+   * @see #getResizeStrategy()
+   */
+  public final void setResizeStrategy(
+      final PopulationResizeStrategy strategy) {
+    this.m_resizeStrategy = ((strategy != null) ? strategy
+        : StaticPopulationSize.INSTANCE);
+  }
+
+  /**
+   * get the minimum population resize factor
+   *
+   * @return the resize factor
+   * @see #m_minResizeFactor
+   * @see #setMinResizeFactor(double)
+   */
+  public final double getMinResizeFactor() {
+    return this.m_minResizeFactor;
+  }
+
+  /**
+   * set the minimum population resize factor
+   *
+   * @param factor
+   *          the resize factor
+   * @see #m_minResizeFactor
+   * @see #getMinResizeFactor()
+   */
+  public final void setMinResizeFactor(final double factor) {
+    this.m_minResizeFactor = ((factor > 0d) ? factor
+        : EA.DEFAULT_MIN_RESIZE);
+  }
+
+  /**
+   * get the maximum population resize factor
+   *
+   * @return the resize factor
+   * @see #m_maxResizeFactor
+   * @see #setMaxResizeFactor(double)
+   */
+  public final double getMaxResizeFactor() {
+    return this.m_maxResizeFactor;
+  }
+
+  /**
+   * set the maximum population resize factor
+   *
+   * @param factor
+   *          the resize factor
+   * @see #m_maxResizeFactor
+   * @see #getMaxResizeFactor()
+   */
+  public final void setMaxResizeFactor(final double factor) {
+    this.m_maxResizeFactor = ((factor > 0d) ? factor
+        : EA.DEFAULT_MIN_RESIZE);
   }
 
   /**
@@ -2576,6 +2690,14 @@ public class EA extends TSPAlgorithm {
 
     this.m_fap = config.getInstance(EA.PARAM_FITNESS_ASSIGNMENT_PROCESS,
         FitnessAssignmentProcess.class, null, this.m_fap);
+
+    this.m_resizeStrategy = config.getInstance(EA.PARAM_RESIZE_STRATEGY,
+        PopulationResizeStrategy.class, null, this.m_resizeStrategy);
+
+    this.m_minResizeFactor = config.getDouble(EA.PARAM_MIN_RESIZE_FACTOR,
+        0d, 1d, this.m_minResizeFactor);
+    this.m_maxResizeFactor = config.getDouble(EA.PARAM_MAX_RESIZE_FACTOR,
+        1d, Double.POSITIVE_INFINITY, this.m_maxResizeFactor);
   }
 
   /** {@inheritDoc} */
@@ -2598,6 +2720,13 @@ public class EA extends TSPAlgorithm {
     ps.print(this.m_steady ? '+' : ',');
     ps.print(this.m_lambda);
     ps.println(')');
+
+    Configurable.printKey(EA.PARAM_MIN_RESIZE_FACTOR, ps);
+    ps.println(this.m_minResizeFactor);
+    Configurable.printKey(EA.PARAM_MAX_RESIZE_FACTOR, ps);
+    ps.println(this.m_maxResizeFactor);
+    Configurable.printKey(EA.PARAM_RESIZE_STRATEGY, ps);
+    Configurable.printlnObject(this.m_resizeStrategy, ps);
 
     Configurable.printKey(EA.PARAM_FITNESS_ASSIGNMENT_PROCESS, ps);
     Configurable.printlnObject(this.m_fap, ps);
@@ -2637,6 +2766,15 @@ public class EA extends TSPAlgorithm {
 
     Configurable.printKey(EA.PARAM_MU, ps);
     ps.println("the mating pool size, i.e., the number of selected individuals."); //$NON-NLS-1$
+
+    Configurable.printKey(EA.PARAM_MIN_RESIZE_FACTOR, ps);
+    ps.println("the minimum factor by which the population size can be shrunk."); //$NON-NLS-1$
+
+    Configurable.printKey(EA.PARAM_MAX_RESIZE_FACTOR, ps);
+    ps.println("the maximum factor by which the population size can be increased."); //$NON-NLS-1$
+
+    Configurable.printKey(EA.PARAM_RESIZE_STRATEGY, ps);
+    ps.println("the population resize strategy."); //$NON-NLS-1$
 
     Configurable.printKey(EA.PARAM_PARENTS_SURVIVE, ps);
     ps.println("will parents compete with children (mu+lambda) or not (mu,lambda)."); //$NON-NLS-1$
@@ -2717,8 +2855,8 @@ public class EA extends TSPAlgorithm {
   public void solve(final ObjectiveFunction f) {
     Individual<Object>[] pop, mate;
     final boolean ss;
-    final int lambda, mu;
-    int i;
+    final int origLambda, origMu;
+    int i, currentMu, currentLambda, newSize;
     final UnaryOperator<Object> op1;
     final BinaryOperator<Object> op2;
     Individual<Object> ind;
@@ -2726,14 +2864,19 @@ public class EA extends TSPAlgorithm {
     final SelectionAlgorithm sr;
     final FitnessAssignmentProcess fap;
     final Randomizer r;
-    final double cr;
+    final double cr, minResize, maxResize;
+    final LogPoint bestLP;
+    double resize, factor;
+    long temp, lastImprovementFE;
 
     ss = this.doParentsSurvive();
-    lambda = this.getLambda();
-    mu = this.getMu();
+    currentLambda = origLambda = this.getLambda();
+    currentMu = origMu = this.getMu();
+    minResize = this.m_minResizeFactor;
+    maxResize = this.m_maxResizeFactor;
 
-    pop = new Individual[lambda];
-    mate = new Individual[mu];
+    pop = new Individual[origLambda];
+    mate = new Individual[origMu];
 
     op1 = this.getUnaryOperator();
     op2 = this.getBinaryOperator();
@@ -2742,11 +2885,12 @@ public class EA extends TSPAlgorithm {
     cr = this.getCrossoverRate();
     fap = this.getFitnessAssignmentProcess();
     r = f.getRandom();
+    bestLP = f.getLastImprovementLogPoint();
+    lastImprovementFE = Long.MIN_VALUE;
 
     // Produce the first generation of individuals. These individuals will
     // usually be random, may have also been produced with a heuristic
-    // and/or
-    // refined with a local search
+    // and/or refined with a local search
     this.createFirstGeneration(pop, f);
 
     for (;;) {
@@ -2758,10 +2902,10 @@ public class EA extends TSPAlgorithm {
       // tell the GPM that a new generation is beginning
       gpm.beforeGeneration(f);
 
-      // At the beginning of each generation, we "complete" the
-      // individuals in
-      // the population, i.e., perform GPMs and calculate the tour lengths
-      for (i = lambda; (--i) >= 0;) {
+      // At the beginning of each generation, we "complete" the individuals
+      // in the population, i.e., perform GPMs and calculate the tour
+      // lengths
+      for (i = currentLambda; (--i) >= 0;) {
         ind = pop[i];
         this.complete(ind, f, gpm);
         if (f.shouldTerminate()) {
@@ -2774,11 +2918,9 @@ public class EA extends TSPAlgorithm {
       gpm.afterGeneration(f);
 
       // use the tour lengths (and potentially other individual features)
-      // to
-      // create the fitness of each individual (by default, fitness=tour
+      // to create the fitness of each individual (by default, fitness=tour
       // length, but the fitness assignment process may do whatever it
-      // pleases
-      // to do here)
+      // pleases to do here)
       fap.assignFitness(pop, f);
 
       // select mu individuals out of the population of size lambda (or
@@ -2786,35 +2928,81 @@ public class EA extends TSPAlgorithm {
       sr.select(pop, mate, f);
 
       if (ss) {
-        // in the steady state case, the population of the next
-        // generation will
-        // contain lambda new offspring and the mu selected individuals)
-        if (pop.length <= lambda) {
-          // only in the very first generation, we need to re-allocate
-          // the
+        // in the steady state case, the population of the next generation
+        // will contain lambda new offspring and the mu selected
+        // individuals)
+        if (pop.length <= currentLambda) {
+          // only in the very first generation, we need to re-allocate the
           // population array
-          pop = new Individual[mu + lambda];
+          pop = new Individual[currentMu + currentLambda];
         }
         // and copy the parents to the next generation
-        System.arraycopy(mate, 0, pop, lambda, mu);
+        System.arraycopy(mate, 0, pop, currentLambda, currentMu);
+      }
+
+      // compute the resize factor of the population
+      if (this.m_completedGenerations > 0) {
+        temp = bestLP.getConsumedFEs();
+        resize = this.m_resizeStrategy.getResizeFactor(
+            (temp > lastImprovementFE), r);
+        lastImprovementFE = temp;
+      } else {
+        resize = 1d;
+      }
+
+      // let's resize lambda, if necessary
+      if (resize != 1d) {
+        newSize = ((int) (Math.round(Math.max(1,
+            Math.min(Integer.MAX_VALUE, (resize * currentLambda))))));
+        factor = (currentLambda / ((double) origLambda));
+        if (factor < minResize) {
+          newSize = ((int) (Math.round(minResize * origLambda)));
+        } else {
+          if (factor > maxResize) {
+            newSize = ((int) (Math.round(maxResize * origLambda)));
+          }
+        }
+
+        if (newSize != currentLambda) {
+          currentLambda = newSize;
+          pop = new Individual[currentLambda];
+        }
       }
 
       // now we can fill the population with lambda new offspring
-      for (i = lambda; (--i) >= 0;) {
+      for (i = currentLambda; (--i) >= 0;) {
         pop[i] = ind = new Individual<>();
-        // With probability cr, an offspring results from crossover
-        // (binary
+        // With probability cr, an offspring results from crossover (binary
         // search operator). With probability (1-cr), it results from
-        // mutation
-        // (unary search operator).
+        // mutation (unary search operator).
         if (r.nextDouble() < cr) {
-          op2.recombine(ind, f, mate[i % mu], mate[r.nextInt(mu)]);
+          op2.recombine(ind, f, mate[i % currentMu],
+              mate[r.nextInt(currentMu)]);
         } else {
-          op1.mutate(ind, f, mate[i % mu]);
+          op1.mutate(ind, f, mate[i % currentMu]);
         }
         if (f.shouldTerminate()) {
           // if the computational budget is spent, we return
           return;
+        }
+      }
+
+      // let's resize the mating pool, if necessary
+      if (resize != 1d) {
+        newSize = ((int) (Math.round(Math.max(1,
+            Math.min(Integer.MAX_VALUE, (resize * currentMu))))));
+        factor = (currentMu / ((double) origMu));
+        if (factor < minResize) {
+          newSize = ((int) (Math.round(minResize * origMu)));
+        } else {
+          if (factor > maxResize) {
+            newSize = ((int) (Math.round(maxResize * origMu)));
+          }
+        }
+
+        if (newSize != currentMu) {
+          currentMu = newSize;
+          mate = new Individual[currentMu];
         }
       }
     }
@@ -2834,6 +3022,8 @@ public class EA extends TSPAlgorithm {
     cfg.m_gpm = ((GPM<Object>) (cfg.m_gpm.clone()));
     cfg.m_selection = ((SelectionAlgorithm) (cfg.m_selection.clone()));
     cfg.m_completedGenerations = (-1);
+    cfg.m_resizeStrategy = ((PopulationResizeStrategy) (cfg.m_resizeStrategy
+        .clone()));
 
     return cfg;
   }
@@ -2854,6 +3044,7 @@ public class EA extends TSPAlgorithm {
     this.m_gpm.beginRun(f);
     this.m_fap.beginRun(f);
     this.m_selection.beginRun(f);
+    this.m_resizeStrategy.beginRun(f);
   }
 
   /** {@inheritDoc} */
@@ -2873,16 +3064,20 @@ public class EA extends TSPAlgorithm {
             this.m_binary.endRun(f);
           } finally {
             try {
-              if ((!(this.m_binary instanceof BinaryOperatorFollowedByUnary))
-                  || ((((BinaryOperatorFollowedByUnary) (this.m_binary))
-                      .getUnaryOperator()) != this.m_unary)) {
-                this.m_unary.endRun(f);
-              }
+              this.m_resizeStrategy.endRun(f);
             } finally {
               try {
-                this.m_nullary.endRun(f);
+                if ((!(this.m_binary instanceof BinaryOperatorFollowedByUnary))
+                    || ((((BinaryOperatorFollowedByUnary) (this.m_binary))
+                        .getUnaryOperator()) != this.m_unary)) {
+                  this.m_unary.endRun(f);
+                }
               } finally {
-                super.endRun(f);
+                try {
+                  this.m_nullary.endRun(f);
+                } finally {
+                  super.endRun(f);
+                }
               }
             }
           }
