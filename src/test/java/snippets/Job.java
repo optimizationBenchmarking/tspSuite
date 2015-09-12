@@ -59,7 +59,7 @@ public class Job implements Comparable<Job> {
       bw.write('/');
       par = jar.getParentFile();
       bw.write(par.getParentFile().getName());
-      bw.write(' ');
+      bw.write('/');
       bw.write(Job.JAVA_JOB);
       bw.write(' ');
       bw.write(par.getName());
@@ -223,7 +223,7 @@ public class Job implements Comparable<Job> {
         bw.write("#!/bin/sh"); //$NON-NLS-1$
         bw.newLine();
         bw.write("JOB_WORKING_DIR=~/"); //$NON-NLS-1$
-        bw.write(dir.getName());
+        bw.write(dir.getCanonicalFile().getName());
         bw.write("/$1/"); //$NON-NLS-1$
         bw.newLine();
         bw.write("JOB_EXECUTABLE=$2"); //$NON-NLS-1$
@@ -422,7 +422,6 @@ public class Job implements Comparable<Job> {
    */
   public static void main(final String[] args) throws Throwable {
     Job.makeJobs(new File("."), new int[] { //$NON-NLS-1$
-        7, 7, 6, 5, 4, 3, 2, 1 });
+        10, 10, 7, 5, 3, 2, 1 });
   }
-
 }
