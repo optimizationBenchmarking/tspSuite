@@ -79,13 +79,17 @@ public class TabuSearchMove extends TSPLocalSearchAlgorithm<int[]> {
 
   /** the length of tabu list */
   private int rate;
+  
+  public static final String PARAM_USE_FIRST_IMPROVEMENT = "useFirstImprovement";
+  
+  private boolean m_useFirstImprovement;
 
   /** the tabu list */
   private ArrayList<_PairOfNode> tabuList;
 
   /** instantiate */
   public TabuSearchMove() {
-    super("TabuSearchEx");//$NON-NLS-1$
+    super("TabuSearchMove");//$NON-NLS-1$
     this.m_ops = PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
     // this.tabuListLength = 10;
   }
@@ -144,7 +148,7 @@ public class TabuSearchMove extends TSPLocalSearchAlgorithm<int[]> {
       bestB = 1;
       delta = Integer.MAX_VALUE;
       best = null;
-      for (a = 0; a < (n - 2); a++) {
+      findOperation:for (a = 0; a < (n - 2); a++) {
         pairOfEx.setA(sol[a]);
         for (b = a + 1; b < (n - 1); b++) {
           pairOfEx.setB(sol[b]);
@@ -158,6 +162,9 @@ public class TabuSearchMove extends TSPLocalSearchAlgorithm<int[]> {
               bestA = a;
               bestB = b;
               best = o;
+              if(delta < 0 && this.m_useFirstImprovement){
+            	  break findOperation;
+              }
             }
           }
         }
@@ -211,6 +218,8 @@ public class TabuSearchMove extends TSPLocalSearchAlgorithm<int[]> {
         20000, this.absolute);
     this.rate = config.getInt(TabuSearchMove.PARAM_RATE, 0, 1000,
         this.rate);
+    this.m_useFirstImprovement = config.getBoolean(TabuSearchMove.PARAM_USE_FIRST_IMPROVEMENT, 
+    		this.m_useFirstImprovement);
   }
 
   /** {@inheritDoc} */

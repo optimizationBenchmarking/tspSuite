@@ -93,7 +93,7 @@ public class TabuSearchSolution extends TSPLocalSearchAlgorithm<int[]> {
 
   /** instantiate */
   public TabuSearchSolution() {
-    super("TabuSearch");//$NON-NLS-1$
+    super("TabuSearchSolution");//$NON-NLS-1$
     this.m_ops = PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
     this.m_useFirstImprovement = false;
   }

@@ -3,7 +3,7 @@ package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.ts;
 import org.logisticPlanning.utils.utils.HashUtils;
 
 /** a pair for nodes */
-final class _PairOfNode {
+public final class _PairOfNode {
 
   /** the first node */
   private int m_a;
@@ -26,7 +26,7 @@ final class _PairOfNode {
    * @param b
    *          the second node
    */
-  _PairOfNode(final int a, final int b) {
+  public _PairOfNode(final int a, final int b) {
     super();
     this.m_a = a;
     this.m_b = b;
@@ -93,6 +93,6 @@ final class _PairOfNode {
   /** {@inheritDoc} */
   @Override
   public final int hashCode() {
-    return HashUtils.combineHashes(this.m_a, this.m_b);
+    return ((this.m_a* this.m_b)+this.m_a+this.m_b);
   }
 }

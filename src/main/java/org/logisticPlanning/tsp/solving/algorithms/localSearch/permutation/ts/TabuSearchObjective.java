@@ -92,9 +92,8 @@ public class TabuSearchObjective extends TSPLocalSearchAlgorithm<int[]> {
 
   /** instantiate */
   public TabuSearchObjective() {
-    super("TabuSearch");//$NON-NLS-1$
+    super("TabuSearchObjectiveValue");//$NON-NLS-1$
     this.m_ops = PermutationUpdateOperators.OPERATORS_AND_COMPLEMENT;
-    this.m_useFirstImprovement = false;
   }
 
   /**
