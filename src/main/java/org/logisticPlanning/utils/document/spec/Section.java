@@ -11,7 +11,8 @@ public class Section extends AbstractLabeledElement {
   private static final int STATE_IN_TITLE = (Element.STATE_NOTHING + 1);
 
   /** after title */
-  private static final int STATE_AFTER_TITLE = (Section.STATE_IN_TITLE + 1);
+  private static final int STATE_AFTER_TITLE = (Section.STATE_IN_TITLE
+      + 1);
 
   /** in body */
   private static final int STATE_IN_BODY = (Section.STATE_AFTER_TITLE + 1);
@@ -91,6 +92,7 @@ public class Section extends AbstractLabeledElement {
    *
    * @return the hierarchy of indexes
    */
+  @SuppressWarnings("resource")
   public final int[] getAllIndexes() {
     final int[] idx;
     int i;
@@ -162,8 +164,8 @@ public class Section extends AbstractLabeledElement {
 
   /** {@inheritDoc} */
   @Override
-  protected void sectionTitleEnd(final SectionTitle h) throws IOException,
-      IllegalStateException {
+  protected void sectionTitleEnd(final SectionTitle h)
+      throws IOException, IllegalStateException {
 
     if (this.m_state != Section.STATE_IN_TITLE) {
       throw new IllegalStateException(//
@@ -176,8 +178,8 @@ public class Section extends AbstractLabeledElement {
 
   /** {@inheritDoc} */
   @Override
-  public SectionTitle sectionTitle() throws IOException,
-      IllegalStateException {
+  public SectionTitle sectionTitle()
+      throws IOException, IllegalStateException {
     return super.sectionTitle();
   }
 
@@ -190,8 +192,8 @@ public class Section extends AbstractLabeledElement {
 
   /** {@inheritDoc} */
   @Override
-  protected void sectionBodyBegin(final SectionBody h) throws IOException,
-      IllegalStateException {
+  protected void sectionBodyBegin(final SectionBody h)
+      throws IOException, IllegalStateException {
 
     if (this.m_state != Section.STATE_AFTER_TITLE) {
       throw new IllegalStateException(//
@@ -204,8 +206,8 @@ public class Section extends AbstractLabeledElement {
 
   /** {@inheritDoc} */
   @Override
-  protected void sectionBodyEnd(final SectionBody h) throws IOException,
-      IllegalStateException {
+  protected void sectionBodyEnd(final SectionBody h)
+      throws IOException, IllegalStateException {
 
     if (this.m_state != Section.STATE_IN_BODY) {
       throw new IllegalStateException(//
@@ -218,8 +220,8 @@ public class Section extends AbstractLabeledElement {
 
   /** {@inheritDoc} */
   @Override
-  public SectionBody sectionBody() throws IOException,
-      IllegalStateException {
+  public SectionBody sectionBody()
+      throws IOException, IllegalStateException {
     return super.sectionBody();
   }
 

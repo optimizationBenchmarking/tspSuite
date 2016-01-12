@@ -1,9 +1,7 @@
-package org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.ts;
-
-import org.logisticPlanning.utils.utils.HashUtils;
+package org.logisticPlanning.tsp.solving.utils;
 
 /** a pair for nodes */
-public final class _PairOfNode {
+public final class PairOfNode {
 
   /** the first node */
   private int m_a;
@@ -12,7 +10,7 @@ public final class _PairOfNode {
   private int m_b;
 
   /** create */
-  _PairOfNode() {
+  public PairOfNode() {
     super();
     this.m_a = 0;
     this.m_b = 1;
@@ -26,7 +24,7 @@ public final class _PairOfNode {
    * @param b
    *          the second node
    */
-  public _PairOfNode(final int a, final int b) {
+  public PairOfNode(final int a, final int b) {
     super();
     this.m_a = a;
     this.m_b = b;
@@ -76,9 +74,10 @@ public final class _PairOfNode {
     if (o == this) {
       return true;
     }
-    if (o instanceof _PairOfNode) {
-      final _PairOfNode temp = (_PairOfNode) o;
-      return (((this.m_a == temp.m_a) && (this.m_b == temp.m_b)) || ((this.m_a == temp.m_b) && (this.m_b == temp.m_a)));
+    if (o instanceof PairOfNode) {
+      final PairOfNode temp = (PairOfNode) o;
+      return (((this.m_a == temp.m_a) && (this.m_b == temp.m_b))
+          || ((this.m_a == temp.m_b) && (this.m_b == temp.m_a)));
     }
     return false;
 
@@ -86,13 +85,13 @@ public final class _PairOfNode {
 
   /** {@inheritDoc} */
   @Override
-  public final _PairOfNode clone() {
-    return new _PairOfNode(this.m_a, this.m_b);
+  public final PairOfNode clone() {
+    return new PairOfNode(this.m_a, this.m_b);
   }
 
   /** {@inheritDoc} */
   @Override
   public final int hashCode() {
-    return ((this.m_a* this.m_b)+this.m_a+this.m_b);
+    return ((this.m_a * this.m_b) + this.m_a + this.m_b);
   }
 }
