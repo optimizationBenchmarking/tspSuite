@@ -1,6 +1,10 @@
 package org.logisticPlanning.tsp.solving.operators.permutation.update;
 
+import java.util.ArrayList;
+
 import org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer;
+import org.logisticPlanning.tsp.solving.algorithms.localSearch.permutation.ts._PairOfNode;
+import org.logisticPlanning.tsp.solving.utils.edge.Edge;
 
 /**
  * <p>
@@ -137,6 +141,71 @@ public final class PermutationUpdate_Rotate_Right extends
     return (DF + BE + AE) - (AB + EF + DE);//
   }
 
+  /** {@inheritDoc} */
+	@Override
+	public final ArrayList<_PairOfNode> inComingEdges(final int[] perm, final int a,
+			final int b) {
+		final int l, m1;
+	    final int B, E, A, F, D;
+	    ArrayList<_PairOfNode> inComing = new ArrayList<_PairOfNode>();
+
+	    l = perm.length;
+	    m1 = (l - 1);
+
+	    if ((((b - a) + l) % l) <= 1) {// changed == to <=
+	      return PermutationUpdate_Swap.INSTANCE.inComingEdges(perm, a, b);
+	    }
+	    if (a == ((b + 1) % l)) {
+	      return null;
+	    }
+
+	    A = perm[(a + m1) % l];
+	    B = perm[a];
+
+	    D = perm[(b + m1) % l];
+	    E = perm[b];
+	    F = perm[(b + 1) % l];
+
+	    inComing.add(new _PairOfNode(D, F));
+	    inComing.add(new _PairOfNode(B, E));
+	    inComing.add(new _PairOfNode(A, E));
+	    
+		return inComing;
+		
+	}
+
+	/** {@inheritDoc} */
+	@Override
+	public final ArrayList<_PairOfNode> outComingEdges(final int[] perm, final int a,
+			final int b) {
+		final int l, m1;
+	    final int B, E, A, F, D;
+	    ArrayList<_PairOfNode> outComing = new ArrayList<_PairOfNode>();
+
+	    l = perm.length;
+	    m1 = (l - 1);
+
+	    if ((((b - a) + l) % l) <= 1) {// changed == to <=
+	      return PermutationUpdate_Swap.INSTANCE.outComingEdges(perm, a, b);
+	    }
+	    if (a == ((b + 1) % l)) {
+	      return null;
+	    }
+
+	    A = perm[(a + m1) % l];
+	    B = perm[a];
+
+	    D = perm[(b + m1) % l];
+	    E = perm[b];
+	    F = perm[(b + 1) % l];
+
+	    outComing.add(new _PairOfNode(E, F));
+	    outComing.add(new _PairOfNode(D, E));
+	    outComing.add(new _PairOfNode(A, B));
+	    
+		return outComing;
+	}
+  
   /** {@inheritDoc} */
   @Override
   public final void update(final int[] perm, final int a, final int b) {
