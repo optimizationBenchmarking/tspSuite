@@ -1014,7 +1014,7 @@ public class PrintInstanceFeatures {
     distancesShorterThanMean = 0;
     nearest = new StatisticInfo[PrintInstanceFeatures.ORDER_FEATURE_NUM];
     farthest = new StatisticInfo[PrintInstanceFeatures.ORDER_FEATURE_NUM];
-    for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0; --i) {
+    for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0; ) {
       nearest[i] = new StatisticInfo();
       farthest[i] = new StatisticInfo();
     }
@@ -1031,14 +1031,14 @@ public class PrintInstanceFeatures {
         if (currentDistance < mean) {
           distancesShorterThanMean++;
         }
-        distancesFromNode[((j < i) ? j : (j - 1) - 1)] = currentDistance;
+        distancesFromNode[((j < i) ? j : (j - 1)) - 1] = currentDistance;
       }
       Arrays.sort(distancesFromNode);
 
       for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0; --i) {
         nearest[i].visitDouble(distancesFromNode[i] / mean);
         farthest[i]
-            .visitDouble(distancesFromNode[numNodes - 1 - i] / mean);
+            .visitDouble(distancesFromNode[numNodes - 2 - i] / mean);
       }
     }
 
