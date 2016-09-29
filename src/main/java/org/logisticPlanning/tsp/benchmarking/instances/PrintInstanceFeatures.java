@@ -1,5 +1,7 @@
 package org.logisticPlanning.tsp.benchmarking.instances;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,6 +9,13 @@ import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 import org.logisticPlanning.tsp.benchmarking.dist.DistanceComputer;
+import org.logisticPlanning.tsp.benchmarking.objective.Benchmark;
+import org.logisticPlanning.tsp.benchmarking.objective.ObjectiveFunction;
+import org.logisticPlanning.tsp.solving.Individual;
+import org.logisticPlanning.tsp.solving.algorithms.heuristics.TSPHeuristic;
+import org.logisticPlanning.tsp.solving.algorithms.heuristics.edgeGreedy.EdgeGreedyHeuristic;
+import org.logisticPlanning.tsp.solving.algorithms.heuristics.mst.MSTHeuristic;
+import org.logisticPlanning.utils.config.Configuration;
 import org.logisticPlanning.utils.math.statistics.aggregates.StatisticInfo;
 
 /** print instance features */
@@ -746,13 +755,7 @@ public class PrintInstanceFeatures {
         "the number of cities in the TSP", //$NON-NLS-1$
         Long.valueOf(instance.n()), null);
 
-    DistanceComputer comp;
-    try {
-      comp = instance.load(10000);
-    } catch (final Throwable error) {
-      throw new RuntimeException(error);
-    }
-    PrintInstanceFeatures.__statFeatures(comp);
+    PrintInstanceFeatures.__statFeatures(instance);
 
     System.out.println('}');
     System.out.println('}');
@@ -806,7 +809,7 @@ public class PrintInstanceFeatures {
     }
     if (object instanceof Float) {
       System.out.print("Float.valueOf(");//$NON-NLS-1$
-      System.out.print(Float.toHexString(((Float) object).floatValue()));
+      System.out.print(Float.toString(((Float) object).floatValue()));
       System.out.print('f');
       System.out.print(')');
       System.out.print(addendum);
@@ -814,8 +817,7 @@ public class PrintInstanceFeatures {
     }
     if (object instanceof Double) {
       System.out.print("Double.valueOf(");//$NON-NLS-1$
-      System.out
-          .print(Double.toHexString(((Double) object).doubleValue()));
+      System.out.print(Double.toString(((Double) object).doubleValue()));
       System.out.print('d');
       System.out.print(')');
       System.out.print(addendum);
@@ -914,11 +916,11 @@ public class PrintInstanceFeatures {
   /**
    * get the mean distance
    *
-   * @param comp
-   *          the distance computer
+   * @param instance
+   *          the instance
    * @return the mean distance
    */
-  private static final double __statFeatures(final DistanceComputer comp) {
+  private static final double __statFeatures(final Instance instance) {
     final int numNodes;
     long totalDistanceSum, currentDistanceSum, copy1, copy2, temp, oldsum;
     StatisticInfo info, cityInfo;
@@ -926,11 +928,17 @@ public class PrintInstanceFeatures {
         totalMaxDistance;
     int[] distancesFromNode;
     double[] medianDistancesFromNodes;
-    final double mean, medmed;
+    final double mean, meanDiv, medmed;
     final long totalDistanceCount;
     long[] smallestAvgDistances, largestAvgDistances;
     StatisticInfo[] nearest, farthest;
+    final DistanceComputer comp;
 
+    try {
+      comp = instance.load(10000);
+    } catch (final Throwable error) {
+      throw new IllegalStateException(error);
+    }
     totalDistanceSum = 0;
     numNodes = comp.n();
     info = new StatisticInfo();
@@ -1142,7 +1150,79 @@ public class PrintInstanceFeatures {
           Double.valueOf(farthest[i].getCoefficientOfVariation()), null);
     }
 
+    meanDiv = mean * numNodes;
+
+    PrintInstanceFeatures.__featureValue(
+        PrintInstanceFeatures.CLASS_PREFIX + "DMST", //$NON-NLS-1$
+        "The result of the double-minimum spanning tree heuristic, divided by n times the mean city distance.", //$NON-NLS-1$
+        Double.valueOf(PrintInstanceFeatures.__applyHeuristic(instance,
+            new MSTHeuristic()) / meanDiv),
+        null);
+    // PrintInstanceFeatures.__featureValue(
+    // PrintInstanceFeatures.CLASS_PREFIX + "ITERATED_NEAREST_NEIGHBOR",
+    // //$NON-NLS-1$
+    // "The result of the iterated nearest neighbor heurist, divided by n
+    // times the mean city distance.", //$NON-NLS-1$
+    // Double.valueOf(__applyHeuristic(instance,
+    // new IteratedNearestNeighborHeuristic()) / meanDiv),
+    // null);
+    PrintInstanceFeatures.__featureValue(
+        PrintInstanceFeatures.CLASS_PREFIX + "EDGE_GREEDY", //$NON-NLS-1$
+        "The result of the iterated nearest neighbor heurist, divided by n times the mean city distance.", //$NON-NLS-1$
+        Double.valueOf(PrintInstanceFeatures.__applyHeuristic(instance,
+            new EdgeGreedyHeuristic()) / meanDiv),
+        null);
+    // PrintInstanceFeatures.__featureValue(
+    // PrintInstanceFeatures.CLASS_PREFIX + "ITERATED_SAVINGS",
+    // //$NON-NLS-1$
+    // "The result of the iterated savings heurist, divided by the n times
+    // mean city distance.", //$NON-NLS-1$
+    // Double.valueOf(
+    // __applyHeuristic(instance, new IteratedSavingsHeuristic())
+    // / meanDiv),
+    // null);
+
     return mean;
+  }
+
+  /**
+   * Apply a heuristic
+   *
+   * @param instance
+   *          the instance
+   * @param algo
+   *          the algorithm
+   * @return the result
+   */
+  private static final long __applyHeuristic(final Instance instance,
+      final TSPHeuristic algo) {
+    final ObjectiveFunction objective;
+    final Benchmark bench;
+    final Configuration config;
+    final Individual<int[]> dest;
+
+    try (final __TempDir temp = new __TempDir()) {
+      bench = new Benchmark(instance);
+      config = new Configuration();
+      config.getFile(Benchmark.PARAM_DEST_DIR, temp.getDir());
+      config.getLong(Benchmark.PARAM_MAX_FES, Long.MIN_VALUE,
+          Long.MAX_VALUE, Long.MAX_VALUE);
+      config.getLong(Benchmark.PARAM_MAX_DES, Long.MIN_VALUE,
+          Long.MAX_VALUE, Long.MAX_VALUE);
+      config.getLong(Benchmark.PARAM_MAX_TIME, Long.MIN_VALUE,
+          Long.MAX_VALUE, Long.MAX_VALUE);
+      bench.configure(config);
+      objective = bench.createObjective();
+      objective.beginRun(algo);
+      algo.beginRun(objective);
+      dest = new Individual<>();
+      algo.solve(objective, dest);
+      algo.endRun(objective);
+      objective.endRun();
+      return dest.tourLength;
+    } catch (final Throwable error) {
+      throw new IllegalStateException(error);
+    }
   }
 
   /** the data holder */
@@ -1209,4 +1289,94 @@ public class PrintInstanceFeatures {
     }
 
   }
+
+  /**
+   * a temp directory
+   */
+  private static final class __TempDir implements AutoCloseable {
+
+    /** the internal synchronizer */
+    private static final Object SYNC = new Object();
+
+    /** the directory */
+    private File m_file;
+
+    /** instantiate */
+    __TempDir() {
+      super();
+    }
+
+    /**
+     * Get the temporary directory
+     *
+     * @return the temporary directory
+     * @throws IOException
+     *           if something fails
+     */
+    public final File getDir() throws IOException {
+      synchronized (__TempDir.SYNC) {
+        if (this.m_file == null) {
+
+          this.m_file = File.createTempFile(// //
+              "test" + //$NON-NLS-1$
+                  Integer.toHexString(//
+                      (int) (System.currentTimeMillis() & 0xfffffffl)), //
+              null);
+
+          this.m_file = this.m_file.getCanonicalFile();
+          this.m_file.delete();
+
+          this.m_file.mkdirs();
+          this.m_file.deleteOnExit();
+        }
+      }
+
+      return this.m_file;
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public final void close() throws IOException {
+      synchronized (__TempDir.SYNC) {
+        if (this.m_file != null) {
+          try {
+            __TempDir.delete(this.m_file);
+          } finally {
+            this.m_file = null;
+          }
+        }
+      }
+    }
+
+    /**
+     * delete a file
+     *
+     * @param f
+     *          the file
+     * @throws IOException
+     *           the error
+     */
+    private static final void delete(final File f) throws IOException {
+      final File[] fs;
+
+      if (f == null) {
+        return;
+      }
+
+      try {
+        if (f.isDirectory()) {
+          fs = f.listFiles();
+          if (fs != null) {
+            for (final File ff : fs) {
+              __TempDir.delete(ff);
+            }
+          }
+        }
+      } finally {
+        f.delete();
+      }
+    }
+
+  }
+
 }
