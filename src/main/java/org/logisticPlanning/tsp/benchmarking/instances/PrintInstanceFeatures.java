@@ -15,9 +15,6 @@ public class PrintInstanceFeatures {
   /** the class prefix */
   private static final String CLASS_PREFIX = "TSPSuiteInput."; //$NON-NLS-1$
 
-  /** the description prefix */
-  private static final String VAR_PREFIX = "var_"; //$NON-NLS-1$
-
   /**
    * the main routine
    *
@@ -610,6 +607,20 @@ public class PrintInstanceFeatures {
     for (final __Holder holder : data) {
       holder.run();
     }
+
+    System.out
+        .println("/** fill in the TSPLib instance set used in TSPSuite");//$NON-NLS-1$
+    System.out.println("@param esb the experiment set builder */");//$NON-NLS-1$
+    System.out.println(
+        "public static final void makeTSPLibInstanceSet(final IExperimentSetContext esb) {");//$NON-NLS-1$
+
+    for (final __Holder holder : data) {
+      System.out.print("__");//$NON-NLS-1$
+      System.out.print(holder.m_instance.name().toUpperCase());
+      System.out.println("(esb);");//$NON-NLS-1$
+    }
+    System.out.println('}');
+
     System.out.println();
     System.out.println();
     System.out.println();
@@ -619,6 +630,9 @@ public class PrintInstanceFeatures {
 
   /** the described feature values */
   private static final HashMap<String, HashSet<Object>> DESCRIBED_FEATURES = new HashMap<>();
+
+  /** the features */
+  private static final LinkedHashMap<String, String> FEATURES = new LinkedHashMap<>();
 
   /**
    * print a feature value
@@ -634,6 +648,8 @@ public class PrintInstanceFeatures {
    */
   private static final void __featureValue(final String feature,
       final String desc, final Object value, final String valueDesc) {
+    final double dvalue;
+
     System.out.print("i.setFeatureValue(");//$NON-NLS-1$
     System.out.print(feature);
     System.out.println(',');
@@ -643,15 +659,32 @@ public class PrintInstanceFeatures {
     } else {
       PrintInstanceFeatures.DESCRIBED_FEATURES.put(feature,
           new HashSet<>());
-      System.out.print(PrintInstanceFeatures.__print(desc));
-      System.out.print(',');
+      PrintInstanceFeatures.__print(desc, ",");//$NON-NLS-1$
     }
 
-    System.out.print(PrintInstanceFeatures.__print(value));
-    System.out.print(',');
+    if (feature.startsWith(PrintInstanceFeatures.CLASS_PREFIX)) {
+      if ((desc != null)
+          && (PrintInstanceFeatures.FEATURES.get(feature) == null)) {
+        PrintInstanceFeatures.FEATURES.put(feature, desc);
+      }
+    }
 
-    System.out.print(PrintInstanceFeatures.__print(valueDesc));
-    System.out.println(");");//$NON-NLS-1$
+    if ((value == null) || ((value instanceof Number)
+        && ((Double.isInfinite(dvalue = ((Number) value).doubleValue())
+            || Double.isNaN(dvalue))))) {
+      throw new IllegalArgumentException(String.valueOf(value));
+    }
+
+    PrintInstanceFeatures.__print(value, ",");//$NON-NLS-1$
+
+    if (valueDesc != null) {
+      if (PrintInstanceFeatures.DESCRIBED_FEATURES.get(feature)
+          .add(value)) {
+        PrintInstanceFeatures.__print(valueDesc, ");");//$NON-NLS-1$
+        return;
+      }
+    }
+    System.out.println("null);");//$NON-NLS-1$
   }
 
   /**
@@ -668,24 +701,33 @@ public class PrintInstanceFeatures {
    */
   static final void _makeInstance(final Instance instance,
       final String desc, final String type, final String typeDesc) {
+    final String name;
+
+    name = instance.name().toUpperCase();
+    System.out.print("/** make instance ");//$NON-NLS-1$
+    System.out.println(name);
+    System.out
+        .println("@param esb the context used for creating instances */");//$NON-NLS-1$
+
+    System.out.print("private static final void __");//$NON-NLS-1$
+    System.out.print(name);
+    System.out.println("(final IExperimentSetContext esb) {");//$NON-NLS-1$
+
     System.out.println(
         "try (final IInstanceContext i = esb.createInstance()) {"); //$NON-NLS-1$
 
     System.out.print("i.setName(TSPSuiteInput.");//$NON-NLS-1$
-    System.out.print(instance.name().toUpperCase());
+    System.out.print(name);
     System.out.println(");"); //$NON-NLS-1$
 
     if (desc != null) {
       System.out.print("i.setDescription(");//$NON-NLS-1$
-      System.out.print(PrintInstanceFeatures.__print(desc));
-      System.out.println(");"); //$NON-NLS-1$
+      PrintInstanceFeatures.__print(desc, ");");//$NON-NLS-1$
     }
 
     System.out.print(//
         "i.setLowerBound(TSPSuiteInput.LENGTH, ");//$NON-NLS-1$
-    System.out.print(
-        PrintInstanceFeatures.__print(Long.valueOf(instance.optimum())));
-    System.out.println(");"); //$NON-NLS-1$
+    PrintInstanceFeatures.__print(Long.valueOf(instance.optimum()), ");");//$NON-NLS-1$
 
     PrintInstanceFeatures.__featureValue(
         PrintInstanceFeatures.CLASS_PREFIX + "SYMMETRIC", //$NON-NLS-1$
@@ -713,151 +755,161 @@ public class PrintInstanceFeatures {
     PrintInstanceFeatures.__statFeatures(comp);
 
     System.out.println('}');
+    System.out.println('}');
   }
-
-  /** a map with the data */
-  private static final LinkedHashMap<Object, String> OBJECTS = new LinkedHashMap<>();
 
   /**
    * print the given object
    *
    * @param object
    *          the object
-   * @return the string to print
+   * @param addendum
+   *          the follow-up string
    */
-  private static final String __print(final Object object) {
-    String string;
+  private static final void __print(final Object object,
+      final String addendum) {
 
     if (object == null) {
-      return "null"; //$NON-NLS-1$
+      System.out.print("null");//$NON-NLS-1$
+      System.out.print(addendum);
+      return;
     }
 
+    if (object instanceof Byte) {
+      System.out.print("Byte.valueOf((byte)");//$NON-NLS-1$
+      System.out.print(((Byte) object).byteValue());
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Short) {
+      System.out.print("Short.valueOf((short)");//$NON-NLS-1$
+      System.out.print(((Short) object).shortValue());
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Integer) {
+      System.out.print("Integer.valueOf(");//$NON-NLS-1$
+      System.out.print(((Integer) object).intValue());
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Long) {
+      System.out.print("Long.valueOf(");//$NON-NLS-1$
+      System.out.print(((Long) object).longValue());
+      System.out.print('L');
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Float) {
+      System.out.print("Float.valueOf(");//$NON-NLS-1$
+      System.out.print(Float.toHexString(((Float) object).floatValue()));
+      System.out.print('f');
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Double) {
+      System.out.print("Double.valueOf(");//$NON-NLS-1$
+      System.out
+          .print(Double.toHexString(((Double) object).doubleValue()));
+      System.out.print('d');
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Boolean) {
+      System.out.print(((Boolean) object).booleanValue() ? "Boolean.TRUE"//$NON-NLS-1$
+          : "Boolean.FALSE");//$NON-NLS-1$
+      System.out.print(addendum);
+      return;
+    }
+    if (object instanceof Character) {
+      System.out.print("Character.valueOf(");//$NON-NLS-1$
+      final char ch = ((Character) object).charValue();
+      if (ch == '\'') {
+        System.out.print('\\');
+      }
+      System.out.print(ch);
+      System.out.print(')');
+      System.out.print(addendum);
+      return;
+    }
     if (object instanceof String) {
-      string = ((String) object);
-      if (string.startsWith(PrintInstanceFeatures.CLASS_PREFIX)) {
-        return string;
+      if (((String) object)
+          .startsWith(PrintInstanceFeatures.CLASS_PREFIX)) {
+        System.out.print(object);
+        System.out.print(addendum);
+        return;
       }
-    } else {
-      if (object instanceof Boolean) {
-        return (((Boolean) object).booleanValue() ? "Boolean.TRUE"//$NON-NLS-1$
-            : "Boolean.FALSE");//$NON-NLS-1$
-      }
+      System.out.print("\"");//$NON-NLS-1$
+      System.out.print(((String) object).replace("\"", //$NON-NLS-1$
+          "\\\""));//$NON-NLS-1$ ;
+      System.out.print('"');
+      System.out.print(addendum);
+      System.out.println("//$NON-NLS-1$");//$NON-NLS-1$
+      return;
     }
 
-    string = PrintInstanceFeatures.OBJECTS.get(object);
-    if (string == null) {
-      string = PrintInstanceFeatures.VAR_PREFIX + Integer.toString(
-          PrintInstanceFeatures.OBJECTS.size(), Character.MAX_RADIX) + '_';
-      PrintInstanceFeatures.OBJECTS.put(object, string);
-    }
-    return string;
+    throw new IllegalArgumentException(object.toString());
   }
 
   /** flush all cached objects */
   private static final void __flush() {
-    Object value;
-    for (final Entry<Object, String> entry : PrintInstanceFeatures.OBJECTS
-        .entrySet()) {
-      value = entry.getKey();
 
-      if (value instanceof Byte) {
-        System.out.print("final Byte ");//$NON-NLS-1$
-        System.out.print(entry.getValue());
-        System.out.print(" = Byte.valueOf((byte)");//$NON-NLS-1$
-        System.out.print(((Byte) value).byteValue());
-        System.out.println(");");//$NON-NLS-1$
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println("=========================================="); //$NON-NLS-1$
+    System.out.println();
+    System.out.println();
+    System.out.println();
+
+    String s;
+    boolean first;
+
+    for (final Entry<String, String> entry : PrintInstanceFeatures.FEATURES
+        .entrySet()) {
+      System.out.print("/** "); //$NON-NLS-1$
+      System.out.print(entry.getValue().replace("\"", //$NON-NLS-1$
+          "\\\""));//$NON-NLS-1$ ;
+      System.out.println("*/"); //$NON-NLS-1$
+      System.out.print("public static final String "); //$NON-NLS-1$
+      s = entry.getKey()
+          .substring(PrintInstanceFeatures.CLASS_PREFIX.length());
+      System.out.print(s);
+      System.out.print(" = \""); //$NON-NLS-1$
+      if (s.equalsIgnoreCase("SCALE")) {//$NON-NLS-1$
+        System.out.print("n");//$NON-NLS-1$
       } else {
-        if (value instanceof Short) {
-          System.out.print("final Short ");//$NON-NLS-1$
-          System.out.print(entry.getValue());
-          System.out.print(" = Short.valueOf((short)");//$NON-NLS-1$
-          System.out.print(((Short) value).shortValue());
-          System.out.println(");");//$NON-NLS-1$
+        if (s.equalsIgnoreCase("DISTANCE_TYPE")) {//$NON-NLS-1$
+          System.out.print("type");//$NON-NLS-1$
         } else {
-          if (value instanceof Integer) {
-            System.out.print("final Integer ");//$NON-NLS-1$
-            System.out.print(entry.getValue());
-            System.out.print(" = Integer.valueOf(");//$NON-NLS-1$
-            System.out.print(((Integer) value).intValue());
-            System.out.println(");");//$NON-NLS-1$
-          } else {
-            if (value instanceof Long) {
-              System.out.print("final Long ");//$NON-NLS-1$
-              System.out.print(entry.getValue());
-              System.out.print(" = Long.valueOf(");//$NON-NLS-1$
-              System.out.print(((Long) value).longValue());
-              System.out.println("L);");//$NON-NLS-1$
-            } else {
-              if (value instanceof Float) {
-                System.out.print("final Float ");//$NON-NLS-1$
-                System.out.print(entry.getValue());
-                System.out.print(" = Float.valueOf(");//$NON-NLS-1$
-                System.out.print(
-                    Float.toHexString(((Float) value).floatValue()));
-                System.out.println(");");//$NON-NLS-1$
-              } else {
-                if (value instanceof Double) {
-                  System.out.print("final Double ");//$NON-NLS-1$
-                  System.out.print(entry.getValue());
-                  System.out.print(" = Double.valueOf(");//$NON-NLS-1$
-                  System.out.print(
-                      Double.toHexString(((Double) value).doubleValue()));
-                  System.out.println("d);");//$NON-NLS-1$
-                } else {
-                  if (value instanceof Boolean) {
-                    System.out.print("final Boolean ");//$NON-NLS-1$
-                    System.out.print(entry.getValue());
-                    System.out.print(" = "); //$NON-NLS-1$
-                    System.out.print(
-                        ((Boolean) value).booleanValue() ? "Boolean.TRUE"//$NON-NLS-1$
-                            : "Boolean.FALSE");//$NON-NLS-1$
-                    System.out.println(';');
-                  } else {
-                    if (value instanceof Character) {
-                      System.out.print("final Character ");//$NON-NLS-1$
-                      System.out.print(entry.getValue());
-                      System.out.print(" = Character.valueOf(");//$NON-NLS-1$
-                      final char ch = ((Character) value).charValue();
-                      if (ch == '\'') {
-                        System.out.print('\\');
-                      }
-                      System.out.print(ch);
-                      System.out.println(");");//$NON-NLS-1$
-                    } else {
-                      if (value instanceof String) {
-                        if (((String) value).startsWith(
-                            PrintInstanceFeatures.CLASS_PREFIX)) {
-                          System.out.print("final String ");//$NON-NLS-1$
-                          System.out.print(entry.getValue());
-                          System.out.print(" = "); //$NON-NLS-1$
-                          System.out.print(value);
-                          System.out.print(';');
-                        } else {
-                          System.out.print("final String ");//$NON-NLS-1$
-                          System.out.print(entry.getValue());
-                          System.out.print(" = \"");//$NON-NLS-1$
-                          System.out.print(((String) value).replace("\"", //$NON-NLS-1$
-                              "\\\""));//$NON-NLS-1$ ;
-                          System.out.println("\";//$NON-NLS-1$");//$NON-NLS-1$
-                        }
-                      } else {
-                        throw new IllegalArgumentException(
-                            value.toString());
-                      }
-                    }
-                  }
-                }
-              }
+          first = true;
+          for (String t : s.toLowerCase().split("_")) { //$NON-NLS-1$
+            t = t.trim();
+            if (t.length() <= 0) {
+              continue;
             }
+            if (first) {
+              System.out.print(t);
+              first = false;
+              continue;
+            }
+            System.out.print(Character.toUpperCase(t.charAt(0)));
+            System.out.print(t.substring(1));
           }
         }
       }
-
+      System.out.println("\"; //$NON-NLS-1$"); //$NON-NLS-1$
     }
   }
 
   /** the number of order features */
-  private static final int ORDER_FEATURE_NUM = 7;
+  private static final int ORDER_FEATURE_NUM = 13;
 
   /**
    * get the mean distance
@@ -888,8 +940,8 @@ public class PrintInstanceFeatures {
     medianDistancesFromNodes = new double[numNodes];
 
     smallestAvgDistances = new long[PrintInstanceFeatures.ORDER_FEATURE_NUM];
-    Arrays.fill(smallestAvgDistances, Long.MAX_VALUE);
     largestAvgDistances = new long[PrintInstanceFeatures.ORDER_FEATURE_NUM];
+    Arrays.fill(smallestAvgDistances, Long.MAX_VALUE);
     Arrays.fill(largestAvgDistances, Long.MIN_VALUE);
 
     cityInfo = new StatisticInfo();
@@ -930,11 +982,19 @@ public class PrintInstanceFeatures {
           temp = smallestAvgDistances[j];
           smallestAvgDistances[j] = copy1;
           copy1 = temp;
+        } else {
+          if (copy1 == smallestAvgDistances[j]) {
+            copy1 = Integer.MAX_VALUE;
+          }
         }
         if (copy2 > largestAvgDistances[j]) {
           temp = largestAvgDistances[j];
           largestAvgDistances[j] = copy2;
           copy2 = temp;
+        } else {
+          if (copy2 == largestAvgDistances[j]) {
+            copy2 = Integer.MIN_VALUE;
+          }
         }
 
         cityInfo.visitDouble(currentDistanceSum / (numNodes - 1d));
@@ -955,56 +1015,45 @@ public class PrintInstanceFeatures {
         "The coefficient of variation of the city distances, i.e., the standard deviation of the distances divided by the mean distance.", //$NON-NLS-1$
         Double.valueOf(info.getStandardDeviation() / mean), null);
 
-    PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "DIST_SKEWNESS", //$NON-NLS-1$
-        "The skewness of all city distances.", //$NON-NLS-1$
-        Double.valueOf(info.getSkewness()), null);
-
-    PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "DIST_KURTOSIS", //$NON-NLS-1$
-        "The kurtosis of all city distances.", //$NON-NLS-1$
-        Double.valueOf(info.getKurtosis()), null);
-
     medmed = ((numNodes & 1) == 0)
         ? ((0.5d * medianDistancesFromNodes[(numNodes >> 1) - 1])
             + (0.5d * medianDistancesFromNodes[numNodes >> 1]))
         : medianDistancesFromNodes[(numNodes >> 1)];
     PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "DIST_MED_MED_DIV_MEAN", //$NON-NLS-1$
-        "The median of the median city distances starting at each city, divided by the mean distance.", //$NON-NLS-1$
+        PrintInstanceFeatures.CLASS_PREFIX + "MED_MED_DIST", //$NON-NLS-1$
+        "The median of the median of the city distances starting at each city, divided by the mean distance.", //$NON-NLS-1$
         Double.valueOf(medmed / mean), null);
+    PrintInstanceFeatures.__featureValue(
+        PrintInstanceFeatures.CLASS_PREFIX + "MAX_MED_DIST", //$NON-NLS-1$
+        "The maximum of the median of the city distances starting at each city, divided by the mean distance.", //$NON-NLS-1$
+        Double.valueOf(medianDistancesFromNodes[numNodes - 1] / mean),
+        null);
+    PrintInstanceFeatures.__featureValue(
+        PrintInstanceFeatures.CLASS_PREFIX + "MIN_MED_DIST", //$NON-NLS-1$
+        "The minimum of the median of the city distances starting at each city, divided by the mean distance.", //$NON-NLS-1$
+        Double.valueOf(medianDistancesFromNodes[0] / mean), null);
     medianDistancesFromNodes = null;
 
     PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "AVG_DIST_CV", //$NON-NLS-1$
+        PrintInstanceFeatures.CLASS_PREFIX + "MEAN_DIST_CV", //$NON-NLS-1$
         "We compute the average distance from a city to all of its neighbors and this is the coefficient of variation over all these averages.", //$NON-NLS-1$
         Double.valueOf(cityInfo.getCoefficientOfVariation()), null);
 
-    PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "AVG_DIST_SKEWNESS", //$NON-NLS-1$
-        "We compute the average distance from a city to all of its neighbors and this is the skewness over all these averages.", //$NON-NLS-1$
-        Double.valueOf(cityInfo.getSkewness()), null);
-
-    PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX + "AVG_DIST_KURTOSIS", //$NON-NLS-1$
-        "We compute the average distance from a city to all of its neighbors and this is the kurtosis over all these averages.", //$NON-NLS-1$
-        Double.valueOf(cityInfo.getKurtosis()), null);
-
     for (i = 0; i < PrintInstanceFeatures.ORDER_FEATURE_NUM; i++) {
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "SMALLEST_AVG_DISTANCE_" //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "SMALLEST_MEAN_DIST_" //$NON-NLS-1$
               + (i + 1),
           "We compute the average distance from a city to all of its neighbors. This is the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th smallest such average distance among all cities, divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(
               smallestAvgDistances[i] / ((numNodes - 1) * mean)),
           null);
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "LARGEST_AVG_DISTANCE_" //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "LARGEST_MEAN_DIST_" //$NON-NLS-1$
               + (i + 1),
           "We compute the average distance from a city to all of its neighbors. This is the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th largest such average distance among all cities, divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(
               smallestAvgDistances[i] / ((numNodes - 1) * mean)),
@@ -1014,7 +1063,7 @@ public class PrintInstanceFeatures {
     distancesShorterThanMean = 0;
     nearest = new StatisticInfo[PrintInstanceFeatures.ORDER_FEATURE_NUM];
     farthest = new StatisticInfo[PrintInstanceFeatures.ORDER_FEATURE_NUM];
-    for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0; ) {
+    for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0;) {
       nearest[i] = new StatisticInfo();
       farthest[i] = new StatisticInfo();
     }
@@ -1035,92 +1084,62 @@ public class PrintInstanceFeatures {
       }
       Arrays.sort(distancesFromNode);
 
-      for (i = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--i) >= 0; --i) {
-        nearest[i].visitDouble(distancesFromNode[i] / mean);
-        farthest[i]
-            .visitDouble(distancesFromNode[numNodes - 2 - i] / mean);
+      for (j = PrintInstanceFeatures.ORDER_FEATURE_NUM; (--j) >= 0;) {
+        nearest[j].visitDouble(distancesFromNode[j] / mean);
+        farthest[j]
+            .visitDouble(distancesFromNode[numNodes - 2 - j] / mean);
       }
     }
 
     PrintInstanceFeatures.__featureValue(
-        PrintInstanceFeatures.CLASS_PREFIX
-            + "FRAC_OF_DISTS_SHORTER_THAN_MEAN", //$NON-NLS-1$
+        PrintInstanceFeatures.CLASS_PREFIX + "FRAC_DIST_BELOW_MEAN", //$NON-NLS-1$
         "The fraction of distances shorter than the mean.", //$NON-NLS-1$
         Double.valueOf(distancesShorterThanMean / mean), null);
 
     for (i = 0; i < PrintInstanceFeatures.ORDER_FEATURE_NUM; i++) {
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAREST_NEIGHBOR_" //$NON-NLS-1$
-              + (i + 1) + "_AVG", //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "NEAR_" //$NON-NLS-1$
+              + (i + 1) + "_MEAN", //$NON-NLS-1$
           "The average of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(nearest[i].getArithmeticMean()), null);
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAREST_NEIGHBOR_" //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "NEAR_" //$NON-NLS-1$
               + (i + 1) + "_STDDEV", //$NON-NLS-1$
           "The standard deviation of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(nearest[i].getStandardDeviation()), null);
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAREST_NEIGHBOR_" //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "NEAR_" //$NON-NLS-1$
               + (i + 1) + "_CV", //$NON-NLS-1$
           "The coefficient of variation of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(nearest[i].getCoefficientOfVariation()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAREST_NEIGHBOR_" //$NON-NLS-1$
-              + (i + 1) + "_SKEW", //$NON-NLS-1$
-          "The skewness of the distance to the " //$NON-NLS-1$
-              + i
-              + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(nearest[i].getSkewness()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAREST_NEIGHBOR_" //$NON-NLS-1$
-              + (i + 1) + "_KURTOSIS", //$NON-NLS-1$
-          "The kurtosis of the distance to the " //$NON-NLS-1$
-              + i
-              + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(nearest[i].getKurtosis()), null);
 
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAREST_NEIGHBOR_" + (i + 1) //$NON-NLS-1$
-              + "_AVG", //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1) //$NON-NLS-1$
+              + "_MEAN", //$NON-NLS-1$
           "The average of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(farthest[i].getArithmeticMean()), null);
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAREST_NEIGHBOR_" + (i + 1) //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1) //$NON-NLS-1$
               + "_STDDEV", //$NON-NLS-1$
           "The standard deviation of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(farthest[i].getStandardDeviation()), null);
       PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAREST_NEIGHBOR_" + (i + 1) //$NON-NLS-1$
+          PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1) //$NON-NLS-1$
               + "_CV", //$NON-NLS-1$
           "The coefficient of variation of the distance to the " //$NON-NLS-1$
-              + i
+              + (i + 1)
               + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(farthest[i].getCoefficientOfVariation()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAREST_NEIGHBOR_" + (i + 1) //$NON-NLS-1$
-              + "_SKEW", //$NON-NLS-1$
-          "The skewness of the distance to the " //$NON-NLS-1$
-              + i
-              + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(farthest[i].getSkewness()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAREST_NEIGHBOR_" + (i + 1) //$NON-NLS-1$
-              + "_KURTOSIS", //$NON-NLS-1$
-          "The kurtosis of the distance to the " //$NON-NLS-1$
-              + i
-              + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(farthest[i].getKurtosis()), null);
-
     }
 
     return mean;
@@ -1130,7 +1149,7 @@ public class PrintInstanceFeatures {
   private static final class __Holder
       implements Runnable, Comparable<__Holder> {
     /** the instance */
-    private final Instance m_instance;
+    final Instance m_instance;
     /** the desription */
     private final String m_desc;
     /** the type */

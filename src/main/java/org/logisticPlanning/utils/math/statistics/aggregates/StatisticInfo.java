@@ -15,9 +15,9 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
   /** the list of supported statistic parameters */
   static final ArraySetView<EStatisticParameter> LIST = EStatisticParameter
       .makeList(EStatisticParameter.MINIMUM,
-          EStatisticParameter.ARITHMETIC_MEAN,
-          EStatisticParameter.MAXIMUM, EStatisticParameter.RANGE,
-          EStatisticParameter.COUNT, EStatisticParameter.VARIANCE,
+          EStatisticParameter.ARITHMETIC_MEAN, EStatisticParameter.MAXIMUM,
+          EStatisticParameter.RANGE, EStatisticParameter.COUNT,
+          EStatisticParameter.VARIANCE,
           EStatisticParameter.STANDARD_DEVIATION,
           EStatisticParameter.COEFFICIENT_OF_VARIATION,
           EStatisticParameter.SKEWNESS, EStatisticParameter.KURTOSIS);
@@ -180,6 +180,7 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
    */
   public final double getCoefficientOfVariation() {
     long l;
+    double std;
 
     l = this.m_count;
 
@@ -190,7 +191,11 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
       return 0.0d;
     }
 
-    return (this.getStandardDeviation() / this.getArithmeticMean());
+    std = this.getStandardDeviation();
+    if (std <= 0d) {
+      return std;
+    }
+    return (std / Math.abs(this.getArithmeticMean()));
   }
 
   /** {@inheritDoc} */
@@ -255,14 +260,13 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
       // this.m_M4 = ((M4 + (term1 * delta_n2 * (((n * n) - (3 * n)) + 3))
       // + (6
       // * delta_n2 * M2)) - (4 * delta_n * M3));
-      this.m_M4
-          .visitDouble(((term1 * delta_n2 * (((n * n) - (3 * n)) + 3)) + (6 * delta_n2 * M2))
-              - (4 * delta_n * M3));
+      this.m_M4.visitDouble(((term1 * delta_n2 * (((n * n) - (3 * n)) + 3))
+          + (6 * delta_n2 * M2)) - (4 * delta_n * M3));
 
       // this.m_M3 = (M3 + (term1 * delta_n * (n - 2d))) - (3d * delta_n *
       // M2);
-      this.m_M3.visitDouble(((term1 * delta_n * (n - 2d)))
-          - (3d * delta_n * M2));
+      this.m_M3.visitDouble(
+          ((term1 * delta_n * (n - 2d))) - (3d * delta_n * M2));
 
       // this.m_M2 = (M2 + term1);
       this.m_M2.visitDouble(term1);
@@ -283,25 +287,36 @@ public class StatisticInfo extends Aggregate implements IStatisticInfo {
   @Override
   public final double getSkewness() {
     final long n;
+    double upper;
 
     n = this.m_count;
-
-    return ((Math.sqrt(n * (n - 1l)) / (n - 2l)) * (Math.sqrt(n) * (this.m_M3
-        .getResult() / //
-    (this.m_M2.getResult() * Math.sqrt(this.m_M2.getResult())))));
+    upper = (Math.sqrt(n * (n - 1l)) / (n - 2l))
+        * (Math.sqrt(n) * (this.m_M3.getResult()));
+    if (Math.abs(upper) <= 0d) {
+      return upper;
+    }
+    return (upper
+        / (this.m_M2.getResult() * Math.sqrt(this.m_M2.getResult())));
   }
 
   /** {@inheritDoc} */
   @Override
   public final double getKurtosis() {
     final long n, nm1;
+    double v1;
 
     n = this.m_count;
     nm1 = (n - 1l);
 
-    return ((((nm1 * (n + 1l) * n) * this.m_M4.getResult()) / (this.m_M2
-        .getResult() * this.m_M2.getResult())) - (3l * (nm1 * nm1)))
-        / ((n - 2l) * (n - 3l));
+    v1 = ((nm1 * (n + 1l) * n) * this.m_M4.getResult());
+    if (Math.abs(v1) > 0d) {
+      v1 = v1 / (this.m_M2.getResult() * this.m_M2.getResult());
+    }
+    v1 = ((v1) - (3l * (nm1 * nm1)));
+    if (Math.abs(v1) <= 0d) {
+      return 0d;
+    }
+    return v1 / ((n - 2l) * (n - 3l));
   }
 
   /** {@inheritDoc} */
