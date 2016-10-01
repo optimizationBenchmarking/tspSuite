@@ -61,9 +61,9 @@ public class PrintInstanceFeatures {
 
         new __Holder(Instance.BAYS29,
             "29 cities in Bavaria, street distances (Gr&ouml,tschel,J&uuml,nger,Reinelt).", //$NON-NLS-1$
-            PrintInstanceFeatures.CLASS_PREFIX + "MATRIX", //$NON-NLS-1$ ,
-            "distances provided as matrix, origin unclear"), //$NON-NLS-1$
-        // "FULL_MATRIX"
+            PrintInstanceFeatures.CLASS_PREFIX + "GEO", //$NON-NLS-1$ ,
+            "geographical distances"), //$NON-NLS-1$
+
         new __Holder(Instance.BERLIN52,
             "52 locations in Berlin (Gr&ouml,tschel).", //$NON-NLS-1$
             PrintInstanceFeatures.CLASS_PREFIX + "EUC_2D", //$NON-NLS-1$
@@ -911,7 +911,7 @@ public class PrintInstanceFeatures {
   }
 
   /** the number of order features */
-  private static final int ORDER_FEATURE_NUM = 13;
+  private static final int ORDER_FEATURE_NUM = 3;
 
   /**
    * get the mean distance
@@ -1119,13 +1119,15 @@ public class PrintInstanceFeatures {
               + (i + 1)
               + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(nearest[i].getStandardDeviation()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "NEAR_" //$NON-NLS-1$
-              + (i + 1) + "_CV", //$NON-NLS-1$
-          "The coefficient of variation of the distance to the " //$NON-NLS-1$
-              + (i + 1)
-              + "th nearest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(nearest[i].getCoefficientOfVariation()), null);
+      // PrintInstanceFeatures.__featureValue(
+      // PrintInstanceFeatures.CLASS_PREFIX + "NEAR_" //$NON-NLS-1$
+      // + (i + 1) + "_CV", //$NON-NLS-1$
+      // "The coefficient of variation of the distance to the "
+      // //$NON-NLS-1$
+      // + (i + 1)
+      // + "th nearest neighbor of each city divided by the mean city
+      // distance.", //$NON-NLS-1$
+      // Double.valueOf(nearest[i].getCoefficientOfVariation()), null);
 
       PrintInstanceFeatures.__featureValue(
           PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1) //$NON-NLS-1$
@@ -1141,13 +1143,16 @@ public class PrintInstanceFeatures {
               + (i + 1)
               + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
           Double.valueOf(farthest[i].getStandardDeviation()), null);
-      PrintInstanceFeatures.__featureValue(
-          PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1) //$NON-NLS-1$
-              + "_CV", //$NON-NLS-1$
-          "The coefficient of variation of the distance to the " //$NON-NLS-1$
-              + (i + 1)
-              + "th farthest neighbor of each city divided by the mean city distance.", //$NON-NLS-1$
-          Double.valueOf(farthest[i].getCoefficientOfVariation()), null);
+      // PrintInstanceFeatures.__featureValue(
+      // PrintInstanceFeatures.CLASS_PREFIX + "FAR_" + (i + 1)
+      // //$NON-NLS-1$
+      // + "_CV", //$NON-NLS-1$
+      // "The coefficient of variation of the distance to the "
+      // //$NON-NLS-1$
+      // + (i + 1)
+      // + "th farthest neighbor of each city divided by the mean city
+      // distance.", //$NON-NLS-1$
+      // Double.valueOf(farthest[i].getCoefficientOfVariation()), null);
     }
 
     meanDiv = mean * numNodes;
